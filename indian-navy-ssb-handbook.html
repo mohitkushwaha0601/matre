@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>All About the Indian Navy — An SSB Preparation Handbook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0E2430;
+  --ink-soft:#45606E;
+  --paper:#EFF1EE;
+  --surface:#FFFFFF;
+  --surface-2:#E5EAE7;
+  --rule:#C4CEcb;
+  --rule-strong:#9EABA8;
+  --red:#BF2F26;
+  --blue:#0B4F8A;
+  --gold:#C08A1E;
+  --hero-bg:#0E2430;
+  --hero-ink:#EFF1EE;
+  --hero-dim:#94A8B2;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ink:#E4EAE8;
+    --ink-soft:#9DB0B8;
+    --paper:#0C1A22;
+    --surface:#122630;
+    --surface-2:#18313D;
+    --rule:#2B4450;
+    --rule-strong:#3E5A68;
+    --red:#E8705F;
+    --blue:#6FB3E8;
+    --gold:#E0B75A;
+    --hero-bg:#081319;
+    --hero-ink:#E4EAE8;
+    --hero-dim:#7E949E;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E4EAE8;
+  --ink-soft:#9DB0B8;
+  --paper:#0C1A22;
+  --surface:#122630;
+  --surface-2:#18313D;
+  --rule:#2B4450;
+  --rule-strong:#3E5A68;
+  --red:#E8705F;
+  --blue:#6FB3E8;
+  --gold:#E0B75A;
+  --hero-bg:#081319;
+  --hero-ink:#E4EAE8;
+  --hero-dim:#7E949E;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1.5rem);-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ---------- hero ---------- */
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
+.flagstrip{display:flex;height:12px}
+.flagstrip span{flex:1}
+.f1{background:#BF2F26}
+.f2{background:#EFF1EE}
+.f3{background:#0B4F8A}
+.f4{background:#E3B23C}
+.f5{background:#0E2430;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+.f6{background:linear-gradient(90deg,#BF2F26 50%,#EFF1EE 50%)}
+.f7{background:linear-gradient(90deg,#0B4F8A 50%,#E3B23C 50%)}
+.hero-inner{max-width:1180px;margin:0 auto;padding:3.2rem 1.5rem 0}
+.motto{
+  font-family:"Zilla Slab",Georgia,serif;
+  font-weight:600;
+  font-size:clamp(2.1rem,7vw,3.9rem);
+  line-height:1.15;
+  margin:0;
+  letter-spacing:.005em;
+}
+.motto-en{
+  margin:.55rem 0 0;
+  color:var(--hero-dim);
+  font-size:clamp(.95rem,2.4vw,1.1rem);
+  font-style:italic;
+  max-width:46ch;
+}
+.hero h1{
+  font-family:"Zilla Slab",Georgia,serif;
+  font-weight:700;
+  font-size:clamp(1.5rem,4.3vw,2.35rem);
+  line-height:1.2;
+  margin:2.6rem 0 .5rem;
+  border-top:1px solid rgba(255,255,255,.22);
+  padding-top:1.6rem;
+  max-width:24ch;
+}
+.hero-sub{margin:0;color:var(--hero-dim);max-width:62ch}
+.stamp{
+  margin-top:1.6rem;font-size:.86rem;color:var(--hero-dim);
+  display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;
+}
+.stamp b{color:var(--hero-ink);font-weight:600}
+
+/* ---------- layout ---------- */
+.shell{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem;display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media (min-width:1000px){
+  .shell{grid-template-columns:230px minmax(0,1fr);gap:3.5rem;padding-top:2.8rem}
+}
+nav.toc{font-size:.92rem}
+@media (min-width:1000px){
+  .toc-mobile{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2rem);align-self:start;max-height:calc(100vh - 5rem);overflow-y:auto}
+}
+nav.toc h2{
+  font-family:"Zilla Slab",Georgia,serif;font-size:.92rem;font-weight:600;
+  margin:0 0 .7rem;padding-bottom:.45rem;border-bottom:2px solid var(--rule-strong);
+}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc}
+nav.toc li{counter-increment:toc;border-bottom:1px solid var(--rule)}
+nav.toc a{
+  display:flex;gap:.6rem;padding:.42rem 0;color:var(--ink-soft);text-decoration:none;
+}
+nav.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--rule-strong);font-variant-numeric:tabular-nums;flex:none}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--red)}
+.toc-mobile{display:block}
+@media (min-width:1000px){.toc-mobile summary{display:none}}
+.toc-mobile summary{
+  cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:600;
+  padding:.7rem .9rem;background:var(--surface);border:1px solid var(--rule);margin-bottom:1rem;
+}
+@media (max-width:999px){
+  .toc-mobile[open] nav.toc{padding:0 .9rem 1rem}
+  .toc-mobile:not([open]) nav.toc{display:none}
+}
+
+/* ---------- sections ---------- */
+main{min-width:0}
+section{margin:0 0 3.6rem;scroll-margin-top:1.5rem}
+section > h2{
+  font-family:"Zilla Slab",Georgia,serif;
+  font-weight:700;font-size:clamp(1.45rem,3.6vw,1.95rem);line-height:1.2;
+  margin:0 0 .3rem;
+}
+.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.16rem;margin:2rem 0 .5rem;line-height:1.3}
+h4{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1rem;margin:1.4rem 0 .35rem;color:var(--ink)}
+p{margin:0 0 .95rem;max-width:74ch}
+ul,ol{margin:0 0 1rem;padding-left:1.25rem;max-width:74ch}
+li{margin-bottom:.35rem}
+li::marker{color:var(--rule-strong)}
+strong{font-weight:600}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+/* ---------- components ---------- */
+.lede{font-size:1.06rem;color:var(--ink-soft);max-width:70ch}
+
+.tablewrap{overflow-x:auto;margin:0 0 1.3rem;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:.93rem}
+caption{text-align:left;padding:.7rem .85rem .1rem;font-weight:600;color:var(--ink-soft);font-size:.9rem}
+th,td{text-align:left;padding:.55rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{background:var(--surface-2);font-weight:600;border-bottom:2px solid var(--rule-strong);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+.edge{
+  background:var(--surface);
+  border-left:4px solid var(--red);
+  padding:.9rem 1.1rem;
+  margin:1.4rem 0;
+  max-width:74ch;
+}
+.edge p:last-child{margin-bottom:0}
+.edge .edge-h{
+  font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);
+  display:block;margin-bottom:.25rem;font-size:.95rem;
+}
+
+.note{
+  background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;
+  border:1px solid var(--rule);font-size:.95rem;
+}
+.note p:last-child{margin-bottom:0}
+
+.timeline{list-style:none;padding:0;margin:1rem 0 1.4rem;max-width:74ch}
+.timeline li{
+  display:grid;grid-template-columns:5.6rem 1fr;gap:1rem;
+  padding:.55rem 0;border-bottom:1px solid var(--rule);margin:0;
+}
+.timeline li:last-child{border-bottom:0}
+.timeline .yr{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);font-variant-numeric:tabular-nums}
+@media (max-width:520px){
+  .timeline li{grid-template-columns:1fr;gap:.1rem}
+}
+
+.split{display:grid;gap:1.2rem;margin-bottom:1.3rem}
+@media (min-width:700px){.split{grid-template-columns:1fr 1fr}}
+.panel{background:var(--surface);border:1px solid var(--rule);padding:1rem 1.1rem}
+.panel h4{margin-top:0}
+.panel ul{margin-bottom:0}
+
+.qbank{counter-reset:q;list-style:none;padding:0;max-width:74ch}
+.qbank li{
+  counter-increment:q;padding:.5rem 0 .5rem 2.5rem;position:relative;border-bottom:1px solid var(--rule);
+}
+.qbank li::before{
+  content:"Q" counter(q);position:absolute;left:0;top:.5rem;
+  font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem;
+}
+.qbank li:last-child{border-bottom:0}
+
+footer{
+  border-top:3px double var(--rule-strong);margin-top:2rem;padding-top:1.4rem;
+  color:var(--ink-soft);font-size:.9rem;max-width:74ch;
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="flagstrip" aria-hidden="true">
+    <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f6"></span><span class="f5"></span><span class="f7"></span>
+  </div>
+  <div class="hero-inner">
+    <p class="motto" lang="sa">शं नो वरुणः</p>
+    <p class="motto-en">Sham No Varunah — “May the Lord of the Waters be auspicious unto us.” The Navy’s motto, drawn from the Taittiriya Upanishad.</p>
+    <h1>All About the Indian Navy</h1>
+    <p class="hero-sub">A single-sitting reference for SSB aspirants: organisation, fleet, aviation, doctrine, current affairs and the questions the interviewing officer actually asks.</p>
+    <p class="stamp">
+      <span>Updated <b>20 September 2026</b></span>
+      <span>Chief of the Naval Staff: <b>Admiral Krishna Swaminathan</b></span>
+      <span>Navy Day: <b>4 December</b></span>
+    </p>
+  </div>
+</header>
+
+<div class="shell">
+
+<details class="toc-mobile" open>
+  <summary>Contents</summary>
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#snapshot">Snapshot &amp; identity</a></li>
+      <li><a href="#history">History in milestones</a></li>
+      <li><a href="#organisation">Organisation &amp; commands</a></li>
+      <li><a href="#bases">Major bases &amp; establishments</a></li>
+      <li><a href="#ranks">Ranks, branches, entries</a></li>
+      <li><a href="#ships">Types of ships</a></li>
+      <li><a href="#submarines">Submarines</a></li>
+      <li><a href="#aviation">Naval aviation</a></li>
+      <li><a href="#weapons">Weapons &amp; sensors</a></li>
+      <li><a href="#maritime-security">Maritime security</a></li>
+      <li><a href="#ior">The Indian Ocean Region</a></li>
+      <li><a href="#antipiracy">Anti-piracy operations</a></li>
+      <li><a href="#cyber">Cyber &amp; information warfare</a></li>
+      <li><a href="#war-peace">Role in war &amp; peace</a></li>
+      <li><a href="#exercises">Exercises &amp; diplomacy</a></li>
+      <li><a href="#recent">Recent developments</a></li>
+      <li><a href="#leadership">Current leadership</a></li>
+      <li><a href="#ssb">SSB question bank</a></li>
+      <li><a href="#revision">One-page revision</a></li>
+    </ol>
+  </nav>
+</details>
+
+<main>
+
+<!-- 1 -->
+<section id="snapshot">
+  <h2>Snapshot &amp; identity</h2><hr class="sec-rule">
+  <p class="lede">The Indian Navy is the maritime arm of the Indian Armed Forces. Its job, stated simply, is to make sure that whatever happens on India’s 7,516 km of coastline and in the 2.37 million sq km of its Exclusive Economic Zone happens on India’s terms.</p>
+
+  <div class="tablewrap">
+  <table>
+    <caption>Identity card</caption>
+    <tbody>
+      <tr><th scope="row">Founded</th><td>1612 (East India Company Marine); Royal Indian Navy renamed <strong>Indian Navy</strong> on 26 January 1950</td></tr>
+      <tr><th scope="row">Motto</th><td>शं नो वरुणः — <em>Sham No Varunah</em></td></tr>
+      <tr><th scope="row">Navy Day</th><td>4 December — commemorates Operation Trident, the 1971 missile-boat strike on Karachi</td></tr>
+      <tr><th scope="row">Supreme Commander</th><td>President of India</td></tr>
+      <tr><th scope="row">Professional head</th><td>Chief of the Naval Staff (CNS), a four-star Admiral, at Naval HQ, New Delhi</td></tr>
+      <tr><th scope="row">Ensign</th><td>Changed on <strong>2 September 2022</strong>: the St George’s Cross was dropped for a navy-blue octagon bearing the royal seal of Chhatrapati Shivaji Maharaj, with the national flag in the canton</td></tr>
+      <tr><th scope="row">Crest</th><td>Fouled anchor with the Ashoka emblem; the word “fouled” refers to the rope wound around the anchor</td></tr>
+      <tr><th scope="row">Nickname/role</th><td>“Silent Service” by tradition; officially the region’s <strong>Preferred Security Partner</strong> and <strong>First Responder</strong></td></tr>
+      <tr><th scope="row">Rough strength</th><td>~130–140 commissioned vessels, ~250 aircraft, ~65,000–70,000 personnel; target of about 175 ships by 2035</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="edge">
+    <span class="edge-h">Interview edge</span>
+    <p>“Why the Navy and not the Army or Air Force?” is asked in almost every naval SSB. The weak answer is “I like ships.” The strong answer connects a personal trait to the service’s character: the Navy sends a 25-year-old officer to sea for months with responsibility for a watch, a weapon system and a team, far from any headquarters. If you are drawn to independent responsibility, technology and a genuinely expeditionary life, say so — and give one example from your own life where you had to decide alone.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section id="history">
+  <h2>History in milestones</h2><hr class="sec-rule">
+  <p>You do not need dates for every event. You do need a clean narrative: colonial marine force → wartime expansion → post-independence Indianisation → 1971 proof of concept → blue-water ambition → today’s builder’s navy.</p>
+
+  <ul class="timeline">
+    <li><span class="yr">1612</span><span>East India Company forms the Marine at Surat to protect merchant shipping — the ancestral root the Navy claims.</span></li>
+    <li><span class="yr">1830</span><span>Renamed Her Majesty’s Indian Navy; later Royal Indian Marine, then <strong>Royal Indian Navy (1934)</strong>.</span></li>
+    <li><span class="yr">1946</span><span>The <strong>Royal Indian Navy Mutiny</strong> in Bombay — a significant push toward independence.</span></li>
+    <li><span class="yr">1950</span><span>Becomes the Indian Navy on Republic Day; ships re-designated <strong>INS</strong>.</span></li>
+    <li><span class="yr">1958</span><span>Vice Admiral R.D. Katari becomes the first Indian Chief of the Naval Staff.</span></li>
+    <li><span class="yr">1961</span><span><strong>Operation Vijay</strong> — liberation of Goa; the Navy’s first major combat employment.</span></li>
+    <li><span class="yr">1971</span><span><strong>Operations Trident &amp; Python</strong> strike Karachi; INS Vikrant blockades East Pakistan; PNS Ghazi is lost off Visakhapatnam. The decisive proof that sea power changes land outcomes.</span></li>
+    <li><span class="yr">1988</span><span><strong>Operation Cactus</strong> — Indian forces foil a coup in the Maldives; INS Godavari and Betwa intercept the fleeing mercenaries at sea. The textbook example of India as regional first responder.</span></li>
+    <li><span class="yr">1999</span><span><strong>Operation Talwar</strong> during Kargil — the Navy bottles up Pakistan’s sea lanes and oil imports without firing a shot. Best single illustration of “deterrence by presence.”</span></li>
+    <li><span class="yr">2004</span><span>Indian Ocean tsunami — simultaneous relief to Sri Lanka, Maldives and Indonesia establishes the Navy’s HADR reputation.</span></li>
+    <li><span class="yr">2008</span><span>26/11 Mumbai attacks arrive by sea; the Navy is made the authority responsible for overall maritime security. Anti-piracy escorts begin in the Gulf of Aden.</span></li>
+    <li><span class="yr">2016</span><span>INS Arihant, India’s first indigenous SSBN, enters service — the sea leg of the nuclear triad.</span></li>
+    <li><span class="yr">2020</span><span><strong>Operation Samudra Setu</strong> repatriates Indians during COVID-19; <strong>Samudra Setu II</strong> ferries oxygen in 2021.</span></li>
+    <li><span class="yr">2022</span><span><strong>INS Vikrant</strong> commissioned — India joins the small club that designs and builds its own aircraft carriers. New ensign adopted the same day.</span></li>
+    <li><span class="yr">2024</span><span>MARCOS retake the hijacked <strong>MV Ruen</strong> 1,400 nm from the coast; 35 pirates brought to Mumbai for trial.</span></li>
+    <li><span class="yr">2025</span><span><strong>Operation Sindoor</strong>: a carrier battle group forward-deployed in the North Arabian Sea keeps the Pakistan Navy in harbour for the duration of the conflict.</span></li>
+    <li><span class="yr">2026</span><span>Record expansion year — 19 warships planned for commissioning; INS Aridhaman, the third SSBN, joins the fleet; India hosts IFR, MILAN and the IONS Conclave together at Visakhapatnam.</span></li>
+  </ul>
+</section>
+
+<!-- 3 -->
+<section id="organisation">
+  <h2>Organisation &amp; commands</h2><hr class="sec-rule">
+
+  <h3>Chain of command</h3>
+  <p>President (Supreme Commander) → Prime Minister and Cabinet Committee on Security → Raksha Mantri (Defence Minister) → Ministry of Defence → Chief of Defence Staff and the Department of Military Affairs → <strong>Chief of the Naval Staff</strong> at Naval Headquarters, New Delhi.</p>
+  <p>Under the CNS at NHQ sit the Principal Staff Officers: the Vice Chief of the Naval Staff (VCNS), Deputy Chief (DCNS), Chief of Personnel (COP), Chief of Materiel (COM), and Controllers for Warship Production &amp; Acquisition, Logistics and Personnel Services. The <strong>Warship Design Bureau</strong> — formerly the Directorate of Naval Design — is the in-house body that has designed over 100 indigenous ships.</p>
+
+  <h3>The three operational commands</h3>
+  <div class="tablewrap">
+  <table>
+    <caption>Naval commands — memorise this table</caption>
+    <thead><tr><th>Command</th><th>Headquarters</th><th>Character &amp; responsibility</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Western Naval Command</strong></td><td>Mumbai</td><td>The “Sword Arm.” Arabian Sea, Pakistan front, Gulf approaches. Hosts the Western Fleet and India’s carrier operations. Includes Karwar (Project Seabird).</td></tr>
+      <tr><td><strong>Eastern Naval Command</strong></td><td>Visakhapatnam</td><td>Bay of Bengal, Malacca approaches, the China-facing theatre. Home of the Eastern Fleet, the SSBN force and the Ship Building Centre.</td></tr>
+      <tr><td><strong>Southern Naval Command</strong></td><td>Kochi</td><td>The <strong>training command</strong>. Runs the Indian Naval Academy at Ezhimala, flying training, the Fleet’s work-up and the Lakshadweep islands.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Each is headed by a Vice Admiral titled <strong>Flag Officer Commanding-in-Chief (FOC-in-C)</strong>.</p>
+
+  <h3>Two more formations the Navy plugs into</h3>
+  <ul>
+    <li><strong>Andaman &amp; Nicobar Command (ANC)</strong>, Port Blair — India’s only <em>tri-service</em> theatre command, created in 2001. Usually but not always led by a naval officer. It guards the Malacca approaches. A common trick question: ANC is not a naval command, it is a joint command.</li>
+    <li><strong>Strategic Forces Command (SFC)</strong> — a tri-service command under the Nuclear Command Authority. SSBN crews are naval, but <em>operational control of the deterrent patrol rests with SFC</em>, not with a naval C-in-C.</li>
+  </ul>
+
+  <h3>Fleets and flotillas</h3>
+  <ul>
+    <li><strong>Western Fleet</strong> (Mumbai) and <strong>Eastern Fleet</strong> (Visakhapatnam), each under a Rear Admiral titled Flag Officer Commanding.</li>
+    <li><strong>Flag Officer Submarines (FOSM)</strong> — the submarine arm’s professional head, based at Visakhapatnam.</li>
+    <li>Local defence formations: Maharashtra, Gujarat, Karnataka, Kerala, Tamil Nadu &amp; Puducherry, Andhra Pradesh and Odisha Naval Areas, each under a Flag Officer.</li>
+    <li>Specialist units: <strong>MARCOS</strong> (Marine Commandos, raised 1987), the Sagar Prahari Bal for base protection, and the Offshore Defence Advisory Group for offshore oil assets.</li>
+  </ul>
+
+  <div class="edge">
+    <span class="edge-h">Interview edge</span>
+    <p>If asked about <strong>theatre commands</strong>, know the shape of the debate rather than picking a side. The proposal is to restructure 17 single-service commands into integrated theatres — with a Maritime Theatre Command likely headquartered at Karwar or Thiruvananthapuram, absorbing both fleets, ANC and naval air assets. The arguments for are unity of command and efficient use of scarce assets; the arguments against are the loss of service-specific expertise and the risk of diluting the Navy’s ocean-wide, non-geographic role. Anil Chauhan is the current Chief of Defence Staff driving the reform.</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section id="bases">
+  <h2>Major bases &amp; establishments</h2><hr class="sec-rule">
+  <p>Ships are “INS” and so are shore establishments — a stone frigate is still commissioned. Expect to be asked to name at least five and to say what each one does.</p>
+
+  <div class="tablewrap">
+  <table>
+    <caption>Operational bases and dockyards</caption>
+    <thead><tr><th>Base</th><th>Location</th><th>Why it matters</th></tr></thead>
+    <tbody>
+      <tr><td>Naval Dockyard, Mumbai</td><td>Mumbai</td><td>Western Fleet’s home port and principal refit yard.</td></tr>
+      <tr><td><strong>INS Kadamba</strong> (Project Seabird)</td><td>Karwar, Karnataka</td><td>India’s largest naval base project; Phase IIA will berth 32+ major warships and submarines. Purpose-built, uncongested, away from a commercial port.</td></tr>
+      <tr><td>Naval Dockyard, Visakhapatnam</td><td>Visakhapatnam</td><td>Eastern Fleet base; adjacent Ship Building Centre builds the nuclear submarines.</td></tr>
+      <tr><td><strong>INS Varsha</strong></td><td>Rambilli, Andhra Pradesh</td><td>Dedicated nuclear submarine base under Project Varsha, ~50 km south of Vizag, with underground pens and tunnels; being operationalised in phases. Designed so SSBNs can sail unobserved by satellites — India’s answer to China’s Hainan base.</td></tr>
+      <tr><td>INS Kattabomman</td><td>Vijayanarayanam, Tamil Nadu</td><td>VLF/ELF transmitter that communicates with submerged submarines — the link that makes the sea-based deterrent usable.</td></tr>
+      <tr><td>INS Dweeprakshak</td><td>Kavaratti, Lakshadweep</td><td>First Lakshadweep base.</td></tr>
+      <tr><td><strong>INS Jatayu</strong></td><td>Minicoy, Lakshadweep</td><td>Commissioned 6 March 2024. Pushes surveillance and anti-piracy reach toward the Nine Degree Channel, one of the busiest sea lanes in the world.</td></tr>
+      <tr><td>INS Baaz</td><td>Campbell Bay, Great Nicobar</td><td>India’s southernmost air station — overlooks the Six Degree Channel and the western entry to Malacca.</td></tr>
+      <tr><td>INS Kohassa</td><td>Shibpur, North Andaman</td><td>Northern Andaman air station.</td></tr>
+      <tr><td>INS Chilka</td><td>Odisha</td><td>Basic training establishment for all sailors.</td></tr>
+      <tr><td>Indian Naval Academy</td><td>Ezhimala, Kerala</td><td>Asia’s largest naval academy; where your NDA/CDS/INET journey ends up. Under Southern Naval Command.</td></tr>
+      <tr><td>INS Shivaji / INS Valsura / INS Dronacharya</td><td>Lonavala / Jamnagar / Kochi</td><td>Marine engineering, electrical &amp; weapons-electronics, and gunnery training respectively.</td></tr>
+      <tr><td>INS Hansa / INS Garuda / INS Rajali / INS Dega</td><td>Goa / Kochi / Arakkonam / Visakhapatnam</td><td>Principal naval air stations. Rajali hosts the P-8I fleet.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>Overseas and partner facilities</h4>
+  <p>India does not run foreign bases in the Western sense, but it maintains access and monitoring arrangements: coastal radar chains in <strong>Mauritius, Seychelles, Sri Lanka, Maldives and Bangladesh</strong>; an airstrip and jetty developed on <strong>Agalega (Mauritius)</strong>; a logistics presence at <strong>Duqm (Oman)</strong> and access to <strong>Chabahar (Iran)</strong>; a listening post in Madagascar; and berthing rights under logistics-exchange agreements with the US (LEMOA), France, Australia, Japan, Singapore and others.</p>
+</section>
+
+<!-- 5 -->
+<section id="ranks">
+  <h2>Ranks, branches and entries</h2><hr class="sec-rule">
+
+  <h3>Commissioned officer ranks</h3>
+  <div class="tablewrap">
+  <table>
+    <caption>Officer ranks with Army and Air Force equivalents</caption>
+    <thead><tr><th>Navy</th><th>Army</th><th>Air Force</th><th>Note</th></tr></thead>
+    <tbody>
+      <tr><td>Admiral of the Fleet</td><td>Field Marshal</td><td>Marshal of the IAF</td><td>Five-star, ceremonial. <strong>Never conferred</strong> in the Indian Navy.</td></tr>
+      <tr><td><strong>Admiral</strong></td><td>General</td><td>Air Chief Marshal</td><td>Only the CNS holds this rank.</td></tr>
+      <tr><td><strong>Vice Admiral</strong></td><td>Lieutenant General</td><td>Air Marshal</td><td>FOC-in-Cs, VCNS, PSOs.</td></tr>
+      <tr><td><strong>Rear Admiral</strong></td><td>Major General</td><td>Air Vice Marshal</td><td>Fleet commanders, area commanders.</td></tr>
+      <tr><td><strong>Commodore</strong></td><td>Brigadier</td><td>Air Commodore</td><td>Broad pennant, not a flag officer in the strict sense.</td></tr>
+      <tr><td><strong>Captain</strong></td><td>Colonel</td><td>Group Captain</td><td>Note: “Captain” is also an <em>appointment</em> — the CO of any ship is “Captain” regardless of rank.</td></tr>
+      <tr><td><strong>Commander</strong></td><td>Lieutenant Colonel</td><td>Wing Commander</td><td></td></tr>
+      <tr><td><strong>Lieutenant Commander</strong></td><td>Major</td><td>Squadron Leader</td><td></td></tr>
+      <tr><td><strong>Lieutenant</strong></td><td>Captain</td><td>Flight Lieutenant</td><td></td></tr>
+      <tr><td><strong>Sub Lieutenant</strong></td><td>Lieutenant</td><td>Flying Officer</td><td>The rank you are commissioned into from the Academy.</td></tr>
+      <tr><td>Midshipman</td><td>—</td><td>—</td><td>Cadet under training at sea.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Sailors (Personnel Below Officer Rank)</h3>
+  <p>In descending order: <strong>Master Chief Petty Officer I</strong> → Master Chief Petty Officer II → Chief Petty Officer → Petty Officer → Leading Seaman → Seaman I → Seaman II. Agniveers recruited under the Agnipath scheme serve a four-year tour, with up to 25% retained in regular service.</p>
+  <div class="note">
+    <p><strong>Currency check (May 2026):</strong> the Navy’s proposal to indigenise sailor rank titles — which would have affected more than 65,000 sailors — was <strong>shelved</strong>. The MoD preferred a coordinated tri-service approach. Existing nomenclature continues. Officer ranks were never part of the proposal. Earlier related reforms that <em>did</em> happen: the 2022 ensign and crest change and the 2023 introduction of new officer epaulettes inspired by Shivaji’s seal.</p>
+  </div>
+
+  <h3>Branches and specialisations</h3>
+  <div class="split">
+    <div class="panel">
+      <h4>Executive Branch</h4>
+      <ul>
+        <li><strong>General Service / Hydro</strong> — drives and fights the ship</li>
+        <li><strong>Submarine</strong> cadre</li>
+        <li><strong>Pilot</strong> and <strong>Observer</strong> (naval aviation)</li>
+        <li><strong>Naval Armament Inspectorate</strong></li>
+        <li><strong>Logistics</strong>, <strong>Education</strong>, <strong>Law</strong>, <strong>Sports</strong>, <strong>Information Technology</strong>, <strong>Naval Constructor</strong></li>
+      </ul>
+      <p style="font-size:.9rem;margin-top:.6rem">Executive sub-specialisations chosen later: Navigation &amp; Direction, Gunnery, Anti-Submarine Warfare, Communications &amp; Electronic Warfare, Diving, Hydrography.</p>
+    </div>
+    <div class="panel">
+      <h4>Technical Branches</h4>
+      <ul>
+        <li><strong>Engineering Branch</strong> — propulsion, hull, machinery</li>
+        <li><strong>Electrical Branch</strong> — weapons, sensors, power</li>
+      </ul>
+      <h4>Entry routes to know</h4>
+      <ul>
+        <li><strong>NDA</strong> (after Class 12, PCM) — three years NDA + one year INA</li>
+        <li><strong>CDS / INA (Executive)</strong> — after graduation</li>
+        <li><strong>INET (Officer)</strong> — the Navy’s own written test</li>
+        <li><strong>10+2 (B.Tech) Cadet Entry</strong> — four-year B.Tech at Ezhimala, no written exam, shortlisting on JEE (Main) rank</li>
+        <li><strong>NCC Special Entry</strong> — Naval Wing ‘C’ certificate, direct SSB</li>
+        <li><strong>Agniveer (SSR / MR)</strong> for sailors</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="edge">
+    <span class="edge-h">Interview edge</span>
+    <p>Be ready for “Which branch do you want and why?” and, immediately after, “What if you are given a different branch?” The IO is testing whether you have a genuine preference and whether your commitment survives not getting it. Have a reasoned first choice built on your academic strengths and temperament, and a sincere answer that you want to serve in the Navy — the branch is the Navy’s call, not a condition of your service.</p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section id="ships">
+  <h2>Types of ships</h2><hr class="sec-rule">
+  <p>Learn the hierarchy first, then hang specific names on it. A useful mental ladder by size and role: <em>aircraft carrier → destroyer → frigate → corvette → offshore patrol vessel → fast attack craft</em>, with a parallel family of amphibious, survey, support and special-purpose ships.</p>
+
+  <h3>Aircraft carriers</h3>
+  <ul>
+    <li><strong>INS Vikramaditya (R33)</strong> — 45,000 t, converted Kiev-class <em>Admiral Gorshkov</em>, commissioned 2013. STOBAR with a ski-jump. Operates MiG-29K.</li>
+    <li><strong>INS Vikrant (R11)</strong> — 45,000 t, India’s <strong>first indigenously designed and built</strong> carrier, built at Cochin Shipyard, commissioned 2 September 2022. STOBAR. Roughly 76% indigenous content.</li>
+    <li><strong>IAC-2 / INS Vishal</strong> — the proposed third carrier. Current thinking favours a repeat-Vikrant of roughly 45,000 t with a deck reworked for UAV operations, rather than the earlier 65,000 t CATOBAR concept. The Navy has been pushing for government clearance; as of 2026 the project remains unapproved.</li>
+  </ul>
+  <p>STOBAR = Short Take-Off But Arrested Recovery (ski-jump plus arrestor wires). CATOBAR = Catapult-Assisted Take-Off But Arrested Recovery. The difference matters: CATOBAR allows heavier aircraft and fixed-wing AEW, which STOBAR cannot.</p>
+
+  <h3>Destroyers</h3>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Class</th><th>Project</th><th>Ships</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Visakhapatnam</strong></td><td>P-15B</td><td>Visakhapatnam, Mormugao, Imphal, <strong>Surat</strong></td><td>7,400 t. Surat commissioned 15 Jan 2025 — built in 31 months from launch to delivery, the fastest indigenous major warship. ~75% indigenous.</td></tr>
+      <tr><td><strong>Kolkata</strong></td><td>P-15A</td><td>Kolkata, Kochi, Chennai</td><td>MF-STAR radar, Barak-8, BrahMos. The workhorses of Operation Sankalp.</td></tr>
+      <tr><td><strong>Delhi</strong></td><td>P-15</td><td>Delhi, Mysore, Mumbai</td><td>First indigenously designed destroyers (late 1990s).</td></tr>
+      <tr><td>Rajput</td><td>Kashin-II</td><td>Being retired</td><td>Soviet origin; first platform to fire BrahMos at sea.</td></tr>
+      <tr><td>Next Generation Destroyer</td><td>P-18</td><td>Planned</td><td>~13,000 t concept with greater land-attack and air-defence depth.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Frigates</h3>
+  <ul>
+    <li><strong>Nilgiri class (Project 17A)</strong> — 6,670 t stealth frigates, the current mainstay of new construction, built in parallel at Mazagon Dock and GRSE. In service: <em>Nilgiri</em> (Jan 2025), <em>Himgiri</em> and <em>Udaygiri</em> (both 26 Aug 2025 — the first time two major combatants from two shipyards were commissioned together), <em>Taragiri</em> (Apr 2026), <em>Dunagiri</em> (Jun 2026). Note that <em>Udaygiri</em> was the <strong>100th ship designed by the Warship Design Bureau</strong>.</li>
+    <li><strong>Shivalik class (Project 17)</strong> — Shivalik, Satpura, Sahyadri. India’s first stealth frigates.</li>
+    <li><strong>Talwar / Tushil class (Project 11356)</strong> — Russian-built. <em>INS Tushil</em> (Dec 2024) and <strong>INS Tamal</strong> (commissioned 1 July 2025 at Yantar Shipyard, Kaliningrad) are the newest; two more of the class are being built at Goa Shipyard with Russian assistance.</li>
+    <li><strong>Brahmaputra</strong> and <strong>Godavari</strong> classes — older indigenous frigates, progressively retiring.</li>
+  </ul>
+
+  <h3>Corvettes and small combatants</h3>
+  <ul>
+    <li><strong>Kamorta class (P-28)</strong> — dedicated anti-submarine corvettes: Kamorta, Kadmatt, Kiltan, Kavaratti.</li>
+    <li><strong>Kora, Khukri, Veer (Tarantul) classes</strong> — missile corvettes and fast attack craft.</li>
+    <li><strong>Arnala class ASW Shallow Water Craft</strong> — 900 t, waterjet-propelled, 16 planned, built by GRSE and Cochin Shipyard to hunt submarines in the littorals where big ships cannot go. <em>Arnala</em> (Jun 2025), <em>Androth</em> (Oct 2025), <em>Anjadip</em> (Feb 2026), <em>Agray</em> (Jun 2026) are in service; <em>Mahe</em> class craft are joining alongside.</li>
+    <li><strong>Next Generation Missile Vessels</strong> and <strong>Next Generation Offshore Patrol Vessels</strong> — under construction at Cochin Shipyard and Goa Shipyard.</li>
+  </ul>
+
+  <h3>Amphibious, survey and support</h3>
+  <ul>
+    <li><strong>INS Jalashwa</strong> — Landing Platform Dock (ex-USS Trenton), the Navy’s largest amphibious ship. A <strong>Landing Platform Dock (LPD)</strong> programme for four larger ships is planned.</li>
+    <li><strong>Magar and Shardul class</strong> Landing Ship Tanks; LCU Mk-IV landing craft operating largely from the Andamans.</li>
+    <li><strong>Survey Vessel (Large) — Sandhayak class</strong>: <em>Sandhayak</em>, <em>Nirdeshak</em>, <em>Ikshak</em> (Nov 2025), <em>Sanshodhak</em> (Jun 2026). Each carries four survey motor boats. India’s hydrographic survey service also charts waters for friendly navies — a quiet but powerful diplomatic tool.</li>
+    <li><strong>INS Nistar</strong> — Diving Support Vessel commissioned July 2025, built by Hindustan Shipyard. With the Deep Submergence Rescue Vessel it gives India a submarine-rescue capability that only a handful of navies possess; it made its operational debut in a multinational rescue exercise in the South China Sea in October 2025.</li>
+    <li><strong>Fleet tankers</strong> — Deepak, Shakti, Jyoti; five new Fleet Support Ships are being built at Hindustan Shipyard. These are what turn a coastal navy into a blue-water navy.</li>
+    <li><strong>INS Dhruv</strong> — nuclear missile-tracking and ocean surveillance ship.</li>
+  </ul>
+
+  <div class="note">
+    <p><strong>Pennant number logic, often asked:</strong> R = aircraft carrier, D = destroyer, F = frigate, P = patrol/corvette, K = corvette/missile vessel, S = submarine, A = auxiliary, L = landing ship, M = mine countermeasures.</p>
+  </div>
+
+  <div class="edge">
+    <span class="edge-h">Interview edge</span>
+    <p>“Difference between a destroyer and a frigate?” Do not fumble this. Historically: destroyers were built to screen a fleet against torpedo boats and submarines; frigates for escort and patrol. Today the practical distinction is size and role weighting — a destroyer is larger (7,000–8,000 t), carries more vertical launch cells and is optimised for <em>area air defence</em> of a task force, while a frigate (4,000–7,000 t) is a multirole escort weighted toward anti-submarine and anti-surface work. Corvettes are smaller still and mission-specialised.</p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section id="submarines">
+  <h2>Submarines</h2><hr class="sec-rule">
+  <p>Know the three-letter codes cold: <strong>SSBN</strong> = nuclear-powered ballistic missile submarine; <strong>SSN</strong> = nuclear-powered attack submarine; <strong>SSK</strong> = conventional diesel-electric attack submarine. Nuclear propulsion buys unlimited endurance and high sustained speed; a conventional boat is quieter at low speed and cheaper, but must surface or snorkel.</p>
+
+  <h3>Nuclear ballistic missile submarines — the sea leg of the triad</h3>
+  <div class="tablewrap">
+  <table>
+    <caption>Arihant class (Advanced Technology Vessel programme, Ship Building Centre, Visakhapatnam)</caption>
+    <thead><tr><th>Boat</th><th>Commissioned</th><th>Detail</th></tr></thead>
+    <tbody>
+      <tr><td><strong>INS Arihant (S2)</strong></td><td>2016</td><td>6,000 t; four launch tubes; first deterrence patrol completed November 2018.</td></tr>
+      <tr><td><strong>INS Arighaat (S3)</strong></td><td>29 August 2024</td><td>Quieter reactor plant; four tubes.</td></tr>
+      <tr><td><strong>INS Aridhaman (S4)</strong></td><td>3 April 2026</td><td>~7,000 t, stretched hull, <strong>eight</strong> vertical launch tubes. India’s largest and most capable SSBN. Carries K-15 Sagarika (750 km) or the longer-ranged K-4 (3,500 km).</td></tr>
+      <tr><td>S4* — likely <em>INS Arisudan</em></td><td>expected ~2027</td><td>Fourth boat, stretched configuration. Its entry is what makes a genuine continuous at-sea deterrent posture realistic.</td></tr>
+      <tr><td>S5 class</td><td>planned</td><td>A much larger ~13,000–14,000 t design intended to carry the K-5/K-6 class of missiles.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>India’s nuclear doctrine is <strong>No First Use</strong> with <strong>credible minimum deterrence</strong> and assured massive retaliation. That doctrine is only credible if some part of the arsenal survives a first strike — which is exactly what an SSBN hidden in the Bay of Bengal provides. This is the single most important point to make if the subject comes up.</p>
+
+  <h3>Nuclear attack submarines</h3>
+  <ul>
+    <li><strong>Project 77</strong> (formerly Project 75 Alpha) — six indigenous SSNs of roughly 10,000 t. The Cabinet Committee on Security cleared the first two in <strong>October 2024</strong>; they will be built at the Ship Building Centre, Visakhapatnam, with Larsen &amp; Toubro, with induction projected in the mid-2030s. Designed around vertical-launch land-attack and anti-ship weapons plus Varunastra torpedoes.</li>
+    <li>India previously operated two leased Russian Akula-class boats as <em>INS Chakra</em>; a further lease has been under discussion.</li>
+    <li>Strategic point: the Navy prioritised SSNs over a third carrier in its own internal debate — an SSN can hold a hostile carrier group or a chokepoint at risk at a fraction of the cost of a carrier battle group.</li>
+  </ul>
+
+  <h3>Conventional submarines</h3>
+  <ul>
+    <li><strong>Kalvari class (Project 75)</strong> — six Scorpène-design boats built at Mazagon Dock with France’s Naval Group: Kalvari, Khanderi, Karanj, Vela, Vagir and <strong>Vagsheer</strong> (commissioned 15 January 2025, completing the project). They lack the originally planned air-independent propulsion; DRDO’s indigenous fuel-cell AIP plug is to be retrofitted during refits.</li>
+    <li><strong>Sindhughosh class</strong> — Russian Kilo-class, ageing; <strong>Shishumar class</strong> — German Type 209, ageing.</li>
+    <li><strong>Project 75I</strong> — six new AIP-equipped boats. <strong>Germany’s TKMS with Mazagon Dock</strong> emerged as the only compliant bidder, because India insisted on an AIP system already proven at sea. The Finance Ministry cleared the acquisition in May 2026 and the contract has been moving toward final Cabinet Committee on Security approval, at a headline figure of roughly ₹70,000 crore. Contractually the first boat arrives seven years after signature, so realistically the early 2030s, with one per year thereafter.</li>
+    <li><strong>Three additional Scorpènes</strong> — a follow-on order of about ₹36,000 crore has been discussed with France but has not been concluded.</li>
+    <li><strong>Project 76</strong> — a future fully indigenous conventional submarine design.</li>
+  </ul>
+
+  <div class="edge">
+    <span class="edge-h">Interview edge</span>
+    <p>The honest and impressive answer on submarines is that India has a <strong>capability gap</strong>. The 1999 thirty-year plan envisaged 24 conventional submarines by 2030; India has roughly 16 boats, many over 30 years old, and the first Project 75I boat will not arrive before the early 2030s. Say this plainly, then say what offsets it: the ASW Shallow Water Craft programme, P-8I and MQ-9B surveillance, MH-60R helicopters, and the SSBN/SSN force. Candidates who only recite good news sound rehearsed; candidates who can name a problem and its mitigation sound like officers.</p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section id="aviation">
+  <h2>Naval aviation</h2><hr class="sec-rule">
+  <p>Naval aviation began in 1953 with a Sealand aircraft and is now the Navy’s main instrument of maritime domain awareness. Squadrons are designated <strong>INAS</strong> — Indian Naval Air Squadron. <strong>8 May</strong> is Naval Aviation Day.</p>
+
+  <h3>Fixed-wing aircraft</h3>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Aircraft</th><th>Role</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td><strong>MiG-29K / KUB</strong></td><td>Carrier-borne multirole fighter</td><td>~40 in service from Vikramaditya and Vikrant. Serviceability has been a documented problem; service life now extended to about 2040.</td></tr>
+      <tr><td><strong>Rafale M</strong></td><td>Carrier-borne multirole fighter</td><td><strong>26 ordered April 2025</strong> (22 single-seat + 4 twin-seat trainers) for roughly ₹63,000 crore / €7 bn. Deliveries from 2029–2031. India is the first export customer of the naval Rafale. Proven on a ski-jump at the Shore Based Test Facility, Goa. A follow-on order of 31 more has been reported under consideration.</td></tr>
+      <tr><td><strong>HAL TEDBF</strong></td><td>Indigenous twin-engine deck-based fighter</td><td>The long-term answer, with folding wings sized for Indian carriers. Design and funding approval still pending; realistic service entry is late 2030s.</td></tr>
+      <tr><td><strong>Boeing P-8I Neptune</strong></td><td>Long-range maritime patrol &amp; ASW</td><td>12 in service at INS Rajali and INS Hansa; range ~7,500 km. The backbone of Indian Ocean surveillance. Six more under negotiation.</td></tr>
+      <tr><td><strong>Dornier 228</strong></td><td>Short-range maritime reconnaissance</td><td>Widely distributed; the daily coastal patrol workhorse.</td></tr>
+      <tr><td>HAL HJT-16 Kiran / Hawk</td><td>Training</td><td>Pilot training at Southern Naval Command.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Helicopters</h3>
+  <ul>
+    <li><strong>MH-60R Seahawk “Romeo”</strong> — 24 ordered from the US in 2020 to replace the Sea Kings; 21 delivered by mid-2026. Two squadrons stood up: <strong>INAS 334 “Seahawks”</strong> at INS Garuda, Kochi (March 2024) and <strong>INAS 335 “Ospreys”</strong> at INS Hansa, Goa (17 December 2025). Dipping sonar, sonobuoys, torpedoes, anti-surface missiles. Deployed during Operation Sindoor.</li>
+    <li><strong>Kamov Ka-31</strong> — airborne early warning; the eyes of a carrier group, since a STOBAR carrier cannot fly fixed-wing AEW.</li>
+    <li><strong>Kamov Ka-28</strong> — anti-submarine warfare.</li>
+    <li><strong>HAL Dhruv ALH Mk III</strong> — indigenous utility/SAR; <strong>Chetak</strong> for utility and training.</li>
+    <li><strong>Naval Utility Helicopter (NUH)</strong> and <strong>Naval Multi-Role Helicopter (NMRH)</strong> programmes are intended to close the remaining shortfall; an RFI for 76 utility helicopters was issued in 2025.</li>
+  </ul>
+
+  <h3>Unmanned systems</h3>
+  <ul>
+    <li><strong>MQ-9B SeaGuardian</strong> — high-altitude long-endurance ISR. Operated on lease since 2020; additional airframes leased in 2026, and a much larger tri-service purchase of 31 MQ-9Bs (about $3.9 bn) has been progressing.</li>
+    <li><strong>Drishti-10 Starliner</strong> (Adani/Elbit Hermes 900) — medium-altitude endurance UAV, first delivered January 2024.</li>
+    <li><strong>Heron Mk-I</strong>, ship-launched <strong>Camcopter S-100</strong>, and a growing family of indigenous shipborne drones and underwater autonomous vehicles.</li>
+  </ul>
+
+  <div class="edge">
+    <span class="edge-h">Interview edge</span>
+    <p>Be able to explain <strong>why the Rafale M was chosen over the F/A-18 Super Hornet</strong>: commonality with the IAF’s existing 36 Rafales (training, spares, weapons), demonstrated ski-jump compatibility with Indian carriers, and a deeper Indo-French strategic relationship. And be able to state the honest caveat: it is an interim bridge, not a permanent solution, because the indigenous TEDBF has slipped.</p>
+  </div>
+</section>
+
+<!-- 9 -->
+<section id="weapons">
+  <h2>Weapons &amp; sensors worth naming</h2><hr class="sec-rule">
+  <div class="split">
+    <div class="panel">
+      <h4>Strike and anti-ship</h4>
+      <ul>
+        <li><strong>BrahMos</strong> — Indo-Russian supersonic cruise missile, ~Mach 2.8, ship-, sub-, air- and land-launched. The Navy’s signature weapon.</li>
+        <li><strong>Nirbhay</strong> — subsonic long-range land-attack cruise missile.</li>
+        <li><strong>K-15 Sagarika</strong> (750 km) and <strong>K-4</strong> (3,500 km) submarine-launched ballistic missiles; K-5 in development.</li>
+      </ul>
+      <h4>Air defence</h4>
+      <ul>
+        <li><strong>Barak-8 / MR-SAM</strong> — Indo-Israeli medium-range SAM, ~70–100 km.</li>
+        <li><strong>VL-SRSAM</strong> — DRDO short-range point defence.</li>
+        <li><strong>AK-630 / SRGM 76 mm</strong> — close-in weapon systems and main gun.</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h4>Underwater</h4>
+      <ul>
+        <li><strong>Varunastra</strong> — indigenous heavyweight torpedo; <strong>TAL Shyena</strong> lightweight torpedo.</li>
+        <li><strong>RBU-6000</strong> and the indigenous <strong>ERASR</strong> anti-submarine rockets.</li>
+        <li><strong>USHUS</strong> submarine sonar, <strong>HUMSA-NG</strong> hull-mounted sonar, towed arrays; <strong>Maareech</strong> anti-torpedo decoy.</li>
+      </ul>
+      <h4>Sensors &amp; networks</h4>
+      <ul>
+        <li><strong>MF-STAR (EL/M-2248)</strong> AESA radar on P-15A/B and P-17A ships.</li>
+        <li><strong>GSAT-7 “Rukmini”</strong> — the Navy’s dedicated communications satellite, ~2,000 nm footprint; GSAT-7R to follow.</li>
+        <li><strong>Shakti</strong> electronic warfare suite.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section id="maritime-security">
+  <h2>Maritime security</h2><hr class="sec-rule">
+  <p>The 26/11 Mumbai attacks of 2008 reorganised India’s entire coastal security architecture. Ten terrorists reached Mumbai by hijacking a fishing trawler. Nothing in the naval syllabus is more likely to be discussed.</p>
+
+  <h3>Who is responsible for what</h3>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Layer</th><th>Agency</th><th>Area</th></tr></thead>
+    <tbody>
+      <tr><td>Overall maritime security</td><td><strong>Indian Navy</strong></td><td>Designated the authority responsible for overall maritime security, including coastal and offshore security, in 2009</td></tr>
+      <tr><td>Coastal security &amp; territorial waters</td><td><strong>Indian Coast Guard</strong></td><td>Additionally designated the authority for coastal security in territorial waters</td></tr>
+      <tr><td>Shallow waters &amp; shoreline</td><td>Marine Police of coastal states</td><td>Up to 12 nm, with coastal police stations</td></tr>
+      <tr><td>Base and port protection</td><td><strong>Sagar Prahari Bal</strong></td><td>~1,000-strong force with Fast Interceptor Craft</td></tr>
+      <tr><td>National coordination</td><td>National Maritime Security Coordinator (created 2022)</td><td>Reports into the National Security Council Secretariat</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>The information backbone</h3>
+  <ul>
+    <li><strong>IMAC</strong> — Information Management and Analysis Centre at Gurugram, the nerve centre that fuses the picture.</li>
+    <li><strong>NC3I</strong> — National Command Control Communications and Intelligence Network links about 50 naval and Coast Guard radar stations into a single common operating picture.</li>
+    <li><strong>Coastal Surveillance Network</strong> — chains of static radar stations along the coast and islands, extended to partner countries.</li>
+    <li><strong>IFC-IOR</strong> — the Information Fusion Centre – Indian Ocean Region at Gurugram, opened in December 2018, now hosting international liaison officers from many navies. It is the single best example of India acting as a regional public-goods provider.</li>
+    <li><strong>Automatic Identification System</strong> transponders mandated on fishing vessels; biometric ID cards for fishermen; colour-coded boat registration.</li>
+    <li><strong>Joint Operations Centres</strong> at Mumbai, Visakhapatnam, Kochi and Port Blair; regular <strong>Sea Vigil</strong> national coastal defence exercises.</li>
+  </ul>
+
+  <h3>The threats, in the order the Navy ranks them</h3>
+  <ol>
+    <li>State competition — the growth of the PLA Navy and its presence in the Indian Ocean.</li>
+    <li>Sea-borne terrorism and infiltration.</li>
+    <li>Piracy and armed robbery at sea.</li>
+    <li>Trafficking — narcotics, arms, human.</li>
+    <li>Illegal, unreported and unregulated fishing, which is both an economic and a sovereignty problem.</li>
+    <li><strong>Grey-zone activity</strong> — maritime militias, research vessels doing survey work, undersea cable interference, actions calibrated to stay below the threshold of war. This is the phrase to use if you want to sound current.</li>
+    <li>Non-traditional threats: climate, disaster, marine pollution, pandemic.</li>
+  </ol>
+</section>
+
+<!-- 11 -->
+<section id="ior">
+  <h2>The Indian Ocean Region</h2><hr class="sec-rule">
+  <p>Geography is the whole argument. India sits astride the Indian Ocean like a pier jutting 1,000 nm into it, within reach of every major sea lane. About 95% of India’s trade by volume and 68% by value moves by sea, and roughly 80% of its crude oil is imported across it. Globally, around two-thirds of the world’s oil shipments and a third of bulk cargo transit these waters.</p>
+
+  <h3>Chokepoints to know by name and location</h3>
+  <ul>
+    <li><strong>Strait of Hormuz</strong> — between Iran and Oman; the Gulf’s only outlet, and India’s oil lifeline.</li>
+    <li><strong>Bab-el-Mandeb</strong> — between Yemen and Djibouti; gateway to the Red Sea and Suez.</li>
+    <li><strong>Strait of Malacca</strong> — between Malaysia, Singapore and Sumatra; over 80% of China’s oil imports pass through it. India’s Andaman &amp; Nicobar position overlooks the western approach — China’s so-called “Malacca dilemma.”</li>
+    <li><strong>Sunda and Lombok Straits</strong> — the alternatives to Malacca, through Indonesia.</li>
+    <li><strong>Mozambique Channel</strong> and the <strong>Cape of Good Hope</strong> route.</li>
+    <li>India’s own: the <strong>Nine Degree Channel</strong> (Lakshadweep), <strong>Eight Degree Channel</strong> (between Minicoy and Maldives), <strong>Ten Degree Channel</strong> (between Andaman and Nicobar) and the <strong>Six Degree Channel</strong> (south of Great Nicobar).</li>
+  </ul>
+
+  <h3>The competition</h3>
+  <p><strong>China</strong> maintains a persistent presence: its first overseas base at Djibouti (2017), port access and investment at Gwadar (Pakistan), Hambantota (Sri Lanka), Kyaukpyu (Myanmar) and elsewhere — the pattern India describes as the <strong>“String of Pearls.”</strong> Chinese research and survey vessels operate regularly in the Indian Ocean, and PLAN anti-piracy task forces have rotated there since 2008. India’s counter, informally called the <strong>“Necklace of Diamonds,”</strong> combines partner access (Duqm, Chabahar, Sabang, Changi, Agalega), capacity-building for small island states, and persistent surveillance.</p>
+
+  <h3>India’s framework: SAGAR to MAHASAGAR</h3>
+  <ul>
+    <li><strong>SAGAR</strong> — “Security and Growth for All in the Region,” announced by Prime Minister Modi in Mauritius in <strong>2015</strong>. Its pillars: safeguarding India’s own interests, deepening security cooperation with neighbours, collective action on maritime threats, sustainable regional development, and engaging extra-regional powers constructively.</li>
+    <li><strong>MAHASAGAR</strong> — “Mutual and Holistic Advancement for Security and Growth Across Regions,” announced in Mauritius in <strong>March 2025</strong>. It widens SAGAR from the Indian Ocean neighbourhood to the wider Global South, adding trade, connectivity, capacity-building and technology. The rhetorical shift matters: from <strong>“net security provider”</strong> to <strong>“preferred security partner”</strong> — a change of vocabulary aimed at countries like Sri Lanka and the Maldives that are sensitive about sovereignty.</li>
+  </ul>
+
+  <h3>Institutions India works through</h3>
+  <ul>
+    <li><strong>IONS</strong> — Indian Ocean Naval Symposium, founded by India in 2008; India holds the chair for 2025–27 and hosted the Conclave of Chiefs at Visakhapatnam in February 2026 with 33 countries represented.</li>
+    <li><strong>IORA</strong> — Indian Ocean Rim Association, the economic and policy forum.</li>
+    <li><strong>Colombo Security Conclave</strong> — India, Sri Lanka, Maldives, Mauritius, Bangladesh and Seychelles.</li>
+    <li><strong>Quad</strong> — India, US, Japan, Australia; the Indo-Pacific Maritime Domain Awareness partnership is its most concrete maritime output.</li>
+    <li><strong>BIMSTEC</strong>, and the Indian Ocean Commission where India is an observer.</li>
+  </ul>
+
+  <h3>Mission-Based Deployments</h3>
+  <p>Since 2017 the Navy keeps ships permanently stationed at key locations — the Gulf of Aden, the Persian Gulf, the North Arabian Sea, the Malacca, Sunda and Lombok approaches, the Andaman Sea and the southern Indian Ocean — rather than surging them from home ports. It is the practical mechanism behind “first responder”: a ship is already there when something happens.</p>
+</section>
+
+<!-- 12 -->
+<section id="antipiracy">
+  <h2>Anti-piracy operations</h2><hr class="sec-rule">
+  <p>India has escorted merchant shipping in the Gulf of Aden continuously since <strong>October 2008</strong>. Over that period the Navy has deployed more than a hundred ships and safely escorted several thousand merchant vessels carrying tens of thousands of seafarers of all nationalities.</p>
+
+  <h3>Operation Sankalp</h3>
+  <p>Launched in <strong>June 2019</strong> after tanker attacks in the Gulf of Oman, and substantially expanded from <strong>December 2023</strong> when the Red Sea crisis pulled Western warships toward countering Houthi missile and drone attacks, leaving a vacuum that Somali pirates exploited. In that phase India deployed over <strong>20 warships and 5,000 personnel</strong>, becoming the largest single-nation naval presence in the region. Over roughly 100 days the force responded to 18 incidents, conducted about 1,000 boarding operations, queried more than 450 merchant vessels, rescued over 110 people — Indian, Pakistani and other nationals — escorted around 15 lakh tonnes of critical cargo and seized more than 3,000 kg of narcotics.</p>
+
+  <h3>The MV Ruen operation — the story to tell</h3>
+  <p>The Maltese-flagged bulk carrier <em>MV Ruen</em> was hijacked off Somalia in December 2023, the first successful Somali hijacking in nearly seven years, and then used as a mother ship. In March 2024, about 1,400 nautical miles from the Indian coast, <strong>INS Kolkata</strong> intercepted her. An IAF C-17 air-dropped two combat boats and MARCOS teams into the open ocean. The Navy disabled the ship’s steering and communications, and after a roughly <strong>40-hour</strong> operation all 35 pirates surrendered and 17 crew were rescued without a single hostage casualty. The pirates were brought to Mumbai and prosecuted under India’s Maritime Anti-Piracy Act, 2022.</p>
+
+  <div class="note">
+    <p><strong>Current situation (2026):</strong> Somali piracy has resurged. The Joint Maritime Information Centre raised its threat assessment to “severe” in May 2026. Pirate groups now operate more than 1,000 nautical miles from the Somali coast using hijacked vessels as mother ships. INS Kolkata foiled an attempted attack on the merchant vessel MV Mashallah 1 near the Gulf of Aden in May 2026. Overlaying this are continuing Houthi attacks in the Red Sea and heightened Iran-related tension — three simultaneous threat streams stretching every navy in the region.</p>
+  </div>
+
+  <h3>Why India does it</h3>
+  <ul>
+    <li><strong>Self-interest</strong> — Indians make up a large share of the world’s merchant seafarers, and Indian trade and energy move through these waters.</li>
+    <li><strong>Reputation</strong> — escorting other countries’ ships is the cheapest, most credible way to be seen as a security provider.</li>
+    <li><strong>Operational value</strong> — sustained deployments 3,000 km from home prove logistics, endurance and command that no exercise can.</li>
+  </ul>
+</section>
+
+<!-- 13 -->
+<section id="cyber">
+  <h2>Cyber &amp; information warfare</h2><hr class="sec-rule">
+  <p>A modern warship is a floating data centre. Its combat management system fuses radar, sonar, electronic support and datalink feeds into one picture, and every one of those links is an attack surface. The Navy is generally regarded as the most digitally mature of the three Indian services, largely because network-centric operations are unavoidable at sea.</p>
+
+  <h3>Structures</h3>
+  <ul>
+    <li><strong>Defence Cyber Agency (DCyA)</strong> — established 2019 under the Integrated Defence Staff as a tri-service agency for defensive and offensive cyber operations. Notably, its first head was a naval officer, reflecting the Navy’s lead in this domain.</li>
+    <li>The Navy maintains its own cyber-security organisation, a dedicated Information Technology cadre in the Executive Branch, and Communications &amp; Electronic Warfare as a full officer specialisation.</li>
+    <li><strong>Defence Space Agency</strong> and <strong>Armed Forces Special Operations Division</strong> are the sister tri-service agencies created at the same time — name all three together if asked.</li>
+    <li>Recruitment has followed: the Navy now runs dedicated SSC Executive (IT) entries for graduates in computer science, cyber security, AI and data analytics.</li>
+  </ul>
+
+  <h3>The domains it covers</h3>
+  <div class="split">
+    <div class="panel">
+      <h4>Defensive</h4>
+      <ul>
+        <li>Hardening shipborne and shore networks, and the links between them</li>
+        <li>Supply-chain security for imported combat systems and chips</li>
+        <li>Protecting industrial control systems in dockyards and shipyards</li>
+        <li>Counter-espionage — social engineering of personnel and families has been a documented vector</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h4>Offensive &amp; electronic</h4>
+      <ul>
+        <li>Electronic warfare: jamming, spoofing, deception; the indigenous <strong>Shakti</strong> EW suite</li>
+        <li>Navigation warfare — GPS jamming and spoofing at sea, a real and growing problem in the Gulf and Red Sea</li>
+        <li>Undersea domain awareness, including protection of submarine cables and seabed infrastructure</li>
+        <li>Information operations and counter-narrative work in the maritime space</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Digital initiatives you can name</h3>
+  <p>The Navy has moved administration and logistics onto indigenous platforms — its own private cloud <em>Meghdoot</em>, a digital library and knowledge network, an indigenous operating system <em>Maya</em> adopted across defence networks, and data-analytics cells for predictive maintenance of machinery. It has also stood up AI-enabled projects for maritime pattern-of-life analysis, and DRDO has been developing an AI-enabled autonomous mine-hunting system for the Navy.</p>
+
+  <div class="edge">
+    <span class="edge-h">Interview edge</span>
+    <p>If asked whether cyber is the “fifth domain,” give the full list — land, sea, air, space, cyber — and add the current thinking that <strong>cognitive or information warfare</strong> is emerging as a sixth. Then make it concrete: during recent India–Pakistan tension, a large part of the contest was fought in claims, deepfakes and disputed imagery on social media within hours of any kinetic action. A naval officer today has to be able to operate when the picture itself is contested.</p>
+  </div>
+</section>
+
+<!-- 14 -->
+<section id="war-peace">
+  <h2>Role in war and in peacetime</h2><hr class="sec-rule">
+  <p>This is a near-certain interview question and the one most candidates answer thinly. The doctrinal framing — from the Navy’s own <em>Ensuring Secure Seas: Indian Maritime Security Strategy</em> — divides naval roles into four: <strong>military, diplomatic, constabulary and benign</strong>. Use that structure and you will sound like you have read something.</p>
+
+  <div class="split">
+    <div class="panel">
+      <h4>Military role — in war</h4>
+      <ul>
+        <li><strong>Sea control</strong> — the ability to use a sea area at will for a period of time. Not permanent ownership; a time-and-place proposition.</li>
+        <li><strong>Sea denial</strong> — preventing an adversary from using an area, the strategy of the weaker fleet. Submarines are the classic tool.</li>
+        <li><strong>Power projection ashore</strong> — carrier air, cruise missiles, amphibious landings, special forces insertion.</li>
+        <li><strong>Protection of sea lines of communication</strong> and convoy escort; conversely, <strong>blockade</strong> and interdiction of enemy trade.</li>
+        <li><strong>Strategic deterrence</strong> — the SSBN patrol that guarantees second-strike capability.</li>
+        <li><strong>Escalation control</strong> — the sea offers graduated options that land borders do not, because you can mass force visibly without crossing anyone’s territory.</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h4>Diplomatic, constabulary and benign roles — in peace</h4>
+      <ul>
+        <li><strong>Naval diplomacy</strong> — port calls, joint exercises, training foreign officers, hydrographic surveys for partner states, ship handovers and capacity-building.</li>
+        <li><strong>Constabulary</strong> — anti-piracy, counter-terrorism at sea, counter-narcotics, anti-poaching, EEZ policing, sanctions monitoring.</li>
+        <li><strong>Benign</strong> — humanitarian assistance and disaster relief, search and rescue, evacuation of citizens from conflict zones, medical outreach, oceanographic research, pollution response.</li>
+        <li><strong>Presence</strong> — the single most underrated peacetime function. A grey hull on the horizon changes calculations without anyone firing.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Named operations that prove the point</h3>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Operation</th><th>Year</th><th>What it demonstrates</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Trident &amp; Python</strong></td><td>1971</td><td>Offensive strike; missile boats attacked Karachi harbour. Navy Day commemorates Trident.</td></tr>
+      <tr><td>Cactus</td><td>1988</td><td>Rapid intervention abroad; coup in Maldives reversed within hours.</td></tr>
+      <tr><td>Talwar</td><td>1999</td><td>Deterrence through blockade posture during Kargil, without combat.</td></tr>
+      <tr><td>Parakram</td><td>2001–02</td><td>Coercive naval deployment during a prolonged standoff.</td></tr>
+      <tr><td>Sukoon / Rahat / Nistar</td><td>2006 / 2015 / various</td><td>Evacuation of Indian and foreign nationals from Lebanon, Yemen and elsewhere.</td></tr>
+      <tr><td>Samudra Setu I &amp; II</td><td>2020–21</td><td>COVID repatriation and oxygen lift — the Navy as national logistics arm.</td></tr>
+      <tr><td>Sankalp</td><td>2019–present</td><td>Sustained constabulary presence across the western Indian Ocean.</td></tr>
+      <tr><td>Brahma</td><td>2025</td><td>Disaster relief to Myanmar after the earthquake — India as first responder.</td></tr>
+      <tr><td><strong>Sindoor</strong></td><td>2025</td><td>The modern template — see below.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Operation Sindoor and the naval dimension</h3>
+  <p>After the Pahalgam terror attack of 22 April 2025 killed 26 civilians, India launched Operation Sindoor on the night of 6–7 May against nine terrorist camps in Pakistan and Pakistan-occupied Kashmir. The Navy did not fire the opening strikes. What it did was arguably harder: within 96 hours of the attack it moved a <strong>carrier battle group</strong>, surface forces, submarines and aviation assets into the North Arabian Sea, conducted live weapon firings to validate readiness, and held a forward, openly deterrent posture with the declared ability to strike selected targets — Karachi among them — at a time of India’s choosing. MARCOS were inserted forward for reconnaissance and targeting support, and P-8I aircraft and MH-60R helicopters provided the surveillance picture.</p>
+  <p>The result was that the entire Pakistan Navy stayed in harbour or hugged the Makran coast for the duration. Merchant shipping avoided Pakistani ports and war-risk insurance premiums rose, imposing an economic cost. The Director General of Naval Operations, Vice Admiral A.N. Pramod, described the posture publicly; the then Navy Chief later noted the force was minutes from striking when a halt to kinetic action was requested.</p>
+
+  <div class="edge">
+    <span class="edge-h">Interview edge</span>
+    <p>The lesson to draw from Sindoor, if asked, is about <strong>deterrence without firing</strong>. A fleet that is visibly ready, forward-deployed and capable can shape an adversary’s decisions more cheaply than one that shoots. Add the second lesson — <strong>tri-service synergy</strong> — since the operation was coordinated across all three services and is being used as an argument in the theatre-command debate. Avoid triumphalism; describe it as an operation with objectives and outcomes.</p>
+  </div>
+</section>
+
+<!-- 15 -->
+<section id="exercises">
+  <h2>Exercises &amp; naval diplomacy</h2><hr class="sec-rule">
+  <div class="tablewrap">
+  <table>
+    <caption>Know at least eight of these by partner</caption>
+    <thead><tr><th>Exercise</th><th>With</th><th>Note</th></tr></thead>
+    <tbody>
+      <tr><td><strong>MALABAR</strong></td><td>US, Japan, Australia</td><td>Began 1992 as India–US bilateral; now the Quad navies’ flagship high-end exercise.</td></tr>
+      <tr><td><strong>VARUNA</strong></td><td>France</td><td>Long-running and sophisticated; includes carrier interoperability.</td></tr>
+      <tr><td>INDRA</td><td>Russia</td><td></td></tr>
+      <tr><td>KONKAN</td><td>United Kingdom</td><td></td></tr>
+      <tr><td>SIMBEX</td><td>Singapore</td><td>India’s longest uninterrupted bilateral naval exercise.</td></tr>
+      <tr><td>SLINEX / IMBEX / SAMPRITI</td><td>Sri Lanka / Myanmar / Bangladesh</td><td>Neighbourhood engagement.</td></tr>
+      <tr><td>AUSINDEX / JIMEX / ZAIR-AL-BAHR / AL MOHED AL HINDI</td><td>Australia / Japan / Qatar / Saudi Arabia</td><td></td></tr>
+      <tr><td>IBSAMAR</td><td>Brazil, South Africa</td><td>Trilateral, Global South.</td></tr>
+      <tr><td><strong>AIKEYME</strong></td><td>Ten African nations, with Tanzania</td><td>Africa–India Key Maritime Engagement, first held April 2025 — the practical face of MAHASAGAR.</td></tr>
+      <tr><td><strong>MILAN</strong></td><td>Multilateral</td><td>India’s own multilateral gathering, begun 1995 at Port Blair. The 2026 edition at Visakhapatnam was among the largest ever held.</td></tr>
+      <tr><td>TROPEX / Sea Vigil / AMPHEX</td><td>Domestic</td><td>Theatre-level readiness exercise, coastal defence exercise and amphibious exercise respectively.</td></tr>
+      <tr><td>RIMPAC</td><td>Multinational, hosted by the US</td><td>The world’s largest naval exercise; India participates.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Also worth naming: <strong>IOS Sagar</strong>, a 2025 deployment in which personnel from several African and Indian Ocean states sailed aboard an Indian warship together — a compact demonstration of the MAHASAGAR idea.</p>
+</section>
+
+<!-- 16 -->
+<section id="recent">
+  <h2>Recent major developments</h2><hr class="sec-rule">
+  <p class="lede">Current affairs is where naval SSB candidates separate themselves. This section is the highest-value part of this document — but its shelf life is short, so verify anything after September 2026.</p>
+
+  <h3>2026</h3>
+  <ul>
+    <li><strong>Admiral Krishna Swaminathan assumed charge as the 27th Chief of the Naval Staff on 31 May 2026</strong>, succeeding Admiral Dinesh K. Tripathi, who superannuated after 41 years of service.</li>
+    <li><strong>The biggest single-year fleet expansion in Indian naval history</strong> — around 19 warships planned for commissioning in 2026, against 14 in 2025. The Navy is receiving a new ship or submarine roughly every 40 days. Stated goal: about 175 ships by 2035.</li>
+    <li><strong>INS Aridhaman (S4)</strong>, the third Arihant-class SSBN and the largest yet, was commissioned at Visakhapatnam on <strong>3 April 2026</strong> — eight launch tubes against four on the first two boats.</li>
+    <li><strong>Historic maritime convergence at Visakhapatnam, 15–25 February 2026</strong> — the <strong>International Fleet Review 2026</strong> (theme: “United Through Oceans”), <strong>Exercise MILAN 2026</strong> (“Camaraderie, Cooperation, Collaboration”) and the <strong>IONS Conclave of Chiefs</strong>, held together for the first time. President Droupadi Murmu reviewed the fleet on 18 February. Around 85–100 ships participated, with warships and aircraft from more than twenty foreign navies and delegations from over 100 countries. This was only India’s third IFR, after 2001 and 2016.</li>
+    <li><strong>Tri-commissioning at Kolkata, 21 June 2026</strong> — Prime Minister Modi commissioned <strong>INS Dunagiri</strong> (P-17A frigate), <strong>INS Sanshodhak</strong> (survey vessel) and <strong>INS Agray</strong> (ASW shallow water craft), all GRSE-built, with over 75% indigenous content and more than 200 MSMEs in the supply chain.</li>
+    <li><strong>INS Taragiri</strong> (P-17A) commissioned 3 April 2026 at Visakhapatnam; <strong>INS Anjadip</strong> (ASW SWC) commissioned 27 February 2026 at Chennai.</li>
+    <li><strong>Project 75I</strong> cleared the Finance Ministry in May 2026 and moved toward final Cabinet Committee on Security approval, with the MDL–TKMS team building six AIP submarines at a headline value of about ₹70,000 crore. First boat contractually due seven years after signature.</li>
+    <li><strong>MH-60R deliveries crossed 21 of 24</strong> by July 2026; the second squadron, INAS 335 “Ospreys,” had been commissioned at Goa in December 2025.</li>
+    <li><strong>Additional MQ-9B SeaGuardian UAVs leased</strong> in August 2026, taking the leased fleet to four while the larger purchase progresses.</li>
+    <li><strong>The sailor rank indigenisation proposal was shelved</strong> in May 2026 in favour of a coordinated tri-service approach.</li>
+    <li><strong>Somali piracy resurgence</strong> — threat assessment raised to “severe” in May 2026; INS Kolkata foiled an attack on MV Mashallah 1 in the Gulf of Aden.</li>
+    <li>India reportedly approached France about <strong>31 additional Rafale M</strong> aircraft, which would take the naval fleet toward 57 — while the indigenous TEDBF timeline slipped further.</li>
+  </ul>
+
+  <h3>2025</h3>
+  <ul>
+    <li><strong>15 January 2025</strong> — a triple commissioning at Mumbai by the Prime Minister: destroyer <strong>INS Surat</strong> (last of P-15B), frigate <strong>INS Nilgiri</strong> (first of P-17A and the 100th indigenously designed naval platform) and submarine <strong>INS Vagsheer</strong> (last of Project 75). Three different categories on one day — a first.</li>
+    <li><strong>March 2025</strong> — <strong>MAHASAGAR</strong> announced in Mauritius, succeeding SAGAR.</li>
+    <li><strong>April 2025</strong> — the <strong>₹63,000 crore Rafale M contract</strong> signed with France for 26 aircraft.</li>
+    <li><strong>May 2025</strong> — <strong>Operation Sindoor</strong>.</li>
+    <li><strong>June–November 2025</strong> — INS Arnala (18 Jun), INS Tamal (1 Jul, at Kaliningrad), INS Nistar (18 Jul), INS Udaygiri and INS Himgiri (26 Aug), INS Androth (6 Oct), INS Ikshak (6 Nov) all commissioned.</li>
+    <li><strong>October 2025</strong> — INS Nistar’s operational debut in a multinational submarine rescue exercise in the South China Sea.</li>
+  </ul>
+
+  <h3>2024</h3>
+  <ul>
+    <li><strong>INS Arighaat</strong> (second SSBN) commissioned 29 August.</li>
+    <li><strong>INS Jatayu</strong> commissioned at Minicoy, 6 March.</li>
+    <li><strong>MV Ruen</strong> rescued by MARCOS, March.</li>
+    <li><strong>Project 77</strong> — CCS clearance for the first two indigenous SSNs, October.</li>
+    <li>First MH-60R squadron, INAS 334, commissioned at Kochi in March.</li>
+  </ul>
+</section>
+
+<!-- 17 -->
+<section id="leadership">
+  <h2>Current leadership</h2><hr class="sec-rule">
+  <div class="note"><p>Appointments change. Verify against the Press Information Bureau or indiannavy.nic.in on the day before your interview. Positions below are as of 20 September 2026.</p></div>
+
+  <h3>Admiral Krishna Swaminathan, PVSM, AVSM, VSM — 27th Chief of the Naval Staff</h3>
+  <ul>
+    <li>Assumed charge <strong>31 May 2026</strong>, succeeding Admiral Dinesh K. Tripathi.</li>
+    <li>Commissioned into the Indian Navy on <strong>1 July 1987</strong>; a specialist in <strong>Communication and Electronic Warfare</strong>.</li>
+    <li>Alumnus of the National Defence Academy, Khadakwasla; the Joint Services Command and Staff College, UK; the College of Naval Warfare, Karanja; and the US Naval War College, Newport.</li>
+    <li>Commanded INS Vidyut, INS Kulish, INS Mysore and the aircraft carrier <strong>INS Vikramaditya</strong>; later Flag Officer Sea Training, and then commanded the <strong>Western Fleet</strong> — the Sword Arm.</li>
+    <li>Senior appointments: Flag Officer Offshore Defence Advisory Group; Chief of Staff, Western Naval Command; Controller Personnel Services; Chief of Personnel; <strong>Vice Chief of the Naval Staff</strong>; and Flag Officer Commanding-in-Chief, <strong>Western Naval Command</strong>.</li>
+  </ul>
+
+  <div class="tablewrap">
+  <table>
+    <caption>Other key appointments</caption>
+    <thead><tr><th>Appointment</th><th>Officer</th><th>Since</th></tr></thead>
+    <tbody>
+      <tr><td>Chief of Defence Staff</td><td>General Anil Chauhan</td><td>2022</td></tr>
+      <tr><td>Vice Chief of the Naval Staff</td><td>Vice Admiral Ajay Kochhar</td><td>29 May 2026</td></tr>
+      <tr><td>FOC-in-C, Western Naval Command</td><td>Vice Admiral Sanjay Vatsayan</td><td>30 May 2026</td></tr>
+      <tr><td>FOC-in-C, Eastern Naval Command</td><td>Vice Admiral Sanjay Bhalla</td><td>31 October 2025</td></tr>
+      <tr><td>FOC-in-C, Southern Naval Command</td><td>Vice Admiral Sameer Saxena</td><td>31 October 2025</td></tr>
+      <tr><td>C-in-C, Andaman &amp; Nicobar Command</td><td>Vice Admiral Vineet McCarty</td><td>May 2026</td></tr>
+      <tr><td>Commandant, Indian Naval Academy</td><td>Vice Admiral Alok Ananda</td><td>1 August 2026</td></tr>
+      <tr><td>Supreme Commander / Raksha Mantri</td><td>President Droupadi Murmu / Rajnath Singh</td><td>—</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>Names from history worth knowing</h4>
+  <p>Vice Admiral R.D. Katari — first Indian CNS (1958). Admiral S.M. Nanda — CNS during the 1971 war. Admiral Sunil Lanba, Admiral Karambir Singh, Admiral R. Hari Kumar, Admiral Dinesh K. Tripathi — recent chiefs. The Navy’s highest gallantry recognition in 1971 went to officers of the missile boat squadron; <strong>Mahavir Chakra</strong> recipients from Operation Trident include Commander Babru Bhan Yadav.</p>
+</section>
+
+<!-- 18 -->
+<section id="ssb">
+  <h2>SSB question bank &amp; how to handle it</h2><hr class="sec-rule">
+
+  <h3>What the board is actually assessing</h3>
+  <p>The SSB tests <strong>Officer Like Qualities</strong> across four factors: planning and organising ability, social adjustment, social effectiveness, and dynamism. Your naval knowledge is not one of the fifteen OLQs. It matters because it evidences two of them — <strong>effective intelligence</strong> and <strong>liveliness/interest in the service</strong>. A candidate who knows ten things deeply and says “I don’t know, sir” to the eleventh scores better than one who bluffs on all eleven.</p>
+
+  <div class="edge">
+    <span class="edge-h">The single most important rule</span>
+    <p>Never invent a fact. The interviewing officer is very often a serving naval officer who will know immediately. Say “I’m not sure, sir, but I believe…” and mark the boundary of your knowledge honestly, or simply say you don’t know and that you will look it up. Honesty under pressure is being directly assessed.</p>
+  </div>
+
+  <h3>Personal and motivational</h3>
+  <ol class="qbank">
+    <li>Why the Navy specifically? What did you do to find out what naval life is actually like?</li>
+    <li>What have you read about the Navy in the last month?</li>
+    <li>Which branch do you want, and what if you are assigned another?</li>
+    <li>Are you prepared for six months at sea away from family? How do you know?</li>
+    <li>If you are not recommended today, what will you do tomorrow?</li>
+    <li>Name three officers you admire and say why — be ready for follow-up on each.</li>
+  </ol>
+
+  <h3>Factual and organisational</h3>
+  <ol class="qbank">
+    <li>Who is the current CNS? Name the three commands and their headquarters.</li>
+    <li>Why is Andaman &amp; Nicobar Command different from the three naval commands?</li>
+    <li>Explain the Navy’s motto and when the ensign last changed, and why.</li>
+    <li>Difference between a destroyer, a frigate and a corvette.</li>
+    <li>What does STOBAR mean and why does it limit Indian carriers?</li>
+    <li>Difference between SSBN, SSN and SSK. Which does India build indigenously?</li>
+    <li>Name India’s aircraft carriers and say what makes Vikrant significant.</li>
+    <li>What is the role of the Coast Guard, and how is it different from the Navy?</li>
+  </ol>
+
+  <h3>Strategic and current affairs</h3>
+  <ol class="qbank">
+    <li>What is the String of Pearls? How is India responding?</li>
+    <li>Explain SAGAR and MAHASAGAR, and what changed between them.</li>
+    <li>What was the Navy’s role in Operation Sindoor?</li>
+    <li>Why does India patrol the Gulf of Aden when it is 3,000 km away?</li>
+    <li>Name three chokepoints in the Indian Ocean and explain why each matters.</li>
+    <li>Should India build a third aircraft carrier or more nuclear attack submarines?</li>
+    <li>What are theatre commands and where does the Navy stand on them?</li>
+    <li>How has Atmanirbhar Bharat changed Indian shipbuilding? Give evidence.</li>
+    <li>What is grey-zone warfare at sea?</li>
+    <li>Should women serve on submarines? (Women already serve on warships, fly with the Navy, and the first woman officers were deployed at sea in 2021.)</li>
+  </ol>
+
+  <h3>Group discussion and lecturette topics that recur</h3>
+  <ul>
+    <li>Indian Ocean: zone of peace or zone of competition?</li>
+    <li>Is Atmanirbhar Bharat in defence realistic, or does it slow modernisation?</li>
+    <li>Should India pursue a third aircraft carrier?</li>
+    <li>Quad — a security alliance or a talking shop?</li>
+    <li>Agnipath: strengths and weaknesses.</li>
+    <li>Blue economy and India’s maritime future.</li>
+    <li>Climate change as a national security threat.</li>
+    <li>Artificial intelligence and unmanned systems in warfare.</li>
+    <li>India–China relations in the maritime domain.</li>
+  </ul>
+
+  <div class="edge">
+    <span class="edge-h">How to structure a lecturette in three minutes</span>
+    <p>Thirty seconds of definition and why it matters now. Ninety seconds of two or three specific points, each with one concrete example — a name, a date, a number. Thirty seconds of a balanced view that acknowledges the other side. Thirty seconds of conclusion and what India should do. Specifics are what separate you: “India commissioned 14 ships in 2025 and plans 19 in 2026” lands far harder than “India is building many ships.”</p>
+  </div>
+
+  <h3>Traps to avoid</h3>
+  <ul>
+    <li><strong>Rehearsed answers.</strong> Officers hear the same coaching-class phrasing dozens of times a day. Speak in your own words even if they are plainer.</li>
+    <li><strong>Jingoism.</strong> Describing an adversary contemptuously reads as immaturity, not patriotism. Professionals respect capability.</li>
+    <li><strong>Contradicting your PIQ.</strong> Everything you wrote on the Personal Information Questionnaire is fair game and will be cross-checked in the interview, in the group tasks and in your stories.</li>
+    <li><strong>Over-preparing facts, under-preparing yourself.</strong> Most rejections have nothing to do with defence knowledge. Know your own hobbies, your school, your friends’ names, your weaknesses, and what you have actually done with your time.</li>
+    <li><strong>Being a passenger in group tasks.</strong> Knowledge earns nothing if you cannot contribute in a group under time pressure.</li>
+  </ul>
+</section>
+
+<!-- 19 -->
+<section id="revision">
+  <h2>One-page revision</h2><hr class="sec-rule">
+  <div class="split">
+    <div class="panel">
+      <h4>Must-know numbers</h4>
+      <ul>
+        <li>Coastline <strong>7,516 km</strong>; EEZ <strong>2.37 million sq km</strong></li>
+        <li>Trade by sea: <strong>95% by volume, 68% by value</strong></li>
+        <li>Commands: <strong>3</strong> (+ ANC tri-service, + SFC)</li>
+        <li>Carriers: <strong>2</strong>; SSBNs: <strong>3</strong> commissioned</li>
+        <li>Fleet: ~<strong>130–140</strong> vessels; target ~<strong>175 by 2035</strong></li>
+        <li>Navy Day <strong>4 Dec</strong>; Naval Aviation Day <strong>8 May</strong></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h4>Must-know names</h4>
+      <ul>
+        <li>CNS: <strong>Admiral Krishna Swaminathan</strong> (since 31 May 2026)</li>
+        <li>Newest SSBN: <strong>INS Aridhaman</strong> (Apr 2026)</li>
+        <li>Newest frigates: <strong>Taragiri, Dunagiri</strong> (2026)</li>
+        <li>Carriers: <strong>Vikramaditya, Vikrant</strong></li>
+        <li>Flagship doctrine: <strong>SAGAR → MAHASAGAR</strong></li>
+        <li>Flagship ops: <strong>Sankalp</strong> (anti-piracy), <strong>Sindoor</strong> (2025)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="split">
+    <div class="panel">
+      <h4>Must-know acronyms</h4>
+      <ul>
+        <li><strong>SSBN / SSN / SSK</strong> — nuclear ballistic / nuclear attack / conventional attack submarine</li>
+        <li><strong>STOBAR / CATOBAR</strong> — carrier launch-and-recovery methods</li>
+        <li><strong>AIP</strong> — air-independent propulsion</li>
+        <li><strong>ASW / EW / MDA</strong> — anti-submarine warfare / electronic warfare / maritime domain awareness</li>
+        <li><strong>IFC-IOR / IMAC / NC3I</strong> — the information architecture</li>
+        <li><strong>IONS / IORA / CSC</strong> — regional institutions</li>
+        <li><strong>HADR / NEO</strong> — disaster relief / non-combatant evacuation</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h4>Three stories to have ready</h4>
+      <ul>
+        <li><strong>1971 Operation Trident</strong> — offensive spirit and the origin of Navy Day.</li>
+        <li><strong>MV Ruen, 2024</strong> — reach, joint operations with the IAF, and restraint: 35 pirates taken alive.</li>
+        <li><strong>Operation Sindoor, 2025</strong> — deterrence achieved without firing a shot at the adversary’s navy.</li>
+      </ul>
+      <p style="font-size:.92rem;margin-top:.6rem">Each of these lets you answer a factual question and then say something about <em>character</em> — which is what the board is actually listening for.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Compiled 20 September 2026 from open sources including Press Information Bureau releases, the Indian Navy’s published material and current defence reporting. Current-affairs items age quickly — re-verify leadership appointments, contract approvals and commissioning dates close to your interview date. This is a study aid, not an official publication.</p>
+</footer>
+
+</main>
+</div>
+
+</body>
+</html>
