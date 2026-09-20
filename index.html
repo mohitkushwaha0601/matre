@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SSB Preparation Handbooks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0E2430;
+  --ink-soft:#45606E;
+  --paper:#EFF1EE;
+  --surface:#FFFFFF;
+  --surface-2:#E5EAE7;
+  --rule:#C4CEcb;
+  --rule-strong:#9EABA8;
+  --red:#BF2F26;
+  --blue:#0B4F8A;
+  --hero-bg:#0E2430;
+  --hero-ink:#EFF1EE;
+  --hero-dim:#94A8B2;
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --ink:#E4EAE8;
+    --ink-soft:#9DB0B8;
+    --paper:#0C1A22;
+    --surface:#122630;
+    --surface-2:#18313D;
+    --rule:#2B4450;
+    --rule-strong:#3E5A68;
+    --red:#E8705F;
+    --blue:#6FB3E8;
+    --hero-bg:#081319;
+    --hero-ink:#E4EAE8;
+    --hero-dim:#7E949E;
+  }
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
+.flagstrip{display:flex;height:12px}
+.flagstrip span{flex:1}
+.f1{background:#BF2F26}
+.f2{background:#EFF1EE}
+.f3{background:#0B4F8A}
+.f4{background:#E3B23C}
+.f5{background:#0E2430;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+.f6{background:linear-gradient(90deg,#BF2F26 50%,#EFF1EE 50%)}
+.f7{background:linear-gradient(90deg,#0B4F8A 50%,#E3B23C 50%)}
+.hero-inner{max-width:900px;margin:0 auto;padding:3.2rem 1.5rem 0}
+.kicker{
+  font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--hero-dim);margin:0 0 .8rem;
+}
+.hero h1{
+  font-family:"Zilla Slab",Georgia,serif;
+  font-weight:700;
+  font-size:clamp(2rem,6vw,3.2rem);
+  line-height:1.15;
+  margin:0 0 .7rem;
+}
+.hero-sub{margin:0;color:var(--hero-dim);max-width:60ch}
+.stamp{
+  margin-top:1.6rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.22);
+  font-size:.86rem;color:var(--hero-dim);
+  display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;
+}
+.stamp b{color:var(--hero-ink);font-weight:600}
+
+main{max-width:900px;margin:0 auto;padding:2.8rem 1.5rem 5rem}
+
+section{margin:0 0 3.2rem}
+section > h2{
+  font-family:"Zilla Slab",Georgia,serif;
+  font-weight:700;font-size:clamp(1.35rem,3.4vw,1.7rem);line-height:1.2;
+  margin:0 0 .3rem;
+}
+.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
+p{margin:0 0 .95rem;max-width:74ch}
+
+.handbooks{display:grid;gap:1.2rem}
+
+.handbook{
+  display:grid;
+  grid-template-columns:5.6rem 1fr;
+  gap:1.2rem;
+  background:var(--surface);
+  border:1px solid var(--rule);
+  border-left:4px solid var(--red);
+  padding:1.2rem 1.3rem;
+  text-decoration:none;
+  color:inherit;
+}
+.handbook:hover{border-left-color:var(--blue)}
+.handbook .no{
+  font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.6rem;
+  color:var(--rule-strong);font-variant-numeric:tabular-nums;
+}
+.handbook h3{
+  font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.2rem;
+  margin:0 0 .35rem;color:var(--ink);
+}
+.handbook p{margin:0 0 .5rem;color:var(--ink-soft);font-size:.95rem}
+.handbook .cta{font-size:.85rem;font-weight:600;color:var(--blue)}
+@media (max-width:520px){
+  .handbook{grid-template-columns:1fr;gap:.3rem}
+}
+
+.note{
+  background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;
+  border:1px solid var(--rule);font-size:.95rem;
+}
+.note ul{margin:0;padding-left:1.25rem}
+.note li{margin-bottom:.3rem}
+
+footer{
+  border-top:3px double var(--rule-strong);margin-top:2rem;padding-top:1.4rem;
+  color:var(--ink-soft);font-size:.9rem;max-width:74ch;
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="flagstrip" aria-hidden="true">
+    <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f6"></span><span class="f5"></span><span class="f7"></span>
+  </div>
+  <div class="hero-inner">
+    <p class="kicker">Service Selection Board</p>
+    <h1>SSB Preparation Handbooks</h1>
+    <p class="hero-sub">Reference documents for interview, group testing and current-affairs preparation — written for a single sitting, structured for quick revision.</p>
+    <p class="stamp"><span><b>3</b> handbooks</span><span>Last Updated <b>21 Sep 2026</b></span></p>
+  </div>
+</header>
+
+<main>
+
+<section id="handbooks">
+  <h2>Handbooks</h2><hr class="sec-rule">
+
+  <div class="handbooks">
+    <a class="handbook" href="materials/1.indian-navy-ssb-handbook.html">
+      <span class="no">01</span>
+      <span>
+        <h3>All About the Indian Navy</h3>
+        <p>Organisation, fleet, submarines, naval aviation, maritime security, the Indian Ocean Region and a full SSB question bank.</p>
+        <span class="cta">Read handbook →</span>
+      </span>
+    </a>
+
+    <a class="handbook" href="materials/2.russia-ukraine-war-ssb-handbook.html">
+      <span class="no">02</span>
+      <span>
+        <h3>Russia-Ukraine War</h3>
+        <p>Origins, timeline, military strategy, NATO and India's position, sanctions, and future scenarios — with balanced analysis panels.</p>
+        <span class="cta">Read handbook →</span>
+      </span>
+    </a>
+
+    <a class="handbook" href="materials/3.russia-old.html">
+      <span class="no">03</span>
+      <span>
+        <h3>Russia-Ukraine War — Quick Study</h3>
+        <p>A shorter strategic and geopolitical primer on the conflict — origins, timeline, key actors and SSB discussion points in a single sitting.</p>
+        <span class="cta">Read handbook →</span>
+      </span>
+    </a>
+  </div>
+</section>
+
+<section id="using">
+  <h2>Using these handbooks</h2><hr class="sec-rule">
+  <div class="note">
+    <ul>
+      <li>Each handbook has its own contents list — jump straight to a section rather than reading start to finish.</li>
+      <li>Use your browser's print option to save a copy as PDF for offline revision.</li>
+      <li>Dark mode follows your system setting automatically.</li>
+      <li>Current-affairs sections age quickly — re-verify dates and appointments close to your interview.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <p>Compiled from open sources. Study aids only, not official publications.</p>
+</footer>
+
+</main>
+
+</body>
+</html>
