@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Russia–Ukraine War — A Strategic Handbook for SSB Aspirants</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#131A26;
+  --ink-soft:#4C5B70;
+  --paper:#F1F1EC;
+  --surface:#FFFFFF;
+  --surface-2:#E6E7E0;
+  --rule:#C9CBC2;
+  --rule-strong:#9EA398;
+  --red:#A62A1F;
+  --blue:#12447E;
+  --gold:#B07C12;
+  --hero-bg:#131A26;
+  --hero-ink:#F1F1EC;
+  --hero-dim:#94A0B2;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ink:#E6E8E4;
+    --ink-soft:#A3AFBC;
+    --paper:#0B1017;
+    --surface:#141C26;
+    --surface-2:#1C2733;
+    --rule:#2C3A48;
+    --rule-strong:#42556A;
+    --red:#E5796A;
+    --blue:#6FAEEA;
+    --gold:#DDB051;
+    --hero-bg:#070B10;
+    --hero-ink:#E6E8E4;
+    --hero-dim:#8394A4;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E6E8E4;
+  --ink-soft:#A3AFBC;
+  --paper:#0B1017;
+  --surface:#141C26;
+  --surface-2:#1C2733;
+  --rule:#2C3A48;
+  --rule-strong:#42556A;
+  --red:#E5796A;
+  --blue:#6FAEEA;
+  --gold:#DDB051;
+  --hero-bg:#070B10;
+  --hero-ink:#E6E8E4;
+  --hero-dim:#8394A4;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1.5rem);-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ---------- hero ---------- */
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
+.flagstrip{display:flex;height:12px}
+.flagstrip span{flex:1}
+.f1{background:#0057B7}
+.f2{background:#FFD700}
+.f3{background:#F1F1EC}
+.f4{background:#12447E}
+.f5{background:#A62A1F}
+.f6{background:linear-gradient(90deg,#0057B7 50%,#FFD700 50%)}
+.f7{background:linear-gradient(90deg,#F1F1EC 33%,#12447E 33%,#12447E 66%,#A62A1F 66%)}
+.hero-inner{max-width:1180px;margin:0 auto;padding:3.2rem 1.5rem 0}
+.motto{
+  font-family:"Zilla Slab",Georgia,serif;
+  font-weight:600;
+  font-size:clamp(1.7rem,5.2vw,2.9rem);
+  line-height:1.2;
+  margin:0;
+  letter-spacing:.005em;
+  max-width:24ch;
+}
+.motto-en{
+  margin:.55rem 0 0;
+  color:var(--hero-dim);
+  font-size:clamp(.95rem,2.4vw,1.1rem);
+  font-style:italic;
+  max-width:60ch;
+}
+.hero h1{
+  font-family:"Zilla Slab",Georgia,serif;
+  font-weight:700;
+  font-size:clamp(1.5rem,4.3vw,2.35rem);
+  line-height:1.2;
+  margin:2.6rem 0 .5rem;
+  border-top:1px solid rgba(255,255,255,.22);
+  padding-top:1.6rem;
+  max-width:26ch;
+}
+.hero-sub{margin:0;color:var(--hero-dim);max-width:66ch}
+.stamp{
+  margin-top:1.6rem;font-size:.86rem;color:var(--hero-dim);
+  display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;
+}
+.stamp b{color:var(--hero-ink);font-weight:600}
+
+/* ---------- layout ---------- */
+.shell{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem;display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media (min-width:1000px){
+  .shell{grid-template-columns:245px minmax(0,1fr);gap:3.5rem;padding-top:2.8rem}
+}
+nav.toc{font-size:.92rem}
+@media (min-width:1000px){
+  .toc-mobile{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2rem);align-self:start;max-height:calc(100vh - 5rem);overflow-y:auto}
+}
+nav.toc h2{
+  font-family:"Zilla Slab",Georgia,serif;font-size:.92rem;font-weight:600;
+  margin:0 0 .7rem;padding-bottom:.45rem;border-bottom:2px solid var(--rule-strong);
+}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc}
+nav.toc li{counter-increment:toc;border-bottom:1px solid var(--rule)}
+nav.toc a{display:flex;gap:.6rem;padding:.42rem 0;color:var(--ink-soft);text-decoration:none}
+nav.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--rule-strong);font-variant-numeric:tabular-nums;flex:none}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--red)}
+.toc-mobile{display:block}
+@media (min-width:1000px){.toc-mobile summary{display:none}}
+.toc-mobile summary{
+  cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:600;
+  padding:.7rem .9rem;background:var(--surface);border:1px solid var(--rule);margin-bottom:1rem;
+}
+@media (max-width:999px){
+  .toc-mobile[open] nav.toc{padding:0 .9rem 1rem}
+  .toc-mobile:not([open]) nav.toc{display:none}
+}
+
+/* ---------- sections ---------- */
+main{min-width:0}
+section{margin:0 0 3.6rem;scroll-margin-top:1.5rem}
+section > h2{
+  font-family:"Zilla Slab",Georgia,serif;
+  font-weight:700;font-size:clamp(1.45rem,3.6vw,1.95rem);line-height:1.2;
+  margin:0 0 .3rem;
+}
+.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.16rem;margin:2rem 0 .5rem;line-height:1.3}
+h4{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1rem;margin:1.4rem 0 .35rem;color:var(--ink)}
+p{margin:0 0 .95rem;max-width:74ch}
+ul,ol{margin:0 0 1rem;padding-left:1.25rem;max-width:74ch}
+li{margin-bottom:.35rem}
+li::marker{color:var(--rule-strong)}
+strong{font-weight:600}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+/* ---------- components ---------- */
+.lede{font-size:1.06rem;color:var(--ink-soft);max-width:70ch}
+
+.tablewrap{overflow-x:auto;margin:0 0 1.3rem;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:.93rem}
+caption{text-align:left;padding:.7rem .85rem .1rem;font-weight:600;color:var(--ink-soft);font-size:.9rem}
+th,td{text-align:left;padding:.55rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{background:var(--surface-2);font-weight:600;border-bottom:2px solid var(--rule-strong);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+.edge{
+  background:var(--surface);
+  border-left:4px solid var(--red);
+  padding:.9rem 1.1rem;
+  margin:1.4rem 0;
+  max-width:74ch;
+}
+.edge p:last-child{margin-bottom:0}
+.edge .edge-h{
+  font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);
+  display:block;margin-bottom:.25rem;font-size:.95rem;
+}
+.edge.gold{border-left-color:var(--gold)}
+.edge.gold .edge-h{color:var(--gold)}
+.edge.blue{border-left-color:var(--blue)}
+.edge.blue .edge-h{color:var(--blue)}
+
+.note{
+  background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;
+  border:1px solid var(--rule);font-size:.95rem;
+}
+.note p:last-child{margin-bottom:0}
+
+.timeline{list-style:none;padding:0;margin:1rem 0 1.4rem;max-width:74ch}
+.timeline li{
+  display:grid;grid-template-columns:7.2rem 1fr;gap:1rem;
+  padding:.55rem 0;border-bottom:1px solid var(--rule);margin:0;
+}
+.timeline li:last-child{border-bottom:0}
+.timeline .yr{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);font-variant-numeric:tabular-nums}
+@media (max-width:520px){
+  .timeline li{grid-template-columns:1fr;gap:.1rem}
+}
+
+.split{display:grid;gap:1.2rem;margin-bottom:1.3rem}
+@media (min-width:700px){.split{grid-template-columns:1fr 1fr}}
+.panel{background:var(--surface);border:1px solid var(--rule);padding:1rem 1.1rem}
+.panel h4{margin-top:0}
+.panel ul{margin-bottom:0}
+.panel.blue-top{border-top:3px solid var(--blue)}
+.panel.red-top{border-top:3px solid var(--red)}
+.panel.gold-top{border-top:3px solid var(--gold)}
+
+.qbank{counter-reset:q;list-style:none;padding:0;max-width:74ch}
+.qbank li{
+  counter-increment:q;padding:.5rem 0 .5rem 2.5rem;position:relative;border-bottom:1px solid var(--rule);
+}
+.qbank li::before{
+  content:"Q" counter(q);position:absolute;left:0;top:.5rem;
+  font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem;
+}
+.qbank li:last-child{border-bottom:0}
+
+.term{max-width:74ch;margin:0 0 1.2rem}
+.term dt{font-weight:600;margin-top:.8rem}
+.term dd{margin:.15rem 0 0;color:var(--ink-soft)}
+
+footer{
+  border-top:3px double var(--rule-strong);margin-top:2rem;padding-top:1.4rem;
+  color:var(--ink-soft);font-size:.9rem;max-width:74ch;
+}
+
+@media print{
+  .hero{background:none;color:#000;padding-bottom:1rem}
+  .hero-sub,.stamp,.motto-en{color:#333}
+  .flagstrip,.toc-mobile{display:none}
+  .shell{display:block;padding:0}
+  section{page-break-inside:auto;margin-bottom:1.8rem}
+  h2,h3{page-break-after:avoid}
+  .panel,.edge,.note,.tablewrap{page-break-inside:avoid}
+  body{font-size:11pt;background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="flagstrip" aria-hidden="true">
+    <span class="f1"></span><span class="f2"></span><span class="f6"></span><span class="f3"></span><span class="f4"></span><span class="f7"></span><span class="f5"></span>
+  </div>
+  <div class="hero-inner">
+    <p class="motto">“War is the continuation of policy by other means.”</p>
+    <p class="motto-en">Carl von Clausewitz. The single most useful sentence for understanding this war — every military move on the map is an attempt to change someone’s political calculation.</p>
+    <h1>The Russia–Ukraine War</h1>
+    <p class="hero-sub">A strategic handbook for SSB aspirants: the deep origins, the campaign, the geopolitics, the military lessons, India’s position, the global economy, and how to discuss all of it in a Group Discussion, Lecturette or Personal Interview without sounding rehearsed or partisan.</p>
+    <p class="stamp">
+      <span>Compiled <b>20 September 2026</b></span>
+      <span>Full-scale invasion began <b>24 February 2022</b></span>
+      <span>Conflict origin <b>2014 (Crimea &amp; Donbas)</b></span>
+    </p>
+  </div>
+</header>
+
+<div class="shell">
+
+<details class="toc-mobile" open>
+  <summary>Contents</summary>
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#snapshot">Snapshot &amp; why it matters</a></li>
+      <li><a href="#origins">Deep origins &amp; history</a></li>
+      <li><a href="#nato-debate">NATO enlargement debate</a></li>
+      <li><a href="#2014">2014: the real beginning</a></li>
+      <li><a href="#road">Road to 24 February 2022</a></li>
+      <li><a href="#timeline">Campaign timeline</a></li>
+      <li><a href="#actors">Key actors &amp; interests</a></li>
+      <li><a href="#strategy">Military strategy</a></li>
+      <li><a href="#lessons">Technology &amp; lessons</a></li>
+      <li><a href="#nuclear">Nuclear &amp; escalation</a></li>
+      <li><a href="#hybrid">Information, cyber, hybrid</a></li>
+      <li><a href="#nato-eu">NATO &amp; EU involvement</a></li>
+      <li><a href="#law">International law</a></li>
+      <li><a href="#economy">Sanctions &amp; global economy</a></li>
+      <li><a href="#india">India’s position</a></li>
+      <li><a href="#humanitarian">Humanitarian impact</a></li>
+      <li><a href="#current">Current developments</a></li>
+      <li><a href="#scenarios">Future scenarios</a></li>
+      <li><a href="#concepts">Strategic concepts</a></li>
+      <li><a href="#balance">Balanced analysis</a></li>
+      <li><a href="#ssb">SSB relevance &amp; technique</a></li>
+      <li><a href="#qbank">Question bank</a></li>
+      <li><a href="#revision">One-page revision</a></li>
+    </ol>
+  </nav>
+</details>
+
+<main>
+
+<!-- 1 -->
+<section id="snapshot">
+  <h2>Snapshot &amp; why it matters</h2><hr class="sec-rule">
+  <p class="lede">The Russia–Ukraine War is the largest inter-state armed conflict in Europe since 1945. It is simultaneously a territorial war, a contest over the European security order, a proving ground for twenty-first-century military technology, and a stress test of the post-1945 rules-based international system. For an SSB candidate it is the single richest current-affairs topic available, because almost every other topic — energy security, drones, strategic autonomy, the UN’s relevance, multipolarity, India–US–Russia triangulation — can be entered through it.</p>
+
+  <div class="tablewrap">
+  <table>
+    <caption>Identity card of the conflict</caption>
+    <tbody>
+      <tr><th scope="row">Conflict began</th><td>February–April <strong>2014</strong> (annexation of Crimea, war in Donbas). Escalated into full-scale invasion on <strong>24 February 2022</strong>.</td></tr>
+      <tr><th scope="row">Russian framing</th><td>A “Special Military Operation” to “demilitarise and de-Nazify” Ukraine, protect Russian-speakers in Donbas and halt NATO’s eastward expansion.</td></tr>
+      <tr><th scope="row">Ukrainian framing</th><td>A war of national survival against an unprovoked invasion aimed at extinguishing Ukrainian statehood and identity.</td></tr>
+      <tr><th scope="row">Western framing</th><td>A violation of the UN Charter’s prohibition on the use of force and of Ukraine’s sovereignty and territorial integrity; a test of whether borders can be changed by force.</td></tr>
+      <tr><th scope="row">Territory involved</th><td>Crimea (annexed 2014) plus Donetsk, Luhansk, Zaporizhzhia and Kherson oblasts (claimed as annexed by Russia in September 2022, never fully controlled). Roughly <strong>a fifth of Ukraine</strong> has been under Russian control for most of the war.</td></tr>
+      <tr><th scope="row">Character of war</th><td>High-intensity conventional war of <strong>attrition</strong>: massed artillery, deep drone and missile strike, extensive minefields and field fortification, electronic warfare, and contested but not commanded airspace.</td></tr>
+      <tr><th scope="row">Nuclear shadow</th><td>A nuclear-armed permanent member of the UN Security Council is a direct belligerent. This has capped Western intervention at aid, intelligence and materiel — no NATO troops in combat.</td></tr>
+      <tr><th scope="row">India’s stance</th><td>Strategic autonomy: abstention on most UN votes, no condemnation of Russia by name, consistent calls for dialogue and diplomacy, insistence on the UN Charter and territorial integrity in principle, sharply increased purchases of discounted Russian crude, and a humanitarian-aid posture toward Ukraine.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="edge">
+    <span class="edge-h">Interview edge</span>
+    <p>If the Interviewing Officer opens with “What do you think about the Russia–Ukraine war?”, do not begin with who is right. Begin with structure: “Sir, I look at it on three levels — the immediate military situation, the underlying dispute over Europe’s security architecture, and what it means for India.” Then give one specific fact at each level. Structure impresses more than opinion, and it protects you from being dragged into an argument you cannot win.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section id="origins">
+  <h2>Deep origins &amp; history</h2><hr class="sec-rule">
+  <p>You cannot explain 2022 starting from 2022. Three historical layers matter: a shared and contested medieval origin, a Soviet-era relationship of subordination and trauma, and a messy post-1991 divorce that left the security question unsettled.</p>
+
+  <h3>Layer one — shared origin, contested inheritance</h3>
+  <ul>
+    <li><strong>Kievan Rus’ (9th–13th century)</strong>, centred on Kyiv, is claimed by Russians, Ukrainians and Belarusians alike as their common ancestor. Russian nationalist writing treats Kyiv as “the mother of Russian cities” and therefore treats Ukrainian separateness as artificial. Ukrainian historiography treats Kyiv as the centre of a distinct polity later absorbed by Moscow’s empire.</li>
+    <li>The <strong>1654 Treaty of Pereiaslav</strong> between Cossack Hetman Bohdan Khmelnytsky and the Tsar is read by Moscow as “reunification” and by Kyiv as a limited military alliance later converted into subjugation.</li>
+    <li>Under the Russian Empire the Ukrainian language was restricted (Valuev Circular 1863, Ems Ukaz 1876). Western Ukraine, under Austria-Hungary rather than Russia, developed a stronger separate national consciousness — a fault line still visible in voting maps.</li>
+  </ul>
+
+  <h3>Layer two — the Soviet century</h3>
+  <ul>
+    <li>A short-lived Ukrainian People’s Republic (1917–21) was absorbed into the USSR. Ukraine became a founding Soviet republic in 1922.</li>
+    <li>The <strong>Holodomor (1932–33)</strong>, a man-made famine during forced collectivisation, killed several million Ukrainians. Ukraine and many states recognise it as genocide; Russia rejects that characterisation. This is the deepest emotional wound in the relationship, and it explains why Ukrainian resistance in 2022 was far stiffer than Moscow’s planners assumed.</li>
+    <li>The <strong>Second World War</strong> is the other contested memory. Ukraine suffered catastrophically under Nazi occupation and millions of Ukrainians fought in the Red Army. A minority nationalist movement under Stepan Bandera collaborated at points with Germany against the USSR. Russian “de-Nazification” rhetoric is built on that minority strand; Ukrainians point out that Ukraine has an elected Jewish president whose family suffered in the Holocaust.</li>
+    <li><strong>1954:</strong> Khrushchev transferred Crimea from the Russian SFSR to the Ukrainian SSR — an internal administrative act with no international significance at the time, and a central grievance afterwards.</li>
+  </ul>
+
+  <h3>Layer three — the post-1991 divorce</h3>
+  <ul>
+    <li><strong>1 December 1991:</strong> Ukrainians voted for independence by over 90%, with majorities in every region including Crimea. The USSR dissolved weeks later.</li>
+    <li>Ukraine inherited the world’s <strong>third-largest nuclear arsenal</strong> — about 1,900 strategic warheads — though not operational launch control.</li>
+    <li><strong>1994 Budapest Memorandum:</strong> Ukraine acceded to the Nuclear Non-Proliferation Treaty as a non-nuclear state and transferred the warheads to Russia. In return the United States, United Kingdom and Russia gave assurances to respect Ukraine’s independence, sovereignty and existing borders and to refrain from the threat or use of force against it. Crucially these were political <em>assurances</em>, not a binding <em>guarantee</em> with an enforcement mechanism.</li>
+    <li>The <strong>1997 Black Sea Fleet agreements</strong> let Russia lease Sevastopol; the <strong>1997 Treaty on Friendship</strong> affirmed existing borders; the <strong>2010 Kharkiv Pact</strong> extended the lease to 2042 in exchange for discounted gas.</li>
+    <li>Ukraine spent two decades oscillating between Moscow-leaning and Europe-leaning governments — the <strong>Orange Revolution (2004)</strong> overturned a rigged election; Viktor Yanukovych won legitimately in 2010 and tilted back toward Russia.</li>
+  </ul>
+
+  <div class="edge gold">
+    <span class="edge-h">Why the Budapest Memorandum matters beyond Europe</span>
+    <p>This is the non-proliferation argument you should be able to make in one line: a state gave up nuclear weapons in exchange for assurances, and was later invaded by one of the guarantors. Every future proliferator — and every state debating whether to trust security assurances instead of building its own deterrent — has drawn a lesson from that. It is also, quietly, one of the strongest arguments in Indian strategic circles for retaining an independent, credible, indigenous deterrent rather than relying on anyone’s umbrella.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section id="nato-debate">
+  <h2>The NATO enlargement debate</h2><hr class="sec-rule">
+  <p>This is the argument you will be tested on, because it is where honest analysts genuinely disagree. Handle it by presenting both cases accurately and then giving your own reasoned position. Do not pretend it is simple.</p>
+
+  <div class="split">
+    <div class="panel red-top">
+      <h4>The Russian case</h4>
+      <ul>
+        <li>Western leaders gave verbal assurances during 1990 German reunification talks that NATO would not expand “one inch eastward”. Nothing was written into a treaty.</li>
+        <li>NATO nonetheless expanded in 1999, 2004, 2009, 2017, 2020 — from 16 to 30 members before 2022 — reaching Russia’s borders in the Baltics.</li>
+        <li>The <strong>2008 Bucharest Summit</strong> declared that Ukraine and Georgia “will become members of NATO”, without offering a Membership Action Plan. Moscow read this as a commitment; Kyiv got the provocation without the protection.</li>
+        <li>Ukraine is not Poland: it is the corridor through which Russia was invaded in 1812, 1918 and 1941, and the home of the Black Sea Fleet. Moscow frames this as an existential buffer, not an ordinary border.</li>
+        <li>US withdrawal from the ABM Treaty (2002) and INF Treaty (2019), plus missile-defence sites in Romania and Poland, deepened the perception of encirclement.</li>
+      </ul>
+    </div>
+    <div class="panel blue-top">
+      <h4>The counter-case</h4>
+      <ul>
+        <li>No binding non-expansion commitment exists in any signed document. The 1997 NATO–Russia Founding Act and the 1999 OSCE Istanbul Charter both affirm each state’s <strong>freedom to choose its alliances</strong> — and Russia signed them.</li>
+        <li>Enlargement was driven from below: Poland, the Baltics and others sought membership precisely because of their historical experience of Russian domination. Treating that as a Western plot denies those states agency.</li>
+        <li>Ukraine was nowhere near NATO membership in 2022. There was no MAP, no timeline, and several members were opposed. The alliance was not the proximate cause of the invasion.</li>
+        <li>Russia’s own stated war aims went far beyond neutrality — recognition of annexations, limits on Ukraine’s army, changes to its government and language policy. That is a demand for subordination, not a security guarantee.</li>
+        <li>The invasion produced the opposite of the stated aim: <strong>Finland joined NATO in April 2023 and Sweden in March 2024</strong>, roughly doubling NATO’s land border with Russia and turning the Baltic into a NATO lake.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="edge blue">
+    <span class="edge-h">How to hold this in an SSB Group Discussion</span>
+    <p>The mature formulation is: “Security-dilemma dynamics are real and NATO expansion did generate genuine insecurity in Moscow — but an explanation is not a justification. States have legitimate security concerns; they do not have the right to resolve them by invading a neighbour.” That sentence acknowledges both sides, shows you know the concept of a <em>security dilemma</em>, and lands on a principled position consistent with India’s own long-standing defence of sovereignty and territorial integrity.</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section id="2014">
+  <h2>2014 — the real beginning</h2><hr class="sec-rule">
+  <p>Eight years of war preceded the 2022 invasion. Candidates who start the story in 2022 get caught out by one follow-up question.</p>
+
+  <ul class="timeline">
+    <li><span class="yr">Nov 2013</span><span>President Yanukovych abruptly suspends the EU Association Agreement under Russian pressure. Protests begin in Kyiv’s Maidan Nezalezhnosti — the <strong>Euromaidan</strong> or “Revolution of Dignity”.</span></li>
+    <li><span class="yr">Feb 2014</span><span>Security forces kill roughly a hundred protesters. Yanukovych flees to Russia; parliament votes to remove him. Moscow calls it a Western-backed coup; Kyiv calls it a popular revolution against a president who abandoned his post.</span></li>
+    <li><span class="yr">Feb–Mar 2014</span><span>Unmarked troops — the “little green men”, later acknowledged as Russian — seize Crimea. A referendum on <strong>16 March 2014</strong>, held under occupation and rejected as invalid by the UN General Assembly, is used to annex the peninsula. <strong>The first forcible annexation of European territory since 1945.</strong></span></li>
+    <li><span class="yr">Apr 2014</span><span>Armed separatists, with Russian support, seize administrative buildings in Donetsk and Luhansk and proclaim “People’s Republics”. Kyiv launches an “Anti-Terrorist Operation”.</span></li>
+    <li><span class="yr">Jul 2014</span><span><strong>MH17</strong>, a Malaysia Airlines flight, is shot down over Donbas, killing 298 civilians. A Dutch-led investigation attributed it to a Buk missile system brought from Russia; Moscow denies responsibility. The single event that hardened European opinion.</span></li>
+    <li><span class="yr">Aug 2014</span><span>Ukrainian forces are close to defeating the separatists when regular Russian units intervene at Ilovaisk, inflicting a heavy defeat.</span></li>
+    <li><span class="yr">Sep 2014</span><span><strong>Minsk I</strong> ceasefire agreement — collapses.</span></li>
+    <li><span class="yr">Feb 2015</span><span>After the Ukrainian defeat at Debaltseve, <strong>Minsk II</strong> is signed under the “Normandy Format” (Germany, France, Russia, Ukraine). It required ceasefire, heavy-weapons withdrawal, special status and elections for Donbas, and restoration of Ukraine’s border control — but deliberately left the <em>sequence</em> ambiguous.</span></li>
+    <li><span class="yr">2015–21</span><span>A grinding, low-intensity positional war along a 400 km contact line. Roughly 14,000 dead by 2021. Minsk II is never implemented: Russia insists Ukraine grant special status first; Ukraine insists on border control first. Ukraine writes the NATO and EU objectives into its <strong>Constitution in 2019</strong>.</span></li>
+  </ul>
+
+  <div class="note">
+    <p><strong>Why Minsk II failed — a clean two-line answer:</strong> it was signed by Ukraine under battlefield duress, and it required Kyiv to give the separatist regions a veto over Ukraine’s foreign policy before recovering control of its own border. Russia saw it as a mechanism to keep Ukraine permanently out of the West; Ukraine saw it as legalised dismemberment. Neither side ever intended to implement the other’s reading.</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section id="road">
+  <h2>The road to 24 February 2022</h2><hr class="sec-rule">
+  <ul>
+    <li><strong>Spring 2021:</strong> a large Russian build-up near Ukraine’s borders, partially drawn down but with equipment left in place — an early rehearsal and a test of Western reaction.</li>
+    <li><strong>July 2021:</strong> Putin publishes the essay <em>“On the Historical Unity of Russians and Ukrainians”</em>, arguing that the two are “one people” and that modern Ukraine is a Soviet invention. Read as an ideological prospectus for what followed.</li>
+    <li><strong>Autumn 2021:</strong> a second, larger build-up — eventually 150,000–190,000 troops in Russia, Belarus and occupied Crimea, complete with field hospitals and blood supplies. US intelligence publicly and repeatedly warned of an invasion; most European capitals and Kyiv itself were sceptical until late.</li>
+    <li><strong>17 December 2021:</strong> Russia publishes two <strong>draft treaties</strong> demanding a written NATO commitment never to admit Ukraine, a rollback of NATO forces to 1997 lines, and no allied deployments in eastern member states. The demands were framed as non-negotiable and were rejected as such.</li>
+    <li><strong>February 2022:</strong> “exercises” in Belarus are extended rather than ended. On <strong>21 February</strong> Russia recognises the DPR and LPR as independent states and orders troops in as “peacekeepers”. On <strong>24 February</strong>, after a televised address invoking de-Nazification and demilitarisation, the full invasion begins on multiple axes.</li>
+  </ul>
+
+  <div class="edge">
+    <span class="edge-h">The four assumptions that broke</span>
+    <p>Russian planning appears to have rested on four judgements, and all four proved wrong: that Ukrainian forces would fold within days; that Zelensky would flee and the government collapse; that Russian-speaking eastern Ukraine would be passive or welcoming; and that Europe, dependent on Russian gas, would protest and then adapt. This is the classic strategic failure — not a shortage of force, but a false picture of the adversary’s will. It is an excellent point to make in any discussion about intelligence, morale or leadership.</p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section id="timeline">
+  <h2>Campaign timeline, 2022 onward</h2><hr class="sec-rule">
+  <p>Learn the war in <strong>phases</strong>, not as a list of dates. A board is far more impressed by “the war has gone through four distinct phases” than by a recital of place names.</p>
+
+  <h3>Phase 1 — the failed coup de main (Feb–Apr 2022)</h3>
+  <ul>
+    <li>Simultaneous advances from Belarus toward Kyiv, from Russia toward Kharkiv and Sumy, and from Crimea into the south. An air-assault on <strong>Hostomel airfield</strong> aimed at opening an air bridge to Kyiv was contested and failed.</li>
+    <li>Russia failed to achieve air superiority — an outcome few analysts predicted — and its logistics could not sustain multiple axes. The stalled 60 km convoy north of Kyiv became the symbol of the campaign.</li>
+    <li>Western shoulder-fired weapons (Javelin, NLAW, Stinger) and Turkish <strong>Bayraktar TB2</strong> drones inflicted disproportionate losses on road-bound columns.</li>
+    <li>Russia withdrew from northern Ukraine by early April. The discovery of mass civilian killings in <strong>Bucha</strong> ended any prospect of an early negotiated settlement and triggered a step-change in Western arms supply.</li>
+    <li>The <strong>Istanbul talks</strong> (March–April 2022) explored Ukrainian neutrality in exchange for security guarantees. They collapsed — Ukraine cites Bucha and distrust; Russia blames Western pressure. This episode is still argued over and is worth knowing as the war’s first missed off-ramp.</li>
+    <li><strong>14 April 2022:</strong> the Black Sea Fleet flagship <strong>Moskva</strong> is sunk by Ukrainian Neptune anti-ship missiles — a landmark event in modern naval warfare.</li>
+  </ul>
+
+  <h3>Phase 2 — the Donbas grind and the autumn counteroffensives (Apr–Dec 2022)</h3>
+  <ul>
+    <li>Russia concentrated on Donbas with massed artillery. <strong>Mariupol</strong> fell in May after the siege of the Azovstal plant; <strong>Sievierodonetsk</strong> and <strong>Lysychansk</strong> fell by July.</li>
+    <li>The arrival of US <strong>HIMARS</strong> from June 2022 changed the artillery duel: precision strikes on ammunition depots and headquarters beyond Russian counter-battery reach broke the fires advantage.</li>
+    <li><strong>September 2022:</strong> a Ukrainian deception operation advertised a Kherson offensive, then broke through thinly held lines in <strong>Kharkiv oblast</strong>, recovering thousands of square kilometres in days. In November, Russia withdrew from <strong>Kherson city</strong> — the only regional capital Ukraine has recovered.</li>
+    <li>Russia responded with <strong>partial mobilisation</strong> (about 300,000 reservists, September 2022), the <strong>claimed annexation</strong> of four oblasts (30 September 2022), and a systematic missile and Iranian <strong>Shahed</strong> drone campaign against Ukraine’s electricity grid through the winter.</li>
+    <li>The <strong>Kerch Strait bridge</strong> was damaged in October 2022; the <strong>Nord Stream</strong> pipelines were sabotaged in September 2022 (attribution still disputed).</li>
+  </ul>
+
+  <h3>Phase 3 — attrition and the failed counteroffensive (2023)</h3>
+  <ul>
+    <li>The battle for <strong>Bakhmut</strong> (Aug 2022–May 2023), fought largely by the Wagner private military company using convict recruits, became the war’s costliest meat-grinder for marginal operational gain.</li>
+    <li>Ukraine’s long-advertised <strong>summer counteroffensive</strong> (June 2023) ran into the “Surovikin Line” — layered minefields up to 20 km deep, dragon’s teeth, trenches and attack-helicopter kill zones. Without air superiority and mine-breaching capacity, Western-equipped brigades could not achieve breakthrough. Gains were measured in single-digit kilometres.</li>
+    <li>The <strong>Kakhovka dam</strong> was destroyed in June 2023, flooding the lower Dnipro and worsening the humanitarian and agricultural crisis.</li>
+    <li><strong>June 2023:</strong> Yevgeny Prigozhin’s Wagner mutiny marched on Moscow and stopped a day later — the most serious internal challenge to Putin’s authority. Prigozhin died in an aircraft crash two months later.</li>
+    <li>At sea, Ukraine — with no navy to speak of — used <strong>uncrewed surface vessels</strong> and cruise missiles to damage or destroy a significant share of the Black Sea Fleet and force it eastward from Sevastopol. Russia exited the <strong>Black Sea Grain Initiative</strong> in July 2023; Ukraine then opened its own corridor hugging NATO territorial waters and restored much of its seaborne grain export.</li>
+  </ul>
+
+  <h3>Phase 4 — Russian initiative, Western aid crisis, and the strike war (2024–25)</h3>
+  <ul>
+    <li>A six-month political blockage of US assistance left Ukraine severely short of artillery ammunition and air defence interceptors. <strong>Avdiivka</strong> fell in February 2024; Russia made slow, costly, but continuous gains across Donetsk oblast.</li>
+    <li>A roughly <strong>$61 billion US supplemental</strong> passed in April 2024, and the EU created a <strong>€50 billion Ukraine Facility</strong>. Ukraine lowered its mobilisation age and restructured recruitment amid a serious manpower problem.</li>
+    <li><strong>August 2024:</strong> Ukraine launched a surprise cross-border incursion into Russia’s <strong>Kursk</strong> region — operationally bold, intended to seize bargaining territory and pull Russian forces away from Donbas. Russia committed <strong>North Korean troops</strong> to help retake the salient, a significant internationalisation of the war.</li>
+    <li>Ukraine developed an indigenous <strong>long-range strike</strong> complex — domestically built one-way attack drones and missiles — systematically targeting Russian oil refineries, airbases and logistics hubs. In <strong>June 2025</strong> a covert operation (reported as “Spiderweb”) used drones smuggled deep inside Russia to strike strategic bomber bases, demonstrating that no rear area is safe.</li>
+    <li>Restrictions on Western-supplied deep-strike weapons (ATACMS, Storm Shadow/SCALP) were progressively relaxed from late 2024, each relaxation preceded by a Russian nuclear-signalling episode and followed by no escalation — an important data point in the debate about how real red lines are.</li>
+    <li><strong>2025</strong> brought the most serious diplomacy of the war: direct US–Russia contacts, a US–Ukraine minerals and reconstruction agreement, renewed <strong>Istanbul</strong> talks producing large prisoner exchanges but no ceasefire, and a <strong>Trump–Putin summit in Alaska (August 2025)</strong> followed by successive American peace frameworks. The obstacles remained constant throughout: territory, the legal status of annexed regions, limits on Ukraine’s armed forces, and the nature of any post-war security guarantee.</li>
+  </ul>
+
+  <div class="note">
+    <p><strong>Currency warning.</strong> Everything after mid-2025 moves fast — ceasefire proposals, summit outcomes, aid packages and front-line towns can change between the day you read this and the day you sit before the board. Verify the latest position from a reliable source (PIB, MEA statements, a serious daily) in the week before your interview. It is far better to say “as of last week, the position was…” than to quote something six months stale with total confidence.</p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section id="actors">
+  <h2>Key actors and their interests</h2><hr class="sec-rule">
+  <p>An SSB answer improves enormously when you can explain <em>what each player wants</em> rather than who is good and who is bad. Interests are analysable; morality arguments go in circles.</p>
+
+  <div class="tablewrap">
+  <table>
+    <caption>Belligerents and principal backers</caption>
+    <thead><tr><th>Actor</th><th>Core objective</th><th>Constraints</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Russia</strong></td><td>A Ukraine that is neutral, militarily limited and outside NATO; recognition of territorial gains; a revised European security order that restores a recognised sphere of influence; validation of great-power status.</td><td>Demographic decline, technology sanctions, dependence on China as a discounted-price customer, officer-corps and equipment attrition, an economy increasingly militarised and inflation-prone.</td></tr>
+      <tr><td><strong>Ukraine</strong></td><td>Survival as a sovereign state; restoration of territorial integrity (formally to 1991 borders); EU and, ideally, NATO membership or equivalent binding guarantees; reconstruction and accountability.</td><td>Manpower shortage and mobilisation fatigue, total dependence on external finance and munitions, energy infrastructure under attack, corruption concerns that affect donor confidence, demographic loss from emigration.</td></tr>
+      <tr><td><strong>United States</strong></td><td>Initially: impose costs on Russia, sustain NATO cohesion, deter a wider war, avoid direct confrontation. Latterly: shift burden to Europe, broker an end to the war, refocus on the Indo-Pacific and China.</td><td>Domestic political division over aid, munitions production limits, competing commitments in West Asia and the Indo-Pacific, reluctance to be drawn into a nuclear-risk confrontation.</td></tr>
+      <tr><td><strong>European Union</strong></td><td>Prevent successful border revision on its own continent; absorb Ukraine into the European project; end energy dependence on Russia; rebuild defence industry and a degree of strategic autonomy.</td><td>Unanimity requirements (Hungary and, at times, Slovakia dissenting), the economic cost of energy transition, farmer and industry backlash over Ukrainian imports, uncertainty about long-term American commitment.</td></tr>
+      <tr><td><strong>NATO</strong></td><td>Deter any spillover into Article 5 territory; reinforce the eastern flank; avoid becoming a direct belligerent.</td><td>The deliberate line between supporting Ukraine and fighting Russia; uneven burden-sharing; the debate over the 2%-of-GDP floor and its successors.</td></tr>
+      <tr><td><strong>China</strong></td><td>A Russia that is weakened enough to be dependent but not defeated; sanctions-busting commercial advantage; discrediting American alliance leadership; avoiding secondary sanctions on its banks.</td><td>Large exposure to Western markets; discomfort with nuclear threats and with the precedent of forcible border change given its own sovereignty rhetoric on Taiwan and Tibet.</td></tr>
+      <tr><td><strong>Belarus</strong></td><td>Regime survival under Lukashenko via Russian subsidy and protection.</td><td>Provided territory for the 2022 northern axis and hosts Russian tactical nuclear weapons, but has avoided sending its own troops into combat.</td></tr>
+      <tr><td><strong>Iran &amp; North Korea</strong></td><td>Hard currency, oil revenue, and — most importantly — Russian military technology and political cover. Iran supplied Shahed loitering munitions; North Korea supplied artillery ammunition, missiles and, from late 2024, troops.</td><td>Both are already heavily sanctioned, which is precisely why they can transact freely with Moscow.</td></tr>
+      <tr><td><strong>Turkey</strong></td><td>The balancer: a NATO member that sold Ukraine Bayraktar drones, refused to join sanctions, kept airspace and trade open, and used the <strong>1936 Montreux Convention</strong> to close the Straits to warships. Brokered the grain deal and hosted talks.</td><td>Economic dependence on Russian energy, tourism and nuclear construction; a demonstration that “strategic autonomy” is not unique to India.</td></tr>
+      <tr><td><strong>Global South</strong></td><td>India, Brazil, South Africa, Indonesia, the Gulf states and most of Africa have largely declined to sanction Russia. They prioritise food and energy security, resent perceived Western double standards over Iraq, Libya and Palestine, and want the war ended rather than won.</td><td>This is arguably the war’s most consequential geopolitical revelation: the “international community” that condemned Russia was not the same as the one that would punish it.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="edge gold">
+    <span class="edge-h">The point most candidates miss</span>
+    <p>141 states voted to condemn the invasion at the UN General Assembly in March 2022, but only about 30–40 imposed sanctions — overwhelmingly Western and East Asian democracies. Those states represent a large share of global GDP but a minority of the world’s population. The gap between moral condemnation and material action is the single most important structural fact about how this war has been fought diplomatically, and it tells you a great deal about the shape of an emerging multipolar order.</p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section id="strategy">
+  <h2>Military strategy and the character of the war</h2><hr class="sec-rule">
+
+  <h3>Why the initial Russian campaign failed</h3>
+  <ul>
+    <li><strong>Violation of concentration.</strong> Four or five simultaneous axes with no clear main effort meant none was decisive. Classic dispersion of force.</li>
+    <li><strong>Logistics.</strong> Russian ground forces are structurally tied to rail. Once off the railheads, truck-borne supply could not sustain an advance 100+ km deep against interdiction.</li>
+    <li><strong>No suppression of enemy air defences.</strong> Russia never systematically destroyed Ukraine’s mobile SAMs, so it never obtained air superiority, so its ground forces advanced without proper air support.</li>
+    <li><strong>Operational security sacrificed for surprise.</strong> Units were told they were on exercise; many junior commanders had no maps, no mission orders and no idea they were invading.</li>
+    <li><strong>Command culture.</strong> Rigid centralisation, weak professional NCO cadre, and an intelligence apparatus incentivised to tell the leadership what it wanted to hear.</li>
+    <li><strong>Underestimation of will.</strong> The single greatest error, and the least technological.</li>
+  </ul>
+
+  <h3>The defining features of the war as it evolved</h3>
+  <div class="split">
+    <div class="panel">
+      <h4>Transparency of the battlefield</h4>
+      <p>Commercial satellite imagery, ubiquitous small drones and open-source analysis mean concentration of force is visible before it is usable. “If it can be seen, it can be hit.” Concealment, dispersal, decoys and speed have become survival skills.</p>
+      <h4>Drone saturation</h4>
+      <p>From TB2s in 2022, to FPV racing drones carrying RPG warheads, to fibre-optic-guided drones immune to jamming, to naval uncrewed surface vessels, to long-range one-way attack drones. Both sides now produce them in the millions annually. A $500 drone routinely kills a $3 million vehicle.</p>
+      <h4>Artillery and mass</h4>
+      <p>Despite all the technology, artillery remains the largest killer. The war restored the importance of <em>magazine depth</em> — shells per day — and exposed how thin Western defence-industrial capacity had become after thirty years of peace-dividend procurement.</p>
+    </div>
+    <div class="panel">
+      <h4>Electronic warfare</h4>
+      <p>GPS jamming and spoofing degraded precision munitions, including some Western guided rounds, forcing rapid re-engineering. EW and counter-EW now cycle in weeks, not years.</p>
+      <h4>Field fortification returns</h4>
+      <p>Deep minefields, dragon’s teeth and layered trench systems restored the defensive advantage. Breaching them requires combined-arms competence and air superiority that neither side has consistently possessed.</p>
+      <h4>Deep strike and the disappearing rear</h4>
+      <p>Refineries, airbases, bridges, headquarters and power grids 1,000 km from the front are legitimate targets. There is no longer a safe rear area, which changes basing, dispersal and hardening requirements for every modern military.</p>
+      <h4>Sea denial without a navy</h4>
+      <p>Ukraine has no meaningful surface fleet yet forced the Black Sea Fleet out of Sevastopol using coastal missiles, USVs and drones — the most important naval lesson since the Falklands.</p>
+    </div>
+  </div>
+
+  <h3>The grammar of attrition</h3>
+  <p>This is a war that neither side can win quickly, so it is being decided by four ratios: <strong>manpower</strong> (who can mobilise and sustain trained soldiers), <strong>munitions</strong> (who can out-produce), <strong>money</strong> (who can finance a war economy longer), and <strong>morale and political will</strong> (whose society and allies stay committed). Russia has advantages in the first three; Ukraine has had the advantage in the fourth but depends on the political durability of others. Any serious forecast of the war must be argued in those terms.</p>
+
+  <div class="edge">
+    <span class="edge-h">Interview edge</span>
+    <p>If asked “What is the biggest military lesson of this war?”, avoid the obvious “drones”. Say: <strong>the return of industrial-scale war.</strong> For three decades militaries optimised for short, precise, expeditionary campaigns against weak opponents. This war showed that against a peer you need depth — ammunition stockpiles, reserves, repairable equipment, a mobilisable industrial base and trained manpower. Precision matters, but precision without mass runs out in a fortnight. Then connect it to India: that is exactly the argument behind Aatmanirbhar Bharat in defence production, emergency procurement powers, and building indigenous ammunition and drone capacity rather than relying on imports that can be cut off.</p>
+  </div>
+</section>
+
+<!-- 9 -->
+<section id="lessons">
+  <h2>Technology and lessons for India</h2><hr class="sec-rule">
+  <p>This is where you convert current affairs into officer-like thinking. The board wants to know whether you can draw a professional lesson, not recite a news bulletin.</p>
+
+  <div class="tablewrap">
+  <table>
+    <caption>Lesson → Indian implication</caption>
+    <thead><tr><th>Lesson from Ukraine</th><th>What it means for India</th></tr></thead>
+    <tbody>
+      <tr><td>Single-source dependence on foreign equipment is a strategic vulnerability. Russian spares, S-400 deliveries and new platforms all slowed as Moscow prioritised its own front.</td><td>Roughly 50–60% of India’s inventory is of Russian origin. Diversification (France, USA, Israel) plus genuine indigenisation under Aatmanirbhar Bharat, the positive indigenisation lists and iDEX is no longer optional — it is a war-sustainability requirement.</td></tr>
+      <tr><td>Magazine depth decides attrition wars. Both sides burned through peacetime stockpiles in weeks.</td><td>Ammunition and missile production capacity, war wastage reserves, and the ability to surge private-sector manufacture matter more than headline platform counts. India’s growing defence exports and ordnance corporatisation are relevant here.</td></tr>
+      <tr><td>Cheap mass beats exquisite scarcity in many roles.</td><td>Loitering munitions, swarm drones, counter-drone systems and indigenous FPV production; also cheap, attritable ISR. India’s experience in <em>Operation Sindoor</em> (2025) reinforced the same lesson about layered air defence and drone/counter-drone duels.</td></tr>
+      <tr><td>Space and commercial ISR are decisive enablers. Starlink kept Ukrainian command and control alive; commercial imagery gave real-time targeting.</td><td>Sovereign satellite constellations, secure milsatcom, the Defence Space Agency, and a domestic commercial space sector that can be surged in crisis.</td></tr>
+      <tr><td>There is no safe rear area.</td><td>Hardened and dispersed airbases, redundant logistics nodes, protected critical infrastructure (power, ports, refineries), and civil-defence preparedness.</td></tr>
+      <tr><td>Two-front and collusive threats are real.</td><td>Russia fought a single adversary and still struggled. India plans against a two-front collusive scenario with China and Pakistan — which strengthens the case for theatreisation, jointness, and integrated ISR and fires.</td></tr>
+      <tr><td>Information operations shape the war’s legitimacy and its material support.</td><td>Strategic communication is a military function, not a public-relations afterthought. Ukraine’s ability to sustain Western support was substantially a communications achievement.</td></tr>
+      <tr><td>Sanctions did not collapse the Russian economy, but technology denial degraded capability over time.</td><td>Secure semiconductor, machine-tool and precision-component supply chains. Economic resilience is a component of defence preparedness.</td></tr>
+      <tr><td>Reserves and national resilience matter.</td><td>Trained reserve manpower, territorial defence concepts, and a population psychologically prepared for a long conflict — relevant to debates around Agnipath, reserve strength and civil-military integration.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="edge blue">
+    <span class="edge-h">A lecturette you can build from this section alone</span>
+    <p><em>“Lessons of the Russia–Ukraine war for India”</em> — 30 seconds framing the war as the first peer conflict of the drone age; 90 seconds on three lessons (self-reliance in munitions, cheap mass and drones, no safe rear area), each with a concrete Indian example; 30 seconds on the counter-argument that India’s terrain and adversaries differ, so lessons must be adapted not copied; 30 seconds on the conclusion. That structure alone will put you ahead of most candidates.</p>
+  </div>
+</section>
+
+<!-- 10 -->
+<section id="nuclear">
+  <h2>The nuclear dimension and escalation management</h2><hr class="sec-rule">
+  <p>This war is the most important live case study in deterrence theory since the Cuban Missile Crisis, and it deserves careful, unexcitable handling.</p>
+  <ul>
+    <li><strong>Nuclear signalling.</strong> Russia placed deterrent forces on “special combat readiness” in February 2022, repeatedly alluded to the use of all available means, suspended participation in the New START inspection regime (2023), deployed tactical nuclear weapons to Belarus, and in November 2024 published a revised doctrine lowering the declaratory threshold — including aggression by a non-nuclear state supported by a nuclear one.</li>
+    <li><strong>The function of the signalling.</strong> Its practical effect has been <em>deterrence of Western intervention</em>, not preparation for use. It successfully ruled out a no-fly zone and NATO troops, and for two years shaped which weapons were supplied and where they could be fired.</li>
+    <li><strong>The salami-slicing counter-observation.</strong> Almost every declared red line — Javelins, HIMARS, Patriots, tanks, F-16s, strikes into Crimea, strikes into Russia proper, the Kursk incursion — was eventually crossed without nuclear use. Analysts draw two opposite conclusions: that Russian threats are bluff, or that repeatedly testing them is how deterrence failures happen. Both are defensible; know both.</li>
+    <li><strong>Zaporizhzhia Nuclear Power Plant.</strong> Europe’s largest NPP has been under Russian military control since March 2022, repeatedly losing off-site power and relying on emergency diesel generators, with IAEA monitors on site. Not a weapons issue but a genuine radiological risk — and the first time a major operating nuclear plant has sat inside an active battlefield.</li>
+    <li><strong>Arms-control collapse.</strong> With the ABM Treaty, INF Treaty, Open Skies and effectively New START gone, the strategic-stability architecture built over fifty years has been dismantled at exactly the moment three-way (US–Russia–China) deterrence is emerging. This is a first-rate topic in its own right.</li>
+    <li><strong>India’s doctrinal contrast.</strong> India maintains No First Use with credible minimum deterrence and massive retaliation. Indian officials have consistently and publicly stated that the threat or use of nuclear weapons is unacceptable — a position that is principled, consistent with India’s own doctrine, and one of the few points on which India has been openly critical of Russian conduct.</li>
+  </ul>
+
+  <div class="note">
+    <p><strong>If asked “Could this become World War III?”</strong> Answer with mechanism, not drama: direct NATO–Russia war is unlikely because both sides are deliberately managing escalation, but the risk is not zero and it runs through <em>accident and miscalculation</em> — a stray missile on NATO territory (as happened in Poland in November 2022), an incident in the Baltic or Black Sea, a collapse of one side’s conventional front, or sabotage of undersea cables and pipelines. Deterrence has held; the danger is the unplanned event, not the planned one.</p>
+  </div>
+</section>
+
+<!-- 11 -->
+<section id="hybrid">
+  <h2>Information war, cyber and hybrid conflict</h2><hr class="sec-rule">
+  <ul>
+    <li><strong>Narrative as a weapon.</strong> Ukraine won the early information war decisively — Zelensky’s decision to stay in Kyiv, the Snake Island exchange, the Ghost of Kyiv myth. Winning narrative translated directly into materiel, sanctions and refugee generosity. That is strategic effect, measurable in howitzers.</li>
+    <li><strong>Russian information strategy</strong> targeted different audiences with different messages: a domestic audience with the Great Patriotic War frame, the Global South with anti-colonial and double-standards framing, and Western audiences with war-weariness and cost-of-living framing. In much of Africa, Latin America and Asia this was substantially more effective than Western messaging.</li>
+    <li><strong>Cyber operations</strong> were significant but not decisive — wiper malware against Ukrainian ministries, the <strong>Viasat KA-SAT hack</strong> on the first morning (which also knocked out thousands of wind turbines in Germany), attacks on the power grid. The lesson is that cyber is a <em>supporting</em> arm that degrades and disrupts; it does not replace kinetic force. The other lesson is the extraordinary role of private technology companies — Microsoft, Amazon, Google, SpaceX — in national defence.</li>
+    <li><strong>Sabotage and grey-zone activity</strong> in Europe: undersea cable and pipeline damage in the Baltic, GPS jamming affecting civil aviation, arson and parcel-bomb plots, and drone incursions over airports and military sites. This is “hybrid war” below the Article 5 threshold — deliberately ambiguous, hard to attribute, hard to respond to.</li>
+    <li><strong>Lawfare and legitimacy.</strong> Both sides use legal instruments — annexation referendums, treaty withdrawals, ICJ and ICC proceedings — to contest the legitimacy of the other’s actions.</li>
+  </ul>
+
+  <div class="edge">
+    <span class="edge-h">Interview edge</span>
+    <p>A question you should prepare for: “How would India defend against the kind of hybrid warfare seen in Ukraine?” Good answer components: critical-infrastructure protection and CERT-In; the National Cyber Security Strategy and a Defence Cyber Agency; sovereign satellite communications; counter-disinformation through the PIB Fact Check Unit and media literacy; protection of undersea cables and offshore assets; and above all social cohesion, because the target of information warfare is not a network, it is a society’s trust in itself.</p>
+  </div>
+</section>
+
+<!-- 12 -->
+<section id="nato-eu">
+  <h2>NATO, the EU and Western involvement</h2><hr class="sec-rule">
+
+  <h3>What NATO did — and deliberately did not do</h3>
+  <ul>
+    <li><strong>Did not</strong> enter the war. No no-fly zone, no NATO troops in combat, no Article 5 invocation. <strong>Article 4</strong> (consultation) was invoked by eastern members in February 2022; Article 5 was not, because no member was attacked.</li>
+    <li><strong>Did</strong> reinforce the eastern flank: multinational battlegroups expanded from four to eight (adding Bulgaria, Hungary, Romania, Slovakia), a New Force Model with far higher readiness targets, and regional defence plans adopted at the 2023 Vilnius summit — the alliance’s first comprehensive war plans since the Cold War.</li>
+    <li><strong>Enlarged.</strong> <strong>Finland (April 2023)</strong> and <strong>Sweden (March 2024)</strong> abandoned decades of non-alignment and joined, taking the alliance to 32 members. Finland alone added some 1,340 km of NATO–Russia border.</li>
+    <li><strong>Spent more.</strong> Defence spending rose sharply across the alliance; the 2% of GDP guideline became a floor rather than an aspiration, with subsequent summits pushing far higher long-term targets including infrastructure and industrial capacity.</li>
+    <li><strong>Institutionalised support</strong> through a NATO coordination command for Ukraine aid and multi-year funding pledges, partly to insulate assistance from any single country’s domestic politics.</li>
+    <li><strong>Did not offer membership.</strong> Ukraine’s NATO accession remains the unresolved question. Vilnius (2023) removed the MAP requirement and said Ukraine would be invited “when allies agree and conditions are met” — language Kyiv publicly called absurd. Alternatives discussed include bilateral security guarantees (a G7 framework signed with many states), an “Israel model” of sustained armament, or European troops as a post-ceasefire reassurance force.</li>
+  </ul>
+
+  <h3>The European Union’s transformation</h3>
+  <ul>
+    <li>Granted Ukraine (and Moldova) <strong>candidate status in June 2022</strong> and formally opened accession negotiations in June 2024 — a geopolitical decision as much as a technical one.</li>
+    <li>Used the <strong>European Peace Facility</strong> to finance lethal aid for the first time in its history — a genuine constitutional milestone for a project founded as a peace and trade community.</li>
+    <li>Adopted successive sanctions packages, an oil import ban with a price cap, and a coal and later gas drawdown. European pipeline gas imports from Russia fell dramatically, replaced by LNG from the US, Qatar and Norway, plus demand reduction and accelerated renewables under <strong>REPowerEU</strong>.</li>
+    <li>Immobilised roughly <strong>€200 billion</strong> of Russian central bank assets, predominantly at Euroclear in Belgium, and from 2024 used the <em>windfall profits</em> to service a G7 <strong>$50 billion Extraordinary Revenue Acceleration</strong> loan to Ukraine. Outright confiscation remains contested on legal grounds (sovereign immunity) and financial ones (the euro’s reserve-currency credibility).</li>
+    <li>Activated the <strong>Temporary Protection Directive</strong> for the first time ever, giving millions of Ukrainian refugees immediate residence and work rights.</li>
+  </ul>
+
+  <div class="edge gold">
+    <span class="edge-h">The strategic irony worth stating aloud</span>
+    <p>A war launched partly to reverse NATO’s expansion and fracture Western cohesion produced a larger NATO, a longer NATO–Russia border, higher European defence spending, the end of Finnish and Swedish non-alignment, the end of German pacifist restraint on arms exports, and Europe’s decoupling from Russian energy. Whatever else it achieved, by its own declared objectives the invasion was strategically counter-productive. That single paragraph, delivered calmly, is a very strong GD contribution.</p>
+  </div>
+</section>
+
+<!-- 13 -->
+<section id="law">
+  <h2>International law and institutions</h2><hr class="sec-rule">
+  <div class="tablewrap">
+  <table>
+    <caption>The legal architecture and how it performed</caption>
+    <thead><tr><th>Instrument / body</th><th>What it says or did</th><th>Assessment</th></tr></thead>
+    <tbody>
+      <tr><td><strong>UN Charter, Article 2(4)</strong></td><td>Prohibits the threat or use of force against the territorial integrity or political independence of any state.</td><td>The core rule allegedly breached. Russia invokes Article 51 self-defence and the collective self-defence of the recognised “republics”; this reading is rejected by the overwhelming majority of states.</td></tr>
+      <tr><td><strong>UN Security Council</strong></td><td>Paralysed — Russia is a permanent member and vetoed action on the first day.</td><td>The clearest possible illustration of why the UNSC needs reform, and the strongest argument for India’s long-standing demand for expansion of the permanent membership.</td></tr>
+      <tr><td><strong>UN General Assembly, Res. ES-11/1 (2 Mar 2022)</strong></td><td>Deplored the aggression and demanded withdrawal. Adopted <strong>141–5–35</strong>. <strong>India abstained.</strong></td><td>Morally significant, legally non-binding. The 35 abstentions represented a very large share of world population.</td></tr>
+      <tr><td><strong>UNGA Res. ES-11/4 (Oct 2022)</strong></td><td>Declared the annexation of four oblasts invalid. Adopted 143–5–35.</td><td>Non-recognition of forcible annexation is the strongest continuing legal consensus.</td></tr>
+      <tr><td><strong>International Court of Justice</strong></td><td>Ordered Russia in March 2022 to suspend military operations in a case brought under the Genocide Convention.</td><td>Ignored. Demonstrates the enforcement gap between a binding order and compliance.</td></tr>
+      <tr><td><strong>International Criminal Court</strong></td><td>Issued an arrest warrant for Vladimir Putin and Children’s Rights Commissioner Maria Lvova-Belova in <strong>March 2023</strong> over the unlawful deportation of children; further warrants followed for commanders over strikes on civilian infrastructure.</td><td>Severely constrains travel, but the ICC has no police force and neither Russia, the US, China nor India are parties to the Rome Statute. A crime of <em>aggression</em> cannot be prosecuted at the ICC here, which is why a separate special tribunal has been pursued through the Council of Europe.</td></tr>
+      <tr><td><strong>International humanitarian law</strong></td><td>Geneva Conventions rules on distinction, proportionality, treatment of prisoners, protection of civilian objects, and the prohibition on attacking dams and nuclear installations.</td><td>Documented allegations on a large scale — Bucha, Mariupol theatre, filtration camps, strikes on the power grid, treatment of PoWs. Investigations continue through the ICC, a UN Commission of Inquiry and national courts.</td></tr>
+      <tr><td><strong>Budapest Memorandum (1994)</strong></td><td>Political assurances of territorial integrity in exchange for denuclearisation.</td><td>The cautionary tale of the whole non-proliferation regime.</td></tr>
+      <tr><td><strong>Montreux Convention (1936)</strong></td><td>Turkey closed the Turkish Straits to belligerent warships.</td><td>A 90-year-old treaty that worked exactly as designed and materially shaped the naval war.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="edge blue">
+    <span class="edge-h">India-relevant framing</span>
+    <p>India’s formal position is built entirely on this legal layer rather than on taking sides: respect for the <strong>UN Charter, international law, and the sovereignty and territorial integrity of all states</strong>. That phrasing is deliberate — it is the same principle India invokes against Chinese actions in Ladakh and in the South China Sea. If you are asked whether India’s position is inconsistent, the answer is that India’s <em>principles</em> are consistent; what India declines to do is join a punitive coalition. Those are different things, and being able to separate them is exactly the kind of precision boards notice.</p>
+  </div>
+</section>
+
+<!-- 14 -->
+<section id="economy">
+  <h2>Sanctions, energy and the global economy</h2><hr class="sec-rule">
+
+  <h3>The sanctions architecture</h3>
+  <ul>
+    <li><strong>Financial:</strong> major Russian banks cut from SWIFT; roughly $300 billion of Central Bank of Russia reserves immobilised — the first time the reserves of a major economy were frozen at scale.</li>
+    <li><strong>Energy:</strong> an EU import ban on seaborne crude and refined products, plus a G7 <strong>price cap</strong> (initially $60 a barrel, later tightened) enforced through Western shipping, insurance and finance rather than through an outright embargo — explicitly designed to keep Russian oil flowing to the world while capping Moscow’s revenue.</li>
+    <li><strong>Technology:</strong> export controls on semiconductors, machine tools, avionics and dual-use components. This is the sanction that has actually bitten, forcing Russia into costly grey-market procurement.</li>
+    <li><strong>Individual:</strong> thousands of designations of officials and oligarchs; asset seizures; travel bans.</li>
+    <li><strong>Corporate exit:</strong> over a thousand Western firms withdrew or curtailed operations.</li>
+  </ul>
+
+  <h3>Why the Russian economy did not collapse</h3>
+  <ul>
+    <li><strong>Redirection, not reduction.</strong> Oil found new buyers — principally China, India and Turkey — at a discount. Volumes were largely maintained; margins were compressed.</li>
+    <li><strong>The shadow fleet.</strong> Several hundred ageing tankers with opaque ownership and non-Western insurance moved crude outside the price-cap mechanism, creating both an enforcement problem and a serious maritime-environmental risk.</li>
+    <li><strong>Military Keynesianism.</strong> Enormous defence spending produced headline GDP growth alongside labour shortages, high inflation and punitive interest rates — growth that consumes rather than compounds.</li>
+    <li><strong>Import substitution and parallel imports</strong> through Central Asia, the Caucasus and the UAE.</li>
+    <li>The honest verdict: sanctions were a <strong>slow-acting constraint, not a knockout blow</strong>. They raised the cost of the war and degraded long-term technological capacity without changing Russian policy in the short term. That is the realistic answer, and it is more impressive than either “sanctions destroyed Russia” or “sanctions failed completely”.</li>
+  </ul>
+
+  <h3>Global consequences</h3>
+  <div class="split">
+    <div class="panel">
+      <h4>Energy</h4>
+      <ul>
+        <li>Brent spiked above $120 in 2022; European gas prices reached extraordinary levels before collapsing back.</li>
+        <li>Europe replaced pipeline gas with LNG, permanently tightening the global LNG market and raising costs for price-sensitive importers in South and South-East Asia.</li>
+        <li>Accelerated renewables, nuclear reconsideration, and a temporary return to coal — energy security, not only climate, now drives policy.</li>
+      </ul>
+      <h4>Food</h4>
+      <ul>
+        <li>Russia and Ukraine together accounted for around a quarter of global wheat exports, most of the sunflower oil trade, and a large share of maize and barley.</li>
+        <li>The Black Sea blockade and mining drove a 2022 food-price crisis that hit Egypt, Lebanon, Yemen, Somalia and much of West Africa hardest.</li>
+        <li>Fertiliser — Russia and Belarus are major exporters of potash, nitrogen and phosphates — is the under-discussed second-order shock, and it hit Indian farmers and the subsidy bill directly.</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h4>Macroeconomy</h4>
+      <ul>
+        <li>The commodity shock compounded post-pandemic inflation, forcing the sharpest global monetary tightening in decades — which in turn raised debt-servicing costs across emerging markets.</li>
+        <li>Supply chains fragmented further: “friend-shoring”, “de-risking” and industrial policy replaced pure efficiency logic.</li>
+        <li>Defence spending rose worldwide, crowding out development budgets in some states.</li>
+      </ul>
+      <h4>The financial order</h4>
+      <ul>
+        <li>Freezing a G20 central bank’s reserves prompted many states to reconsider reserve composition — accelerating gold purchases, local-currency trade settlement, alternatives to SWIFT (China’s CIPS, Russia’s SPFS) and the rupee-settlement mechanism India put in place.</li>
+        <li>De-dollarisation is <strong>real but slow</strong>: the dollar’s share of reserves is drifting down over decades, not collapsing. Be precise about this — overstating it is a common candidate error. The dollar retains network effects, depth and convertibility that no rival currently matches.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 15 -->
+<section id="india">
+  <h2>India’s position — strategic autonomy in practice</h2><hr class="sec-rule">
+  <p class="lede">This is the section you must know best. Expect it in the interview, expect it in a GD, and expect at least one follow-up designed to see whether you can defend a nuanced national position under mild pressure.</p>
+
+  <h3>What India actually did</h3>
+  <ul>
+    <li><strong>Abstained</strong> on the substantive UNSC and UNGA resolutions condemning Russia, while explaining its vote each time by reaffirming the UN Charter, international law, and the sovereignty and territorial integrity of all states.</li>
+    <li><strong>Never named Russia as an aggressor</strong>, but consistently called for an immediate cessation of violence and a return to dialogue and diplomacy.</li>
+    <li><strong>Condemned the killing of civilians</strong> unambiguously after Bucha and called for an independent investigation.</li>
+    <li><strong>Opposed nuclear threats.</strong> India’s External Affairs Minister has repeatedly stated that the use or threat of use of nuclear weapons is unacceptable — India’s sharpest public divergence from Moscow.</li>
+    <li><strong>Operation Ganga (2022):</strong> evacuated roughly 22,500 Indian nationals, most of them medical students, from Ukraine and its neighbours, with four Union Ministers deployed as special envoys. One student, Naveen Shekharappa, was killed in Kharkiv. Both Moscow and Kyiv facilitated corridors — itself evidence of India’s standing with both sides.</li>
+    <li><strong>Humanitarian assistance</strong> to Ukraine in multiple consignments of medicines and relief material.</li>
+    <li><strong>Leader-level diplomacy:</strong> Prime Minister Modi’s remark to President Putin at the SCO Samarkand summit in September 2022 — <em>“today’s era is not an era of war”</em> — was cited in the G20 Bali declaration and became the defining Indian formulation. Modi visited <strong>Moscow in July 2024</strong> and then <strong>Kyiv in August 2024</strong>, the first Indian Prime Minister to visit independent Ukraine — a deliberate act of balance.</li>
+    <li><strong>G20 New Delhi (September 2023):</strong> India achieved a consensus leaders’ declaration when consensus looked impossible, by shifting the language from condemning Russia to affirming principles — a genuine diplomatic achievement and a strong example of India as a bridge power.</li>
+    <li><strong>Energy:</strong> Russian crude went from under 2% of India’s imports before the war to roughly a third or more at peak, making Russia India’s largest supplier. India’s position, stated plainly and repeatedly: purchases are legal, made within the price cap framework, and driven by the needs of a large developing economy where a dollar on the barrel affects hundreds of millions of people.</li>
+  </ul>
+
+  <h3>Why India took this position — the five real reasons</h3>
+  <ol>
+    <li><strong>Defence dependence.</strong> A very large share of India’s inventory — Su-30MKI, T-90, Kilo-class submarines, S-400, a leased nuclear submarine, and the BrahMos joint venture — is Russian in origin, and spares and upgrades cannot be substituted in a decade, let alone a year.</li>
+    <li><strong>Energy and inflation.</strong> India imports over 85% of its crude. Discounted Russian oil saved the exchequer and the consumer a very large sum and helped keep inflation manageable.</li>
+    <li><strong>China.</strong> Pushing Russia further into China’s arms is against India’s interest. A Russia that is wholly dependent on Beijing is a Russia that cannot be neutral — or helpful — in an India–China crisis. This is the most sophisticated argument and the one that most impresses boards.</li>
+    <li><strong>History and reliability.</strong> The Soviet veto in the UNSC during the 1971 war, the 1971 Treaty of Peace, Friendship and Cooperation, and technology transfers when the West was sanctioning India after 1998 — this history is a live factor in Indian decision-making, not sentiment.</li>
+    <li><strong>Principle of strategic autonomy.</strong> Non-alignment has evolved into multi-alignment: India is in the Quad with the US, Japan and Australia, <em>and</em> in BRICS and the SCO with Russia and China, <em>and</em> in I2U2 and IMEC. Autonomy means retaining the capacity to choose case by case rather than being conscripted into someone else’s coalition.</li>
+  </ol>
+
+  <h3>The costs and criticisms — do not pretend these do not exist</h3>
+  <ul>
+    <li><strong>Reputational.</strong> Western commentary accused India of financing the war and of inconsistency, given that India invokes the sanctity of borders against China.</li>
+    <li><strong>Economic pressure.</strong> Purchases of Russian crude became an explicit point of friction with Washington, including through tariff measures in 2025, showing that “autonomy” is not cost-free.</li>
+    <li><strong>Supply risk.</strong> Deliveries of S-400 squadrons, spares and new platforms slowed as Russia prioritised its own front — the practical vindication of diversification.</li>
+    <li><strong>The Russia–China alignment.</strong> The “no limits” partnership declared weeks before the invasion is a long-term structural problem for India, whatever short-term benefits the oil discount brings.</li>
+    <li><strong>Indian nationals recruited into the Russian army</strong> under false pretences became a consular and diplomatic issue, with the MEA pressing for discharge and repatriation — a reminder that distance from a war does not mean immunity from it.</li>
+    <li><strong>Ukraine relations.</strong> Kyiv publicly expressed disappointment at India’s abstentions, though the Modi visit in August 2024 and continued humanitarian aid have kept the relationship functional.</li>
+  </ul>
+
+  <div class="edge">
+    <span class="edge-h">Interview edge — the question you will be asked</span>
+    <p><strong>“Is India’s neutrality moral?”</strong> or <strong>“Is India sitting on the fence?”</strong> Do not get defensive and do not become jingoistic. A strong answer has four parts. <em>One:</em> India is not neutral on principle — it has consistently upheld the UN Charter, sovereignty and territorial integrity, condemned civilian deaths, and rejected nuclear threats. <em>Two:</em> India has declined to join a sanctions coalition, which is a different decision, taken in the light of energy security for 1.4 billion people and a defence inventory that cannot be replaced overnight. <em>Three:</em> India has used its position constructively — evacuating its citizens, delivering the G20 consensus, and being one of the few countries that both Moscow and Kyiv will still talk to. <em>Four:</em> there is a real cost and a real trade-off, and over the long term the answer is faster indigenisation and diversification so that the choice is less constrained. Ending on the trade-off, rather than on triumphalism, is what makes it sound like judgement rather than a slogan.</p>
+  </div>
+</section>
+
+<!-- 16 -->
+<section id="humanitarian">
+  <h2>Humanitarian and societal impact</h2><hr class="sec-rule">
+  <p>Figures in war are contested, and precision here matters less than being able to convey scale honestly. Use approximations and say they are approximations.</p>
+  <ul>
+    <li><strong>Casualties.</strong> Verified civilian deaths run into the tens of thousands, with the UN human rights office noting the real figure is certainly higher. Military casualties on both sides — killed and wounded combined — are credibly estimated in the high hundreds of thousands, making this the deadliest European conflict since the Second World War. All belligerent figures should be treated as instruments of information warfare.</li>
+    <li><strong>Displacement.</strong> Around 6–7 million refugees abroad, the majority in Europe, plus several million internally displaced. Europe’s largest displacement crisis since 1945, and one met — notably — with immediate legal protection rather than camps.</li>
+    <li><strong>Children.</strong> Ukraine alleges the unlawful deportation or forcible transfer of large numbers of children to Russia; this is the basis of the ICC warrant. Russia describes the same programme as evacuation and guardianship.</li>
+    <li><strong>Infrastructure.</strong> Systematic strikes on generation and transmission have left Ukrainian cities with prolonged winter blackouts. Reconstruction needs are estimated in the region of $500 billion and rising — a multi-generational bill.</li>
+    <li><strong>Demography.</strong> Ukraine faces a compounded crisis: war deaths, emigration of women and children, a collapsed birth rate, and an ageing population. Even a favourable peace leaves a country that must rebuild its population as well as its cities.</li>
+    <li><strong>Mines.</strong> Ukraine has become one of the most heavily mined countries on earth. Clearance will take decades and will constrain agriculture — which is also a global food-supply issue.</li>
+    <li><strong>Russian society.</strong> Mobilisation drove hundreds of thousands, disproportionately young and educated, to emigrate; independent media has been closed; dissent is criminalised. The war’s long-term cost to Russia’s human capital is likely to outlast the fighting.</li>
+    <li><strong>Mental health.</strong> An entire generation of Ukrainian soldiers and civilians, and a large cohort of Russian veterans, will carry psychological injury home. Veteran reintegration is a coming social challenge for both states — and a genuinely officer-like point to raise, because it is about people rather than platforms.</li>
+  </ul>
+</section>
+
+<!-- 17 -->
+<section id="current">
+  <h2>Current developments and the strategic pattern</h2><hr class="sec-rule">
+  <div class="note">
+    <p><strong>Read this section as structure, not as a bulletin.</strong> Specific front-line towns, summit outcomes and aid votes change weekly. What follows are the durable patterns that will still be true when you walk into the interview room — populate them with the week’s headlines from a reliable source before you go.</p>
+  </div>
+
+  <h3>Six patterns that define the present phase</h3>
+  <ol>
+    <li><strong>Slow, costly Russian ground pressure without operational breakthrough.</strong> Russia holds the initiative along much of the line and converts manpower and ammunition advantage into incremental gains, at a casualty exchange ratio it can sustain politically but not indefinitely.</li>
+    <li><strong>A deep-strike war running in parallel.</strong> Ukraine targets refineries, airbases, logistics and energy export infrastructure inside Russia with indigenous long-range drones and missiles; Russia targets Ukraine’s grid, ports and defence industry. Both aim at the other’s war-sustaining capacity rather than at the front line.</li>
+    <li><strong>The burden shifting from Washington to Europe.</strong> The central question of the war’s financing and armament is now whether Europe can or will carry a load the United States carried in 2022–24 — through frozen-asset revenues, joint procurement and a rebuilt defence industry.</li>
+    <li><strong>Negotiation as a continuous process rather than an event.</strong> Talks, frameworks, partial ceasefires (energy infrastructure, Black Sea), prisoner exchanges and shuttle diplomacy now run alongside the fighting. The sticking points have not moved: territory and its legal recognition, limits on Ukraine’s armed forces, Ukraine’s alliance status, sanctions relief sequencing, and who guarantees what.</li>
+    <li><strong>The security-guarantee problem.</strong> Ukraine’s core demand is that any settlement include a guarantee credible enough to deter a third invasion. Options — NATO membership, bilateral guarantees, a European reassurance force, or an armed-porcupine model — each carry a different level of Russian objection and Western risk appetite. This, not the map, is the hardest part of any peace.</li>
+    <li><strong>Institutional churn.</strong> NATO’s force posture and spending targets, EU enlargement mechanics, the future of the frozen assets, and the shape of post-war arms control are all being renegotiated simultaneously. The European security order that emerges will be different from the one that existed in 2021, regardless of where the front line stops.</li>
+  </ol>
+
+  <div class="edge blue">
+    <span class="edge-h">How to talk about a fast-moving situation safely</span>
+    <p>Three habits protect you. <strong>Date your facts</strong> — “as of the last report I read, in…” <strong>Distinguish confirmed from claimed</strong> — “Ukraine claims, Russia denies, independent verification is limited.” <strong>Lead with structure over headlines</strong> — a candidate who explains why negotiations keep failing will always outperform one who has memorised yesterday’s casualty claim. Saying “I am not certain of the latest position on that, sir, but the underlying issue is…” is a mark of integrity, not ignorance. Bluffing a detail you do not have is the one thing that will genuinely damage you.</p>
+  </div>
+</section>
+
+<!-- 18 -->
+<section id="scenarios">
+  <h2>Future scenarios</h2><hr class="sec-rule">
+  <p>Do not predict. Lay out scenarios with drivers and indicators. That is how staff officers and intelligence analysts actually think, and it reads as maturity.</p>
+
+  <div class="tablewrap">
+  <table>
+    <caption>Five plausible trajectories</caption>
+    <thead><tr><th>Scenario</th><th>What it looks like</th><th>Watch for</th></tr></thead>
+    <tbody>
+      <tr><td><strong>1. Frozen conflict / armistice</strong><br><em>Most likely</em></td><td>Fighting stops roughly along current lines without a legal settlement. Ukraine does not recognise the loss of territory; Russia does not get recognition. A heavily militarised line, sporadic violations, sanctions partially retained. The Korean model.</td><td>Talk of ceasefire monitoring mechanisms, demilitarised zones, third-party observers, partial sanctions relief, and reconstruction funding decoupled from a final status agreement.</td></tr>
+      <tr><td><strong>2. Negotiated settlement with guarantees</strong></td><td>A ceasefire plus a security architecture: binding guarantees or a reassurance force for Ukraine, capped force levels, phased sanctions relief, EU accession path, deferred status for occupied areas.</td><td>Western willingness to commit forces or treaty guarantees; Russian willingness to accept any Western military presence; who funds reconstruction and from whose assets.</td></tr>
+      <tr><td><strong>3. Gradual Russian attritional success</strong></td><td>Western aid falters, Ukrainian manpower is exhausted, the front degrades faster than it can be repaired, and Ukraine accepts terms closer to Russian demands.</td><td>Aid votes and disbursement rates; Ukrainian mobilisation figures and desertion reports; air-defence interceptor stocks; the pace of grid destruction.</td></tr>
+      <tr><td><strong>4. Ukrainian recovery of initiative</strong></td><td>Sustained European funding plus deep-strike degradation of Russian logistics and refining, combined with Russian economic strain, produces a shift — not necessarily a sweeping advance, but a Russia willing to settle on worse terms.</td><td>Russian fiscal indicators (National Wealth Fund drawdown, oil-and-gas revenues, interest rates); refinery throughput; recruitment bonuses rising sharply.</td></tr>
+      <tr><td><strong>5. Escalation or rupture</strong><br><em>Low probability, high impact</em></td><td>A NATO–Russia incident, a major sabotage event, a Zaporizhzhia radiological accident, or internal instability in Russia that changes the war unpredictably in either direction.</td><td>Article 4 consultations, airspace incidents, undersea infrastructure attacks, IAEA emergency statements, and any sign of factional conflict within the Russian elite.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Structural consequences that hold across all scenarios</h3>
+  <ul>
+    <li>A militarised, rearmed Europe with a permanently hostile Russian frontier and defence budgets at levels not seen since the Cold War.</li>
+    <li>Russia locked into structural dependence on China — the most consequential single outcome for India.</li>
+    <li>A weakened norm against forcible territorial change, and a weakened UNSC, with consequences well beyond Europe — including for the Taiwan Strait and the Line of Actual Control.</li>
+    <li>A further blow to non-proliferation: the demonstrated difference between having nuclear weapons and having assurances.</li>
+    <li>Permanent change in military doctrine worldwide toward drones, counter-drone, electronic warfare, dispersal, deep strike and industrial depth.</li>
+    <li>A more explicitly multipolar, transactional international system in which middle powers — India, Turkey, Brazil, the Gulf states, Indonesia — hedge rather than align.</li>
+  </ul>
+</section>
+
+<!-- 19 -->
+<section id="concepts">
+  <h2>Strategic concepts illustrated by this war</h2><hr class="sec-rule">
+  <p>Using one of these terms correctly and with an example is worth more than five extra facts. Using one incorrectly is worse than not using it at all — so only deploy what you genuinely understand.</p>
+
+  <dl class="term">
+    <dt>Security dilemma</dt>
+    <dd>Measures one state takes for its own security appear threatening to another, which responds, leaving both less secure. The purest available example: NATO enlargement and Russian counter-moves.</dd>
+
+    <dt>Deterrence — by punishment and by denial</dt>
+    <dd>Punishment threatens unacceptable retaliation (Russia’s nuclear signalling deterring NATO intervention). Denial makes the objective unachievable (Ukraine’s defence of Kyiv). Deterrence failed in 2022 because the threatened costs were not believed to outweigh the perceived gains.</dd>
+
+    <dt>Escalation ladder and escalation management</dt>
+    <dd>The stepwise intensification of conflict, and the deliberate effort to control it. The incremental relaxation of restrictions on Western weapons is a textbook case of managed escalation — each rung tested and found survivable.</dd>
+
+    <dt>Buffer state and sphere of influence</dt>
+    <dd>Great-power concepts that deny smaller states full agency. Central to Russia’s stated rationale and precisely what Ukraine, Poland and the Baltics reject.</dd>
+
+    <dt>Hybrid / grey-zone warfare</dt>
+    <dd>Coercion below the threshold of open war: sabotage, disinformation, cyber, economic pressure, deniable forces. The 2014 “little green men” remain the defining illustration.</dd>
+
+    <dt>Anti-access / area denial (A2/AD)</dt>
+    <dd>Preventing an adversary from entering or operating in a theatre. Ukraine achieved sea denial in the north-western Black Sea without a fleet — directly relevant to Indian Ocean and Taiwan Strait thinking.</dd>
+
+    <dt>Attrition versus manoeuvre</dt>
+    <dd>Manoeuvre seeks to dislocate the enemy system; attrition seeks to grind down its substance. This war began as an attempted manoeuvre campaign and became an attrition war because transparency and mines made manoeuvre extremely costly.</dd>
+
+    <dt>Strategic autonomy / multi-alignment</dt>
+    <dd>Preserving independent decision-making rather than joining a bloc. India’s organising principle, and increasingly Europe’s aspiration as well.</dd>
+
+    <dt>Weaponised interdependence</dt>
+    <dd>Turning economic and financial networks — SWIFT, the dollar, energy pipelines, insurance markets — into instruments of coercion. Used by both sides, and the reason many states are now diversifying away from those networks.</dd>
+
+    <dt>Realism, liberalism, constructivism</dt>
+    <dd>Three lenses. <em>Realism</em>: great powers act on security and the balance of power; enlargement provoked a predictable response. <em>Liberalism</em>: institutions, democracy and interdependence should have restrained war, and their failure here is a failure of institutional design. <em>Constructivism</em>: identity, historical memory and narrative — who is a nation, whose history Kyiv belongs to — are the real drivers. The strongest analysis uses all three rather than picking one.</dd>
+
+    <dt>Clausewitzian trinity</dt>
+    <dd>War as the interaction of government policy, the commander’s skill and chance, and the passion of the people. Ukraine’s resilience is best explained by the third element, which Russian planning discounted entirely.</dd>
+
+    <dt>Fog of war and the OODA loop</dt>
+    <dd>Uncertainty is inherent; the side that observes, orients, decides and acts faster gains advantage. Ukraine’s decentralised, mission-command style repeatedly out-cycled a more rigid opponent — the practical argument for delegating authority downward, which is exactly the leadership quality the SSB is assessing in you.</dd>
+  </dl>
+</section>
+
+<!-- 20 -->
+<section id="balance">
+  <h2>Balanced analysis — holding two ideas at once</h2><hr class="sec-rule">
+  <p>The single most valuable skill this topic tests is whether you can represent a position you disagree with accurately. Assessors are trained to spot rigidity. Below are the main contested propositions with the strongest version of each side.</p>
+
+  <div class="split">
+    <div class="panel gold-top">
+      <h4>“NATO expansion caused the war”</h4>
+      <p><em>For:</em> repeated Russian warnings over two decades, the 2008 Bucharest declaration, and a genuine and predictable security dilemma.</p>
+      <p><em>Against:</em> no binding commitment existed, Ukraine had no realistic membership path in 2022, and Russia’s war aims exceeded neutrality. Sovereign states choose their own alignments.</p>
+      <p><strong>Balanced:</strong> a contributing context, not a cause sufficient to justify invasion.</p>
+    </div>
+    <div class="panel gold-top">
+      <h4>“Sanctions have failed”</h4>
+      <p><em>For:</em> the Russian economy grew, oil was redirected, and policy did not change.</p>
+      <p><em>Against:</em> technology denial has degraded military-industrial capacity, the fiscal position has tightened, and the counterfactual — an unsanctioned Russia — would have been materially better resourced.</p>
+      <p><strong>Balanced:</strong> effective as a long-term constraint, ineffective as short-term coercion. That is what sanctions almost always are.</p>
+    </div>
+    <div class="panel gold-top">
+      <h4>“India should have condemned Russia”</h4>
+      <p><em>For:</em> India’s own position on sovereignty and territorial integrity, and its stake in the norm against forcible border change given the LAC.</p>
+      <p><em>Against:</em> energy security for 1.4 billion people, an irreplaceable defence inventory, and the strategic imperative of not pushing Moscow wholly into Beijing’s orbit.</p>
+      <p><strong>Balanced:</strong> India upheld the principles while declining the coalition — and is now hedging the underlying dependency through diversification and indigenisation.</p>
+    </div>
+    <div class="panel gold-top">
+      <h4>“Ukraine should negotiate / should keep fighting”</h4>
+      <p><em>Negotiate:</em> casualties, demographic damage, uncertain aid, and the fact that most wars end at a table rather than on a parade ground.</p>
+      <p><em>Fight:</em> a ceasefire without guarantees rewards aggression and invites its repetition; Ukrainians, not outsiders, bear the consequences of either choice.</p>
+      <p><strong>Balanced:</strong> the question is not war versus peace but <em>what kind of peace</em> — durable settlements need enforceable guarantees, which is exactly what is hardest to obtain.</p>
+    </div>
+  </div>
+
+  <div class="edge">
+    <span class="edge-h">Traps that cost candidates marks on this topic</span>
+    <ul>
+      <li><strong>Taking a hard partisan line.</strong> Cheerleading for either side signals that you form conclusions before you have evidence.</li>
+      <li><strong>Reciting casualty figures with confidence.</strong> Both sides inflate the enemy’s losses and conceal their own. Say “estimates vary widely” and move on.</li>
+      <li><strong>Calling it World War III.</strong> It is a major regional war with global consequences. Precision matters.</li>
+      <li><strong>Overstating de-dollarisation or Russia’s collapse.</strong> Both are popular and both are wrong as usually stated.</li>
+      <li><strong>Conflating Russia with the Soviet Union, or Ukraine with “Little Russia”.</strong> Loaded vocabulary reveals which source you have absorbed uncritically.</li>
+      <li><strong>Defending India’s position emotionally rather than analytically.</strong> The board is testing composure. Give reasons, acknowledge costs, stay calm.</li>
+      <li><strong>Making it about personalities.</strong> Analysing Putin’s or Zelensky’s psychology is entertaining and unfalsifiable. Analyse interests, capabilities and constraints instead.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 21 -->
+<section id="ssb">
+  <h2>SSB relevance and technique</h2><hr class="sec-rule">
+
+  <h3>Where this topic actually appears</h3>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Stage</th><th>How it shows up</th><th>What is being assessed</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Group Discussion</strong></td><td>“Russia–Ukraine war: who is responsible?”, “Should India take a side?”, “Are sanctions an effective instrument?”, “Is the UN still relevant?”</td><td>Effective intelligence, reasoning ability, ability to influence, liveliness, cooperation, social adaptability.</td></tr>
+      <tr><td><strong>Lecturette</strong></td><td>Common cards: Russia–Ukraine War; NATO; United Nations; Drone Warfare; Energy Security; India’s Foreign Policy; Sanctions; Multipolar World; Cyber Warfare.</td><td>Organisation of thought, self-confidence, expression, breadth of knowledge.</td></tr>
+      <tr><td><strong>Personal Interview</strong></td><td>Direct questions, plus follow-ups on India’s stance, on Indian students evacuated, on defence lessons, and — for engineering graduates — on drones and technology.</td><td>Awareness, honesty, reasoning under mild pressure, willingness to say “I don’t know”.</td></tr>
+      <tr><td><strong>TAT / WAT / SRT</strong></td><td>Indirectly — war and evacuation imagery, words like <em>war</em>, <em>enemy</em>, <em>refugee</em>, <em>peace</em>, <em>border</em>. Situations involving rescue, evacuation, leadership in crisis.</td><td>Officer-like qualities under time pressure. Respond constructively, not aggressively.</td></tr>
+      <tr><td><strong>Conference</strong></td><td>Rarely directly, but consistency across the whole assessment matters.</td><td>Overall coherence of your personality.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>A reusable four-part answer structure</h3>
+  <ol>
+    <li><strong>Frame</strong> (10–15 seconds): define the issue and say why it matters now.</li>
+    <li><strong>Evidence</strong> (60–90 seconds): two or three specific points, each anchored by a name, a date or a number.</li>
+    <li><strong>Balance</strong> (20–30 seconds): state the strongest counter-argument honestly.</li>
+    <li><strong>Position and implication</strong> (20–30 seconds): your reasoned view, and what it means for India.</li>
+  </ol>
+
+  <h3>Officer-like qualities this war illustrates</h3>
+  <ul>
+    <li><strong>Courage and leading from the front:</strong> a government that stayed in a capital it was expected to abandon changed the entire trajectory of the war. Leadership is presence.</li>
+    <li><strong>Initiative and decentralised decision-making:</strong> junior Ukrainian commanders empowered to act inside their commander’s intent consistently out-performed a system that waited for orders.</li>
+    <li><strong>Adaptability:</strong> both armies re-learned trench warfare, invented new drone tactics and rebuilt doctrine in months. The ability to learn faster than the enemy is itself a weapon.</li>
+    <li><strong>Resilience under hardship:</strong> civilians and soldiers enduring winters without power, and continuing to function.</li>
+    <li><strong>Planning and foresight:</strong> the Russian logistics failure is the best modern example of a plan that ignored the administrative realities of its own execution.</li>
+    <li><strong>Moral courage and restraint:</strong> the treatment of prisoners and civilians is what distinguishes an armed force from an armed mob — and is a legitimate, serious point for you to make.</li>
+  </ul>
+
+  <div class="edge blue">
+    <span class="edge-h">Two answers worth rehearsing until they are natural</span>
+    <p><strong>“If you were a young officer, what would you take from this war?”</strong> — “Sir, three things: that the enemy’s will is as important as his order of battle and is the hardest thing to estimate; that logistics decides more battles than tactics; and that a junior leader who can think and act within his commander’s intent is worth more than perfect communications.”</p>
+    <p><strong>“Should India send weapons to Ukraine?”</strong> — “No, sir, and I would give reasons rather than a slogan: India’s declared policy is not to supply arms into an active conflict; it would compromise our position as one of the few countries both sides will talk to; and it would jeopardise the sustainment of an inventory we depend on. India has instead sent humanitarian assistance, which is consistent with both our interests and our principles.”</p>
+  </div>
+</section>
+
+<!-- 22 -->
+<section id="qbank">
+  <h2>Question bank</h2><hr class="sec-rule">
+  <p>Prepare a two-sentence answer for each. Two good sentences beat two rambling minutes.</p>
+
+  <h4>Factual</h4>
+  <ol class="qbank">
+    <li>When did the Russia–Ukraine conflict actually begin, and why is 2014 the correct answer?</li>
+    <li>What was the Budapest Memorandum and why is it significant for non-proliferation?</li>
+    <li>What were the Minsk Agreements and why did they fail?</li>
+    <li>What is the Normandy Format? Who are its members?</li>
+    <li>Which four oblasts did Russia claim to annex in September 2022?</li>
+    <li>How did India vote at the UN General Assembly in March 2022, and how did India explain its vote?</li>
+    <li>What was Operation Ganga and how many Indians were evacuated?</li>
+    <li>Which two countries joined NATO because of this war, and when?</li>
+    <li>What is the G7 oil price cap and how is it enforced?</li>
+    <li>What is the Montreux Convention and how has it affected the naval war?</li>
+    <li>What is the Zaporizhzhia plant and why is it a concern?</li>
+    <li>What was the Black Sea Grain Initiative and what happened to it?</li>
+    <li>Why did the ICC issue an arrest warrant against President Putin?</li>
+    <li>What happened at Bucha, and why did it matter strategically?</li>
+    <li>Name three Western weapon systems that changed the battlefield and explain how.</li>
+  </ol>
+
+  <h4>Analytical</h4>
+  <ol class="qbank">
+    <li>Was NATO expansion the cause of this war? Argue both sides, then give your view.</li>
+    <li>Why did Russia’s initial campaign fail despite overwhelming material superiority?</li>
+    <li>Have sanctions worked? Define “worked” before you answer.</li>
+    <li>Is India’s position on the war morally defensible? Is it strategically sound? Are those the same question?</li>
+    <li>What does this war tell us about the relevance of the United Nations, and what reform does India seek?</li>
+    <li>Why has most of the Global South declined to sanction Russia?</li>
+    <li>What is the biggest military lesson for the Indian armed forces?</li>
+    <li>Has nuclear deterrence succeeded or failed in this conflict?</li>
+    <li>Could a similar conflict occur in the Indo-Pacific? What would be different?</li>
+    <li>Does this war accelerate or delay the emergence of a multipolar world?</li>
+    <li>Should frozen Russian assets be confiscated to rebuild Ukraine? What are the risks?</li>
+    <li>How should a peace settlement handle the question of security guarantees?</li>
+    <li>What are the consequences for India of a Russia that is dependent on China?</li>
+    <li>Is it possible for a large economy to remain genuinely non-aligned in the twenty-first century?</li>
+    <li>What should India’s priorities be in defence procurement over the next decade, given this war?</li>
+  </ol>
+
+  <h4>Personal and character-based</h4>
+  <ol class="qbank">
+    <li>If you were an Indian student trapped in Kharkiv, what would you have done?</li>
+    <li>You are a junior officer ordered to do something you believe is unlawful. What do you do?</li>
+    <li>What quality of Ukrainian resistance do you most admire, and why?</li>
+    <li>What quality of the Russian military do you respect professionally?</li>
+    <li>How would you keep your men motivated through a third winter in a trench?</li>
+    <li>Do you think there is such a thing as a just war?</li>
+    <li>If posted to a forward area during a tense standoff, what would worry you most and how would you prepare?</li>
+  </ol>
+</section>
+
+<!-- 23 -->
+<section id="revision">
+  <h2>One-page revision</h2><hr class="sec-rule">
+  <div class="split">
+    <div class="panel">
+      <h4>Dates you must not get wrong</h4>
+      <ul>
+        <li><strong>1991</strong> — Ukrainian independence referendum</li>
+        <li><strong>1994</strong> — Budapest Memorandum</li>
+        <li><strong>2008</strong> — NATO Bucharest Summit declaration</li>
+        <li><strong>2014</strong> — Euromaidan, Crimea annexation, Donbas war, MH17</li>
+        <li><strong>2015</strong> — Minsk II</li>
+        <li><strong>24 Feb 2022</strong> — full-scale invasion</li>
+        <li><strong>Sep 2022</strong> — mobilisation &amp; claimed annexation of four oblasts</li>
+        <li><strong>Apr 2023 / Mar 2024</strong> — Finland / Sweden join NATO</li>
+        <li><strong>Jun 2024</strong> — EU accession talks with Ukraine open</li>
+        <li><strong>Aug 2024</strong> — Ukrainian incursion into Kursk</li>
+        <li><strong>2025</strong> — direct US–Russia diplomacy, Alaska summit, renewed Istanbul talks</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h4>Numbers, used carefully</h4>
+      <ul>
+        <li>UNGA vote March 2022: <strong>141–5–35</strong>; India abstained</li>
+        <li>Only about <strong>30–40 states</strong> imposed sanctions</li>
+        <li>Refugees abroad: roughly <strong>6–7 million</strong></li>
+        <li>Frozen CBR reserves: around <strong>$300 bn</strong>, ~€200 bn in the EU</li>
+        <li>G7 ERA loan to Ukraine: <strong>$50 bn</strong></li>
+        <li>Oil price cap: initially <strong>$60/barrel</strong></li>
+        <li>Russian share of India’s crude imports: under <strong>2% → ~35%+</strong></li>
+        <li>Operation Ganga: about <strong>22,500</strong> Indians evacuated</li>
+        <li>Reconstruction estimate: on the order of <strong>$500 bn</strong></li>
+        <li>NATO members: <strong>32</strong></li>
+      </ul>
+    </div>
+  </div>
+  <div class="split">
+    <div class="panel">
+      <h4>Five sentences that will carry you</h4>
+      <ul>
+        <li>“The war began in 2014; 2022 was an escalation, not a start.”</li>
+        <li>“NATO expansion explains Russian insecurity; it does not justify invasion.”</li>
+        <li>“Sanctions are a long-term constraint, not short-term coercion.”</li>
+        <li>“India upheld the principles while declining the coalition.”</li>
+        <li>“The biggest lesson is the return of industrial-scale war — mass matters again.”</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h4>Links to other current-affairs topics</h4>
+      <ul>
+        <li><strong>UNSC reform</strong> — the veto paralysed the Council on day one</li>
+        <li><strong>Aatmanirbhar Bharat</strong> — supply dependence exposed</li>
+        <li><strong>Drone &amp; counter-drone warfare</strong> — and Operation Sindoor</li>
+        <li><strong>Energy security</strong> — imports, price caps, the shadow fleet</li>
+        <li><strong>Food and fertiliser security</strong> — the Black Sea and the subsidy bill</li>
+        <li><strong>Quad, BRICS, SCO, G20</strong> — multi-alignment in practice</li>
+        <li><strong>De-dollarisation and rupee trade</strong> — real, but slow</li>
+        <li><strong>Non-proliferation</strong> — the Budapest lesson</li>
+        <li><strong>Indo-Pacific &amp; Taiwan</strong> — the precedent question</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="edge gold">
+    <span class="edge-h">The last thing to remember</span>
+    <p>The board is not assessing how much you know about Ukraine. It is assessing whether you can take a complicated, emotive, contested subject, organise it, weigh it honestly, hold your position under questioning, and change your mind when given a better argument — without losing your composure. Every fact in this handbook is only a vehicle for demonstrating that.</p>
+  </div>
+</section>
+
+<footer>
+  <p>Compiled 20 September 2026 from open sources. Figures relating to casualties, territorial control and aid are contested and change continually; all belligerent claims should be treated as instruments of information warfare and independently verified. Events after mid-2025 — negotiations, summits, aid decisions and front-line positions — move quickly and must be re-checked close to your interview date. This is a study aid for examination preparation and offers analytical framing, not an endorsement of any party’s position.</p>
+</footer>
+
+</main>
+</div>
+
+</body>
+</html>
