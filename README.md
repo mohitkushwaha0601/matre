@@ -9,6 +9,7 @@ Defence, Current Affairs & International Relations.
 | [🚢 Indian Navy Handbook](materials/1.indian-navy-ssb-handbook.html) | HTML | 19 | 2–3 hrs |
 | [🌍 Russia–Ukraine War Handbook](materials/2.russia-ukraine-war-ssb-handbook.html) | HTML | 23 | 3–4 hrs |
 | [📖 Russia–Ukraine Quick Study](materials/3.russia-old.html) | HTML | 14 | 1–1.5 hrs |
+| [🔎 Russia–Ukraine Deep Research Report](materials/4.deep-research-report.html) | HTML | 11 | 1.5–2 hrs |
 
 ---
 
