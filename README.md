@@ -1,6 +1,6 @@
-# SSB Preparation Handbooks
+# Preparation Handbooks
 
-Study materials for SSB aspirants on Defence, Current Affairs & International Relations.
+Defence, Current Affairs & International Relations.
 
 ## 📚 Contents
 
@@ -11,6 +11,6 @@ Study materials for SSB aspirants on Defence, Current Affairs & International Re
 | [📖 Russia–Ukraine Quick Study](study.html) | HTML | 14 | 1–1.5 hrs |
 
 ---
----
 
-**Updated:** 20 September 2026 | **Verified:** Open sources, current as of late 2025
+**Last Updated:** 20 September 2026 
+**Verified:** Open sources, current as of late 2025
