@@ -11,6 +11,7 @@ Defence, Current Affairs & International Relations.
 | [📖 Russia–Ukraine Quick Study](materials/3.russia-old.html) | HTML | 14 | 1–1.5 hrs |
 | [🔎 Russia–Ukraine Deep Research Report](materials/4.deep-research-report.html) | HTML | 11 | 1.5–2 hrs |
 | [🇮🇳 The Freedom Struggle, 1498–1947](materials/5.indian-independence-knowledge-handbook.html) | HTML | 38 | 5–6 hrs |
+| [🏔️ India–China & the LAC](materials/6.india-china-lac-knowledge-handbook.html) | HTML | 60 | 6–7 hrs |
 
 ---
 
@@ -25,4 +26,4 @@ These handbooks are automatically deployed to GitHub Pages on every push to `mai
 
 ---
 
-**Updated:** 20 September 2026 | **Verified:** Open sources, current as of late 2025
+**Updated:** 23 September 2026 | **Verified:** Open sources, current as of late 2025
