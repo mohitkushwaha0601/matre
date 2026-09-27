@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>India Strategic & Governance Briefing — SSB 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #EFE9D8;
+    --surface: #FBF8F0;
+    --surface-2: #F3EEDF;
+    --ink: #1E2430;
+    --muted: #6B6552;
+    --navy: #1B2A4A;
+    --brass: #92711F;
+    --olive: #55643B;
+    --red: #8C3B34;
+    --border: #DCD2B4;
+    --shadow: rgba(30,36,48,0.10);
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #12151C;
+      --surface: #1B212B;
+      --surface-2: #202737;
+      --ink: #ECE7D6;
+      --muted: #A39C86;
+      --navy: #9DB6E8;
+      --brass: #D9B565;
+      --olive: #92A06D;
+      --red: #DB7B70;
+      --border: #313A4C;
+      --shadow: rgba(0,0,0,0.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #12151C;
+    --surface: #1B212B;
+    --surface-2: #202737;
+    --ink: #ECE7D6;
+    --muted: #A39C86;
+    --navy: #9DB6E8;
+    --brass: #D9B565;
+    --olive: #92A06D;
+    --red: #DB7B70;
+    --border: #313A4C;
+    --shadow: rgba(0,0,0,0.35);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 76px); scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 { font-family: 'Spectral', Georgia, serif; margin: 0; color: var(--ink); }
+  a { color: var(--navy); }
+  code, .mono { font-family: 'IBM Plex Mono', monospace; }
+
+  /* ---------- Layout shell ---------- */
+  .shell {
+    display: grid;
+    grid-template-columns: 232px 1fr;
+    min-height: 100%;
+  }
+  @media (max-width: 900px) {
+    .shell { grid-template-columns: 1fr; }
+  }
+
+  /* ---------- Sidebar nav ---------- */
+  .nav {
+    position: sticky;
+    top: 0;
+    align-self: start;
+    height: 100vh;
+    padding: 28px 18px calc(env(safe-area-inset-bottom,0px) + 18px) 24px;
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+  }
+  @media (max-width: 900px) {
+    .nav {
+      position: static;
+      height: auto;
+      border-right: none;
+      border-bottom: 1px solid var(--border);
+      padding: 14px 14px;
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      overflow-y: visible;
+      white-space: nowrap;
+    }
+    .nav .brand, .nav .navfoot { display: none; }
+  }
+  .nav .brand {
+    font-family: 'Spectral', serif;
+    font-weight: 600;
+    font-size: 1.02rem;
+    color: var(--brass);
+    letter-spacing: .01em;
+    margin-bottom: 4px;
+  }
+  .nav .brand small { display: block; font-family: 'IBM Plex Sans'; font-weight: 400; color: var(--muted); font-size: .72rem; margin-top: 3px; }
+  .nav ul { list-style: none; margin: 22px 0 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+  @media (max-width: 900px) { .nav ul { flex-direction: row; margin: 0; } }
+  .nav a {
+    display: block;
+    text-decoration: none;
+    color: var(--muted);
+    font-size: .86rem;
+    padding: 7px 10px;
+    border-radius: 3px;
+    border-left: 2px solid transparent;
+  }
+  @media (max-width: 900px) { .nav a { border-left: none; border-bottom: 2px solid transparent; padding: 6px 10px; } }
+  .nav a:hover { color: var(--ink); background: var(--surface-2); }
+  .nav .navfoot { margin-top: 28px; font-size: .72rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 14px; }
+
+  /* ---------- Main content ---------- */
+  main { min-width: 0; }
+  .hero {
+    padding: 56px 40px 40px;
+    border-bottom: 1px solid var(--border);
+    background:
+      linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
+  }
+  @media (max-width: 640px) { .hero { padding: 36px 20px 28px; } }
+  .hero .eyebrow { font-family: 'IBM Plex Mono'; font-size: .74rem; color: var(--brass); letter-spacing: .04em; }
+  .hero h1 { font-size: clamp(1.7rem, 4vw, 2.55rem); font-weight: 700; margin-top: 10px; max-width: 18ch; }
+  .hero p.lede { max-width: 62ch; color: var(--muted); margin-top: 14px; font-size: 1.02rem; }
+  .hero .stamp {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-top: 22px; padding: 6px 12px;
+    border: 1px solid var(--brass); border-radius: 3px;
+    font-family: 'IBM Plex Mono'; font-size: .72rem; color: var(--brass);
+  }
+
+  section { padding: 46px 40px; border-bottom: 1px solid var(--border); }
+  @media (max-width: 640px) { section { padding: 32px 20px; } }
+  section:last-of-type { border-bottom: none; }
+  .sec-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 26px; }
+  .sec-num { font-family: 'IBM Plex Mono'; color: var(--border); font-size: 1.6rem; font-weight: 600; }
+  @media (prefers-color-scheme: dark) { .sec-num { color: var(--surface-2); } }
+  .sec-head h2 { font-size: 1.5rem; }
+  .sec-head .sub { color: var(--muted); font-size: .9rem; margin-top: 4px; }
+
+  /* ---------- Cards / grids ---------- */
+  .grid { display: grid; gap: 14px; }
+  .grid.cols-2 { grid-template-columns: 1fr 1fr; }
+  .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 780px) { .grid.cols-2, .grid.cols-3 { grid-template-columns: 1fr; } }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 16px 18px;
+  }
+  .card h4 { font-size: .78rem; text-transform: none; color: var(--muted); font-family: 'IBM Plex Sans'; font-weight: 600; margin-bottom: 6px; }
+  .card .name { font-family: 'Spectral', serif; font-size: 1.14rem; font-weight: 600; }
+  .card .role { color: var(--muted); font-size: .84rem; margin-top: 2px; }
+  .card .since { margin-top: 8px; font-family: 'IBM Plex Mono'; font-size: .72rem; color: var(--olive); }
+
+  /* office list (dense rows) */
+  .officelist { border: 1px solid var(--border); border-radius: 4px; overflow: hidden; background: var(--surface); }
+  .officelist .row { display: grid; grid-template-columns: 1fr 1.3fr auto; gap: 12px; padding: 11px 16px; border-bottom: 1px solid var(--border); align-items: center; }
+  .officelist .row:last-child { border-bottom: none; }
+  .officelist .row .post { color: var(--muted); font-size: .84rem; }
+  .officelist .row .holder { font-weight: 600; }
+  .officelist .row .since { font-family: 'IBM Plex Mono'; font-size: .72rem; color: var(--brass); text-align: right; white-space: nowrap; }
+  @media (max-width: 560px) {
+    .officelist .row { grid-template-columns: 1fr; gap: 2px; padding: 10px 14px; }
+    .officelist .row .since { text-align: left; }
+  }
+
+  .tag { display: inline-block; font-family: 'IBM Plex Mono'; font-size: .66rem; padding: 2px 8px; border-radius: 20px; border: 1px solid currentColor; }
+  .tag.navy { color: var(--navy); }
+  .tag.olive { color: var(--olive); }
+  .tag.brass { color: var(--brass); }
+  .tag.red { color: var(--red); }
+
+  /* ---------- Chain of command ---------- */
+  .coc { display: flex; flex-direction: column; align-items: center; gap: 0; margin: 8px 0 4px; }
+  .coc-box {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 4px;
+    padding: 10px 18px; text-align: center; min-width: 180px;
+  }
+  .coc-box .t { font-weight: 600; font-size: .92rem; }
+  .coc-box .r { font-size: .74rem; color: var(--muted); margin-top: 2px; }
+  .coc-connector { color: var(--border); font-size: 1.1rem; line-height: 1.6; }
+  .coc-tier { display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; }
+
+  /* ---------- Tables ---------- */
+  .tablewrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 4px; }
+  table { border-collapse: collapse; width: 100%; min-width: 640px; font-size: .87rem; background: var(--surface); }
+  thead th { text-align: left; font-family: 'IBM Plex Mono'; font-weight: 600; font-size: .68rem; color: var(--muted); background: var(--surface-2); padding: 10px 14px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody td.exname { font-weight: 600; font-family: 'Spectral', serif; }
+
+  /* ---------- Timeline (inductions) ---------- */
+  .timeline { position: relative; padding-left: 26px; }
+  .timeline::before { content: ""; position: absolute; left: 6px; top: 4px; bottom: 4px; width: 1px; background: var(--border); }
+  .tl-item { position: relative; padding-bottom: 24px; }
+  .tl-item:last-child { padding-bottom: 0; }
+  .tl-item::before { content: ""; position: absolute; left: -26px; top: 4px; width: 9px; height: 9px; border-radius: 50%; background: var(--brass); }
+  .tl-item .date { font-family: 'IBM Plex Mono'; font-size: .72rem; color: var(--brass); }
+  .tl-item h4 { font-family: 'Spectral', serif; font-size: 1.02rem; font-weight: 600; margin-top: 3px; }
+  .tl-item p { color: var(--muted); font-size: .88rem; margin: 4px 0 0; max-width: 68ch; }
+
+  /* ---------- Geopolitics panels ---------- */
+  .flash {
+    border-left: 3px solid var(--red);
+    background: var(--surface);
+    border-radius: 0 4px 4px 0;
+    padding: 16px 18px;
+    margin-bottom: 16px;
+  }
+  .flash.olive { border-left-color: var(--olive); }
+  .flash.brass { border-left-color: var(--brass); }
+  .flash h4 { font-family: 'Spectral', serif; font-size: 1.06rem; }
+  .flash .persp { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border); font-size: .87rem; }
+  .flash .persp b { color: var(--olive); }
+
+  /* ---------- SSB notes ---------- */
+  .qbox { background: var(--surface-2); border: 1px solid var(--border); border-radius: 4px; padding: 18px 20px; }
+  .qbox ul { margin: 8px 0 0; padding-left: 20px; }
+  .qbox li { margin-bottom: 6px; font-size: .92rem; }
+  .checklist { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+  .checklist li { display: flex; gap: 10px; font-size: .9rem; align-items: flex-start; }
+  .checklist li::before { content: "▢"; color: var(--brass); flex-shrink: 0; margin-top: 1px; }
+
+  footer { padding: 30px 40px 46px; color: var(--muted); font-size: .78rem; }
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <nav class="nav">
+    <div class="brand">SSB BRIEFING<small>India — Current Affairs Dossier</small></div>
+    <ul>
+      <li><a href="#government">01 · Government</a></li>
+      <li><a href="#defence">02 · Defence Leadership</a></li>
+      <li><a href="#commands">03 · Commands</a></li>
+      <li><a href="#inductions">04 · Inductions & Activity</a></li>
+      <li><a href="#exercises">05 · Exercises</a></li>
+      <li><a href="#geopolitics">06 · Geopolitics</a></li>
+      <li><a href="#ssb">07 · SSB Application</a></li>
+    </ul>
+    <div class="navfoot">Compiled for SSB interview, GD & lecturette prep. Verify fast-changing appointments closer to your board date.</div>
+  </nav>
+
+  <main>
+    <div class="hero">
+      <div class="eyebrow">CURRENT AFFAIRS · DEFENCE · GOVERNANCE</div>
+      <h1>India Strategic & Governance Briefing</h1>
+      <p class="lede">A single-reference dossier on who holds power, who commands what, what's newly inducted, who trains with whom, and where the pressure points sit on India's borders — built for SSB screening, GD and interview rounds.</p>
+      <span class="stamp">● UPDATED SEP 2026</span>
+    </div>
+
+    <!-- 01 GOVERNMENT -->
+    <section id="government">
+      <div class="sec-head">
+        <span class="sec-num">01</span>
+        <div><h2>Constitutional & Government Positions</h2><div class="sub">Executive, legislature, judiciary, and the top bureaucracy</div></div>
+      </div>
+
+      <div class="grid cols-3" style="margin-bottom:18px;">
+        <div class="card">
+          <h4>Head of State</h4>
+          <div class="name">Droupadi Murmu</div>
+          <div class="role">President of India</div>
+          <div class="since">Since 25 Jul 2022</div>
+        </div>
+        <div class="card">
+          <h4>Head of Government</h4>
+          <div class="name">Narendra Modi</div>
+          <div class="role">Prime Minister of India</div>
+          <div class="since">Since 26 May 2014 · 3rd term</div>
+        </div>
+        <div class="card">
+          <h4>Vice President</h4>
+          <div class="name">C. P. Radhakrishnan</div>
+          <div class="role">Chairman, Rajya Sabha</div>
+          <div class="since">Since 12 Sep 2025</div>
+        </div>
+      </div>
+
+      <div class="officelist" style="margin-bottom:18px;">
+        <div class="row"><div class="post">Chief Justice of India</div><div class="holder">Justice Surya Kant</div><div class="since">24 Nov 2025</div></div>
+        <div class="row"><div class="post">Speaker, Lok Sabha</div><div class="holder">Om Birla</div><div class="since">19 Jun 2019</div></div>
+        <div class="row"><div class="post">Deputy Chairman, Rajya Sabha</div><div class="holder">Harivansh Narayan Singh</div><div class="since">9 Aug 2018</div></div>
+        <div class="row"><div class="post">Chief Election Commissioner</div><div class="holder">Gyanesh Kumar</div><div class="since">19 Feb 2025</div></div>
+        <div class="row"><div class="post">Comptroller & Auditor General</div><div class="holder">K. Sanjay Murthy</div><div class="since">21 Nov 2024</div></div>
+        <div class="row"><div class="post">Chairman, UPSC</div><div class="holder">Ajay Kumar</div><div class="since">15 May 2025</div></div>
+        <div class="row"><div class="post">Attorney General of India</div><div class="holder">R. Venkataramani</div><div class="since">1 Oct 2022</div></div>
+        <div class="row"><div class="post">RBI Governor</div><div class="holder">Sanjay Malhotra</div><div class="since">11 Dec 2024</div></div>
+        <div class="row"><div class="post">CEO, NITI Aayog</div><div class="holder">B. V. R. Subrahmanyam</div><div class="since">—</div></div>
+      </div>
+
+      <h3 style="font-size:1.05rem; margin-bottom:10px;">Key Union Cabinet Portfolios</h3>
+      <div class="officelist" style="margin-bottom:18px;">
+        <div class="row"><div class="post">Home Affairs</div><div class="holder">Amit Shah</div><div class="since">Since 2019</div></div>
+        <div class="row"><div class="post">Finance & Corporate Affairs</div><div class="holder">Nirmala Sitharaman</div><div class="since">Since 2019</div></div>
+        <div class="row"><div class="post">Defence</div><div class="holder">Rajnath Singh</div><div class="since">Since 2019</div></div>
+        <div class="row"><div class="post">External Affairs</div><div class="holder">S. Jaishankar</div><div class="since">Since 2019</div></div>
+        <div class="row"><div class="post">Railways · IT & Communications</div><div class="holder">Ashwini Vaishnaw</div><div class="since">Since 2021</div></div>
+        <div class="row"><div class="post">Road Transport & Highways</div><div class="holder">Nitin Gadkari</div><div class="since">Since 2014</div></div>
+        <div class="row"><div class="post">Commerce & Industry</div><div class="holder">Piyush Goyal</div><div class="since">—</div></div>
+      </div>
+
+      <h3 style="font-size:1.05rem; margin-bottom:10px;">The Steel Frame — Top Bureaucracy</h3>
+      <div class="officelist">
+        <div class="row"><div class="post">National Security Advisor</div><div class="holder">Ajit Doval, IPS</div><div class="since">Since 2014</div></div>
+        <div class="row"><div class="post">Cabinet Secretary</div><div class="holder">T. V. Somanathan, IAS</div><div class="since">30 Aug 2024</div></div>
+        <div class="row"><div class="post">Principal Secretary to PM</div><div class="holder">Dr. P. K. Mishra, IAS</div><div class="since">Since 2019</div></div>
+        <div class="row"><div class="post">Foreign Secretary</div><div class="holder">Vikram Misri, IFS</div><div class="since">15 Jul 2024</div></div>
+        <div class="row"><div class="post">Home Secretary</div><div class="holder">Govind Mohan, IAS</div><div class="since">22 Aug 2024</div></div>
+        <div class="row"><div class="post">Finance Secretary</div><div class="holder">Ajay Seth, IAS</div><div class="since">1 Apr 2025</div></div>
+        <div class="row"><div class="post">Defence Secretary</div><div class="holder">Rajesh Kumar Singh, IAS</div><div class="since">1 Nov 2024</div></div>
+      </div>
+    </section>
+
+    <!-- 02 DEFENCE LEADERSHIP -->
+    <section id="defence">
+      <div class="sec-head">
+        <span class="sec-num">02</span>
+        <div><h2>Defence Leadership & Chain of Command</h2><div class="sub">Who runs the Ministry, and who commands the three Services</div></div>
+      </div>
+
+      <div class="coc">
+        <div class="coc-box"><div class="t">Raksha Mantri (Defence Minister)</div><div class="r">Rajnath Singh</div></div>
+        <div class="coc-connector">│</div>
+        <div class="coc-tier">
+          <div class="coc-box"><div class="t">Defence Secretary</div><div class="r">Rajesh Kumar Singh, IAS</div></div>
+          <div class="coc-box"><div class="t">Chief of Defence Staff</div><div class="r">Lt Gen N. S. Raja Subramani (Retd)</div></div>
+        </div>
+        <div class="coc-connector">│</div>
+        <div class="coc-tier">
+          <div class="coc-box"><div class="t">Chief of Army Staff</div><div class="r">Lt Gen Dhiraj Seth</div></div>
+          <div class="coc-box"><div class="t">Chief of Naval Staff</div><div class="r">Admiral Krishna Swaminathan</div></div>
+          <div class="coc-box"><div class="t">Chief of Air Staff</div><div class="r">Air Chief Marshal A. P. Singh</div></div>
+        </div>
+      </div>
+
+      <div class="grid cols-3" style="margin-top:30px;">
+        <div class="card">
+          <span class="tag brass">ARMY</span>
+          <div class="name" style="margin-top:8px;">Lt Gen Dhiraj Seth</div>
+          <div class="role">Chief of Army Staff — took over 30 Jun 2026, tenure to Aug 2028</div>
+          <div class="since">First Armoured Corps officer to become Army Chief since Gen Roy Chowdhury (retd. 1997)</div>
+        </div>
+        <div class="card">
+          <span class="tag brass">ARMY</span>
+          <div class="name" style="margin-top:8px;">Lt Gen Sandeep Jain</div>
+          <div class="role">Vice Chief of Army Staff — from 1 Jul 2026</div>
+          <div class="since">MAHAR Regt · counter-insurgency, high-altitude & UN mission experience</div>
+        </div>
+        <div class="card">
+          <span class="tag brass">AIR FORCE</span>
+          <div class="name" style="margin-top:8px;">Air Marshal Ashutosh Dixit</div>
+          <div class="role">Vice Chief of Air Staff — from 1 Jul 2026</div>
+          <div class="since">Senior-most in line for CAS when ACM A.P. Singh retires, Oct 2026</div>
+        </div>
+        <div class="card">
+          <span class="tag brass">TRI-SERVICE</span>
+          <div class="name" style="margin-top:8px;">Lt Gen N. S. Raja Subramani</div>
+          <div class="role">Chief of Defence Staff — from May 2026</div>
+          <div class="since">Also Secretary, Dept. of Military Affairs</div>
+        </div>
+        <div class="card">
+          <span class="tag brass">NAVY</span>
+          <div class="name" style="margin-top:8px;">Admiral Krishna Swaminathan</div>
+          <div class="role">Chief of Naval Staff — 2026</div>
+          <div class="since">Took charge alongside CDS reshuffle</div>
+        </div>
+        <div class="card">
+          <span class="tag brass">CIVIL</span>
+          <div class="name" style="margin-top:8px;">Rajesh Kumar Singh, IAS</div>
+          <div class="role">Defence Secretary (1989 batch, Kerala cadre)</div>
+          <div class="since">Also holds charge as DRDO Chairman since Jun 2026</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 COMMANDS -->
+    <section id="commands">
+      <div class="sec-head">
+        <span class="sec-num">03</span>
+        <div><h2>Commands & Force Structure</h2><div class="sub">India's operational map — geography every SSB candidate should be able to sketch</div></div>
+      </div>
+
+      <div class="grid cols-2">
+        <div class="card">
+          <h4>Indian Army — 7 Commands</h4>
+          <p style="margin:6px 0 0; font-size:.87rem; color:var(--muted);">
+            Northern (Udhampur) · Western (Chandimandir) · Eastern (Kolkata) ·
+            Southern (Pune) · South-Western (Jaipur) · Central (Lucknow) ·
+            Army Training Command / ARTRAC (Shimla)
+          </p>
+        </div>
+        <div class="card">
+          <h4>Indian Navy — 3 Commands</h4>
+          <p style="margin:6px 0 0; font-size:.87rem; color:var(--muted);">
+            Western Naval Command (Mumbai) · Eastern Naval Command (Visakhapatnam) ·
+            Southern Naval Command (Kochi, training)
+          </p>
+        </div>
+        <div class="card">
+          <h4>Indian Air Force — 7 Commands</h4>
+          <p style="margin:6px 0 0; font-size:.87rem; color:var(--muted);">
+            Western (Delhi) · Eastern (Shillong) · Central (Prayagraj) ·
+            Southern (Thiruvananthapuram) · South-Western (Gandhinagar) ·
+            Training Command (Bengaluru) · Maintenance Command (Nagpur)
+          </p>
+        </div>
+        <div class="card">
+          <h4>Unified / Tri-Service</h4>
+          <p style="margin:6px 0 0; font-size:.87rem; color:var(--muted);">
+            Andaman & Nicobar Command (only tri-service theatre command, Port Blair) ·
+            Strategic Forces Command · Department of Military Affairs under CDS
+          </p>
+        </div>
+      </div>
+      <p style="font-size:.8rem; color:var(--muted); margin-top:14px;">Note: individual GOC-in-C / Flag Officer names rotate frequently — confirm the current incumbents close to your board date rather than memorising names from this dossier.</p>
+    </section>
+
+    <!-- 04 INDUCTIONS -->
+    <section id="inductions">
+      <div class="sec-head">
+        <span class="sec-num">04</span>
+        <div><h2>Recent Inductions & Defence Activity</h2><div class="sub">Indigenous capability, Aatmanirbhar Bharat, and what entered service in 2026</div></div>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="date">27 FEB 2026 · CHANDIPUR, ODISHA</div>
+          <h4>VSHORADS flight trials completed</h4>
+          <p>DRDO (led by Research Centre Imarat) completed three consecutive trials of the indigenous Very Short Range Air Defence System — a man-portable system to intercept fast, low aerial threats. Cleared for induction into the armed forces.</p>
+        </div>
+        <div class="tl-item">
+          <div class="date">6 JUN 2026 · GOA</div>
+          <h4>First indigenous Air Cushion Vehicle (H-561) inducted</h4>
+          <p>Coast Guard hovercraft, first of a planned six-ACV fleet, built for shallow water, marshy and mudflat operations — coastal surveillance, search & rescue, disaster response.</p>
+        </div>
+        <div class="tl-item">
+          <div class="date">6 JUN 2026 · HAZIRA / NEW DELHI</div>
+          <h4>TEJASTRA laser system showcased</h4>
+          <p>High-Energy Laser System for counter-drone and air-defence roles displayed during a PM Modi visit, alongside other next-gen indigenous arsenal.</p>
+        </div>
+        <div class="tl-item">
+          <div class="date">12 JUN 2026 · HYDERABAD</div>
+          <h4>Advanced Weapon System Complex inaugurated at DRDL</h4>
+          <p>Raksha Mantri Rajnath Singh opened the facility at the Dr APJ Abdul Kalam Missile Complex, crediting Akash and BrahMos performance in Operation Sindoor as proof of India's defence R&D strength.</p>
+        </div>
+        <div class="tl-item">
+          <div class="date">7 JUN 2026 · ARMY CHIEF INTERVIEW</div>
+          <h4>Zorawar light tank timeline slips to 2028–29</h4>
+          <p>The DRDO–L&T mountain-warfare tank (meant to speed up armoured deployment against China along the LAC) needs further design refinement; induction pushed from 2027 to 2028–29.</p>
+        </div>
+        <div class="tl-item">
+          <div class="date">29 JUN 2026 · RASHTRAPATI BHAVAN</div>
+          <h4>Defence Investiture Ceremony 2026 (Phase II)</h4>
+          <p>President Murmu conferred gallantry and distinguished service awards, including a Shaurya Chakra for courageous conduct during Operation Chuntawadi in J&K.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 EXERCISES -->
+    <section id="exercises">
+      <div class="sec-head">
+        <span class="sec-num">05</span>
+        <div><h2>Military Exercises — 2026 Calendar</h2><div class="sub">Participants, location, and why each one matters</div></div>
+      </div>
+
+      <div class="tablewrap">
+        <table>
+          <thead>
+            <tr><th>Exercise</th><th>Service</th><th>Participants</th><th>2026 Location</th><th>Why it matters</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="exname">Yudh Abhyas (22nd edn)</td>
+              <td>Army</td>
+              <td>India – USA</td>
+              <td>Bikaner (Rajasthan) & Auli (Uttarakhand)</td>
+              <td>9–28 Sep 2026, two-theatre format; introduces US counter-drone system (MLIDS); Auli leg is ~100 km from the LAC — direct high-altitude relevance.</td>
+            </tr>
+            <tr>
+              <td class="exname">Malabar</td>
+              <td>Navy</td>
+              <td>India – USA – Japan – Australia (Quad)</td>
+              <td>Rotates (Indo-Pacific waters)</td>
+              <td>Premier Quad naval drill; signals collective pushback against China's expanding naval presence in the Indo-Pacific.</td>
+            </tr>
+            <tr>
+              <td class="exname">Pitch Black</td>
+              <td>Air Force</td>
+              <td>Multinational (hosted by Australia)</td>
+              <td>Darwin, Australia</td>
+              <td>Large multinational air-combat exercise; builds IAF interoperability with Western air forces.</td>
+            </tr>
+            <tr>
+              <td class="exname">Austra Hind</td>
+              <td>Army</td>
+              <td>India – Australia</td>
+              <td>Mahajan Field Firing Ranges, Rajasthan</td>
+              <td>Infantry combat drills; growing India–Australia defence closeness under the Quad umbrella.</td>
+            </tr>
+            <tr>
+              <td class="exname">Tarang Shakti</td>
+              <td>Air Force</td>
+              <td>Multilateral (India-hosted)</td>
+              <td>Jodhpur / Sulur</td>
+              <td>India's largest multinational air exercise; a showcase for indigenous platforms to foreign air forces.</td>
+            </tr>
+            <tr>
+              <td class="exname">Harimau Shakti / Garuda Shakti</td>
+              <td>Army</td>
+              <td>India – Malaysia / India – Indonesia</td>
+              <td>Malaysia / Indonesia</td>
+              <td>Deepens ties with ASEAN neighbours facing the same Indo-Pacific pressures as India.</td>
+            </tr>
+            <tr>
+              <td class="exname">Indra / Avia Indra</td>
+              <td>Tri-service / Air Force</td>
+              <td>India – Russia</td>
+              <td>Rotates India/Russia</td>
+              <td>Keeps the historic defence-supply relationship active even as India deepens US and Quad ties — core of India's "strategic autonomy."</td>
+            </tr>
+            <tr>
+              <td class="exname">Varuna / Shakti</td>
+              <td>Navy / Army</td>
+              <td>India – France</td>
+              <td>Rotates</td>
+              <td>France is a key Indian Ocean and defence-technology partner (Rafale, submarines).</td>
+            </tr>
+            <tr>
+              <td class="exname">Konkan / Ajeya Warrior</td>
+              <td>Navy / Army</td>
+              <td>India – United Kingdom</td>
+              <td>Rotates</td>
+              <td>Naval cooperation and counter-insurgency/infantry drills with a re-engaging UK.</td>
+            </tr>
+            <tr>
+              <td class="exname">Surya Kiran / Sampriti / Mitra Shakti</td>
+              <td>Army</td>
+              <td>Nepal / Bangladesh / Sri Lanka</td>
+              <td>Respective home countries (rotating)</td>
+              <td>"Neighbourhood First" policy in action — counters Chinese inroads in South Asia through military diplomacy.</td>
+            </tr>
+            <tr>
+              <td class="exname">TROPEX</td>
+              <td>Navy (tri-service inputs)</td>
+              <td>Domestic, all Indian services</td>
+              <td>Indian Ocean Region</td>
+              <td>India's largest theatre-level exercise — full-spectrum maritime war-gaming and readiness validation.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 06 GEOPOLITICS -->
+    <section id="geopolitics">
+      <div class="sec-head">
+        <span class="sec-num">06</span>
+        <div><h2>Geopolitical Tensions & India's Perspective</h2><div class="sub">The fault lines an interviewing officer expects you to be able to discuss calmly</div></div>
+      </div>
+
+      <div class="flash">
+        <span class="tag red">PAKISTAN</span>
+        <h4 style="margin-top:8px;">Operation Sindoor (May 2025) and its aftermath</h4>
+        <p style="font-size:.9rem; margin-top:6px;">Following the Pahalgam terror attack (22 Apr 2025, 26 civilians killed), India struck nine terror-linked sites in Pakistan and PoK on 7 May 2025 — including Jaish-e-Mohammed's Bahawalpur base and Lashkar-e-Taiba's Muridke base. A short aerial exchange followed before a ceasefire. China's technical support to the Pakistan Air Force during the conflict was later confirmed, and the Indus Waters Treaty has been kept in abeyance citing Pakistan-backed terrorism.</p>
+        <div class="persp"><b>India's perspective:</b> a declared shift from "strategic restraint" to a calibrated, zero-tolerance military response doctrine on cross-border terrorism — paired with continued emphasis on indigenous strike capability (Akash, BrahMos) as proof of self-reliant deterrence.</div>
+      </div>
+
+      <div class="flash olive">
+        <span class="tag olive">CHINA</span>
+        <h4 style="margin-top:8px;">LAC — cautious thaw, periodic flare-ups</h4>
+        <p style="font-size:.9rem; margin-top:6px;">After the 2020 Galwan clash, an October 2024 patrolling agreement enabled disengagement at Depsang and Demchok. Reports of renewed friction near Taksing (Arunachal Pradesh) surfaced in July–August 2026, timed just ahead of India hosting the BRICS Summit in New Delhi (Sep 2026), where a Modi–Xi meeting was anticipated.</p>
+        <div class="persp"><b>India's perspective:</b> manage the border through structured dialogue (WMCC, Corps Commander talks) while continuing military modernisation for high-altitude terrain (Zorawar tank programme) — normalising ties without lowering guard, especially given China's parallel defence ties with Pakistan.</div>
+      </div>
+
+      <div class="flash brass">
+        <span class="tag brass">INDO-PACIFIC & STRATEGIC AUTONOMY</span>
+        <h4 style="margin-top:8px;">Balancing the Quad, Russia, and BRICS</h4>
+        <p style="font-size:.9rem; margin-top:6px;">India deepens Quad-linked exercises (Malabar, Austra Hind, Pitch Black) to hedge against Chinese naval expansion, while keeping the Russia channel alive (Indra) and signing new defence/cyber pacts (e.g., an India–South Korea MoU in May 2026). India hosted the 2026 BRICS Summit, underscoring its "multi-aligned" posture.</p>
+        <div class="persp"><b>India's perspective:</b> strategic autonomy — partner with whoever advances Indian interests on a given issue, rather than binding into one bloc.</div>
+      </div>
+
+      <div class="card" style="margin-top:8px;">
+        <h4>Nuclear balance (context, not a talking point to over-emphasise)</h4>
+        <p style="font-size:.87rem; color:var(--muted); margin-top:4px;">SIPRI's 2026 Yearbook estimated India's stockpile at roughly 190 warheads against Pakistan's roughly 170 — part of a broader, decades-long modernisation rather than any single event.</p>
+      </div>
+    </section>
+
+    <!-- 07 SSB APPLICATION -->
+    <section id="ssb">
+      <div class="sec-head">
+        <span class="sec-num">07</span>
+        <div><h2>Turning This Into SSB Marks</h2><div class="sub">How to actually use this dossier in GD, lecturette and interview</div></div>
+      </div>
+
+      <div class="grid cols-2">
+        <div class="qbox">
+          <h4 style="font-family:'Spectral',serif; font-size:1.05rem;">Likely GD / Lecturette topics</h4>
+          <ul>
+            <li>Tri-service integration and the role of the CDS</li>
+            <li>India's shift from "strategic restraint" to calibrated response</li>
+            <li>Aatmanirbhar Bharat in defence manufacturing</li>
+            <li>Balancing China engagement with border vigilance</li>
+            <li>India's "multi-alignment" — Quad, Russia, BRICS together</li>
+          </ul>
+        </div>
+        <div class="qbox">
+          <h4 style="font-family:'Spectral',serif; font-size:1.05rem;">Interview — be ready to state cold</h4>
+          <ul>
+            <li>Current CDS, three Service Chiefs, Defence Secretary, Raksha Mantri</li>
+            <li>What CDS/DMA does that the three Chiefs individually don't</li>
+            <li>One indigenous system inducted this year and why it matters</li>
+            <li>One India-hosted or India-led exercise and its strategic purpose</li>
+            <li>The one-line difference between the LoC and the LAC</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 style="font-size:1.05rem; margin:24px 0 12px;">Pre-board checklist</h3>
+      <ul class="checklist">
+        <li>Can name all three Service Chiefs, the CDS, and the Defence Secretary without hesitation</li>
+        <li>Can explain in two sentences why the Army Chief being from the Armoured Corps is notable</li>
+        <li>Can describe Operation Sindoor factually, without editorialising or inflaming rhetoric</li>
+        <li>Can name at least one Quad-linked exercise and one neighbourhood-diplomacy exercise</li>
+        <li>Has re-checked this dossier's names against a fresh search within a week of the board date</li>
+      </ul>
+    </section>
+
+    <footer>
+      Compiled from open-source reporting for SSB preparation — appointments, exercise line-ups and command postings change often; re-verify names and dates close to your reporting date. Not an official Ministry of Defence document.
+    </footer>
+  </main>
+</div>
+</body>
+</html>
