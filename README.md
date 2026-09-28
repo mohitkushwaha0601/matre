@@ -10,11 +10,11 @@ Defence, Current Affairs & International Relations.
 | [🌍 Russia–Ukraine War Handbook](materials/2.russia-ukraine-war-knowledge-handbook.html) | HTML | 23 | 3–4 hrs |
 | [📖 Russia–Ukraine Quick Study](materials/3.russia-old.html) | HTML | 14 | 1–1.5 hrs |
 | [🔎 Russia–Ukraine Deep Research Report](materials/4.deep-research-report.html) | HTML | 11 | 1.5–2 hrs |
-| [🇮🇳 The Freedom Struggle, 1498–1947](materials/5.indian-independence-knowledge-handbook.html) | HTML | 38 | 5–6 hrs |
-| [🏔️ India–China & the LAC](materials/6.india-china-lac-knowledge-handbook.html) | HTML | 60 | 6–7 hrs |
-| [🇮🇳 India–Pakistan, Kashmir & Terrorism](materials/7.india-pakistan-terrorism-knowledge-handbook.html) | HTML | 51 | 6–8 hrs |
+| [🇮🇳 The Freedom Struggle, 1498–1947](materials/5.indian-independence-handbook.html) | HTML | 22 | 2–3 hrs |
+| [🏔️ India–China & the LAC](materials/6.india-china-lac-handbook.html) | HTML | 20 | 2–3 hrs |
+| [🇮🇳 India–Pakistan, Kashmir & Terrorism](materials/7.india-pakistan-terrorism-handbook.html) | HTML | 21 | 2–3 hrs |
 | [🏛️ India Strategic & Governance Briefing](materials/8.Indian-governance.html) | HTML | 7 | 1 hr |
-| [🛡️ India's Defence Modernisation & Atmanirbhar Defence](materials/9.india-defence-modernisation-atmanirbhar-knowledge-handbook.html) | HTML | 57 | 6–7 hrs |
+| [🛡️ India's Defence Modernisation & Atmanirbhar Defence](materials/9.india-defence-modernisation-handbook.html) | HTML | 22 | 2–3 hrs |
 
 **Total:** 9 handbooks
 
