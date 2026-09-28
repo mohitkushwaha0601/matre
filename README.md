@@ -13,8 +13,10 @@ Defence, Current Affairs & International Relations.
 | [🇮🇳 The Freedom Struggle, 1498–1947](materials/5.indian-independence-knowledge-handbook.html) | HTML | 38 | 5–6 hrs |
 | [🏔️ India–China & the LAC](materials/6.india-china-lac-knowledge-handbook.html) | HTML | 60 | 6–7 hrs |
 | [🇮🇳 India–Pakistan, Kashmir & Terrorism](materials/7.india-pakistan-terrorism-knowledge-handbook.html) | HTML | 51 | 6–8 hrs |
+| [🏛️ India Strategic & Governance Briefing](materials/8.Indian-governance.html) | HTML | 7 | 1 hr |
+| [🛡️ India's Defence Modernisation & Atmanirbhar Defence](materials/9.india-defence-modernisation-atmanirbhar-knowledge-handbook.html) | HTML | 57 | 6–7 hrs |
 
-**Total:** 7 handbooks
+**Total:** 9 handbooks
 
 ---
 
@@ -29,4 +31,4 @@ These handbooks are automatically deployed to GitHub Pages on every push to `mai
 
 ---
 
-**Updated:** 24 September 2026 | **Verified:** Open sources, current as of late 2025
+**Updated:** 28 September 2026 | **Verified:** Open sources, current as of late 2025
