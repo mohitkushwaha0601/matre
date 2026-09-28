@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Freedom Struggle — Indian Independence, 1498–1947: A Concise Knowledge Handbook</title>
+<meta name="description" content="A concise handbook on India's freedom struggle from 1498 to 1947 — European arrival, Company conquest, colonial economy and society, 1857, the rise of nationalism, the Gandhian mass movements, the Second World War, the endgame and Partition — written for interview, group discussion and lecturette preparation in two to three hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1A1408;
+  --ink-soft:#5B5240;
+  --paper:#F4F1E8;
+  --surface:#FFFFFF;
+  --surface-2:#E9E4D6;
+  --rule:#CDC6B4;
+  --rule-strong:#A2997F;
+  --red:#9E2A1E;
+  --blue:#123A6B;
+  --gold:#A87511;
+  --green:#1F6B3A;
+  --hero-bg:#1A1408;
+  --hero-ink:#F4F1E8;
+  --hero-dim:#AFA48A;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ink:#EAE5D8;
+    --ink-soft:#B0A992;
+    --paper:#12100B;
+    --surface:#1C1913;
+    --surface-2:#26221A;
+    --rule:#3A342A;
+    --rule-strong:#57503F;
+    --red:#E58272;
+    --blue:#7BB0E8;
+    --gold:#DFB44F;
+    --green:#5FBE84;
+    --hero-bg:#0A0805;
+    --hero-ink:#EAE5D8;
+    --hero-dim:#97907C;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#EAE5D8;
+  --ink-soft:#B0A992;
+  --paper:#12100B;
+  --surface:#1C1913;
+  --surface-2:#26221A;
+  --rule:#3A342A;
+  --rule-strong:#57503F;
+  --red:#E58272;
+  --blue:#7BB0E8;
+  --gold:#DFB44F;
+  --green:#5FBE84;
+  --hero-bg:#0A0805;
+  --hero-ink:#EAE5D8;
+  --hero-dim:#97907C;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1.5rem);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:16.5px;line-height:1.62;-webkit-font-smoothing:antialiased}
+
+/* ---------- hero ---------- */
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
+.flagstrip{display:flex;height:12px}
+.flagstrip span{flex:1}
+.f1{background:#FF9933}
+.f2{background:#FFFFFF}
+.f3{background:#138808}
+.f4{background:#000080}
+.f5{background:#9E2A1E}
+.f6{background:linear-gradient(90deg,#FF9933 33%,#FFFFFF 33%,#FFFFFF 66%,#138808 66%)}
+.f7{background:linear-gradient(90deg,#9E2A1E 50%,#123A6B 50%)}
+.hero-inner{max-width:1180px;margin:0 auto;padding:3.2rem 1.5rem 0}
+.motto{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:clamp(1.7rem,5.2vw,2.9rem);line-height:1.2;margin:0;letter-spacing:.005em;max-width:26ch}
+.motto-en{margin:.55rem 0 0;color:var(--hero-dim);font-size:clamp(.95rem,2.4vw,1.1rem);font-style:italic;max-width:62ch}
+.hero h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.5rem,4.3vw,2.35rem);line-height:1.2;margin:2.6rem 0 .5rem;border-top:1px solid rgba(255,255,255,.22);padding-top:1.6rem;max-width:30ch}
+.hero-sub{margin:0;color:var(--hero-dim);max-width:68ch}
+.stamp{margin-top:1.6rem;font-size:.86rem;color:var(--hero-dim);display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+.stamp b{color:var(--hero-ink);font-weight:600}
+
+/* ---------- layout ---------- */
+.shell{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem;display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media (min-width:1000px){.shell{grid-template-columns:255px minmax(0,1fr);gap:3.5rem;padding-top:2.8rem}}
+nav.toc{font-size:.9rem}
+@media (min-width:1000px){.toc-mobile{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2rem);align-self:start;max-height:calc(100vh - 5rem);overflow-y:auto}}
+nav.toc h2{font-family:"Zilla Slab",Georgia,serif;font-size:.92rem;font-weight:600;margin:0 0 .7rem;padding-bottom:.45rem;border-bottom:2px solid var(--rule-strong)}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc}
+nav.toc li{border-bottom:1px solid var(--rule)}
+nav.toc li:not(.part){counter-increment:toc}
+nav.toc a{display:flex;gap:.6rem;padding:.4rem 0;color:var(--ink-soft);text-decoration:none}
+nav.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--rule-strong);font-variant-numeric:tabular-nums;flex:none}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--red)}
+nav.toc .part{border:0;margin:1.1rem 0 .3rem;font-family:"Zilla Slab",Georgia,serif;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--rule-strong)}
+nav.toc .part::before{content:none}
+.toc-mobile{display:block}
+@media (min-width:1000px){.toc-mobile summary{display:none}}
+.toc-mobile summary{cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:600;padding:.7rem .9rem;background:var(--surface);border:1px solid var(--rule);margin-bottom:1rem}
+@media (max-width:999px){.toc-mobile[open] nav.toc{padding:0 .9rem 1rem}.toc-mobile:not([open]) nav.toc{display:none}}
+
+/* ---------- sections ---------- */
+main{min-width:0}
+section{margin:0 0 3.6rem;scroll-margin-top:1.5rem}
+section > h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.45rem,3.6vw,1.95rem);line-height:1.2;margin:0 0 .3rem}
+.part-head{margin:4rem 0 2.2rem;padding:1.1rem 0 .9rem;border-top:4px double var(--rule-strong);border-bottom:1px solid var(--rule)}
+.part-head p{margin:0;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.part-head h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.3rem,3.2vw,1.7rem);margin:.3rem 0 0;color:var(--ink)}
+.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.16rem;margin:2rem 0 .5rem;line-height:1.3}
+h4{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1rem;margin:1.4rem 0 .35rem;color:var(--ink)}
+p{margin:0 0 .95rem;max-width:74ch}
+ul,ol{margin:0 0 1rem;padding-left:1.25rem;max-width:74ch}
+li{margin-bottom:.35rem}
+li::marker{color:var(--rule-strong)}
+strong{font-weight:600}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+/* ---------- components ---------- */
+.lede{font-size:1.06rem;color:var(--ink-soft);max-width:70ch}
+.tablewrap{overflow-x:auto;margin:0 0 1.3rem;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.92rem}
+caption{text-align:left;padding:.7rem .85rem .1rem;font-weight:600;color:var(--ink-soft);font-size:.9rem}
+th,td{text-align:left;padding:.55rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{background:var(--surface-2);font-weight:600;border-bottom:2px solid var(--rule-strong);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.num,th.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.edge{background:var(--surface);border-left:4px solid var(--red);padding:.9rem 1.1rem;margin:1.4rem 0;max-width:74ch}
+.edge p:last-child,.edge ul:last-child,.edge ol:last-child{margin-bottom:0}
+.edge .edge-h{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);display:block;margin-bottom:.25rem;font-size:.95rem}
+.edge.gold{border-left-color:var(--gold)}
+.edge.gold .edge-h{color:var(--gold)}
+.edge.blue{border-left-color:var(--blue)}
+.edge.blue .edge-h{color:var(--blue)}
+.edge.green{border-left-color:var(--green)}
+.edge.green .edge-h{color:var(--green)}
+.note{background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;border:1px solid var(--rule);font-size:.95rem}
+.note p:last-child,.note ul:last-child,.note ol:last-child{margin-bottom:0}
+.note h4{margin-top:0}
+.panel{background:var(--surface);border:1px solid var(--rule);padding:1rem 1.1rem}
+.panel h4{margin-top:0}
+.panel p:last-child{margin-bottom:0}
+.panel ul,.panel ol{margin-bottom:0}
+.panel.blue-top{border-top:3px solid var(--blue)}
+.panel.red-top{border-top:3px solid var(--red)}
+.panel.gold-top{border-top:3px solid var(--gold)}
+.panel.green-top{border-top:3px solid var(--green)}
+section > .panel{margin:1.3rem 0;max-width:74ch}
+.timeline{list-style:none;padding:0;margin:1rem 0 1.4rem;max-width:74ch}
+.timeline li{display:grid;grid-template-columns:8.2rem 1fr;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--rule);margin:0}
+.timeline li:last-child{border-bottom:0}
+.timeline .yr{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);font-variant-numeric:tabular-nums}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:.1rem}}
+.qbank,.dbank{list-style:none;padding:0;max-width:74ch}
+.qbank{counter-reset:q}
+.dbank{counter-reset:d}
+.qbank li,.dbank li{padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.qbank li{counter-increment:q}
+.dbank li{counter-increment:d}
+.qbank li::before,.dbank li::before{position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.qbank li::before{content:counter(q,decimal-leading-zero)}
+.dbank li::before{content:counter(d,decimal-leading-zero)}
+.qbank li:last-child,.dbank li:last-child{border-bottom:0}
+.grid{display:grid;gap:1rem;margin:1.2rem 0}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--red);padding:1rem 1.1rem}
+.card h4{margin:0 0 .45rem;font-size:1rem}
+.card p{font-size:.93rem;margin-bottom:.5rem}
+.card p:last-child{margin-bottom:0}
+.term{max-width:74ch;margin:0 0 1.2rem}
+.term dt{font-weight:600;margin-top:.8rem}
+.term dd{margin:.15rem 0 0;color:var(--ink-soft)}
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:.1rem .45rem;border:1px solid var(--rule-strong);color:var(--ink-soft);margin-right:.35rem;vertical-align:middle}
+.tag.fact{border-color:var(--green);color:var(--green)}
+.tag.interp{border-color:var(--gold);color:var(--gold)}
+.tag.disputed{border-color:var(--red);color:var(--red)}
+.tag.verify{border-color:var(--blue);color:var(--blue)}
+footer{border-top:3px double var(--rule-strong);margin-top:2rem;padding-top:1.4rem;color:var(--ink-soft);font-size:.9rem;max-width:74ch}
+footer a{color:var(--blue)}
+@media print{
+  .hero{background:none;color:#000;padding-bottom:1rem}
+  .hero-sub,.stamp,.motto-en{color:#333}
+  .flagstrip,.toc-mobile{display:none}
+  .shell{display:block;padding:0}
+  section{page-break-inside:auto;margin-bottom:1.8rem}
+  h2,h3{page-break-after:avoid}
+  .panel,.edge,.note,.tablewrap{page-break-inside:avoid}
+  .part-head{page-break-before:always}
+  body{font-size:10.5pt;background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="flagstrip" aria-hidden="true">
+    <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f6"></span><span class="f4"></span><span class="f7"></span><span class="f5"></span>
+  </div>
+  <div class="hero-inner">
+    <p class="motto">“At the stroke of the midnight hour, when the world sleeps, India will awake to life and freedom.”</p>
+    <p class="motto-en">Jawaharlal Nehru, Constituent Assembly, 14 August 1947.</p>
+    <h1>The Freedom Struggle, 1498–1947</h1>
+    <p class="hero-sub">A concise handbook for knowledge preparation: how European traders became rulers, how the empire was run and paid for, how a nation organised itself, why the British left when they did, and why the country was divided — with the essentials for a Group Discussion, Lecturette or Personal Interview.</p>
+    <p class="stamp">
+      <span>Vasco da Gama at Calicut <b>20 May 1498</b></span>
+      <span>Battle of Plassey <b>23 June 1757</b></span>
+      <span>Crown Rule begins <b>1 November 1858</b></span>
+      <span>Independence <b>15 August 1947</b></span>
+    </p>
+  </div>
+</header>
+
+<div class="shell">
+
+<details class="toc-mobile" open>
+  <summary>Contents</summary>
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li class="part">Start here</li>
+      <li><a href="#howto">Using this handbook</a></li>
+      <li><a href="#snapshot">450 years on one page</a></li>
+      <li class="part">I · Traders to rulers</li>
+      <li><a href="#europeans">The Europeans arrive, 1498–1750</a></li>
+      <li><a href="#conquest">Plassey to Punjab: the conquest</a></li>
+      <li class="part">II · The colonial state</li>
+      <li><a href="#economy">Land, drain, famine and railways</a></li>
+      <li><a href="#society">Reform, education and a new middle class</a></li>
+      <li><a href="#revolt">1857 and the Crown Raj</a></li>
+      <li class="part">III · The national movement</li>
+      <li><a href="#congress">Early nationalism and the Congress</a></li>
+      <li><a href="#swadeshi">Bengal partition, Swadeshi and the revolutionaries</a></li>
+      <li><a href="#ww1">The First World War and Jallianwala Bagh</a></li>
+      <li><a href="#gandhi">Gandhi and Non-Cooperation</a></li>
+      <li><a href="#thirties">Purna Swaraj, Dandi and the 1935 Act</a></li>
+      <li class="part">IV · War, endgame, Partition</li>
+      <li><a href="#ww2">Quit India, Bose and the INA</a></li>
+      <li><a href="#endgame">1945–47: the endgame</a></li>
+      <li><a href="#partition">Partition and the princely states</a></li>
+      <li class="part">V · Knowledge toolkit</li>
+      <li><a href="#perspectives">Debates, controversies, lesser-known facts</a></li>
+      <li><a href="#legacy">Counterfactuals and legacy</a></li>
+      <li><a href="#qbank">Practice questions</a></li>
+      <li><a href="#debate">Debate motions</a></li>
+      <li><a href="#chronology">Master chronology</a></li>
+      <li><a href="#glossary">Glossary</a></li>
+      <li><a href="#revision">One-page revision</a></li>
+    </ol>
+  </nav>
+</details>
+
+<main>
+
+<!-- ============ HOW TO USE ============ -->
+<section id="howto">
+  <h2>Using this handbook</h2><hr class="sec-rule">
+  <p class="lede">This is the short version: enough to speak accurately on any part of the freedom struggle, built to be read in two to three hours.</p>
+  <ul>
+    <li><strong>First pass:</strong> read the snapshot and the revision sheet. That is your skeleton.</li>
+    <li><strong>Second pass:</strong> read Parts I–IV in order. Each section gives the facts, then one idea worth saying aloud.</li>
+    <li><strong>Third pass:</strong> answer the practice questions aloud in two minutes each.</li>
+  </ul>
+  <div class="edge blue">
+    <span class="edge-h">How to answer any history question</span>
+    <p>Say <strong>what</strong> happened and <strong>when</strong>; explain <strong>why</strong> (separate the trigger from the deeper cause); say <strong>what changed</strong> because of it; give <strong>one other view</strong>; then say <strong>what it means today</strong>. Five moves, under two minutes.</p>
+  </div>
+  <p>Claims are tagged <span class="tag fact">Established</span> <span class="tag interp">Interpretation</span> <span class="tag disputed">Disputed</span>. Where numbers are contested, quote a range.</p>
+</section>
+
+<!-- ============ SNAPSHOT ============ -->
+<section id="snapshot">
+  <h2>450 years on one page</h2><hr class="sec-rule">
+  <div class="tablewrap">
+  <table>
+    <caption>The five phases</caption>
+    <thead><tr><th>Phase</th><th>Years</th><th>What defined it</th></tr></thead>
+    <tbody>
+      <tr><td>Trade</td><td class="num">1498–1757</td><td>Portuguese, Dutch, English and French companies compete for spices and textiles; the Mughal empire fragments after 1707.</td></tr>
+      <tr><td>Conquest</td><td class="num">1757–1857</td><td>The East India Company turns trade into territory: Bengal, Mysore, the Marathas, Sindh, Punjab.</td></tr>
+      <tr><td>Crown rule</td><td class="num">1858–1905</td><td>After 1857 the Crown rules directly; railways, famines, English education and an organised middle class.</td></tr>
+      <tr><td>Nationalism</td><td class="num">1885–1939</td><td>Congress founded; Swadeshi; Gandhi's mass movements of 1920–22 and 1930–34.</td></tr>
+      <tr><td>Endgame</td><td class="num">1939–1947</td><td>The Second World War, Quit India, the INA, the 1946 crisis, Partition and independence.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="edge">
+    <span class="edge-h">The whole story in three lines</span>
+    <p>The British won India through finance, sea power and Indian division. They ruled it through land revenue, an Indian army and Indian collaborators. They lost it when a mass movement removed consent, a world war removed capacity, and 1946 removed their confidence in the Indian armed forces.</p>
+  </div>
+</section>
+
+<!-- ================= PART I ================= -->
+<div class="part-head">
+  <p>Part I</p>
+  <h2>Traders to rulers</h2>
+</div>
+
+<!-- ============ EUROPEANS ============ -->
+<section id="europeans">
+  <h2>The Europeans arrive, 1498–1750</h2><hr class="sec-rule">
+  <p class="lede">Europeans came for pepper and stayed for cloth. For two and a half centuries they were traders dependent on Indian rulers' permission.</p>
+  <ul class="timeline">
+    <li><span class="yr">1498</span><span><strong>Vasco da Gama</strong> reaches Calicut, opening the sea route round Africa.</span></li>
+    <li><span class="yr">1510</span><span>The Portuguese take <strong>Goa</strong> under Albuquerque — their base for a century of naval control.</span></li>
+    <li><span class="yr">1600</span><span>The English <strong>East India Company</strong> receives its royal charter (31 December). The Dutch VOC follows in 1602.</span></li>
+    <li><span class="yr">1613–15</span><span>English factory at Surat; Sir Thomas Roe at Jahangir's court.</span></li>
+    <li><span class="yr">1664</span><span>The French company is founded; Pondicherry becomes its centre.</span></li>
+    <li><span class="yr">1707</span><span>Death of Aurangzeb; the Mughal empire fragments into successor states.</span></li>
+    <li><span class="yr">1746–63</span><span>The <strong>Carnatic Wars</strong>: Anglo-French rivalry in the south, decided at Wandiwash (1760).</span></li>
+  </ul>
+  <div class="edge gold">
+    <span class="edge-h">Why the English won</span>
+    <p><span class="tag interp">Interpretation</span> Not superior civilisation, but three practical advantages: a company backed by British credit and Parliament, command of the sea, and a divided subcontinent in which Indian rulers hired Company troops against each other.</p>
+  </div>
+</section>
+
+<!-- ============ CONQUEST ============ -->
+<section id="conquest">
+  <h2>Plassey to Punjab: the conquest</h2><hr class="sec-rule">
+  <p class="lede">In a century the Company went from a trading firm to the ruler of most of South Asia.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>Milestones of conquest</caption>
+    <thead><tr><th>Year</th><th>Event</th><th>Why it mattered</th></tr></thead>
+    <tbody>
+      <tr><td class="num">1757</td><td><strong>Plassey</strong> — Clive defeats Siraj-ud-Daulah, helped by Mir Jafar's betrayal</td><td>Control of Bengal's politics.</td></tr>
+      <tr><td class="num">1764</td><td><strong>Buxar</strong> — defeat of Mir Qasim, the Nawab of Awadh and the Mughal emperor</td><td>A real military victory; legal sovereignty followed.</td></tr>
+      <tr><td class="num">1765</td><td><strong>Diwani</strong> of Bengal, Bihar and Orissa (Treaty of Allahabad)</td><td>The right to collect revenue — Indian taxes now paid for Indian exports.</td></tr>
+      <tr><td class="num">1767–99</td><td>Four Anglo-Mysore Wars; Tipu Sultan killed at Seringapatam</td><td>The strongest southern opponent removed.</td></tr>
+      <tr><td class="num">1775–1818</td><td>Three Anglo-Maratha Wars</td><td>The last pan-Indian power broken.</td></tr>
+      <tr><td class="num">1845–49</td><td>Two Anglo-Sikh Wars; Punjab annexed</td><td>Conquest essentially complete.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p><strong>Tools of expansion:</strong> Wellesley's <strong>Subsidiary Alliance</strong> (1798) — a ruler paid for a British garrison and gave up his foreign policy; and Dalhousie's <strong>Doctrine of Lapse</strong> — states without a natural heir were annexed (Satara, Jhansi, Nagpur). Awadh was annexed in 1856 on grounds of misgovernment.</p>
+  <div class="note">
+    <p><strong>A fact that wins arguments.</strong> <span class="tag fact">Established</span> Roughly 240,000 of the Company's 300,000 troops in 1857 were Indian. India was conquered largely with Indian soldiers and Indian money.</p>
+  </div>
+</section>
+
+<!-- ================= PART II ================= -->
+<div class="part-head">
+  <p>Part II</p>
+  <h2>The colonial state</h2>
+</div>
+
+<!-- ============ ECONOMY ============ -->
+<section id="economy">
+  <h2>Land, drain, famine and railways</h2><hr class="sec-rule">
+  <p class="lede">The Raj rested on land revenue. How that revenue was raised — and where it went — is the core of the economic case against colonial rule.</p>
+  <div class="grid three">
+    <div class="card"><h4>Permanent Settlement, 1793</h4><p>Cornwallis fixed revenue permanently with <strong>zamindars</strong> in Bengal, who became proprietors. Peasants lost security.</p></div>
+    <div class="card"><h4>Ryotwari</h4><p>Settled directly with the cultivator (<strong>ryot</strong>) in Madras and Bombay, associated with Thomas Munro. High, revisable assessments.</p></div>
+    <div class="card"><h4>Mahalwari</h4><p>Settled with the village or estate (<strong>mahal</strong>) as a unit, in the North-Western Provinces and Punjab.</p></div>
+  </div>
+  <h3>The economic critique</h3>
+  <ul>
+    <li><strong>Drain of wealth</strong> — Dadabhai Naoroji's <em>Poverty and Un-British Rule in India</em> (1901) argued that Home Charges and remittances sent Indian wealth to Britain without return. R. C. Dutt developed the case.</li>
+    <li><strong>Deindustrialisation</strong> — Indian handloom textiles lost markets to Lancashire machine cloth.</li>
+    <li><strong>Famines</strong> — the Bengal famine of 1770, the Great Famine of 1876–78 and the Bengal famine of 1943 each killed millions. <span class="tag disputed">Disputed</span> Death tolls are estimates; quote ranges.</li>
+    <li><strong>Railways</strong> — first passenger train Bombay–Thane, 16 April 1853. Built with guaranteed returns to British investors and designed mainly for trade and troop movement, but they also unified the country.</li>
+  </ul>
+  <div class="edge gold">
+    <span class="edge-h">A balanced line</span>
+    <p><span class="tag interp">Interpretation</span> Historians still debate how much colonial rule caused India's poverty versus failed to reduce it. The strongest single statistic: literacy at independence was about 16–18% and life expectancy about 32 years after nearly two centuries of rule.</p>
+  </div>
+</section>
+
+<!-- ============ SOCIETY ============ -->
+<section id="society">
+  <h2>Reform, education and a new middle class</h2><hr class="sec-rule">
+  <p class="lede">The nineteenth century produced Indian reformers who questioned their own society — and an English-educated class that would soon question British rule.</p>
+  <ul class="timeline">
+    <li><span class="yr">1828–29</span><span>Raja Ram Mohan Roy founds the <strong>Brahmo Samaj</strong>; <strong>Sati abolished</strong> under Bentinck (1829).</span></li>
+    <li><span class="yr">1835</span><span><strong>Macaulay's Minute</strong> — English becomes the medium of higher education.</span></li>
+    <li><span class="yr">1854–57</span><span>Wood's Despatch; universities at Calcutta, Bombay and Madras (1857).</span></li>
+    <li><span class="yr">1856</span><span>Hindu Widows' Remarriage Act, after Ishwar Chandra Vidyasagar's campaign.</span></li>
+    <li><span class="yr">1873–75</span><span>Jyotiba Phule's Satyashodhak Samaj (1873); Dayananda's <strong>Arya Samaj</strong> and Sayyid Ahmad Khan's Aligarh college (1875).</span></li>
+    <li><span class="yr">1897</span><span>Swami Vivekananda founds the Ramakrishna Mission.</span></li>
+  </ul>
+  <p><span class="tag interp">Interpretation</span> English education was meant to create loyal intermediaries. It also gave Indians the vocabulary of liberty, representation and nationhood — and a shared language across regions in which to organise.</p>
+</section>
+
+<!-- ============ 1857 ============ -->
+<section id="revolt">
+  <h2>1857 and the Crown Raj</h2><hr class="sec-rule">
+  <p class="lede">The largest armed challenge to British rule in the nineteenth century. It failed, but it ended Company rule.</p>
+  <div class="grid two">
+    <div class="panel red-top">
+      <h4>Causes</h4>
+      <ul>
+        <li><strong>Trigger:</strong> Enfield rifle cartridges rumoured to be greased with cow and pig fat</li>
+        <li><strong>Political:</strong> annexations under the Doctrine of Lapse and of Awadh</li>
+        <li><strong>Economic:</strong> heavy land revenue; dispossessed taluqdars</li>
+        <li><strong>Military:</strong> pay, overseas service, racial discrimination</li>
+      </ul>
+    </div>
+    <div class="panel blue-top">
+      <h4>Course</h4>
+      <ul>
+        <li>Mangal Pandey at Barrackpore (29 March 1857); rising at <strong>Meerut, 10 May 1857</strong></li>
+        <li>Bahadur Shah Zafar proclaimed emperor at Delhi</li>
+        <li>Leaders: Nana Saheb and Tantia Tope (Kanpur), Rani Lakshmibai (Jhansi), Begum Hazrat Mahal (Lucknow), Kunwar Singh (Bihar)</li>
+        <li>Delhi retaken September 1857; resistance crushed by 1858–59</li>
+      </ul>
+    </div>
+  </div>
+  <p><strong>Why it failed:</strong> limited to north and central India; no unified leadership or programme; Punjab, Bengal and the south largely stayed out; British control of communications and resources.</p>
+  <p><strong>Consequences:</strong> the Government of India Act 1858 transferred power to the Crown; the <strong>Queen's Proclamation (1 November 1858)</strong> promised no more annexations; the army was reorganised around “martial races”; the British allied with princes and landlords.</p>
+  <div class="note">
+    <p><strong>Mutiny or first war of independence?</strong> <span class="tag interp">Interpretation</span> V. D. Savarkar called it the First War of Independence (1909); many British writers called it a mutiny. A fair answer: it began as a military revolt and became a wider popular uprising in several regions, but it did not yet have a national programme.</p>
+  </div>
+</section>
+
+<!-- ================= PART III ================= -->
+<div class="part-head">
+  <p>Part III</p>
+  <h2>The national movement</h2>
+</div>
+
+<!-- ============ CONGRESS ============ -->
+<section id="congress">
+  <h2>Early nationalism and the Congress</h2><hr class="sec-rule">
+  <p class="lede">From petitions to a permanent national organisation.</p>
+  <ul>
+    <li><strong>Roots:</strong> the press, English education, the economic critique, and racial humiliation — the Ilbert Bill controversy (1883) showed that Europeans would not accept Indian judges trying them.</li>
+    <li><strong>Indian National Congress</strong> founded in Bombay on <strong>28 December 1885</strong>; 72 delegates; A. O. Hume a key organiser; W. C. Bonnerjee presided.</li>
+    <li><strong>Moderates</strong> (Naoroji, Gokhale, Pherozeshah Mehta) believed in constitutional methods — petitions, speeches, reports.</li>
+    <li><strong>Extremists</strong> (Tilak, Lajpat Rai, Bipin Chandra Pal — “Lal-Bal-Pal”) demanded self-rule and mass action. Tilak: “Swaraj is my birthright and I shall have it.”</li>
+  </ul>
+  <div class="edge gold">
+    <span class="edge-h">Were the Moderates a failure?</span>
+    <p><span class="tag interp">Interpretation</span> They won few concessions, but they built the economic case against colonial rule and a national platform that every later leader used. Dismissing them misses how movements are built.</p>
+  </div>
+</section>
+
+<!-- ============ SWADESHI ============ -->
+<section id="swadeshi">
+  <h2>Bengal partition, Swadeshi and the revolutionaries</h2><hr class="sec-rule">
+  <ul class="timeline">
+    <li><span class="yr">1905</span><span>Curzon <strong>partitions Bengal</strong> (effective 16 October). The <strong>Swadeshi movement</strong> — boycott of British goods, national education — is the first mass movement.</span></li>
+    <li><span class="yr">1906</span><span><strong>All-India Muslim League</strong> founded at Dacca (30 December).</span></li>
+    <li><span class="yr">1907</span><span>Congress splits at Surat between Moderates and Extremists.</span></li>
+    <li><span class="yr">1908</span><span>Tilak sentenced to six years; Khudiram Bose executed.</span></li>
+    <li><span class="yr">1909</span><span><strong>Morley-Minto reforms</strong> introduce <strong>separate electorates</strong> for Muslims.</span></li>
+    <li><span class="yr">1911</span><span>Partition of Bengal annulled; capital shifted from Calcutta to Delhi.</span></li>
+    <li><span class="yr">1913</span><span><strong>Ghadar Party</strong> formed by Indians in North America.</span></li>
+  </ul>
+  <div class="note">
+    <p><strong>Divide and rule in the government's own words.</strong> <span class="tag fact">Established</span> Home Secretary H. H. Risley's 1904 note stated that Bengal united was a power and Bengal divided would pull in different ways — the political purpose of partition, in an official record.</p>
+  </div>
+</section>
+
+<!-- ============ WW1 ============ -->
+<section id="ww1">
+  <h2>The First World War and Jallianwala Bagh</h2><hr class="sec-rule">
+  <p class="lede">India gave men and money to the war and expected self-government in return. It got the Rowlatt Act.</p>
+  <ul>
+    <li>Over a million Indians served overseas; tens of thousands died.</li>
+    <li><strong>Lucknow Pact (1916)</strong> — Congress and the League agree on joint demands; the Congress reunites.</li>
+    <li><strong>Home Rule Leagues (1916)</strong> of Tilak and Annie Besant.</li>
+    <li><strong>Montagu Declaration (20 August 1917)</strong> promises “progressive realisation of responsible government”.</li>
+    <li><strong>Rowlatt Act (March 1919)</strong> — detention without trial. Gandhi calls a nationwide hartal.</li>
+    <li><strong>Jallianwala Bagh, Amritsar, 13 April 1919</strong> — General Dyer's troops fire on an unarmed crowd. <span class="tag disputed">Disputed</span> Official toll 379; Indian estimates around 1,000. Tagore renounced his knighthood.</li>
+    <li><strong>Government of India Act 1919</strong> (Montagu-Chelmsford) introduces <strong>dyarchy</strong> in the provinces.</li>
+  </ul>
+  <div class="edge">
+    <span class="edge-h">The turning point</span>
+    <p>Jallianwala Bagh, and the British public's praise for Dyer afterwards, destroyed faith in British justice among moderate Indians. It turned a petitioning movement into a mass one.</p>
+  </div>
+</section>
+
+<!-- ============ GANDHI ============ -->
+<section id="gandhi">
+  <h2>Gandhi and Non-Cooperation</h2><hr class="sec-rule">
+  <p class="lede">Gandhi returned from South Africa in 1915 with a method — satyagraha — and tested it before taking it national.</p>
+  <ul class="timeline">
+    <li><span class="yr">1917–18</span><span><strong>Champaran</strong> (indigo peasants), <strong>Kheda</strong> (revenue relief) and <strong>Ahmedabad</strong> (mill workers).</span></li>
+    <li><span class="yr">1920</span><span>The <strong>Non-Cooperation Movement</strong>, joined with the <strong>Khilafat</strong> cause: boycott of councils, courts, schools and foreign cloth; khadi and national schools.</span></li>
+    <li><span class="yr">Feb 1922</span><span>After a mob kills policemen at <strong>Chauri Chaura</strong>, Gandhi suspends the movement.</span></li>
+    <li><span class="yr">1923</span><span>C. R. Das and Motilal Nehru form the <strong>Swaraj Party</strong> to contest council elections.</span></li>
+  </ul>
+  <div class="grid two">
+    <div class="panel green-top"><h4>What Non-Cooperation achieved</h4><ul><li>Turned Congress into a mass party with a village presence</li><li>Brought peasants, workers, women and Muslims into national politics</li><li>Removed the fear of British authority</li></ul></div>
+    <div class="panel red-top"><h4>What it did not</h4><ul><li>Swaraj “within one year” was not achieved</li><li>The suspension frustrated many younger leaders</li><li>The Khilafat alliance collapsed after 1924</li></ul></div>
+  </div>
+</section>
+
+<!-- ============ THIRTIES ============ -->
+<section id="thirties">
+  <h2>Purna Swaraj, Dandi and the 1935 Act</h2><hr class="sec-rule">
+  <ul class="timeline">
+    <li><span class="yr">1928</span><span>The all-white <strong>Simon Commission</strong> is boycotted; Lala Lajpat Rai dies after a police lathi charge. The Nehru Report proposes dominion status.</span></li>
+    <li><span class="yr">Dec 1929</span><span>Lahore Congress under Jawaharlal Nehru declares <strong>Purna Swaraj</strong>; 26 January 1930 celebrated as Independence Day.</span></li>
+    <li><span class="yr">1930</span><span><strong>Dandi March</strong>, 12 March – 6 April: Gandhi breaks the salt law. The <strong>Civil Disobedience Movement</strong> follows.</span></li>
+    <li><span class="yr">1931</span><span><strong>Gandhi-Irwin Pact</strong> (5 March); Bhagat Singh, Sukhdev and Rajguru hanged (23 March); Gandhi attends the Second Round Table Conference.</span></li>
+    <li><span class="yr">1932</span><span>The <strong>Communal Award</strong> gives separate electorates to Depressed Classes; Gandhi fasts; the <strong>Poona Pact</strong> with Ambedkar substitutes reserved seats.</span></li>
+    <li><span class="yr">1935</span><span><strong>Government of India Act</strong>: provincial autonomy and a proposed federation (never implemented). Much of it later shaped the Constitution.</span></li>
+    <li><span class="yr">1937</span><span>Provincial elections: Congress forms ministries in most provinces; the Muslim League does poorly.</span></li>
+  </ul>
+  <div class="edge blue">
+    <span class="edge-h">Why salt?</span>
+    <p>Everyone used it, the tax fell on the poorest, and breaking the law needed only seawater. It made civil disobedience something every Indian could join — the genius of the choice was its simplicity.</p>
+  </div>
+</section>
+
+<!-- ================= PART IV ================= -->
+<div class="part-head">
+  <p>Part IV</p>
+  <h2>War, endgame, Partition</h2>
+</div>
+
+<!-- ============ WW2 ============ -->
+<section id="ww2">
+  <h2>Quit India, Bose and the INA</h2><hr class="sec-rule">
+  <p class="lede">The Second World War broke the old bargain. Britain needed India badly and could no longer afford to hold it.</p>
+  <ul class="timeline">
+    <li><span class="yr">Sep 1939</span><span>Viceroy Linlithgow declares India at war without consulting Indian leaders. Congress ministries resign.</span></li>
+    <li><span class="yr">Mar 1940</span><span>Muslim League's <strong>Lahore Resolution</strong> (23 March) demands independent states for Muslim-majority areas.</span></li>
+    <li><span class="yr">Mar 1942</span><span>The <strong>Cripps Mission</strong> offers dominion status after the war, with a right for provinces to opt out. Rejected.</span></li>
+    <li><span class="yr">Aug 1942</span><span><strong>Quit India</strong> (8 August, Bombay): “Do or Die”. Leaders arrested overnight; an underground, often violent, rising follows and is suppressed.</span></li>
+    <li><span class="yr">1943</span><span><strong>Bengal famine</strong>: about 2–3 million dead. <span class="tag disputed">Disputed</span> Historians disagree on how far wartime policy caused it.</span></li>
+    <li><span class="yr">Oct 1943</span><span>Subhas Chandra Bose proclaims the <strong>Azad Hind government</strong> in Singapore (21 October) and leads the INA.</span></li>
+    <li><span class="yr">1944</span><span>The INA fights alongside the Japanese at Imphal and Kohima and is defeated.</span></li>
+    <li><span class="yr">Aug 1945</span><span>Bose reported killed in an air crash at Taipei (18 August). <span class="tag disputed">Disputed</span> Some have long questioned this; official inquiries have largely accepted it.</span></li>
+  </ul>
+  <div class="note">
+    <p><strong>The other Indian army.</strong> About 2.5 million Indians served in the British Indian Army — the largest volunteer army in history. That army, not the INA, fought at Kohima and in Burma, North Africa and Italy.</p>
+  </div>
+</section>
+
+<!-- ============ ENDGAME ============ -->
+<section id="endgame">
+  <h2>1945–47: the endgame</h2><hr class="sec-rule">
+  <p class="lede">In eighteen months, Britain moved from planning a long transition to leaving early.</p>
+  <ul class="timeline">
+    <li><span class="yr">Nov 1945</span><span><strong>INA trials</strong> at the Red Fort spark nationwide protests; in January 1946 Auchinleck commutes the sentences.</span></li>
+    <li><span class="yr">Feb 1946</span><span><strong>Royal Indian Navy mutiny</strong> in Bombay (from 18 February), with sympathy strikes.</span></li>
+    <li><span class="yr">1946</span><span>Elections: Congress sweeps general seats; the League wins nearly all Muslim seats.</span></li>
+    <li><span class="yr">May 1946</span><span><strong>Cabinet Mission Plan</strong> (16 May): a loose three-tier federation. Both sides accept, then it unravels.</span></li>
+    <li><span class="yr">Aug 1946</span><span>League's <strong>Direct Action Day</strong> (16 August): the Great Calcutta Killings. Violence spreads to Noakhali and Bihar.</span></li>
+    <li><span class="yr">Feb 1947</span><span>Attlee announces (20 February) that Britain will leave by June 1948.</span></li>
+    <li><span class="yr">Jun 1947</span><span>Mountbatten's <strong>3 June Plan</strong>: Partition, with the transfer brought forward to August.</span></li>
+    <li><span class="yr">Jul–Aug 1947</span><span><strong>Indian Independence Act</strong> (18 July). Independence on 14–15 August. The Radcliffe boundaries are published on 17 August — after independence.</span></li>
+  </ul>
+  <div class="edge">
+    <span class="edge-h">Why 1946 mattered</span>
+    <p><span class="tag interp">Interpretation</span> The INA trials and the naval mutiny showed that the Indian armed forces — the final guarantee of British rule — could no longer be relied on. Combined with Britain's post-war bankruptcy, this turned “when” into “now”.</p>
+  </div>
+</section>
+
+<!-- ============ PARTITION ============ -->
+<section id="partition">
+  <h2>Partition and the princely states</h2><hr class="sec-rule">
+  <h3>The human cost</h3>
+  <p><span class="tag disputed">Disputed</span> Estimates of deaths range from about 200,000 to 2 million; some 10–20 million people were displaced. Punjab and Bengal were divided. Quote ranges, not a single figure.</p>
+  <h3>Integrating the states</h3>
+  <p>About <strong>565 princely states</strong> covered some two-fifths of the subcontinent. Paramountcy lapsed in 1947. <strong>Sardar Patel</strong> and <strong>V. P. Menon</strong> persuaded almost all to sign the <strong>Instrument of Accession</strong> (defence, foreign affairs, communications) before 15 August.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>The three difficult cases</caption>
+    <thead><tr><th>State</th><th>Problem</th><th>Outcome</th></tr></thead>
+    <tbody>
+      <tr><td>Junagadh</td><td>Muslim ruler, Hindu majority, acceded to Pakistan</td><td>Indian action; plebiscite in February 1948 favoured India.</td></tr>
+      <tr><td>Hyderabad</td><td>Nizam sought independence; Razakar violence</td><td><strong>Operation Polo</strong>, September 1948.</td></tr>
+      <tr><td>Jammu &amp; Kashmir</td><td>Hindu ruler, Muslim majority; tribal invasion from Pakistan</td><td>Accession to India on 26 October 1947; the first India-Pakistan war.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="edge gold">
+    <span class="edge-h">Was Partition inevitable?</span>
+    <p><span class="tag interp">Interpretation</span> Not in 1940, and arguably not until the Cabinet Mission Plan collapsed in mid-1946. Between July 1946 and March 1947, violence and mutual distrust made it very hard to avoid. Ayesha Jalal argues Jinnah used the Pakistan demand partly as a bargaining position.</p>
+  </div>
+</section>
+
+<!-- ================= PART V ================= -->
+<div class="part-head">
+  <p>Part V</p>
+  <h2>Knowledge toolkit</h2>
+</div>
+
+<!-- ============ PERSPECTIVES ============ -->
+<section id="perspectives">
+  <h2>Debates, controversies, lesser-known facts</h2><hr class="sec-rule">
+  <h3>Why did the British leave?</h3>
+  <p>Give three reasons, not one: <strong>consent</strong> was gone after decades of mass movements; <strong>capacity</strong> was gone after a war that left Britain bankrupt; and the <strong>army</strong>, the last guarantee, was no longer certain. <span class="tag interp">Interpretation</span> Nationalist, Cambridge-school and Marxist historians weight these differently.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>Main schools of history</caption>
+    <thead><tr><th>School</th><th>Main claim</th></tr></thead>
+    <tbody>
+      <tr><td>Imperialist</td><td>British rule brought order and modernisation; nationalism was an elite movement.</td></tr>
+      <tr><td>Nationalist</td><td>A united people struggled against economic exploitation and won.</td></tr>
+      <tr><td>Cambridge</td><td>Indian politics was driven by local elites competing for patronage.</td></tr>
+      <tr><td>Marxist</td><td>Class interests shaped both colonial rule and the national movement.</td></tr>
+      <tr><td>Subaltern</td><td>Peasants, tribals and workers acted on their own terms, not just as followers.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <h3>Controversies to handle carefully</h3>
+  <ul>
+    <li><strong>Gandhi vs Bose:</strong> different methods, shared goal. Gandhi built the mass base; Bose's INA shook the army's loyalty in 1945–46. Both mattered.</li>
+    <li><strong>Economic impact:</strong> exploitation versus failure to develop. Stick to agreed facts — low growth, famines and low literacy.</li>
+    <li><strong>Partition responsibility:</strong> Jinnah, Congress and the British each carry some. Avoid assigning it to one actor alone.</li>
+  </ul>
+  <h3>Lesser-known facts</h3>
+  <ul>
+    <li>Only about 4.8% of Muslim votes went to the League in 1937; by 1946 it was 86.6%. The Pakistan demand gained mass support in less than a decade.</li>
+    <li>Ambedkar, Periyar and Phule challenged caste from outside the Congress mainstream — the freedom struggle was also a struggle inside Indian society.</li>
+    <li>Women led in all phases: Sarojini Naidu, Kasturba Gandhi, Aruna Asaf Ali (who hoisted the flag in August 1942), Captain Lakshmi Sahgal of the INA.</li>
+  </ul>
+</section>
+
+<!-- ============ LEGACY ============ -->
+<section id="legacy">
+  <h2>Counterfactuals and legacy</h2><hr class="sec-rule">
+  <div class="grid two">
+    <div class="card"><h4>If the Cabinet Mission had held</h4><p>A united but weak federation might have avoided Partition — or dissolved later in worse violence. <span class="tag interp">Interpretation</span></p></div>
+    <div class="card"><h4>If 1857 had succeeded</h4><p>Likely a return to regional powers under a restored Mughal name, not a modern nation-state. <span class="tag interp">Interpretation</span></p></div>
+  </div>
+  <h3>What independent India inherited</h3>
+  <ul>
+    <li><strong>Institutions:</strong> the civil service, the army, courts and a parliamentary system; the 1935 Act shaped much of the Constitution.</li>
+    <li><strong>Ideas:</strong> non-violence, secularism, universal franchise and a civic, not religious, idea of the nation.</li>
+    <li><strong>Problems:</strong> poverty, low literacy, Kashmir, refugees and the India-Pakistan rivalry.</li>
+  </ul>
+  <div class="edge green">
+    <span class="edge-h">The line for an interview</span>
+    <p>The freedom struggle's biggest achievement was not only independence but the method — a mass, largely non-violent, inclusive movement that trained Indians in democracy before they had a democracy.</p>
+  </div>
+</section>
+
+<!-- ============ QBANK ============ -->
+<section id="qbank">
+  <h2>Practice questions</h2><hr class="sec-rule">
+  <p>Answer each aloud in two minutes, using the five-move method.</p>
+  <ol class="qbank">
+    <li>How did a trading company become the ruler of India?</li>
+    <li>Why was Plassey important, and why was Buxar more important?</li>
+    <li>What was the drain theory, and is it still valid?</li>
+    <li>Was 1857 a mutiny or a war of independence?</li>
+    <li>Were the Moderates a failure?</li>
+    <li>Why did Jallianwala Bagh change Indian politics?</li>
+    <li>Why did Gandhi call off Non-Cooperation? Was he right?</li>
+    <li>Why did Gandhi choose salt?</li>
+    <li>Gandhi or Bose — whose method did more to win independence?</li>
+    <li>Why did the British leave in 1947 and not earlier or later?</li>
+    <li>Was Partition inevitable?</li>
+    <li>How did Patel integrate the princely states?</li>
+    <li>What did the British leave behind that still shapes India?</li>
+    <li>Which lesser-known figure of the freedom struggle would you highlight, and why?</li>
+  </ol>
+</section>
+
+<!-- ============ DEBATE ============ -->
+<section id="debate">
+  <h2>Debate motions</h2><hr class="sec-rule">
+  <ol class="dbank">
+    <li>Non-violence won India its freedom.</li>
+    <li>The British Raj did more harm than good to India.</li>
+    <li>Partition was the price of independence.</li>
+    <li>The INA did more to end British rule than Quit India.</li>
+    <li>History should be taught from many viewpoints, not one national story.</li>
+    <li>Colonial institutions still help India more than they hold it back.</li>
+    <li>The freedom struggle's ideals are still relevant to young Indians.</li>
+  </ol>
+</section>
+
+<!-- ============ CHRONOLOGY ============ -->
+<section id="chronology">
+  <h2>Master chronology</h2><hr class="sec-rule">
+  <ul class="timeline">
+    <li><span class="yr">1498</span><span>Vasco da Gama at Calicut</span></li>
+    <li><span class="yr">1600</span><span>English East India Company chartered</span></li>
+    <li><span class="yr">1757</span><span>Battle of Plassey</span></li>
+    <li><span class="yr">1764–65</span><span>Buxar; Diwani of Bengal</span></li>
+    <li><span class="yr">1793</span><span>Permanent Settlement</span></li>
+    <li><span class="yr">1799</span><span>Tipu Sultan killed</span></li>
+    <li><span class="yr">1818</span><span>Marathas defeated</span></li>
+    <li><span class="yr">1829</span><span>Sati abolished</span></li>
+    <li><span class="yr">1849</span><span>Punjab annexed</span></li>
+    <li><span class="yr">1853</span><span>First passenger railway</span></li>
+    <li><span class="yr">1857–58</span><span>Revolt; Crown rule from 1 November 1858</span></li>
+    <li><span class="yr">1885</span><span>Indian National Congress founded</span></li>
+    <li><span class="yr">1905</span><span>Partition of Bengal; Swadeshi</span></li>
+    <li><span class="yr">1906</span><span>Muslim League founded</span></li>
+    <li><span class="yr">1909</span><span>Morley-Minto reforms</span></li>
+    <li><span class="yr">1916</span><span>Lucknow Pact; Home Rule Leagues</span></li>
+    <li><span class="yr">1919</span><span>Rowlatt Act; Jallianwala Bagh; Montagu-Chelmsford reforms</span></li>
+    <li><span class="yr">1920–22</span><span>Non-Cooperation and Khilafat</span></li>
+    <li><span class="yr">1929</span><span>Purna Swaraj resolution</span></li>
+    <li><span class="yr">1930</span><span>Dandi March; Civil Disobedience</span></li>
+    <li><span class="yr">1932</span><span>Poona Pact</span></li>
+    <li><span class="yr">1935</span><span>Government of India Act</span></li>
+    <li><span class="yr">1940</span><span>Lahore Resolution</span></li>
+    <li><span class="yr">1942</span><span>Cripps Mission; Quit India</span></li>
+    <li><span class="yr">1943</span><span>Azad Hind government; Bengal famine</span></li>
+    <li><span class="yr">1946</span><span>RIN mutiny; Cabinet Mission; Direct Action Day</span></li>
+    <li><span class="yr">1947</span><span>3 June Plan; independence and Partition</span></li>
+    <li><span class="yr">1948</span><span>Operation Polo, Hyderabad</span></li>
+  </ul>
+</section>
+
+<!-- ============ GLOSSARY ============ -->
+<section id="glossary">
+  <h2>Glossary</h2><hr class="sec-rule">
+  <dl class="term">
+    <dt>Diwani</dt><dd>The right to collect revenue and administer civil justice; granted to the Company for Bengal, Bihar and Orissa in 1765.</dd>
+    <dt>Subsidiary Alliance</dt><dd>Wellesley's system: a ruler paid for a British garrison, accepted a Resident and surrendered foreign policy.</dd>
+    <dt>Doctrine of Lapse</dt><dd>Dalhousie's rule that a dependent state without a natural heir passed to the Company.</dd>
+    <dt>Paramountcy</dt><dd>The Crown's overriding authority over princely states; it lapsed in 1947.</dd>
+    <dt>Drain of wealth</dt><dd>Naoroji's term for the transfer of Indian resources to Britain without return.</dd>
+    <dt>Home Charges</dt><dd>India's annual payments to Britain for debt, pensions, administration and military costs.</dd>
+    <dt>Dyarchy</dt><dd>The 1919 split of provincial subjects between Indian ministers and British governors.</dd>
+    <dt>Separate electorates</dt><dd>Seats where only voters of one community voted; introduced 1909, abolished 1950.</dd>
+    <dt>Satyagraha</dt><dd>“Holding firmly to truth” — Gandhi's non-violent resistance.</dd>
+    <dt>Swadeshi / Swaraj</dt><dd>Use of Indian goods / self-rule.</dd>
+    <dt>Purna Swaraj</dt><dd>Complete independence; Congress goal from December 1929.</dd>
+    <dt>Hartal</dt><dd>A complete stoppage of work and business as protest.</dd>
+    <dt>Ryot / Zamindar</dt><dd>Cultivator / revenue-collecting landholder.</dd>
+    <dt>Instrument of Accession</dt><dd>The legal document by which a princely state joined India or Pakistan.</dd>
+  </dl>
+</section>
+
+<!-- ============ REVISION ============ -->
+<section id="revision">
+  <h2>One-page revision</h2><hr class="sec-rule">
+  <div class="grid two">
+    <div class="panel red-top">
+      <h4>12 dates</h4>
+      <ul>
+        <li>1498 — da Gama at Calicut</li>
+        <li>1757 — Plassey</li>
+        <li>1764–65 — Buxar; Diwani</li>
+        <li>1793 — Permanent Settlement</li>
+        <li>1857 — Revolt</li>
+        <li>1885 — Congress founded</li>
+        <li>1905 — Bengal partition</li>
+        <li>1919 — Jallianwala Bagh</li>
+        <li>1920 — Non-Cooperation</li>
+        <li>1930 — Dandi March</li>
+        <li>1942 — Quit India</li>
+        <li>1947 — Independence and Partition</li>
+      </ul>
+    </div>
+    <div class="panel blue-top">
+      <h4>5 facts that impress</h4>
+      <ul>
+        <li>~240,000 of ~300,000 Company troops in 1857 were Indian.</li>
+        <li>Risley's 1904 note spelt out the divide-and-rule logic of partitioning Bengal.</li>
+        <li>Auchinleck commuted the INA sentences in January 1946.</li>
+        <li>The League won ~4.8% of the Muslim vote in 1937 and ~86.6% in 1946.</li>
+        <li>At independence: literacy ~16–18%, life expectancy ~32 years.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="panel gold-top">
+    <h4>3 ready answers</h4>
+    <ul>
+      <li><strong>Why the British left:</strong> consent gone, capacity gone, army uncertain.</li>
+      <li><strong>Gandhi vs Bose:</strong> different methods, one goal; mass base plus armed-forces shock.</li>
+      <li><strong>Was Partition inevitable?</strong> Not until mid-1946; very hard to avoid by March 1947.</li>
+    </ul>
+  </div>
+</section>
+
+  <footer>
+    <p><strong>Disclaimer.</strong> Compiled for study and self-preparation. Casualty figures and many interpretations are disputed; quote ranges and attribute views.</p>
+    <p>Tags: <span class="tag fact">Established</span> broadly agreed facts; <span class="tag interp">Interpretation</span> reasoned views; <span class="tag disputed">Disputed</span> contested figures or claims. Further reading: Bipan Chandra, <em>India's Struggle for Independence</em>; Sumit Sarkar, <em>Modern India</em>; Judith Brown, <em>Gandhi: Prisoner of Hope</em>; Ayesha Jalal, <em>The Sole Spokesman</em>; Urvashi Butalia, <em>The Other Side of Silence</em>.</p>
+    <p>Source &amp; contributions: <a href="https://github.com/mohitkushwaha0601/matre">github.com/mohitkushwaha0601/matre</a></p>
+  </footer>
+
+</main>
+</div>
+</body>
+</html>

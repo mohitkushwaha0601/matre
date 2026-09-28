@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>India's Defence Modernisation &amp; Atmanirbhar Defence: A Concise Knowledge Handbook</title>
+<meta name="description" content="A concise handbook on India's defence modernisation and self-reliance — history, higher defence reform, budget and manpower, the three services, strategic forces, air defence and drones, procurement, the defence-industrial ecosystem, case studies and lessons from recent wars — written for interview, group discussion and lecturette preparation in two to three hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#161E1A;
+  --ink-soft:#4E5E55;
+  --paper:#F1F2EC;
+  --surface:#FFFFFF;
+  --surface-2:#E4E7DE;
+  --rule:#C8CEC2;
+  --rule-strong:#98A293;
+  --red:#9B2C1F;
+  --blue:#1C4E7A;
+  --gold:#8A6A10;
+  --green:#3F6130;
+  --hero-bg:#1A231C;
+  --hero-ink:#F1F2EC;
+  --hero-dim:#A2B0A5;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ink:#E5E9E2;
+    --ink-soft:#A8B4AA;
+    --paper:#0D130F;
+    --surface:#151D18;
+    --surface-2:#1D2821;
+    --rule:#2E3B33;
+    --rule-strong:#4A5A4F;
+    --red:#E57B69;
+    --blue:#7DB6E8;
+    --gold:#D8B150;
+    --green:#8CC47A;
+    --hero-bg:#080C09;
+    --hero-ink:#E5E9E2;
+    --hero-dim:#8D9A90;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E5E9E2;
+  --ink-soft:#A8B4AA;
+  --paper:#0D130F;
+  --surface:#151D18;
+  --surface-2:#1D2821;
+  --rule:#2E3B33;
+  --rule-strong:#4A5A4F;
+  --red:#E57B69;
+  --blue:#7DB6E8;
+  --gold:#D8B150;
+  --green:#8CC47A;
+  --hero-bg:#080C09;
+  --hero-ink:#E5E9E2;
+  --hero-dim:#8D9A90;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1.5rem);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:16.5px;line-height:1.62;-webkit-font-smoothing:antialiased}
+
+/* ---------- hero ---------- */
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
+.flagstrip{display:flex;height:12px}
+.flagstrip span{flex:1}
+.f1{background:#FF9933}
+.f2{background:#FFFFFF}
+.f3{background:#138808}
+.f4{background:#B22234}
+.f5{background:#0B2A5B}
+.f6{background:#5B9BD5}
+.f7{background:linear-gradient(90deg,#FF9933 33%,#FFFFFF 33%,#FFFFFF 66%,#138808 66%)}
+.f8{background:#4B5320}
+.hero-inner{max-width:1180px;margin:0 auto;padding:3.2rem 1.5rem 0}
+.motto{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:clamp(1.7rem,5.2vw,2.9rem);line-height:1.2;margin:0;letter-spacing:.005em;max-width:26ch}
+.motto-en{margin:.55rem 0 0;color:var(--hero-dim);font-size:clamp(.95rem,2.4vw,1.1rem);font-style:italic;max-width:62ch}
+.hero h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.5rem,4.3vw,2.35rem);line-height:1.2;margin:2.6rem 0 .5rem;border-top:1px solid rgba(255,255,255,.22);padding-top:1.6rem;max-width:30ch}
+.hero-sub{margin:0;color:var(--hero-dim);max-width:68ch}
+.stamp{margin-top:1.6rem;font-size:.86rem;color:var(--hero-dim);display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+.stamp b{color:var(--hero-ink);font-weight:600}
+
+/* ---------- layout ---------- */
+.shell{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem;display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media (min-width:1000px){.shell{grid-template-columns:255px minmax(0,1fr);gap:3.5rem;padding-top:2.8rem}}
+nav.toc{font-size:.9rem}
+@media (min-width:1000px){.toc-mobile{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2rem);align-self:start;max-height:calc(100vh - 5rem);overflow-y:auto}}
+nav.toc h2{font-family:"Zilla Slab",Georgia,serif;font-size:.92rem;font-weight:600;margin:0 0 .7rem;padding-bottom:.45rem;border-bottom:2px solid var(--rule-strong)}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc}
+nav.toc li{border-bottom:1px solid var(--rule)}
+nav.toc li:not(.part){counter-increment:toc}
+nav.toc a{display:flex;gap:.6rem;padding:.4rem 0;color:var(--ink-soft);text-decoration:none}
+nav.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--rule-strong);font-variant-numeric:tabular-nums;flex:none}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--red)}
+nav.toc .part{border:0;margin:1.1rem 0 .3rem;font-family:"Zilla Slab",Georgia,serif;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--rule-strong)}
+nav.toc .part::before{content:none}
+.toc-mobile{display:block}
+@media (min-width:1000px){.toc-mobile summary{display:none}}
+.toc-mobile summary{cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:600;padding:.7rem .9rem;background:var(--surface);border:1px solid var(--rule);margin-bottom:1rem}
+@media (max-width:999px){.toc-mobile[open] nav.toc{padding:0 .9rem 1rem}.toc-mobile:not([open]) nav.toc{display:none}}
+
+/* ---------- sections ---------- */
+main{min-width:0}
+section{margin:0 0 3.6rem;scroll-margin-top:1.5rem}
+section > h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.45rem,3.6vw,1.95rem);line-height:1.2;margin:0 0 .3rem}
+.part-head{margin:4rem 0 2.2rem;padding:1.1rem 0 .9rem;border-top:4px double var(--rule-strong);border-bottom:1px solid var(--rule)}
+.part-head p{margin:0;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.part-head h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.3rem,3.2vw,1.7rem);margin:.3rem 0 0;color:var(--ink)}
+.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.16rem;margin:2rem 0 .5rem;line-height:1.3}
+h4{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1rem;margin:1.4rem 0 .35rem;color:var(--ink)}
+p{margin:0 0 .95rem;max-width:74ch}
+ul,ol{margin:0 0 1rem;padding-left:1.25rem;max-width:74ch}
+li{margin-bottom:.35rem}
+li::marker{color:var(--rule-strong)}
+strong{font-weight:600}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+/* ---------- components ---------- */
+.lede{font-size:1.06rem;color:var(--ink-soft);max-width:70ch}
+.tablewrap{overflow-x:auto;margin:0 0 1.3rem;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.92rem}
+caption{text-align:left;padding:.7rem .85rem .1rem;font-weight:600;color:var(--ink-soft);font-size:.9rem}
+th,td{text-align:left;padding:.55rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{background:var(--surface-2);font-weight:600;border-bottom:2px solid var(--rule-strong);white-space:nowrap}
+tbody th{font-weight:600;background:var(--surface-2);white-space:nowrap}
+tbody tr:last-child td,tbody tr:last-child th{border-bottom:0}
+td.num,th.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.edge{background:var(--surface);border-left:4px solid var(--red);padding:.9rem 1.1rem;margin:1.4rem 0;max-width:74ch}
+.edge p:last-child,.edge ul:last-child,.edge ol:last-child{margin-bottom:0}
+.edge .edge-h{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);display:block;margin-bottom:.25rem;font-size:.95rem}
+.edge.gold{border-left-color:var(--gold)}
+.edge.gold .edge-h{color:var(--gold)}
+.edge.blue{border-left-color:var(--blue)}
+.edge.blue .edge-h{color:var(--blue)}
+.edge.green{border-left-color:var(--green)}
+.edge.green .edge-h{color:var(--green)}
+.note{background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;border:1px solid var(--rule);font-size:.95rem}
+.note p:last-child,.note ul:last-child,.note ol:last-child{margin-bottom:0}
+.note h4{margin-top:0}
+.panel{background:var(--surface);border:1px solid var(--rule);padding:1rem 1.1rem}
+.panel h4{margin-top:0}
+.panel p:last-child{margin-bottom:0}
+.panel ul,.panel ol{margin-bottom:0}
+.panel.blue-top{border-top:3px solid var(--blue)}
+.panel.red-top{border-top:3px solid var(--red)}
+.panel.gold-top{border-top:3px solid var(--gold)}
+.panel.green-top{border-top:3px solid var(--green)}
+section > .panel{margin:1.3rem 0;max-width:74ch}
+.timeline{list-style:none;padding:0;margin:1rem 0 1.4rem;max-width:74ch}
+.timeline li{display:grid;grid-template-columns:8.2rem 1fr;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--rule);margin:0}
+.timeline li:last-child{border-bottom:0}
+.timeline .yr{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);font-variant-numeric:tabular-nums}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:.1rem}}
+.qbank,.dbank{list-style:none;padding:0;max-width:74ch}
+.qbank{counter-reset:q}
+.dbank{counter-reset:d}
+.qbank li,.dbank li{padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.qbank li{counter-increment:q}
+.dbank li{counter-increment:d}
+.qbank li::before,.dbank li::before{position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.qbank li::before{content:counter(q,decimal-leading-zero)}
+.dbank li::before{content:counter(d,decimal-leading-zero)}
+.qbank li:last-child,.dbank li:last-child{border-bottom:0}
+.grid{display:grid;gap:1rem;margin:1.2rem 0}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--red);padding:1rem 1.1rem}
+.card h4{margin:0 0 .45rem;font-size:1rem}
+.card p{font-size:.93rem;margin-bottom:.5rem}
+.card p:last-child{margin-bottom:0}
+.term{max-width:74ch;margin:0 0 1.2rem}
+.term dt{font-weight:600;margin-top:.8rem}
+.term dd{margin:.15rem 0 0;color:var(--ink-soft)}
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:.1rem .45rem;border:1px solid var(--rule-strong);color:var(--ink-soft);margin-right:.35rem;vertical-align:middle}
+.tag.fact{border-color:var(--green);color:var(--green)}
+.tag.interp{border-color:var(--gold);color:var(--gold)}
+.tag.disputed{border-color:var(--red);color:var(--red)}
+.tag.verify{border-color:var(--blue);color:var(--blue)}
+footer{border-top:3px double var(--rule-strong);margin-top:2rem;padding-top:1.4rem;color:var(--ink-soft);font-size:.9rem;max-width:74ch}
+footer a{color:var(--blue)}
+@media print{
+  .hero{background:none;color:#000;padding-bottom:1rem}
+  .hero-sub,.stamp,.motto-en{color:#333}
+  .flagstrip,.toc-mobile{display:none}
+  .shell{display:block;padding:0}
+  section{page-break-inside:auto;margin-bottom:1.8rem}
+  h2,h3{page-break-after:avoid}
+  .panel,.edge,.note,.tablewrap{page-break-inside:avoid}
+  .part-head{page-break-before:always}
+  body{font-size:10.5pt;background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="flagstrip" aria-hidden="true">
+    <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f5"></span><span class="f6"></span><span class="f7"></span><span class="f8"></span>
+  </div>
+  <div class="hero-inner">
+    <p class="motto">“Wars are fought with the weapons you have, not the weapons you ordered.”</p>
+    <p class="motto-en">The oldest lesson in defence planning — and the case for building at home.</p>
+    <h1>India's Defence Modernisation &amp; Atmanirbhar Defence</h1>
+    <p class="hero-sub">A concise handbook for knowledge preparation: how India's armed forces are organised, funded and equipped, how weapons are bought, why self-reliance matters, what has worked and what has not — with the essentials for a Group Discussion, Lecturette or Personal Interview.</p>
+    <p class="stamp">
+      <span>Budget 2025-26 <b>₹6.81 lakh cr</b></span>
+      <span>IAF sanctioned <b>42 sqns</b></span>
+      <span>Exports FY25 <b>₹23,622 cr</b></span>
+      <span>CDS <b>1 Jan 2020</b></span>
+      <span>Rulebook <b>DAP 2020</b></span>
+    </p>
+  </div>
+</header>
+
+<div class="shell">
+
+<details class="toc-mobile" open>
+  <summary>Contents</summary>
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li class="part">Start here</li>
+      <li><a href="#howto">Using this handbook</a></li>
+      <li><a href="#snapshot">Modernisation on one page</a></li>
+      <li class="part">I · Foundations</li>
+      <li><a href="#history">Lessons of war, 1947–1999</a></li>
+      <li><a href="#reforms">Higher defence reform and jointness</a></li>
+      <li><a href="#budget">Budget and manpower</a></li>
+      <li class="part">II · The forces</li>
+      <li><a href="#army">The Army</a></li>
+      <li><a href="#airforce">The Air Force</a></li>
+      <li><a href="#navy">The Navy</a></li>
+      <li><a href="#strategic">Strategic forces and missiles</a></li>
+      <li><a href="#airdefence">Air defence and drones</a></li>
+      <li><a href="#enablers">Space, cyber, ISR and logistics</a></li>
+      <li class="part">III · Atmanirbhar defence</li>
+      <li><a href="#procurement">How India buys weapons</a></li>
+      <li><a href="#ecosystem">The defence-industrial ecosystem</a></li>
+      <li><a href="#cases">Failures, successes, chokepoints</a></li>
+      <li><a href="#lessons">Lessons from Ukraine and Sindoor</a></li>
+      <li class="part">IV · Knowledge toolkit</li>
+      <li><a href="#perspectives">Views, controversies, lesser-known facts</a></li>
+      <li><a href="#options">Scenarios and options</a></li>
+      <li><a href="#qbank">Practice questions</a></li>
+      <li><a href="#debate">Debate motions</a></li>
+      <li><a href="#chronology">Master chronology</a></li>
+      <li><a href="#glossary">Glossary</a></li>
+      <li><a href="#revision">One-page revision</a></li>
+    </ol>
+  </nav>
+</details>
+
+<main>
+
+<!-- ============ HOW TO USE ============ -->
+<section id="howto">
+  <h2>Using this handbook</h2><hr class="sec-rule">
+  <p class="lede">The short version: enough to speak accurately on defence modernisation and self-reliance, built to be read in two to three hours.</p>
+  <ul>
+    <li><strong>First pass:</strong> the snapshot and the revision sheet.</li>
+    <li><strong>Second pass:</strong> Parts I–III in order.</li>
+    <li><strong>Third pass:</strong> answer the practice questions aloud in two minutes each.</li>
+  </ul>
+  <div class="edge blue">
+    <span class="edge-h">How to answer any defence question</span>
+    <p><strong>What?</strong> → <strong>Why?</strong> → <strong>Background?</strong> → <strong>India's interest?</strong> → <strong>Security</strong> implication → <strong>Economic</strong> implication → argument <strong>for</strong> → argument <strong>against</strong> → <strong>what India should do</strong>. For thirty seconds, use the first, fourth and last steps only.</p>
+  </div>
+  <p>Claims are tagged <span class="tag fact">Established</span> <span class="tag interp">Interpretation</span> <span class="tag disputed">Disputed</span> <span class="tag verify">Re-verify</span>. Defence figures change every year — check the latest budget and contracts before an interview.</p>
+</section>
+
+<!-- ============ SNAPSHOT ============ -->
+<section id="snapshot">
+  <h2>Modernisation on one page</h2><hr class="sec-rule">
+  <div class="tablewrap">
+  <table>
+    <caption>India's defence at a glance</caption>
+    <tbody>
+      <tr><th scope="row">Budget</th><td>~₹6.81 lakh crore in 2025-26 (incl. pensions), about 1.9% of GDP; capital outlay ~₹1.80 lakh crore. <span class="tag verify">Re-verify</span></td></tr>
+      <tr><th scope="row">Imports</th><td>India has been the world's largest or second-largest arms importer for most of the last 15 years (SIPRI). Russia's share has fallen from about three-quarters to about a third. <span class="tag verify">Re-verify</span></td></tr>
+      <tr><th scope="row">Production</th><td>~₹1.27 lakh crore in 2023-24 and rising; exports ~₹23,622 crore in 2024-25, up from under ₹2,000 crore a decade earlier. <span class="tag verify">Re-verify</span></td></tr>
+      <tr><th scope="row">Structure</th><td>Chief of Defence Staff and Department of Military Affairs from 1 January 2020; theatre commands proposed.</td></tr>
+      <tr><th scope="row">Rulebook</th><td>Defence Acquisition Procedure (DAP) 2020, with first preference to <strong>Buy (Indian-IDDM)</strong>.</td></tr>
+      <tr><th scope="row">Gaps</th><td>Fighter squadrons, jet engines, semiconductors, rare-earth magnets, ammunition depth, jointness.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="edge">
+    <span class="edge-h">The idea in one line</span>
+    <p>Self-reliance does not mean making everything at home. It means controlling the capabilities that could be denied to you in a crisis.</p>
+  </div>
+</section>
+
+<!-- ================= PART I ================= -->
+<div class="part-head">
+  <p>Part I</p>
+  <h2>Foundations</h2>
+</div>
+
+<!-- ============ HISTORY ============ -->
+<section id="history">
+  <h2>Lessons of war, 1947–1999</h2><hr class="sec-rule">
+  <p class="lede">Every war taught India something about its equipment and organisation. Not every lesson was acted on.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>Wars and what they taught</caption>
+    <thead><tr><th>Event</th><th>Lesson</th></tr></thead>
+    <tbody>
+      <tr><td>1947–48</td><td>A small, British-equipped force; ordnance factories but no design capacity. DRDO was created in 1958.</td></tr>
+      <tr><td>1962</td><td>Unprepared for high-altitude war. Rapid expansion followed, and a turn to <strong>Soviet</strong> weapons (MiG-21) that lasted four decades.</td></tr>
+      <tr><td>1965 · 1971</td><td>Soviet partnership and better planning paid off; 1971 was a model of joint operations under strong leadership.</td></tr>
+      <tr><td>1974 · 1983</td><td>Pokhran-I; the Integrated Guided Missile Development Programme (1983) and the Light Combat Aircraft programme.</td></tr>
+      <tr><td>1987</td><td><strong>Bofors</strong> scandal: procurement froze for years, creating a culture of caution.</td></tr>
+      <tr><td>1998</td><td>Pokhran-II; the BrahMos agreement with Russia.</td></tr>
+      <tr><td>1999</td><td><strong>Kargil</strong> exposed gaps in surveillance, equipment and jointness — the start of modern reform.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="note">
+    <p><strong>A fact that wins arguments.</strong> <span class="tag fact">Established</span> The Bofors gun performed well in Kargil. The scandal was about the contract, not the weapon.</p>
+  </div>
+</section>
+
+<!-- ============ REFORMS ============ -->
+<section id="reforms">
+  <h2>Higher defence reform and jointness</h2><hr class="sec-rule">
+  <ul class="timeline">
+    <li><span class="yr">1999–2001</span><span><strong>Kargil Review Committee</strong> and the Group of Ministers: HQ Integrated Defence Staff, the Andaman &amp; Nicobar Command, the Defence Intelligence Agency, and the Strategic Forces Command (2003).</span></li>
+    <li><span class="yr">2012 · 2016</span><span>Naresh Chandra Task Force; Shekatkar Committee on combat efficiency.</span></li>
+    <li><span class="yr">1 Jan 2020</span><span><strong>Chief of Defence Staff</strong> and <strong>Department of Military Affairs</strong> created.</span></li>
+    <li><span class="yr">2021</span><span>Ordnance Factory Board corporatised into seven public-sector companies (1 October).</span></li>
+    <li><span class="yr">2023</span><span>Inter-Services Organisations Act gives commanders authority over personnel of all three services in joint units.</span></li>
+  </ul>
+  <h3>Theatre commands</h3>
+  <p>India has 17 single-service commands. The plan is to merge them into a few <strong>integrated theatre commands</strong> (for example, facing China, facing Pakistan, and maritime). The Andaman &amp; Nicobar Command remains the only full tri-service theatre command. <span class="tag verify">Re-verify</span></p>
+  <div class="edge gold">
+    <span class="edge-h">Why it is slow</span>
+    <p><span class="tag interp">Interpretation</span> Services worry about losing control of scarce assets — especially the Air Force, with too few squadrons to divide among theatres. Jointness is a matter of culture and trust as much as organisation charts.</p>
+  </div>
+</section>
+
+<!-- ============ BUDGET ============ -->
+<section id="budget">
+  <h2>Budget and manpower</h2><hr class="sec-rule">
+  <div class="grid two">
+    <div class="panel red-top">
+      <h4>Where the money goes</h4>
+      <ul>
+        <li>Salaries and pensions take the largest share</li>
+        <li>Capital (new equipment) is roughly a quarter</li>
+        <li>Most capital goes on paying for past contracts, leaving little for new ones</li>
+        <li>About 75% of capital acquisition is reserved for Indian industry <span class="tag verify">Re-verify</span></li>
+      </ul>
+    </div>
+    <div class="panel blue-top">
+      <h4>Manpower</h4>
+      <ul>
+        <li>Around 1.4 million active personnel, mostly Army</li>
+        <li><strong>Agnipath</strong> (June 2022): four-year tenure for soldiers, up to 25% retained</li>
+        <li>Aims: younger forces, lower pension bills</li>
+        <li>Concerns: training time, unit cohesion, re-employment</li>
+      </ul>
+    </div>
+  </div>
+  <div class="edge">
+    <span class="edge-h">The real problem</span>
+    <p>India spends around 2% of GDP on defence, but a large force and pensions leave a small capital budget. Many analysts argue for 2.5% of GDP or a leaner force; both are politically hard.</p>
+  </div>
+</section>
+
+<!-- ================= PART II ================= -->
+<div class="part-head">
+  <p>Part II</p>
+  <h2>The forces</h2>
+</div>
+
+<!-- ============ ARMY ============ -->
+<section id="army">
+  <h2>The Army</h2><hr class="sec-rule">
+  <div class="tablewrap">
+  <table>
+    <caption>Key equipment</caption>
+    <thead><tr><th>Area</th><th>Systems</th></tr></thead>
+    <tbody>
+      <tr><td>Artillery</td><td>Bofors FH-77B; M777 ultra-light howitzers (US); K9 Vajra (Korean design, built by L&amp;T); Dhanush; ATAGS; <strong>Pinaka</strong> rocket system.</td></tr>
+      <tr><td>Armour</td><td>T-72 and T-90 tanks; <strong>Arjun</strong> Mk1A; <strong>Zorawar</strong> light tank for the mountains (under trial).</td></tr>
+      <tr><td>Infantry</td><td>INSAS (1998) being replaced; AK-203 made in Amethi (Indo-Russian JV); SIG716 rifles.</td></tr>
+      <tr><td>Aviation</td><td>Dhruv ALH, Rudra, <strong>Prachand</strong> light combat helicopter, Apache.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p><strong>Focus since 2020:</strong> shift of forces towards the China front, high-altitude equipment, roads and tunnels, drones, loitering munitions and integrated battle groups.</p>
+  <div class="note">
+    <p><strong>The artillery story.</strong> After Bofors, India did not buy a new towed gun for almost 30 years. The M777 (2016) and K9 Vajra ended that gap; ATAGS and Dhanush are the Indian answer.</p>
+  </div>
+</section>
+
+<!-- ============ AIR FORCE ============ -->
+<section id="airforce">
+  <h2>The Air Force</h2><hr class="sec-rule">
+  <p class="lede">The Air Force's biggest problem is numbers: it is sanctioned 42 fighter squadrons but has around 30 or fewer. <span class="tag verify">Re-verify</span></p>
+  <div class="tablewrap">
+  <table>
+    <caption>Fighter fleet</caption>
+    <thead><tr><th>Aircraft</th><th>Origin</th><th>Note</th></tr></thead>
+    <tbody>
+      <tr><td>Su-30MKI</td><td>Russia (licence-built by HAL)</td><td>The backbone of the fleet.</td></tr>
+      <tr><td>Rafale</td><td>France</td><td>36 bought via a 2016 government-to-government deal.</td></tr>
+      <tr><td>Tejas Mk1 / Mk1A</td><td>India</td><td>83 Mk1A ordered in 2021, more later; deliveries delayed by US engine supply. <span class="tag verify">Re-verify</span></td></tr>
+      <tr><td>Mirage 2000, MiG-29, Jaguar</td><td>Various</td><td>Ageing but upgraded; MiG-21s retired.</td></tr>
+      <tr><td>AMCA</td><td>India</td><td>Fifth-generation fighter, approved 2024; years from service.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p><strong>Support aircraft:</strong> AEW&amp;C (Netra), refuellers (a shortage), C-17 and C-130J transports, and the <strong>C-295</strong> — the first military aircraft to be built by a private Indian company (Tata, at Vadodara).</p>
+</section>
+
+<!-- ============ NAVY ============ -->
+<section id="navy">
+  <h2>The Navy</h2><hr class="sec-rule">
+  <p class="lede">The Navy is the most indigenised service — a “builder's navy”. Most of its ships on order are being built in India.</p>
+  <ul>
+    <li><strong>Carriers:</strong> INS Vikramaditya (Russian, 2013) and INS <strong>Vikrant</strong> (Indian-built, commissioned 2 September 2022). Rafale-M ordered for carrier use in 2025. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Destroyers and frigates:</strong> Kolkata- and Visakhapatnam-class destroyers; Nilgiri-class frigates.</li>
+    <li><strong>Submarines:</strong> six Kalvari-class (French Scorpene, built at Mazagon); ageing Russian and German boats; the P-75(I) project for new submarines with air-independent propulsion.</li>
+    <li><strong>Nuclear submarines:</strong> INS Arihant (2016) and INS Arighaat (2024) carry nuclear missiles.</li>
+    <li><strong>Maritime patrol:</strong> P-8I aircraft, MH-60R helicopters, MQ-9B drones.</li>
+  </ul>
+  <div class="edge gold">
+    <span class="edge-h">Why the Navy matters more now</span>
+    <p><span class="tag interp">Interpretation</span> China's navy is the world's largest and is increasingly present in the Indian Ocean. India's advantage is geography — it sits astride the sea lanes. But submarine numbers are a serious gap.</p>
+  </div>
+</section>
+
+<!-- ============ STRATEGIC ============ -->
+<section id="strategic">
+  <h2>Strategic forces and missiles</h2><hr class="sec-rule">
+  <p class="lede">India's greatest defence R&amp;D success: its missiles, warheads and nuclear submarines are indigenous.</p>
+  <ul>
+    <li><strong>Doctrine (2003):</strong> credible minimum deterrence, <strong>No First Use</strong>, massive retaliation, civilian control through the Nuclear Command Authority.</li>
+    <li><strong>Triad:</strong> land (Agni series), air (fighter-delivered) and sea (Arihant-class submarines). Complete since INS Arihant's first deterrence patrol in 2018.</li>
+    <li><strong>Agni-V</strong> with multiple warheads (MIRV) tested in March 2024 (Mission Divyastra).</li>
+    <li><strong>BrahMos:</strong> Indo-Russian supersonic cruise missile; exported to the Philippines (2022).</li>
+    <li><strong>Mission Shakti (2019):</strong> anti-satellite missile test.</li>
+  </ul>
+  <div class="edge green">
+    <span class="edge-h">Why this worked</span>
+    <p><span class="tag interp">Interpretation</span> Strategic programmes had priority, secrecy, stable funding and continuous leadership — exactly what many conventional programmes lacked. That is the model for the rest.</p>
+  </div>
+</section>
+
+<!-- ============ AIR DEFENCE ============ -->
+<section id="airdefence">
+  <h2>Air defence and drones</h2><hr class="sec-rule">
+  <div class="tablewrap">
+  <table>
+    <caption>Layers of air defence</caption>
+    <thead><tr><th>Layer</th><th>Systems</th></tr></thead>
+    <tbody>
+      <tr><td>Long range</td><td><strong>S-400</strong> (Russia, 2018 contract; deliveries continuing) <span class="tag verify">Re-verify</span></td></tr>
+      <tr><td>Medium range</td><td>MRSAM (with Israel); <strong>Akash</strong> (Indian)</td></tr>
+      <tr><td>Short range</td><td>QRSAM, guns, shoulder-fired missiles</td></tr>
+      <tr><td>Ballistic missile defence</td><td>DRDO's two-layer programme</td></tr>
+      <tr><td>Counter-drone</td><td>Jammers, lasers and guns; integrated networks</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p><strong>Drones:</strong> India uses Heron (Israel) and MQ-9B (US, contract October 2024) for surveillance, and Indian loitering munitions. The first drone attack on an Indian base was at <strong>Jammu air station in June 2021</strong>.</p>
+  <p><span class="tag verify">Re-verify</span> In August 2025 the government announced <strong>Mission Sudarshan Chakra</strong>, a national air-defence shield. Check its progress.</p>
+  <div class="note">
+    <p><strong>The cost problem.</strong> A drone may cost a few lakh rupees; a missile to shoot it down may cost crores. Cheap defences — guns, jammers, lasers — are essential.</p>
+  </div>
+</section>
+
+<!-- ============ ENABLERS ============ -->
+<section id="enablers">
+  <h2>Space, cyber, ISR and logistics</h2><hr class="sec-rule">
+  <div class="grid two">
+    <div class="card"><h4>Space</h4><p>Defence Space Agency (2019); military satellites (GSAT-7 for the Navy, GSAT-7A for the Air Force); a large surveillance satellite constellation planned. <span class="tag verify">Re-verify</span></p></div>
+    <div class="card"><h4>Cyber</h4><p>Defence Cyber Agency (2019). Cyber and electronic warfare are now part of every conflict.</p></div>
+    <div class="card"><h4>ISR</h4><p>Intelligence, surveillance and reconnaissance: satellites, drones, AEW&amp;C aircraft and maritime patrol. The lesson of Kargil was that you cannot fight what you cannot see.</p></div>
+    <div class="card"><h4>Logistics</h4><p>Agreements with the US (LEMOA, 2016) and others give access to partner bases for fuel and supplies. Ammunition stocks for sustained war remain a concern.</p></div>
+  </div>
+</section>
+
+<!-- ================= PART III ================= -->
+<div class="part-head">
+  <p>Part III</p>
+  <h2>Atmanirbhar defence</h2>
+</div>
+
+<!-- ============ PROCUREMENT ============ -->
+<section id="procurement">
+  <h2>How India buys weapons</h2><hr class="sec-rule">
+  <p><strong>The process:</strong> the service states a need → <strong>Acceptance of Necessity (AoN)</strong> from the Defence Acquisition Council → trials → the lowest compliant bidder (L1) is selected → Cabinet Committee on Security approval for big deals → contract. Headlines saying “₹X crore approved” usually mean AoN, not a contract.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>DAP 2020 categories, in order of preference</caption>
+    <thead><tr><th>Category</th><th>Meaning</th></tr></thead>
+    <tbody>
+      <tr><td>Buy (Indian-IDDM)</td><td>Indigenously designed, developed and manufactured</td></tr>
+      <tr><td>Buy (Indian)</td><td>From an Indian vendor with minimum indigenous content</td></tr>
+      <tr><td>Buy and Make (Indian)</td><td>Indian firm with foreign technology</td></tr>
+      <tr><td>Buy (Global – Manufacture in India)</td><td>Foreign vendor producing in India</td></tr>
+      <tr><td>Buy (Global)</td><td>Direct import — the last option</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <h3>Why it is slow</h3>
+  <ul>
+    <li>Over-ambitious or changing requirements</li>
+    <li>Fear of scandals after Bofors (1987), Tehelka (2001) and AgustaWestland (2013)</li>
+    <li>Long trials; the lowest-price rule over lifecycle value</li>
+    <li>The 126-fighter MMRCA competition (2007) was cancelled in 2015 after years of negotiation</li>
+  </ul>
+  <p><strong>Offsets</strong> — requiring foreign vendors to invest part of the contract in India — were largely dropped in DAP 2020 for government-to-government deals after poor results.</p>
+</section>
+
+<!-- ============ ECOSYSTEM ============ -->
+<section id="ecosystem">
+  <h2>The defence-industrial ecosystem</h2><hr class="sec-rule">
+  <div class="grid three">
+    <div class="card"><h4>DRDO</h4><p>About 50 laboratories; designs missiles, radars, electronics, aircraft and armour.</p></div>
+    <div class="card"><h4>Public sector</h4><p>HAL, BEL, BDL, Mazagon Dock, GRSE, Goa Shipyard, BEML and seven ex-Ordnance Factory companies.</p></div>
+    <div class="card"><h4>Private sector</h4><p>L&amp;T, Tata, Bharat Forge, Adani, Solar Industries and thousands of small firms and startups.</p></div>
+  </div>
+  <h3>The policy tools</h3>
+  <ul>
+    <li><strong>Positive Indigenisation Lists</strong> (from August 2020): items that can no longer be imported after a set date.</li>
+    <li><strong>iDEX</strong> (2018): funds startups to solve defence problems.</li>
+    <li><strong>Defence corridors</strong> in Uttar Pradesh and Tamil Nadu (2018).</li>
+    <li><strong>FDI</strong> up to 74% through the automatic route (2020).</li>
+    <li><strong>Budget reservation</strong> of most capital acquisition for domestic industry.</li>
+    <li><strong>Exports:</strong> BrahMos to the Philippines; Pinaka and Akash to Armenia; ammunition and components to many countries.</li>
+  </ul>
+  <div class="edge gold">
+    <span class="edge-h">Content is not the same as design</span>
+    <p><span class="tag interp">Interpretation</span> A product can be “70% indigenous” by cost while its engine or chip — the part that can be denied — is imported. Real self-reliance means owning the design and the critical components.</p>
+  </div>
+</section>
+
+<!-- ============ CASES ============ -->
+<section id="cases">
+  <h2>Failures, successes, chokepoints</h2><hr class="sec-rule">
+  <div class="tablewrap">
+  <table>
+    <caption>Four hard cases</caption>
+    <thead><tr><th>Programme</th><th>Started</th><th>What happened</th></tr></thead>
+    <tbody>
+      <tr><td>Tejas</td><td class="num">1983</td><td>First flight 2001; squadron 2016. Slow, but it now flies and is in production.</td></tr>
+      <tr><td>Arjun tank</td><td class="num">1974</td><td>Inducted in small numbers; heavy for some terrain; limited orders.</td></tr>
+      <tr><td>INSAS rifle</td><td class="num">1998</td><td>Reliability complaints; being replaced.</td></tr>
+      <tr><td>Kaveri engine</td><td class="num">1989</td><td>Did not reach fighter-engine standard; Tejas uses a US engine.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p><strong>Successes:</strong> Agni and Prithvi missiles, BrahMos, Akash, Pinaka, Dhruv helicopter, warships and the Arihant submarines.</p>
+  <p><strong>Chokepoints:</strong> jet and marine engines, advanced semiconductors, sensors, special alloys and rare-earth magnets (largely controlled by China), plus spares for Russian equipment.</p>
+  <div class="edge green">
+    <span class="edge-h">Make or buy?</span>
+    <p>Buy what is urgent, make what is critical, and co-develop what you cannot yet make alone — with real technology transfer. Every major arms producer had failures on the way.</p>
+  </div>
+</section>
+
+<!-- ============ LESSONS ============ -->
+<section id="lessons">
+  <h2>Lessons from Ukraine and Sindoor</h2><hr class="sec-rule">
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>Ukraine (2022–)</h4>
+      <ul>
+        <li>Long wars need ammunition and industrial depth</li>
+        <li>Cheap drones change the battlefield</li>
+        <li>Electronic warfare decides whether drones work</li>
+        <li>Dependence on a single supplier is a risk (India's Russian spares)</li>
+      </ul>
+    </div>
+    <div class="panel red-top">
+      <h4>Operation Sindoor (May 2025)</h4>
+      <ul>
+        <li>Precision strikes at long range</li>
+        <li>Layered air defence against drones and missiles</li>
+        <li>Indian systems — BrahMos, Akash, counter-drone networks — reported in use</li>
+        <li><span class="tag disputed">Disputed</span> Claims of losses and damage on both sides are contested</li>
+      </ul>
+    </div>
+  </div>
+  <div class="edge">
+    <span class="edge-h">The future</span>
+    <p>AI-enabled targeting, drone swarms, hypersonic missiles, space and cyber. The winner will be the side that can produce, adapt and replace fastest — which is the real case for Atmanirbharta.</p>
+  </div>
+</section>
+
+<!-- ================= PART IV ================= -->
+<div class="part-head">
+  <p>Part IV</p>
+  <h2>Knowledge toolkit</h2>
+</div>
+
+<!-- ============ PERSPECTIVES ============ -->
+<section id="perspectives">
+  <h2>Views, controversies, lesser-known facts</h2><hr class="sec-rule">
+  <div class="tablewrap">
+  <table>
+    <caption>Schools of thought</caption>
+    <thead><tr><th>School</th><th>Argument</th></tr></thead>
+    <tbody>
+      <tr><td>Indigenisation first</td><td>Accept delays to build a domestic base; imports create lasting dependence.</td></tr>
+      <tr><td>Capability first</td><td>Buy the best available now; threats will not wait for Indian industry.</td></tr>
+      <tr><td>Partnership</td><td>Co-develop with trusted partners (US, France, Israel) to gain technology faster.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <h3>Controversies</h3>
+  <ul>
+    <li><strong>Rafale deal (2016):</strong> political allegations over price and offset partner. The Supreme Court dismissed petitions in 2018 and 2019. <span class="tag disputed">Disputed</span> politically.</li>
+    <li><strong>Agnipath:</strong> younger forces and lower pensions versus shorter training and cohesion concerns.</li>
+    <li><strong>Public vs private:</strong> should the public sector keep its dominant role?</li>
+  </ul>
+  <h3>Lesser-known facts</h3>
+  <ul>
+    <li>HAL's HF-24 Marut (1961) was India's first indigenous jet fighter — designed with German help, limited by its engine.</li>
+    <li>The Navy set up its own design directorate in the 1960s — one reason it is the most indigenous service.</li>
+    <li>India's defence exports now reach many countries, including the US for components.</li>
+  </ul>
+</section>
+
+<!-- ============ OPTIONS ============ -->
+<section id="options">
+  <h2>Scenarios and options</h2><hr class="sec-rule">
+  <div class="grid two">
+    <div class="card"><h4>Steady progress</h4><p>Production and exports keep rising; engines and chips remain imported.</p></div>
+    <div class="card"><h4>Breakthrough</h4><p>Engine co-production and AMCA succeed; India becomes a major arms exporter.</p></div>
+    <div class="card"><h4>Crisis test</h4><p>A two-front crisis exposes shortages of fighters and ammunition.</p></div>
+    <div class="card"><h4>Supply shock</h4><p>Sanctions or export curbs (Russian spares, Chinese rare earths) disrupt production.</p></div>
+  </div>
+  <h3>What India should do</h3>
+  <ul>
+    <li><strong>Structures:</strong> complete theatre commands; faster, simpler procurement.</li>
+    <li><strong>Money:</strong> protect the capital budget; fund R&amp;D steadily.</li>
+    <li><strong>Industry:</strong> give the private sector a fair chance; long-term orders; testing facilities for all.</li>
+    <li><strong>Technology:</strong> focus on engines, chips, sensors, drones and ammunition.</li>
+    <li><strong>Partners:</strong> co-develop with trusted partners with real technology transfer.</li>
+  </ul>
+</section>
+
+<!-- ============ QBANK ============ -->
+<section id="qbank">
+  <h2>Practice questions</h2><hr class="sec-rule">
+  <ol class="qbank">
+    <li>What does Atmanirbharta in defence mean?</li>
+    <li>Why is India among the largest arms importers?</li>
+    <li>What did Kargil teach India about its forces?</li>
+    <li>What is the role of the CDS, and why are theatre commands slow?</li>
+    <li>Why does the Air Force have too few squadrons?</li>
+    <li>Why did Tejas take so long?</li>
+    <li>What is DAP 2020's order of preference?</li>
+    <li>Is Agnipath good for the armed forces?</li>
+    <li>What are India's biggest technology chokepoints?</li>
+    <li>What did Ukraine and Operation Sindoor teach about drones?</li>
+    <li>Should India buy or build its next fighter?</li>
+    <li>How can the private sector play a bigger role?</li>
+    <li>Why is the Navy the most indigenised service?</li>
+    <li>Is 2% of GDP enough for defence?</li>
+  </ol>
+</section>
+
+<!-- ============ DEBATE ============ -->
+<section id="debate">
+  <h2>Debate motions</h2><hr class="sec-rule">
+  <ol class="dbank">
+    <li>India should stop importing weapons it can make at home, even if they are inferior.</li>
+    <li>The private sector should lead India's defence production.</li>
+    <li>Agnipath strengthens the armed forces.</li>
+    <li>Drones matter more than fighter jets.</li>
+    <li>India should spend at least 3% of GDP on defence.</li>
+    <li>Theatre commands should be created now, not later.</li>
+    <li>Defence exports should be a foreign-policy tool.</li>
+  </ol>
+</section>
+
+<!-- ============ CHRONOLOGY ============ -->
+<section id="chronology">
+  <h2>Master chronology</h2><hr class="sec-rule">
+  <ul class="timeline">
+    <li><span class="yr">1958</span><span>DRDO formed</span></li>
+    <li><span class="yr">1962</span><span>War with China; expansion follows</span></li>
+    <li><span class="yr">1964</span><span>HAL formed; Soviet partnership deepens</span></li>
+    <li><span class="yr">1983</span><span>IGMDP and LCA programmes</span></li>
+    <li><span class="yr">1987</span><span>Bofors scandal</span></li>
+    <li><span class="yr">1998</span><span>Pokhran-II; BrahMos agreement</span></li>
+    <li><span class="yr">1999</span><span>Kargil; Kargil Review Committee</span></li>
+    <li><span class="yr">2001</span><span>GoM reforms; Tejas first flight; private sector opened</span></li>
+    <li><span class="yr">2003</span><span>Nuclear doctrine; Strategic Forces Command</span></li>
+    <li><span class="yr">2016</span><span>DPP with IDDM; Rafale deal; INS Arihant</span></li>
+    <li><span class="yr">2018</span><span>S-400 contract; iDEX; defence corridors</span></li>
+    <li><span class="yr">2019</span><span>Mission Shakti; Defence Space and Cyber Agencies</span></li>
+    <li><span class="yr">2020</span><span>CDS (1 January); DAP 2020; first indigenisation list; Galwan</span></li>
+    <li><span class="yr">2021</span><span>83 Tejas Mk1A ordered; OFB corporatised; Jammu drone attack</span></li>
+    <li><span class="yr">2022</span><span>Agnipath; INS Vikrant; BrahMos export</span></li>
+    <li><span class="yr">2024</span><span>Agni-V MIRV; AMCA approved; INS Arighaat; C-295 line; MQ-9B deal</span></li>
+    <li><span class="yr">2025</span><span>Operation Sindoor; Rafale-M; Mission Sudarshan Chakra announced <span class="tag verify">Re-verify</span></span></li>
+  </ul>
+</section>
+
+<!-- ============ GLOSSARY ============ -->
+<section id="glossary">
+  <h2>Glossary</h2><hr class="sec-rule">
+  <dl class="term">
+    <dt>Atmanirbhar Bharat</dt><dd>“Self-reliant India” — the 2020 policy framework, applied to defence.</dd>
+    <dt>CDS / DMA</dt><dd>Chief of Defence Staff / Department of Military Affairs (2020).</dd>
+    <dt>DAP</dt><dd>Defence Acquisition Procedure 2020.</dd>
+    <dt>AoN</dt><dd>Acceptance of Necessity — first approval of a need; not a contract.</dd>
+    <dt>IDDM</dt><dd>Indigenously Designed, Developed and Manufactured — the top procurement category.</dd>
+    <dt>DPSU</dt><dd>Defence Public Sector Undertaking, e.g. HAL, BEL, Mazagon Dock.</dd>
+    <dt>iDEX</dt><dd>Innovations for Defence Excellence — support for startups (2018).</dd>
+    <dt>Positive Indigenisation List</dt><dd>Items that may no longer be imported after a set date.</dd>
+    <dt>Offsets</dt><dd>A foreign vendor's obligation to invest part of the contract in India.</dd>
+    <dt>ToT</dt><dd>Transfer of Technology — often a licence to build, not design know-how.</dd>
+    <dt>Theatre command</dt><dd>One commander with forces from all three services for a region.</dd>
+    <dt>Squadron</dt><dd>The basic IAF unit, usually 16–18 aircraft.</dd>
+    <dt>SSBN / SSK</dt><dd>Nuclear-powered ballistic missile submarine / diesel-electric submarine.</dd>
+    <dt>MIRV</dt><dd>Several warheads on one missile, each aimed at a different target.</dd>
+    <dt>ISR</dt><dd>Intelligence, surveillance and reconnaissance.</dd>
+    <dt>Loitering munition</dt><dd>A drone that circles an area and dives onto a target.</dd>
+  </dl>
+</section>
+
+<!-- ============ REVISION ============ -->
+<section id="revision">
+  <h2>One-page revision</h2><hr class="sec-rule">
+  <div class="grid two">
+    <div class="panel red-top">
+      <h4>Numbers</h4>
+      <ul>
+        <li>42 — sanctioned IAF squadrons (actual far lower)</li>
+        <li>17 — single-service commands before theatre reform</li>
+        <li>~2% of GDP — defence spending</li>
+        <li>~₹6.81 lakh crore — budget 2025-26 <span class="tag verify">Re-verify</span></li>
+        <li>~75% — capital acquisition reserved for Indian industry</li>
+        <li>74% — FDI via automatic route</li>
+        <li>~₹23,622 crore — exports FY25 <span class="tag verify">Re-verify</span></li>
+      </ul>
+    </div>
+    <div class="panel blue-top">
+      <h4>Dates</h4>
+      <ul>
+        <li>1958 DRDO · 1962 China war · 1983 IGMDP and LCA</li>
+        <li>1987 Bofors · 1998 Pokhran-II · 1999 Kargil</li>
+        <li>1 January 2020 CDS · 2020 DAP</li>
+        <li>1 October 2021 OFB corporatised</li>
+        <li>2 September 2022 INS Vikrant</li>
+        <li>May 2025 Operation Sindoor</li>
+      </ul>
+    </div>
+  </div>
+  <div class="panel gold-top">
+    <h4>Ready answers</h4>
+    <ul>
+      <li><strong>What is modernisation?</strong> The ability to find, decide and strike — sustained over time, used jointly.</li>
+      <li><strong>What is Atmanirbharta?</strong> Controlling what could be denied in a crisis; buying the rest on terms that build Indian capability.</li>
+      <li><strong>Biggest gap?</strong> Pick one — fighters, engines or jointness — and say how to close it.</li>
+      <li><strong>What should India do?</strong> Fix structures, fund essentials, build what matters, buy what is urgent.</li>
+    </ul>
+  </div>
+</section>
+
+  <footer>
+    <p><strong>Disclaimer.</strong> Compiled from open sources for study and self-preparation. Not an official publication; check Ministry of Defence data for the latest figures.</p>
+    <p>Tags: <span class="tag fact">Established</span> broadly agreed facts; <span class="tag interp">Interpretation</span> reasoned views; <span class="tag disputed">Disputed</span> contested claims; <span class="tag verify">Re-verify</span> recent or changing facts. Further reading: Stephen P. Cohen and Sunil Dasgupta, <em>Arming without Aiming</em>; Anit Mukherjee, <em>The Absent Dialogue</em>; Laxman Kumar Behera, <em>Indian Defence Industry</em>; the Kargil Review Committee report; SIPRI arms-transfer data.</p>
+    <p>Source &amp; contributions: <a href="https://github.com/mohitkushwaha0601/matre">github.com/mohitkushwaha0601/matre</a></p>
+  </footer>
+
+</main>
+</div>
+</body>
+</html>
