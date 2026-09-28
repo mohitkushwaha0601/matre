@@ -15,8 +15,9 @@ Defence, Current Affairs & International Relations.
 | [🇮🇳 India–Pakistan, Kashmir & Terrorism](materials/7.india-pakistan-terrorism-handbook.html) | HTML | 21 | 2–3 hrs |
 | [🏛️ India Strategic & Governance Briefing](materials/8.Indian-governance.html) | HTML | 7 | 1 hr |
 | [🛡️ India's Defence Modernisation & Atmanirbhar Defence](materials/9.india-defence-modernisation-handbook.html) | HTML | 22 | 2–3 hrs |
+| [🌊 The Indian Ocean & India's Maritime Security](materials/10.indian-ocean-maritime-security-handbook.html) | HTML | 22 | 2–3 hrs |
 
-**Total:** 9 handbooks
+**Total:** 10 handbooks
 
 ---
 

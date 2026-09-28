@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Indian Ocean &amp; India's Maritime Security: A Concise Knowledge Handbook</title>
+<meta name="description" content="A concise handbook on the Indian Ocean and India's maritime security — geography and chokepoints, naval history and doctrine, the Arabian Sea and Bay of Bengal, piracy and coastal security, China's footprint, submarines and carriers, energy security and sea lanes, and QUAD/IORA diplomacy, written for interview, group discussion and lecturette preparation in two to three hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0A2233;
+  --ink-soft:#49697A;
+  --paper:#EEF4F3;
+  --surface:#FFFFFF;
+  --surface-2:#E1EAE8;
+  --rule:#C3D1CD;
+  --rule-strong:#8CA6A0;
+  --red:#B33A2C;
+  --blue:#0C6FA8;
+  --gold:#AD7D14;
+  --green:#1C7A5E;
+  --hero-bg:#071620;
+  --hero-ink:#EEF4F3;
+  --hero-dim:#8FA6AD;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ink:#E1EDEB;
+    --ink-soft:#9CB6B5;
+    --paper:#081217;
+    --surface:#101E24;
+    --surface-2:#17262D;
+    --rule:#2B3E42;
+    --rule-strong:#44605F;
+    --red:#E8836F;
+    --blue:#78BEEA;
+    --gold:#DDB24E;
+    --green:#6FCB9E;
+    --hero-bg:#050D12;
+    --hero-ink:#E1EDEB;
+    --hero-dim:#8298A0;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E1EDEB;
+  --ink-soft:#9CB6B5;
+  --paper:#081217;
+  --surface:#101E24;
+  --surface-2:#17262D;
+  --rule:#2B3E42;
+  --rule-strong:#44605F;
+  --red:#E8836F;
+  --blue:#78BEEA;
+  --gold:#DDB24E;
+  --green:#6FCB9E;
+  --hero-bg:#050D12;
+  --hero-ink:#E1EDEB;
+  --hero-dim:#8298A0;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1.5rem);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:16.5px;line-height:1.62;-webkit-font-smoothing:antialiased}
+
+/* ---------- hero ---------- */
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
+.flagstrip{display:flex;height:12px}
+.flagstrip span{flex:1}
+.f1{background:#FF9933}
+.f2{background:#FFFFFF}
+.f3{background:#138808}
+.f4{background:#8D153A}
+.f5{background:linear-gradient(90deg,#239F40 50%,#FFFFFF 50%)}
+.f6{background:linear-gradient(90deg,#CE1126 50%,#FFFFFF 50%)}
+.f7{background:#DE2910}
+.f8{background:linear-gradient(90deg,#0C6FA8,#1C7A5E)}
+.hero-inner{max-width:1180px;margin:0 auto;padding:3.2rem 1.5rem 0}
+.motto{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:clamp(1.7rem,5.2vw,2.9rem);line-height:1.2;margin:0;letter-spacing:.005em;max-width:26ch}
+.motto-en{margin:.55rem 0 0;color:var(--hero-dim);font-size:clamp(.95rem,2.4vw,1.1rem);font-style:italic;max-width:62ch}
+.hero h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.5rem,4.3vw,2.35rem);line-height:1.2;margin:2.6rem 0 .5rem;border-top:1px solid rgba(255,255,255,.22);padding-top:1.6rem;max-width:30ch}
+.hero-sub{margin:0;color:var(--hero-dim);max-width:68ch}
+.stamp{margin-top:1.6rem;font-size:.86rem;color:var(--hero-dim);display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+.stamp b{color:var(--hero-ink);font-weight:600}
+
+/* ---------- layout ---------- */
+.shell{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem;display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media (min-width:1000px){.shell{grid-template-columns:255px minmax(0,1fr);gap:3.5rem;padding-top:2.8rem}}
+nav.toc{font-size:.9rem}
+@media (min-width:1000px){.toc-mobile{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2rem);align-self:start;max-height:calc(100vh - 5rem);overflow-y:auto}}
+nav.toc h2{font-family:"Zilla Slab",Georgia,serif;font-size:.92rem;font-weight:600;margin:0 0 .7rem;padding-bottom:.45rem;border-bottom:2px solid var(--rule-strong)}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc}
+nav.toc li{border-bottom:1px solid var(--rule)}
+nav.toc li:not(.part){counter-increment:toc}
+nav.toc a{display:flex;gap:.6rem;padding:.4rem 0;color:var(--ink-soft);text-decoration:none}
+nav.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--rule-strong);font-variant-numeric:tabular-nums;flex:none}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--red)}
+nav.toc .part{border:0;margin:1.1rem 0 .3rem;font-family:"Zilla Slab",Georgia,serif;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--rule-strong)}
+nav.toc .part::before{content:none}
+.toc-mobile{display:block}
+@media (min-width:1000px){.toc-mobile summary{display:none}}
+.toc-mobile summary{cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:600;padding:.7rem .9rem;background:var(--surface);border:1px solid var(--rule);margin-bottom:1rem}
+@media (max-width:999px){.toc-mobile[open] nav.toc{padding:0 .9rem 1rem}.toc-mobile:not([open]) nav.toc{display:none}}
+
+/* ---------- sections ---------- */
+main{min-width:0}
+section{margin:0 0 3.6rem;scroll-margin-top:1.5rem}
+section > h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.45rem,3.6vw,1.95rem);line-height:1.2;margin:0 0 .3rem}
+.part-head{margin:4rem 0 2.2rem;padding:1.1rem 0 .9rem;border-top:4px double var(--rule-strong);border-bottom:1px solid var(--rule)}
+.part-head p{margin:0;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.part-head h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.3rem,3.2vw,1.7rem);margin:.3rem 0 0;color:var(--ink)}
+.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.16rem;margin:2rem 0 .5rem;line-height:1.3}
+h4{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1rem;margin:1.4rem 0 .35rem;color:var(--ink)}
+p{margin:0 0 .95rem;max-width:74ch}
+ul,ol{margin:0 0 1rem;padding-left:1.25rem;max-width:74ch}
+li{margin-bottom:.35rem}
+li::marker{color:var(--rule-strong)}
+strong{font-weight:600}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+/* ---------- components ---------- */
+.lede{font-size:1.06rem;color:var(--ink-soft);max-width:70ch}
+.tablewrap{overflow-x:auto;margin:0 0 1.3rem;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.92rem}
+caption{text-align:left;padding:.7rem .85rem .1rem;font-weight:600;color:var(--ink-soft);font-size:.9rem}
+th,td{text-align:left;padding:.55rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{background:var(--surface-2);font-weight:600;border-bottom:2px solid var(--rule-strong);white-space:nowrap}
+tbody th{font-weight:600;background:var(--surface-2);white-space:nowrap}
+tbody tr:last-child td,tbody tr:last-child th{border-bottom:0}
+td.num,th.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.edge{background:var(--surface);border-left:4px solid var(--red);padding:.9rem 1.1rem;margin:1.4rem 0;max-width:74ch}
+.edge p:last-child,.edge ul:last-child,.edge ol:last-child{margin-bottom:0}
+.edge .edge-h{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);display:block;margin-bottom:.25rem;font-size:.95rem}
+.edge.gold{border-left-color:var(--gold)}
+.edge.gold .edge-h{color:var(--gold)}
+.edge.blue{border-left-color:var(--blue)}
+.edge.blue .edge-h{color:var(--blue)}
+.edge.green{border-left-color:var(--green)}
+.edge.green .edge-h{color:var(--green)}
+.note{background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;border:1px solid var(--rule);font-size:.95rem}
+.note p:last-child,.note ul:last-child,.note ol:last-child{margin-bottom:0}
+.note h4{margin-top:0}
+.panel{background:var(--surface);border:1px solid var(--rule);padding:1rem 1.1rem}
+.panel h4{margin-top:0}
+.panel p:last-child{margin-bottom:0}
+.panel ul,.panel ol{margin-bottom:0}
+.panel.blue-top{border-top:3px solid var(--blue)}
+.panel.red-top{border-top:3px solid var(--red)}
+.panel.gold-top{border-top:3px solid var(--gold)}
+.panel.green-top{border-top:3px solid var(--green)}
+section > .panel{margin:1.3rem 0;max-width:74ch}
+.timeline{list-style:none;padding:0;margin:1rem 0 1.4rem;max-width:74ch}
+.timeline li{display:grid;grid-template-columns:8.2rem 1fr;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--rule);margin:0}
+.timeline li:last-child{border-bottom:0}
+.timeline .yr{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);font-variant-numeric:tabular-nums}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:.1rem}}
+.qbank,.dbank{list-style:none;padding:0;max-width:74ch}
+.qbank{counter-reset:q}
+.dbank{counter-reset:d}
+.qbank li,.dbank li{padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.qbank li{counter-increment:q}
+.dbank li{counter-increment:d}
+.qbank li::before,.dbank li::before{position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.qbank li::before{content:counter(q,decimal-leading-zero)}
+.dbank li::before{content:counter(d,decimal-leading-zero)}
+.qbank li:last-child,.dbank li:last-child{border-bottom:0}
+.grid{display:grid;gap:1rem;margin:1.2rem 0}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--red);padding:1rem 1.1rem}
+.card h4{margin:0 0 .45rem;font-size:1rem}
+.card p{font-size:.93rem;margin-bottom:.5rem}
+.card p:last-child{margin-bottom:0}
+.term{max-width:74ch;margin:0 0 1.2rem}
+.term dt{font-weight:600;margin-top:.8rem}
+.term dd{margin:.15rem 0 0;color:var(--ink-soft)}
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:.1rem .45rem;border:1px solid var(--rule-strong);color:var(--ink-soft);margin-right:.35rem;vertical-align:middle}
+.tag.fact{border-color:var(--green);color:var(--green)}
+.tag.interp{border-color:var(--gold);color:var(--gold)}
+.tag.disputed{border-color:var(--red);color:var(--red)}
+.tag.verify{border-color:var(--blue);color:var(--blue)}
+footer{border-top:3px double var(--rule-strong);margin-top:2rem;padding-top:1.4rem;color:var(--ink-soft);font-size:.9rem;max-width:74ch}
+footer a{color:var(--blue)}
+@media print{
+  .hero{background:none;color:#000;padding-bottom:1rem}
+  .hero-sub,.stamp,.motto-en{color:#333}
+  .flagstrip,.toc-mobile{display:none}
+  .shell{display:block;padding:0}
+  section{page-break-inside:auto;margin-bottom:1.8rem}
+  h2,h3{page-break-after:avoid}
+  .panel,.edge,.note,.tablewrap{page-break-inside:avoid}
+  .part-head{page-break-before:always}
+  body{font-size:10.5pt;background:#fff;color:#000}
+}
+
+.home-btn{position:fixed;top:16px;left:16px;z-index:60;display:inline-flex;align-items:center;gap:.4rem;background:#14202B;color:#F1F2EC;border:1px solid rgba(241,242,236,.25);padding:.45rem .85rem;border-radius:999px;font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.82rem;font-weight:600;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.3);transition:background .15s ease,transform .15s ease}
+.home-btn:hover,.home-btn:focus-visible{background:#BF2F26;transform:translateY(-1px)}
+.home-btn svg{width:14px;height:14px;flex:none}
+@media print{.home-btn{display:none}}
+</style>
+</head>
+<body>
+
+<a class="home-btn" href="../index.html" aria-label="Back to Handbooks homepage" title="Back to Handbooks homepage">
+  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
+  <span>Home</span>
+</a>
+
+<header class="hero">
+  <div class="flagstrip" aria-hidden="true">
+    <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f5"></span><span class="f6"></span><span class="f7"></span><span class="f8"></span>
+  </div>
+  <div class="hero-inner">
+    <p class="motto">शं नो वरुणः</p>
+    <p class="motto-en">“Be auspicious unto us, O Varuna” — the Indian Navy's motto, invoking the lord of the seas. India's fortunes, ancient and modern, have always run through water.</p>
+    <h1>The Indian Ocean &amp; India's Maritime Security</h1>
+    <p class="hero-sub">A concise handbook on why the Indian Ocean matters, how it is contested, and how India defends its interests at sea — geography and chokepoints, naval history and doctrine, submarines and carriers, energy security and sea lanes, coastal security, China's footprint, and the diplomacy of QUAD and IORA — for a Group Discussion, Lecturette or Personal Interview.</p>
+    <p class="stamp">
+      <span>Coastline <b>7,516 km</b></span>
+      <span>EEZ <b>~2.02M km²</b></span>
+      <span>INS Vikrant <b>Sep 2022</b></span>
+      <span>IFC-IOR set up <b>Dec 2018</b></span>
+      <span>Malabar since <b>1992</b></span>
+    </p>
+  </div>
+</header>
+
+<div class="shell">
+
+<details class="toc-mobile" open>
+  <summary>Contents</summary>
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li class="part">Start here</li>
+      <li><a href="#howto">Using this handbook</a></li>
+      <li><a href="#snapshot">Maritime security at a glance</a></li>
+      <li class="part">I · Geography, history and doctrine</li>
+      <li><a href="#history">Maritime history and the making of a navy</a></li>
+      <li><a href="#geography">The Indian Ocean's geography and chokepoints</a></li>
+      <li><a href="#doctrine">Doctrine, SAGAR and command architecture</a></li>
+      <li><a href="#andaman">Andaman &amp; Nicobar Command</a></li>
+      <li class="part">II · Contested waters</li>
+      <li><a href="#arabiansea">The Arabian Sea and the western seaboard</a></li>
+      <li><a href="#bayofbengal">The Bay of Bengal and the eastern seaboard</a></li>
+      <li><a href="#coastal">Piracy, terrorism and coastal security</a></li>
+      <li><a href="#china">China's footprint in the Indian Ocean</a></li>
+      <li class="part">III · Capability and economy</li>
+      <li><a href="#submarines">Submarines and the undersea contest</a></li>
+      <li><a href="#carriers">Aircraft carriers and naval aviation</a></li>
+      <li><a href="#patrol">Patrol, ASW, drones and domain awareness</a></li>
+      <li><a href="#energy">Energy security, SLOCs, ports and the blue economy</a></li>
+      <li class="part">IV · Partnerships</li>
+      <li><a href="#partnerships">QUAD, IORA and India's maritime partnerships</a></li>
+      <li class="part">Knowledge toolkit</li>
+      <li><a href="#perspectives">Perspectives, controversies, lesser-known facts</a></li>
+      <li><a href="#scenarios">Scenarios and India's strategic options</a></li>
+      <li><a href="#qbank">Practice questions</a></li>
+      <li><a href="#debate">Debate motions</a></li>
+      <li><a href="#chronology">Master chronology</a></li>
+      <li><a href="#glossary">Glossary</a></li>
+      <li><a href="#revision">Rapid revision sheet</a></li>
+    </ol>
+  </nav>
+</details>
+
+<main>
+
+<!-- ============ HOW TO USE ============ -->
+<section id="howto">
+  <h2>Using this handbook</h2><hr class="sec-rule">
+  <p class="lede">This handbook treats "maritime security" broadly: not just the Indian Navy's order of battle, but the geography, history, economics and diplomacy that make the Indian Ocean central to India's security calculus. Read the contents list and jump to what you need; the Knowledge toolkit at the end is built for last-mile revision.</p>
+  <div class="edge blue">
+    <span class="edge-h">How to think about "maritime security"</span>
+    <p>Four layers recur across this subject: <strong>hard power</strong> (ships, submarines, aircraft), <strong>geography</strong> (chokepoints and sea lanes), <strong>economics</strong> (energy, trade, the blue economy) and <strong>diplomacy</strong> (QUAD, IORA, bilateral logistics agreements). Most exam and interview questions test whether you can move between these layers rather than recite hull numbers.</p>
+  </div>
+  <p>Claims are tagged <span class="tag fact">Established</span> <span class="tag interp">Interpretation</span> <span class="tag disputed">Disputed</span> <span class="tag verify">Re-verify</span>. Fleet numbers, budgets and appointments change every year — check the latest sources before an interview.</p>
+</section>
+
+<!-- ============ SNAPSHOT ============ -->
+<section id="snapshot">
+  <h2>Maritime security at a glance</h2><hr class="sec-rule">
+  <div class="tablewrap">
+    <table>
+      <caption>India's maritime position in one page</caption>
+      <tbody>
+        <tr><th scope="row">Coastline</th><td>7,516 km across nine states and four Union Territories, including two island chains.</td></tr>
+        <tr><th scope="row">EEZ</th><td>An Exclusive Economic Zone of about 2.02 million km² — roughly two-thirds the size of India's land area.</td></tr>
+        <tr><th scope="row">Trade dependence</th><td>Over 90% of India's trade by volume and about 70% by value moves by sea. <span class="tag verify">Re-verify</span></td></tr>
+        <tr><th scope="row">Energy dependence</th><td>The large majority of India's crude oil imports transit the Indian Ocean, much of it through the Strait of Hormuz. <span class="tag verify">Re-verify</span></td></tr>
+        <tr><th scope="row">Command architecture</th><td>Western, Eastern and Southern Naval Commands, plus the tri-service Andaman &amp; Nicobar Command.</td></tr>
+        <tr><th scope="row">Doctrine</th><td><strong>SAGAR</strong> — Security and Growth for All in the Region (2015) — India's stated approach to the Indian Ocean.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>Why the Indian Ocean matters</h4>
+      <p>It carries roughly two-thirds of the world's oil shipments and a third of its bulk cargo, connecting the Gulf, East Africa and Southeast Asia through a handful of narrow chokepoints. For India, it is not a periphery but the ocean it is named after.</p>
+    </div>
+    <div class="panel red-top">
+      <h4>Why it is contested</h4>
+      <p>China's navy is now the world's largest by hull count and increasingly present in these waters through ports, submarines and anti-piracy deployments, while non-state threats — piracy, terrorism, smuggling — persist alongside great-power competition.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PART I ================= -->
+<div class="part-head"><p>Part I · Foundations</p><h2>Geography, history and doctrine</h2></div>
+
+<!-- ============ HISTORY ============ -->
+<section id="history">
+  <h2>Maritime history and the making of a navy</h2><hr class="sec-rule">
+  <p>The Indian Ocean was a maritime highway long before European ships arrived: monsoon winds carried traders between Gujarat, the Malabar coast, the Persian Gulf, East Africa and Southeast Asia for over a thousand years, and the Chola dynasty projected naval power as far as Southeast Asia in the 11th century. European arrival changed the rules — Portuguese, Dutch, French and finally British power was built and sustained by control of these sea lanes, not just land armies. The Royal Indian Navy that India inherited in 1947 was small and coastal; the modern Indian Navy grew out of it slowly, with the first aircraft carrier, INS Vikrant (the original, a former British carrier), commissioned in 1961.</p>
+  <div class="edge">
+    <span class="edge-h">1971: the Navy's coming of age</span>
+    <p>The <strong>1971 war</strong> is the Navy's defining chapter: Operation Trident and Operation Python struck Karachi harbour with missile boats, and the Eastern Fleet's blockade of East Pakistan, including the aircraft carrier INS Vikrant's air strikes, cut off any seaborne relief or escape — a rare case of naval power directly shaping a land war's outcome and Bangladesh's independence.</p>
+  </div>
+  <p>Two lessons recur from this history: sea power has repeatedly decided outcomes that armies could not, and neglect of the Navy — which happened for long stretches of the Cold War — is expensive to reverse.</p>
+</section>
+
+<!-- ============ GEOGRAPHY ============ -->
+<section id="geography">
+  <h2>The Indian Ocean's geography and chokepoints</h2><hr class="sec-rule">
+  <p class="lede">The Indian Ocean is defined as much by its narrow entry and exit points as by its vast open water — control of a handful of straits shapes the security of the whole basin.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Key chokepoints</caption>
+      <thead><tr><th>Chokepoint</th><th>Connects</th><th>Why it matters</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Strait of Hormuz</strong></td><td>Persian Gulf ↔ Arabian Sea</td><td>Roughly a fifth of the world's oil transits here; Iran has repeatedly threatened closure. <span class="tag verify">Re-verify</span></td></tr>
+        <tr><td><strong>Bab-el-Mandeb</strong></td><td>Red Sea ↔ Gulf of Aden</td><td>Gateway to the Suez Canal; Houthi attacks on shipping since 2023 have forced many vessels around the Cape of Good Hope.</td></tr>
+        <tr><td><strong>Strait of Malacca</strong></td><td>Indian Ocean ↔ South China Sea</td><td>Around a quarter of world trade and much of China's, Japan's and South Korea's oil passes through it — a well-known vulnerability for China ("the Malacca dilemma").</td></tr>
+        <tr><td>Sunda &amp; Lombok Straits</td><td>Alternative Indonesian passages</td><td>Deeper draught, used by larger tankers and submerged submarines as alternatives to Malacca.</td></tr>
+        <tr><td>Mozambique Channel</td><td>East Africa ↔ southern Indian Ocean</td><td>Growing importance for African gas and mineral exports.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge gold">
+    <span class="edge-h">India's geographic advantage</span>
+    <p><span class="tag interp">Interpretation</span> India's peninsula and the Andaman &amp; Nicobar Islands sit astride the sea lanes linking the Gulf to Malacca — any power moving between the Middle East and East Asia by sea passes close to Indian shores. This is the single most repeated strategic fact in this subject.</p>
+  </div>
+</section>
+
+<!-- ============ DOCTRINE ============ -->
+<section id="doctrine">
+  <h2>Doctrine, SAGAR and command architecture</h2><hr class="sec-rule">
+  <p>India's maritime doctrine has evolved from a coastal defence force to a "net security provider" in the Indian Ocean Region. The Navy's own doctrine documents (updated periodically, most recently around 2015) describe roles across the spectrum: deterrence, sea control, power projection, constabulary duties (anti-piracy, anti-smuggling) and benign roles (disaster relief, search and rescue).</p>
+  <ul>
+    <li><strong>SAGAR</strong> (Security and Growth for All in the Region), announced in 2015, is India's public framework for the Indian Ocean — capacity-building for smaller littoral states, maritime domain awareness, disaster response and freedom of navigation, without alliance obligations.</li>
+    <li><strong>Command structure:</strong> Western Naval Command (Mumbai), Eastern Naval Command (Visakhapatnam) and Southern Naval Command (Kochi, training-focused), plus the tri-service Andaman &amp; Nicobar Command.</li>
+    <li><strong>Mission-based deployments</strong> since 2017 keep Indian warships continuously stationed at choke points — the northern Arabian Sea, the Gulf of Aden, the Malacca approaches and the Sunda-Lombok approaches — rather than patrolling only when a crisis emerges.</li>
+  </ul>
+  <div class="note">
+    <p><strong>A distinction worth making.</strong> SAGAR is a diplomatic framework, not a formal alliance; India's approach in the Indian Ocean deliberately avoids the language of blocs even while it deepens practical cooperation with the US, Japan, Australia, France and Indian Ocean littoral states.</p>
+  </div>
+</section>
+
+<!-- ============ ANDAMAN ============ -->
+<section id="andaman">
+  <h2>Andaman &amp; Nicobar Command</h2><hr class="sec-rule">
+  <p>The Andaman &amp; Nicobar Islands sit closer to Southeast Asia than to the Indian mainland — barely 90 nautical miles from Indonesia at the closest point — placing them directly astride the approaches to the Strait of Malacca. The <strong>Andaman &amp; Nicobar Command</strong> (2001) is India's only tri-service theatre command, integrating Army, Navy, Air Force and Coast Guard assets under a single commander, and is often cited as the template for the wider theatrisation reform now under discussion for the rest of the armed forces.</p>
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>Strategic value</h4>
+      <p>Air and naval bases here can monitor and, in a crisis, interdict traffic approaching Malacca — a standing point of leverage often discussed as a counter to China's "Malacca dilemma".</p>
+    </div>
+    <div class="panel red-top">
+      <h4>Constraints</h4>
+      <p>Infrastructure (runways, jetties, fuel storage) has historically lagged the islands' strategic importance, though upgrades have accelerated since the 2010s. <span class="tag verify">Re-verify</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PART II ================= -->
+<div class="part-head"><p>Part II · Contested waters</p><h2>Seas, threats and rivals</h2></div>
+
+<!-- ============ ARABIAN SEA ============ -->
+<section id="arabiansea">
+  <h2>The Arabian Sea and the western seaboard</h2><hr class="sec-rule">
+  <p>The Arabian Sea connects India to the Gulf, the source of most of its energy imports and home to a large Indian expatriate population whose remittances matter to the economy. It is also the route by which most seaborne terrorist and smuggling threats against India's west coast have historically travelled, including the boats used in the 26 November 2008 Mumbai attacks. India maintains a continuous naval presence here, including in the Gulf of Oman and near the Strait of Hormuz, both to protect shipping and to be able to evacuate Indian citizens from Gulf crises — as it did during the 1990 Gulf War (Operation Ghar Wapsi-era evacuations) and again during regional flare-ups since.</p>
+  <div class="edge">
+    <span class="edge-h">A recurring mission: hostage and piracy response</span>
+    <p>Indian warships escorted merchant shipping and freed hijacked vessels off Somalia through the 2010s as part of international anti-piracy patrols, and in early 2024 an Indian warship (INS Kolkata) intervened after Houthi attacks on a merchant vessel in the Gulf of Aden — the kind of unglamorous, high-frequency mission that dominates actual naval operations, more than headline war scenarios do.</p>
+  </div>
+</section>
+
+<!-- ============ BAY OF BENGAL ============ -->
+<section id="bayofbengal">
+  <h2>The Bay of Bengal and the eastern seaboard</h2><hr class="sec-rule">
+  <p>The Bay of Bengal links India to Bangladesh, Myanmar, Sri Lanka and, through the Andaman Sea, to Southeast Asia and the approaches to Malacca. It has become a more active zone of cooperation in the last decade: BIMSTEC (Bay of Bengal Initiative for Multi-Sectoral Technical and Economic Cooperation) groups India with its eastern littoral neighbours, and the Bay is central to India's "Act East" connectivity projects, including the Kaladan Multi-Modal Transit Transport Project linking north-east India to Myanmar's Sittwe port.</p>
+  <div class="grid two">
+    <div class="panel gold-top">
+      <h4>Cooperation</h4>
+      <p>Bangladesh, Sri Lanka and India run joint coastal-surveillance and hydrography programmes; Sri Lanka's ports (Colombo, Hambantota, Trincomalee) sit directly on India's southern maritime approach.</p>
+    </div>
+    <div class="panel red-top">
+      <h4>Friction</h4>
+      <p>Chinese-funded port and infrastructure projects in Bangladesh, Myanmar and Sri Lanka have raised Indian concerns about dual-use access, discussed further in the China section below.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COASTAL SECURITY ============ -->
+<section id="coastal">
+  <h2>Piracy, terrorism and coastal security</h2><hr class="sec-rule">
+  <p class="lede">The <strong>26/11 Mumbai attacks (2008)</strong>, carried out by ten terrorists who arrived by sea after hijacking an Indian fishing trawler, are the defining case study in India's coastal-security failures and the reforms that followed.</p>
+  <ul class="timeline">
+    <li><span class="yr">2008</span><span>26/11 attacks expose gaps between Navy, Coast Guard, state marine police and intelligence agencies.</span></li>
+    <li><span class="yr">2009</span><span>Coastal Security Scheme strengthened; the Indian Navy designated overall authority for coastal defence.</span></li>
+    <li><span class="yr">2009</span><span>Coastal radar chain project launched to cover the entire coastline with static sensors.</span></li>
+    <li><span class="yr">2010s</span><span>Sagar Prahari Bal (Navy) and expanded Coast Guard patrol craft strength for close-coast surveillance.</span></li>
+    <li><span class="yr">Ongoing</span><span>Registration of fishing boats and biometric identity cards for fishermen, still incomplete in places. <span class="tag verify">Re-verify</span></span></li>
+  </ul>
+  <div class="note">
+    <p><strong>Somali piracy, in brief.</strong> Piracy off Somalia peaked around 2010–2011 and was suppressed by a combination of international naval patrols (including India's), armed guards on merchant ships and onshore stabilisation — a template regularly cited for the more recent Red Sea/Houthi shipping crisis, though the underlying causes (a land conflict versus a state actor) differ sharply. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<!-- ============ CHINA ============ -->
+<section id="china">
+  <h2>China's footprint in the Indian Ocean</h2><hr class="sec-rule">
+  <p>China's growing presence in the Indian Ocean Region is the single most discussed maritime security concern in Indian strategic circles. The "String of Pearls" is a Western/Indian analytical term (not a Chinese one) for a network of ports and facilities built or funded by China across the region — commercial by design, but with potential dual-use military value.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Contested ports and facilities</caption>
+      <thead><tr><th>Location</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Gwadar, Pakistan</strong></td><td>Chinese-built deep-water port, part of the China-Pakistan Economic Corridor; widely seen as a future dual-use facility. <span class="tag interp">Interpretation</span></td></tr>
+        <tr><td><strong>Hambantota, Sri Lanka</strong></td><td>Leased to a Chinese state company for 99 years in 2017 after Sri Lanka struggled to service the debt — the case most often cited (and contested) as "debt-trap diplomacy". <span class="tag disputed">Disputed</span></td></tr>
+        <tr><td><strong>Djibouti</strong></td><td>China's first overseas military base (2017), at the mouth of the Red Sea near Bab-el-Mandeb.</td></tr>
+        <tr><td>Kyaukpyu, Myanmar</td><td>Chinese-backed deep-water port and pipeline terminus, part of the China-Myanmar Economic Corridor.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge red">
+    <span class="edge-h">How seriously to take "debt-trap diplomacy"</span>
+    <p><span class="tag disputed">Disputed</span> Some scholars argue the Hambantota case reflects Sri Lanka's own borrowing and governance failures more than a deliberate Chinese strategy; others point to a consistent pattern across several countries. Present both readings rather than asserting either as settled fact — a good example of the "tag" system in practice.</p>
+  </div>
+  <p>Chinese naval activity in the region — submarine deployments to Karachi and Colombo, research/survey vessels tracked near Indian waters, and regular anti-piracy task-force rotations off the Horn of Africa since 2008 — is closely monitored by India's Information Fusion Centre (see Partnerships, below).</p>
+</section>
+
+<!-- ================= PART III ================= -->
+<div class="part-head"><p>Part III · Capability and economy</p><h2>Fighting and sustaining at sea</h2></div>
+
+<!-- ============ SUBMARINES ============ -->
+<section id="submarines">
+  <h2>Submarines and the undersea contest</h2><hr class="sec-rule">
+  <p class="lede">Submarines are widely seen as India's most serious capability gap in the maritime domain — numbers have declined even as China's undersea fleet has grown.</p>
+  <ul>
+    <li><strong>Conventional fleet:</strong> six Kalvari-class (French Scorpene design, built at Mazagon Dock) delivered from 2017; ageing Russian Kilo-class (Sindhughosh-class) and German HDW boats nearing retirement.</li>
+    <li><strong>Project 75(I):</strong> a long-delayed follow-on programme for six new submarines with air-independent propulsion (longer underwater endurance), still in the contracting stage. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Strategic submarines:</strong> INS Arihant (2016) and INS Arighaat (2024) give India a sea-based leg of its nuclear triad; a third and further boats are reported to be under construction. <span class="tag verify">Re-verify</span></li>
+    <li><strong>China's undersea presence:</strong> port calls and reported deployments by Chinese submarines to Pakistan and Sri Lanka since 2014 have driven much of India's investment in anti-submarine warfare.</li>
+  </ul>
+  <div class="edge gold">
+    <span class="edge-h">Why this gap matters more than headline numbers suggest</span>
+    <p><span class="tag interp">Interpretation</span> Submarines are the most effective platform for both deterrence and sea denial in a narrow, choke-point-heavy ocean like this one. A fleet that is shrinking in relative terms weakens India's ability to threaten an adversary's shipping in a crisis — arguably a bigger strategic problem than fighter-squadron shortages.</p>
+  </div>
+</section>
+
+<!-- ============ CARRIERS ============ -->
+<section id="carriers">
+  <h2>Aircraft carriers and naval aviation</h2><hr class="sec-rule">
+  <p>India operates two aircraft carriers — INS Vikramaditya (a converted Russian carrier, commissioned 2013) and the indigenously built <strong>INS Vikrant</strong>, commissioned on 2 September 2022, only the sixth country to design and build a carrier of this size. A Rafale-M order (2025) for Vikrant's air wing followed years of trials against the Swedish Gripen and other contenders. <span class="tag verify">Re-verify</span></p>
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>The case for carriers</h4>
+      <p>Mobile air power that does not depend on a foreign country granting basing or overflight rights — valuable across a vast ocean where India's own land bases cannot reach every chokepoint.</p>
+    </div>
+    <div class="panel red-top">
+      <h4>The case against</h4>
+      <p>Carriers are expensive, need large escort fleets, and are vulnerable to long-range anti-ship missiles — some analysts argue submarines and land-based aircraft give better value for the same money. <span class="tag interp">Interpretation</span></p>
+    </div>
+  </div>
+  <p>A third carrier has been debated for years without a firm decision — a useful example of how budget competition between the Navy, Army and Air Force plays out in practice. <span class="tag verify">Re-verify</span></p>
+</section>
+
+<!-- ============ PATROL ============ -->
+<section id="patrol">
+  <h2>Patrol, ASW, drones and domain awareness</h2><hr class="sec-rule">
+  <ul>
+    <li><strong>Maritime patrol aircraft:</strong> P-8I (Boeing, a variant used by only a handful of navies worldwide) fly long-range anti-submarine and surveillance missions from Indian bases across the whole Indian Ocean.</li>
+    <li><strong>Helicopters:</strong> MH-60R "Romeo" (US) for ship-based anti-submarine and anti-surface warfare, replacing older Sea King helicopters.</li>
+    <li><strong>Uncrewed systems:</strong> MQ-9B Sea Guardian/Predator drones (contracted 2024) for long-endurance maritime surveillance; smaller ship-launched drones for close-in reconnaissance. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Maritime domain awareness (MDA):</strong> a coastal radar chain, the National Command Control Communication and Intelligence (NC3I) network, and satellite tracking of shipping (AIS) feed a real-time picture to naval headquarters.</li>
+  </ul>
+  <div class="note">
+    <p><strong>Why MDA is now as important as weapons.</strong> Knowing where every ship, fishing boat and submarine contact is, in real time and shared with partners, does more to prevent both terrorism and great-power incidents than any single weapon system — the logic behind the Information Fusion Centre described below.</p>
+  </div>
+</section>
+
+<!-- ============ ENERGY ============ -->
+<section id="energy">
+  <h2>Energy security, SLOCs, ports and the blue economy</h2><hr class="sec-rule">
+  <p>India imports the large majority of its crude oil, most of it arriving by sea from the Gulf, Russia and, increasingly, the Americas — making the security of Sea Lines of Communication (SLOCs) a direct economic-security issue, not an abstract one. Any prolonged disruption at Hormuz or in the Red Sea raises freight and insurance costs and can move fuel prices within weeks.</p>
+  <div class="grid two">
+    <div class="panel green-top">
+      <h4>Ports and connectivity</h4>
+      <p>The Sagarmala programme (2015) modernises Indian ports and coastal shipping; Chabahar port in Iran (developed with Indian investment) gives India a land-sea route into Afghanistan and Central Asia bypassing Pakistan.</p>
+    </div>
+    <div class="panel gold-top">
+      <h4>The blue economy</h4>
+      <p>Fisheries, offshore energy, seabed minerals (including deep-sea polymetallic nodules explored under a UN framework) and coastal tourism are increasingly framed as economic pillars alongside security ones, under India's Blue Economy policy framework. <span class="tag verify">Re-verify</span></p>
+    </div>
+  </div>
+  <p><span class="tag interp">Interpretation</span> Energy security in this domain is less about any single chokepoint failing than about diversification — more suppliers, more routes and larger strategic petroleum reserves all reduce the leverage any one disruption can exert.</p>
+</section>
+
+<!-- ================= PART IV ================= -->
+<div class="part-head"><p>Part IV · Partnerships</p><h2>Institutions and diplomacy</h2></div>
+
+<!-- ============ PARTNERSHIPS ============ -->
+<section id="partnerships">
+  <h2>QUAD, IORA and India's maritime partnerships</h2><hr class="sec-rule">
+  <ul>
+    <li><strong>Exercise Malabar:</strong> begun as a bilateral India-US naval exercise in 1992, joined by Japan in 2015 and made quadrilateral with Australia's return in 2020 — now the most visible symbol of QUAD naval cooperation.</li>
+    <li><strong>QUAD</strong> (India, US, Japan, Australia) launched the <strong>Indo-Pacific Partnership for Maritime Domain Awareness (IPMDA)</strong> in 2022, sharing satellite-based tracking of "dark" (transponder-off) shipping with Indian Ocean and Pacific partners.</li>
+    <li><strong>IORA</strong> (Indian Ocean Rim Association), founded 1997, groups over 20 littoral states for economic and maritime-safety cooperation — a forum, not an alliance, and one where China is a "dialogue partner" but not a member.</li>
+    <li><strong>Information Fusion Centre – Indian Ocean Region (IFC-IOR),</strong> set up in December 2018 at Gurugram, hosts liaison officers from dozens of partner navies to share shipping and threat data in real time.</li>
+    <li><strong>Bilateral logistics agreements</strong> (LEMOA with the US, 2016; similar agreements with France, Japan, Australia and others) let Indian ships refuel and resupply at partner bases across the ocean, extending reach without needing India's own bases everywhere.</li>
+  </ul>
+  <div class="edge blue">
+    <span class="edge-h">Partnership without alliance</span>
+    <p><span class="tag interp">Interpretation</span> India deliberately keeps QUAD focused on non-traditional security (HADR, maritime domain awareness, technology) rather than a formal collective-defence pact, consistent with its long-standing preference for strategic autonomy even as practical cooperation with the US and its allies deepens.</p>
+  </div>
+</section>
+
+<!-- ============ KNOWLEDGE TOOLKIT ============ -->
+<div class="part-head"><p>Knowledge toolkit</p><h2>Perspectives, practice and revision</h2></div>
+
+<section id="perspectives">
+  <h2>Perspectives, controversies, lesser-known facts</h2><hr class="sec-rule">
+  <ul>
+    <li><span class="tag interp">Interpretation</span> Is China's Indian Ocean presence primarily commercial (protecting trade routes and citizens) or primarily strategic (encircling India)? Both readings have serious proponents; Chinese naval deployments have grown alongside, not instead of, commercial interests.</li>
+    <li><span class="tag disputed">Disputed</span> "Debt-trap diplomacy" as a deliberate Chinese strategy versus a consequence of recipient countries' own governance and borrowing choices — see the Hambantota discussion above.</li>
+    <li><span class="tag fact">Established</span> India's Navy is the only one of the three services that entered the 21st century already majority-indigenised in shipbuilding, even though weapons, sensors and engines remain substantially imported.</li>
+    <li><span class="tag interp">Interpretation</span> Whether a third aircraft carrier is worth the investment compared to more submarines, land-based missiles or satellites remains one of the most genuinely contested debates inside India's own naval establishment.</li>
+    <li><span class="tag fact">Established</span> — a lesser-known fact — the 1971 naval missile-boat attacks on Karachi (Operation Trident) used Soviet-supplied Osa-class boats and were India's first use of anti-ship missiles in combat, years before most Western navies had similar experience.</li>
+  </ul>
+</section>
+
+<section id="scenarios">
+  <h2>Scenarios and India's strategic options</h2><hr class="sec-rule">
+  <p class="lede">Presented neutrally, without recommending a single course of action.</p>
+  <div class="grid two">
+    <div class="panel red-top">
+      <h4>Scenario: a Hormuz or Red Sea closure</h4>
+      <p>A prolonged closure or heavy attack risk in either chokepoint would raise freight and insurance costs sharply and could require the Navy to escort Indian-flagged or Indian-linked shipping, as it already does on a smaller scale in the Gulf of Aden and Red Sea.</p>
+    </div>
+    <div class="panel blue-top">
+      <h4>Scenario: a Taiwan Strait crisis</h4>
+      <p>A conflict or blockade near Taiwan would likely disrupt shipping through the South China Sea and Malacca, indirectly affecting Indian trade and potentially drawing QUAD navies into a wider crisis-response posture even without direct Indian involvement.</p>
+    </div>
+  </div>
+  <h3>Options under discussion</h3>
+  <ul>
+    <li>Accelerate submarine and anti-submarine investment relative to surface combatants and a third carrier.</li>
+    <li>Expand Andaman &amp; Nicobar basing and infrastructure to strengthen leverage near Malacca.</li>
+    <li>Deepen IFC-IOR and IPMDA data-sharing with more littoral states, including some also courted by China.</li>
+    <li>Balance strategic autonomy with QUAD naval cooperation as China's presence in the region grows.</li>
+  </ul>
+</section>
+
+<section id="qbank">
+  <h2>Practice bank: questions</h2><hr class="sec-rule">
+  <p class="lede">Fourteen questions. Answer each aloud, standing, in ninety seconds.</p>
+  <ol class="qbank">
+    <li>Why is the Indian Ocean more important to India's economy than its name alone suggests?</li>
+    <li>Name the five major chokepoints of the Indian Ocean and explain why any one of them matters to India.</li>
+    <li>What was the Indian Navy's role in the 1971 war, and why is it considered a model operation?</li>
+    <li>Explain SAGAR. Is it a doctrine, a diplomatic framework, or both?</li>
+    <li>Why is the Andaman &amp; Nicobar Command described as a template for wider theatrisation?</li>
+    <li>What lessons did the 26/11 attacks teach about coastal security, and how completely have they been addressed?</li>
+    <li>Explain the "String of Pearls" concept. Is it a Chinese strategy or an Indian/Western analytical label?</li>
+    <li>Present both sides of the Hambantota port "debt-trap" debate.</li>
+    <li>Why are submarines considered India's most serious maritime capability gap?</li>
+    <li>What is the case for and against a third Indian aircraft carrier?</li>
+    <li>What is the Information Fusion Centre – Indian Ocean Region, and why does it matter?</li>
+    <li>How has Exercise Malabar evolved since 1992, and what does that evolution say about QUAD?</li>
+    <li>Why does India avoid framing QUAD as a military alliance?</li>
+    <li>If Hormuz were closed for a month, trace the likely economic and strategic consequences for India.</li>
+  </ol>
+</section>
+
+<section id="debate">
+  <h2>Debate motions</h2><hr class="sec-rule">
+  <ol class="dbank">
+    <li>This house believes India should prioritise submarines over aircraft carriers.</li>
+    <li>This house believes China's Indian Ocean presence is primarily commercial, not strategic.</li>
+    <li>This house believes QUAD should become a formal maritime security alliance.</li>
+    <li>This house believes "debt-trap diplomacy" is a myth that obscures recipient countries' own failures.</li>
+    <li>This house believes India's strategic autonomy is incompatible with deeper QUAD naval integration.</li>
+    <li>This house believes coastal security reforms since 26/11 remain dangerously incomplete.</li>
+    <li>This house believes energy diversification matters more than naval power for India's energy security.</li>
+  </ol>
+</section>
+
+<section id="chronology">
+  <h2>Master chronology</h2><hr class="sec-rule">
+  <ul class="timeline">
+    <li><span class="yr">c.1000s</span><span>Chola dynasty naval expeditions project Indian power into Southeast Asia.</span></li>
+    <li><span class="yr">1498</span><span>Vasco da Gama reaches Calicut, opening two centuries of European maritime contest for the Indian Ocean trade.</span></li>
+    <li><span class="yr">1947</span><span>Royal Indian Navy divided at Partition; India inherits a small coastal force.</span></li>
+    <li><span class="yr">1961</span><span>The original INS Vikrant, India's first aircraft carrier, is commissioned.</span></li>
+    <li><span class="yr">1971</span><span>Operations Trident and Python strike Karachi; the Eastern Fleet blockades East Pakistan.</span></li>
+    <li><span class="yr">1992</span><span>Exercise Malabar begins as a bilateral India-US naval exercise.</span></li>
+    <li><span class="yr">1997</span><span>Indian Ocean Rim Association (IORA) founded.</span></li>
+    <li><span class="yr">2001</span><span>Andaman &amp; Nicobar Command, India's first tri-service theatre command, established.</span></li>
+    <li><span class="yr">2008</span><span>26/11 Mumbai attacks; Somali piracy peaks, drawing Indian naval anti-piracy patrols.</span></li>
+    <li><span class="yr">2013</span><span>INS Vikramaditya, the refitted Russian carrier, commissioned.</span></li>
+    <li><span class="yr">2015</span><span>Prime Minister Modi announces the SAGAR doctrine; Japan joins Exercise Malabar.</span></li>
+    <li><span class="yr">2016</span><span>INS Arihant achieves its first deterrence patrol, completing India's nuclear triad; LEMOA signed with the US.</span></li>
+    <li><span class="yr">2017</span><span>Hambantota port leased to a Chinese state company for 99 years; China opens its Djibouti base.</span></li>
+    <li><span class="yr">2018</span><span>Information Fusion Centre – Indian Ocean Region (IFC-IOR) established at Gurugram.</span></li>
+    <li><span class="yr">2020</span><span>Australia rejoins Exercise Malabar, making it a quadrilateral QUAD exercise.</span></li>
+    <li><span class="yr">2022</span><span>INS Vikrant, India's first indigenously built aircraft carrier, commissioned (2 September).</span></li>
+    <li><span class="yr">2022</span><span>QUAD launches the Indo-Pacific Partnership for Maritime Domain Awareness (IPMDA).</span></li>
+    <li><span class="yr">2023–24</span><span>Houthi attacks on Red Sea shipping draw Indian naval escort and interdiction missions in the Gulf of Aden.</span></li>
+    <li><span class="yr">2024</span><span>INS Arighaat, India's second nuclear-powered ballistic-missile submarine, commissioned.</span></li>
+  </ul>
+</section>
+
+<section id="glossary">
+  <h2>Glossary</h2><hr class="sec-rule">
+  <dl class="term">
+    <dt>SLOC</dt><dd>Sea Line of Communication — a maritime route along which trade, military supplies or reinforcements move.</dd>
+    <dt>SAGAR</dt><dd>Security and Growth for All in the Region — India's 2015 framework for engagement with the Indian Ocean littoral.</dd>
+    <dt>String of Pearls</dt><dd>An Indian/Western analytical term for a network of Chinese-linked ports and facilities across the Indian Ocean; not a term China itself uses.</dd>
+    <dt>IORA</dt><dd>Indian Ocean Rim Association — a 20-plus-member forum for economic and maritime cooperation among Indian Ocean littoral states.</dd>
+    <dt>IFC-IOR</dt><dd>Information Fusion Centre – Indian Ocean Region, based at Gurugram, sharing maritime domain awareness data among partner navies.</dd>
+    <dt>QUAD</dt><dd>The Quadrilateral Security Dialogue among India, the United States, Japan and Australia.</dd>
+    <dt>IPMDA</dt><dd>Indo-Pacific Partnership for Maritime Domain Awareness — a QUAD initiative sharing satellite-based ship-tracking data.</dd>
+    <dt>Malacca dilemma</dt><dd>China's own term for its strategic vulnerability from dependence on the narrow, easily monitored Strait of Malacca for trade and energy imports.</dd>
+    <dt>Net security provider</dt><dd>A description of a state whose naval capacity exceeds its own needs, allowing it to provide security services (anti-piracy, disaster relief, surveillance) to a wider region.</dd>
+    <dt>Air-independent propulsion (AIP)</dt><dd>Submarine technology that lets a conventional submarine stay submerged far longer than battery power alone allows.</dd>
+    <dt>Blue economy</dt><dd>Sustainable economic use of ocean resources — fisheries, offshore energy, tourism and seabed minerals — alongside conventional maritime security.</dd>
+    <dt>Sagarmala</dt><dd>India's 2015 programme to modernise ports and port-linked infrastructure and reduce logistics costs.</dd>
+    <dt>Mission-based deployment</dt><dd>The Indian Navy's post-2017 practice of keeping ships continuously stationed at key chokepoints rather than patrolling only reactively.</dd>
+  </dl>
+</section>
+
+<section id="revision">
+  <h2>Rapid revision sheet</h2><hr class="sec-rule">
+  <div class="note">
+    <h4>The one-page version</h4>
+    <ul>
+      <li>India's coastline (7,516 km) and EEZ (~2.02M km²) sit astride the sea lanes linking the Gulf to East Asia — geography is India's core maritime advantage.</li>
+      <li>Five chokepoints to know cold: Hormuz, Bab-el-Mandeb, Malacca, Sunda/Lombok, Mozambique Channel.</li>
+      <li>1971 (Operations Trident/Python, the Eastern Fleet blockade) is the Navy's defining historical case study.</li>
+      <li>SAGAR (2015) is India's doctrine label for the Indian Ocean — cooperative, not alliance-based.</li>
+      <li>26/11 (2008) reshaped coastal security; gaps in fishing-boat registration and coordination remain.</li>
+      <li>China's footprint — Gwadar, Hambantota, Djibouti, Kyaukpyu — is the most-discussed contemporary issue; present both the "strategic encirclement" and "commercial + governance failure" readings.</li>
+      <li>Submarines, not carriers, are the most commonly cited capability gap; INS Vikrant (2022) and Arighaat (2024) are the flagship recent inductions either way.</li>
+      <li>QUAD/Malabar/IPMDA/IFC-IOR are the institutional architecture of India's Indo-Pacific maritime diplomacy — know what each one actually does.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer>
+  <p>Compiled from open sources. Study aid only, not an official publication.</p>
+  <p>Source &amp; contributions: <a href="https://github.com/mohitkushwaha0601/matre">github.com/mohitkushwaha0601/matre</a></p>
+</footer>
+
+</body>
+</html>
