@@ -23,7 +23,7 @@ Read the two **highest-numbered** files in `materials/` (currently `7.*` and `8.
 
 Look specifically for:
 - The CSS custom properties block in `:root` (light) and the two duplicated dark-mode blocks (`@media (prefers-color-scheme: dark)` and `:root[data-theme="dark"]`)
-- The component class names in use: `.hero`, `.flagstrip`/`.f1`-`.f8`, `.hero-inner`, `.kicker`/`.motto`+`.motto-en`, `.stamp`, `.shell`, `.toc-mobile` + `nav.toc` with `.part` group headers, `.part-head`, `section > h2` + `.sec-rule`, `.lede`, `.edge` (+ `.gold`/`.blue`/`.green`), `.note`, `.panel` (+ `-top` colour variants), `.timeline` + `.yr`, `.qbank`, `.grid.two`/`.grid.three` + `.card`, `.tablewrap` + `table`, `.tag` (+ `.fact`/`.interp`/`.disputed`/`.verify`), `dl.rungs`, `@media print`
+- The component class names in use: `.hero`, `.flagstrip`/`.f1`-`.f8`, `.hero-inner`, `.kicker`/`.motto`+`.motto-en`, `.stamp`, `.shell`, `.toc-mobile` + `nav.toc` with `.part` group headers, `.part-head`, `section > h2` + `.sec-rule`, `.lede`, `.edge` (+ `.gold`/`.blue`/`.green`), `.note`, `.panel` (+ `-top` colour variants), `.timeline` + `.yr`, `.qbank`, `.grid.two`/`.grid.three` + `.card`, `.tablewrap` + `table`, `.tag` (+ `.fact`/`.interp`/`.disputed`/`.verify`), `dl.rungs`, `.home-btn`, `@media print`
 - Whether the newest files introduce any pattern not yet in the reference doc — if so, prefer what you find in the files.
 
 ### 2. Establish the topic brief
@@ -46,13 +46,14 @@ Every existing file reuses the same variable *names* (`--ink`, `--ink-soft`, `--
 
 Start from [the template skeleton](./assets/handbook-template.html) — copy it, then fill in every placeholder in `{{DOUBLE_BRACES}}`. Required structure, top to bottom:
 
-1. `<head>`: title, meta description (one sentence summarising scope), Google Fonts preconnect + IBM Plex Sans/Zilla Slab import, full `<style>` block
-2. `.hero`: `.flagstrip`, `.kicker` (or `.motto`+`.motto-en` epigraph if the doc wants one, matching files 7–8's pattern), `<h1>`, `.hero-sub`, `.stamp` with 4–6 key stats
-3. `.shell` containing:
+1. `<head>`: title, meta description (one sentence summarising scope), Google Fonts preconnect + IBM Plex Sans/Zilla Slab import, full `<style>` block (including the `.home-btn` rules — copy them verbatim from the template, they use hardcoded colours, not theme variables)
+2. Immediately after `<body>`, before `.hero`: the fixed `.home-btn` link back to `../index.html` — copy the anchor markup verbatim from the template (same SVG, same `href="../index.html"`, same label "Home"). Every handbook page must have this so a reader can get back to the collection homepage from anywhere.
+3. `.hero`: `.flagstrip`, `.kicker` (or `.motto`+`.motto-en` epigraph if the doc wants one, matching files 7–8's pattern), `<h1>`, `.hero-sub`, `.stamp` with 4–6 key stats
+4. `.shell` containing:
    - `<details class="toc-mobile" open>` → `<nav class="toc">` with `<li class="part">` group headers and one `<li><a href="#id">` per section — every href must have a matching `<section id>` later in the document
    - `<main>` with all `<section>` elements, each `<h2>` + `<hr class="sec-rule">`, grouped under `.part-head` dividers (`<p>PART LABEL</p><h2>Part title</h2>`) — with the **18–22 section budget** spread over roughly 3–4 parts (e.g. background/history, core subject-matter, strategic analysis, SSB toolkit), not 6–8 parts
-4. Required closing sections, in this order, mirroring every existing handbook's "Knowledge toolkit" part, kept intentionally short: one combined section for competing perspectives/controversies/lesser-known facts, one for scenarios and India's strategic options (presented neutrally), a `qbank` of **12–15** practice questions, **6–8** debate motions, a master chronology (`.timeline`), a glossary, and a concise rapid-revision sheet. Skip a separate lecturette-topics section and a multi-brief "framework applied" section — fold one short worked example into the answer-framework section instead of four.
-5. `<footer>` matching the existing disclaimer + GitHub link pattern
+5. Required closing sections, in this order, mirroring every existing handbook's "Knowledge toolkit" part, kept intentionally short: one combined section for competing perspectives/controversies/lesser-known facts, one for scenarios and India's strategic options (presented neutrally), a `qbank` of **12–15** practice questions, **6–8** debate motions, a master chronology (`.timeline`), a glossary, and a concise rapid-revision sheet. Skip a separate lecturette-topics section and a multi-brief "framework applied" section — fold one short worked example into the answer-framework section instead of four.
+6. `<footer>` matching the existing disclaimer + GitHub link pattern
 
 Use `.edge` for single high-value callouts, `.panel` (optionally with `dl.rungs` inside for a define→locate→establish→contest→analyse→test→position→concede→close style worked example) for structured analysis blocks, `.grid.two`/`.grid.three` + `.card` for comparative or biographical items, `.tablewrap`+`table` for structured data, `.tag` with `fact`/`interp`/`disputed`/`verify` on any contested figures — this is the established way this repo distinguishes fact from interpretation on sensitive geopolitical topics.
 
@@ -61,6 +62,7 @@ Keep everything in one self-contained `.html` file: inline `<style>`, no externa
 ### 6. Validate
 
 - Run [get_errors](#tool:get_errors) style check (or otherwise visually diff) — confirm every TOC `href="#x"` has a matching `id="x"`, tags are balanced, and there's exactly one `<h1>`.
+- Confirm the `.home-btn` link is present right after `<body>` and points to `../index.html` (relative to `materials/`, so it resolves correctly wherever the repo is hosted).
 - Skim for neutral framing on contested political/military claims (use the `tag` system rather than asserting disputed numbers as fact).
 
 ### 7. Update `index.html`
@@ -80,5 +82,6 @@ Tell the user the new file path, the section count, and summarise the `index.htm
 ## Constraints
 
 - Never change the *meaning* of shared class names across documents (e.g. don't repurpose `.edge` for something other than a callout) even though colours/content differ per file — that consistency of semantics, not identical colours, is what "same design philosophy" means in this repo.
+- Every handbook page must include the fixed `.home-btn` link back to `../index.html`, placed immediately after `<body>`. Use the same markup and hardcoded colours as the template so it looks and behaves identically across every file regardless of that file's own palette.
 - Don't introduce a CSS framework, JS bundler, or external stylesheet — every handbook is a single portable HTML file.
 - Preserve the established neutral, both-sides tone on India-related strategic/political topics, and always close with SSB-oriented material (questions, debate topics, scenarios, revision sheet), per `further.md`/`prompt.md`.

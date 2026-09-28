@@ -18,6 +18,8 @@ file 7 adds `dl.rungs`/`.ladder`/`.dbank`).
   <style> ... all CSS inline ... </style>
 </head>
 <body>
+  <a class="home-btn" href="../index.html" aria-label="Back to Handbooks homepage">Home</a>
+
   <header class="hero">
     <div class="flagstrip" aria-hidden="true"> <span class="f1">...<span class="f8"> </div>
     <div class="hero-inner">
@@ -116,7 +118,8 @@ uses two or three of them, since shared components reference all four.
 | `.tag` (+ `.fact`/`.interp`/`.disputed`/`.verify`) | Inline pill labelling a claim's evidentiary status | Core to neutral treatment of contested figures |
 | `.term` | Definition list glossary | `<dt>` term + `<dd>` definition |
 | `figure`/`svg.svg-*` | Inline hand-drawn SVG maps/diagrams | Optional; only where a real geographic/organisational diagram adds value |
-| `@media print` | Print stylesheet | Hides `.flagstrip`/`.toc-mobile`, forces page breaks before `.part-head`, avoids breaking `.panel`/`.edge`/`.note`/`.tablewrap`/`figure` |
+| `.home-btn` | Fixed pill button, top-left, on every page | `position:fixed`, hardcoded dark colours (not theme variables) so it reads consistently regardless of the page's palette or light/dark mode; `href="../index.html"`; hidden in `@media print` |
+| `@media print` | Print stylesheet | Hides `.flagstrip`/`.toc-mobile`/`.home-btn`, forces page breaks before `.part-head`, avoids breaking `.panel`/`.edge`/`.note`/`.tablewrap`/`figure` |
 
 ## Typical closing "Knowledge toolkit" part
 
