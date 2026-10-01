@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>India & Its Neighbours — SSB Geopolitics Brief</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Barlow+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<style>
+:root{
+  --olive:#3D4A2D;--olive-l:#5A6B3E;--khaki:#C8B87A;--sand:#E8DFC4;
+  --sand-l:#F5F0E8;--ink:#1A1C18;--ink-m:#3A3D35;--red:#8B1A1A;
+  --teal:#1A4A4A;--teal-l:#2A6A6A;--amber:#B07820;--white:#FAFAF7;--muted:#7A7D72;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit;}
+html{scroll-padding-top:env(safe-area-inset-top,0px);}
+body{margin:0;font-family:'EB Garamond',Georgia,serif;background:var(--sand-l);color:var(--ink);line-height:1.7;font-size:17px;}
+
+.masthead{background:var(--olive);color:#fff;padding:52px 40px 40px;position:relative;overflow:hidden;}
+.masthead::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 40px,rgba(255,255,255,.03) 40px,rgba(255,255,255,.03) 41px);}
+.mh{max-width:960px;margin:0 auto;position:relative;}
+.mh-tag{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:600;letter-spacing:3px;color:var(--khaki);margin-bottom:16px;text-transform:uppercase;}
+.mh h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(36px,7vw,72px);font-weight:800;line-height:.95;margin:0 0 18px;letter-spacing:-1px;}
+.mh h1 em{display:block;font-style:italic;font-family:'EB Garamond',serif;font-size:.52em;font-weight:400;color:var(--khaki);letter-spacing:0;margin-bottom:4px;}
+.mh-sub{font-size:15px;color:rgba(255,255,255,.75);max-width:520px;line-height:1.5;margin-bottom:24px;}
+.badge{display:inline-block;background:var(--red);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;padding:5px 14px;text-transform:uppercase;}
+
+.snav{position:sticky;top:0;z-index:500;background:var(--ink);padding:0 28px;overflow-x:auto;white-space:nowrap;}
+.snav a{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:600;letter-spacing:1.5px;color:rgba(255,255,255,.6);text-decoration:none;padding:13px 14px;text-transform:uppercase;transition:color .2s;}
+.snav a:hover{color:var(--khaki);}
+
+.ctr{max-width:960px;margin:0 auto;padding:0 28px;}
+.sec{padding:48px 0 0;}
+.sec-lbl{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:3.5px;color:var(--muted);text-transform:uppercase;margin-bottom:5px;}
+.sec h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(24px,4.5vw,40px);font-weight:800;color:var(--olive);margin:0 0 24px;line-height:1.05;}
+
+/* MAP SECTION */
+.map-section{background:var(--white);border-top:4px solid var(--olive);padding:24px 28px;margin-bottom:4px;}
+.map-section.red-top{border-top-color:var(--red);}
+.map-section.teal-top{border-top-color:var(--teal);}
+.map-section h3{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;color:var(--olive);margin:0 0 4px;}
+.map-section .msub{font-size:13px;color:var(--muted);font-style:italic;margin:0 0 16px;}
+
+.map-2col{display:grid;grid-template-columns:3fr 2fr;gap:24px;align-items:start;}
+.map-2col.even{grid-template-columns:1fr 1fr;}
+
+/* D3 MAP */
+.d3-wrap{position:relative;width:100%;background:#C8DDE8;overflow:hidden;}
+.d3-wrap svg{display:block;width:100%;height:auto;}
+
+/* Tooltip */
+.map-tt{position:absolute;pointer-events:none;background:var(--ink);color:#fff;padding:10px 14px;font-family:'Barlow Condensed',sans-serif;font-size:12px;line-height:1.45;max-width:240px;z-index:100;border-left:3px solid var(--khaki);opacity:0;transition:opacity .12s;}
+.map-tt .tt-title{font-size:14px;font-weight:700;margin-bottom:3px;color:var(--khaki);}
+.map-tt .tt-tag{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:5px;}
+.map-tt .tt-body{font-size:11px;color:rgba(255,255,255,.85);line-height:1.5;}
+.map-tt .tt-ssb{margin-top:7px;padding:6px 8px;background:rgba(200,184,122,.15);border-left:2px solid var(--khaki);font-size:10px;font-style:italic;color:rgba(255,255,255,.7);}
+
+/* Concept panels */
+.concepts{background:var(--sand-l);padding:20px 22px;}
+.concepts h4{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:var(--olive);margin:0 0 14px;}
+.ci{border-left:3px solid var(--khaki);padding:8px 0 8px 12px;margin-bottom:10px;}
+.ci.r{border-left-color:var(--red);}
+.ci.t{border-left-color:var(--teal-l);}
+.ci.a{border-left-color:var(--amber);}
+.ci .ct{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;color:var(--ink);margin-bottom:2px;}
+.ci p{font-size:12px;color:var(--ink-m);margin:0;line-height:1.45;}
+
+/* Legend */
+.mleg{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;}
+.mleg-i{display:flex;align-items:center;gap:5px;font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--muted);}
+.mleg-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0;}
+.mleg-line{width:20px;height:0;flex-shrink:0;}
+
+/* CARDS */
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2px;margin-bottom:2px;}
+.cc{background:var(--white);padding:22px 22px 18px;border-top:4px solid var(--olive-l);}
+.cc.r{border-top-color:var(--red);}
+.cc.t{border-top-color:var(--teal);}
+.cc.a{border-top-color:var(--amber);}
+.cc .fl{font-size:26px;margin-bottom:7px;display:block;}
+.cc h3{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;color:var(--ink);margin:0 0 3px;}
+.rtag{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:11px;display:block;}
+.rtag.h{color:var(--red);}
+.rtag.c{color:var(--amber);}
+.rtag.f{color:var(--teal-l);}
+.rtag.s{color:var(--olive-l);}
+.cc p{font-size:13px;line-height:1.5;color:var(--ink-m);margin:0 0 12px;}
+.kp{list-style:none;padding:0;margin:0;}
+.kp li{font-size:12px;line-height:1.45;color:var(--ink-m);padding:3px 0 3px 15px;position:relative;border-bottom:1px solid rgba(0,0,0,.05);}
+.kp li:last-child{border-bottom:none;}
+.kp li::before{content:'▸';position:absolute;left:0;color:var(--khaki);font-size:9px;top:5px;}
+.tbl{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-top:12px;margin-bottom:4px;display:block;}
+.tbr{height:5px;background:var(--sand);width:100%;overflow:hidden;}
+.tbr div{height:100%;background:linear-gradient(90deg,var(--olive-l),var(--red));}
+
+/* STRATEGY */
+.srow{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:2px;}
+.sp{background:var(--ink);color:#fff;padding:22px;}
+.sp.l{background:var(--white);color:var(--ink);}
+.sp h4{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;color:var(--khaki);margin:0 0 8px;text-transform:uppercase;}
+.sp.l h4{color:var(--olive);}
+.sp p{font-size:12.5px;line-height:1.6;margin:0;color:rgba(255,255,255,.82);}
+.sp.l p{color:var(--ink-m);}
+
+/* SSB */
+.ssb{background:var(--red);color:#fff;padding:32px;}
+.ssb h3{font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:800;margin:0 0 20px;}
+.qgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.q{background:rgba(255,255,255,.1);padding:14px 16px;}
+.q p{font-size:12px;line-height:1.45;margin:0 0 6px;color:rgba(255,255,255,.9);font-style:italic;}
+.q .ql{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.5);text-transform:uppercase;}
+.q .qa{font-size:11.5px;color:rgba(255,255,255,.65);margin-top:5px;font-style:normal;line-height:1.45;}
+
+/* GD */
+.gd{background:var(--teal);color:#fff;padding:26px 30px;margin-top:2px;}
+.gd h3{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;color:var(--khaki);margin:0 0 16px;}
+.gdt{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:9px;}
+.gdi{border:1px solid rgba(200,184,122,.3);padding:11px 13px;}
+.gdi .gt{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;color:var(--khaki);margin-bottom:4px;}
+.gdi p{font-size:11px;color:rgba(255,255,255,.75);margin:0;line-height:1.4;}
+
+/* TIMELINE */
+.tline{position:relative;padding-left:24px;margin:18px 0;}
+.tline::before{content:'';position:absolute;left:6px;top:0;bottom:0;width:2px;background:var(--khaki);}
+.tli{position:relative;margin-bottom:15px;}
+.tli::before{content:'';position:absolute;left:-20px;top:7px;width:8px;height:8px;background:var(--khaki);border-radius:50%;}
+.tly{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;color:var(--olive-l);margin-bottom:1px;}
+.tli p{font-size:13px;color:var(--ink-m);margin:0;line-height:1.45;}
+
+/* OB */
+.ob{background:var(--olive);color:#fff;padding:26px 30px;margin:40px 0 0;border-left:5px solid var(--khaki);}
+.ob h3{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;color:var(--khaki);text-transform:uppercase;margin:0 0 9px;}
+.ob p{margin:0;font-size:14px;line-height:1.65;color:rgba(255,255,255,.88);}
+
+.dvdr{height:2px;background:linear-gradient(90deg,var(--khaki),transparent);margin:40px 0;}
+.tkwy{background:var(--olive);color:#fff;padding:36px;margin:40px 0 0;text-align:center;}
+.tkwy .tl2{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:3px;color:var(--khaki);text-transform:uppercase;margin-bottom:12px;}
+.tkwy blockquote{font-family:'EB Garamond',serif;font-size:clamp(17px,3.2vw,24px);font-style:italic;color:#fff;max-width:640px;margin:0 auto 16px;line-height:1.45;}
+.tkwy .ts{font-family:'Barlow Condensed',sans-serif;font-size:11px;color:rgba(255,255,255,.5);letter-spacing:2px;text-transform:uppercase;}
+footer{background:var(--ink);color:rgba(255,255,255,.4);padding:18px 40px;text-align:center;font-size:11px;font-family:'Barlow Condensed',sans-serif;letter-spacing:1.5px;text-transform:uppercase;}
+
+@media(max-width:680px){
+  .masthead{padding:34px 18px 26px;}
+  .ctr{padding:0 14px;}
+  .map-2col,.map-2col.even,.srow,.qgrid{grid-template-columns:1fr;}
+  .ssb,.gd,.ob,.tkwy{padding:20px 16px;}
+}
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="mh">
+    <div class="mh-tag">SSB Preparation Series · Geopolitics Module · D3 Map Edition</div>
+    <h1><em>India &amp; Its Neighbours</em>Strategic<br>Geopolitics<br>Brief</h1>
+    <p class="mh-sub">Vector maps rendered with real geographic data (Natural Earth via TopoJSON) — accurate borders, terrain, and annotated hotspots. Hover any marker for SSB-ready analysis.</p>
+    <span class="badge">SSB Ready · Vector Maps</span>
+  </div>
+</div>
+
+<nav class="snav">
+  <a href="#overview">Overview</a>
+  <a href="#kashmir">Kashmir &amp; LoC</a>
+  <a href="#lac">China &amp; LAC</a>
+  <a href="#iocean">Indian Ocean</a>
+  <a href="#neighbours">Neighbours</a>
+  <a href="#doctrines">Doctrines</a>
+  <a href="#ssb">SSB Prep</a>
+</nav>
+
+<div class="ctr">
+  <div class="ob">
+    <h3>Why This Matters for SSB</h3>
+    <p>An officer posted in any theatre — from Siachen to the Andaman Sea — must understand the strategic calculus behind every relationship. Study these maps until the geography feels instinctive. SSB evaluators want you to <em>think like a strategist</em>, not just recite facts.</p>
+  </div>
+</div>
+
+<!-- MAP 1 -->
+<div class="ctr" id="overview">
+  <div class="sec">
+    <div class="sec-lbl">Map 1 of 4 · Strategic Overview</div>
+    <h2>South Asia: India's Neighbourhood</h2>
+  </div>
+</div>
+<div style="max-width:960px;margin:0 auto;padding:0 28px;">
+  <div class="map-2col">
+    <div class="map-section" style="padding:20px;">
+      <h3>Political Overview — South Asia</h3>
+      <p class="msub">Hover markers for details. Built with D3.js + Natural Earth geographic data.</p>
+      <div class="d3-wrap" id="map1-wrap">
+        <div class="map-tt" id="tt1"></div>
+      </div>
+      <div class="mleg" style="margin-top:10px;">
+        <div class="mleg-i"><div class="mleg-dot" style="background:#8B1A1A;opacity:.7"></div>Hostile</div>
+        <div class="mleg-i"><div class="mleg-dot" style="background:#B07820;opacity:.7"></div>Complex</div>
+        <div class="mleg-i"><div class="mleg-dot" style="background:#1A4A4A;opacity:.7"></div>Strategic</div>
+        <div class="mleg-i"><div class="mleg-dot" style="background:#3D7A1A;opacity:.65"></div>India</div>
+        <div class="mleg-i"><div class="mleg-line" style="border-top:2px dashed #FFD700;"></div>LoC (schematic)</div>
+        <div class="mleg-i"><div class="mleg-line" style="border-top:2px dashed #FF6B6B;"></div>LAC (schematic)</div>
+      </div>
+    </div>
+    <div class="concepts">
+      <h4>Key Concepts</h4>
+      <div class="ci r"><div class="ct">Two-Front Threat</div><p>Pakistan (west) + China (north): both nuclear-armed, both cooperating (CPEC). India's theatre command reforms are a direct response to this dual threat.</p></div>
+      <div class="ci a"><div class="ct">Chicken's Neck (Siliguri)</div><p>~22 km wide corridor connecting Northeast India to mainland. Between Nepal and Bangladesh. India's most critical geographic vulnerability — must never be severed.</p></div>
+      <div class="ci t"><div class="ct">Buffer State Strategy</div><p>Nepal and Bhutan are India's strategic buffers. Doklam (2017) — India intervened in Bhutanese territory because it was too close to the Siliguri Corridor.</p></div>
+      <div class="ci r"><div class="ct">Disputed Territories</div><p>Pakistan claims all of J&K. China claims Arunachal Pradesh and holds Aksai Chin (since 1962). India's position: both are integral — non-negotiable.</p></div>
+      <div class="ci"><div class="ct">SSB Angle</div><p>Know where Depsang, Shaksgam Valley, and Chumbi Valley are. These are the next potential flashpoints — named locations signal strategic awareness to evaluators.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- MAP 2 -->
+<div class="ctr" id="kashmir">
+  <div class="sec">
+    <div class="sec-lbl">Map 2 of 4 · Western Theatre</div>
+    <h2>Kashmir: The World's Most Dangerous Flashpoint</h2>
+  </div>
+</div>
+<div style="max-width:960px;margin:0 auto;padding:0 28px;">
+  <div class="map-2col">
+    <div class="map-section red-top" style="padding:20px;">
+      <h3>Line of Control &amp; Key Zones</h3>
+      <p class="msub">776 km ceasefire line — not an internationally recognised border. Hover markers for analysis.</p>
+      <div class="d3-wrap" id="map2-wrap">
+        <div class="map-tt" id="tt2"></div>
+      </div>
+      <div class="mleg" style="margin-top:10px;">
+        <div class="mleg-i"><div class="mleg-dot" style="background:#E74C3C;opacity:.5"></div>Pakistan-controlled (PoK)</div>
+        <div class="mleg-i"><div class="mleg-dot" style="background:#E74C3C;opacity:.25"></div>China-held (Aksai Chin)</div>
+        <div class="mleg-i"><div class="mleg-line" style="border-top:2.5px dashed #FFD700;"></div>LoC (schematic)</div>
+        <div class="mleg-i"><div class="mleg-line" style="border-top:2px dashed #9B59B6;"></div>CPEC route</div>
+      </div>
+    </div>
+    <div class="concepts">
+      <h4>Kashmir — Core Concepts</h4>
+      <div class="ci r"><div class="ct">Why Kashmir is Unresolved</div><p>Maharaja Hari Singh's Instrument of Accession (Oct 1947) after Pakistani tribal invasion. Pakistan never accepted it. Nehru's UN referral — widely seen as a strategic error.</p></div>
+      <div class="ci r"><div class="ct">Article 370 Abrogation (2019)</div><p>J&K bifurcated into two UTs. Pakistan downgraded ties, suspended trade. China objected. Constitutionally contested but strategically decisive.</p></div>
+      <div class="ci a"><div class="ct">CPEC Through PoK</div><p>China-Pakistan Economic Corridor passes through Gilgit-Baltistan (India's claim). CPEC legitimises Pakistan's occupation and builds permanent Chinese infrastructure in disputed territory.</p></div>
+      <div class="ci t"><div class="ct">Nuclear Threshold</div><p>Pakistan's Nasr tactical missile was designed to deter India's Cold Start. Any large-scale Indian conventional response risks Pakistan crossing the nuclear threshold.</p></div>
+      <div class="ci"><div class="ct">SSB Angle</div><p>"Would you want to be posted in J&K?" — Show genuine eagerness, terrain awareness, and strategic maturity. Never reluctance, never blind aggression.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- MAP 3 -->
+<div class="ctr" id="lac">
+  <div class="sec">
+    <div class="sec-lbl">Map 3 of 4 · Northern Theatre</div>
+    <h2>The Line of Actual Control: India's China Problem</h2>
+  </div>
+</div>
+<div style="max-width:960px;margin:0 auto;padding:0 28px;">
+  <div class="map-2col">
+    <div class="map-section red-top" style="padding:20px;">
+      <h3>LAC — 3,488 km of Ambiguity</h3>
+      <p class="msub">Never formally demarcated. Both sides have different perceptions — this ambiguity is itself the source of conflict.</p>
+      <div class="d3-wrap" id="map3-wrap">
+        <div class="map-tt" id="tt3"></div>
+      </div>
+      <div class="mleg" style="margin-top:10px;">
+        <div class="mleg-i"><div class="mleg-line" style="border-top:2px dashed #FF6B6B;"></div>LAC (schematic)</div>
+        <div class="mleg-i"><div class="mleg-dot" style="background:#E74C3C"></div>China-aggressor flashpoint</div>
+        <div class="mleg-i"><div class="mleg-dot" style="background:#3498DB"></div>Key terrain / lake</div>
+        <div class="mleg-i"><div class="mleg-dot" style="background:#3D7A1A"></div>India strategic asset</div>
+        <div class="mleg-i"><div class="mleg-dot" style="background:#9B59B6"></div>Water / dam threat</div>
+      </div>
+    </div>
+    <div class="concepts">
+      <h4>China Border — Key Concepts</h4>
+      <div class="ci r"><div class="ct">Why LAC is Never "Resolved"</div><p>Never formally surveyed or demarcated. Both nations have different maps. Every patrol is a potential confrontation. China exploits this ambiguity deliberately through grey-zone incursions.</p></div>
+      <div class="ci r"><div class="ct">Salami Slicing</div><p>Taking territory in tiny, individually insignificant slices so no single act justifies military response. Depsang, Galwan, Pangong — each was a slice. Cumulative effect: permanent status quo change.</p></div>
+      <div class="ci a"><div class="ct">Infrastructure Race</div><p>China built world-class roads, villages, and airstrips in Tibet over decades. India's BRO is racing to catch up: Atal Tunnel, DBO road, Z-Morh Tunnel, Sela Tunnel. Roads = response time.</p></div>
+      <div class="ci t"><div class="ct">Brahmaputra as a Weapon</div><p>China's Motuo Dam (60 GW) on Yarlung Tsangpo. Controlled water releases could flood Assam or deny irrigation — a strategic weapon requiring zero military mobilisation.</p></div>
+      <div class="ci"><div class="ct">India's Counter</div><p>Agni-V ICBM (covers all of China), BrahMos on LAC, BRO fast-tracking, QUAD, trade decoupling, arming China's neighbours (Vietnam, Philippines).</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- MAP 4 -->
+<div class="ctr" id="iocean">
+  <div class="sec">
+    <div class="sec-lbl">Map 4 of 4 · Maritime Theatre</div>
+    <h2>Indian Ocean Region: The Encirclement Game</h2>
+  </div>
+</div>
+<div style="max-width:960px;margin:0 auto;padding:0 28px;">
+  <div class="map-2col">
+    <div class="map-section teal-top" style="padding:20px;">
+      <h3>String of Pearls vs. India's SAGAR Doctrine</h3>
+      <p class="msub">China's port network vs. India's maritime security strategy. 80% of world oil trade passes through this ocean.</p>
+      <div class="d3-wrap" id="map4-wrap">
+        <div class="map-tt" id="tt4"></div>
+      </div>
+      <div class="mleg" style="margin-top:10px;">
+        <div class="mleg-i"><div class="mleg-dot" style="background:#E74C3C"></div>Chinese port (Pearl node)</div>
+        <div class="mleg-i"><div class="mleg-dot" style="background:#3D7A1A"></div>India maritime asset</div>
+        <div class="mleg-i"><div class="mleg-dot" style="background:#B07820"></div>Contested / shifting</div>
+        <div class="mleg-i"><div class="mleg-dot" style="background:#FFD700"></div>Strategic chokepoint</div>
+        <div class="mleg-i"><div class="mleg-line" style="border-top:2px dashed #FFD700;"></div>Critical SLOC</div>
+        <div class="mleg-i"><div class="mleg-line" style="border-top:2px dashed #E74C3C;"></div>String of Pearls</div>
+      </div>
+    </div>
+    <div class="concepts">
+      <h4>Indian Ocean — Key Concepts</h4>
+      <div class="ci r"><div class="ct">String of Pearls</div><p>China's port network (Gwadar → Colombo → Chittagong → Kyaukpyu) encircling India. Commercial now, potentially military later. The infrastructure is being built before the intent is declared.</p></div>
+      <div class="ci a"><div class="ct">Malacca Dilemma</div><p>80% of China's oil passes through Malacca — which India flanks with Andaman & Nicobar Command. China can't fight India and secure its oil simultaneously. Hence Gwadar (west bypass) and Kyaukpyu (east bypass).</p></div>
+      <div class="ci t"><div class="ct">SAGAR Doctrine</div><p>Security And Growth for All in the Region (2015). Make India the preferred security partner for Indian Ocean islands. Counter to BRI without naming it.</p></div>
+      <div class="ci r"><div class="ct">QUAD's Maritime Role</div><p>QUAD is fundamentally a maritime alliance: freedom of navigation, shared domain awareness (tracking Chinese ships), interoperability. US Pacific Fleet as de facto counterweight.</p></div>
+      <div class="ci"><div class="ct">SSB GD Angle</div><p>"Militarise Andaman & Nicobar?" — India's most powerful card. But full militarisation complicates ASEAN relations. Calibrated upgrading keeps China guessing without alarming neighbours.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- COUNTRY CARDS -->
+<div class="ctr" id="neighbours">
+  <div class="sec"><div class="sec-lbl">Country Profiles</div><h2>India's 8 Critical Relationships</h2></div>
+</div>
+<div style="padding:0 28px;max-width:960px;margin:0 auto;">
+  <div class="cgrid">
+    <div class="cc r"><span class="fl">🇵🇰</span><h3>Pakistan</h3><span class="rtag h">Hostile / Contested</span><p>Three wars, nuclear overhang, LoC, and ISI-sponsored cross-border terrorism. Balakot airstrike (2019) permanently changed India's deterrence posture.</p><ul class="kp"><li>Kashmir core dispute; Art.370 abrogation (2019) escalated tensions</li><li>CPEC through PoK — India's formal UN objection</li><li>Nasr tactical nukes designed to deter India's Cold Start Doctrine</li><li>Trade suspended; diplomatic ties downgraded post-2019</li></ul><span class="tbl">Tension</span><div class="tbr"><div style="width:92%"></div></div></div>
+    <div class="cc r"><span class="fl">🇨🇳</span><h3>China</h3><span class="rtag h">Strategic Rival</span><p>3,488 km undemarcated LAC. 1962 War legacy. Galwan 2020. Salami-slicing. String of Pearls. Brahmaputra dam threat. Long-term structural rival.</p><ul class="kp"><li>Galwan 2020: 20 Indian soldiers martyred — worst since 1967</li><li>String of Pearls encircling India in Indian Ocean</li><li>Motuo Dam: upstream Brahmaputra leverage</li><li>Counter: Agni-V, BrahMos on LAC, QUAD, BRO roads</li></ul><span class="tbl">Tension</span><div class="tbr"><div style="width:83%"></div></div></div>
+    <div class="cc a"><span class="fl">🇳🇵</span><h3>Nepal</h3><span class="rtag c">Historically Close / Strained</span><p>Deep "Roti-Beti" ties. Kalapani dispute and China's BRI have strained this once-bedrock relationship.</p><ul class="kp"><li>Kalapani-Lipulekh dispute (2020): Nepal's map claimed Indian territory</li><li>~32,000 Nepalese serve in Indian Army Gorkha regiments</li><li>2015 blockade fallout: Lasting resentment, China pivot</li><li>Nepal signed BRI — India's buffer-state anxiety grows</li></ul><span class="tbl">Tension</span><div class="tbr"><div style="width:46%"></div></div></div>
+    <div class="cc"><span class="fl">🇧🇹</span><h3>Bhutan</h3><span class="rtag s">Strategic Buffer State</span><p>India handles Bhutan's defense. Chumbi Valley is the most dangerous geographic point near India's Chicken's Neck.</p><ul class="kp"><li>India-Bhutan Friendship Treaty — India's security guarantee</li><li>Doklam 2017: India intervened; 73-day standoff</li><li>China-Bhutan direct border talks — India watching</li><li>India imports ~70% of Bhutan's hydroelectricity</li></ul><span class="tbl">Tension</span><div class="tbr"><div style="width:18%"></div></div></div>
+    <div class="cc t"><span class="fl">🇧🇩</span><h3>Bangladesh</h3><span class="rtag f">Complex Friendship</span><p>India created Bangladesh in 1971. Sheikh Hasina ouster (2024) created strategic uncertainty for India's Northeast connectivity corridor.</p><ul class="kp"><li>Teesta River water-sharing: Unsigned for 15+ years</li><li>Sheikh Hasina ouster (Aug 2024): Realignment risk</li><li>Critical for Northeast India transit access</li><li>Illegal immigration: Assam/Bengal — domestic issue</li></ul><span class="tbl">Tension</span><div class="tbr"><div style="width:40%"></div></div></div>
+    <div class="cc a"><span class="fl">🇲🇲</span><h3>Myanmar</h3><span class="rtag c">Unstable Neighbour</span><p>2021 coup → civil war → refugee inflow into Mizoram and Manipur. China filling strategic vacuum. India must engage junta or lose influence.</p><ul class="kp"><li>Civil war: Refugee inflow into Northeast India</li><li>NSCN nexus with Indian insurgent groups</li><li>Kaladan Multimodal Project: India's connectivity lifeline</li><li>India fencing the border — reversed free movement policy</li></ul><span class="tbl">Tension</span><div class="tbr"><div style="width:54%"></div></div></div>
+    <div class="cc t"><span class="fl">🇱🇰</span><h3>Sri Lanka</h3><span class="rtag f">Recovering / Strategic</span><p>Hambantota Port (China, 99-yr lease). India's 2022 economic rescue rebuilt goodwill. Sri Lanka recalibrating but can't abandon China's investment.</p><ul class="kp"><li>2022 crisis: India's USD 4 billion support — diplomatic reset</li><li>Tamil Nadu fishermen dispute: Recurring friction</li><li>Hambantota: China's most strategically placed Pearl</li><li>Trincomalee: India negotiating port access</li></ul><span class="tbl">Tension</span><div class="tbr"><div style="width:28%"></div></div></div>
+    <div class="cc a"><span class="fl">🇲🇻</span><h3>Maldives</h3><span class="rtag c">Tilting / Recovering</span><p>"India Out" under Muizzu (2023). Troops withdrawn (March 2024). China agreements signed. Economic compulsions pulling Maldives back (2025).</p><ul class="kp"><li>Indian military personnel withdrawn; civilian technicians remain</li><li>Controls critical Indian Ocean SLOC</li><li>India's leverage: Tourism, fuel, food, medicine</li><li>Lakshadweep: India's strategic and tourism counter</li></ul><span class="tbl">Tension</span><div class="tbr"><div style="width:50%"></div></div></div>
+  </div>
+</div>
+
+<!-- DOCTRINES -->
+<div class="ctr" id="doctrines">
+  <div class="sec"><div class="sec-lbl">Policy &amp; Doctrine</div><h2>India's Strategic Doctrines</h2></div>
+</div>
+<div style="padding:0 28px;max-width:960px;margin:0 auto;">
+  <div class="srow">
+    <div class="sp"><h4>Cold Start Doctrine</h4><p>India's limited-war doctrine vs. Pakistan. Swift, shallow penetration into Pakistani territory before international pressure forces a ceasefire — denying Pakistan the "nuclear threshold" justification. Operationalised through Integrated Battle Groups (IBGs).</p></div>
+    <div class="sp l"><h4>Neighbourhood First Policy</h4><p>Launched by PM Modi (2014). Prioritises SAARC neighbours in foreign policy. Aims to reduce China's influence by making India the preferred partner in South Asia through connectivity, economic aid, and cultural exchange.</p></div>
+  </div>
+  <div class="srow">
+    <div class="sp l"><h4>SAGAR Doctrine</h4><p>Security And Growth for All in the Region (2015). Keeps the Indian Ocean free, open, and prosperous. Counters String of Pearls by building security partnerships with island nations — Maldives, Mauritius, Seychelles, Sri Lanka, Madagascar.</p></div>
+    <div class="sp"><h4>Strategic Autonomy</h4><p>India refuses to join any military alliance while maintaining deep partnerships with the US, Russia, France, and others. Participates in QUAD while keeping the Russian S-400. The art of keeping all options open simultaneously.</p></div>
+  </div>
+  <div class="srow">
+    <div class="sp"><h4>Act East Policy</h4><p>Deepening engagement with ASEAN, SE Asia, and East Asia. Counters China's influence via Kaladan project, BIMSTEC, and Vietnam defence ties — India arming China's neighbours without formally announcing it.</p></div>
+    <div class="sp l"><h4>Two-Front War Preparedness</h4><p>India's military prepares for simultaneous conflict on the western (Pakistan) and northern (China) fronts. Galwan 2020 accelerated this: faster BRO roads, forward deployments, integrated theatre commands, Agni-V deployment.</p></div>
+  </div>
+</div>
+
+<!-- SSB -->
+<div style="padding:0 28px;max-width:960px;margin:32px auto 0;" id="ssb">
+  <div class="ssb">
+    <h3>SSB Officer's Corner</h3>
+    <div class="qgrid">
+      <div class="q"><p>"Biggest security threat — Pakistan or China?"</p><div class="ql">Model Answer Cue</div><div class="qa">Both — differently. China is the long-term structural challenge; Pakistan is immediate friction. India prepares for both simultaneously. Show dual-front complexity.</div></div>
+      <div class="q"><p>"Was the Balakot airstrike the right decision?"</p><div class="ql">Model Answer Cue</div><div class="qa">It permanently changed India's deterrence posture — targeted, proportionate, not an act of war. The key was measured response. Avoid both uncritical praise and second-guessing.</div></div>
+      <div class="q"><p>"What is the Malacca Dilemma?"</p><div class="ql">Model Answer Cue</div><div class="qa">80% of China's oil passes through Malacca — flanked by India's Andaman & Nicobar Command. India's strategic leverage over China's energy security. Must remain a credible threat.</div></div>
+      <div class="q"><p>"Should India maintain No-First-Use nuclear policy?"</p><div class="ql">Model Answer Cue</div><div class="qa">NFU is India's stated doctrine. But Pakistan's Nasr tactical nukes challenge it. Show you understand the tension between NFU's diplomatic value and military limitations.</div></div>
+      <div class="q"><p>"How to respond to China's salami-slicing?"</p><div class="ql">Model Answer Cue</div><div class="qa">Counter-salami-slicing: match every patrol, build infrastructure faster, maintain forward presence. Diplomatically: raise costs through QUAD, trade decoupling, arming China's neighbours.</div></div>
+      <div class="q"><p>"Is QUAD an alliance against China?"</p><div class="ql">Model Answer Cue</div><div class="qa">India's official position: not an alliance, not against any country. But acknowledge the reality: China's assertiveness is why it was revived in 2017. Show the gap between diplomatic language and strategic intent.</div></div>
+    </div>
+  </div>
+  <div class="gd">
+    <h3>Group Discussion Topics</h3>
+    <div class="gdt">
+      <div class="gdi"><div class="gt">QUAD vs Non-Alignment</div><p>Is QUAD a compromise of strategic autonomy? QUAD offers security; non-alignment offers flexibility and Russia ties.</p></div>
+      <div class="gdi"><div class="gt">Water Wars in South Asia</div><p>Brahmaputra (China), Teesta (Bangladesh), Indus (Pakistan). Water as a geopolitical weapon — India's strategic options.</p></div>
+      <div class="gdi"><div class="gt">Militarise Andaman & Nicobar?</div><p>India's most powerful maritime card. Strategic gains vs. diplomatic costs with ASEAN — where is the right balance?</p></div>
+      <div class="gdi"><div class="gt">SAARC vs BIMSTEC</div><p>SAARC paralysed by Pakistan. Should India fully pivot to BIMSTEC as primary regional architecture?</p></div>
+      <div class="gdi"><div class="gt">India-China: Trade &amp; Rivalry</div><p>$120 billion bilateral trade alongside territorial conflict. Can two nuclear-armed rivals trade and compete without war?</p></div>
+      <div class="gdi"><div class="gt">Article 370: Gains &amp; Costs</div><p>Did abrogation strengthen India's Kashmir position or create new strategic vulnerabilities (China-Pakistan alignment)?</p></div>
+    </div>
+  </div>
+  <div class="tkwy">
+    <div class="tl2">Officer's Key Takeaway</div>
+    <blockquote>"Geography doesn't change. But who controls it does — inch by inch, port by port, patrol by patrol. An officer's job is to ensure that when history judges these decades, India's borders were defended not just by bravery, but by strategic clarity."</blockquote>
+    <div class="ts">SSB Geopolitics Brief · India &amp; Neighbours · 2025–26</div>
+  </div>
+</div>
+
+<footer>SSB Geopolitics Brief · D3 Vector Map Edition · Geographic data: Natural Earth · For Study Purposes Only</footer>
+
+<script>
+// ── SHARED TOOLTIP ──
+function showTT(ttEl, x, y, wrapEl, title, tag, body, ssb) {
+  ttEl.innerHTML = `<div class="tt-title">${title}</div><div class="tt-tag">${tag}</div><div class="tt-body">${body}</div>${ssb?`<div class="tt-ssb">🎯 SSB: ${ssb}</div>`:''}`;
+  const rect = wrapEl.getBoundingClientRect();
+  let lx = x + 14, ly = y + 14;
+  if (lx + 250 > wrapEl.offsetWidth) lx = x - 254;
+  if (ly + 150 > wrapEl.offsetHeight) ly = y - 160;
+  ttEl.style.left = lx + 'px';
+  ttEl.style.top = ly + 'px';
+  ttEl.style.opacity = '1';
+}
+function hideTT(ttEl) { ttEl.style.opacity = '0'; }
+
+// ── COUNTRY COLOURS ──
+const cColors = {
+  'India': '#3D7A1A', 'Pakistan': '#8B1A1A', 'China': '#8B1A1A',
+  'Nepal': '#B07820', 'Bhutan': '#2E7D32', 'Bangladesh': '#1A5276',
+  'Myanmar': '#B07820', 'Sri Lanka': '#1A5276', 'Maldives': '#B07820',
+  'Afghanistan': '#6B8E4E', 'Iran': '#6B8E4E', 'default': '#9E9E9E'
+};
+
+const cInfo = {
+  'India':      {tag:'Home Nation',        body:'Population 1.4B. World\'s largest democracy. Nuclear-armed. 7 land neighbours. Strategic autonomy as core doctrine.'},
+  'Pakistan':   {tag:'Hostile',            body:'Nuclear-armed. Military-dominated. ISI sponsors cross-border terrorism. 3 wars with India. Kargil 1999, Pulwama 2019.',     ssb:'Know nuclear overhang — Pakistan\'s Nasr missile targets India\'s Cold Start Doctrine.'},
+  'China':      {tag:'Strategic Rival',    body:'3,488 km undemarcated LAC. Galwan 2020 (20 soldiers martyred). Salami-slicing strategy. String of Pearls in Indian Ocean.',  ssb:'Long-term structural challenge. Know all three LAC sectors: Western, Middle, Eastern.'},
+  'Nepal':      {tag:'Complex',            body:'Kalapani-Lipulekh dispute (2020). Signed BRI. But ~32,000 Nepalese still serve in Indian Army\'s Gorkha regiments.',          ssb:'Buffer state being contested. Know the Kalapani issue — India built a road, Nepal updated its map.'},
+  'Bhutan':     {tag:'Strategic Buffer',   body:'India\'s defense treaty partner. Critical buffer. Doklam 2017 — China tried to build road in Bhutan\'s territory, India stopped it.', ssb:'Know why Doklam matters: Chinese road would overlook Siliguri Corridor.'},
+  'Bangladesh': {tag:'Complex Friendship', body:'India created Bangladesh in 1971. Teesta River dispute unresolved. Sheikh Hasina ousted Aug 2024 — strategic uncertainty.',   ssb:'Critical for Northeast India\'s connectivity. Teesta water dispute is the key friction point.'},
+  'Myanmar':    {tag:'Unstable',           body:'2021 military coup → civil war → refugee crisis. India shares 1,643 km border. China filling strategic vacuum.',               ssb:'India\'s dilemma: engage junta to prevent Chinese dominance, or support democracy and lose influence.'},
+  'Sri Lanka':  {tag:'Recovering',         body:'Hambantota Port (China, 99-yr lease). India\'s 2022 economic crisis rescue rebuilt goodwill. Tamil Nadu fishermen dispute.',    ssb:'Hambantota Port sits ~22 km from India\'s maritime boundary. China\'s most strategically placed Pearl.'},
+  'Maldives':   {tag:'Tilting',            body:'"India Out" campaign → Indian troops withdrawn March 2024. China agreements signed. Economic compulsions pulling back in 2025.',ssb:'Straddles critical SLOC. India\'s Lakshadweep development is the strategic counter.'},
+};
+
+// ── LOAD WORLD TOPOJSON ──
+// Natural Earth 110m from CDN
+const TOPO_URL = 'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json';
+
+// Country ISO numeric codes we want to highlight
+const highlightISO = {
+  356:'India', 586:'Pakistan', 156:'China', 524:'Nepal',
+  64:'Bhutan', 50:'Bangladesh', 104:'Myanmar', 144:'Sri Lanka', 462:'Maldives'
+};
+
+// ── BUILD A MAP ──
+function buildMap(containerId, ttId, projection, width, height, extraDraw) {
+  const wrap = document.getElementById(containerId);
+  const ttEl = document.getElementById(ttId);
+  if (!wrap || !ttEl) return;
+
+  const svg = d3.select(wrap).append('svg')
+    .attr('viewBox', `0 0 ${width} ${height}`)
+    .attr('preserveAspectRatio', 'xMidYMid meet');
+
+  const path = d3.geoPath().projection(projection);
+
+  // Ocean
+  svg.append('rect').attr('width', width).attr('height', height).attr('fill', '#C8DDE8');
+
+  const g = svg.append('g');
+
+  d3.json(TOPO_URL).then(world => {
+    const countries = topojson.feature(world, world.objects.countries);
+    const meshBorders = topojson.mesh(world, world.objects.countries, (a,b) => a !== b);
+
+    // Draw countries
+    g.selectAll('path.country')
+      .data(countries.features)
+      .enter().append('path')
+      .attr('class', 'country')
+      .attr('d', path)
+      .attr('fill', d => {
+        const name = highlightISO[+d.id];
+        if (!name) return '#D4C9A8';
+        const c = cColors[name] || cColors.default;
+        return c + 'B0'; // ~69% opacity hex
+      })
+      .attr('stroke', '#fff')
+      .attr('stroke-width', 0.5)
+      .on('mousemove', function(event, d) {
+        const name = highlightISO[+d.id];
+        if (!name || !cInfo[name]) return;
+        const [mx, my] = d3.pointer(event, wrap);
+        showTT(ttEl, mx, my, wrap, name, cInfo[name].tag, cInfo[name].body, cInfo[name].ssb);
+      })
+      .on('mouseleave', () => hideTT(ttEl));
+
+    // Borders
+    g.append('path')
+      .datum(meshBorders)
+      .attr('d', path)
+      .attr('fill', 'none')
+      .attr('stroke', 'rgba(255,255,255,0.6)')
+      .attr('stroke-width', 0.5);
+
+    if (extraDraw) extraDraw(svg, g, path, wrap, ttEl);
+  }).catch(err => {
+    // Fallback: show error text
+    svg.append('text').attr('x', width/2).attr('y', height/2)
+      .attr('text-anchor','middle').attr('fill','#333').attr('font-size','14')
+      .text('Map loading…');
+  });
+
+  return {svg, path};
+}
+
+// ── MARKER HELPER ──
+function addMarker(g, proj, wrap, ttEl, lon, lat, color, radius, title, tag, body, ssb) {
+  const [x, y] = proj([lon, lat]);
+  if (!x || !y) return;
+  const grp = g.append('g').attr('cursor','pointer');
+  grp.append('circle')
+    .attr('cx', x).attr('cy', y).attr('r', radius + 2)
+    .attr('fill','rgba(255,255,255,0.6)').attr('stroke','none');
+  grp.append('circle')
+    .attr('cx', x).attr('cy', y).attr('r', radius)
+    .attr('fill', color).attr('stroke','#fff').attr('stroke-width', 1.5)
+    .on('mousemove', function(event) {
+      const [mx, my] = d3.pointer(event, wrap);
+      showTT(ttEl, mx, my, wrap, title, tag, body, ssb);
+    })
+    .on('mouseleave', () => hideTT(ttEl));
+}
+
+function addLine(g, proj, points, color, dash, width=1.5) {
+  const line = d3.line()
+    .x(d => proj(d)[0])
+    .y(d => proj(d)[1])
+    .defined(d => proj(d)[0] !== undefined);
+  g.append('path')
+    .datum(points)
+    .attr('d', line)
+    .attr('fill','none')
+    .attr('stroke', color)
+    .attr('stroke-width', width)
+    .attr('stroke-dasharray', dash || 'none')
+    .attr('opacity', 0.85);
+}
+
+// ═══════════════════════════
+// MAP 1 — SOUTH ASIA OVERVIEW
+// ═══════════════════════════
+const proj1 = d3.geoMercator().center([80, 23]).scale(700).translate([380, 300]);
+buildMap('map1-wrap', 'tt1', proj1, 760, 560, (svg, g, path, wrap, ttEl) => {
+
+  // LoC schematic
+  addLine(g, proj1, [
+    [74.9,37.1],[75.2,36.5],[75.7,35.9],[76.0,35.2],[76.2,34.9],[76.0,34.2],
+    [75.5,33.8],[74.8,33.4],[74.2,33.0],[74.0,32.5],[74.2,31.9]
+  ], '#FFD700', '7 4', 2);
+
+  // LAC schematic
+  addLine(g, proj1, [
+    [79.1,33.5],[79.5,33.8],[79.8,34.0],[79.3,33.2],[80.0,32.5],
+    [79.7,31.8],[79.3,31.2],[79.0,30.5],[78.7,29.8],[92.5,28.8],[93.0,28.5],[93.5,28.0],
+    [92.5,27.5],[92.0,27.0],[92.5,26.5],[93.5,26.0],[94.5,27.5],[95.5,27.8],[96.3,27.5]
+  ], '#FF6B6B', '6 4', 2);
+
+  // Capital markers
+  const caps = [
+    [77.2,28.6,'India','#3D7A1A','India — home nation. Nuclear-armed democracy. Strategic autonomy doctrine.'],
+    [73.1,33.7,'Pakistan','#8B1A1A','Pakistan — hostile. Nuclear-armed. ISI sponsors cross-border terrorism. 3 wars with India.','Know nuclear overhang — Nasr missile targets Cold Start Doctrine.'],
+    [116.4,39.9,'China','#8B1A1A','China — strategic rival. GDP $17T. Galwan 2020. String of Pearls. Salami-slicing the LAC.','Know all three LAC sectors: Western (Ladakh), Middle (HP-Uttarakhand), Eastern (Arunachal).'],
+    [85.3,27.7,'Nepal','#B07820','Nepal — complex. Kalapani dispute (2020). BRI signed. But Gurkhas still serve in Indian Army.','Know Kalapani: India built the Kailash-Mansarovar road; Nepal updated its map in response.'],
+    [89.6,27.5,'Bhutan','#2E7D32','Bhutan — critical buffer. India\'s defense treaty partner. Doklam 2017.','Doklam: A Chinese road there would overlook the Siliguri Corridor — 22 km from severing Northeast India.'],
+    [90.4,23.7,'Bangladesh','#1A5276','Bangladesh — complex friendship. India created it in 1971. Teesta dispute. Hasina ousted 2024.','Northeast India transit depends on Bangladesh. Teesta water sharing is the main friction point.'],
+    [96.2,19.7,'Myanmar','#B07820','Myanmar — unstable. 2021 coup → civil war. India shares 1,643 km border. China filling vacuum.','India must engage junta to prevent total Chinese dominance, while balancing domestic democratic values.'],
+    [79.8,6.9,'Sri Lanka','#1A5276','Sri Lanka — recovering. Hambantota Port (China, 99-yr lease). India\'s 2022 economic rescue.','Hambantota is China\'s most strategically placed Pearl — 22 km from India\'s maritime boundary.'],
+    [73.5,4.2,'Maldives','#B07820','Maldives — tilting. "India Out" campaign. Indian troops withdrawn March 2024.','Maldives straddles critical Indian Ocean SLOC. India is developing Lakshadweep as counter.'],
+  ];
+  caps.forEach(([lon,lat,name,col,body,ssb]) => {
+    addMarker(g, proj1, wrap, ttEl, lon, lat, col, 7, name, 'Country Capital', body, ssb);
+  });
+
+  // Key hotspots
+  const spots = [
+    [76.5,34.5,'Siachen Glacier','#E74C3C','Hotspot','World\'s highest battlefield (~6,000m). India holds it since Op Meghdoot (1984). 2,000+ soldiers lost mostly to weather. Costs ₹5 crore/day.','Know Op Meghdoot. Siachen controls Saltoro Ridge — prevents Pakistan-China junction in high Karakoram.'],
+    [87.0,26.8,'Siliguri Corridor','#E67E22','Critical Vulnerability','The "Chicken\'s Neck" — ~22 km wide, connects Northeast India (7 states + Sikkim). India\'s most critical geographic vulnerability.','If China occupies Chumbi Valley and Pakistan pushes east, this corridor is severed. That\'s why Doklam mattered.'],
+    [78.5,33.5,'Ladakh / LAC West','#C0392B','Active Flashpoint','Most active LAC sector. Galwan (2020), Depsang, Pangong Tso, Gogra-Hot Springs. Partial disengagement in 2024.','Galwan 2020: Col Santosh Babu led the patrol. 20 soldiers martyred in hand-to-hand combat.'],
+    [94.7,28.2,'Arunachal Pradesh','#C0392B','Contested Territory','China claims entire Arunachal as "South Tibet." Tawang Dec 2022 skirmish: PLA incursion repelled. India fast-tracking Sela Tunnel.','China renames villages in Arunachal periodically — India\'s MEA says invented names don\'t change ground reality.'],
+  ];
+  spots.forEach(([lon,lat,name,col,tag,body,ssb]) => {
+    addMarker(g, proj1, wrap, ttEl, lon, lat, col, 9, name, tag, body, ssb);
+  });
+});
+
+// ═══════════════════════════
+// MAP 2 — KASHMIR
+// ═══════════════════════════
+const proj2 = d3.geoMercator().center([76.5, 34.5]).scale(2800).translate([380, 280]);
+buildMap('map2-wrap', 'tt2', proj2, 760, 520, (svg, g, path, wrap, ttEl) => {
+
+  // Aksai Chin shading (polygon)
+  const aksai = [[78.5,35.8],[80.0,35.5],[80.5,34.8],[80.3,34.0],[79.2,33.8],[78.8,34.5],[78.5,35.0]];
+  const aksaiPath = d3.line().x(d=>proj2(d)[0]).y(d=>proj2(d)[1])(aksai) + 'Z';
+  g.append('path').attr('d', aksaiPath).attr('fill','#E74C3C').attr('opacity',0.25).attr('stroke','#E74C3C').attr('stroke-width',1).attr('stroke-dasharray','5 3');
+
+  // PoK shading
+  const pok = [[74.9,37.1],[76.5,37.3],[76.8,36.5],[76.2,35.8],[75.5,35.2],[74.8,35.0],[74.0,35.5],[73.5,36.0],[74.0,36.8]];
+  const pokPath = d3.line().x(d=>proj2(d)[0]).y(d=>proj2(d)[1])(pok) + 'Z';
+  g.append('path').attr('d', pokPath).attr('fill','#E74C3C').attr('opacity',0.3).attr('stroke','#E74C3C').attr('stroke-width',1).attr('stroke-dasharray','5 3');
+
+  // LoC
+  addLine(g, proj2, [
+    [74.9,37.1],[75.2,36.5],[75.7,35.9],[76.0,35.2],[76.2,34.9],[76.0,34.2],
+    [75.5,33.8],[74.8,33.4],[74.2,33.0],[74.0,32.5],[74.2,31.9]
+  ], '#FFD700', '8 5', 2.5);
+
+  // LAC western
+  addLine(g, proj2, [
+    [79.1,33.5],[79.5,33.8],[79.8,34.0],[79.3,33.2],[80.0,32.5],[79.7,31.8]
+  ], '#FF6B6B', '6 4', 2);
+
+  // CPEC
+  addLine(g, proj2, [
+    [74.8,37.0],[74.5,36.5],[74.2,36.0],[73.8,35.5],[73.5,35.0],[73.1,34.4],[72.5,33.8],[71.5,33.0]
+  ], '#9B59B6', '10 5', 2);
+
+  const kspots = [
+    [77.2,35.5,'Siachen Glacier','#E74C3C','Western Theatre — Hotspot','World\'s highest battlefield at ~6,000m. India holds since Op Meghdoot (April 1984). Controls the strategic Saltoro Ridge preventing Pakistan-China linkup.','Why India holds Siachen: Without it, Pakistan and China could link up in the high Karakoram. Strategically non-negotiable.'],
+    [76.3,34.5,'Daulat Beg Oldie (DBO)','#3D7A1A','India Strategic Asset','India\'s highest airstrip at 16,614 ft (5,065m). Strategic lifeline to Siachen and northern Ladakh. Used by C-130J Super Hercules.','DBO is critical: Without it, supplying Siachen requires days of road travel. China\'s Depsang activity threatens the road to DBO.'],
+    [78.4,33.8,'Pangong Tso Lake','#3498DB','Contested Terrain','134 km mountain lake at 4,350m straddling India-China LAC. India claimed to Finger 8; China to Finger 4. 2020 standoff, 2021 disengagement.','Finger 4-8 territory: India gave up forward patrol points for Chinese pullback. Contested whether India got a fair deal.'],
+    [75.8,34.7,'Kargil','#C0392B','1999 War Site','1999 Kargil War: Pakistan\'s NLI troops occupied Indian posts at 15,000-18,000 ft. Op Vijay recaptured all peaks by July 26 (Kargil Vijay Diwas). 527 Indian soldiers martyred.','Tactical lesson from Kargil: led to India\'s high-altitude warfare doctrine overhaul and Mountain Strike Corps creation.'],
+    [74.8,34.1,'Srinagar (Kashmir Valley)','#3D7A1A','J&K Capital','Summer capital of J&K UT. Kashmir Valley — the strategic prize. Population ~1.2 million. Article 370 abrogation (Aug 2019) changed its political status.','Post-370: J&K UT (with legislature) and Ladakh UT (without legislature). J&K statehood restoration still pending.'],
+    [75.3,33.5,'Uri / LoC Zone','#E74C3C','2016 Attack Site','Uri attack (Sep 18, 2016): JeM fidayeen killed 19 Indian soldiers. India\'s Surgical Strikes (Sep 29, 2016): first publicly acknowledged cross-LoC operation.','The signal: India has changed its deterrence calculus. Cost will be imposed. But restrained — not an act of war.'],
+    [79.5,34.2,'Aksai Chin','#C0392B','China-held Since 1962','China has held Aksai Chin since the 1962 war. India claims it as part of Ladakh UT. China\'s G219 highway (Xinjiang-Tibet) runs through it — that\'s why China went to war for it in 1962.','China needed G219 to control Tibet. India didn\'t know the road was being built until 1957 — a failure of intelligence that changed history.'],
+    [74.3,35.9,'Gilgit-Baltistan','#C0392B','Pakistan-administered','Pakistan-administered but India claims it constitutionally. CPEC runs through here. China has built roads, dams, fibre optic lines throughout — connecting Xinjiang to Gwadar.','If India ever presses this claim, it directly severs the China-Pakistan land connectivity that CPEC creates.'],
+  ];
+  kspots.forEach(([lon,lat,name,col,tag,body,ssb]) => {
+    addMarker(g, proj2, wrap, ttEl, lon, lat, col, 9, name, tag, body, ssb);
+  });
+});
+
+// ═══════════════════════════
+// MAP 3 — LAC / CHINA BORDER
+// ═══════════════════════════
+const proj3 = d3.geoMercator().center([88, 29]).scale(1100).translate([380, 280]);
+buildMap('map3-wrap', 'tt3', proj3, 760, 520, (svg, g, path, wrap, ttEl) => {
+
+  // LAC schematic (full)
+  addLine(g, proj3, [
+    [79.1,33.5],[79.5,33.8],[79.8,34.0],[79.3,33.2],[80.0,32.5],
+    [79.7,31.8],[79.3,31.2],[79.0,30.5],[78.7,29.8],[78.5,29.3],
+    [92.5,28.8],[93.0,28.5],[93.5,28.0],[92.5,27.5],[92.0,27.0],
+    [92.5,26.5],[93.5,26.0],[94.5,27.5],[95.5,27.8],[96.3,27.5]
+  ], '#FF6B6B', '7 4', 2.5);
+
+  const lspots = [
+    [78.0,34.8,'Depsang Plains / Bulge','#E74C3C','Active Flashpoint','China patrolling aggressively, blocking Indian patrols at Patrol Points 10, 11, 11A, 12, 13. Threatens road to DBO airstrip. Most strategically sensitive point in Ladakh.','Depsang disengagement finalised Oct 2024 — AFTER 4.5 years of standoff. India lost patrol access to key areas during this period.'],
+    [78.3,33.8,'Galwan Valley','#C0392B','2020 Clash Site','June 15-16, 2020: 20 Indian soldiers martyred (Col Santosh Babu). Hand-to-hand combat with rocks and clubs — firearms not used per prior mutual agreement. China acknowledged 4 PLA deaths (intelligence estimates: 45+).','Galwan changed India\'s China policy permanently. 200+ app bans, FDI restrictions, BRI suspension, and diplomatic frost followed immediately.'],
+    [78.7,33.7,'Pangong Tso Lake','#3498DB','Contested Terrain','134 km lake; 60% in China, 40% in India. Fingers 1-14 are ridgelines. China claims to Finger 4; India to Finger 8. 2021 disengagement: India retained Kailash Range south of the lake.','Kailash Range retention was India\'s leverage in disengagement talks — it commands Moldo garrison area across the lake.'],
+    [88.8,27.3,'Doklam Plateau','#E67E22','2017 Standoff','Bhutanese territory near India-China-Bhutan tri-junction. China tried to extend a road southward. India intervened. 73-day standoff. China has since built a village and military infrastructure.','Doklam\'s strategic importance: a Chinese road there would overlook the Siliguri Corridor from the north — threatening the Chicken\'s Neck.'],
+    [91.6,27.6,'Tawang, Arunachal Pradesh','#E74C3C','Disputed Territory','China claims all of Arunachal as "South Tibet." December 2022 skirmish near Yangtse: ~200 PLA soldiers tried to capture Indian outpost — repelled. India fast-tracked Sela Tunnel (4,000m).','Tawang has religious significance: birthplace of the 6th Dalai Lama. China\'s claim is partly about controlling the next Dalai Lama succession.'],
+    [95.0,29.5,'Brahmaputra (Motuo Dam)','#9B59B6','Water Weapon','China is building the world\'s largest hydropower project (60 GW — 3x Three Gorges Dam) on Yarlung Tsangpo at Motuo in Tibet. India fears flooding of Assam and irrigation denial.','The Brahmaputra is a strategic weapon before a shot is fired. India needs an upstream monitoring treaty with China — not yet achieved.'],
+    [97.0,28.0,'Kibithu, Eastern Arunachal','#3D7A1A','India Strategic Asset','India\'s easternmost point in Arunachal. BRO-built ALG and all-weather road. PM Modi visited 2022 to signal resolve. China regularly renames Arunachal villages.','India\'s counter: when China named 6 Arunachal places (2023), India\'s MEA said the invented names don\'t change ground reality.'],
+  ];
+  lspots.forEach(([lon,lat,name,col,tag,body,ssb]) => {
+    addMarker(g, proj3, wrap, ttEl, lon, lat, col, 9, name, tag, body, ssb);
+  });
+});
+
+// ═══════════════════════════
+// MAP 4 — INDIAN OCEAN
+// ═══════════════════════════
+const proj4 = d3.geoMercator().center([75, 10]).scale(420).translate([380, 320]);
+buildMap('map4-wrap', 'tt4', proj4, 760, 580, (svg, g, path, wrap, ttEl) => {
+
+  // SLOC oil route
+  addLine(g, proj4, [
+    [57.0,24.0],[63.0,20.0],[72.0,13.0],[78.0,7.0],[80.0,6.0],[82.0,5.5],[100.3,5.0],[103.8,1.4]
+  ], '#FFD700', '10 4', 2.5);
+
+  // String of Pearls route
+  addLine(g, proj4, [
+    [67.0,24.9],[80.2,13.0],[79.8,7.0],[91.8,22.3],[93.6,19.8],[100.3,5.4],[103.8,1.4]
+  ], '#E74C3C', '8 5', 2);
+
+  const ispots = [
+    [67.0,24.9,'Gwadar Port, Pakistan','#E74C3C','Chinese Port (Pearl Node)','China has 40-year operating rights under CPEC. 550 km from Strait of Hormuz. Could project PLA Navy into Persian Gulf and Arabian Sea — threatening India\'s western flank.','Gwadar = China\'s potential western Indian Ocean base. India responds with Chabahar Port in Iran (~170 km away) to access the same trade routes.'],
+    [80.7,6.0,'Hambantota Port, Sri Lanka','#E74C3C','Chinese Port (Pearl Node)','China leased it for 99 years from Sri Lanka in 2017 — debt-trap deal. Sits directly on the world\'s busiest shipping lane. 22 km from Indian maritime boundary.','India\'s 2022 Sri Lanka crisis support (USD 4B) was partly about reclaiming influence lost to Hambantota. India negotiating Trincomalee port access.'],
+    [91.8,22.3,'Chittagong Port, Bangladesh','#E74C3C','Chinese Port (Pearl Node)','Bangladesh\'s main port. China has invested heavily. India counters by offering Bangladesh transit access to Kolkata and Northeast — reducing Chinese leverage.','Post-Hasina Bangladesh (2024): new government\'s China tilt could shift Bay of Bengal balance. Chittagong is a key variable.'],
+    [93.6,19.8,'Kyaukpyu Port, Myanmar','#E74C3C','Chinese Port (Pearl Node)','Deep-water port under CMEC. Oil/gas pipeline from Kyaukpyu to Kunming, Yunnan bypasses Malacca Strait entirely — China\'s "Malacca Dilemma" solution from the east.','If Kyaukpyu pipeline is fully operational + Gwadar developed, China can bypass Malacca — neutralising India\'s Andaman & Nicobar leverage.'],
+    [103.8,1.4,'Strait of Malacca','#FFD700','Strategic Chokepoint','World\'s most critical maritime chokepoint. 80% of China\'s oil imports pass through here. Only 1.5 miles wide at the narrowest. India\'s Andaman & Nicobar Command can threaten this route.','If India and the US close Malacca, China\'s economy strangles in days. This is India\'s most powerful maritime card.'],
+    [92.7,12.5,'Andaman & Nicobar Command','#3D7A1A','India Maritime Asset','India\'s only tri-services command. 572-island chain at mouth of Malacca. Being upgraded: new airstrips, submarine harbour, missile batteries, radar. India\'s most powerful maritime strategic asset.','Know the Command\'s strategic role: it can monitor and threaten the Malacca Strait. A model for India\'s proposed theatre commands.'],
+    [72.8,10.0,'Lakshadweep Islands','#3D7A1A','India Maritime Asset','36 islands near Maldives. PM Modi\'s 2024 visit after Maldives\' "India Out" campaign signalled strategic intent. New naval infrastructure being built.','Lakshadweep is India\'s counter to the Maldives drift — developing it as a naval base and tourist destination simultaneously.'],
+    [73.5,4.2,'Maldives','#B07820','Contested / Shifting','\"India Out\" campaign. Indian troops withdrawn March 2024. China signed multiple agreements. Economic compulsions pulling Maldives back toward India in 2025.','Maldives sits on the Indian Ocean SLOC. A Chinese base here would be 450 km from India\'s southern tip.'],
+    [57.5,-20.2,'Mauritius — SAGAR Partner','#3D7A1A','India Maritime Asset','India-Mauritius defense agreement. India operates Agaléga island. Part of SAGAR doctrine — countering China in southwest Indian Ocean.','SAGAR in action: India has security agreements with Mauritius, Seychelles, Sri Lanka, Madagascar, Maldives — building a cooperative maritime ring.'],
+    [57.5,23.0,'Duqm Port, Oman','#3D7A1A','India Counter-Pearl','India has naval access to Duqm port (2018 agreement). Logistics hub in Arabian Sea near Strait of Hormuz — counters China\'s Gwadar nearby.','India\'s counter-pearl network: Duqm (Oman), Sabang (Indonesia), Sittwe (Myanmar), Agaléga (Mauritius). India building access without announcing it.'],
+  ];
+  ispots.forEach(([lon,lat,name,col,tag,body,ssb]) => {
+    addMarker(g, proj4, wrap, ttEl, lon, lat, col, 9, name, tag, body, ssb);
+  });
+});
+</script>
+</body>
+</html>
