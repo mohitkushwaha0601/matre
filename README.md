@@ -17,8 +17,9 @@ Defence, Current Affairs & International Relations.
 | [🛡️ India's Defence Modernisation & Atmanirbhar Defence](materials/9.india-defence-modernisation-handbook.html) | HTML | 22 | 2–3 hrs |
 | [🌊 The Indian Ocean & India's Maritime Security](materials/10.indian-ocean-maritime-security-handbook.html) | HTML | 22 | 2–3 hrs |
 | [🗺️ India & Its Neighbours — Geopolitics Brief](materials/11.India-Neighbours-maps.html) | HTML | Map-led | 1–1.5 hrs |
+| [🏺 Dynastic Succession in India: From Mauryas to Marathas](materials/12.dynastic-succession-india-knowledge-handbook.html) | HTML | 22 | 2–3 hrs |
 
-**Total:** 11 handbooks
+**Total:** 12 handbooks
 
 ---
 
@@ -33,4 +34,4 @@ These handbooks are automatically deployed to GitHub Pages on every push to `mai
 
 ---
 
-**Updated:** 01 October 2026 | **Verified:** Open sources, current as of late 2025
+**Updated:** 03 October 2026 | **Verified:** Open sources, current as of late 2025
