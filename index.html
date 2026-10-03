@@ -96,6 +96,31 @@ p{margin:0 0 .95rem;max-width:74ch}
 
 .handbooks{display:grid;gap:1.2rem}
 
+.handbook-row{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:.85rem;
+  align-items:start;
+}
+
+.done-toggle{
+  width:1.15rem;
+  height:1.15rem;
+  margin-top:1.2rem;
+  accent-color:var(--blue);
+  cursor:pointer;
+}
+
+.handbook-row[data-done="true"] .handbook{
+  border-left-color:var(--blue);
+  opacity:.78;
+}
+
+.handbook-row[data-done="true"] .handbook h3{
+  text-decoration:line-through;
+  text-decoration-thickness:2px;
+}
+
 .handbook{
   display:grid;
   grid-template-columns:5.6rem 1fr;
@@ -119,6 +144,8 @@ p{margin:0 0 .95rem;max-width:74ch}
 .handbook p{margin:0 0 .5rem;color:var(--ink-soft);font-size:.95rem}
 .handbook .cta{font-size:.85rem;font-weight:600;color:var(--blue)}
 @media (max-width:520px){
+  .handbook-row{grid-template-columns:auto 1fr;gap:.65rem}
+  .done-toggle{margin-top:1rem}
   .handbook{grid-template-columns:1fr;gap:.3rem}
 }
 
@@ -275,6 +302,50 @@ footer a{color:var(--blue)}
 </footer>
 
 </main>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const storagePrefix = "handbook-done:";
+  const readState = (key) => {
+    try {
+      return localStorage.getItem(storagePrefix + key) === "true";
+    } catch {
+      return false;
+    }
+  };
+  const writeState = (key, value) => {
+    try {
+      localStorage.setItem(storagePrefix + key, String(value));
+    } catch {
+      return;
+    }
+  };
+
+  document.querySelectorAll(".handbooks > .handbook").forEach((link) => {
+    const key = link.getAttribute("href") || link.textContent.trim();
+    const row = document.createElement("div");
+    row.className = "handbook-row";
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.className = "done-toggle";
+    checkbox.checked = readState(key);
+    checkbox.setAttribute("aria-label", `Mark ${link.querySelector("h3")?.textContent || "handbook"} as done`);
+
+    const syncState = () => {
+      row.dataset.done = checkbox.checked ? "true" : "false";
+      writeState(key, checkbox.checked);
+    };
+
+    checkbox.addEventListener("change", syncState);
+
+    link.parentNode.insertBefore(row, link);
+    row.appendChild(checkbox);
+    row.appendChild(link);
+    syncState();
+  });
+});
+</script>
 
 </body>
 </html>
