@@ -1,360 +1,510 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Preparation Handbooks</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --ink:#0E2430;
-  --ink-soft:#45606E;
-  --paper:#EFF1EE;
-  --surface:#FFFFFF;
-  --surface-2:#E5EAE7;
-  --rule:#C4CEcb;
-  --rule-strong:#9EABA8;
-  --red:#BF2F26;
-  --blue:#0B4F8A;
-  --hero-bg:#0E2430;
-  --hero-ink:#EFF1EE;
-  --hero-dim:#94A8B2;
-  color-scheme:light dark;
-}
-@media (prefers-color-scheme: dark){
-  :root{
-    --ink:#E4EAE8;
-    --ink-soft:#9DB0B8;
-    --paper:#0C1A22;
-    --surface:#122630;
-    --surface-2:#18313D;
-    --rule:#2B4450;
-    --rule-strong:#3E5A68;
-    --red:#E8705F;
-    --blue:#6FB3E8;
-    --hero-bg:#081319;
-    --hero-ink:#E4EAE8;
-    --hero-dim:#7E949E;
-  }
-}
-*,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
-body{
-  margin:0;
-  background:var(--paper);
-  color:var(--ink);
-  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-  font-size:16.5px;
-  line-height:1.62;
-  -webkit-font-smoothing:antialiased;
-}
-a{color:var(--blue)}
-:focus-visible{outline:2px solid var(--red);outline-offset:2px}
-
-.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
-.flagstrip{display:flex;height:12px}
-.flagstrip span{flex:1}
-.f1{background:#BF2F26}
-.f2{background:#EFF1EE}
-.f3{background:#0B4F8A}
-.f4{background:#E3B23C}
-.f5{background:#0E2430;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
-.f6{background:linear-gradient(90deg,#BF2F26 50%,#EFF1EE 50%)}
-.f7{background:linear-gradient(90deg,#0B4F8A 50%,#E3B23C 50%)}
-.hero-inner{max-width:900px;margin:0 auto;padding:3.2rem 1.5rem 0}
-.kicker{
-  font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;
-  color:var(--hero-dim);margin:0 0 .8rem;
-}
-.hero h1{
-  font-family:"Zilla Slab",Georgia,serif;
-  font-weight:700;
-  font-size:clamp(2rem,6vw,3.2rem);
-  line-height:1.15;
-  margin:0 0 .7rem;
-}
-.hero-sub{margin:0;color:var(--hero-dim);max-width:60ch}
-.stamp{
-  margin-top:1.6rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.22);
-  font-size:.86rem;color:var(--hero-dim);
-  display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;
-}
-.stamp b{color:var(--hero-ink);font-weight:600}
-
-main{max-width:900px;margin:0 auto;padding:2.8rem 1.5rem 5rem}
-
-section{margin:0 0 3.2rem}
-section > h2{
-  font-family:"Zilla Slab",Georgia,serif;
-  font-weight:700;font-size:clamp(1.35rem,3.4vw,1.7rem);line-height:1.2;
-  margin:0 0 .3rem;
-}
-.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
-p{margin:0 0 .95rem;max-width:74ch}
-
-.handbooks{display:grid;gap:1.2rem}
-
-.handbook-row{
-  display:grid;
-  grid-template-columns:auto 1fr;
-  gap:.85rem;
-  align-items:start;
-}
-
-.done-toggle{
-  width:1.15rem;
-  height:1.15rem;
-  margin-top:1.2rem;
-  accent-color:var(--blue);
-  cursor:pointer;
-}
-
-.handbook-row[data-done="true"] .handbook{
-  border-left-color:var(--blue);
-  opacity:.78;
-}
-
-.handbook-row[data-done="true"] .handbook h3{
-  text-decoration:line-through;
-  text-decoration-thickness:2px;
-}
-
-.handbook{
-  display:grid;
-  grid-template-columns:5.6rem 1fr;
-  gap:1.2rem;
-  background:var(--surface);
-  border:1px solid var(--rule);
-  border-left:4px solid var(--red);
-  padding:1.2rem 1.3rem;
-  text-decoration:none;
-  color:inherit;
-}
-.handbook:hover{border-left-color:var(--blue)}
-.handbook .no{
-  font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.6rem;
-  color:var(--rule-strong);font-variant-numeric:tabular-nums;
-}
-.handbook h3{
-  font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.2rem;
-  margin:0 0 .35rem;color:var(--ink);
-}
-.handbook p{margin:0 0 .5rem;color:var(--ink-soft);font-size:.95rem}
-.handbook .cta{font-size:.85rem;font-weight:600;color:var(--blue)}
-@media (max-width:520px){
-  .handbook-row{grid-template-columns:auto 1fr;gap:.65rem}
-  .done-toggle{margin-top:1rem}
-  .handbook{grid-template-columns:1fr;gap:.3rem}
-}
-
-.note{
-  background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;
-  border:1px solid var(--rule);font-size:.95rem;
-}
-.note ul{margin:0;padding-left:1.25rem}
-.note li{margin-bottom:.3rem}
-
-footer{
-  border-top:3px double var(--rule-strong);margin-top:2rem;padding-top:1.4rem;
-  color:var(--ink-soft);font-size:.9rem;max-width:74ch;
-}
-footer a{color:var(--blue)}
-</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Preparation Handbooks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+         :root {
+            --ink: #0E2430;
+            --ink-soft: #45606E;
+            --paper: #EFF1EE;
+            --surface: #FFFFFF;
+            --surface-2: #E5EAE7;
+            --rule: #C4CEcb;
+            --rule-strong: #9EABA8;
+            --red: #BF2F26;
+            --blue: #0B4F8A;
+            --hero-bg: #0E2430;
+            --hero-ink: #EFF1EE;
+            --hero-dim: #94A8B2;
+            color-scheme: light dark;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+             :root {
+                --ink: #E4EAE8;
+                --ink-soft: #9DB0B8;
+                --paper: #0C1A22;
+                --surface: #122630;
+                --surface-2: #18313D;
+                --rule: #2B4450;
+                --rule-strong: #3E5A68;
+                --red: #E8705F;
+                --blue: #6FB3E8;
+                --hero-bg: #081319;
+                --hero-ink: #E4EAE8;
+                --hero-dim: #7E949E;
+            }
+        }
+        
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box
+        }
+        
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%
+        }
+        
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            font-size: 16.5px;
+            line-height: 1.62;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        a {
+            color: var(--blue)
+        }
+        
+         :focus-visible {
+            outline: 2px solid var(--red);
+            outline-offset: 2px
+        }
+        
+        .hero {
+            background: var(--hero-bg);
+            color: var(--hero-ink);
+            padding: 0 0 3rem
+        }
+        
+        .flagstrip {
+            display: flex;
+            height: 12px
+        }
+        
+        .flagstrip span {
+            flex: 1
+        }
+        
+        .f1 {
+            background: #BF2F26
+        }
+        
+        .f2 {
+            background: #EFF1EE
+        }
+        
+        .f3 {
+            background: #0B4F8A
+        }
+        
+        .f4 {
+            background: #E3B23C
+        }
+        
+        .f5 {
+            background: #0E2430;
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .25)
+        }
+        
+        .f6 {
+            background: linear-gradient(90deg, #BF2F26 50%, #EFF1EE 50%)
+        }
+        
+        .f7 {
+            background: linear-gradient(90deg, #0B4F8A 50%, #E3B23C 50%)
+        }
+        
+        .hero-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3.2rem 1.5rem 0
+        }
+        
+        .kicker {
+            font-size: .85rem;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: var(--hero-dim);
+            margin: 0 0 .8rem;
+        }
+        
+        .hero h1 {
+            font-family: "Zilla Slab", Georgia, serif;
+            font-weight: 700;
+            font-size: clamp(2rem, 6vw, 3.2rem);
+            line-height: 1.15;
+            margin: 0 0 .7rem;
+        }
+        
+        .hero-sub {
+            margin: 0;
+            color: var(--hero-dim);
+            max-width: 60ch
+        }
+        
+        .stamp {
+            margin-top: 1.6rem;
+            padding-top: 1.4rem;
+            border-top: 1px solid rgba(255, 255, 255, .22);
+            font-size: .86rem;
+            color: var(--hero-dim);
+            display: flex;
+            flex-wrap: wrap;
+            gap: .4rem 1.4rem;
+        }
+        
+        .stamp b {
+            color: var(--hero-ink);
+            font-weight: 600
+        }
+        
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2.8rem 1.5rem 5rem
+        }
+        
+        section {
+            margin: 0 0 3.2rem
+        }
+        
+        section>h2 {
+            font-family: "Zilla Slab", Georgia, serif;
+            font-weight: 700;
+            font-size: clamp(1.35rem, 3.4vw, 1.7rem);
+            line-height: 1.2;
+            margin: 0 0 .3rem;
+        }
+        
+        .sec-rule {
+            border: 0;
+            border-top: 3px double var(--rule-strong);
+            margin: 0 0 1.4rem
+        }
+        
+        p {
+            margin: 0 0 .95rem;
+            max-width: 74ch
+        }
+        
+        .handbooks {
+            display: grid;
+            gap: 1.2rem
+        }
+        
+        .handbook-row {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: .85rem;
+            align-items: start;
+        }
+        
+        .done-toggle {
+            width: 1.15rem;
+            height: 1.15rem;
+            margin-top: 1.2rem;
+            accent-color: var(--blue);
+            cursor: pointer;
+        }
+        
+        .handbook-row[data-done="true"] .handbook {
+            border-left-color: var(--blue);
+            opacity: .78;
+        }
+        
+        .handbook-row[data-done="true"] .handbook h3 {
+            text-decoration: line-through;
+            text-decoration-thickness: 2px;
+        }
+        
+        .handbook {
+            display: grid;
+            grid-template-columns: 5.6rem 1fr;
+            gap: 1.2rem;
+            background: var(--surface);
+            border: 1px solid var(--rule);
+            border-left: 4px solid var(--red);
+            padding: 1.2rem 1.3rem;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .handbook:hover {
+            border-left-color: var(--blue)
+        }
+        
+        .handbook .no {
+            font-family: "Zilla Slab", Georgia, serif;
+            font-weight: 600;
+            font-size: 1.6rem;
+            color: var(--rule-strong);
+            font-variant-numeric: tabular-nums;
+        }
+        
+        .handbook h3 {
+            font-family: "Zilla Slab", Georgia, serif;
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin: 0 0 .35rem;
+            color: var(--ink);
+        }
+        
+        .handbook p {
+            margin: 0 0 .5rem;
+            color: var(--ink-soft);
+            font-size: .95rem
+        }
+        
+        .handbook .cta {
+            font-size: .85rem;
+            font-weight: 600;
+            color: var(--blue)
+        }
+        
+        @media (max-width:520px) {
+            .handbook-row {
+                grid-template-columns: auto 1fr;
+                gap: .65rem
+            }
+            .done-toggle {
+                margin-top: 1rem
+            }
+            .handbook {
+                grid-template-columns: 1fr;
+                gap: .3rem
+            }
+        }
+        
+        .note {
+            background: var(--surface-2);
+            padding: .85rem 1.1rem;
+            margin: 1.3rem 0;
+            max-width: 74ch;
+            border: 1px solid var(--rule);
+            font-size: .95rem;
+        }
+        
+        .note ul {
+            margin: 0;
+            padding-left: 1.25rem
+        }
+        
+        .note li {
+            margin-bottom: .3rem
+        }
+        
+        footer {
+            border-top: 3px double var(--rule-strong);
+            margin-top: 2rem;
+            padding-top: 1.4rem;
+            color: var(--ink-soft);
+            font-size: .9rem;
+            max-width: 74ch;
+        }
+        
+        footer a {
+            color: var(--blue)
+        }
+    </style>
 </head>
+
 <body>
 
-<header class="hero">
-  <div class="flagstrip" aria-hidden="true">
-    <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f6"></span><span class="f5"></span><span class="f7"></span>
-  </div>
-  <div class="hero-inner">
-    <p class="kicker">--</p>
-    <h1>Preparation Handbooks</h1>
-    <p class="hero-sub">Reference documents for interview, group testing and current-affairs preparation — written for a single sitting, structured for quick revision.</p>
-    <p class="stamp"><span><b>12</b> handbooks</span><span>Last Updated <b>03 Oct 2026</b></span></p>
-  </div>
-</header>
+    <header class="hero">
+        <div class="flagstrip" aria-hidden="true">
+            <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f6"></span><span class="f5"></span><span class="f7"></span>
+        </div>
+        <div class="hero-inner">
+            <p class="kicker">--</p>
+            <h1>Preparation Handbooks</h1>
+            <p class="hero-sub">Reference documents for interview, group testing and current-affairs preparation — written for a single sitting, structured for quick revision.</p>
+            <p class="stamp"><span><b>12</b> handbooks</span><span>Last Updated <b>03 Oct 2026</b></span></p>
+        </div>
+    </header>
 
-<main>
+    <main>
 
-<section id="handbooks">
-  <h2>Handbooks</h2><hr class="sec-rule">
+        <section id="handbooks">
+            <h2>Handbooks</h2>
+            <hr class="sec-rule">
 
-  <div class="handbooks">
-    <a class="handbook" href="materials/1.indian-navy-knowledge-handbook.html">
-      <span class="no">01</span>
-      <span>
+            <div class="handbooks">
+                <a class="handbook" href="materials/1.indian-navy-knowledge-handbook.html">
+                    <span class="no">01</span>
+                    <span>
         <h3>All About the Indian Navy</h3>
         <p>Organisation, fleet, submarines, naval aviation, maritime security, the Indian Ocean Region and a full Knowledge question bank.</p>
         <span class="cta">Read handbook →</span>
-      </span>
-    </a>
+                    </span>
+                </a>
 
-    <a class="handbook" href="materials/2.russia-ukraine-war-knowledge-handbook.html">
-      <span class="no">02</span>
-      <span>
+                <a class="handbook" href="materials/2.russia-ukraine-war-knowledge-handbook.html">
+                    <span class="no">02</span>
+                    <span>
         <h3>Russia-Ukraine War</h3>
         <p>Origins, timeline, military strategy, NATO and India's position, sanctions, and future scenarios — with balanced analysis panels.</p>
         <span class="cta">Read handbook →</span>
-      </span>
-    </a>
+                    </span>
+                </a>
 
-    <a class="handbook" href="materials/3.russia-old.html">
-      <span class="no">03</span>
-      <span>
+                <a class="handbook" href="materials/3.russia-old.html">
+                    <span class="no">03</span>
+                    <span>
         <h3>Russia-Ukraine War — Quick Study</h3>
         <p>A shorter strategic and geopolitical primer on the conflict — origins, timeline, key actors and Knowledge discussion points in a single sitting.</p>
         <span class="cta">Read handbook →</span>
-      </span>
-    </a>
+                    </span>
+                </a>
 
-    <a class="handbook" href="materials/4.deep-research-report.html">
-      <span class="no">04</span>
-      <span>
+                <a class="handbook" href="materials/4.deep-research-report.html">
+                    <span class="no">04</span>
+                    <span>
         <h3>Russia-Ukraine War — Deep Research Report</h3>
         <p>A detailed research brief covering origins, timeline, military doctrine, major actors, NATO/EU involvement, India's calculus, economic impact and future scenarios.</p>
         <span class="cta">Read handbook →</span>
-      </span>
-    </a>
+                    </span>
+                </a>
 
-    <a class="handbook" href="materials/5.indian-independence-handbook.html">
-      <span class="no">05</span>
-      <span>
+                <a class="handbook" href="materials/5.indian-independence-handbook.html">
+                    <span class="no">05</span>
+                    <span>
         <h3>The Freedom Struggle, 1498–1947</h3>
         <p>A concise handbook on Indian independence — European arrival, conquest, colonial economy, 1857, nationalism, Gandhi, Bose and the INA, Partition and the princely states, with debates, chronology and a Knowledge toolkit.</p>
         <span class="cta">Read handbook →</span>
-      </span>
-    </a>
+                    </span>
+                </a>
 
-    <a class="handbook" href="materials/6.india-china-lac-handbook.html">
-      <span class="no">06</span>
-      <span>
+                <a class="handbook" href="materials/6.india-china-lac-handbook.html">
+                    <span class="no">06</span>
+                    <span>
         <h3>India–China &amp; the LAC</h3>
         <p>A concise handbook on the northern frontier — Tibet, the McMahon Line and Aksai Chin, 1962, 1967, the agreements, Doklam, Galwan and disengagement, with the military balance, the wider rivalry, scenarios, options and a Knowledge toolkit.</p>
         <span class="cta">Read handbook →</span>
-      </span>
-    </a>
+                    </span>
+                </a>
 
-    <a class="handbook" href="materials/7.india-pakistan-terrorism-handbook.html">
-      <span class="no">07</span>
-      <span>
+                <a class="handbook" href="materials/7.india-pakistan-terrorism-handbook.html">
+                    <span class="no">07</span>
+                    <span>
         <h3>India–Pakistan, Kashmir &amp; Terrorism</h3>
         <p>A concise handbook on the western frontier — accession, the wars of 1947, 1965, 1971 and Kargil, Siachen, the insurgency and Article 370, the terror groups, 26/11, Uri, Balakot and Operation Sindoor, nuclear deterrence and the Indus Waters Treaty, with scenarios, options and a Knowledge toolkit.</p>
         <span class="cta">Read handbook →</span>
-      </span>
-    </a>
+                    </span>
+                </a>
 
-    <a class="handbook" href="materials/8.Indian-governance.html">
-      <span class="no">08</span>
-      <span>
+                <a class="handbook" href="materials/8.Indian-governance.html">
+                    <span class="no">08</span>
+                    <span>
         <h3>India Strategic &amp; Governance Briefing</h3>
         <p>A concise but current references guide on India's constitutional leadership, defence structure, command architecture, exercises and key strategic pressures.</p>
         <span class="cta">Read handbook →</span>
-      </span>
-    </a>
+                    </span>
+                </a>
 
-    <a class="handbook" href="materials/9.india-defence-modernisation-handbook.html">
-      <span class="no">09</span>
-      <span>
+                <a class="handbook" href="materials/9.india-defence-modernisation-handbook.html">
+                    <span class="no">09</span>
+                    <span>
         <h3>India's Defence Modernisation &amp; Atmanirbhar Defence</h3>
         <p>A concise handbook on how India arms itself — lessons of war, the CDS and theatre commands, budget and Agnipath; the three services, missiles, air defence and drones; DAP 2020, DRDO, DPSUs, private industry and exports; Tejas, Kaveri and the chokepoints; Ukraine and Operation Sindoor lessons, with options and a Knowledge toolkit.</p>
         <span class="cta">Read handbook →</span>
-      </span>
-    </a>
+                    </span>
+                </a>
 
-    <a class="handbook" href="materials/10.indian-ocean-maritime-security-handbook.html">
-      <span class="no">10</span>
-      <span>
+                <a class="handbook" href="materials/10.indian-ocean-maritime-security-handbook.html">
+                    <span class="no">10</span>
+                    <span>
         <h3>The Indian Ocean &amp; India's Maritime Security</h3>
         <p>A concise handbook on geography and chokepoints, naval history and 1971, doctrine and SAGAR, the Arabian Sea and Bay of Bengal, coastal security and 26/11, China's footprint, submarines and carriers, energy security and sea lanes, and QUAD/IORA diplomacy, with scenarios, debate motions and a Knowledge toolkit.</p>
         <span class="cta">Read handbook →</span>
-      </span>
-    </a>
+                    </span>
+                </a>
 
-    <a class="handbook" href="materials/11.India-Neighbours-maps.html">
-      <span class="no">11</span>
-      <span>
+                <a class="handbook" href="materials/11.India-Neighbours-maps.html">
+                    <span class="no">11</span>
+                    <span>
         <h3>India &amp; Its Neighbours — Geopolitics Brief</h3>
         <p>An interactive, map-led brief on India's borders and neighbourhood — the LAC and LoC, Pakistan, China, Nepal, Bhutan, Bangladesh, Myanmar, Sri Lanka and the Indian Ocean littoral, with concept panels and SSB-relevant discussion points.</p>
         <span class="cta">Read handbook →</span>
-      </span>
-    </a>
+                    </span>
+                </a>
 
-    <a class="handbook" href="materials/12.dynastic-succession-india-knowledge-handbook.html">
-      <span class="no">12</span>
-      <span>
+                <a class="handbook" href="materials/12.dynastic-succession-india-knowledge-handbook.html">
+                    <span class="no">12</span>
+                    <span>
         <h3>Dynastic Succession in India: From Mauryas to Marathas</h3>
         <p>A concise historical handbook on major Indian dynasties — Mauryas, Guptas, Cholas, Sultanate powers, Mughals, Marathas and successor states — with timelines, statecraft patterns, debate prompts and rapid revision notes.</p>
         <span class="cta">Read handbook →</span>
-      </span>
-    </a>
-  </div>
-</section>
+                    </span>
+                </a>
+            </div>
+        </section>
 
-<section id="using">
-  <h2>Using these handbooks</h2><hr class="sec-rule">
-  <div class="note">
-    <ul>
-      <li>Each handbook has its own contents list — jump straight to a section rather than reading start to finish.</li>
-      <li>Use your browser's print option to save a copy as PDF for offline revision.</li>
-      <li>Dark mode follows your system setting automatically.</li>
-      <li>Current-affairs sections age quickly — re-verify dates and appointments close to your interview.</li>
-    </ul>
-  </div>
-</section>
+        <section id="using">
+            <h2>Using these handbooks</h2>
+            <hr class="sec-rule">
+            <div class="note">
+                <ul>
+                    <li>Each handbook has its own contents list — jump straight to a section rather than reading start to finish.</li>
+                    <li>Use your browser's print option to save a copy as PDF for offline revision.</li>
+                    <li>Dark mode follows your system setting automatically.</li>
+                    <li>Current-affairs sections age quickly — re-verify dates and appointments close to your interview.</li>
+                </ul>
+            </div>
+        </section>
 
-<footer>
-  <p>Compiled from open sources. Study aids only, not official publications.</p>
-  <p>Source &amp; contributions: <a href="https://github.com/mohitkushwaha0601/matre">github.com/mohitkushwaha0601/matre</a></p>
-</footer>
+        <footer>
+            <p>Compiled from open sources. Study aids only, not official publications.</p>
+            <p>Source &amp; contributions: <a href="https://github.com/mohitkushwaha0601/matre">github.com/mohitkushwaha0601/matre</a></p>
+        </footer>
 
-</main>
+    </main>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const storagePrefix = "handbook-done:";
-  const readState = (key) => {
-    try {
-      return localStorage.getItem(storagePrefix + key) === "true";
-    } catch {
-      return false;
-    }
-  };
-  const writeState = (key, value) => {
-    try {
-      localStorage.setItem(storagePrefix + key, String(value));
-    } catch {
-      return;
-    }
-  };
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const storagePrefix = "handbook-done:";
+            const readState = (key) => {
+                try {
+                    return localStorage.getItem(storagePrefix + key) === "true";
+                } catch {
+                    return false;
+                }
+            };
+            const writeState = (key, value) => {
+                try {
+                    localStorage.setItem(storagePrefix + key, String(value));
+                } catch {
+                    return;
+                }
+            };
 
-  document.querySelectorAll(".handbooks > .handbook").forEach((link) => {
-    const key = link.getAttribute("href") || link.textContent.trim();
-    const row = document.createElement("div");
-    row.className = "handbook-row";
+            document.querySelectorAll(".handbooks > .handbook").forEach((link) => {
+                const key = link.getAttribute("href") || link.textContent.trim();
+                const row = document.createElement("div");
+                row.className = "handbook-row";
 
-    const checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-    checkbox.className = "done-toggle";
-    checkbox.checked = readState(key);
-    checkbox.setAttribute("aria-label", `Mark ${link.querySelector("h3")?.textContent || "handbook"} as done`);
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.className = "done-toggle";
+                checkbox.checked = readState(key);
+                checkbox.setAttribute("aria-label", `Mark ${link.querySelector("h3")?.textContent || "handbook"} as done`);
 
-    const syncState = () => {
-      row.dataset.done = checkbox.checked ? "true" : "false";
-      writeState(key, checkbox.checked);
-    };
+                const syncState = () => {
+                    row.dataset.done = checkbox.checked ? "true" : "false";
+                    writeState(key, checkbox.checked);
+                };
 
-    checkbox.addEventListener("change", syncState);
+                checkbox.addEventListener("change", syncState);
 
-    link.parentNode.insertBefore(row, link);
-    row.appendChild(checkbox);
-    row.appendChild(link);
-    syncState();
-  });
-});
-</script>
+                link.parentNode.insertBefore(row, link);
+                row.appendChild(checkbox);
+                row.appendChild(link);
+                syncState();
+            });
+        });
+    </script>
 
 </body>
+
 </html>
