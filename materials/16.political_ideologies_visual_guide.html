@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Political & Economic Ideologies — Visual Learning Guide</title>
+<style>
+  :root{
+    --bg:#f4f7fb;
+    --paper:#ffffff;
+    --ink:#17202a;
+    --muted:#5e6b78;
+    --line:#dfe6ee;
+    --shadow:0 10px 30px rgba(20,40,65,.08);
+    --shadow2:0 16px 44px rgba(20,40,65,.12);
+    --blue:#2457d6;
+    --blue2:#eaf0ff;
+    --green:#1f8f6b;
+    --green2:#e8f7f1;
+    --amber:#b87900;
+    --amber2:#fff5dc;
+    --red:#b4473c;
+    --red2:#fff0ed;
+    --purple:#6c4cc1;
+    --purple2:#f2edff;
+    --navy:#13233f;
+    --radius:18px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    color:var(--ink);
+    background:linear-gradient(180deg,#eef3f9 0%,var(--bg) 100%);
+    line-height:1.48;
+  }
+  .app{max-width:1880px;margin:0 auto;padding:28px 34px 60px}
+  .hero{
+    background:linear-gradient(135deg,#13233f 0%,#1c3d72 54%,#315fbd 100%);
+    color:white;border-radius:28px;padding:38px 42px;box-shadow:var(--shadow2);position:relative;overflow:hidden;
+  }
+  .hero:after{content:"";position:absolute;right:-110px;top:-110px;width:420px;height:420px;border-radius:50%;border:70px solid rgba(255,255,255,.06)}
+  .eyebrow{letter-spacing:.12em;text-transform:uppercase;font-size:12px;font-weight:800;opacity:.78}
+  h1{font-size:clamp(34px,4vw,62px);line-height:1.02;margin:12px 0 14px;max-width:1100px}
+  .hero p{font-size:18px;max-width:900px;color:rgba(255,255,255,.84);margin:0 0 24px}
+  .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:end;position:relative;z-index:1}
+  .hero-mnemonic{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:18px;padding:20px}
+  .hero-mnemonic strong{display:block;font-size:14px;margin-bottom:8px}
+  .mnemonic-row{display:flex;gap:9px;flex-wrap:wrap}
+  .pill{padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);font-size:12px}
+  nav.sticky{position:sticky;top:10px;z-index:30;margin:18px 0;padding:8px;background:rgba(244,247,251,.86);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:16px;display:flex;gap:8px;overflow:auto;box-shadow:var(--shadow)}
+  nav a{white-space:nowrap;text-decoration:none;color:var(--muted);font-weight:750;font-size:13px;padding:9px 12px;border-radius:10px}
+  nav a:hover{background:white;color:var(--blue)}
+  section{margin-top:28px}
+  .section-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-end;margin:0 0 15px}
+  .section-head h2{margin:0;font-size:29px;line-height:1.15}
+  .section-head p{margin:0;color:var(--muted);max-width:920px;font-size:14px}
+  .grid{display:grid;gap:16px}
+  .grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .grid.cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px}
+  .card h3{margin:0 0 6px;font-size:20px}
+  .card h4{margin:0 0 8px;font-size:15px}
+  .small{font-size:13px;color:var(--muted)}
+  .tag{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:5px 9px;font-size:11px;font-weight:850;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
+  .tag.econ{background:var(--blue2);color:var(--blue)}
+  .tag.power{background:var(--red2);color:var(--red)}
+  .tag.values{background:var(--purple2);color:var(--purple)}
+  .tag.state{background:var(--green2);color:var(--green)}
+  .tag.structure{background:var(--amber2);color:var(--amber)}
+  .quote{margin-top:14px;padding:13px 14px;background:#f7f9fc;border-left:4px solid var(--blue);border-radius:9px;color:#314050;font-weight:650}
+
+  /* Axis */
+  .axis-wrap{padding:25px 24px 18px}
+  .axis-title{display:flex;justify-content:space-between;align-items:center;font-weight:800;margin-bottom:13px}
+  .axis-title span{font-size:13px;color:var(--muted);font-weight:650}
+  .axis{position:relative;height:108px;margin:0 8px}
+  .axis .line{position:absolute;left:2%;right:2%;top:42px;height:5px;background:linear-gradient(90deg,#6c4cc1,#8ea9ff,#6c4cc1);border-radius:999px}
+  .axis .tick{position:absolute;top:33px;width:23px;height:23px;border:4px solid white;box-shadow:0 0 0 1px #b6c1ce;border-radius:50%;background:#263c58;transform:translateX(-50%)}
+  .axis .tick:nth-child(2){left:8%}.axis .tick:nth-child(3){left:34%}.axis .tick:nth-child(4){left:50%}.axis .tick:nth-child(5){left:68%}.axis .tick:nth-child(6){left:92%}
+  .axis .label{position:absolute;top:70px;transform:translateX(-50%);font-size:12px;font-weight:800;text-align:center;white-space:nowrap;color:#394859}
+  .axis .label:nth-child(7){left:8%}.axis .label:nth-child(8){left:34%}.axis .label:nth-child(9){left:50%}.axis .label:nth-child(10){left:68%}.axis .label:nth-child(11){left:92%}
+  .axis-note{font-size:12px;color:var(--muted);margin-top:2px}
+
+  /* Ideology cards */
+  .ideology-card{position:relative;overflow:hidden}
+  .ideology-card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--accent,var(--blue))}
+  .idea{font-size:30px;font-weight:900;line-height:1;margin:6px 0 8px}
+  .formula{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#f6f8fa;padding:10px 11px;border-radius:10px;font-size:12px;color:#354557;margin:12px 0}
+
+  /* Comparison */
+  .compare{overflow:auto;border:1px solid var(--line);border-radius:16px;background:white;box-shadow:var(--shadow)}
+  table{width:100%;border-collapse:collapse;min-width:880px}
+  th,td{padding:13px 14px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left;font-size:13px}
+  th{background:#f6f8fb;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:#5c6875}
+  tr:last-child td{border-bottom:0}
+  .axis-chip{font-weight:800}
+  .yes{font-weight:800;color:var(--green)}
+  .no{font-weight:800;color:var(--red)}
+
+  /* Map */
+  .mapgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .mapbox{background:white;border:1px solid var(--line);border-radius:18px;padding:19px;box-shadow:var(--shadow);min-height:265px}
+  .flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;align-items:center}
+  .flow .node{padding:13px 8px;border:1px solid var(--line);border-radius:12px;text-align:center;background:#fbfcfe;font-weight:850;font-size:13px}
+  .flow .arrow{text-align:center;color:#8a98a7;font-weight:900}
+
+  /* Country decoder */
+  .decoder{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+  .decode-row{display:grid;grid-template-columns:160px 1fr;gap:14px;align-items:start;padding:13px 0;border-bottom:1px dashed var(--line)}
+  .decode-row:last-child{border-bottom:0}
+  .decode-word{font-weight:900;font-size:18px}
+  .decode-meaning{font-size:13px;color:#42505e}
+
+  /* Terms */
+  .term-controls{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+  .term-btn{border:1px solid var(--line);background:white;color:#465462;padding:9px 12px;border-radius:999px;font-size:12px;font-weight:800;cursor:pointer}
+  .term-btn.active,.term-btn:hover{background:var(--navy);color:white;border-color:var(--navy)}
+  .terms{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+  .term{background:white;border:1px solid var(--line);border-radius:14px;padding:15px;box-shadow:var(--shadow)}
+  .term.hidden{display:none}
+  .term .badge{font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.06em;color:#728092;margin-bottom:7px}
+  .term strong{font-size:16px}
+  .term p{font-size:12px;color:#52606e;margin:6px 0 0}
+
+  .callout{padding:18px 20px;background:linear-gradient(180deg,#f7faff,#ffffff);border:1px solid #cfdcf6;border-radius:16px;box-shadow:var(--shadow)}
+  .callout strong{display:block;font-size:16px;margin-bottom:4px}
+  .redflag{border-left:5px solid var(--red)}
+  .greenflag{border-left:5px solid var(--green)}
+  .blueflag{border-left:5px solid var(--blue)}
+
+  /* Quick quiz */
+  .quiz{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}
+  .qbox{background:var(--navy);color:white;border-radius:18px;padding:22px}
+  .qbox h3{font-size:20px;margin:0 0 10px}
+  .options{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:15px}
+  .opt{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:white;border-radius:10px;padding:10px;text-align:left;cursor:pointer;font-weight:750}
+  .opt:hover{background:rgba(255,255,255,.12)}
+  .opt.correct{background:#174f3d;border-color:#4db78d}.opt.wrong{background:#5f2923;border-color:#e38778}
+  .result{min-height:24px;margin-top:12px;font-weight:800}
+
+  footer{margin-top:30px;color:#74808d;font-size:11px;padding:12px 4px 0}
+  footer a{color:#506fae}
+  
+  @media (max-width:1200px){
+    .grid.cols-4,.terms{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .hero-grid,.quiz,.mapgrid,.decoder{grid-template-columns:1fr}
+  }
+  @media (max-width:760px){
+    .app{padding:14px}.hero{padding:25px 22px;border-radius:20px}.grid.cols-3,.grid.cols-2,.grid.cols-4,.terms{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.flow .arrow{display:none}.axis{overflow-x:auto}.axis .line{min-width:760px}.axis .tick,.axis .label{position:absolute}
+    .decode-row{grid-template-columns:1fr}.options{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:7px}
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="hero" id="top">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Politics • Economics • Geopolitics • SSB Revision</div>
+        <h1>Political & Economic Ideologies — Visual Learning Guide</h1>
+        <p>Stop memorising isolated labels. First ask: <b>Who owns the economy?</b> <b>Who has political power?</b> <b>What values shape society?</b> Then decode the jargon.</p>
+      </div>
+      <div class="hero-mnemonic">
+        <strong>The 3-question rule</strong>
+        <div class="mnemonic-row">
+          <span class="pill">ECONOMY → Who owns?</span>
+          <span class="pill">POWER → Who rules?</span>
+          <span class="pill">VALUES → What matters?</span>
+          <span class="pill">STATE → How is it structured?</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="sticky">
+    <a href="#axes">1. The axes</a><a href="#economy">2. Economy</a><a href="#power">3. Political power</a><a href="#values">4. Values</a><a href="#state">5. State structure</a><a href="#india">6. India decoder</a><a href="#party">7. Democrat vs Republican</a><a href="#terms">8. Quick glossary</a><a href="#quiz">9. Quiz</a>
+  </nav>
+
+  <section id="axes">
+    <div class="section-head"><div><h2>01 · Don't put everything on one left–right line</h2><p>The fastest way to get confused is to treat every word as if it answers the same question. These are different dimensions.</p></div></div>
+    <div class="grid cols-3">
+      <div class="card axis-wrap">
+        <div class="axis-title">ECONOMY <span>ownership & allocation</span></div>
+        <div class="axis"><div class="line"></div><div class="tick"></div><div class="tick"></div><div class="tick"></div><div class="tick"></div><div class="tick"></div><div class="label">private<br>ownership</div><div class="label">mixed<br>economy</div><div class="label">social<br>ownership</div><div class="label">collective<br>ownership</div><div class="label">communist<br>ideal</div></div>
+        <div class="axis-note">Capitalism, socialism and communism mainly live here.</div>
+      </div>
+      <div class="card axis-wrap">
+        <div class="axis-title">POLITICAL POWER <span>who governs?</span></div>
+        <div class="axis"><div class="line"></div><div class="tick"></div><div class="tick"></div><div class="tick"></div><div class="tick"></div><div class="tick"></div><div class="label">pluralism</div><div class="label">democracy</div><div class="label">hybrid</div><div class="label">authoritarian</div><div class="label">totalising</div></div>
+        <div class="axis-note">Democracy, authoritarianism, dictatorship and totalitarianism mainly answer this question.</div>
+      </div>
+      <div class="card axis-wrap">
+        <div class="axis-title">POLITICAL / SOCIAL VALUES <span>what should society prioritise?</span></div>
+        <div class="axis"><div class="line"></div><div class="tick"></div><div class="tick"></div><div class="tick"></div><div class="tick"></div><div class="tick"></div><div class="label">individual<br>liberty</div><div class="label">equality</div><div class="label">tradition</div><div class="label">nation</div><div class="label">radical<br>mobilisation</div></div>
+        <div class="axis-note">Liberalism, conservatism, nationalism, populism and fascism are different ideological traditions.</div>
+      </div>
+    </div>
+    <div class="callout blueflag" style="margin-top:16px"><strong>Key idea</strong>A country can be <b>capitalist + democratic + federal + secular + republican</b>. Those labels are not contradictions because they describe different dimensions.</div>
+  </section>
+
+  <section id="economy">
+    <div class="section-head"><div><h2>02 · The economic family</h2><p>Start with productive assets: factories, land, infrastructure, companies, capital. Then ask who owns or controls them and how resources are allocated.</p></div></div>
+    <div class="grid cols-4">
+      <article class="card ideology-card" style="--accent:#2457d6"><span class="tag econ">Economic system</span><div class="idea">Capitalism</div><div class="formula">PRIVATE OWNERSHIP + MARKETS + PROFIT MOTIVE</div><p>Individuals and firms can own productive assets and make many economic decisions through markets. Private enterprise and competition are central features.</p><div class="quote">Think: “I can own the company, take the risk and keep the profit.”</div></article>
+      <article class="card ideology-card" style="--accent:#1f8f6b"><span class="tag econ">Economic / political tradition</span><div class="idea">Socialism</div><div class="formula">SOCIAL / COLLECTIVE CONTROL OF PRODUCTION</div><p>A broad family of ideas favouring greater social, collective, public or worker control over economic resources. Different socialist traditions disagree about the exact ownership model.</p><div class="quote">Think: “Economic power should be shared and serve society more broadly.”</div></article>
+      <article class="card ideology-card" style="--accent:#6c4cc1"><span class="tag econ">Theoretical end-state</span><div class="idea">Communism</div><div class="formula">COMMON OWNERSHIP + CLASSLESS SOCIETY</div><p>In Marxist theory, full communism is a classless and ultimately stateless society based on common ownership. Historical “communist states” did not simply equal this theoretical end-state.</p><div class="quote">Think: “The end goal is a classless society with common ownership.”</div></article>
+      <article class="card ideology-card" style="--accent:#b87900"><span class="tag econ">Policy model</span><div class="idea">Social Democracy</div><div class="formula">MARKETS + WELFARE + REGULATION + REDISTRIBUTION</div><p>A market economy remains, but the state uses taxation, welfare, regulation and public services to reduce insecurity and inequality.</p><div class="quote">Think: “Keep markets, but build a strong social safety net.”</div></article>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <h3>Marxism → Leninism → Marxism-Leninism</h3>
+      <div class="flow" style="margin-top:16px">
+        <div class="node">MARX<br><span class="small">class & capitalism</span></div><div class="arrow">→</div>
+        <div class="node">LENIN<br><span class="small">revolutionary party</span></div><div class="arrow">→</div>
+        <div class="node">MARXISM–LENINISM<br><span class="small">Soviet-derived state ideology</span></div>
+      </div>
+      <p class="small" style="margin:15px 0 0">Do not reduce Marxism to “government owns everything.” Marxism is a much broader theoretical tradition about class, capitalism, history and social transformation.</p>
+    </div>
+  </section>
+
+  <section id="power">
+    <div class="section-head"><div><h2>03 · Who has political power?</h2><p>These labels answer a different question from capitalism/socialism: who can make decisions, how leaders are chosen, and how much competition or freedom exists?</p></div></div>
+    <div class="grid cols-4">
+      <article class="card ideology-card" style="--accent:#1f8f6b"><span class="tag power">Political system</span><h3>Democracy</h3><p>Political authority is grounded in the people, with participation and representative institutions at its core.</p><div class="formula">PEOPLE → ELECTIONS / PARTICIPATION → GOVERNMENT</div></article>
+      <article class="card ideology-card" style="--accent:#b4473c"><span class="tag power">Political system</span><h3>Authoritarianism</h3><p>Political power is concentrated and meaningful political competition or accountability is substantially restricted.</p><div class="formula">CONCENTRATED POWER + LIMITED COMPETITION</div></article>
+      <article class="card ideology-card" style="--accent:#8e3b31"><span class="tag power">Political system</span><h3>Dictatorship</h3><p>Power is concentrated in one ruler or a small group, with weak mechanisms for removing or constraining them through genuine political competition.</p><div class="formula">ONE RULER / SMALL GROUP → HIGH POLITICAL CONTROL</div></article>
+      <article class="card ideology-card" style="--accent:#6c4cc1"><span class="tag power">Extreme form</span><h3>Totalitarianism</h3><p>Goes beyond political control toward extensive attempts to control society, information, organisations and public life.</p><div class="formula">POLITICAL CONTROL → BROAD SOCIAL CONTROL</div></article>
+    </div>
+    <div class="grid cols-2" style="margin-top:16px">
+      <div class="card"><span class="tag values">Don't confuse</span><h3>Democracy ≠ Capitalism</h3><p>You can have democratic politics with substantial welfare and public ownership. You can also have capitalist markets under authoritarian governments.</p></div>
+      <div class="card"><span class="tag values">Don't confuse</span><h3>Dictatorship ≠ Communism</h3><p>A dictatorship describes concentration of political power. Communism describes an economic/social theory and historical political tradition. A system can combine authoritarian rule with different economic models.</p></div>
+    </div>
+  </section>
+
+  <section id="values">
+    <div class="section-head"><div><h2>04 · What values shape politics?</h2><p>These terms are best understood as ideological traditions. Their exact meaning can change across countries and periods.</p></div></div>
+    <div class="grid cols-4">
+      <article class="card"><span class="tag values">Individual liberty</span><h3>Liberalism</h3><p>Strong emphasis on individual rights, liberty, freedom of thought/expression and limits on arbitrary government power.</p><div class="quote">Core instinct: “Protect the individual from arbitrary power.”</div></article>
+      <article class="card"><span class="tag values">Tradition & change</span><h3>Conservatism</h3><p>Values continuity, established institutions, social stability and caution about rapid or sweeping change.</p><div class="quote">Core instinct: “Change carefully; institutions may contain hard-won wisdom.”</div></article>
+      <article class="card"><span class="tag values">Nation</span><h3>Nationalism</h3><p>Places the nation and national identity at the centre of political loyalty, self-determination or state-building.</p><div class="quote">Core instinct: “The nation should be an important political community.”</div></article>
+      <article class="card"><span class="tag values">People vs elite</span><h3>Populism</h3><p>Frames politics as a conflict between “ordinary people” and “the elite.” It can appear on both the left and the right.</p><div class="quote">Core instinct: “Politics should reflect the real people, not an insulated elite.”</div></article>
+      <article class="card"><span class="tag values">Radical nationalism</span><h3>Fascism</h3><p>A specific historical ideological family associated with authoritarian leadership, extreme nationalism, militarism, hierarchy and rejection of liberal-democratic pluralism.</p><div class="quote">Core instinct: “Nation + authority + mobilisation above liberal pluralism.”</div></article>
+      <article class="card"><span class="tag values">Maximum liberty</span><h3>Libertarianism</h3><p>Places especially strong weight on individual freedom and limiting coercive state power, with different schools differing on economics and social questions.</p><div class="quote">Core instinct: “Why should the state be able to decide this?”</div></article>
+      <article class="card"><span class="tag values">State & religion</span><h3>Secularism</h3><p>A political/legal order that does not derive its authority from religious rule; the relationship between religion and state differs by country.</p><div class="quote">Core instinct: “Government should not be governed by religious authority as such.”</div></article>
+      <article class="card"><span class="tag values">Religion in rule</span><h3>Theocracy</h3><p>A system in which religious authority or divine law is closely tied to political authority and the state's legal order.</p><div class="quote">Core instinct: “Religious authority is foundational to political rule.”</div></article>
+    </div>
+  </section>
+
+  <section id="state">
+    <div class="section-head"><div><h2>05 · How is the state structured?</h2><p>These terms describe institutional architecture rather than left/right economics.</p></div></div>
+    <div class="grid cols-4">
+      <article class="card"><span class="tag structure">Head of state</span><h3>Republic</h3><p>A non-monarchical state structure in which the head of state is not a hereditary monarch. A republic can also be democratic.</p></article>
+      <article class="card"><span class="tag structure">Head of state</span><h3>Monarchy</h3><p>A state with a monarch as head of state, often hereditary. Monarchies can be absolute or constitutional.</p></article>
+      <article class="card"><span class="tag structure">Territorial power</span><h3>Federalism</h3><p>Constitutionally recognised powers are divided between a national government and regional/state governments.</p></article>
+      <article class="card"><span class="tag structure">Territorial power</span><h3>Unitary system</h3><p>Constitutional authority is more strongly concentrated at the national level, though local governments may still exercise substantial delegated powers.</p></article>
+    </div>
+    <div class="grid cols-2" style="margin-top:16px">
+      <div class="card"><h3>Imperialism</h3><p>Extension of a state's power or influence beyond its own borders through political, economic or military means.</p><div class="formula">POWER OF STATE A → INFLUENCE / CONTROL BEYOND ITS BORDERS</div></div>
+      <div class="card"><h3>Colonialism</h3><p>A historical form of external domination involving political control of territory and populations, often with settlement and economic exploitation.</p><div class="formula">EXTERNAL RULE + TERRITORIAL CONTROL + COLONIAL ADMINISTRATION</div></div>
+    </div>
+    <div class="callout amber" style="margin-top:16px"><strong>Republic vs democracy</strong>“Republic” and “democracy” are not opposites. <b>Republic</b> describes a state form; <b>democracy</b> describes how political authority is grounded and exercised.</div>
+  </section>
+
+  <section id="india">
+    <div class="section-head"><div><h2>06 · Decode India’s constitutional description</h2><p>The Preamble calls India a <b>Sovereign Socialist Secular Democratic Republic</b>. Each adjective answers a different question.</p></div></div>
+    <div class="decoder card">
+      <div>
+        <div class="decode-row"><div class="decode-word">Sovereign</div><div class="decode-meaning">India is an independent state that exercises supreme authority over its territory and conducts its own external relations.</div></div>
+        <div class="decode-row"><div class="decode-word">Socialist</div><div class="decode-meaning">A constitutional commitment to social and economic justice; in practice, India has a mixed/market economy rather than a Soviet-style command economy.</div></div>
+        <div class="decode-row"><div class="decode-word">Secular</div><div class="decode-meaning">The constitutional order does not establish a theocratic state; religion and state are related differently than in a system governed by religious authority.</div></div>
+      </div>
+      <div>
+        <div class="decode-row"><div class="decode-word">Democratic</div><div class="decode-meaning">Political authority rests on democratic institutions, participation and representative government.</div></div>
+        <div class="decode-row"><div class="decode-word">Republic</div><div class="decode-meaning">India does not have a hereditary monarch as its head of state; the President is the constitutional head of the Union.</div></div>
+        <div class="decode-row"><div class="decode-word">The takeaway</div><div class="decode-meaning"><b>One sentence can contain multiple dimensions.</b> Never assume “socialist,” “democratic,” and “republic” are competing labels.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="party">
+    <div class="section-head"><div><h2>07 · Democrat vs democratic · Republican vs republican</h2><p>Capital letters can change the meaning entirely in U.S. politics.</p></div></div>
+    <div class="grid cols-4">
+      <div class="card"><span class="tag power">Lowercase</span><h3>democratic</h3><p>Describes something relating to <b>democracy</b>.</p><div class="formula">“a democratic government”</div></div>
+      <div class="card"><span class="tag power">Capitalised</span><h3>Democrat</h3><p>Usually means a member/supporter of the <b>U.S. Democratic Party</b>.</p><div class="formula">PARTY NAME</div></div>
+      <div class="card"><span class="tag structure">Lowercase</span><h3>republican</h3><p>Relating to a <b>republican form of government</b>.</p><div class="formula">“republican principles”</div></div>
+      <div class="card"><span class="tag structure">Capitalised</span><h3>Republican</h3><p>Usually means a member/supporter of the <b>U.S. Republican Party</b>.</p><div class="formula">PARTY NAME</div></div>
+    </div>
+    <div class="callout redflag" style="margin-top:16px"><strong>Classic trap</strong>“Republican” does not automatically mean “someone who supports a republic.” In U.S. news, a capital-R <b>Republican</b> is the party label.</div>
+  </section>
+
+  <section id="compare">
+    <div class="section-head"><div><h2>08 · One-glance comparison</h2><p>Use this table to stop mixing economic systems with forms of government and ideological traditions.</p></div></div>
+    <div class="compare">
+      <table>
+        <thead><tr><th>Term</th><th>Main question it answers</th><th>Core idea</th><th>Category</th></tr></thead>
+        <tbody>
+          <tr><td class="axis-chip">Capitalism</td><td>Who owns productive assets?</td><td>Private ownership + markets</td><td>Economic system</td></tr>
+          <tr><td class="axis-chip">Socialism</td><td>Who should control production?</td><td>Social/collective/public/worker control, depending on school</td><td>Economic/political tradition</td></tr>
+          <tr><td class="axis-chip">Communism</td><td>What is the ultimate ownership/class goal?</td><td>Common ownership + classless society in theory</td><td>Ideology / theoretical end-state</td></tr>
+          <tr><td class="axis-chip">Democracy</td><td>Who has political authority?</td><td>Rule through the people and representative institutions</td><td>Political system</td></tr>
+          <tr><td class="axis-chip">Authoritarianism</td><td>How concentrated is political power?</td><td>Concentrated power + restricted competition</td><td>Political system</td></tr>
+          <tr><td class="axis-chip">Liberalism</td><td>What should protect the individual?</td><td>Liberty + rights + constraints on arbitrary power</td><td>Political philosophy</td></tr>
+          <tr><td class="axis-chip">Conservatism</td><td>How should society change?</td><td>Tradition + continuity + cautious reform</td><td>Political philosophy</td></tr>
+          <tr><td class="axis-chip">Nationalism</td><td>What political community matters?</td><td>Nation + national identity/self-determination</td><td>Political ideology</td></tr>
+          <tr><td class="axis-chip">Populism</td><td>Whose interests are being defended?</td><td>“People” vs “elite” framing</td><td>Political style/ideology</td></tr>
+          <tr><td class="axis-chip">Republic</td><td>What kind of state?</td><td>No hereditary monarch as the governing principle</td><td>State structure</td></tr>
+          <tr><td class="axis-chip">Federalism</td><td>Where is power located?</td><td>National + regional constitutional powers</td><td>State structure</td></tr>
+          <tr><td class="axis-chip">Theocracy</td><td>What grounds political authority?</td><td>Religious authority/divine law closely linked to rule</td><td>State system</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="terms">
+    <div class="section-head"><div><h2>09 · Quick glossary</h2><p>Click a category to filter the terms. These are deliberately simplified “first definitions” for fast revision.</p></div></div>
+    <div class="term-controls">
+      <button class="term-btn active" data-filter="all">All</button>
+      <button class="term-btn" data-filter="econ">Economy</button>
+      <button class="term-btn" data-filter="power">Political power</button>
+      <button class="term-btn" data-filter="values">Values / ideology</button>
+      <button class="term-btn" data-filter="state">State structure</button>
+    </div>
+    <div class="terms" id="termGrid">
+      <div class="term" data-cat="econ"><div class="badge">Economy</div><strong>Capitalism</strong><p>Private ownership, markets and profit incentives.</p></div>
+      <div class="term" data-cat="econ"><div class="badge">Economy</div><strong>Socialism</strong><p>Greater social/collective control of economic resources.</p></div>
+      <div class="term" data-cat="econ"><div class="badge">Economy</div><strong>Communism</strong><p>Common ownership and a classless society as the theoretical goal.</p></div>
+      <div class="term" data-cat="econ"><div class="badge">Economy</div><strong>Social democracy</strong><p>Market economy + welfare + regulation + redistribution.</p></div>
+      <div class="term" data-cat="values"><div class="badge">Ideology</div><strong>Marxism</strong><p>Framework centred on class, capitalism and historical social change.</p></div>
+      <div class="term" data-cat="values"><div class="badge">Ideology</div><strong>Leninism</strong><p>Lenin's adaptation of Marxism, including a disciplined revolutionary party.</p></div>
+      <div class="term" data-cat="power"><div class="badge">Political power</div><strong>Authoritarianism</strong><p>Concentrated political power with restricted competition/accountability.</p></div>
+      <div class="term" data-cat="power"><div class="badge">Political power</div><strong>Dictatorship</strong><p>Rule concentrated in one leader or small group.</p></div>
+      <div class="term" data-cat="power"><div class="badge">Political power</div><strong>Totalitarianism</strong><p>Extensive attempts to control political and social life.</p></div>
+      <div class="term" data-cat="power"><div class="badge">Political power</div><strong>Democracy</strong><p>Political authority grounded in the people.</p></div>
+      <div class="term" data-cat="values"><div class="badge">Values</div><strong>Liberalism</strong><p>Individual liberty, rights and limits on arbitrary power.</p></div>
+      <div class="term" data-cat="values"><div class="badge">Values</div><strong>Conservatism</strong><p>Tradition, continuity, institutions and cautious change.</p></div>
+      <div class="term" data-cat="values"><div class="badge">Values</div><strong>Nationalism</strong><p>Nation and national identity at the centre of political loyalty.</p></div>
+      <div class="term" data-cat="values"><div class="badge">Values</div><strong>Populism</strong><p>“Ordinary people” versus “the elite.”</p></div>
+      <div class="term" data-cat="values"><div class="badge">Values</div><strong>Fascism</strong><p>Authoritarian, ultranationalist, anti-liberal-democratic ideological tradition.</p></div>
+      <div class="term" data-cat="values"><div class="badge">Values</div><strong>Libertarianism</strong><p>Strong emphasis on personal freedom and limiting state coercion.</p></div>
+      <div class="term" data-cat="state"><div class="badge">State</div><strong>Republic</strong><p>Non-monarchical state structure.</p></div>
+      <div class="term" data-cat="state"><div class="badge">State</div><strong>Monarchy</strong><p>State with a monarch as head of state.</p></div>
+      <div class="term" data-cat="state"><div class="badge">State</div><strong>Federalism</strong><p>National and regional governments have constitutional powers.</p></div>
+      <div class="term" data-cat="state"><div class="badge">State</div><strong>Unitary</strong><p>Authority is more strongly concentrated nationally.</p></div>
+      <div class="term" data-cat="state"><div class="badge">State</div><strong>Theocracy</strong><p>Religious authority is foundational to political rule.</p></div>
+      <div class="term" data-cat="state"><div class="badge">State</div><strong>Secularism</strong><p>State authority is not derived from religious rule as such.</p></div>
+      <div class="term" data-cat="state"><div class="badge">State</div><strong>Imperialism</strong><p>Extension of power or influence beyond one's borders.</p></div>
+      <div class="term" data-cat="state"><div class="badge">State</div><strong>Colonialism</strong><p>External political control of territory and populations.</p></div>
+      <div class="term" data-cat="values"><div class="badge">Political tradition</div><strong>Anarchism</strong><p>Questions or rejects the necessity/legitimacy of centralized coercive state authority.</p></div>
+      <div class="term" data-cat="values"><div class="badge">Political tradition</div><strong>Internationalism</strong><p>Emphasizes cooperation and coordination across national borders.</p></div>
+      <div class="term" data-cat="values"><div class="badge">Political tradition</div><strong>Patriotism</strong><p>Love, attachment or loyalty to one's country.</p></div>
+      <div class="term" data-cat="state"><div class="badge">State</div><strong>Republicanism</strong><p>Tradition emphasising self-government, civic participation and public institutions.</p></div>
+    </div>
+  </section>
+
+  <section id="quiz">
+    <div class="section-head"><div><h2>10 · Test yourself</h2><p>Use these before an SSB discussion, current-affairs session or geopolitics debate.</p></div></div>
+    <div class="quiz">
+      <div class="qbox">
+        <h3 id="question">A country has private companies and markets, but citizens elect its government. Which combination fits best?</h3>
+        <div class="options" id="options">
+          <button class="opt" data-answer="correct">Capitalist + democratic</button>
+          <button class="opt" data-answer="wrong">Communist + dictatorship</button>
+          <button class="opt" data-answer="wrong">Monarchy + theocracy</button>
+          <button class="opt" data-answer="wrong">Socialist + totalitarian</button>
+        </div>
+        <div class="result" id="result"></div>
+      </div>
+      <div class="card">
+        <h3>Your 10-second decoding method</h3>
+        <div class="formula">STEP 1 → ECONOMY</div><p>Who owns/controls productive assets?</p>
+        <div class="formula">STEP 2 → POWER</div><p>Who rules and how are they chosen?</p>
+        <div class="formula">STEP 3 → VALUES</div><p>Liberty? Equality? Tradition? Nation? Religion?</p>
+        <div class="formula">STEP 4 → STATE</div><p>Republic? Monarchy? Federal? Unitary?</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <b>Learning note:</b> These are simplified entry-level definitions. Many terms have multiple schools, historical meanings and country-specific uses; avoid treating any single label as a perfect description of a real country.
+    <br><br>
+    Reference starting points: Stanford Encyclopedia of Philosophy — <a href="https://plato.stanford.edu/entries/socialism/" target="_blank" rel="noopener">Socialism</a>, <a href="https://plato.stanford.edu/entries/liberalism/" target="_blank" rel="noopener">Liberalism</a>, <a href="https://plato.stanford.edu/entries/conservatism/" target="_blank" rel="noopener">Conservatism</a>; Encyclopaedia Britannica — <a href="https://www.britannica.com/topic/democracy" target="_blank" rel="noopener">Democracy</a>, <a href="https://www.britannica.com/topic/fascism" target="_blank" rel="noopener">Fascism</a>; Government of India — <a href="https://legislative.gov.in/constitution-of-india/" target="_blank" rel="noopener">Constitution resources</a>.
+  </footer>
+</div>
+<script>
+  // Glossary filters
+  const buttons = document.querySelectorAll('.term-btn');
+  const terms = document.querySelectorAll('.term');
+  buttons.forEach(btn => btn.addEventListener('click', () => {
+    const filter = btn.dataset.filter;
+    buttons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    terms.forEach(term => {
+      term.classList.toggle('hidden', filter !== 'all' && term.dataset.cat !== filter);
+    });
+  }));
+
+  // Quiz feedback
+  const opts = document.querySelectorAll('.opt');
+  const result = document.getElementById('result');
+  opts.forEach(opt => opt.addEventListener('click', () => {
+    opts.forEach(o => o.classList.remove('correct','wrong'));
+    if (opt.dataset.answer === 'correct') {
+      opt.classList.add('correct');
+      result.textContent = '✓ Correct — economic system and political system are separate dimensions.';
+    } else {
+      opt.classList.add('wrong');
+      result.textContent = 'Try again. Ask two separate questions: how does the economy work, and who governs?';
+    }
+  }));
+</script>
+</body>
+</html>

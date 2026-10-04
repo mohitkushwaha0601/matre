@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Indian Defence Exercises 2026 — Intelligence & SSB Compendium</title>
+<style>
+:root{
+  --bg:#071018; --panel:#0d1722; --panel2:#111f2d; --ink:#e9f1f8; --muted:#9eb0c0;
+  --line:#203244; --accent:#56c6a9; --accent2:#66a8ff; --warn:#f2bf61; --danger:#ff7d72;
+  --shadow:0 18px 50px rgba(0,0,0,.22); --radius:18px;
+}
+*{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at 15% 5%,#102333 0,#071018 40%,#050b11 100%);color:var(--ink);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:#9dd2ff;text-decoration:none}.wrap{max-width:1280px;margin:auto;padding:28px}
+.hero{padding:42px 0 28px;border-bottom:1px solid var(--line)}
+.kicker{letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;font-size:12px}
+h1{font-size:clamp(34px,6vw,66px);line-height:.98;margin:14px 0 18px;max-width:920px}
+.sub{max-width:900px;color:#c7d4df;font-size:17px}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.badge{border:1px solid var(--line);background:rgba(255,255,255,.03);padding:7px 11px;border-radius:999px;color:#c9d5df;font-size:12px}
+.notice{margin:22px 0;padding:14px 16px;border-left:3px solid var(--warn);background:rgba(242,191,97,.06);border-radius:10px;color:#d8e3eb}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0}
+.stat{padding:18px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.018));border-radius:var(--radius);box-shadow:var(--shadow)}
+.stat b{display:block;font-size:30px}.stat span{color:var(--muted);font-size:12px}
+.controls{position:sticky;top:0;z-index:5;background:rgba(7,16,24,.9);backdrop-filter:blur(12px);padding:12px 0;border-bottom:1px solid var(--line)}
+.controls-inner{display:flex;flex-wrap:wrap;gap:9px}
+button,select,input{background:#0b151f;color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+button{cursor:pointer}.active{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+input{min-width:250px;flex:1}.content{padding-top:26px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+.card{border:1px solid var(--line);background:linear-gradient(180deg,#0e1924,#0a141e);border-radius:var(--radius);padding:19px;box-shadow:var(--shadow)}
+.card:hover{transform:translateY(-2px);transition:.2s;border-color:#31506a}
+.card-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.title{font-size:21px;font-weight:800}.service{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-top:3px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}.tag{font-size:11px;padding:5px 8px;border-radius:7px;background:#112434;border:1px solid #203c50}
+.tag.bi{border-color:#2e6d58;color:#a9e4d0}.tag.multi{border-color:#4a658b;color:#b9d6ff}.tag.ind{border-color:#6d5b2a;color:#f5d890}.tag.tri{border-color:#754f6c;color:#ecc0de}
+.meta-row{display:grid;grid-template-columns:90px 1fr;gap:10px;padding:7px 0;border-top:1px solid rgba(255,255,255,.06)}.meta-row b{color:#98aabd;font-size:12px;text-transform:uppercase}
+h2{font-size:28px;margin:38px 0 14px}.section-intro{color:var(--muted);max-width:900px}
+.timeline{display:grid;gap:10px}.tl{display:grid;grid-template-columns:115px 1fr;gap:14px;align-items:start}.month{color:var(--accent);font-weight:800;font-size:13px;padding-top:9px}.tlbox{padding:13px 15px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.02)}
+.matrix{width:100%;border-collapse:collapse;font-size:13px}.matrix th,.matrix td{border-bottom:1px solid var(--line);padding:11px 9px;vertical-align:top;text-align:left}.matrix th{color:#a8b9c8;background:#0c1721;position:sticky;top:58px}
+.lens{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.lens div{padding:16px;border:1px solid var(--line);background:#0c1721;border-radius:14px}.lens h3{margin:0 0 7px;color:#cfe1ef;font-size:14px}.lens p{margin:0;color:#afbfcc}
+.callout{padding:18px;border:1px solid #345a4e;background:linear-gradient(180deg,rgba(86,198,169,.08),rgba(86,198,169,.02));border-radius:16px}
+.footer{margin:44px 0 10px;padding:20px 0;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+.small{font-size:12px;color:var(--muted)} .hidden{display:none}
+@media(max-width:900px){.stats{grid-template-columns:repeat(2,1fr)}.grid,.lens{grid-template-columns:1fr}.tl{grid-template-columns:1fr}.month{padding:0}.controls{position:static}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="kicker">India • Defence • 2026 • SSB / Strategic Studies</div>
+    <h1>Indian Defence Exercises 2026</h1>
+    <p class="sub">A research compendium of major exercises and operational training engagements involving the Indian Army, Navy, Air Force, Coast Guard and joint/multi-agency formations, covering events completed or underway by <strong>28 September 2026</strong>.</p>
+    <div class="meta">
+      <span class="badge">Cut-off: 28 Sep 2026</span>
+      <span class="badge">Primary evidence: PIB / MoD</span>
+      <span class="badge">Scope: major publicly documented exercises</span>
+      <span class="badge">Neutral analysis • no political ranking</span>
+    </div>
+  </header>
+
+  <div class="notice">
+    <strong>Method note:</strong> “All” is interpreted as all <em>major, publicly documented</em> exercises / structured training engagements that could be verified from official Indian defence releases and selected government/major-media sources through the cut-off date. Routine unit drills, ship-to-ship passage exercises, ceremonial displays and every state-level recurring coastal-security iteration are not exhaustively listed. Where official 2026 confirmation was not available, an item is not presented as verified.
+  </div>
+
+  <section class="stats">
+    <div class="stat"><b>20+</b><span>major 2026 entries covered in the verified/active set</span></div>
+    <div class="stat"><b>5</b><span>cross-service / whole-of-government style engagements highlighted</span></div>
+    <div class="stat"><b>4</b><span>major IAF international engagements highlighted</span></div>
+    <div class="stat"><b>7</b><span>major Army bilateral/multilateral cycles highlighted</span></div>
+  </section>
+
+  <div class="controls"><div class="controls-inner">
+    <input id="q" placeholder="Search exercise, country, capability, location…" oninput="filterCards()">
+    <button class="active" onclick="setFilter('all',this)">All</button>
+    <button onclick="setFilter('army',this)">Army</button>
+    <button onclick="setFilter('navy',this)">Navy</button>
+    <button onclick="setFilter('iaf',this)">IAF</button>
+    <button onclick="setFilter('icg',this)">Coast Guard</button>
+    <button onclick="setFilter('joint',this)">Joint / Multi-agency</button>
+    <button onclick="setFilter('ongoing',this)">Ongoing on cut-off</button>
+  </div></div>
+
+  <main class="content">
+    <h2>2026 at a glance</h2>
+    <p class="section-intro">The exercise calendar shows several overlapping themes: greater jointness inside India, deeper Indo-Pacific interoperability, expanded use of drones / counter-UAS / ISR, special-operations interoperability, and a strong maritime-security layer built around the Indian Ocean Region.</p>
+
+    <div id="cards" class="grid">
+      <!-- cards -->
+      <article class="card" data-tags="joint army iaf navy multi-agency india" data-state="completed">
+        <div class="card-head"><div><div class="title">MILAN 2026</div><div class="service">Indian Navy • Multilateral</div></div><span class="tag multi">MULTINATIONAL</span></div>
+        <div class="tags"><span class="tag">15–25 Feb</span><span class="tag">Visakhapatnam</span><span class="tag">74 nations</span></div>
+        <div class="meta-row"><b>What</b><div>Flagship multilateral naval exercise conducted with harbour and sea phases; the closing ceremony was held aboard INS Vikrant.</div></div>
+        <div class="meta-row"><b>2026 scale</b><div>42 ships/submarines and 29 aircraft; 18 participating foreign ships in the closing release.</div></div>
+        <div class="meta-row"><b>Focus</b><div>ASW, air defence, search & rescue, cooperative maritime security, operational familiarity and professional ties.</div></div>
+        <div class="meta-row"><b>Analysis</b><div>Militarily, the key output is not the number of flags but the ability to coordinate complex maritime tasks across different procedures, communications and rules of engagement.</div></div>
+        <div class="small">Sources: <a href="https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2232853" target="_blank">PIB closing release</a>; <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2228574" target="_blank">PIB MILAN 2026 overview</a>.</div>
+      </article>
+
+      <article class="card" data-tags="iaf india independent" data-state="completed">
+        <div class="card-head"><div><div class="title">Vayu Shakti–26</div><div class="service">Indian Air Force • Independent firepower demonstration</div></div><span class="tag ind">INDEPENDENT</span></div>
+        <div class="tags"><span class="tag">27 Feb</span><span class="tag">Pokhran, Rajasthan</span><span class="tag">full spectrum</span></div>
+        <div class="meta-row"><b>What</b><div>Large live-fire demonstration simulating an integrated combat theatre with fighters, transport aircraft, helicopters and advanced weapon systems.</div></div>
+        <div class="meta-row"><b>Platforms</b><div>Tejas, Rafale, Jaguar, Mirage-2000, Su-30MKI, MiG-29, C-130J, C-295, C-17, LCH, Apache, Chinook and RPAs; air-defence and counter-UAS systems were also featured.</div></div>
+        <div class="meta-row"><b>Analysis</b><div>Shows how air power links precision strike, air mobility, rotary-wing effects, air defence and unmanned systems rather than operating as isolated capability buckets.</div></div>
+        <div class="small">Source: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2233778" target="_blank">PIB, 27 Feb 2026</a>.</div>
+      </article>
+
+      <article class="card" data-tags="army kyrgyzstan bilateral" data-state="completed">
+        <div class="card-head"><div><div class="title">Khanjar–2026</div><div class="service">Army • India–Kyrgyzstan Special Forces</div></div><span class="tag bi">BILATERAL</span></div>
+        <div class="tags"><span class="tag">4–17 Feb</span><span class="tag">Missamari, Assam</span><span class="tag">20 + 20</span></div>
+        <div class="meta-row"><b>Focus</b><div>Counter-terrorism and special-forces operations in urban and mountainous terrain; sniping, building intervention and mountain craft.</div></div>
+        <div class="meta-row"><b>Why it matters</b><div>Small contingents, narrow skill sets and repeat annual cycles allow TTPs to become highly specific and mutually understood.</div></div>
+        <div class="small">Source: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2223244" target="_blank">PIB, 4 Feb 2026</a>.</div>
+      </article>
+
+      <article class="card" data-tags="army japan bilateral" data-state="completed">
+        <div class="card-head"><div><div class="title">Dharma Guardian–VII</div><div class="service">Army • India–Japan</div></div><span class="tag bi">BILATERAL</span></div>
+        <div class="tags"><span class="tag">24 Feb–9 Mar</span><span class="tag">Chaubattia, Uttarakhand</span><span class="tag">120 + 120</span></div>
+        <div class="meta-row"><b>Focus</b><div>Semi-urban joint operations, ISR grid, vehicle check points, cordon/search, heliborne operations and house intervention.</div></div>
+        <div class="meta-row"><b>Analysis</b><div>Blends infantry drills with surveillance and technology-enabled urban tactics, creating a common operating language at tactical level.</div></div>
+        <div class="small">Source: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2232191" target="_blank">PIB, 24 Feb 2026</a>.</div>
+      </article>
+
+      <article class="card" data-tags="army usa bilateral special-forces" data-state="completed">
+        <div class="card-head"><div><div class="title">Vajra Prahar–16</div><div class="service">Army • India–US Special Forces</div></div><span class="tag bi">BILATERAL</span></div>
+        <div class="tags"><span class="tag">24 Feb–16 Mar</span><span class="tag">Bakloh, HP</span><span class="tag">45 + 12</span></div>
+        <div class="meta-row"><b>Focus</b><div>Joint mission planning, special-operations TTP exchange and operations in mountainous terrain with Indian Para SF and US Green Berets.</div></div>
+        <div class="meta-row"><b>Analysis</b><div>Special-forces exercises are valuable for interoperability because they expose command teams to each other's planning logic, mission rehearsal and tactical language.</div></div>
+        <div class="small">Source: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2232288" target="_blank">PIB, 24 Feb 2026</a>.</div>
+      </article>
+
+      <article class="card" data-tags="army iaf uzbekistan bilateral" data-state="completed">
+        <div class="card-head"><div><div class="title">Dustlik–2026</div><div class="service">Army + IAF • India–Uzbekistan</div></div><span class="tag bi">BILATERAL</span></div>
+        <div class="tags"><span class="tag">12–25 Apr</span><span class="tag">Namangan, Uzbekistan</span><span class="tag">Army + Air Force</span></div>
+        <div class="meta-row"><b>Focus</b><div>Semi-mountainous joint operations, land navigation, strike missions, seizure of enemy-held areas and special operations validation.</div></div>
+        <div class="meta-row"><b>Distinctive</b><div>The Indian contingent included both Army and Air Force personnel, widening the exercise beyond a purely Army-to-Army format.</div></div>
+        <div class="small">Source: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2251300" target="_blank">PIB, 12 Apr 2026</a>.</div>
+      </article>
+
+      <article class="card" data-tags="army egypt bilateral special-forces" data-state="completed">
+        <div class="card-head"><div><div class="title">Cyclone–IV</div><div class="service">Army • India–Egypt Special Forces</div></div><span class="tag bi">BILATERAL</span></div>
+        <div class="tags"><span class="tag">9–17 Apr</span><span class="tag">Anshas, Egypt</span><span class="tag">desert / semi-desert</span></div>
+        <div class="meta-row"><b>Focus</b><div>Joint mission planning and special-operations TTP exchange in desert and semi-desert terrain.</div></div>
+        <div class="meta-row"><b>Analysis</b><div>Terrain-specific SOF exercises build adaptation to heat, arid mobility, navigation, surveillance and rapid mission execution.</div></div>
+        <div class="small">Source: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2250186" target="_blank">PIB, 8 Apr 2026</a>.</div>
+      </article>
+
+      <article class="card" data-tags="army cambodia bilateral" data-state="completed">
+        <div class="card-head"><div><div class="title">CINBAX–II</div><div class="service">Army • India–Cambodia</div></div><span class="tag bi">BILATERAL</span></div>
+        <div class="tags"><span class="tag">4–17 May</span><span class="tag">Kampong Speu, Cambodia</span><span class="tag">UN Chapter VII</span></div>
+        <div class="meta-row"><b>Focus</b><div>Company-level joint training for sub-conventional operations under a UN-mandated framework.</div></div>
+        <div class="meta-row"><b>Analysis</b><div>Combines peace-support orientation with combat-supporting tactical drills and creates practical familiarity between two armies that interact less frequently at scale.</div></div>
+        <div class="small">Source: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2257604" target="_blank">PIB, 3 May 2026</a>.</div>
+      </article>
+
+      <article class="card" data-tags="army multi bilateral" data-state="completed">
+        <div class="card-head"><div><div class="title">Lamitiye–2026</div><div class="service">All three Indian Services • India–Seychelles</div></div><span class="tag bi">BILATERAL</span></div>
+        <div class="tags"><span class="tag">9–20 Mar</span><span class="tag">Seychelles</span><span class="tag">tri-service participation</span></div>
+        <div class="meta-row"><b>What</b><div>11th edition; Indian Army, Navy and Air Force participated together with the Seychelles Defence Forces.</div></div>
+        <div class="meta-row"><b>Focus</b><div>Sub-conventional operations in semi-urban terrain and peacekeeping cooperation, culminating in a validation exercise.</div></div>
+        <div class="small">Source: <a href="https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=2236791" target="_blank">PIB, 9 Mar 2026</a>.</div>
+      </article>
+
+      <article class="card" data-tags="army multinational" data-state="completed">
+        <div class="card-head"><div><div class="title">PRAGATI–2026</div><div class="service">Army-led • Multilateral regional</div></div><span class="tag multi">MULTILATERAL</span></div>
+        <div class="tags"><span class="tag">20–30 May</span><span class="tag">Umroi, Meghalaya</span><span class="tag">13 countries</span></div>
+        <div class="meta-row"><b>Participants</b><div>India + Bhutan, Cambodia, Indonesia, Laos, Malaysia, Maldives, Myanmar, Nepal, Philippines, Seychelles, Sri Lanka, Vietnam.</div></div>
+        <div class="meta-row"><b>Focus</b><div>Professional military exchange, interoperability, shared practices and a 72-hour validation exercise.</div></div>
+        <div class="meta-row"><b>Strategic reading</b><div>This is less about a single adversary and more about building a regional network able to train, communicate and respond collectively.</div></div>
+        <div class="small">Sources: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2263122" target="_blank">PIB start</a>; <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2266978" target="_blank">PIB conclusion</a>.</div>
+      </article>
+
+      <article class="card" data-tags="army multinational peacekeeping" data-state="completed">
+        <div class="card-head"><div><div class="title">Khaan Quest–23</div><div class="service">Army • Multilateral peacekeeping</div></div><span class="tag multi">MULTILATERAL</span></div>
+        <div class="tags"><span class="tag">20 Jun–3 Jul</span><span class="tag">Ulaanbaatar, Mongolia</span><span class="tag">UN Chapter VII</span></div>
+        <div class="meta-row"><b>Focus</b><div>Joint planning and peace-support tactical drills: checkpoints, cordon/search, patrolling, civilian evacuation, C-IED, combat first aid and CASEVAC.</div></div>
+        <div class="meta-row"><b>Indian contingent</b><div>40 personnel led by Jat Regiment troops and supporting arms/services.</div></div>
+        <div class="small">Source: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2274656" target="_blank">PIB, 18 Jun 2026</a>.</div>
+      </article>
+
+      <article class="card" data-tags="army thailand bilateral" data-state="completed">
+        <div class="card-head"><div><div class="title">Maitree–XV</div><div class="service">Army • India–Thailand</div></div><span class="tag bi">BILATERAL</span></div>
+        <div class="tags"><span class="tag">18–31 Aug</span><span class="tag">Surat Thani, Thailand</span><span class="tag">85 + 85</span></div>
+        <div class="meta-row"><b>Focus</b><div>Company-level joint training in jungle and semi-urban terrain.</div></div>
+        <div class="meta-row"><b>Analysis</b><div>Supports the operational side of India’s wider Act East engagement by making people, procedures and tactical habits more interoperable.</div></div>
+        <div class="small">Source: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2300293" target="_blank">PIB, 17 Aug 2026</a>.</div>
+      </article>
+
+      <article class="card" data-tags="army usa bilateral" data-state="ongoing">
+        <div class="card-head"><div><div class="title">Yudh Abhyas–2026</div><div class="service">Army • India–US</div></div><span class="tag bi">BILATERAL</span></div>
+        <div class="tags"><span class="tag">from 15 Sep</span><span class="tag">Auli + Mahajan</span><span class="tag">600 + 600</span><span class="tag">ON CUT-OFF</span></div>
+        <div class="meta-row"><b>Focus</b><div>Integrated Battle Group employment in mountainous and semi-mountainous terrain, infantry-dominated operations, drones/autonomous systems and contemporary weapons.</div></div>
+        <div class="meta-row"><b>Analysis</b><div>Shows a move from classic field manoeuvre toward technology-infused battle groups, autonomous sensing and multi-domain planning.</div></div>
+        <div class="small">Source: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2310476" target="_blank">PIB, 15 Sep 2026</a>.</div>
+      </article>
+
+      <article class="card" data-tags="army mongolia bilateral" data-state="ongoing">
+        <div class="card-head"><div><div class="title">Nomadic Elephant–18</div><div class="service">Army • India–Mongolia</div></div><span class="tag bi">BILATERAL</span></div>
+        <div class="tags"><span class="tag">21 Sep–3 Oct</span><span class="tag">Pithoragarh</span><span class="tag">45 + 45</span><span class="tag">ON CUT-OFF</span></div>
+        <div class="meta-row"><b>Focus</b><div>Counter-insurgency in semi-urban and mountainous terrain; room intervention, heliborne operations, cyber security, drones and counter-drone systems.</div></div>
+        <div class="meta-row"><b>Analysis</b><div>Combines legacy infantry drills with contemporary C-UAS and cyber elements at small-unit scale.</div></div>
+        <div class="small">Source: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2313046" target="_blank">PIB, 21 Sep 2026</a>.</div>
+      </article>
+
+      <article class="card" data-tags="iaf thailand bilateral" data-state="completed">
+        <div class="card-head"><div><div class="title">IAF–RTAF In-situ Exercise</div><div class="service">IAF • India–Thailand bilateral</div></div><span class="tag bi">BILATERAL</span></div>
+        <div class="tags"><span class="tag">9–12 Feb</span><span class="tag">Indian Ocean Region</span><span class="tag">Su-30MKI + Gripen</span></div>
+        <div class="meta-row"><b>Focus</b><div>Air-combat training over the maritime domain, supported by IL-78 refuelling, IAF AWACS and Thai GCI.</div></div>
+        <div class="meta-row"><b>Analysis</b><div>Demonstrates reach, tanker-supported persistence and airborne command-and-control beyond a simple fighter-to-fighter drill.</div></div>
+        <div class="small">Source: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2227536" target="_blank">PIB, 13 Feb 2026</a>.</div>
+      </article>
+
+      <article class="card" data-tags="iaf australia multinational" data-state="completed">
+        <div class="card-head"><div><div class="title">Pitch Black–2026</div><div class="service">IAF • Multinational air combat</div></div><span class="tag multi">MULTILATERAL</span></div>
+        <div class="tags"><span class="tag">20 Jul–7 Aug</span><span class="tag">Darwin, Australia</span><span class="tag">LFE</span></div>
+        <div class="meta-row"><b>Indian assets</b><div>Rafale fighters with C-17 and IL-78 support.</div></div>
+        <div class="meta-row"><b>Focus</b><div>Large Force Employment, multinational air combat, expeditionary operations and extended-distance deployment.</div></div>
+        <div class="small">Source: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2286254" target="_blank">PIB, 19 Jul 2026</a>.</div>
+      </article>
+
+      <article class="card" data-tags="iaf malaysia bilateral australia multinational" data-state="completed">
+        <div class="card-head"><div><div class="title">Udara Shakti–2026</div><div class="service">IAF • India–Malaysia bilateral</div></div><span class="tag bi">BILATERAL</span></div>
+        <div class="tags"><span class="tag">Aug 2026</span><span class="tag">Subang, Malaysia</span><span class="tag">air combat</span></div>
+        <div class="meta-row"><b>Focus</b><div>High-intensity combat sorties, tactical manoeuvres, SMEEs and learning from / flying with and against Malaysian Su-30MKM and F/A-18s.</div></div>
+        <div class="meta-row"><b>Why paired with Pitch Black</b><div>The dual deployment tested transition from a large multinational environment to a focused bilateral air-combat setting.</div></div>
+        <div class="small">Source: <a href="https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2302406" target="_blank">PIB, 22 Aug 2026</a>.</div>
+      </article>
+
+      <article class="card" data-tags="iaf japan bilateral" data-state="completed">
+        <div class="card-head"><div><div class="title">Veer Guardian–2026</div><div class="service">IAF • India–Japan air defence</div></div><span class="tag bi">BILATERAL</span></div>
+        <div class="tags"><span class="tag">9–22 Sep</span><span class="tag">Jodhpur</span><span class="tag">Tejas + Su-30MKI + Rafale + F-2A</span></div>
+        <div class="meta-row"><b>Focus</b><div>Within-visual-range combat, coordinated multi-aircraft missions, mission planning, engineering, maintenance and aerospace safety.</div></div>
+        <div class="meta-row"><b>Distinctive point</b><div>Japan’s F-2A fighters operated from an Indian air base for this bilateral exercise.</div></div>
+        <div class="small">Sources: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2307890" target="_blank">PIB start</a>; <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2313413" target="_blank">PIB conclusion</a>.</div>
+      </article>
+
+      <article class="card" data-tags="iaf multinational ongoing" data-state="ongoing">
+        <div class="card-head"><div><div class="title">Tarang Shakti–2026</div><div class="service">IAF • Multinational air exercise</div></div><span class="tag multi">MULTILATERAL</span></div>
+        <div class="tags"><span class="tag">26 Sep–12 Oct</span><span class="tag">Jodhpur + adjoining bases</span><span class="tag">ONGOING</span></div>
+        <div class="meta-row"><b>Participation</b><div>Public briefings identified seven Friendly Foreign Countries flying assets (Australia, Bangladesh, France, Germany, Sri Lanka, UAE, USA), with a wider observer community. Public counts vary by reporting date.</div></div>
+        <div class="meta-row"><b>Focus</b><div>Counter-air, air defence, combat, reconnaissance, airlift, air-to-air refuelling and multinational mission planning.</div></div>
+        <div class="meta-row"><b>Analysis</b><div>The central training value is collective mission planning and debriefing across multiple air-force procedures rather than bilateral familiarity alone.</div></div>
+        <div class="small">Sources: <a href="https://newsonair.gov.in/tarang-shakti-2026-multinational-air-exercise-to-begin-on-26th-september-in-jodhpur/" target="_blank">Akashvani / News on AIR, 22 Sep</a>; <a href="https://www.theweek.in/news/defence/2026/09/22/f-35-rafale-f-16-in-indian-sies-why-exercise-tarang-shakti-2026-is-important-for-iaf.html" target="_blank">The Week, 22 Sep</a>.</div>
+      </article>
+
+      <article class="card" data-tags="navy sri-lanka bilateral" data-state="completed">
+        <div class="card-head"><div><div class="title">SLINEX–26</div><div class="service">Navy • India–Sri Lanka</div></div><span class="tag bi">BILATERAL</span></div>
+        <div class="tags"><span class="tag">17–21 Sep</span><span class="tag">Visakhapatnam</span><span class="tag">ASW + VBSS</span></div>
+        <div class="meta-row"><b>Units</b><div>INS Kavaratti and INS Jyoti with SLNS Sindurala.</div></div>
+        <div class="meta-row"><b>Focus</b><div>Coordinated maritime manoeuvres, air operations, night replenishment, VBSS and slithering operations.</div></div>
+        <div class="small">Source: <a href="https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2313929" target="_blank">PIB, 23 Sep 2026</a>.</div>
+      </article>
+
+      <article class="card" data-tags="navy malaysia bilateral" data-state="completed">
+        <div class="card-head"><div><div class="title">Samudra Laksamana–4</div><div class="service">Navy • India–Malaysia</div></div><span class="tag bi">BILATERAL</span></div>
+        <div class="tags"><span class="tag">Sep 2026</span><span class="tag">Lumut, Malaysia</span><span class="tag">harbour + sea</span></div>
+        <div class="meta-row"><b>Focus</b><div>Cross-deck visits, operational interactions, professional exchanges and sea-phase interoperability.</div></div>
+        <div class="small">Source: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2308653" target="_blank">PIB, 10 Sep 2026</a>.</div>
+      </article>
+
+      <article class="card" data-tags="navy france bilateral ongoing" data-state="ongoing">
+        <div class="card-head"><div><div class="title">Varuna–24th edition</div><div class="service">Navy • India–France</div></div><span class="tag bi">BILATERAL</span></div>
+        <div class="tags"><span class="tag">from 22 Sep</span><span class="tag">Toulon, France</span><span class="tag">ONGOING</span></div>
+        <div class="meta-row"><b>Focus</b><div>Harbour and sea professional engagements, cross-deck visits and operational interactions.</div></div>
+        <div class="meta-row"><b>Analysis</b><div>Provides a standing mechanism for increasingly sophisticated Indo-French naval interoperability and shared operating procedures.</div></div>
+        <div class="small">Source: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2314333" target="_blank">PIB, 24 Sep 2026</a>.</div>
+      </article>
+
+      <article class="card" data-tags="navy multinational" data-state="completed">
+        <div class="card-head"><div><div class="title">IONS IMEX TTX–2026</div><div class="service">Navy • Multilateral table-top</div></div><span class="tag multi">MULTILATERAL</span></div>
+        <div class="tags"><span class="tag">27 Mar</span><span class="tag">Kochi</span><span class="tag">IOR security</span></div>
+        <div class="meta-row"><b>Participants</b><div>Bangladesh, France, Indonesia, Kenya, Maldives, Mauritius, Myanmar, Seychelles, Singapore, Sri Lanka, Tanzania, Timor-Leste + Indian Navy and IOS SAGAR-linked officers.</div></div>
+        <div class="meta-row"><b>Focus</b><div>Non-traditional maritime security challenges and collaborative decision-making.</div></div>
+        <div class="small">Source: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2246627" target="_blank">PIB, 29 Mar 2026</a>.</div>
+      </article>
+
+      <article class="card" data-tags="navy multinational cmf" data-state="completed">
+        <div class="card-head"><div><div class="title">Operation Southern Readiness 26–2</div><div class="service">Navy • CMF / CTF 154 multinational</div></div><span class="tag multi">MULTILATERAL</span></div>
+        <div class="tags"><span class="tag">20–23 Jul</span><span class="tag">Kochi</span><span class="tag">276 personnel / 27 countries</span></div>
+        <div class="meta-row"><b>Focus</b><div>Maritime law, MDA, information sharing, counter-narcotics, force protection, asymmetric threats and maritime uncrewed systems.</div></div>
+        <div class="meta-row"><b>Analysis</b><div>Shows India using training architecture—not just ships and exercises—to contribute to coalition maritime capacity building.</div></div>
+        <div class="small">Source: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2288511" target="_blank">PIB, 23 Jul 2026</a>.</div>
+      </article>
+
+      <article class="card" data-tags="navy multinational asean" data-state="ongoing">
+        <div class="card-head"><div><div class="title">ADMM‑Plus Joint Cooperation Activity–2026</div><div class="service">Navy • ASEAN + Plus</div></div><span class="tag multi">MULTILATERAL</span></div>
+        <div class="tags"><span class="tag">from 20 Sep</span><span class="tag">Subic Bay, Philippines</span><span class="tag">ONGOING</span></div>
+        <div class="meta-row"><b>What</b><div>Indian ships INS Sahyadri and INS Kulish participated as part of the Indian Navy’s operational deployment.</div></div>
+        <div class="meta-row"><b>Focus</b><div>Professional and operational engagement with ASEAN Member States and eight Plus countries; maritime interoperability and shared maritime challenges.</div></div>
+        <div class="small">Source: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2312842" target="_blank">PIB, 21 Sep 2026</a>.</div>
+      </article>
+
+      <article class="card" data-tags="coast-guard navy india domestic" data-state="completed">
+        <div class="card-head"><div><div class="title">Sagar Kavach — Kerala & Mahe</div><div class="service">Coast Guard + Navy + civil agencies</div></div><span class="tag ind">NATIONAL</span></div>
+        <div class="tags"><span class="tag">12–13 Mar</span><span class="tag">Kerala coast</span><span class="tag">coastal security</span></div>
+        <div class="meta-row"><b>Focus</b><div>Preparedness against asymmetric maritime threats; security of harbours and vital installations; layered surveillance and inter-agency coordination.</div></div>
+        <div class="meta-row"><b>Participants</b><div>Navy, Coast Guard, Coastal Police, Customs, Marine Enforcement Wing, Cochin Port authorities and air assets.</div></div>
+        <div class="small">Source: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2240001" target="_blank">PIB, 13 Mar 2026</a>.</div>
+      </article>
+
+      <article class="card" data-tags="coast-guard quad multinational" data-state="ongoing">
+        <div class="card-head"><div><div class="title">QUAD‑at‑Sea Ship Observer Mission–2026</div><div class="service">Indian Coast Guard • QUAD maritime interoperability</div></div><span class="tag multi">MULTILATERAL</span></div>
+        <div class="tags"><span class="tag">from 25 Sep</span><span class="tag">Chennai → Perth</span><span class="tag">ONGOING</span></div>
+        <div class="meta-row"><b>What</b><div>ICG Ship Shaunak sailed with six “Sea Riders”: officers from India, Japan, Australia and the United States for shipboard professional exchange.</div></div>
+        <div class="meta-row"><b>Analysis</b><div>Cross-embarkation is a different kind of interoperability: it builds shared professional understanding without requiring a classic warfighting exercise.</div></div>
+        <div class="small">Source: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2315065" target="_blank">PIB, 25 Sep 2026</a>.</div>
+      </article>
+
+      <article class="card" data-tags="joint army iaf civil domestic" data-state="completed">
+        <div class="card-head"><div><div class="title">Sanjha Shakti–2026</div><div class="service">Army + 16 civilian agencies</div></div><span class="tag ind">WHOLE-OF-NATION</span></div>
+        <div class="tags"><span class="tag">8–9 Jan</span><span class="tag">Khadki, Pune</span><span class="tag">security / emergency response</span></div>
+        <div class="meta-row"><b>Focus</b><div>Military–civil fusion, rapid response and coordinated action in complex security and emergency scenarios.</div></div>
+        <div class="meta-row"><b>Participants</b><div>Indian Army, Maharashtra Police, Force One, fire services and other civilian agencies; more than 350 civilian participants were recorded.</div></div>
+        <div class="small">Source: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2213006" target="_blank">PIB, 9 Jan 2026</a>.</div>
+      </article>
+
+      <article class="card" data-tags="joint army iaf civilian cbrn domestic" data-state="completed">
+        <div class="card-head"><div><div class="title">Sanyukt Kavach–2026</div><div class="service">Army-led Military–Civil Fusion</div></div><span class="tag ind">WHOLE-OF-NATION</span></div>
+        <div class="tags"><span class="tag">Mar 2026</span><span class="tag">Pune</span><span class="tag">CBRN preparedness</span></div>
+        <div class="meta-row"><b>Participants</b><div>19 agencies including Army, Air Force, civil administration, police, NDRF, medical teams, NCC, academia and industry.</div></div>
+        <div class="meta-row"><b>Focus</b><div>Integrated response to a simulated chemical attack in an urban environment; joint planning and coordinated emergency response.</div></div>
+        <div class="small">Source: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2236431" target="_blank">PIB, 7 Mar 2026</a>.</div>
+      </article>
+
+      <article class="card" data-tags="army independent domestic" data-state="completed">
+        <div class="card-head"><div><div class="title">Agni Varsha–2026</div><div class="service">Army • Southern Command</div></div><span class="tag ind">INDEPENDENT</span></div>
+        <div class="tags"><span class="tag">24 Feb</span><span class="tag">Pokhran, Jaisalmer</span><span class="tag">integrated fire + manoeuvre</span></div>
+        <div class="meta-row"><b>Focus</b><div>Large-scale desert manoeuvre and precision fire integration, including drones, counter-drone measures, artillery and networked surveillance.</div></div>
+        <div class="meta-row"><b>Analysis</b><div>Representative of the Army’s shift toward sensor-rich, network-enabled combined-arms operations in the desert.</div></div>
+        <div class="small">Source: <a href="https://www.vayuaerospace.in/Issue/202605291047513133.pdf" target="_blank">Vayu Aerospace, May 2026 issue</a> (secondary professional source).</div>
+      </article>
+
+      <article class="card" data-tags="army independent drone" data-state="completed">
+        <div class="card-head"><div><div class="title">Ashni Prahaar–2026</div><div class="service">Army • Western Command / Kharga Corps</div></div><span class="tag ind">INDEPENDENT</span></div>
+        <div class="tags"><span class="tag">2026</span><span class="tag">Western Command</span><span class="tag">drone / ISR</span></div>
+        <div class="meta-row"><b>Focus</b><div>Validation of Ashni specialist drone platoons, surveillance and targeting capabilities at tactical level.</div></div>
+        <div class="meta-row"><b>Analysis</b><div>Illustrates the institutionalisation of drones and loitering-munition style capabilities down at infantry-battalion level.</div></div>
+        <div class="small">Evidence trail: <a href="https://www.clipzui.cc/?q=%23indianarmyadgpi" target="_blank">archived reproduction of Indian Army public post</a>. Public-source detail is thinner than for PIB releases.</div>
+      </article>
+    </div>
+
+    <h2>Strategic pattern map</h2>
+    <div class="lens">
+      <div><h3>1 — Jointness</h3><p>Lamitiye, Sanyukt Kavach, MILAN and Dustlik show India training beyond single-service silos: command relationships, air-maritime links, civil-military response and combined planning are recurring themes.</p></div>
+      <div><h3>2 — Technology</h3><p>Drones, counter-UAS, ISR, autonomous systems, networked C2 and air refuelling appear repeatedly—from Army tactical drills to IAF and maritime exercises.</p></div>
+      <div><h3>3 — Indo-Pacific</h3><p>MILAN, IONS IMEX, Southern Readiness, ADMM-Plus, Pitch Black, Udara Shakti, SLINEX and the QUAD coast-guard mission show a layered approach to maritime and air cooperation.</p></div>
+      <div><h3>4 — Special operations</h3><p>Khanjar, Vajra Prahar and Cyclone emphasise small-team interoperability, mission planning and terrain-specific TTPs.</p></div>
+      <div><h3>5 — Neighbourhood first</h3><p>PRAGATI, SLINEX, Maitree and Lamitiye show emphasis on training relationships with Indian Ocean and Southeast Asian partners.</p></div>
+      <div><h3>6 — Expeditionary credibility</h3><p>Pitch Black and overseas bilateral exercises test the ability to deploy aircraft, crews, sustainment and procedures beyond home bases.</p></div>
+    </div>
+
+    <h2>SSB / Interview lens</h2>
+    <div class="callout">
+      <p><strong>What happened?</strong> India’s 2026 exercise portfolio combined combat-readiness drills, special-forces training, multinational air/naval exercises and military–civil preparedness.</p>
+      <p><strong>Why it matters?</strong> Exercises convert defence relationships into rehearsed procedures: communication, command-and-control, logistics, interoperability, humanitarian response and shared TTPs.</p>
+      <p><strong>Competing viewpoints to understand:</strong> A large or frequent exercise can be read as confidence-building and interoperability-building; observers can also question whether participation produces meaningful operational integration or mainly signalling. The evidence to test that distinction is the complexity of the drills, repeatability, common procedures, data-sharing, logistics, and whether training outputs are carried into doctrine and procurement.</p>
+      <p><strong>Good SSB framing:</strong> “The value of a military exercise should be judged by the interoperability problem it rehearses—rather than by the name, size or media visibility of the exercise.”</p>
+    </div>
+
+    <h2>Timeline — Jan to Sep 2026</h2>
+    <div class="timeline">
+      <div class="tl"><div class="month">JAN</div><div class="tlbox"><strong>Sanjha Shakti</strong> — Military–civil fusion, Pune (8–9 Jan).</div></div>
+      <div class="tl"><div class="month">FEB</div><div class="tlbox"><strong>Khanjar</strong> (4–17 Feb) • <strong>IAF–RTAF In-situ</strong> (9–12 Feb) • <strong>MILAN</strong> (15–25 Feb) • <strong>Agni Varsha</strong> (24 Feb) • <strong>Dharma Guardian</strong> (24 Feb–9 Mar) • <strong>Vajra Prahar</strong> (24 Feb–16 Mar) • <strong>Vayu Shakti</strong> (27 Feb).</div></div>
+      <div class="tl"><div class="month">MAR</div><div class="tlbox"><strong>Sanyukt Kavach</strong> (Pune) • <strong>Lamitiye</strong> (9–20 Mar) • <strong>Sagar Kavach</strong> (12–13 Mar) • <strong>IONS IMEX TTX</strong> (27 Mar).</div></div>
+      <div class="tl"><div class="month">APR–MAY</div><div class="tlbox"><strong>Cyclone IV</strong> (9–17 Apr) • <strong>Dustlik</strong> (12–25 Apr) • <strong>CINBAX II</strong> (4–17 May) • <strong>PRAGATI</strong> (20–30 May).</div></div>
+      <div class="tl"><div class="month">JUN–JUL</div><div class="tlbox"><strong>Khaan Quest</strong> (20 Jun–3 Jul) • <strong>Pitch Black</strong> (20 Jul–7 Aug) • <strong>Operation Southern Readiness</strong> (20–23 Jul).</div></div>
+      <div class="tl"><div class="month">AUG</div><div class="tlbox"><strong>Udara Shakti</strong> (Aug) • <strong>Maitree XV</strong> (18–31 Aug).</div></div>
+      <div class="tl"><div class="month">SEP</div><div class="tlbox"><strong>Samudra Laksamana</strong> (Sep) • <strong>Veer Guardian</strong> (9–22 Sep) • <strong>Yudh Abhyas</strong> (from 15 Sep) • <strong>SLINEX</strong> (17–21 Sep) • <strong>Nomadic Elephant</strong> (21 Sep–3 Oct) • <strong>ADMM-Plus JCA</strong> (from 20 Sep) • <strong>Varuna</strong> (from 22 Sep) • <strong>QUAD-at-Sea mission</strong> (from 25 Sep) • <strong>Tarang Shakti</strong> (from 26 Sep).</div></div>
+    </div>
+
+    <h2>Classification matrix</h2>
+    <table class="matrix">
+      <thead><tr><th>Exercise / engagement</th><th>Primary arm</th><th>Format</th><th>Core capability</th><th>Cut-off status</th></tr></thead>
+      <tbody>
+        <tr><td>MILAN</td><td>Navy</td><td>Multilateral</td><td>Fleet interoperability / maritime security</td><td>Completed</td></tr>
+        <tr><td>PRAGATI</td><td>Army</td><td>Multilateral</td><td>Regional land interoperability</td><td>Completed</td></tr>
+        <tr><td>Pitch Black</td><td>IAF</td><td>Multilateral</td><td>Large-force air combat / expeditionary</td><td>Completed</td></tr>
+        <tr><td>Tarang Shakti</td><td>IAF</td><td>Multilateral</td><td>Multinational air operations</td><td>Ongoing</td></tr>
+        <tr><td>Varuna</td><td>Navy</td><td>Bilateral</td><td>High-end maritime interoperability</td><td>Ongoing</td></tr>
+        <tr><td>Veer Guardian</td><td>IAF</td><td>Bilateral</td><td>Air combat / air defence</td><td>Completed</td></tr>
+        <tr><td>Yudh Abhyas</td><td>Army</td><td>Bilateral</td><td>IBG operations + drones / autonomy</td><td>Ongoing</td></tr>
+        <tr><td>Nomadic Elephant</td><td>Army</td><td>Bilateral</td><td>Mountain / semi-urban COIN + C-UAS</td><td>Ongoing</td></tr>
+        <tr><td>SLINEX</td><td>Navy</td><td>Bilateral</td><td>Maritime manoeuvre / VBSS / replenishment</td><td>Completed</td></tr>
+        <tr><td>Samudra Laksamana</td><td>Navy</td><td>Bilateral</td><td>Maritime professional + sea-phase cooperation</td><td>Completed</td></tr>
+        <tr><td>Sagar Kavach</td><td>ICG + Navy</td><td>National / inter-agency</td><td>Coastal security</td><td>Completed</td></tr>
+        <tr><td>QUAD-at-Sea mission</td><td>ICG</td><td>Multilateral engagement</td><td>Shipboard interoperability / professional exchange</td><td>Ongoing</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Source discipline & gaps</h2>
+    <p class="section-intro">Official Indian government releases are the primary evidence base. Secondary professional sources are used only where an exercise was publicly documented but a directly searchable PIB release was not located. Several annual exercises normally associated with India—such as some Army cycles with Bangladesh, Sri Lanka, Australia, Singapore or France—do not appear in this verified set unless a 2026 edition could be confirmed by the cut-off. Their absence from this page should not be read as proof that no training interaction occurred; it means the exercise was not included as a verified major 2026 event from the accessible public record used here.</p>
+
+    <div class="footer">
+      <strong>Prepared:</strong> 28 September 2026 • Designed for SSB-style current-affairs preparation.<br/>
+      <span>For operational-security reasons, this page intentionally stays at publicly released exercise-level information and does not reproduce sensitive tactical details.</span>
+    </div>
+  </main>
+</div>
+<script>
+let mode='all';
+function setFilter(m,btn){
+  mode=m; document.querySelectorAll('.controls button').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); filterCards();
+}
+function filterCards(){
+  const q=document.getElementById('q').value.toLowerCase();
+  document.querySelectorAll('#cards .card').forEach(c=>{
+    const hay=(c.innerText+' '+c.dataset.tags).toLowerCase();
+    const okQ=!q||hay.includes(q);
+    const okM=mode==='all'||c.dataset.tags.includes(mode);
+    const okO=mode!=='ongoing'||c.dataset.state==='ongoing';
+    c.classList.toggle('hidden',!(okQ&&okM&&okO));
+  });
+}
+</script>
+</body>
+</html>
