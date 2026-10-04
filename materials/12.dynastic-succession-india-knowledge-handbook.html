@@ -1,561 +1,1337 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Dynastic Succession in India: From Mauryas to Marathas — A Deep Knowledge Handbook</title>
-<meta name="description" content="A concise handbook on dynastic succession in India, tracing major imperial and regional powers from early state formation to Company rule through timelines, governance patterns, military systems, culture, debate prompts and rapid revision notes.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --ink:#1A1A22;
-  --ink-soft:#585C6A;
-  --paper:#F4F0E8;
-  --surface:#FFFDFC;
-  --surface-2:#EAE2D3;
-  --rule:#CDC2AF;
-  --rule-strong:#A49580;
-  --red:#A23B2A;
-  --blue:#355C8A;
-  --gold:#A5791D;
-  --green:#45664C;
-  --hero-bg:#201A16;
-  --hero-ink:#F4F0E8;
-  --hero-dim:#B7AA97;
-
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px);
-  padding-bottom:env(safe-area-inset-bottom,0px);
-  color-scheme:light dark;
-}
-:root:not([data-theme="light"]){
-  @media (prefers-color-scheme: dark){
-    --ink:#EEE8DE;
-    --ink-soft:#B4AA9D;
-    --paper:#120F0D;
-    --surface:#1B1714;
-    --surface-2:#261F1A;
-    --rule:#43372D;
-    --rule-strong:#665646;
-    --red:#E18672;
-    --blue:#88AEDF;
-    --gold:#D9B25A;
-    --green:#82B28C;
-    --hero-bg:#0D0A09;
-    --hero-ink:#EEE8DE;
-    --hero-dim:#9E9387;
-  }
-}
-:root[data-theme="dark"]{
-  --ink:#EEE8DE;
-  --ink-soft:#B4AA9D;
-  --paper:#120F0D;
-  --surface:#1B1714;
-  --surface-2:#261F1A;
-  --rule:#43372D;
-  --rule-strong:#665646;
-  --red:#E18672;
-  --blue:#88AEDF;
-  --gold:#D9B25A;
-  --green:#82B28C;
-  --hero-bg:#0D0A09;
-  --hero-ink:#EEE8DE;
-  --hero-dim:#9E9387;
-}
-*,*::before,*::after{box-sizing:inherit}
-html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1.5rem);-webkit-text-size-adjust:100%;text-size-adjust:100%}
-@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:16.5px;line-height:1.62;-webkit-font-smoothing:antialiased}
-
-.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
-.flagstrip{display:flex;height:12px}
-.flagstrip span{flex:1}
-.f1{background:#FF9933}
-.f2{background:#8C6A43}
-.f3{background:#B22222}
-.f4{background:#FFFFFF}
-.f5{background:#138808}
-.f6{background:#355C8A}
-.f7{background:linear-gradient(90deg,#A23B2A 50%,#A5791D 50%)}
-.f8{background:linear-gradient(90deg,#201A16,#585C6A)}
-.hero-inner{max-width:1180px;margin:0 auto;padding:3.2rem 1.5rem 0}
-.kicker{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--hero-dim);margin:0 0 .8rem}
-.hero h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.6rem,4.4vw,2.45rem);line-height:1.18;margin:0 0 .6rem;max-width:20ch}
-.hero-sub{margin:0;color:var(--hero-dim);max-width:68ch}
-.stamp{margin-top:1.6rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.22);font-size:.86rem;color:var(--hero-dim);display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
-.stamp b{color:var(--hero-ink);font-weight:600}
-
-.shell{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem;display:grid;grid-template-columns:1fr;gap:2.5rem}
-@media (min-width:1000px){.shell{grid-template-columns:255px minmax(0,1fr);gap:3.5rem;padding-top:2.8rem}}
-nav.toc{font-size:.9rem}
-@media (min-width:1000px){.toc-mobile{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2rem);align-self:start;max-height:calc(100vh - 5rem);overflow-y:auto}}
-nav.toc h2{font-family:"Zilla Slab",Georgia,serif;font-size:.92rem;font-weight:600;margin:0 0 .7rem;padding-bottom:.45rem;border-bottom:2px solid var(--rule-strong)}
-nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc}
-nav.toc li{border-bottom:1px solid var(--rule)}
-nav.toc li:not(.part){counter-increment:toc}
-nav.toc a{display:flex;gap:.6rem;padding:.4rem 0;color:var(--ink-soft);text-decoration:none}
-nav.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--rule-strong);font-variant-numeric:tabular-nums;flex:none}
-nav.toc a:hover,nav.toc a:focus-visible{color:var(--red)}
-nav.toc .part{border:0;margin:1.1rem 0 .3rem;font-family:"Zilla Slab",Georgia,serif;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--rule-strong)}
-nav.toc .part::before{content:none}
-.toc-mobile{display:block}
-@media (min-width:1000px){.toc-mobile summary{display:none}}
-.toc-mobile summary{cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:600;padding:.7rem .9rem;background:var(--surface);border:1px solid var(--rule);margin-bottom:1rem}
-@media (max-width:999px){.toc-mobile[open] nav.toc{padding:0 .9rem 1rem}.toc-mobile:not([open]) nav.toc{display:none}}
-
-main{min-width:0}
-section{margin:0 0 3.6rem;scroll-margin-top:1.5rem}
-section > h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.45rem,3.6vw,1.95rem);line-height:1.2;margin:0 0 .3rem}
-.part-head{margin:4rem 0 2.2rem;padding:1.1rem 0 .9rem;border-top:4px double var(--rule-strong);border-bottom:1px solid var(--rule)}
-.part-head p{margin:0;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
-.part-head h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.3rem,3.2vw,1.7rem);margin:.3rem 0 0;color:var(--ink)}
-.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
-h3{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.16rem;margin:2rem 0 .5rem;line-height:1.3}
-h4{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1rem;margin:1.4rem 0 .35rem;color:var(--ink)}
-p{margin:0 0 .95rem;max-width:74ch}
-ul,ol{margin:0 0 1rem;padding-left:1.25rem;max-width:74ch}
-li{margin-bottom:.35rem}
-li::marker{color:var(--rule-strong)}
-strong{font-weight:600}
-a{color:var(--blue)}
-:focus-visible{outline:2px solid var(--red);outline-offset:2px}
-
-.lede{font-size:1.06rem;color:var(--ink-soft);max-width:70ch}
-.tablewrap{overflow-x:auto;margin:0 0 1.3rem;border:1px solid var(--rule);background:var(--surface)}
-table{border-collapse:collapse;width:100%;min-width:560px;font-size:.92rem}
-caption{text-align:left;padding:.7rem .85rem .1rem;font-weight:600;color:var(--ink-soft);font-size:.9rem}
-th,td{text-align:left;padding:.55rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top}
-thead th{background:var(--surface-2);font-weight:600;border-bottom:2px solid var(--rule-strong);white-space:nowrap}
-tbody th{font-weight:600;background:var(--surface-2);white-space:nowrap}
-tbody tr:last-child td,tbody tr:last-child th{border-bottom:0}
-td.num,th.num{font-variant-numeric:tabular-nums;white-space:nowrap}
-.edge{background:var(--surface);border-left:4px solid var(--red);padding:.9rem 1.1rem;margin:1.4rem 0;max-width:74ch}
-.edge p:last-child,.edge ul:last-child,.edge ol:last-child{margin-bottom:0}
-.edge .edge-h{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);display:block;margin-bottom:.25rem;font-size:.95rem}
-.edge.gold{border-left-color:var(--gold)}
-.edge.gold .edge-h{color:var(--gold)}
-.edge.blue{border-left-color:var(--blue)}
-.edge.blue .edge-h{color:var(--blue)}
-.edge.green{border-left-color:var(--green)}
-.edge.green .edge-h{color:var(--green)}
-.note{background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;border:1px solid var(--rule);font-size:.95rem}
-.note p:last-child,.note ul:last-child,.note ol:last-child{margin-bottom:0}
-.note h4{margin-top:0}
-.panel{background:var(--surface);border:1px solid var(--rule);padding:1rem 1.1rem}
-.panel h4{margin-top:0}
-.panel ul,.panel ol{margin-bottom:0}
-.panel.blue-top{border-top:3px solid var(--blue)}
-.panel.red-top{border-top:3px solid var(--red)}
-.panel.gold-top{border-top:3px solid var(--gold)}
-.panel.green-top{border-top:3px solid var(--green)}
-section > .panel{margin:1.3rem 0;max-width:74ch}
-.rungs{max-width:74ch;margin:.3rem 0 0;display:grid;grid-template-columns:9.5rem 1fr;gap:0 1rem}
-.rungs dt{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;color:var(--red);padding-top:.2rem}
-.rungs dd{margin:0 0 .5rem;font-size:.93rem}
-@media (max-width:560px){.rungs{grid-template-columns:1fr;gap:0}.rungs dt{padding-top:.4rem}}
-.timeline{list-style:none;padding:0;margin:1rem 0 1.4rem;max-width:74ch}
-.timeline li{display:grid;grid-template-columns:8.2rem 1fr;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--rule);margin:0}
-.timeline li:last-child{border-bottom:0}
-.timeline .yr{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);font-variant-numeric:tabular-nums}
-@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:.1rem}}
-.qbank,.dbank{list-style:none;padding:0;max-width:74ch}
-.qbank{counter-reset:q}
-.dbank{counter-reset:d}
-.qbank li,.dbank li{padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
-.qbank li{counter-increment:q}
-.dbank li{counter-increment:d}
-.qbank li::before,.dbank li::before{position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
-.qbank li::before{content:counter(q,decimal-leading-zero)}
-.dbank li::before{content:counter(d,decimal-leading-zero)}
-.qbank li:last-child,.dbank li:last-child{border-bottom:0}
-.grid{display:grid;gap:1rem;margin:1.2rem 0}
-.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
-.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
-@media (max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
-.card{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--red);padding:1rem 1.1rem}
-.card h4{margin:0 0 .45rem;font-size:1rem}
-.card p{font-size:.93rem;margin-bottom:.5rem}
-.card p:last-child{margin-bottom:0}
-.term{max-width:74ch;margin:0 0 1.2rem}
-.term dt{font-weight:600;margin-top:.8rem}
-.term dd{margin:.15rem 0 0;color:var(--ink-soft)}
-.tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:.1rem .45rem;border:1px solid var(--rule-strong);color:var(--ink-soft);margin-right:.35rem;vertical-align:middle}
-.tag.fact{border-color:var(--green);color:var(--green)}
-.tag.interp{border-color:var(--gold);color:var(--gold)}
-.tag.disputed{border-color:var(--red);color:var(--red)}
-.tag.verify{border-color:var(--blue);color:var(--blue)}
-footer{border-top:3px double var(--rule-strong);margin-top:2rem;padding-top:1.4rem;color:var(--ink-soft);font-size:.9rem;max-width:74ch}
-footer a{color:var(--blue)}
-
-.home-btn{position:fixed;top:16px;left:16px;z-index:60;display:inline-flex;align-items:center;gap:.4rem;background:#14202B;color:#F1F2EC;border:1px solid rgba(241,242,236,.25);padding:.45rem .85rem;border-radius:999px;font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.82rem;font-weight:600;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.3);transition:background .15s ease,transform .15s ease}
-.home-btn:hover,.home-btn:focus-visible{background:#BF2F26;transform:translateY(-1px)}
-.home-btn svg{width:14px;height:14px;flex:none}
-@media print{.home-btn{display:none}}
-
-@media print{
-  .hero{background:none;color:#000;padding-bottom:1rem}
-  .hero-sub,.stamp{color:#333}
-  .flagstrip,.toc-mobile{display:none}
-  .shell{display:block;padding:0}
-  section{page-break-inside:auto;margin-bottom:1.8rem}
-  h2,h3{page-break-after:avoid}
-  .panel,.edge,.note,.tablewrap{page-break-inside:avoid}
-  .part-head{page-break-before:always}
-  body{font-size:10.5pt;background:#fff;color:#000}
-}
-</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Dynastic Succession in India: From Mauryas to Marathas — A Deep Knowledge Handbook</title>
+    <meta name="description" content="A concise handbook on dynastic succession in India, tracing major imperial and regional powers from early state formation to Company rule through timelines, governance patterns, military systems, culture, debate prompts and rapid revision notes.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+         :root {
+            --ink: #1A1A22;
+            --ink-soft: #585C6A;
+            --paper: #F4F0E8;
+            --surface: #FFFDFC;
+            --surface-2: #EAE2D3;
+            --rule: #CDC2AF;
+            --rule-strong: #A49580;
+            --red: #A23B2A;
+            --blue: #355C8A;
+            --gold: #A5791D;
+            --green: #45664C;
+            --hero-bg: #201A16;
+            --hero-ink: #F4F0E8;
+            --hero-dim: #B7AA97;
+            box-sizing: border-box;
+            padding-top: env(safe-area-inset-top, 0px);
+            padding-bottom: env(safe-area-inset-bottom, 0px);
+            color-scheme: light dark;
+        }
+        
+         :root:not([data-theme="light"]) {
+            @media (prefers-color-scheme: dark) {
+                --ink: #EEE8DE;
+                --ink-soft: #B4AA9D;
+                --paper: #120F0D;
+                --surface: #1B1714;
+                --surface-2: #261F1A;
+                --rule: #43372D;
+                --rule-strong: #665646;
+                --red: #E18672;
+                --blue: #88AEDF;
+                --gold: #D9B25A;
+                --green: #82B28C;
+                --hero-bg: #0D0A09;
+                --hero-ink: #EEE8DE;
+                --hero-dim: #9E9387;
+            }
+        }
+        
+         :root[data-theme="dark"] {
+            --ink: #EEE8DE;
+            --ink-soft: #B4AA9D;
+            --paper: #120F0D;
+            --surface: #1B1714;
+            --surface-2: #261F1A;
+            --rule: #43372D;
+            --rule-strong: #665646;
+            --red: #E18672;
+            --blue: #88AEDF;
+            --gold: #D9B25A;
+            --green: #82B28C;
+            --hero-bg: #0D0A09;
+            --hero-ink: #EEE8DE;
+            --hero-dim: #9E9387;
+        }
+        
+        *,
+        *::before,
+        *::after {
+            box-sizing: inherit
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 1.5rem);
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto
+            }
+        }
+        
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            font-size: 16.5px;
+            line-height: 1.62;
+            -webkit-font-smoothing: antialiased
+        }
+        
+        .hero {
+            background: var(--hero-bg);
+            color: var(--hero-ink);
+            padding: 0 0 3rem
+        }
+        
+        .flagstrip {
+            display: flex;
+            height: 12px
+        }
+        
+        .flagstrip span {
+            flex: 1
+        }
+        
+        .f1 {
+            background: #FF9933
+        }
+        
+        .f2 {
+            background: #8C6A43
+        }
+        
+        .f3 {
+            background: #B22222
+        }
+        
+        .f4 {
+            background: #FFFFFF
+        }
+        
+        .f5 {
+            background: #138808
+        }
+        
+        .f6 {
+            background: #355C8A
+        }
+        
+        .f7 {
+            background: linear-gradient(90deg, #A23B2A 50%, #A5791D 50%)
+        }
+        
+        .f8 {
+            background: linear-gradient(90deg, #201A16, #585C6A)
+        }
+        
+        .hero-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 3.2rem 1.5rem 0
+        }
+        
+        .kicker {
+            font-size: .85rem;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: var(--hero-dim);
+            margin: 0 0 .8rem
+        }
+        
+        .hero h1 {
+            font-family: "Zilla Slab", Georgia, serif;
+            font-weight: 700;
+            font-size: clamp(1.6rem, 4.4vw, 2.45rem);
+            line-height: 1.18;
+            margin: 0 0 .6rem;
+            max-width: 20ch
+        }
+        
+        .hero-sub {
+            margin: 0;
+            color: var(--hero-dim);
+            max-width: 68ch
+        }
+        
+        .stamp {
+            margin-top: 1.6rem;
+            padding-top: 1.4rem;
+            border-top: 1px solid rgba(255, 255, 255, .22);
+            font-size: .86rem;
+            color: var(--hero-dim);
+            display: flex;
+            flex-wrap: wrap;
+            gap: .4rem 1.4rem
+        }
+        
+        .stamp b {
+            color: var(--hero-ink);
+            font-weight: 600
+        }
+        
+        .shell {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 1.5rem 5rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem
+        }
+        
+        @media (min-width:1000px) {
+            .shell {
+                grid-template-columns: 255px minmax(0, 1fr);
+                gap: 3.5rem;
+                padding-top: 2.8rem
+            }
+        }
+        
+        nav.toc {
+            font-size: .9rem
+        }
+        
+        @media (min-width:1000px) {
+            .toc-mobile {
+                position: sticky;
+                top: calc(env(safe-area-inset-top, 0px) + 2rem);
+                align-self: start;
+                max-height: calc(100vh - 5rem);
+                overflow-y: auto
+            }
+        }
+        
+        nav.toc h2 {
+            font-family: "Zilla Slab", Georgia, serif;
+            font-size: .92rem;
+            font-weight: 600;
+            margin: 0 0 .7rem;
+            padding-bottom: .45rem;
+            border-bottom: 2px solid var(--rule-strong)
+        }
+        
+        nav.toc ol {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            counter-reset: toc
+        }
+        
+        nav.toc li {
+            border-bottom: 1px solid var(--rule)
+        }
+        
+        nav.toc li:not(.part) {
+            counter-increment: toc
+        }
+        
+        nav.toc a {
+            display: flex;
+            gap: .6rem;
+            padding: .4rem 0;
+            color: var(--ink-soft);
+            text-decoration: none
+        }
+        
+        nav.toc a::before {
+            content: counter(toc, decimal-leading-zero);
+            color: var(--rule-strong);
+            font-variant-numeric: tabular-nums;
+            flex: none
+        }
+        
+        nav.toc a:hover,
+        nav.toc a:focus-visible {
+            color: var(--red)
+        }
+        
+        nav.toc .part {
+            border: 0;
+            margin: 1.1rem 0 .3rem;
+            font-family: "Zilla Slab", Georgia, serif;
+            font-size: .76rem;
+            letter-spacing: .09em;
+            text-transform: uppercase;
+            color: var(--rule-strong)
+        }
+        
+        nav.toc .part::before {
+            content: none
+        }
+        
+        .toc-mobile {
+            display: block
+        }
+        
+        @media (min-width:1000px) {
+            .toc-mobile summary {
+                display: none
+            }
+        }
+        
+        .toc-mobile summary {
+            cursor: pointer;
+            font-family: "Zilla Slab", Georgia, serif;
+            font-weight: 600;
+            padding: .7rem .9rem;
+            background: var(--surface);
+            border: 1px solid var(--rule);
+            margin-bottom: 1rem
+        }
+        
+        @media (max-width:999px) {
+            .toc-mobile[open] nav.toc {
+                padding: 0 .9rem 1rem
+            }
+            .toc-mobile:not([open]) nav.toc {
+                display: none
+            }
+        }
+        
+        main {
+            min-width: 0
+        }
+        
+        section {
+            margin: 0 0 3.6rem;
+            scroll-margin-top: 1.5rem
+        }
+        
+        section>h2 {
+            font-family: "Zilla Slab", Georgia, serif;
+            font-weight: 700;
+            font-size: clamp(1.45rem, 3.6vw, 1.95rem);
+            line-height: 1.2;
+            margin: 0 0 .3rem
+        }
+        
+        .part-head {
+            margin: 4rem 0 2.2rem;
+            padding: 1.1rem 0 .9rem;
+            border-top: 4px double var(--rule-strong);
+            border-bottom: 1px solid var(--rule)
+        }
+        
+        .part-head p {
+            margin: 0;
+            font-family: "Zilla Slab", Georgia, serif;
+            font-weight: 600;
+            font-size: .82rem;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--red)
+        }
+        
+        .part-head h2 {
+            font-family: "Zilla Slab", Georgia, serif;
+            font-weight: 700;
+            font-size: clamp(1.3rem, 3.2vw, 1.7rem);
+            margin: .3rem 0 0;
+            color: var(--ink)
+        }
+        
+        .sec-rule {
+            border: 0;
+            border-top: 3px double var(--rule-strong);
+            margin: 0 0 1.4rem
+        }
+        
+        h3 {
+            font-family: "Zilla Slab", Georgia, serif;
+            font-weight: 600;
+            font-size: 1.16rem;
+            margin: 2rem 0 .5rem;
+            line-height: 1.3
+        }
+        
+        h4 {
+            font-family: "IBM Plex Sans", sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            margin: 1.4rem 0 .35rem;
+            color: var(--ink)
+        }
+        
+        p {
+            margin: 0 0 .95rem;
+            max-width: 74ch
+        }
+        
+        ul,
+        ol {
+            margin: 0 0 1rem;
+            padding-left: 1.25rem;
+            max-width: 74ch
+        }
+        
+        li {
+            margin-bottom: .35rem
+        }
+        
+        li::marker {
+            color: var(--rule-strong)
+        }
+        
+        strong {
+            font-weight: 600
+        }
+        
+        a {
+            color: var(--blue)
+        }
+        
+         :focus-visible {
+            outline: 2px solid var(--red);
+            outline-offset: 2px
+        }
+        
+        .lede {
+            font-size: 1.06rem;
+            color: var(--ink-soft);
+            max-width: 70ch
+        }
+        
+        .tablewrap {
+            overflow-x: auto;
+            margin: 0 0 1.3rem;
+            border: 1px solid var(--rule);
+            background: var(--surface)
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            min-width: 560px;
+            font-size: .92rem
+        }
+        
+        caption {
+            text-align: left;
+            padding: .7rem .85rem .1rem;
+            font-weight: 600;
+            color: var(--ink-soft);
+            font-size: .9rem
+        }
+        
+        th,
+        td {
+            text-align: left;
+            padding: .55rem .85rem;
+            border-bottom: 1px solid var(--rule);
+            vertical-align: top
+        }
+        
+        thead th {
+            background: var(--surface-2);
+            font-weight: 600;
+            border-bottom: 2px solid var(--rule-strong);
+            white-space: nowrap
+        }
+        
+        tbody th {
+            font-weight: 600;
+            background: var(--surface-2);
+            white-space: nowrap
+        }
+        
+        tbody tr:last-child td,
+        tbody tr:last-child th {
+            border-bottom: 0
+        }
+        
+        td.num,
+        th.num {
+            font-variant-numeric: tabular-nums;
+            white-space: nowrap
+        }
+        
+        .edge {
+            background: var(--surface);
+            border-left: 4px solid var(--red);
+            padding: .9rem 1.1rem;
+            margin: 1.4rem 0;
+            max-width: 74ch
+        }
+        
+        .edge p:last-child,
+        .edge ul:last-child,
+        .edge ol:last-child {
+            margin-bottom: 0
+        }
+        
+        .edge .edge-h {
+            font-family: "Zilla Slab", Georgia, serif;
+            font-weight: 600;
+            color: var(--red);
+            display: block;
+            margin-bottom: .25rem;
+            font-size: .95rem
+        }
+        
+        .edge.gold {
+            border-left-color: var(--gold)
+        }
+        
+        .edge.gold .edge-h {
+            color: var(--gold)
+        }
+        
+        .edge.blue {
+            border-left-color: var(--blue)
+        }
+        
+        .edge.blue .edge-h {
+            color: var(--blue)
+        }
+        
+        .edge.green {
+            border-left-color: var(--green)
+        }
+        
+        .edge.green .edge-h {
+            color: var(--green)
+        }
+        
+        .note {
+            background: var(--surface-2);
+            padding: .85rem 1.1rem;
+            margin: 1.3rem 0;
+            max-width: 74ch;
+            border: 1px solid var(--rule);
+            font-size: .95rem
+        }
+        
+        .note p:last-child,
+        .note ul:last-child,
+        .note ol:last-child {
+            margin-bottom: 0
+        }
+        
+        .note h4 {
+            margin-top: 0
+        }
+        
+        .panel {
+            background: var(--surface);
+            border: 1px solid var(--rule);
+            padding: 1rem 1.1rem
+        }
+        
+        .panel h4 {
+            margin-top: 0
+        }
+        
+        .panel ul,
+        .panel ol {
+            margin-bottom: 0
+        }
+        
+        .panel.blue-top {
+            border-top: 3px solid var(--blue)
+        }
+        
+        .panel.red-top {
+            border-top: 3px solid var(--red)
+        }
+        
+        .panel.gold-top {
+            border-top: 3px solid var(--gold)
+        }
+        
+        .panel.green-top {
+            border-top: 3px solid var(--green)
+        }
+        
+        section>.panel {
+            margin: 1.3rem 0;
+            max-width: 74ch
+        }
+        
+        .rungs {
+            max-width: 74ch;
+            margin: .3rem 0 0;
+            display: grid;
+            grid-template-columns: 9.5rem 1fr;
+            gap: 0 1rem
+        }
+        
+        .rungs dt {
+            font-family: "Zilla Slab", Georgia, serif;
+            font-weight: 600;
+            font-size: .74rem;
+            letter-spacing: .07em;
+            text-transform: uppercase;
+            color: var(--red);
+            padding-top: .2rem
+        }
+        
+        .rungs dd {
+            margin: 0 0 .5rem;
+            font-size: .93rem
+        }
+        
+        @media (max-width:560px) {
+            .rungs {
+                grid-template-columns: 1fr;
+                gap: 0
+            }
+            .rungs dt {
+                padding-top: .4rem
+            }
+        }
+        
+        .timeline {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 1.4rem;
+            max-width: 74ch
+        }
+        
+        .timeline li {
+            display: grid;
+            grid-template-columns: 8.2rem 1fr;
+            gap: 1rem;
+            padding: .55rem 0;
+            border-bottom: 1px solid var(--rule);
+            margin: 0
+        }
+        
+        .timeline li:last-child {
+            border-bottom: 0
+        }
+        
+        .timeline .yr {
+            font-family: "Zilla Slab", Georgia, serif;
+            font-weight: 600;
+            color: var(--red);
+            font-variant-numeric: tabular-nums
+        }
+        
+        @media (max-width:560px) {
+            .timeline li {
+                grid-template-columns: 1fr;
+                gap: .1rem
+            }
+        }
+        
+        .qbank,
+        .dbank {
+            list-style: none;
+            padding: 0;
+            max-width: 74ch
+        }
+        
+        .qbank {
+            counter-reset: q
+        }
+        
+        .dbank {
+            counter-reset: d
+        }
+        
+        .qbank li,
+        .dbank li {
+            padding: .5rem 0 .5rem 2.8rem;
+            position: relative;
+            border-bottom: 1px solid var(--rule)
+        }
+        
+        .qbank li {
+            counter-increment: q
+        }
+        
+        .dbank li {
+            counter-increment: d
+        }
+        
+        .qbank li::before,
+        .dbank li::before {
+            position: absolute;
+            left: 0;
+            top: .5rem;
+            font-family: "Zilla Slab", Georgia, serif;
+            font-weight: 600;
+            color: var(--rule-strong);
+            font-size: .85rem
+        }
+        
+        .qbank li::before {
+            content: counter(q, decimal-leading-zero)
+        }
+        
+        .dbank li::before {
+            content: counter(d, decimal-leading-zero)
+        }
+        
+        .qbank li:last-child,
+        .dbank li:last-child {
+            border-bottom: 0
+        }
+        
+        .grid {
+            display: grid;
+            gap: 1rem;
+            margin: 1.2rem 0
+        }
+        
+        .grid.two {
+            grid-template-columns: repeat(2, minmax(0, 1fr))
+        }
+        
+        .grid.three {
+            grid-template-columns: repeat(3, minmax(0, 1fr))
+        }
+        
+        @media (max-width:760px) {
+            .grid.two,
+            .grid.three {
+                grid-template-columns: 1fr
+            }
+        }
+        
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--rule);
+            border-left: 4px solid var(--red);
+            padding: 1rem 1.1rem
+        }
+        
+        .card h4 {
+            margin: 0 0 .45rem;
+            font-size: 1rem
+        }
+        
+        .card p {
+            font-size: .93rem;
+            margin-bottom: .5rem
+        }
+        
+        .card p:last-child {
+            margin-bottom: 0
+        }
+        
+        .term {
+            max-width: 74ch;
+            margin: 0 0 1.2rem
+        }
+        
+        .term dt {
+            font-weight: 600;
+            margin-top: .8rem
+        }
+        
+        .term dd {
+            margin: .15rem 0 0;
+            color: var(--ink-soft)
+        }
+        
+        .tag {
+            display: inline-block;
+            font-size: .72rem;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            font-weight: 600;
+            padding: .1rem .45rem;
+            border: 1px solid var(--rule-strong);
+            color: var(--ink-soft);
+            margin-right: .35rem;
+            vertical-align: middle
+        }
+        
+        .tag.fact {
+            border-color: var(--green);
+            color: var(--green)
+        }
+        
+        .tag.interp {
+            border-color: var(--gold);
+            color: var(--gold)
+        }
+        
+        .tag.disputed {
+            border-color: var(--red);
+            color: var(--red)
+        }
+        
+        .tag.verify {
+            border-color: var(--blue);
+            color: var(--blue)
+        }
+        
+        footer {
+            border-top: 3px double var(--rule-strong);
+            margin-top: 2rem;
+            padding-top: 1.4rem;
+            color: var(--ink-soft);
+            font-size: .9rem;
+            max-width: 74ch
+        }
+        
+        footer a {
+            color: var(--blue)
+        }
+        
+        .home-btn {
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            z-index: 60;
+            display: inline-flex;
+            align-items: center;
+            gap: .4rem;
+            background: #14202B;
+            color: #F1F2EC;
+            border: 1px solid rgba(241, 242, 236, .25);
+            padding: .45rem .85rem;
+            border-radius: 999px;
+            font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            font-size: .82rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, .3);
+            transition: background .15s ease, transform .15s ease
+        }
+        
+        .home-btn:hover,
+        .home-btn:focus-visible {
+            background: #BF2F26;
+            transform: translateY(-1px)
+        }
+        
+        .home-btn svg {
+            width: 14px;
+            height: 14px;
+            flex: none
+        }
+        
+        @media print {
+            .home-btn {
+                display: none
+            }
+        }
+        
+        @media print {
+            .hero {
+                background: none;
+                color: #000;
+                padding-bottom: 1rem
+            }
+            .hero-sub,
+            .stamp {
+                color: #333
+            }
+            .flagstrip,
+            .toc-mobile {
+                display: none
+            }
+            .shell {
+                display: block;
+                padding: 0
+            }
+            section {
+                page-break-inside: auto;
+                margin-bottom: 1.8rem
+            }
+            h2,
+            h3 {
+                page-break-after: avoid
+            }
+            .panel,
+            .edge,
+            .note,
+            .tablewrap {
+                page-break-inside: avoid
+            }
+            .part-head {
+                page-break-before: always
+            }
+            body {
+                font-size: 10.5pt;
+                background: #fff;
+                color: #000
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<a class="home-btn" href="../index.html" aria-label="Back to Handbooks homepage" title="Back to Handbooks homepage">
-  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
-  <span>Home</span>
-</a>
+    <a class="home-btn" href="../index.html" aria-label="Back to Handbooks homepage" title="Back to Handbooks homepage">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
+        <span>Home</span>
+    </a>
 
-<header class="hero">
-  <div class="flagstrip" aria-hidden="true">
-    <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f5"></span><span class="f6"></span><span class="f7"></span><span class="f8"></span>
-  </div>
-  <div class="hero-inner">
-    <p class="kicker">History module · single-sitting dynastic survey</p>
-    <h1>Dynastic Succession in India: From Mauryas to Marathas</h1>
-    <p class="hero-sub">A concise historical handbook on how power moved across the subcontinent: early imperial formations, southern and Deccan powers, the Delhi Sultanate, Mughals, Marathas and regional successor states, with timelines, statecraft patterns, competing interpretations and SSB-oriented revision material.</p>
-    <p class="stamp">
-      <span>Core span <b>c. 322 BCE-1818 CE</b></span>
-      <span>Main lens <b>power, administration, military change</b></span>
-      <span>Section count <b>22</b></span>
-      <span>Study time <b>2-3 hrs</b></span>
-      <span>Best used for <b>interview, GD, lecturette</b></span>
-    </p>
-  </div>
-</header>
+    <header class="hero">
+        <div class="flagstrip" aria-hidden="true">
+            <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f5"></span><span class="f6"></span><span class="f7"></span><span class="f8"></span>
+        </div>
+        <div class="hero-inner">
+            <p class="kicker">History module · single-sitting dynastic survey</p>
+            <h1>Dynastic Succession in India: From Mauryas to Marathas</h1>
+            <p class="hero-sub">A concise historical handbook on how power moved across the subcontinent: early imperial formations, southern and Deccan powers, the Delhi Sultanate, Mughals, Marathas and regional successor states, with timelines, statecraft patterns, competing
+                interpretations and SSB-oriented revision material.</p>
+            <p class="stamp">
+                <span>Core span <b>c. 322 BCE-1818 CE</b></span>
+                <span>Main lens <b>power, administration, military change</b></span>
+                <span>Section count <b>22</b></span>
+                <span>Study time <b>2-3 hrs</b></span>
+                <span>Best used for <b>interview, GD, lecturette</b></span>
+            </p>
+        </div>
+    </header>
 
-<div class="shell">
-  <details class="toc-mobile" open>
-    <summary>Contents</summary>
-    <nav class="toc" aria-label="Contents">
-      <h2>Contents</h2>
-      <ol>
-        <li class="part">Start here</li>
-        <li><a href="#howto">Using this handbook</a></li>
-        <li><a href="#snapshot">Dynastic succession at a glance</a></li>
-        <li class="part">I · Long arcs of power</li>
-        <li><a href="#origins">From mahajanapadas to empire</a></li>
-        <li><a href="#mauryas-guptas">Mauryas and Guptas</a></li>
-        <li><a href="#deccan-south">The Deccan and the deep south</a></li>
-        <li><a href="#cholas">The Cholas and the maritime turn</a></li>
-        <li class="part">II · New military-political orders</li>
-        <li><a href="#sultanate">The Delhi Sultanate</a></li>
-        <li><a href="#vijayanagara-bahmani">Vijayanagara, Bahmani and the Deccan balance</a></li>
-        <li><a href="#mughals">The Mughal empire</a></li>
-        <li><a href="#marathas">The Maratha rise</a></li>
-        <li><a href="#successors">Sikhs, Mysore, Awadh and other successor states</a></li>
-        <li><a href="#company">From dynasties to Company paramountcy</a></li>
-        <li class="part">III · How dynasties ruled</li>
-        <li><a href="#statecraft">Statecraft, revenue and legitimacy</a></li>
-        <li><a href="#warfare">Military systems and technology</a></li>
-        <li><a href="#culture">Culture, language and memory</a></li>
-        <li class="part">IV · Knowledge toolkit</li>
-        <li><a href="#perspectives">Perspectives, controversies, lesser-known facts</a></li>
-        <li><a href="#scenarios">Why this history still matters in India</a></li>
-        <li><a href="#qbank">Practice questions</a></li>
-        <li><a href="#debate">Debate motions</a></li>
-        <li><a href="#chronology">Master chronology</a></li>
-        <li><a href="#glossary">Glossary</a></li>
-        <li><a href="#revision">Rapid revision sheet</a></li>
-      </ol>
-    </nav>
-  </details>
+    <div class="shell">
+        <details class="toc-mobile" open>
+            <summary>Contents</summary>
+            <nav class="toc" aria-label="Contents">
+                <h2>Contents</h2>
+                <ol>
+                    <li class="part">Start here</li>
+                    <li><a href="#howto">Using this handbook</a></li>
+                    <li><a href="#snapshot">Dynastic succession at a glance</a></li>
+                    <li class="part">I · Long arcs of power</li>
+                    <li><a href="#origins">From mahajanapadas to empire</a></li>
+                    <li><a href="#mauryas-guptas">Mauryas and Guptas</a></li>
+                    <li><a href="#deccan-south">The Deccan and the deep south</a></li>
+                    <li><a href="#cholas">The Cholas and the maritime turn</a></li>
+                    <li class="part">II · New military-political orders</li>
+                    <li><a href="#sultanate">The Delhi Sultanate</a></li>
+                    <li><a href="#vijayanagara-bahmani">Vijayanagara, Bahmani and the Deccan balance</a></li>
+                    <li><a href="#mughals">The Mughal empire</a></li>
+                    <li><a href="#marathas">The Maratha rise</a></li>
+                    <li><a href="#successors">Sikhs, Mysore, Awadh and other successor states</a></li>
+                    <li><a href="#company">From dynasties to Company paramountcy</a></li>
+                    <li class="part">III · How dynasties ruled</li>
+                    <li><a href="#statecraft">Statecraft, revenue and legitimacy</a></li>
+                    <li><a href="#warfare">Military systems and technology</a></li>
+                    <li><a href="#culture">Culture, language and memory</a></li>
+                    <li class="part">IV · Knowledge toolkit</li>
+                    <li><a href="#perspectives">Perspectives, controversies, lesser-known facts</a></li>
+                    <li><a href="#scenarios">Why this history still matters in India</a></li>
+                    <li><a href="#qbank">Practice questions</a></li>
+                    <li><a href="#debate">Debate motions</a></li>
+                    <li><a href="#chronology">Master chronology</a></li>
+                    <li><a href="#glossary">Glossary</a></li>
+                    <li><a href="#revision">Rapid revision sheet</a></li>
+                </ol>
+            </nav>
+        </details>
 
-  <main>
-    <section id="howto">
-      <h2>Using this handbook</h2><hr class="sec-rule">
-      <p class="lede">Read this as a map of succession, not as a list of kings. The useful question is always: who acquired power, how did they justify it, how did they collect revenue, how did they fight, and why did they fragment?</p>
-      <div class="note">
-        <ul>
-          <li>Keep the chronology straight first. Exact reign dates matter less than sequence and turning points.</li>
-          <li>Separate cultural influence from political control. A dynasty may shape art and language beyond the territory it directly ruled.</li>
-          <li>On contested topics, mark what is broadly accepted and what remains interpretive.</li>
-          <li>For SSB answers, prefer comparison and continuity over isolated facts.</li>
-        </ul>
-      </div>
-    </section>
+        <main>
+            <section id="howto">
+                <h2>Using this handbook</h2>
+                <hr class="sec-rule">
+                <p class="lede">Read this as a map of succession, not as a list of kings. The useful question is always: who acquired power, how did they justify it, how did they collect revenue, how did they fight, and why did they fragment?</p>
+                <div class="note">
+                    <ul>
+                        <li>Keep the chronology straight first. Exact reign dates matter less than sequence and turning points.</li>
+                        <li>Separate cultural influence from political control. A dynasty may shape art and language beyond the territory it directly ruled.</li>
+                        <li>On contested topics, mark what is broadly accepted and what remains interpretive.</li>
+                        <li>For SSB answers, prefer comparison and continuity over isolated facts.</li>
+                    </ul>
+                </div>
+            </section>
 
-    <section id="snapshot">
-      <h2>Dynastic succession at a glance</h2><hr class="sec-rule">
-      <p>The broad movement is from regional kingdoms to larger empires, then toward confederacies and successor states, and finally to colonial paramountcy. The pattern is not linear. Different zones of India often moved at different speeds, with north India more exposed to steppe and Afghan routes, while the peninsula sustained older temple-centred and maritime orders for longer.</p>
-      <div class="tablewrap">
-        <table>
-          <caption>Quick orientation</caption>
-          <thead>
-            <tr>
-              <th>Phase</th>
-              <th>Main powers</th>
-              <th>Key contribution</th>
-              <th>Why they declined</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Ancient imperial</th>
-              <td>Mauryas, Guptas</td>
-              <td>Imperial administration, political unification, court culture</td>
-              <td>Overstretch, succession strain, regional assertion</td>
-            </tr>
-            <tr>
-              <th>Peninsular and regional</th>
-              <td>Satavahanas, Pallavas, Chalukyas, Rashtrakutas, Cholas, Rajputs</td>
-              <td>Temple economy, cavalry-war adaptation, maritime links</td>
-              <td>Inter-dynastic warfare, shifting trade, local elites</td>
-            </tr>
-            <tr>
-              <th>Turko-Afghan and Indo-Islamic</th>
-              <td>Delhi Sultanate, Bahmani, Deccan sultanates</td>
-              <td>Mounted warfare, iqta structures, new urban centres</td>
-              <td>Factionalism, provincial breakaways, new rivals</td>
-            </tr>
-            <tr>
-              <th>Early modern imperial</th>
-              <td>Mughals</td>
-              <td>Mansabdari, revenue standardisation, imperial synthesis</td>
-              <td>Succession wars, fiscal-military stress, regional resistance</td>
-            </tr>
-            <tr>
-              <th>Confederate and successor</th>
-              <td>Marathas, Sikhs, Mysore, Awadh, Hyderabad</td>
-              <td>Mobile warfare, regional modernisation, power diffusion</td>
-              <td>Rivalry, uneven centralisation, Company intervention</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+            <section id="snapshot">
+                <h2>Dynastic succession at a glance</h2>
+                <hr class="sec-rule">
+                <p>The broad movement is from regional kingdoms to larger empires, then toward confederacies and successor states, and finally to colonial paramountcy. The pattern is not linear. Different zones of India often moved at different speeds, with
+                    north India more exposed to steppe and Afghan routes, while the peninsula sustained older temple-centred and maritime orders for longer.</p>
+                <div class="tablewrap">
+                    <table>
+                        <caption>Quick orientation</caption>
+                        <thead>
+                            <tr>
+                                <th>Phase</th>
+                                <th>Main powers</th>
+                                <th>Key contribution</th>
+                                <th>Why they declined</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Ancient imperial</th>
+                                <td>Mauryas, Guptas</td>
+                                <td>Imperial administration, political unification, court culture</td>
+                                <td>Overstretch, succession strain, regional assertion</td>
+                            </tr>
+                            <tr>
+                                <th>Peninsular and regional</th>
+                                <td>Satavahanas, Pallavas, Chalukyas, Rashtrakutas, Cholas, Rajputs</td>
+                                <td>Temple economy, cavalry-war adaptation, maritime links</td>
+                                <td>Inter-dynastic warfare, shifting trade, local elites</td>
+                            </tr>
+                            <tr>
+                                <th>Turko-Afghan and Indo-Islamic</th>
+                                <td>Delhi Sultanate, Bahmani, Deccan sultanates</td>
+                                <td>Mounted warfare, iqta structures, new urban centres</td>
+                                <td>Factionalism, provincial breakaways, new rivals</td>
+                            </tr>
+                            <tr>
+                                <th>Early modern imperial</th>
+                                <td>Mughals</td>
+                                <td>Mansabdari, revenue standardisation, imperial synthesis</td>
+                                <td>Succession wars, fiscal-military stress, regional resistance</td>
+                            </tr>
+                            <tr>
+                                <th>Confederate and successor</th>
+                                <td>Marathas, Sikhs, Mysore, Awadh, Hyderabad</td>
+                                <td>Mobile warfare, regional modernisation, power diffusion</td>
+                                <td>Rivalry, uneven centralisation, Company intervention</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
 
-    <div class="part-head"><p>Part I</p><h2>Long arcs of power</h2></div>
+            <div class="part-head">
+                <p>Part I</p>
+                <h2>Long arcs of power</h2>
+            </div>
 
-    <section id="origins">
-      <h2>From mahajanapadas to empire</h2><hr class="sec-rule">
-      <p>Before dynastic empires, the subcontinent contained competing mahajanapadas, clan-based republics and monarchies. Magadha rose because it combined fertile river basins, access to iron, elephant resources and favourable routes across the Gangetic plain. The Nandas built a large fiscal-military base, proving that scale could be sustained if extraction and coercion were organised tightly.</p>
-      <p>The deeper historical point is that Indian state formation was not static village life interrupted by invaders. It already contained strong traditions of taxation, armies, fortification and interstate rivalry. Later dynasties inherited this repertoire, even when they changed its language and institutions. Succession was therefore rarely just about bloodline. It depended on whether a ruling house could bind court elites, regional governors, military commanders and revenue officials into a functioning system.</p>
-      <div class="edge blue"><span class="edge-h">Remember</span><p>Most large Indian dynasties emerged where agrarian surplus, trade routes and military mobility converged. Geography mattered before ideology.</p></div>
-    </section>
+            <section id="origins">
+                <h2>From mahajanapadas to empire</h2>
+                <hr class="sec-rule">
+                <p>Before dynastic empires, the subcontinent contained competing mahajanapadas, clan-based republics and monarchies. Magadha rose because it combined fertile river basins, access to iron, elephant resources and favourable routes across the
+                    Gangetic plain. The Nandas built a large fiscal-military base, proving that scale could be sustained if extraction and coercion were organised tightly.</p>
+                <p>The deeper historical point is that Indian state formation was not static village life interrupted by invaders. It already contained strong traditions of taxation, armies, fortification and interstate rivalry. Later dynasties inherited
+                    this repertoire, even when they changed its language and institutions. Succession was therefore rarely just about bloodline. It depended on whether a ruling house could bind court elites, regional governors, military commanders and
+                    revenue officials into a functioning system.</p>
+                <div class="edge blue"><span class="edge-h">Remember</span>
+                    <p>Most large Indian dynasties emerged where agrarian surplus, trade routes and military mobility converged. Geography mattered before ideology.</p>
+                </div>
+            </section>
 
-    <section id="mauryas-guptas">
-      <h2>Mauryas and Guptas</h2><hr class="sec-rule">
-      <p>The Mauryan Empire, founded by Chandragupta Maurya in the late fourth century BCE, was the first polity to unify a very large part of the subcontinent under one imperial centre. Kautilya's statecraft tradition, whether read literally or as a political ideal, reflects a world of espionage, taxation, diplomacy and hard-headed governance. Ashoka then added a moral dimension to imperial legitimacy through dhamma, inscriptions and welfare-oriented messaging.</p>
-      <p>The Gupta age was smaller territorially but immensely influential in memory. It is often described as a classical age because of advances in literature, mathematics, astronomy and Sanskrit court culture. That label is useful if handled carefully. <span class="tag interp">interpretive</span> It was not an equal golden age for every region or class. Politically, the Guptas showed a looser style of imperial control than the Mauryas, with greater dependence on feudatories. Their decline reopened space for regional powers, showing again that decentralisation was never an aberration in Indian history but a recurring structural outcome.</p>
-    </section>
+            <section id="mauryas-guptas">
+                <h2>Mauryas and Guptas</h2>
+                <hr class="sec-rule">
+                <p>The Mauryan Empire, founded by Chandragupta Maurya in the late fourth century BCE, was the first polity to unify a very large part of the subcontinent under one imperial centre. Kautilya's statecraft tradition, whether read literally or
+                    as a political ideal, reflects a world of espionage, taxation, diplomacy and hard-headed governance. Ashoka then added a moral dimension to imperial legitimacy through dhamma, inscriptions and welfare-oriented messaging.</p>
+                <p>The Gupta age was smaller territorially but immensely influential in memory. It is often described as a classical age because of advances in literature, mathematics, astronomy and Sanskrit court culture. That label is useful if handled
+                    carefully. <span class="tag interp">interpretive</span> It was not an equal golden age for every region or class. Politically, the Guptas showed a looser style of imperial control than the Mauryas, with greater dependence on feudatories.
+                    Their decline reopened space for regional powers, showing again that decentralisation was never an aberration in Indian history but a recurring structural outcome.</p>
+            </section>
 
-    <section id="deccan-south">
-      <h2>The Deccan and the deep south</h2><hr class="sec-rule">
-      <p>While north India often dominates textbook memory, the Deccan and the south generated durable state traditions of their own. Satavahanas connected north and south through trade and political competition. Pallavas, Chalukyas and Rashtrakutas shaped a long contest zone centred on the Deccan plateau, where control depended on cavalry, forts, temple patronage and access to intermediate trade routes.</p>
-      <p>The peninsula also preserved a different balance between agrarian power, sacred institutions and maritime exchange. Kingship was expressed not only through conquest but through irrigation works, temple building, land grants and control of port towns. This matters because later powers, including the Cholas and Vijayanagara, did not start from nothing. They inherited a mature political language in which war, piety, redistribution and regional identity were tightly linked. Across the north-west and west, Rajput houses developed a different but equally durable style: lineage-based prestige, fortified landscapes and the ability to negotiate with larger empires without fully disappearing into them.</p>
-      <div class="grid two">
-        <div class="card"><h4>Deccan logic</h4><p>Plateau warfare rewarded mobile cavalry, resilient forts and durable local alliances rather than one permanently centralised bureaucracy.</p></div>
-        <div class="card"><h4>Southern logic</h4><p>Temple-centred agrarian management and overseas trade gave southern polities a broader social base and outward orientation.</p></div>
-      </div>
-    </section>
+            <section id="deccan-south">
+                <h2>The Deccan and the deep south</h2>
+                <hr class="sec-rule">
+                <p>While north India often dominates textbook memory, the Deccan and the south generated durable state traditions of their own. Satavahanas connected north and south through trade and political competition. Pallavas, Chalukyas and Rashtrakutas
+                    shaped a long contest zone centred on the Deccan plateau, where control depended on cavalry, forts, temple patronage and access to intermediate trade routes.</p>
+                <p>The peninsula also preserved a different balance between agrarian power, sacred institutions and maritime exchange. Kingship was expressed not only through conquest but through irrigation works, temple building, land grants and control
+                    of port towns. This matters because later powers, including the Cholas and Vijayanagara, did not start from nothing. They inherited a mature political language in which war, piety, redistribution and regional identity were tightly
+                    linked. Across the north-west and west, Rajput houses developed a different but equally durable style: lineage-based prestige, fortified landscapes and the ability to negotiate with larger empires without fully disappearing into them.</p>
+                <div class="grid two">
+                    <div class="card">
+                        <h4>Deccan logic</h4>
+                        <p>Plateau warfare rewarded mobile cavalry, resilient forts and durable local alliances rather than one permanently centralised bureaucracy.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Southern logic</h4>
+                        <p>Temple-centred agrarian management and overseas trade gave southern polities a broader social base and outward orientation.</p>
+                    </div>
+                </div>
+            </section>
 
-    <section id="cholas">
-      <h2>The Cholas and the maritime turn</h2><hr class="sec-rule">
-      <p>The imperial Cholas, especially from the tenth to twelfth centuries, marked one of the strongest phases of peninsular expansion. Rulers such as Rajaraja I and Rajendra I combined military energy with impressive administrative and temple-building capacity. Their inscriptions reveal an elaborate relationship between the crown, local assemblies and revenue rights. The Cholas were not a modern central state, but they were highly capable organisers of land, labour and prestige.</p>
-      <p>What makes the Cholas stand out is the maritime turn. Their naval expeditions across the Bay of Bengal and their links with Sri Lanka and Southeast Asia underline that Indian history was not only land-frontier history. Commercial networks, ports and merchant guilds mattered. The Chola moment shows how military force, ritual kingship and oceanic commerce could reinforce one another. Their later decline came from overextension, revived regional rivals and shifting balances in the peninsula, yet their cultural imprint in Tamil country remained far larger than their eventual political footprint.</p>
-      <div class="edge gold"><span class="edge-h">Exam angle</span><p>If asked why the Cholas are remembered, answer with three points: administrative inscription culture, temple-centred statecraft, and maritime projection into the Bay of Bengal.</p></div>
-    </section>
+            <section id="cholas">
+                <h2>The Cholas and the maritime turn</h2>
+                <hr class="sec-rule">
+                <p>The imperial Cholas, especially from the tenth to twelfth centuries, marked one of the strongest phases of peninsular expansion. Rulers such as Rajaraja I and Rajendra I combined military energy with impressive administrative and temple-building
+                    capacity. Their inscriptions reveal an elaborate relationship between the crown, local assemblies and revenue rights. The Cholas were not a modern central state, but they were highly capable organisers of land, labour and prestige.</p>
+                <p>What makes the Cholas stand out is the maritime turn. Their naval expeditions across the Bay of Bengal and their links with Sri Lanka and Southeast Asia underline that Indian history was not only land-frontier history. Commercial networks,
+                    ports and merchant guilds mattered. The Chola moment shows how military force, ritual kingship and oceanic commerce could reinforce one another. Their later decline came from overextension, revived regional rivals and shifting balances
+                    in the peninsula, yet their cultural imprint in Tamil country remained far larger than their eventual political footprint.</p>
+                <div class="edge gold"><span class="edge-h">Exam angle</span>
+                    <p>If asked why the Cholas are remembered, answer with three points: administrative inscription culture, temple-centred statecraft, and maritime projection into the Bay of Bengal.</p>
+                </div>
+            </section>
 
-    <div class="part-head"><p>Part II</p><h2>New military-political orders</h2></div>
+            <div class="part-head">
+                <p>Part II</p>
+                <h2>New military-political orders</h2>
+            </div>
 
-    <section id="sultanate">
-      <h2>The Delhi Sultanate</h2><hr class="sec-rule">
-      <p>The Delhi Sultanate introduced a new political configuration based on Turko-Afghan military elites, mounted warfare, slave-command networks and iqta assignments. The Slave, Khalji, Tughlaq, Sayyid and Lodi dynasties differed sharply, but together they changed the strategic grammar of north India. Fast cavalry, composite bows, armoured horsemen and aggressive campaigning shifted the balance against slower or more fragmented regional rivals.</p>
-      <p>The Sultanate also accelerated urban growth, monetisation and administrative experimentation. Yet it remained vulnerable to court faction, succession struggle and centrifugal provincialism. Bengal, the Deccan and other regions repeatedly moved toward autonomy. This is the key historical lesson: military superiority could seize Delhi, but durable rule still required accommodation with agrarian society, revenue interests and regional elites. Where that accommodation failed, imperial structures thinned quickly.</p>
-    </section>
+            <section id="sultanate">
+                <h2>The Delhi Sultanate</h2>
+                <hr class="sec-rule">
+                <p>The Delhi Sultanate introduced a new political configuration based on Turko-Afghan military elites, mounted warfare, slave-command networks and iqta assignments. The Slave, Khalji, Tughlaq, Sayyid and Lodi dynasties differed sharply, but
+                    together they changed the strategic grammar of north India. Fast cavalry, composite bows, armoured horsemen and aggressive campaigning shifted the balance against slower or more fragmented regional rivals.</p>
+                <p>The Sultanate also accelerated urban growth, monetisation and administrative experimentation. Yet it remained vulnerable to court faction, succession struggle and centrifugal provincialism. Bengal, the Deccan and other regions repeatedly
+                    moved toward autonomy. This is the key historical lesson: military superiority could seize Delhi, but durable rule still required accommodation with agrarian society, revenue interests and regional elites. Where that accommodation
+                    failed, imperial structures thinned quickly.</p>
+            </section>
 
-    <section id="vijayanagara-bahmani">
-      <h2>Vijayanagara, Bahmani and the Deccan balance</h2><hr class="sec-rule">
-      <p>The fall of one imperial order often produced two or more new systems rather than a single successor. In the Deccan and south, Vijayanagara and the Bahmani kingdom embodied this principle. Vijayanagara drew on older southern traditions while also adapting to the cavalry-heavy military world created by contact with Deccan sultanates. The Bahmani state and its successor sultanates built strong Persianate court cultures while remaining deeply rooted in Deccan politics.</p>
-      <p>The rivalry culminated in major military confrontations such as Talikota in 1565, but the story is larger than one battle. Both sides relied on shifting alliances, imported horses, artillery and a mixed social elite. Both were also patrons of architecture, literature and trade. Their interaction shows that Indian succession was not civilisational replacement. It was repeated recombination: new courts, new military techniques, older social landscapes.</p>
-      <div class="panel green-top">
-        <h4>Why this section matters</h4>
-        <p>The Vijayanagara-Bahmani world explains why later Mughal and Maratha expansion into the Deccan was so difficult. The region had its own hardened political traditions and no easy single centre to capture.</p>
-      </div>
-    </section>
+            <section id="vijayanagara-bahmani">
+                <h2>Vijayanagara, Bahmani and the Deccan balance</h2>
+                <hr class="sec-rule">
+                <p>The fall of one imperial order often produced two or more new systems rather than a single successor. In the Deccan and south, Vijayanagara and the Bahmani kingdom embodied this principle. Vijayanagara drew on older southern traditions
+                    while also adapting to the cavalry-heavy military world created by contact with Deccan sultanates. The Bahmani state and its successor sultanates built strong Persianate court cultures while remaining deeply rooted in Deccan politics.</p>
+                <p>The rivalry culminated in major military confrontations such as Talikota in 1565, but the story is larger than one battle. Both sides relied on shifting alliances, imported horses, artillery and a mixed social elite. Both were also patrons
+                    of architecture, literature and trade. Their interaction shows that Indian succession was not civilisational replacement. It was repeated recombination: new courts, new military techniques, older social landscapes.</p>
+                <div class="panel green-top">
+                    <h4>Why this section matters</h4>
+                    <p>The Vijayanagara-Bahmani world explains why later Mughal and Maratha expansion into the Deccan was so difficult. The region had its own hardened political traditions and no easy single centre to capture.</p>
+                </div>
+            </section>
 
-    <section id="mughals">
-      <h2>The Mughal empire</h2><hr class="sec-rule">
-      <p>The Mughals created the most influential early modern imperial system in Indian memory. Babur and Humayun established the line, Akbar stabilised and expanded it, Jahangir and Shah Jahan consolidated its splendour, and Aurangzeb pushed its territorial extent furthest while also exposing its limits. The strength of the empire lay in a flexible mix of military force, elite incorporation, revenue assessment and symbolic grandeur.</p>
-      <p>The mansabdari system tied rank, service and jagir assignment together, allowing the centre to manage a diverse nobility. Akbar's political success rested not only on conquest but on broad coalition building with Rajputs and other local elites. Under Aurangzeb, expansion into the Deccan intensified fiscal strain and political resistance. <span class="tag fact">broadly accepted</span> Mughal decline after 1707 was not a sudden collapse but a long weakening of central capacity in the face of succession wars, rising military costs and increasingly assertive provinces and confederacies.</p>
-    </section>
+            <section id="mughals">
+                <h2>The Mughal empire</h2>
+                <hr class="sec-rule">
+                <p>The Mughals created the most influential early modern imperial system in Indian memory. Babur and Humayun established the line, Akbar stabilised and expanded it, Jahangir and Shah Jahan consolidated its splendour, and Aurangzeb pushed
+                    its territorial extent furthest while also exposing its limits. The strength of the empire lay in a flexible mix of military force, elite incorporation, revenue assessment and symbolic grandeur.</p>
+                <p>The mansabdari system tied rank, service and jagir assignment together, allowing the centre to manage a diverse nobility. Akbar's political success rested not only on conquest but on broad coalition building with Rajputs and other local
+                    elites. Under Aurangzeb, expansion into the Deccan intensified fiscal strain and political resistance. <span class="tag fact">broadly accepted</span> Mughal decline after 1707 was not a sudden collapse but a long weakening of central
+                    capacity in the face of succession wars, rising military costs and increasingly assertive provinces and confederacies.</p>
+            </section>
 
-    <section id="marathas">
-      <h2>The Maratha rise</h2><hr class="sec-rule">
-      <p>The Marathas transformed the political landscape by proving that a fast, regionally grounded, revenue-seeking confederate power could challenge a universalist empire. Shivaji's achievement was not just guerrilla reputation. It was the creation of a viable kingdom rooted in forts, disciplined leadership, local legitimacy and a keen sense of terrain. His coronation gave formal sovereignty to a movement that might otherwise have remained a rebellion.</p>
-      <p>After Shivaji, the Maratha system evolved beyond one household into a wider confederacy involving the Peshwas, Scindias, Holkars, Gaekwads and Bhonsles. That gave it reach but also loosened central discipline. Maratha power spread dramatically in the eighteenth century, filling the vacuum left by Mughal decay, yet the same decentralised energy made unified strategy difficult. Panipat in 1761 was a major shock, but not the end. The real issue was whether a confederacy could convert military mobility into a stable all-India administrative order before the East India Company mastered finance, diplomacy and disciplined infantry warfare.</p>
-    </section>
+            <section id="marathas">
+                <h2>The Maratha rise</h2>
+                <hr class="sec-rule">
+                <p>The Marathas transformed the political landscape by proving that a fast, regionally grounded, revenue-seeking confederate power could challenge a universalist empire. Shivaji's achievement was not just guerrilla reputation. It was the
+                    creation of a viable kingdom rooted in forts, disciplined leadership, local legitimacy and a keen sense of terrain. His coronation gave formal sovereignty to a movement that might otherwise have remained a rebellion.</p>
+                <p>After Shivaji, the Maratha system evolved beyond one household into a wider confederacy involving the Peshwas, Scindias, Holkars, Gaekwads and Bhonsles. That gave it reach but also loosened central discipline. Maratha power spread dramatically
+                    in the eighteenth century, filling the vacuum left by Mughal decay, yet the same decentralised energy made unified strategy difficult. Panipat in 1761 was a major shock, but not the end. The real issue was whether a confederacy could
+                    convert military mobility into a stable all-India administrative order before the East India Company mastered finance, diplomacy and disciplined infantry warfare.</p>
+            </section>
 
-    <section id="successors">
-      <h2>Sikhs, Mysore, Awadh and other successor states</h2><hr class="sec-rule">
-      <p>Once Mughal central power faded, India did not fall into simple chaos. It entered a successor-state phase. In Punjab, Sikh misls and later Ranjit Singh built a formidable kingdom. In Mysore, Haidar Ali and Tipu Sultan pursued military modernisation and challenged Company expansion. Awadh, Hyderabad and Bengal became increasingly autonomous while still borrowing Mughal symbols of legitimacy.</p>
-      <p>These states matter because they show multiple futures were available before colonial dominance hardened. Some emphasised cavalry and local notables; some experimented with artillery, rocketry, drill and diplomatic centralisation. Their weakness was not lack of ability alone. It was the difficulty of coordinating against a corporate-colonial power that combined trade revenues, naval reach, private capital, European drill and Indian alliances.</p>
-    </section>
+            <section id="successors">
+                <h2>Sikhs, Mysore, Awadh and other successor states</h2>
+                <hr class="sec-rule">
+                <p>Once Mughal central power faded, India did not fall into simple chaos. It entered a successor-state phase. In Punjab, Sikh misls and later Ranjit Singh built a formidable kingdom. In Mysore, Haidar Ali and Tipu Sultan pursued military
+                    modernisation and challenged Company expansion. Awadh, Hyderabad and Bengal became increasingly autonomous while still borrowing Mughal symbols of legitimacy.</p>
+                <p>These states matter because they show multiple futures were available before colonial dominance hardened. Some emphasised cavalry and local notables; some experimented with artillery, rocketry, drill and diplomatic centralisation. Their
+                    weakness was not lack of ability alone. It was the difficulty of coordinating against a corporate-colonial power that combined trade revenues, naval reach, private capital, European drill and Indian alliances.</p>
+            </section>
 
-    <section id="company">
-      <h2>From dynasties to Company paramountcy</h2><hr class="sec-rule">
-      <p>The East India Company did not begin as a dynasty, but by the late eighteenth and early nineteenth centuries it behaved like a new sovereign power. Plassey, Buxar, Mysore wars, Maratha wars and subsidiary alliances progressively shifted the terms of succession. Instead of one Indian dynasty replacing another, a chartered company learned to arbitrate succession disputes, annex territories, subordinate rulers and monopolise military coercion.</p>
-      <p>This transition is essential to understand. Colonial conquest in India was not only battlefield victory. It was also fiscal extraction, intelligence gathering, treaty manipulation and selective preservation of princes under British supremacy. By 1818, after the defeat of the Marathas, the old dynastic game had changed irreversibly. Indian states still survived, but increasingly under a higher imperial framework not of indigenous origin.</p>
-      <div class="edge red"><span class="edge-h">Turning point</span><p>1818 matters because it marks the effective end of Maratha political primacy and the arrival of Company paramountcy as the dominant all-India structure.</p></div>
-    </section>
+            <section id="company">
+                <h2>From dynasties to Company paramountcy</h2>
+                <hr class="sec-rule">
+                <p>The East India Company did not begin as a dynasty, but by the late eighteenth and early nineteenth centuries it behaved like a new sovereign power. Plassey, Buxar, Mysore wars, Maratha wars and subsidiary alliances progressively shifted
+                    the terms of succession. Instead of one Indian dynasty replacing another, a chartered company learned to arbitrate succession disputes, annex territories, subordinate rulers and monopolise military coercion.</p>
+                <p>This transition is essential to understand. Colonial conquest in India was not only battlefield victory. It was also fiscal extraction, intelligence gathering, treaty manipulation and selective preservation of princes under British supremacy.
+                    By 1818, after the defeat of the Marathas, the old dynastic game had changed irreversibly. Indian states still survived, but increasingly under a higher imperial framework not of indigenous origin.</p>
+                <div class="edge red"><span class="edge-h">Turning point</span>
+                    <p>1818 matters because it marks the effective end of Maratha political primacy and the arrival of Company paramountcy as the dominant all-India structure.</p>
+                </div>
+            </section>
 
-    <div class="part-head"><p>Part III</p><h2>How dynasties ruled</h2></div>
+            <div class="part-head">
+                <p>Part III</p>
+                <h2>How dynasties ruled</h2>
+            </div>
 
-    <section id="statecraft">
-      <h2>Statecraft, revenue and legitimacy</h2><hr class="sec-rule">
-      <p>Three questions explain most dynasties: how was land assessed, who collected the surplus, and what story justified obedience? The Mauryas leaned toward central supervision, the Guptas more toward landed intermediaries, the Cholas toward inscription-backed local integration, the Sultanate toward iqta assignments, the Mughals toward mansabdari and revenue survey, and the Marathas toward chauth, sardeshmukhi and confederate extraction. The forms differed, but revenue was the bloodstream of power.</p>
-      <p>Legitimacy also changed language without changing function. One ruler invoked dharma, another universal kingship, another Islamic sovereignty, another Kshatriya restoration. Yet all required visible justice, redistribution, ritual display and the cooperation of local elites. Succession crises became dangerous when a dynasty lost either fiscal credibility or moral authority. Most empires fell when both weakened together.</p>
-    </section>
+            <section id="statecraft">
+                <h2>Statecraft, revenue and legitimacy</h2>
+                <hr class="sec-rule">
+                <p>Three questions explain most dynasties: how was land assessed, who collected the surplus, and what story justified obedience? The Mauryas leaned toward central supervision, the Guptas more toward landed intermediaries, the Cholas toward
+                    inscription-backed local integration, the Sultanate toward iqta assignments, the Mughals toward mansabdari and revenue survey, and the Marathas toward chauth, sardeshmukhi and confederate extraction. The forms differed, but revenue
+                    was the bloodstream of power.</p>
+                <p>Legitimacy also changed language without changing function. One ruler invoked dharma, another universal kingship, another Islamic sovereignty, another Kshatriya restoration. Yet all required visible justice, redistribution, ritual display
+                    and the cooperation of local elites. Succession crises became dangerous when a dynasty lost either fiscal credibility or moral authority. Most empires fell when both weakened together.</p>
+            </section>
 
-    <section id="warfare">
-      <h2>Military systems and technology</h2><hr class="sec-rule">
-      <p>Indian dynastic change often followed military adaptation. Elephant corps mattered in ancient warfare; cavalry and horse supply transformed the early medieval balance; gunpowder and field artillery reshaped the sixteenth century; disciplined infantry, drill and logistics changed the eighteenth. No dynasty stayed secure merely by inheriting old methods. Those that adapted survived longer.</p>
-      <p>The other theme is terrain. Forts in Rajasthan and the Deccan, riverine plains in the north, forests and hill belts in central India, and maritime corridors in the south all demanded different styles of campaigning. Shivaji's fort-and-mobility model, Mughal siege warfare, Mysorean experimentation with rocketry and Company infantry squares all belong to this wider story of adaptation rather than civilisational essence.</p>
-      <div class="grid three">
-        <div class="card"><h4>Ancient</h4><p>Infantry, elephants, fortified capitals, agrarian supply lines.</p></div>
-        <div class="card"><h4>Medieval</h4><p>Cavalry shock, mounted archery, iqta-backed war bands, fortified corridors.</p></div>
-        <div class="card"><h4>Early modern</h4><p>Gunpowder, siege artillery, drilled infantry, maritime and financial warfare.</p></div>
-      </div>
-    </section>
+            <section id="warfare">
+                <h2>Military systems and technology</h2>
+                <hr class="sec-rule">
+                <p>Indian dynastic change often followed military adaptation. Elephant corps mattered in ancient warfare; cavalry and horse supply transformed the early medieval balance; gunpowder and field artillery reshaped the sixteenth century; disciplined
+                    infantry, drill and logistics changed the eighteenth. No dynasty stayed secure merely by inheriting old methods. Those that adapted survived longer.</p>
+                <p>The other theme is terrain. Forts in Rajasthan and the Deccan, riverine plains in the north, forests and hill belts in central India, and maritime corridors in the south all demanded different styles of campaigning. Shivaji's fort-and-mobility
+                    model, Mughal siege warfare, Mysorean experimentation with rocketry and Company infantry squares all belong to this wider story of adaptation rather than civilisational essence.</p>
+                <div class="grid three">
+                    <div class="card">
+                        <h4>Ancient</h4>
+                        <p>Infantry, elephants, fortified capitals, agrarian supply lines.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Medieval</h4>
+                        <p>Cavalry shock, mounted archery, iqta-backed war bands, fortified corridors.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Early modern</h4>
+                        <p>Gunpowder, siege artillery, drilled infantry, maritime and financial warfare.</p>
+                    </div>
+                </div>
+            </section>
 
-    <section id="culture">
-      <h2>Culture, language and memory</h2><hr class="sec-rule">
-      <p>Dynasties leave behind more than political borders. They shape scripts, architecture, literary canons, legal habits, temple and mosque networks, urban forms and public memory. The Guptas are recalled through Sanskrit prestige, the Cholas through bronze and temple worlds, the Sultanate through new urban and architectural vocabularies, the Mughals through court culture and monumental architecture, and the Marathas through martial memory and regional political identity.</p>
-      <p>This is why history debates become heated. Modern communities seek dignity in the past, and dynasties become symbols in present-day politics. A disciplined answer does not deny emotion, but it must distinguish evidence from memory. <span class="tag verify">verify context</span> A monument, inscription or ballad can each preserve truth, but not the same kind of truth.</p>
-      <div class="panel gold-top">
-        <h4>One short worked example: answering a comparison question</h4>
-        <dl class="rungs">
-          <dt>Define</dt><dd>If asked "Who mattered more, Akbar or Shivaji?", define the metric first: territorial scale, statecraft, military innovation or long-term political memory.</dd>
-          <dt>Locate</dt><dd>Akbar belongs to imperial consolidation; Shivaji to anti-imperial regional state formation that later became confederate expansion.</dd>
-          <dt>Analyse</dt><dd>Akbar built a wider administrative coalition; Shivaji created a more mobile and resilient model against a stronger empire.</dd>
-          <dt>Position</dt><dd>Do not reduce the answer to hero-worship. Conclude that each mattered differently because they solved different strategic problems.</dd>
-        </dl>
-      </div>
-    </section>
+            <section id="culture">
+                <h2>Culture, language and memory</h2>
+                <hr class="sec-rule">
+                <p>Dynasties leave behind more than political borders. They shape scripts, architecture, literary canons, legal habits, temple and mosque networks, urban forms and public memory. The Guptas are recalled through Sanskrit prestige, the Cholas
+                    through bronze and temple worlds, the Sultanate through new urban and architectural vocabularies, the Mughals through court culture and monumental architecture, and the Marathas through martial memory and regional political identity.</p>
+                <p>This is why history debates become heated. Modern communities seek dignity in the past, and dynasties become symbols in present-day politics. A disciplined answer does not deny emotion, but it must distinguish evidence from memory.
+                    <span class="tag verify">verify context</span> A monument, inscription or ballad can each preserve truth, but not the same kind of truth.</p>
+                <div class="panel gold-top">
+                    <h4>One short worked example: answering a comparison question</h4>
+                    <dl class="rungs">
+                        <dt>Define</dt>
+                        <dd>If asked "Who mattered more, Akbar or Shivaji?", define the metric first: territorial scale, statecraft, military innovation or long-term political memory.</dd>
+                        <dt>Locate</dt>
+                        <dd>Akbar belongs to imperial consolidation; Shivaji to anti-imperial regional state formation that later became confederate expansion.</dd>
+                        <dt>Analyse</dt>
+                        <dd>Akbar built a wider administrative coalition; Shivaji created a more mobile and resilient model against a stronger empire.</dd>
+                        <dt>Position</dt>
+                        <dd>Do not reduce the answer to hero-worship. Conclude that each mattered differently because they solved different strategic problems.</dd>
+                    </dl>
+                </div>
+            </section>
 
-    <div class="part-head"><p>Part IV</p><h2>Knowledge toolkit</h2></div>
+            <div class="part-head">
+                <p>Part IV</p>
+                <h2>Knowledge toolkit</h2>
+            </div>
 
-    <section id="perspectives">
-      <h2>Perspectives, controversies, lesser-known facts</h2><hr class="sec-rule">
-      <p>Three cautions improve the quality of a history answer. First, avoid the habit of treating every dynasty as either purely glorious or purely oppressive. Most states were extractive; most also patronised culture and institutions. Second, do not collapse all of India into Delhi. Southern, Deccan and frontier histories had their own rhythms. Third, remember that chronology in popular memory is often selective. The Cholas and Vijayanagara are frequently under-taught relative to the Mughals; the successor states of the eighteenth century are often compressed too quickly.</p>
-      <div class="note">
-        <p><span class="tag fact">fact</span> The Cholas were one of India's strongest maritime powers.</p>
-        <p><span class="tag interp">interpretive</span> The Gupta period as a universal "golden age" is a useful shorthand but masks social and regional variation.</p>
-        <p><span class="tag disputed">disputed emphasis</span> Modern debates often overstate simple Hindu-versus-Muslim binaries and understate coalition politics, shared elites and pragmatic alliances.</p>
-      </div>
-      <p>Lesser-known but useful points include the importance of horse import routes to medieval warfare, the administrative role of inscriptions in the south, the fact that Maratha expansion after Shivaji was largely Peshwa-led, and the degree to which Company rule advanced by managing Indian intermediaries rather than replacing them overnight.</p>
-    </section>
+            <section id="perspectives">
+                <h2>Perspectives, controversies, lesser-known facts</h2>
+                <hr class="sec-rule">
+                <p>Three cautions improve the quality of a history answer. First, avoid the habit of treating every dynasty as either purely glorious or purely oppressive. Most states were extractive; most also patronised culture and institutions. Second,
+                    do not collapse all of India into Delhi. Southern, Deccan and frontier histories had their own rhythms. Third, remember that chronology in popular memory is often selective. The Cholas and Vijayanagara are frequently under-taught relative
+                    to the Mughals; the successor states of the eighteenth century are often compressed too quickly.</p>
+                <div class="note">
+                    <p><span class="tag fact">fact</span> The Cholas were one of India's strongest maritime powers.</p>
+                    <p><span class="tag interp">interpretive</span> The Gupta period as a universal "golden age" is a useful shorthand but masks social and regional variation.</p>
+                    <p><span class="tag disputed">disputed emphasis</span> Modern debates often overstate simple Hindu-versus-Muslim binaries and understate coalition politics, shared elites and pragmatic alliances.</p>
+                </div>
+                <p>Lesser-known but useful points include the importance of horse import routes to medieval warfare, the administrative role of inscriptions in the south, the fact that Maratha expansion after Shivaji was largely Peshwa-led, and the degree
+                    to which Company rule advanced by managing Indian intermediaries rather than replacing them overnight.</p>
+            </section>
 
-    <section id="scenarios">
-      <h2>Why this history still matters in India</h2><hr class="sec-rule">
-      <p>Dynastic history still shapes contemporary India through school curricula, regional pride, language politics, heritage tourism, temple and monument disputes, and the vocabulary of national identity. The public argument is not really about dead kings alone. It is about what kind of civilisational story India tells about itself: plural, layered, wounded, triumphant or all of these at once.</p>
-      <p>A balanced national approach should do three things. It should widen the map beyond a Delhi-centric story, it should protect archives and monuments without presentist vandalism, and it should teach students to compare systems rather than memorise ruler lists. For interviews, the mature position is that history should build judgment and confidence, not grievance as an end in itself.</p>
-      <div class="edge green"><span class="edge-h">Interview line</span><p>India gains most when it studies dynasties as laboratories of administration, adaptation and cultural exchange, while remaining honest about conflict and hierarchy.</p></div>
-    </section>
+            <section id="scenarios">
+                <h2>Why this history still matters in India</h2>
+                <hr class="sec-rule">
+                <p>Dynastic history still shapes contemporary India through school curricula, regional pride, language politics, heritage tourism, temple and monument disputes, and the vocabulary of national identity. The public argument is not really about
+                    dead kings alone. It is about what kind of civilisational story India tells about itself: plural, layered, wounded, triumphant or all of these at once.</p>
+                <p>A balanced national approach should do three things. It should widen the map beyond a Delhi-centric story, it should protect archives and monuments without presentist vandalism, and it should teach students to compare systems rather than
+                    memorise ruler lists. For interviews, the mature position is that history should build judgment and confidence, not grievance as an end in itself.</p>
+                <div class="edge green"><span class="edge-h">Interview line</span>
+                    <p>India gains most when it studies dynasties as laboratories of administration, adaptation and cultural exchange, while remaining honest about conflict and hierarchy.</p>
+                </div>
+            </section>
 
-    <section id="qbank">
-      <h2>Practice questions</h2><hr class="sec-rule">
-      <ol class="qbank">
-        <li>Why was Magadha able to outgrow rival mahajanapadas?</li>
-        <li>How were the Mauryas and Guptas different in the way they held empire?</li>
-        <li>Why are the Cholas central to any serious account of Indian maritime history?</li>
-        <li>Was the Delhi Sultanate a rupture or an adaptation within Indian political history?</li>
-        <li>How did Vijayanagara and the Bahmani-Deccan world shape later politics?</li>
-        <li>What made Akbar more durable as a ruler than many of his predecessors?</li>
-        <li>Why did Mughal decline take the form of fragmentation rather than instant collapse?</li>
-        <li>How did Shivaji combine local legitimacy with strategic innovation?</li>
-        <li>Why did the Maratha confederacy expand so quickly yet fail to become a stable all-India empire?</li>
-        <li>How were Mysore and Sikh power different from older dynastic models?</li>
-        <li>Was Company rule won more by finance and diplomacy than by battlefield superiority alone?</li>
-        <li>How should we handle the phrase "golden age" in Indian history?</li>
-        <li>What does dynastic succession reveal about continuity in Indian statecraft?</li>
-      </ol>
-    </section>
+            <section id="qbank">
+                <h2>Practice questions</h2>
+                <hr class="sec-rule">
+                <ol class="qbank">
+                    <li>Why was Magadha able to outgrow rival mahajanapadas?</li>
+                    <li>How were the Mauryas and Guptas different in the way they held empire?</li>
+                    <li>Why are the Cholas central to any serious account of Indian maritime history?</li>
+                    <li>Was the Delhi Sultanate a rupture or an adaptation within Indian political history?</li>
+                    <li>How did Vijayanagara and the Bahmani-Deccan world shape later politics?</li>
+                    <li>What made Akbar more durable as a ruler than many of his predecessors?</li>
+                    <li>Why did Mughal decline take the form of fragmentation rather than instant collapse?</li>
+                    <li>How did Shivaji combine local legitimacy with strategic innovation?</li>
+                    <li>Why did the Maratha confederacy expand so quickly yet fail to become a stable all-India empire?</li>
+                    <li>How were Mysore and Sikh power different from older dynastic models?</li>
+                    <li>Was Company rule won more by finance and diplomacy than by battlefield superiority alone?</li>
+                    <li>How should we handle the phrase "golden age" in Indian history?</li>
+                    <li>What does dynastic succession reveal about continuity in Indian statecraft?</li>
+                </ol>
+            </section>
 
-    <section id="debate">
-      <h2>Debate motions</h2><hr class="sec-rule">
-      <ol class="dbank">
-        <li>The Cholas deserve more centrality in national historical memory than they currently receive.</li>
-        <li>The Mughal empire was stronger at incorporation than at long-term decentralised resilience.</li>
-        <li>The Marathas, not the Mughals, were the decisive architects of eighteenth-century India.</li>
-        <li>Indian textbooks still over-centralise Delhi at the expense of peninsular and frontier histories.</li>
-        <li>Colonial conquest succeeded less because Indian states were weak than because they were divided.</li>
-        <li>Dynastic history should be taught through systems of rule, not lists of kings.</li>
-        <li>Public memory gains when monuments are interpreted historically rather than politically.</li>
-      </ol>
-    </section>
+            <section id="debate">
+                <h2>Debate motions</h2>
+                <hr class="sec-rule">
+                <ol class="dbank">
+                    <li>The Cholas deserve more centrality in national historical memory than they currently receive.</li>
+                    <li>The Mughal empire was stronger at incorporation than at long-term decentralised resilience.</li>
+                    <li>The Marathas, not the Mughals, were the decisive architects of eighteenth-century India.</li>
+                    <li>Indian textbooks still over-centralise Delhi at the expense of peninsular and frontier histories.</li>
+                    <li>Colonial conquest succeeded less because Indian states were weak than because they were divided.</li>
+                    <li>Dynastic history should be taught through systems of rule, not lists of kings.</li>
+                    <li>Public memory gains when monuments are interpreted historically rather than politically.</li>
+                </ol>
+            </section>
 
-    <section id="chronology">
-      <h2>Master chronology</h2><hr class="sec-rule">
-      <ol class="timeline">
-        <li><span class="yr">c. 6th century BCE</span><span>Mahajanapadas dominate the north; Magadha emerges as the strongest contender.</span></li>
-        <li><span class="yr">c. 322 BCE</span><span>Chandragupta Maurya founds the Mauryan Empire.</span></li>
-        <li><span class="yr">c. 268-232 BCE</span><span>Ashoka reigns; dhamma inscriptions become a major instrument of imperial legitimacy.</span></li>
-        <li><span class="yr">c. 320 CE</span><span>Gupta power rises in north India.</span></li>
-        <li><span class="yr">c. 4th-8th centuries</span><span>Pallavas, Chalukyas and other regional powers shape the Deccan-south political order.</span></li>
-        <li><span class="yr">c. 850-1279</span><span>Imperial Chola phase, especially strong from the tenth to twelfth centuries.</span></li>
-        <li><span class="yr">1206</span><span>Delhi Sultanate begins with the Mamluk or Slave dynasty.</span></li>
-        <li><span class="yr">1347</span><span>Bahmani kingdom founded in the Deccan.</span></li>
-        <li><span class="yr">1336</span><span>Vijayanagara established in south India.</span></li>
-        <li><span class="yr">1526</span><span>Babur defeats Ibrahim Lodi at Panipat; Mughal rule begins.</span></li>
-        <li><span class="yr">1556-1605</span><span>Akbar's reign consolidates Mughal power.</span></li>
-        <li><span class="yr">1565</span><span>Battle of Talikota weakens Vijayanagara's central authority.</span></li>
-        <li><span class="yr">1674</span><span>Shivaji crowned Chhatrapati.</span></li>
-        <li><span class="yr">1707</span><span>Aurangzeb dies; Mughal decline accelerates.</span></li>
-        <li><span class="yr">1761</span><span>Third Battle of Panipat checks Maratha northward momentum.</span></li>
-        <li><span class="yr">1799</span><span>Tipu Sultan is killed at Seringapatam; Mysore's challenge to Company rule weakens decisively.</span></li>
-        <li><span class="yr">1818</span><span>End of the Third Anglo-Maratha War; Company paramountcy becomes dominant.</span></li>
-      </ol>
-    </section>
+            <section id="chronology">
+                <h2>Master chronology</h2>
+                <hr class="sec-rule">
+                <ol class="timeline">
+                    <li><span class="yr">c. 6th century BCE</span><span>Mahajanapadas dominate the north; Magadha emerges as the strongest contender.</span></li>
+                    <li><span class="yr">c. 322 BCE</span><span>Chandragupta Maurya founds the Mauryan Empire.</span></li>
+                    <li><span class="yr">c. 268-232 BCE</span><span>Ashoka reigns; dhamma inscriptions become a major instrument of imperial legitimacy.</span></li>
+                    <li><span class="yr">c. 320 CE</span><span>Gupta power rises in north India.</span></li>
+                    <li><span class="yr">c. 4th-8th centuries</span><span>Pallavas, Chalukyas and other regional powers shape the Deccan-south political order.</span></li>
+                    <li><span class="yr">c. 850-1279</span><span>Imperial Chola phase, especially strong from the tenth to twelfth centuries.</span></li>
+                    <li><span class="yr">1206</span><span>Delhi Sultanate begins with the Mamluk or Slave dynasty.</span></li>
+                    <li><span class="yr">1347</span><span>Bahmani kingdom founded in the Deccan.</span></li>
+                    <li><span class="yr">1336</span><span>Vijayanagara established in south India.</span></li>
+                    <li><span class="yr">1526</span><span>Babur defeats Ibrahim Lodi at Panipat; Mughal rule begins.</span></li>
+                    <li><span class="yr">1556-1605</span><span>Akbar's reign consolidates Mughal power.</span></li>
+                    <li><span class="yr">1565</span><span>Battle of Talikota weakens Vijayanagara's central authority.</span></li>
+                    <li><span class="yr">1674</span><span>Shivaji crowned Chhatrapati.</span></li>
+                    <li><span class="yr">1707</span><span>Aurangzeb dies; Mughal decline accelerates.</span></li>
+                    <li><span class="yr">1761</span><span>Third Battle of Panipat checks Maratha northward momentum.</span></li>
+                    <li><span class="yr">1799</span><span>Tipu Sultan is killed at Seringapatam; Mysore's challenge to Company rule weakens decisively.</span></li>
+                    <li><span class="yr">1818</span><span>End of the Third Anglo-Maratha War; Company paramountcy becomes dominant.</span></li>
+                </ol>
+            </section>
 
-    <section id="glossary">
-      <h2>Glossary</h2><hr class="sec-rule">
-      <dl class="term">
-        <dt>Mahajanapada</dt><dd>A large territorial polity in early historic north India.</dd>
-        <dt>Dhamma</dt><dd>Ashoka's ethical-political doctrine used to frame imperial authority.</dd>
-        <dt>Feudatory</dt><dd>A subordinate ruler or chief who acknowledged a higher sovereign.</dd>
-        <dt>Iqta</dt><dd>A revenue assignment used under Islamic polities, especially the Sultanate.</dd>
-        <dt>Mansabdar</dt><dd>A ranked Mughal official tied to military and administrative service.</dd>
-        <dt>Jagir</dt><dd>A revenue-yielding assignment given in lieu of salary or service entitlement.</dd>
-        <dt>Chauth</dt><dd>A levy claimed by the Marathas, often amounting to one-fourth of assessed revenue.</dd>
-        <dt>Paramountcy</dt><dd>British doctrine of superior political authority over Indian states.</dd>
-      </dl>
-    </section>
+            <section id="glossary">
+                <h2>Glossary</h2>
+                <hr class="sec-rule">
+                <dl class="term">
+                    <dt>Mahajanapada</dt>
+                    <dd>A large territorial polity in early historic north India.</dd>
+                    <dt>Dhamma</dt>
+                    <dd>Ashoka's ethical-political doctrine used to frame imperial authority.</dd>
+                    <dt>Feudatory</dt>
+                    <dd>A subordinate ruler or chief who acknowledged a higher sovereign.</dd>
+                    <dt>Iqta</dt>
+                    <dd>A revenue assignment used under Islamic polities, especially the Sultanate.</dd>
+                    <dt>Mansabdar</dt>
+                    <dd>A ranked Mughal official tied to military and administrative service.</dd>
+                    <dt>Jagir</dt>
+                    <dd>A revenue-yielding assignment given in lieu of salary or service entitlement.</dd>
+                    <dt>Chauth</dt>
+                    <dd>A levy claimed by the Marathas, often amounting to one-fourth of assessed revenue.</dd>
+                    <dt>Paramountcy</dt>
+                    <dd>British doctrine of superior political authority over Indian states.</dd>
+                </dl>
+            </section>
 
-    <section id="revision">
-      <h2>Rapid revision sheet</h2><hr class="sec-rule">
-      <div class="panel blue-top">
-        <h4>Ten lines to hold the whole topic together</h4>
-        <ul>
-          <li>Indian dynastic succession is a story of repeated centralisation and regional reassertion.</li>
-          <li>Mauryas show early large-scale empire; Guptas show cultural prestige with looser imperial control.</li>
-          <li>The Deccan and south are indispensable, not side chapters.</li>
-          <li>The Cholas matter for administration, temples and maritime projection.</li>
-          <li>The Delhi Sultanate changed warfare and urban politics through mounted military elites and iqta structures.</li>
-          <li>The Mughals built the strongest early modern imperial framework through coalition, rank and revenue.</li>
-          <li>The Marathas converted regional strength into a confederate challenge to imperial dominance.</li>
-          <li>Successor states proved that multiple Indian futures remained open in the eighteenth century.</li>
-          <li>The Company won by combining war, money, diplomacy and Indian intermediaries.</li>
-          <li>The best modern reading is comparative and systems-based, not emotional and ruler-centric.</li>
-        </ul>
-      </div>
-    </section>
+            <section id="revision">
+                <h2>Rapid revision sheet</h2>
+                <hr class="sec-rule">
+                <div class="panel blue-top">
+                    <h4>Ten lines to hold the whole topic together</h4>
+                    <ul>
+                        <li>Indian dynastic succession is a story of repeated centralisation and regional reassertion.</li>
+                        <li>Mauryas show early large-scale empire; Guptas show cultural prestige with looser imperial control.</li>
+                        <li>The Deccan and south are indispensable, not side chapters.</li>
+                        <li>The Cholas matter for administration, temples and maritime projection.</li>
+                        <li>The Delhi Sultanate changed warfare and urban politics through mounted military elites and iqta structures.</li>
+                        <li>The Mughals built the strongest early modern imperial framework through coalition, rank and revenue.</li>
+                        <li>The Marathas converted regional strength into a confederate challenge to imperial dominance.</li>
+                        <li>Successor states proved that multiple Indian futures remained open in the eighteenth century.</li>
+                        <li>The Company won by combining war, money, diplomacy and Indian intermediaries.</li>
+                        <li>The best modern reading is comparative and systems-based, not emotional and ruler-centric.</li>
+                    </ul>
+                </div>
+            </section>
 
-    <footer>
-      <p>Compiled from open sources. Study aid only, not an official publication.</p>
-      <p>Source &amp; contributions: <a href="https://github.com/mohitkushwaha0601/matre">github.com/mohitkushwaha0601/matre</a></p>
-    </footer>
-  </main>
-</div>
+            <footer>
+                <p>Compiled from open sources. Study aid only, not an official publication.</p>
+                <p>Source &amp; contributions: <a href="https://github.com/mohitkushwaha0601/matre">github.com/mohitkushwaha0601/matre</a></p>
+            </footer>
+        </main>
+    </div>
 
 </body>
+
 </html>

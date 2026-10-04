@@ -1,404 +1,1302 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>India & Its Neighbours — SSB Geopolitics Brief</title>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Barlow+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
-<style>
-:root{
-  --olive:#3D4A2D;--olive-l:#5A6B3E;--khaki:#C8B87A;--sand:#E8DFC4;
-  --sand-l:#F5F0E8;--ink:#1A1C18;--ink-m:#3A3D35;--red:#8B1A1A;
-  --teal:#1A4A4A;--teal-l:#2A6A6A;--amber:#B07820;--white:#FAFAF7;--muted:#7A7D72;
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px);
-  padding-bottom:env(safe-area-inset-bottom,0px);
-}
-*,*::before,*::after{box-sizing:inherit;}
-html{scroll-padding-top:env(safe-area-inset-top,0px);}
-body{margin:0;font-family:'EB Garamond',Georgia,serif;background:var(--sand-l);color:var(--ink);line-height:1.7;font-size:17px;}
-
-.masthead{background:var(--olive);color:#fff;padding:52px 40px 40px;position:relative;overflow:hidden;}
-.masthead::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 40px,rgba(255,255,255,.03) 40px,rgba(255,255,255,.03) 41px);}
-.mh{max-width:960px;margin:0 auto;position:relative;}
-.mh-tag{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:600;letter-spacing:3px;color:var(--khaki);margin-bottom:16px;text-transform:uppercase;}
-.mh h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(36px,7vw,72px);font-weight:800;line-height:.95;margin:0 0 18px;letter-spacing:-1px;}
-.mh h1 em{display:block;font-style:italic;font-family:'EB Garamond',serif;font-size:.52em;font-weight:400;color:var(--khaki);letter-spacing:0;margin-bottom:4px;}
-.mh-sub{font-size:15px;color:rgba(255,255,255,.75);max-width:520px;line-height:1.5;margin-bottom:24px;}
-.badge{display:inline-block;background:var(--red);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;padding:5px 14px;text-transform:uppercase;}
-
-.snav{position:sticky;top:0;z-index:500;background:var(--ink);padding:0 28px;overflow-x:auto;white-space:nowrap;}
-.snav a{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:600;letter-spacing:1.5px;color:rgba(255,255,255,.6);text-decoration:none;padding:13px 14px;text-transform:uppercase;transition:color .2s;}
-.snav a:hover{color:var(--khaki);}
-
-.ctr{max-width:960px;margin:0 auto;padding:0 28px;}
-.sec{padding:48px 0 0;}
-.sec-lbl{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:3.5px;color:var(--muted);text-transform:uppercase;margin-bottom:5px;}
-.sec h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(24px,4.5vw,40px);font-weight:800;color:var(--olive);margin:0 0 24px;line-height:1.05;}
-
-/* MAP SECTION */
-.map-section{background:var(--white);border-top:4px solid var(--olive);padding:24px 28px;margin-bottom:4px;}
-.map-section.red-top{border-top-color:var(--red);}
-.map-section.teal-top{border-top-color:var(--teal);}
-.map-section h3{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;color:var(--olive);margin:0 0 4px;}
-.map-section .msub{font-size:13px;color:var(--muted);font-style:italic;margin:0 0 16px;}
-
-.map-2col{display:grid;grid-template-columns:3fr 2fr;gap:24px;align-items:start;}
-.map-2col.even{grid-template-columns:1fr 1fr;}
-
-/* D3 MAP */
-.d3-wrap{position:relative;width:100%;background:#C8DDE8;overflow:hidden;}
-.d3-wrap svg{display:block;width:100%;height:auto;}
-
-/* Tooltip */
-.map-tt{position:absolute;pointer-events:none;background:var(--ink);color:#fff;padding:10px 14px;font-family:'Barlow Condensed',sans-serif;font-size:12px;line-height:1.45;max-width:240px;z-index:100;border-left:3px solid var(--khaki);opacity:0;transition:opacity .12s;}
-.map-tt .tt-title{font-size:14px;font-weight:700;margin-bottom:3px;color:var(--khaki);}
-.map-tt .tt-tag{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:5px;}
-.map-tt .tt-body{font-size:11px;color:rgba(255,255,255,.85);line-height:1.5;}
-.map-tt .tt-ssb{margin-top:7px;padding:6px 8px;background:rgba(200,184,122,.15);border-left:2px solid var(--khaki);font-size:10px;font-style:italic;color:rgba(255,255,255,.7);}
-
-/* Concept panels */
-.concepts{background:var(--sand-l);padding:20px 22px;}
-.concepts h4{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:var(--olive);margin:0 0 14px;}
-.ci{border-left:3px solid var(--khaki);padding:8px 0 8px 12px;margin-bottom:10px;}
-.ci.r{border-left-color:var(--red);}
-.ci.t{border-left-color:var(--teal-l);}
-.ci.a{border-left-color:var(--amber);}
-.ci .ct{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;color:var(--ink);margin-bottom:2px;}
-.ci p{font-size:12px;color:var(--ink-m);margin:0;line-height:1.45;}
-
-/* Legend */
-.mleg{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;}
-.mleg-i{display:flex;align-items:center;gap:5px;font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--muted);}
-.mleg-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0;}
-.mleg-line{width:20px;height:0;flex-shrink:0;}
-
-/* CARDS */
-.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2px;margin-bottom:2px;}
-.cc{background:var(--white);padding:22px 22px 18px;border-top:4px solid var(--olive-l);}
-.cc.r{border-top-color:var(--red);}
-.cc.t{border-top-color:var(--teal);}
-.cc.a{border-top-color:var(--amber);}
-.cc .fl{font-size:26px;margin-bottom:7px;display:block;}
-.cc h3{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;color:var(--ink);margin:0 0 3px;}
-.rtag{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:11px;display:block;}
-.rtag.h{color:var(--red);}
-.rtag.c{color:var(--amber);}
-.rtag.f{color:var(--teal-l);}
-.rtag.s{color:var(--olive-l);}
-.cc p{font-size:13px;line-height:1.5;color:var(--ink-m);margin:0 0 12px;}
-.kp{list-style:none;padding:0;margin:0;}
-.kp li{font-size:12px;line-height:1.45;color:var(--ink-m);padding:3px 0 3px 15px;position:relative;border-bottom:1px solid rgba(0,0,0,.05);}
-.kp li:last-child{border-bottom:none;}
-.kp li::before{content:'▸';position:absolute;left:0;color:var(--khaki);font-size:9px;top:5px;}
-.tbl{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-top:12px;margin-bottom:4px;display:block;}
-.tbr{height:5px;background:var(--sand);width:100%;overflow:hidden;}
-.tbr div{height:100%;background:linear-gradient(90deg,var(--olive-l),var(--red));}
-
-/* STRATEGY */
-.srow{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:2px;}
-.sp{background:var(--ink);color:#fff;padding:22px;}
-.sp.l{background:var(--white);color:var(--ink);}
-.sp h4{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;color:var(--khaki);margin:0 0 8px;text-transform:uppercase;}
-.sp.l h4{color:var(--olive);}
-.sp p{font-size:12.5px;line-height:1.6;margin:0;color:rgba(255,255,255,.82);}
-.sp.l p{color:var(--ink-m);}
-
-/* SSB */
-.ssb{background:var(--red);color:#fff;padding:32px;}
-.ssb h3{font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:800;margin:0 0 20px;}
-.qgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-.q{background:rgba(255,255,255,.1);padding:14px 16px;}
-.q p{font-size:12px;line-height:1.45;margin:0 0 6px;color:rgba(255,255,255,.9);font-style:italic;}
-.q .ql{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.5);text-transform:uppercase;}
-.q .qa{font-size:11.5px;color:rgba(255,255,255,.65);margin-top:5px;font-style:normal;line-height:1.45;}
-
-/* GD */
-.gd{background:var(--teal);color:#fff;padding:26px 30px;margin-top:2px;}
-.gd h3{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;color:var(--khaki);margin:0 0 16px;}
-.gdt{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:9px;}
-.gdi{border:1px solid rgba(200,184,122,.3);padding:11px 13px;}
-.gdi .gt{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;color:var(--khaki);margin-bottom:4px;}
-.gdi p{font-size:11px;color:rgba(255,255,255,.75);margin:0;line-height:1.4;}
-
-/* TIMELINE */
-.tline{position:relative;padding-left:24px;margin:18px 0;}
-.tline::before{content:'';position:absolute;left:6px;top:0;bottom:0;width:2px;background:var(--khaki);}
-.tli{position:relative;margin-bottom:15px;}
-.tli::before{content:'';position:absolute;left:-20px;top:7px;width:8px;height:8px;background:var(--khaki);border-radius:50%;}
-.tly{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;color:var(--olive-l);margin-bottom:1px;}
-.tli p{font-size:13px;color:var(--ink-m);margin:0;line-height:1.45;}
-
-/* OB */
-.ob{background:var(--olive);color:#fff;padding:26px 30px;margin:40px 0 0;border-left:5px solid var(--khaki);}
-.ob h3{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;color:var(--khaki);text-transform:uppercase;margin:0 0 9px;}
-.ob p{margin:0;font-size:14px;line-height:1.65;color:rgba(255,255,255,.88);}
-
-.dvdr{height:2px;background:linear-gradient(90deg,var(--khaki),transparent);margin:40px 0;}
-.tkwy{background:var(--olive);color:#fff;padding:36px;margin:40px 0 0;text-align:center;}
-.tkwy .tl2{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:3px;color:var(--khaki);text-transform:uppercase;margin-bottom:12px;}
-.tkwy blockquote{font-family:'EB Garamond',serif;font-size:clamp(17px,3.2vw,24px);font-style:italic;color:#fff;max-width:640px;margin:0 auto 16px;line-height:1.45;}
-.tkwy .ts{font-family:'Barlow Condensed',sans-serif;font-size:11px;color:rgba(255,255,255,.5);letter-spacing:2px;text-transform:uppercase;}
-footer{background:var(--ink);color:rgba(255,255,255,.4);padding:18px 40px;text-align:center;font-size:11px;font-family:'Barlow Condensed',sans-serif;letter-spacing:1.5px;text-transform:uppercase;}
-
-@media(max-width:680px){
-  .masthead{padding:34px 18px 26px;}
-  .ctr{padding:0 14px;}
-  .map-2col,.map-2col.even,.srow,.qgrid{grid-template-columns:1fr;}
-  .ssb,.gd,.ob,.tkwy{padding:20px 16px;}
-}
-
-.home-btn{position:fixed;top:16px;left:16px;z-index:600;display:inline-flex;align-items:center;gap:.4rem;background:var(--ink);color:#fff;border:1px solid rgba(255,255,255,.25);padding:.45rem .85rem;border-radius:999px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.3);transition:background .15s ease,transform .15s ease}
-.home-btn:hover,.home-btn:focus-visible{background:var(--red);transform:translateY(-1px)}
-.home-btn svg{width:14px;height:14px;flex:none}
-@media print{.home-btn{display:none}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>India & Its Neighbours — SSB Geopolitics Brief</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Barlow+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+    <style>
+         :root {
+            --olive: #3D4A2D;
+            --olive-l: #5A6B3E;
+            --khaki: #C8B87A;
+            --sand: #E8DFC4;
+            --sand-l: #F5F0E8;
+            --ink: #1A1C18;
+            --ink-m: #3A3D35;
+            --red: #8B1A1A;
+            --teal: #1A4A4A;
+            --teal-l: #2A6A6A;
+            --amber: #B07820;
+            --white: #FAFAF7;
+            --muted: #7A7D72;
+            box-sizing: border-box;
+            padding-top: env(safe-area-inset-top, 0px);
+            padding-bottom: env(safe-area-inset-bottom, 0px);
+        }
+        
+        *,
+        *::before,
+        *::after {
+            box-sizing: inherit;
+        }
+        
+        html {
+            scroll-padding-top: env(safe-area-inset-top, 0px);
+        }
+        
+        body {
+            margin: 0;
+            font-family: 'EB Garamond', Georgia, serif;
+            background: var(--sand-l);
+            color: var(--ink);
+            line-height: 1.7;
+            font-size: 17px;
+        }
+        
+        .masthead {
+            background: var(--olive);
+            color: #fff;
+            padding: 52px 40px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .masthead::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(-45deg, transparent, transparent 40px, rgba(255, 255, 255, .03) 40px, rgba(255, 255, 255, .03) 41px);
+        }
+        
+        .mh {
+            max-width: 960px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .mh-tag {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            color: var(--khaki);
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+        
+        .mh h1 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: clamp(36px, 7vw, 72px);
+            font-weight: 800;
+            line-height: .95;
+            margin: 0 0 18px;
+            letter-spacing: -1px;
+        }
+        
+        .mh h1 em {
+            display: block;
+            font-style: italic;
+            font-family: 'EB Garamond', serif;
+            font-size: .52em;
+            font-weight: 400;
+            color: var(--khaki);
+            letter-spacing: 0;
+            margin-bottom: 4px;
+        }
+        
+        .mh-sub {
+            font-size: 15px;
+            color: rgba(255, 255, 255, .75);
+            max-width: 520px;
+            line-height: 1.5;
+            margin-bottom: 24px;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: var(--red);
+            color: #fff;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            padding: 5px 14px;
+            text-transform: uppercase;
+        }
+        
+        .snav {
+            position: sticky;
+            top: 0;
+            z-index: 500;
+            background: var(--ink);
+            padding: 0 28px;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        
+        .snav a {
+            display: inline-block;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            color: rgba(255, 255, 255, .6);
+            text-decoration: none;
+            padding: 13px 14px;
+            text-transform: uppercase;
+            transition: color .2s;
+        }
+        
+        .snav a:hover {
+            color: var(--khaki);
+        }
+        
+        .ctr {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+        
+        .sec {
+            padding: 48px 0 0;
+        }
+        
+        .sec-lbl {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3.5px;
+            color: var(--muted);
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        
+        .sec h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: clamp(24px, 4.5vw, 40px);
+            font-weight: 800;
+            color: var(--olive);
+            margin: 0 0 24px;
+            line-height: 1.05;
+        }
+        /* MAP SECTION */
+        
+        .map-section {
+            background: var(--white);
+            border-top: 4px solid var(--olive);
+            padding: 24px 28px;
+            margin-bottom: 4px;
+        }
+        
+        .map-section.red-top {
+            border-top-color: var(--red);
+        }
+        
+        .map-section.teal-top {
+            border-top-color: var(--teal);
+        }
+        
+        .map-section h3 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--olive);
+            margin: 0 0 4px;
+        }
+        
+        .map-section .msub {
+            font-size: 13px;
+            color: var(--muted);
+            font-style: italic;
+            margin: 0 0 16px;
+        }
+        
+        .map-2col {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 24px;
+            align-items: start;
+        }
+        
+        .map-2col.even {
+            grid-template-columns: 1fr 1fr;
+        }
+        /* D3 MAP */
+        
+        .d3-wrap {
+            position: relative;
+            width: 100%;
+            background: #C8DDE8;
+            overflow: hidden;
+        }
+        
+        .d3-wrap svg {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        /* Tooltip */
+        
+        .map-tt {
+            position: absolute;
+            pointer-events: none;
+            background: var(--ink);
+            color: #fff;
+            padding: 10px 14px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 12px;
+            line-height: 1.45;
+            max-width: 240px;
+            z-index: 100;
+            border-left: 3px solid var(--khaki);
+            opacity: 0;
+            transition: opacity .12s;
+        }
+        
+        .map-tt .tt-title {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 3px;
+            color: var(--khaki);
+        }
+        
+        .map-tt .tt-tag {
+            font-size: 10px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .55);
+            margin-bottom: 5px;
+        }
+        
+        .map-tt .tt-body {
+            font-size: 11px;
+            color: rgba(255, 255, 255, .85);
+            line-height: 1.5;
+        }
+        
+        .map-tt .tt-ssb {
+            margin-top: 7px;
+            padding: 6px 8px;
+            background: rgba(200, 184, 122, .15);
+            border-left: 2px solid var(--khaki);
+            font-size: 10px;
+            font-style: italic;
+            color: rgba(255, 255, 255, .7);
+        }
+        /* Concept panels */
+        
+        .concepts {
+            background: var(--sand-l);
+            padding: 20px 22px;
+        }
+        
+        .concepts h4 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--olive);
+            margin: 0 0 14px;
+        }
+        
+        .ci {
+            border-left: 3px solid var(--khaki);
+            padding: 8px 0 8px 12px;
+            margin-bottom: 10px;
+        }
+        
+        .ci.r {
+            border-left-color: var(--red);
+        }
+        
+        .ci.t {
+            border-left-color: var(--teal-l);
+        }
+        
+        .ci.a {
+            border-left-color: var(--amber);
+        }
+        
+        .ci .ct {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 2px;
+        }
+        
+        .ci p {
+            font-size: 12px;
+            color: var(--ink-m);
+            margin: 0;
+            line-height: 1.45;
+        }
+        /* Legend */
+        
+        .mleg {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .mleg-i {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+        
+        .mleg-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+        
+        .mleg-line {
+            width: 20px;
+            height: 0;
+            flex-shrink: 0;
+        }
+        /* CARDS */
+        
+        .cgrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2px;
+            margin-bottom: 2px;
+        }
+        
+        .cc {
+            background: var(--white);
+            padding: 22px 22px 18px;
+            border-top: 4px solid var(--olive-l);
+        }
+        
+        .cc.r {
+            border-top-color: var(--red);
+        }
+        
+        .cc.t {
+            border-top-color: var(--teal);
+        }
+        
+        .cc.a {
+            border-top-color: var(--amber);
+        }
+        
+        .cc .fl {
+            font-size: 26px;
+            margin-bottom: 7px;
+            display: block;
+        }
+        
+        .cc h3 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--ink);
+            margin: 0 0 3px;
+        }
+        
+        .rtag {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 11px;
+            display: block;
+        }
+        
+        .rtag.h {
+            color: var(--red);
+        }
+        
+        .rtag.c {
+            color: var(--amber);
+        }
+        
+        .rtag.f {
+            color: var(--teal-l);
+        }
+        
+        .rtag.s {
+            color: var(--olive-l);
+        }
+        
+        .cc p {
+            font-size: 13px;
+            line-height: 1.5;
+            color: var(--ink-m);
+            margin: 0 0 12px;
+        }
+        
+        .kp {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .kp li {
+            font-size: 12px;
+            line-height: 1.45;
+            color: var(--ink-m);
+            padding: 3px 0 3px 15px;
+            position: relative;
+            border-bottom: 1px solid rgba(0, 0, 0, .05);
+        }
+        
+        .kp li:last-child {
+            border-bottom: none;
+        }
+        
+        .kp li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--khaki);
+            font-size: 9px;
+            top: 5px;
+        }
+        
+        .tbl {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--muted);
+            text-transform: uppercase;
+            margin-top: 12px;
+            margin-bottom: 4px;
+            display: block;
+        }
+        
+        .tbr {
+            height: 5px;
+            background: var(--sand);
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .tbr div {
+            height: 100%;
+            background: linear-gradient(90deg, var(--olive-l), var(--red));
+        }
+        /* STRATEGY */
+        
+        .srow {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+            margin-bottom: 2px;
+        }
+        
+        .sp {
+            background: var(--ink);
+            color: #fff;
+            padding: 22px;
+        }
+        
+        .sp.l {
+            background: var(--white);
+            color: var(--ink);
+        }
+        
+        .sp h4 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--khaki);
+            margin: 0 0 8px;
+            text-transform: uppercase;
+        }
+        
+        .sp.l h4 {
+            color: var(--olive);
+        }
+        
+        .sp p {
+            font-size: 12.5px;
+            line-height: 1.6;
+            margin: 0;
+            color: rgba(255, 255, 255, .82);
+        }
+        
+        .sp.l p {
+            color: var(--ink-m);
+        }
+        /* SSB */
+        
+        .ssb {
+            background: var(--red);
+            color: #fff;
+            padding: 32px;
+        }
+        
+        .ssb h3 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 24px;
+            font-weight: 800;
+            margin: 0 0 20px;
+        }
+        
+        .qgrid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+        
+        .q {
+            background: rgba(255, 255, 255, .1);
+            padding: 14px 16px;
+        }
+        
+        .q p {
+            font-size: 12px;
+            line-height: 1.45;
+            margin: 0 0 6px;
+            color: rgba(255, 255, 255, .9);
+            font-style: italic;
+        }
+        
+        .q .ql {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, .5);
+            text-transform: uppercase;
+        }
+        
+        .q .qa {
+            font-size: 11.5px;
+            color: rgba(255, 255, 255, .65);
+            margin-top: 5px;
+            font-style: normal;
+            line-height: 1.45;
+        }
+        /* GD */
+        
+        .gd {
+            background: var(--teal);
+            color: #fff;
+            padding: 26px 30px;
+            margin-top: 2px;
+        }
+        
+        .gd h3 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--khaki);
+            margin: 0 0 16px;
+        }
+        
+        .gdt {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 9px;
+        }
+        
+        .gdi {
+            border: 1px solid rgba(200, 184, 122, .3);
+            padding: 11px 13px;
+        }
+        
+        .gdi .gt {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--khaki);
+            margin-bottom: 4px;
+        }
+        
+        .gdi p {
+            font-size: 11px;
+            color: rgba(255, 255, 255, .75);
+            margin: 0;
+            line-height: 1.4;
+        }
+        /* TIMELINE */
+        
+        .tline {
+            position: relative;
+            padding-left: 24px;
+            margin: 18px 0;
+        }
+        
+        .tline::before {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--khaki);
+        }
+        
+        .tli {
+            position: relative;
+            margin-bottom: 15px;
+        }
+        
+        .tli::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 7px;
+            width: 8px;
+            height: 8px;
+            background: var(--khaki);
+            border-radius: 50%;
+        }
+        
+        .tly {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--olive-l);
+            margin-bottom: 1px;
+        }
+        
+        .tli p {
+            font-size: 13px;
+            color: var(--ink-m);
+            margin: 0;
+            line-height: 1.45;
+        }
+        /* OB */
+        
+        .ob {
+            background: var(--olive);
+            color: #fff;
+            padding: 26px 30px;
+            margin: 40px 0 0;
+            border-left: 5px solid var(--khaki);
+        }
+        
+        .ob h3 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: var(--khaki);
+            text-transform: uppercase;
+            margin: 0 0 9px;
+        }
+        
+        .ob p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.65;
+            color: rgba(255, 255, 255, .88);
+        }
+        
+        .dvdr {
+            height: 2px;
+            background: linear-gradient(90deg, var(--khaki), transparent);
+            margin: 40px 0;
+        }
+        
+        .tkwy {
+            background: var(--olive);
+            color: #fff;
+            padding: 36px;
+            margin: 40px 0 0;
+            text-align: center;
+        }
+        
+        .tkwy .tl2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: var(--khaki);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        
+        .tkwy blockquote {
+            font-family: 'EB Garamond', serif;
+            font-size: clamp(17px, 3.2vw, 24px);
+            font-style: italic;
+            color: #fff;
+            max-width: 640px;
+            margin: 0 auto 16px;
+            line-height: 1.45;
+        }
+        
+        .tkwy .ts {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 11px;
+            color: rgba(255, 255, 255, .5);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        
+        footer {
+            background: var(--ink);
+            color: rgba(255, 255, 255, .4);
+            padding: 18px 40px;
+            text-align: center;
+            font-size: 11px;
+            font-family: 'Barlow Condensed', sans-serif;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+        
+        @media(max-width:680px) {
+            .masthead {
+                padding: 34px 18px 26px;
+            }
+            .ctr {
+                padding: 0 14px;
+            }
+            .map-2col,
+            .map-2col.even,
+            .srow,
+            .qgrid {
+                grid-template-columns: 1fr;
+            }
+            .ssb,
+            .gd,
+            .ob,
+            .tkwy {
+                padding: 20px 16px;
+            }
+        }
+        
+        .home-btn {
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            z-index: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: .4rem;
+            background: var(--ink);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, .25);
+            padding: .45rem .85rem;
+            border-radius: 999px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, .3);
+            transition: background .15s ease, transform .15s ease
+        }
+        
+        .home-btn:hover,
+        .home-btn:focus-visible {
+            background: var(--red);
+            transform: translateY(-1px)
+        }
+        
+        .home-btn svg {
+            width: 14px;
+            height: 14px;
+            flex: none
+        }
+        
+        @media print {
+            .home-btn {
+                display: none
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<a class="home-btn" href="../index.html" aria-label="Back to Handbooks homepage" title="Back to Handbooks homepage">
-  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
-  <span>Home</span>
-</a>
+    <a class="home-btn" href="../index.html" aria-label="Back to Handbooks homepage" title="Back to Handbooks homepage">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
+        <span>Home</span>
+    </a>
 
-<div class="masthead">
-  <div class="mh">
-    <div class="mh-tag">SSB Preparation Series · Geopolitics Module · D3 Map Edition</div>
-    <h1><em>India &amp; Its Neighbours</em>Strategic<br>Geopolitics<br>Brief</h1>
-    <p class="mh-sub">Vector maps rendered with real geographic data (Natural Earth via TopoJSON) — accurate borders, terrain, and annotated hotspots. Hover any marker for SSB-ready analysis.</p>
-    <span class="badge">SSB Ready · Vector Maps</span>
-  </div>
-</div>
-
-<nav class="snav">
-  <a href="#overview">Overview</a>
-  <a href="#kashmir">Kashmir &amp; LoC</a>
-  <a href="#lac">China &amp; LAC</a>
-  <a href="#iocean">Indian Ocean</a>
-  <a href="#neighbours">Neighbours</a>
-  <a href="#doctrines">Doctrines</a>
-  <a href="#ssb">SSB Prep</a>
-</nav>
-
-<div class="ctr">
-  <div class="ob">
-    <h3>Why This Matters for SSB</h3>
-    <p>An officer posted in any theatre — from Siachen to the Andaman Sea — must understand the strategic calculus behind every relationship. Study these maps until the geography feels instinctive. SSB evaluators want you to <em>think like a strategist</em>, not just recite facts.</p>
-  </div>
-</div>
-
-<!-- MAP 1 -->
-<div class="ctr" id="overview">
-  <div class="sec">
-    <div class="sec-lbl">Map 1 of 4 · Strategic Overview</div>
-    <h2>South Asia: India's Neighbourhood</h2>
-  </div>
-</div>
-<div style="max-width:960px;margin:0 auto;padding:0 28px;">
-  <div class="map-2col">
-    <div class="map-section" style="padding:20px;">
-      <h3>Political Overview — South Asia</h3>
-      <p class="msub">Hover markers for details. Built with D3.js + Natural Earth geographic data.</p>
-      <div class="d3-wrap" id="map1-wrap">
-        <div class="map-tt" id="tt1"></div>
-      </div>
-      <div class="mleg" style="margin-top:10px;">
-        <div class="mleg-i"><div class="mleg-dot" style="background:#8B1A1A;opacity:.7"></div>Hostile</div>
-        <div class="mleg-i"><div class="mleg-dot" style="background:#B07820;opacity:.7"></div>Complex</div>
-        <div class="mleg-i"><div class="mleg-dot" style="background:#1A4A4A;opacity:.7"></div>Strategic</div>
-        <div class="mleg-i"><div class="mleg-dot" style="background:#3D7A1A;opacity:.65"></div>India</div>
-        <div class="mleg-i"><div class="mleg-line" style="border-top:2px dashed #FFD700;"></div>LoC (schematic)</div>
-        <div class="mleg-i"><div class="mleg-line" style="border-top:2px dashed #FF6B6B;"></div>LAC (schematic)</div>
-      </div>
+    <div class="masthead">
+        <div class="mh">
+            <div class="mh-tag">SSB Preparation Series · Geopolitics Module · D3 Map Edition</div>
+            <h1><em>India &amp; Its Neighbours</em>Strategic<br>Geopolitics<br>Brief</h1>
+            <p class="mh-sub">Vector maps rendered with real geographic data (Natural Earth via TopoJSON) — accurate borders, terrain, and annotated hotspots. Hover any marker for SSB-ready analysis.</p>
+            <span class="badge">SSB Ready · Vector Maps</span>
+        </div>
     </div>
-    <div class="concepts">
-      <h4>Key Concepts</h4>
-      <div class="ci r"><div class="ct">Two-Front Threat</div><p>Pakistan (west) + China (north): both nuclear-armed, both cooperating (CPEC). India's theatre command reforms are a direct response to this dual threat.</p></div>
-      <div class="ci a"><div class="ct">Chicken's Neck (Siliguri)</div><p>~22 km wide corridor connecting Northeast India to mainland. Between Nepal and Bangladesh. India's most critical geographic vulnerability — must never be severed.</p></div>
-      <div class="ci t"><div class="ct">Buffer State Strategy</div><p>Nepal and Bhutan are India's strategic buffers. Doklam (2017) — India intervened in Bhutanese territory because it was too close to the Siliguri Corridor.</p></div>
-      <div class="ci r"><div class="ct">Disputed Territories</div><p>Pakistan claims all of J&K. China claims Arunachal Pradesh and holds Aksai Chin (since 1962). India's position: both are integral — non-negotiable.</p></div>
-      <div class="ci"><div class="ct">SSB Angle</div><p>Know where Depsang, Shaksgam Valley, and Chumbi Valley are. These are the next potential flashpoints — named locations signal strategic awareness to evaluators.</p></div>
-    </div>
-  </div>
-</div>
 
-<!-- MAP 2 -->
-<div class="ctr" id="kashmir">
-  <div class="sec">
-    <div class="sec-lbl">Map 2 of 4 · Western Theatre</div>
-    <h2>Kashmir: The World's Most Dangerous Flashpoint</h2>
-  </div>
-</div>
-<div style="max-width:960px;margin:0 auto;padding:0 28px;">
-  <div class="map-2col">
-    <div class="map-section red-top" style="padding:20px;">
-      <h3>Line of Control &amp; Key Zones</h3>
-      <p class="msub">776 km ceasefire line — not an internationally recognised border. Hover markers for analysis.</p>
-      <div class="d3-wrap" id="map2-wrap">
-        <div class="map-tt" id="tt2"></div>
-      </div>
-      <div class="mleg" style="margin-top:10px;">
-        <div class="mleg-i"><div class="mleg-dot" style="background:#E74C3C;opacity:.5"></div>Pakistan-controlled (PoK)</div>
-        <div class="mleg-i"><div class="mleg-dot" style="background:#E74C3C;opacity:.25"></div>China-held (Aksai Chin)</div>
-        <div class="mleg-i"><div class="mleg-line" style="border-top:2.5px dashed #FFD700;"></div>LoC (schematic)</div>
-        <div class="mleg-i"><div class="mleg-line" style="border-top:2px dashed #9B59B6;"></div>CPEC route</div>
-      </div>
-    </div>
-    <div class="concepts">
-      <h4>Kashmir — Core Concepts</h4>
-      <div class="ci r"><div class="ct">Why Kashmir is Unresolved</div><p>Maharaja Hari Singh's Instrument of Accession (Oct 1947) after Pakistani tribal invasion. Pakistan never accepted it. Nehru's UN referral — widely seen as a strategic error.</p></div>
-      <div class="ci r"><div class="ct">Article 370 Abrogation (2019)</div><p>J&K bifurcated into two UTs. Pakistan downgraded ties, suspended trade. China objected. Constitutionally contested but strategically decisive.</p></div>
-      <div class="ci a"><div class="ct">CPEC Through PoK</div><p>China-Pakistan Economic Corridor passes through Gilgit-Baltistan (India's claim). CPEC legitimises Pakistan's occupation and builds permanent Chinese infrastructure in disputed territory.</p></div>
-      <div class="ci t"><div class="ct">Nuclear Threshold</div><p>Pakistan's Nasr tactical missile was designed to deter India's Cold Start. Any large-scale Indian conventional response risks Pakistan crossing the nuclear threshold.</p></div>
-      <div class="ci"><div class="ct">SSB Angle</div><p>"Would you want to be posted in J&K?" — Show genuine eagerness, terrain awareness, and strategic maturity. Never reluctance, never blind aggression.</p></div>
-    </div>
-  </div>
-</div>
+    <nav class="snav">
+        <a href="#overview">Overview</a>
+        <a href="#kashmir">Kashmir &amp; LoC</a>
+        <a href="#lac">China &amp; LAC</a>
+        <a href="#iocean">Indian Ocean</a>
+        <a href="#neighbours">Neighbours</a>
+        <a href="#doctrines">Doctrines</a>
+        <a href="#ssb">SSB Prep</a>
+    </nav>
 
-<!-- MAP 3 -->
-<div class="ctr" id="lac">
-  <div class="sec">
-    <div class="sec-lbl">Map 3 of 4 · Northern Theatre</div>
-    <h2>The Line of Actual Control: India's China Problem</h2>
-  </div>
-</div>
-<div style="max-width:960px;margin:0 auto;padding:0 28px;">
-  <div class="map-2col">
-    <div class="map-section red-top" style="padding:20px;">
-      <h3>LAC — 3,488 km of Ambiguity</h3>
-      <p class="msub">Never formally demarcated. Both sides have different perceptions — this ambiguity is itself the source of conflict.</p>
-      <div class="d3-wrap" id="map3-wrap">
-        <div class="map-tt" id="tt3"></div>
-      </div>
-      <div class="mleg" style="margin-top:10px;">
-        <div class="mleg-i"><div class="mleg-line" style="border-top:2px dashed #FF6B6B;"></div>LAC (schematic)</div>
-        <div class="mleg-i"><div class="mleg-dot" style="background:#E74C3C"></div>China-aggressor flashpoint</div>
-        <div class="mleg-i"><div class="mleg-dot" style="background:#3498DB"></div>Key terrain / lake</div>
-        <div class="mleg-i"><div class="mleg-dot" style="background:#3D7A1A"></div>India strategic asset</div>
-        <div class="mleg-i"><div class="mleg-dot" style="background:#9B59B6"></div>Water / dam threat</div>
-      </div>
+    <div class="ctr">
+        <div class="ob">
+            <h3>Why This Matters for SSB</h3>
+            <p>An officer posted in any theatre — from Siachen to the Andaman Sea — must understand the strategic calculus behind every relationship. Study these maps until the geography feels instinctive. SSB evaluators want you to <em>think like a strategist</em>,
+                not just recite facts.</p>
+        </div>
     </div>
-    <div class="concepts">
-      <h4>China Border — Key Concepts</h4>
-      <div class="ci r"><div class="ct">Why LAC is Never "Resolved"</div><p>Never formally surveyed or demarcated. Both nations have different maps. Every patrol is a potential confrontation. China exploits this ambiguity deliberately through grey-zone incursions.</p></div>
-      <div class="ci r"><div class="ct">Salami Slicing</div><p>Taking territory in tiny, individually insignificant slices so no single act justifies military response. Depsang, Galwan, Pangong — each was a slice. Cumulative effect: permanent status quo change.</p></div>
-      <div class="ci a"><div class="ct">Infrastructure Race</div><p>China built world-class roads, villages, and airstrips in Tibet over decades. India's BRO is racing to catch up: Atal Tunnel, DBO road, Z-Morh Tunnel, Sela Tunnel. Roads = response time.</p></div>
-      <div class="ci t"><div class="ct">Brahmaputra as a Weapon</div><p>China's Motuo Dam (60 GW) on Yarlung Tsangpo. Controlled water releases could flood Assam or deny irrigation — a strategic weapon requiring zero military mobilisation.</p></div>
-      <div class="ci"><div class="ct">India's Counter</div><p>Agni-V ICBM (covers all of China), BrahMos on LAC, BRO fast-tracking, QUAD, trade decoupling, arming China's neighbours (Vietnam, Philippines).</p></div>
+
+    <!-- MAP 1 -->
+    <div class="ctr" id="overview">
+        <div class="sec">
+            <div class="sec-lbl">Map 1 of 4 · Strategic Overview</div>
+            <h2>South Asia: India's Neighbourhood</h2>
+        </div>
     </div>
-  </div>
-</div>
-
-<!-- MAP 4 -->
-<div class="ctr" id="iocean">
-  <div class="sec">
-    <div class="sec-lbl">Map 4 of 4 · Maritime Theatre</div>
-    <h2>Indian Ocean Region: The Encirclement Game</h2>
-  </div>
-</div>
-<div style="max-width:960px;margin:0 auto;padding:0 28px;">
-  <div class="map-2col">
-    <div class="map-section teal-top" style="padding:20px;">
-      <h3>String of Pearls vs. India's SAGAR Doctrine</h3>
-      <p class="msub">China's port network vs. India's maritime security strategy. 80% of world oil trade passes through this ocean.</p>
-      <div class="d3-wrap" id="map4-wrap">
-        <div class="map-tt" id="tt4"></div>
-      </div>
-      <div class="mleg" style="margin-top:10px;">
-        <div class="mleg-i"><div class="mleg-dot" style="background:#E74C3C"></div>Chinese port (Pearl node)</div>
-        <div class="mleg-i"><div class="mleg-dot" style="background:#3D7A1A"></div>India maritime asset</div>
-        <div class="mleg-i"><div class="mleg-dot" style="background:#B07820"></div>Contested / shifting</div>
-        <div class="mleg-i"><div class="mleg-dot" style="background:#FFD700"></div>Strategic chokepoint</div>
-        <div class="mleg-i"><div class="mleg-line" style="border-top:2px dashed #FFD700;"></div>Critical SLOC</div>
-        <div class="mleg-i"><div class="mleg-line" style="border-top:2px dashed #E74C3C;"></div>String of Pearls</div>
-      </div>
+    <div style="max-width:960px;margin:0 auto;padding:0 28px;">
+        <div class="map-2col">
+            <div class="map-section" style="padding:20px;">
+                <h3>Political Overview — South Asia</h3>
+                <p class="msub">Hover markers for details. Built with D3.js + Natural Earth geographic data.</p>
+                <div class="d3-wrap" id="map1-wrap">
+                    <div class="map-tt" id="tt1"></div>
+                </div>
+                <div class="mleg" style="margin-top:10px;">
+                    <div class="mleg-i">
+                        <div class="mleg-dot" style="background:#8B1A1A;opacity:.7"></div>Hostile</div>
+                    <div class="mleg-i">
+                        <div class="mleg-dot" style="background:#B07820;opacity:.7"></div>Complex</div>
+                    <div class="mleg-i">
+                        <div class="mleg-dot" style="background:#1A4A4A;opacity:.7"></div>Strategic</div>
+                    <div class="mleg-i">
+                        <div class="mleg-dot" style="background:#3D7A1A;opacity:.65"></div>India</div>
+                    <div class="mleg-i">
+                        <div class="mleg-line" style="border-top:2px dashed #FFD700;"></div>LoC (schematic)</div>
+                    <div class="mleg-i">
+                        <div class="mleg-line" style="border-top:2px dashed #FF6B6B;"></div>LAC (schematic)</div>
+                </div>
+            </div>
+            <div class="concepts">
+                <h4>Key Concepts</h4>
+                <div class="ci r">
+                    <div class="ct">Two-Front Threat</div>
+                    <p>Pakistan (west) + China (north): both nuclear-armed, both cooperating (CPEC). India's theatre command reforms are a direct response to this dual threat.</p>
+                </div>
+                <div class="ci a">
+                    <div class="ct">Chicken's Neck (Siliguri)</div>
+                    <p>~22 km wide corridor connecting Northeast India to mainland. Between Nepal and Bangladesh. India's most critical geographic vulnerability — must never be severed.</p>
+                </div>
+                <div class="ci t">
+                    <div class="ct">Buffer State Strategy</div>
+                    <p>Nepal and Bhutan are India's strategic buffers. Doklam (2017) — India intervened in Bhutanese territory because it was too close to the Siliguri Corridor.</p>
+                </div>
+                <div class="ci r">
+                    <div class="ct">Disputed Territories</div>
+                    <p>Pakistan claims all of J&K. China claims Arunachal Pradesh and holds Aksai Chin (since 1962). India's position: both are integral — non-negotiable.</p>
+                </div>
+                <div class="ci">
+                    <div class="ct">SSB Angle</div>
+                    <p>Know where Depsang, Shaksgam Valley, and Chumbi Valley are. These are the next potential flashpoints — named locations signal strategic awareness to evaluators.</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="concepts">
-      <h4>Indian Ocean — Key Concepts</h4>
-      <div class="ci r"><div class="ct">String of Pearls</div><p>China's port network (Gwadar → Colombo → Chittagong → Kyaukpyu) encircling India. Commercial now, potentially military later. The infrastructure is being built before the intent is declared.</p></div>
-      <div class="ci a"><div class="ct">Malacca Dilemma</div><p>80% of China's oil passes through Malacca — which India flanks with Andaman & Nicobar Command. China can't fight India and secure its oil simultaneously. Hence Gwadar (west bypass) and Kyaukpyu (east bypass).</p></div>
-      <div class="ci t"><div class="ct">SAGAR Doctrine</div><p>Security And Growth for All in the Region (2015). Make India the preferred security partner for Indian Ocean islands. Counter to BRI without naming it.</p></div>
-      <div class="ci r"><div class="ct">QUAD's Maritime Role</div><p>QUAD is fundamentally a maritime alliance: freedom of navigation, shared domain awareness (tracking Chinese ships), interoperability. US Pacific Fleet as de facto counterweight.</p></div>
-      <div class="ci"><div class="ct">SSB GD Angle</div><p>"Militarise Andaman & Nicobar?" — India's most powerful card. But full militarisation complicates ASEAN relations. Calibrated upgrading keeps China guessing without alarming neighbours.</p></div>
+
+    <!-- MAP 2 -->
+    <div class="ctr" id="kashmir">
+        <div class="sec">
+            <div class="sec-lbl">Map 2 of 4 · Western Theatre</div>
+            <h2>Kashmir: The World's Most Dangerous Flashpoint</h2>
+        </div>
     </div>
-  </div>
-</div>
-
-<!-- COUNTRY CARDS -->
-<div class="ctr" id="neighbours">
-  <div class="sec"><div class="sec-lbl">Country Profiles</div><h2>India's 8 Critical Relationships</h2></div>
-</div>
-<div style="padding:0 28px;max-width:960px;margin:0 auto;">
-  <div class="cgrid">
-    <div class="cc r"><span class="fl">🇵🇰</span><h3>Pakistan</h3><span class="rtag h">Hostile / Contested</span><p>Three wars, nuclear overhang, LoC, and ISI-sponsored cross-border terrorism. Balakot airstrike (2019) permanently changed India's deterrence posture.</p><ul class="kp"><li>Kashmir core dispute; Art.370 abrogation (2019) escalated tensions</li><li>CPEC through PoK — India's formal UN objection</li><li>Nasr tactical nukes designed to deter India's Cold Start Doctrine</li><li>Trade suspended; diplomatic ties downgraded post-2019</li></ul><span class="tbl">Tension</span><div class="tbr"><div style="width:92%"></div></div></div>
-    <div class="cc r"><span class="fl">🇨🇳</span><h3>China</h3><span class="rtag h">Strategic Rival</span><p>3,488 km undemarcated LAC. 1962 War legacy. Galwan 2020. Salami-slicing. String of Pearls. Brahmaputra dam threat. Long-term structural rival.</p><ul class="kp"><li>Galwan 2020: 20 Indian soldiers martyred — worst since 1967</li><li>String of Pearls encircling India in Indian Ocean</li><li>Motuo Dam: upstream Brahmaputra leverage</li><li>Counter: Agni-V, BrahMos on LAC, QUAD, BRO roads</li></ul><span class="tbl">Tension</span><div class="tbr"><div style="width:83%"></div></div></div>
-    <div class="cc a"><span class="fl">🇳🇵</span><h3>Nepal</h3><span class="rtag c">Historically Close / Strained</span><p>Deep "Roti-Beti" ties. Kalapani dispute and China's BRI have strained this once-bedrock relationship.</p><ul class="kp"><li>Kalapani-Lipulekh dispute (2020): Nepal's map claimed Indian territory</li><li>~32,000 Nepalese serve in Indian Army Gorkha regiments</li><li>2015 blockade fallout: Lasting resentment, China pivot</li><li>Nepal signed BRI — India's buffer-state anxiety grows</li></ul><span class="tbl">Tension</span><div class="tbr"><div style="width:46%"></div></div></div>
-    <div class="cc"><span class="fl">🇧🇹</span><h3>Bhutan</h3><span class="rtag s">Strategic Buffer State</span><p>India handles Bhutan's defense. Chumbi Valley is the most dangerous geographic point near India's Chicken's Neck.</p><ul class="kp"><li>India-Bhutan Friendship Treaty — India's security guarantee</li><li>Doklam 2017: India intervened; 73-day standoff</li><li>China-Bhutan direct border talks — India watching</li><li>India imports ~70% of Bhutan's hydroelectricity</li></ul><span class="tbl">Tension</span><div class="tbr"><div style="width:18%"></div></div></div>
-    <div class="cc t"><span class="fl">🇧🇩</span><h3>Bangladesh</h3><span class="rtag f">Complex Friendship</span><p>India created Bangladesh in 1971. Sheikh Hasina ouster (2024) created strategic uncertainty for India's Northeast connectivity corridor.</p><ul class="kp"><li>Teesta River water-sharing: Unsigned for 15+ years</li><li>Sheikh Hasina ouster (Aug 2024): Realignment risk</li><li>Critical for Northeast India transit access</li><li>Illegal immigration: Assam/Bengal — domestic issue</li></ul><span class="tbl">Tension</span><div class="tbr"><div style="width:40%"></div></div></div>
-    <div class="cc a"><span class="fl">🇲🇲</span><h3>Myanmar</h3><span class="rtag c">Unstable Neighbour</span><p>2021 coup → civil war → refugee inflow into Mizoram and Manipur. China filling strategic vacuum. India must engage junta or lose influence.</p><ul class="kp"><li>Civil war: Refugee inflow into Northeast India</li><li>NSCN nexus with Indian insurgent groups</li><li>Kaladan Multimodal Project: India's connectivity lifeline</li><li>India fencing the border — reversed free movement policy</li></ul><span class="tbl">Tension</span><div class="tbr"><div style="width:54%"></div></div></div>
-    <div class="cc t"><span class="fl">🇱🇰</span><h3>Sri Lanka</h3><span class="rtag f">Recovering / Strategic</span><p>Hambantota Port (China, 99-yr lease). India's 2022 economic rescue rebuilt goodwill. Sri Lanka recalibrating but can't abandon China's investment.</p><ul class="kp"><li>2022 crisis: India's USD 4 billion support — diplomatic reset</li><li>Tamil Nadu fishermen dispute: Recurring friction</li><li>Hambantota: China's most strategically placed Pearl</li><li>Trincomalee: India negotiating port access</li></ul><span class="tbl">Tension</span><div class="tbr"><div style="width:28%"></div></div></div>
-    <div class="cc a"><span class="fl">🇲🇻</span><h3>Maldives</h3><span class="rtag c">Tilting / Recovering</span><p>"India Out" under Muizzu (2023). Troops withdrawn (March 2024). China agreements signed. Economic compulsions pulling Maldives back (2025).</p><ul class="kp"><li>Indian military personnel withdrawn; civilian technicians remain</li><li>Controls critical Indian Ocean SLOC</li><li>India's leverage: Tourism, fuel, food, medicine</li><li>Lakshadweep: India's strategic and tourism counter</li></ul><span class="tbl">Tension</span><div class="tbr"><div style="width:50%"></div></div></div>
-  </div>
-</div>
-
-<!-- DOCTRINES -->
-<div class="ctr" id="doctrines">
-  <div class="sec"><div class="sec-lbl">Policy &amp; Doctrine</div><h2>India's Strategic Doctrines</h2></div>
-</div>
-<div style="padding:0 28px;max-width:960px;margin:0 auto;">
-  <div class="srow">
-    <div class="sp"><h4>Cold Start Doctrine</h4><p>India's limited-war doctrine vs. Pakistan. Swift, shallow penetration into Pakistani territory before international pressure forces a ceasefire — denying Pakistan the "nuclear threshold" justification. Operationalised through Integrated Battle Groups (IBGs).</p></div>
-    <div class="sp l"><h4>Neighbourhood First Policy</h4><p>Launched by PM Modi (2014). Prioritises SAARC neighbours in foreign policy. Aims to reduce China's influence by making India the preferred partner in South Asia through connectivity, economic aid, and cultural exchange.</p></div>
-  </div>
-  <div class="srow">
-    <div class="sp l"><h4>SAGAR Doctrine</h4><p>Security And Growth for All in the Region (2015). Keeps the Indian Ocean free, open, and prosperous. Counters String of Pearls by building security partnerships with island nations — Maldives, Mauritius, Seychelles, Sri Lanka, Madagascar.</p></div>
-    <div class="sp"><h4>Strategic Autonomy</h4><p>India refuses to join any military alliance while maintaining deep partnerships with the US, Russia, France, and others. Participates in QUAD while keeping the Russian S-400. The art of keeping all options open simultaneously.</p></div>
-  </div>
-  <div class="srow">
-    <div class="sp"><h4>Act East Policy</h4><p>Deepening engagement with ASEAN, SE Asia, and East Asia. Counters China's influence via Kaladan project, BIMSTEC, and Vietnam defence ties — India arming China's neighbours without formally announcing it.</p></div>
-    <div class="sp l"><h4>Two-Front War Preparedness</h4><p>India's military prepares for simultaneous conflict on the western (Pakistan) and northern (China) fronts. Galwan 2020 accelerated this: faster BRO roads, forward deployments, integrated theatre commands, Agni-V deployment.</p></div>
-  </div>
-</div>
-
-<!-- SSB -->
-<div style="padding:0 28px;max-width:960px;margin:32px auto 0;" id="ssb">
-  <div class="ssb">
-    <h3>SSB Officer's Corner</h3>
-    <div class="qgrid">
-      <div class="q"><p>"Biggest security threat — Pakistan or China?"</p><div class="ql">Model Answer Cue</div><div class="qa">Both — differently. China is the long-term structural challenge; Pakistan is immediate friction. India prepares for both simultaneously. Show dual-front complexity.</div></div>
-      <div class="q"><p>"Was the Balakot airstrike the right decision?"</p><div class="ql">Model Answer Cue</div><div class="qa">It permanently changed India's deterrence posture — targeted, proportionate, not an act of war. The key was measured response. Avoid both uncritical praise and second-guessing.</div></div>
-      <div class="q"><p>"What is the Malacca Dilemma?"</p><div class="ql">Model Answer Cue</div><div class="qa">80% of China's oil passes through Malacca — flanked by India's Andaman & Nicobar Command. India's strategic leverage over China's energy security. Must remain a credible threat.</div></div>
-      <div class="q"><p>"Should India maintain No-First-Use nuclear policy?"</p><div class="ql">Model Answer Cue</div><div class="qa">NFU is India's stated doctrine. But Pakistan's Nasr tactical nukes challenge it. Show you understand the tension between NFU's diplomatic value and military limitations.</div></div>
-      <div class="q"><p>"How to respond to China's salami-slicing?"</p><div class="ql">Model Answer Cue</div><div class="qa">Counter-salami-slicing: match every patrol, build infrastructure faster, maintain forward presence. Diplomatically: raise costs through QUAD, trade decoupling, arming China's neighbours.</div></div>
-      <div class="q"><p>"Is QUAD an alliance against China?"</p><div class="ql">Model Answer Cue</div><div class="qa">India's official position: not an alliance, not against any country. But acknowledge the reality: China's assertiveness is why it was revived in 2017. Show the gap between diplomatic language and strategic intent.</div></div>
+    <div style="max-width:960px;margin:0 auto;padding:0 28px;">
+        <div class="map-2col">
+            <div class="map-section red-top" style="padding:20px;">
+                <h3>Line of Control &amp; Key Zones</h3>
+                <p class="msub">776 km ceasefire line — not an internationally recognised border. Hover markers for analysis.</p>
+                <div class="d3-wrap" id="map2-wrap">
+                    <div class="map-tt" id="tt2"></div>
+                </div>
+                <div class="mleg" style="margin-top:10px;">
+                    <div class="mleg-i">
+                        <div class="mleg-dot" style="background:#E74C3C;opacity:.5"></div>Pakistan-controlled (PoK)</div>
+                    <div class="mleg-i">
+                        <div class="mleg-dot" style="background:#E74C3C;opacity:.25"></div>China-held (Aksai Chin)</div>
+                    <div class="mleg-i">
+                        <div class="mleg-line" style="border-top:2.5px dashed #FFD700;"></div>LoC (schematic)</div>
+                    <div class="mleg-i">
+                        <div class="mleg-line" style="border-top:2px dashed #9B59B6;"></div>CPEC route</div>
+                </div>
+            </div>
+            <div class="concepts">
+                <h4>Kashmir — Core Concepts</h4>
+                <div class="ci r">
+                    <div class="ct">Why Kashmir is Unresolved</div>
+                    <p>Maharaja Hari Singh's Instrument of Accession (Oct 1947) after Pakistani tribal invasion. Pakistan never accepted it. Nehru's UN referral — widely seen as a strategic error.</p>
+                </div>
+                <div class="ci r">
+                    <div class="ct">Article 370 Abrogation (2019)</div>
+                    <p>J&K bifurcated into two UTs. Pakistan downgraded ties, suspended trade. China objected. Constitutionally contested but strategically decisive.</p>
+                </div>
+                <div class="ci a">
+                    <div class="ct">CPEC Through PoK</div>
+                    <p>China-Pakistan Economic Corridor passes through Gilgit-Baltistan (India's claim). CPEC legitimises Pakistan's occupation and builds permanent Chinese infrastructure in disputed territory.</p>
+                </div>
+                <div class="ci t">
+                    <div class="ct">Nuclear Threshold</div>
+                    <p>Pakistan's Nasr tactical missile was designed to deter India's Cold Start. Any large-scale Indian conventional response risks Pakistan crossing the nuclear threshold.</p>
+                </div>
+                <div class="ci">
+                    <div class="ct">SSB Angle</div>
+                    <p>"Would you want to be posted in J&K?" — Show genuine eagerness, terrain awareness, and strategic maturity. Never reluctance, never blind aggression.</p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="gd">
-    <h3>Group Discussion Topics</h3>
-    <div class="gdt">
-      <div class="gdi"><div class="gt">QUAD vs Non-Alignment</div><p>Is QUAD a compromise of strategic autonomy? QUAD offers security; non-alignment offers flexibility and Russia ties.</p></div>
-      <div class="gdi"><div class="gt">Water Wars in South Asia</div><p>Brahmaputra (China), Teesta (Bangladesh), Indus (Pakistan). Water as a geopolitical weapon — India's strategic options.</p></div>
-      <div class="gdi"><div class="gt">Militarise Andaman & Nicobar?</div><p>India's most powerful maritime card. Strategic gains vs. diplomatic costs with ASEAN — where is the right balance?</p></div>
-      <div class="gdi"><div class="gt">SAARC vs BIMSTEC</div><p>SAARC paralysed by Pakistan. Should India fully pivot to BIMSTEC as primary regional architecture?</p></div>
-      <div class="gdi"><div class="gt">India-China: Trade &amp; Rivalry</div><p>$120 billion bilateral trade alongside territorial conflict. Can two nuclear-armed rivals trade and compete without war?</p></div>
-      <div class="gdi"><div class="gt">Article 370: Gains &amp; Costs</div><p>Did abrogation strengthen India's Kashmir position or create new strategic vulnerabilities (China-Pakistan alignment)?</p></div>
+
+    <!-- MAP 3 -->
+    <div class="ctr" id="lac">
+        <div class="sec">
+            <div class="sec-lbl">Map 3 of 4 · Northern Theatre</div>
+            <h2>The Line of Actual Control: India's China Problem</h2>
+        </div>
     </div>
-  </div>
-  <div class="tkwy">
-    <div class="tl2">Officer's Key Takeaway</div>
-    <blockquote>"Geography doesn't change. But who controls it does — inch by inch, port by port, patrol by patrol. An officer's job is to ensure that when history judges these decades, India's borders were defended not just by bravery, but by strategic clarity."</blockquote>
-    <div class="ts">SSB Geopolitics Brief · India &amp; Neighbours · 2025–26</div>
-  </div>
-</div>
+    <div style="max-width:960px;margin:0 auto;padding:0 28px;">
+        <div class="map-2col">
+            <div class="map-section red-top" style="padding:20px;">
+                <h3>LAC — 3,488 km of Ambiguity</h3>
+                <p class="msub">Never formally demarcated. Both sides have different perceptions — this ambiguity is itself the source of conflict.</p>
+                <div class="d3-wrap" id="map3-wrap">
+                    <div class="map-tt" id="tt3"></div>
+                </div>
+                <div class="mleg" style="margin-top:10px;">
+                    <div class="mleg-i">
+                        <div class="mleg-line" style="border-top:2px dashed #FF6B6B;"></div>LAC (schematic)</div>
+                    <div class="mleg-i">
+                        <div class="mleg-dot" style="background:#E74C3C"></div>China-aggressor flashpoint</div>
+                    <div class="mleg-i">
+                        <div class="mleg-dot" style="background:#3498DB"></div>Key terrain / lake</div>
+                    <div class="mleg-i">
+                        <div class="mleg-dot" style="background:#3D7A1A"></div>India strategic asset</div>
+                    <div class="mleg-i">
+                        <div class="mleg-dot" style="background:#9B59B6"></div>Water / dam threat</div>
+                </div>
+            </div>
+            <div class="concepts">
+                <h4>China Border — Key Concepts</h4>
+                <div class="ci r">
+                    <div class="ct">Why LAC is Never "Resolved"</div>
+                    <p>Never formally surveyed or demarcated. Both nations have different maps. Every patrol is a potential confrontation. China exploits this ambiguity deliberately through grey-zone incursions.</p>
+                </div>
+                <div class="ci r">
+                    <div class="ct">Salami Slicing</div>
+                    <p>Taking territory in tiny, individually insignificant slices so no single act justifies military response. Depsang, Galwan, Pangong — each was a slice. Cumulative effect: permanent status quo change.</p>
+                </div>
+                <div class="ci a">
+                    <div class="ct">Infrastructure Race</div>
+                    <p>China built world-class roads, villages, and airstrips in Tibet over decades. India's BRO is racing to catch up: Atal Tunnel, DBO road, Z-Morh Tunnel, Sela Tunnel. Roads = response time.</p>
+                </div>
+                <div class="ci t">
+                    <div class="ct">Brahmaputra as a Weapon</div>
+                    <p>China's Motuo Dam (60 GW) on Yarlung Tsangpo. Controlled water releases could flood Assam or deny irrigation — a strategic weapon requiring zero military mobilisation.</p>
+                </div>
+                <div class="ci">
+                    <div class="ct">India's Counter</div>
+                    <p>Agni-V ICBM (covers all of China), BrahMos on LAC, BRO fast-tracking, QUAD, trade decoupling, arming China's neighbours (Vietnam, Philippines).</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<footer>SSB Geopolitics Brief · D3 Vector Map Edition · Geographic data: Natural Earth · For Study Purposes Only</footer>
+    <!-- MAP 4 -->
+    <div class="ctr" id="iocean">
+        <div class="sec">
+            <div class="sec-lbl">Map 4 of 4 · Maritime Theatre</div>
+            <h2>Indian Ocean Region: The Encirclement Game</h2>
+        </div>
+    </div>
+    <div style="max-width:960px;margin:0 auto;padding:0 28px;">
+        <div class="map-2col">
+            <div class="map-section teal-top" style="padding:20px;">
+                <h3>String of Pearls vs. India's SAGAR Doctrine</h3>
+                <p class="msub">China's port network vs. India's maritime security strategy. 80% of world oil trade passes through this ocean.</p>
+                <div class="d3-wrap" id="map4-wrap">
+                    <div class="map-tt" id="tt4"></div>
+                </div>
+                <div class="mleg" style="margin-top:10px;">
+                    <div class="mleg-i">
+                        <div class="mleg-dot" style="background:#E74C3C"></div>Chinese port (Pearl node)</div>
+                    <div class="mleg-i">
+                        <div class="mleg-dot" style="background:#3D7A1A"></div>India maritime asset</div>
+                    <div class="mleg-i">
+                        <div class="mleg-dot" style="background:#B07820"></div>Contested / shifting</div>
+                    <div class="mleg-i">
+                        <div class="mleg-dot" style="background:#FFD700"></div>Strategic chokepoint</div>
+                    <div class="mleg-i">
+                        <div class="mleg-line" style="border-top:2px dashed #FFD700;"></div>Critical SLOC</div>
+                    <div class="mleg-i">
+                        <div class="mleg-line" style="border-top:2px dashed #E74C3C;"></div>String of Pearls</div>
+                </div>
+            </div>
+            <div class="concepts">
+                <h4>Indian Ocean — Key Concepts</h4>
+                <div class="ci r">
+                    <div class="ct">String of Pearls</div>
+                    <p>China's port network (Gwadar → Colombo → Chittagong → Kyaukpyu) encircling India. Commercial now, potentially military later. The infrastructure is being built before the intent is declared.</p>
+                </div>
+                <div class="ci a">
+                    <div class="ct">Malacca Dilemma</div>
+                    <p>80% of China's oil passes through Malacca — which India flanks with Andaman & Nicobar Command. China can't fight India and secure its oil simultaneously. Hence Gwadar (west bypass) and Kyaukpyu (east bypass).</p>
+                </div>
+                <div class="ci t">
+                    <div class="ct">SAGAR Doctrine</div>
+                    <p>Security And Growth for All in the Region (2015). Make India the preferred security partner for Indian Ocean islands. Counter to BRI without naming it.</p>
+                </div>
+                <div class="ci r">
+                    <div class="ct">QUAD's Maritime Role</div>
+                    <p>QUAD is fundamentally a maritime alliance: freedom of navigation, shared domain awareness (tracking Chinese ships), interoperability. US Pacific Fleet as de facto counterweight.</p>
+                </div>
+                <div class="ci">
+                    <div class="ct">SSB GD Angle</div>
+                    <p>"Militarise Andaman & Nicobar?" — India's most powerful card. But full militarisation complicates ASEAN relations. Calibrated upgrading keeps China guessing without alarming neighbours.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<script>
-// ── SHARED TOOLTIP ──
-function showTT(ttEl, x, y, wrapEl, title, tag, body, ssb) {
-  ttEl.innerHTML = `<div class="tt-title">${title}</div><div class="tt-tag">${tag}</div><div class="tt-body">${body}</div>${ssb?`<div class="tt-ssb">🎯 SSB: ${ssb}</div>`:''}`;
+    <!-- COUNTRY CARDS -->
+    <div class="ctr" id="neighbours">
+        <div class="sec">
+            <div class="sec-lbl">Country Profiles</div>
+            <h2>India's 8 Critical Relationships</h2>
+        </div>
+    </div>
+    <div style="padding:0 28px;max-width:960px;margin:0 auto;">
+        <div class="cgrid">
+            <div class="cc r"><span class="fl">🇵🇰</span>
+                <h3>Pakistan</h3><span class="rtag h">Hostile / Contested</span>
+                <p>Three wars, nuclear overhang, LoC, and ISI-sponsored cross-border terrorism. Balakot airstrike (2019) permanently changed India's deterrence posture.</p>
+                <ul class="kp">
+                    <li>Kashmir core dispute; Art.370 abrogation (2019) escalated tensions</li>
+                    <li>CPEC through PoK — India's formal UN objection</li>
+                    <li>Nasr tactical nukes designed to deter India's Cold Start Doctrine</li>
+                    <li>Trade suspended; diplomatic ties downgraded post-2019</li>
+                </ul><span class="tbl">Tension</span>
+                <div class="tbr">
+                    <div style="width:92%"></div>
+                </div>
+            </div>
+            <div class="cc r"><span class="fl">🇨🇳</span>
+                <h3>China</h3><span class="rtag h">Strategic Rival</span>
+                <p>3,488 km undemarcated LAC. 1962 War legacy. Galwan 2020. Salami-slicing. String of Pearls. Brahmaputra dam threat. Long-term structural rival.</p>
+                <ul class="kp">
+                    <li>Galwan 2020: 20 Indian soldiers martyred — worst since 1967</li>
+                    <li>String of Pearls encircling India in Indian Ocean</li>
+                    <li>Motuo Dam: upstream Brahmaputra leverage</li>
+                    <li>Counter: Agni-V, BrahMos on LAC, QUAD, BRO roads</li>
+                </ul><span class="tbl">Tension</span>
+                <div class="tbr">
+                    <div style="width:83%"></div>
+                </div>
+            </div>
+            <div class="cc a"><span class="fl">🇳🇵</span>
+                <h3>Nepal</h3><span class="rtag c">Historically Close / Strained</span>
+                <p>Deep "Roti-Beti" ties. Kalapani dispute and China's BRI have strained this once-bedrock relationship.</p>
+                <ul class="kp">
+                    <li>Kalapani-Lipulekh dispute (2020): Nepal's map claimed Indian territory</li>
+                    <li>~32,000 Nepalese serve in Indian Army Gorkha regiments</li>
+                    <li>2015 blockade fallout: Lasting resentment, China pivot</li>
+                    <li>Nepal signed BRI — India's buffer-state anxiety grows</li>
+                </ul><span class="tbl">Tension</span>
+                <div class="tbr">
+                    <div style="width:46%"></div>
+                </div>
+            </div>
+            <div class="cc"><span class="fl">🇧🇹</span>
+                <h3>Bhutan</h3><span class="rtag s">Strategic Buffer State</span>
+                <p>India handles Bhutan's defense. Chumbi Valley is the most dangerous geographic point near India's Chicken's Neck.</p>
+                <ul class="kp">
+                    <li>India-Bhutan Friendship Treaty — India's security guarantee</li>
+                    <li>Doklam 2017: India intervened; 73-day standoff</li>
+                    <li>China-Bhutan direct border talks — India watching</li>
+                    <li>India imports ~70% of Bhutan's hydroelectricity</li>
+                </ul><span class="tbl">Tension</span>
+                <div class="tbr">
+                    <div style="width:18%"></div>
+                </div>
+            </div>
+            <div class="cc t"><span class="fl">🇧🇩</span>
+                <h3>Bangladesh</h3><span class="rtag f">Complex Friendship</span>
+                <p>India created Bangladesh in 1971. Sheikh Hasina ouster (2024) created strategic uncertainty for India's Northeast connectivity corridor.</p>
+                <ul class="kp">
+                    <li>Teesta River water-sharing: Unsigned for 15+ years</li>
+                    <li>Sheikh Hasina ouster (Aug 2024): Realignment risk</li>
+                    <li>Critical for Northeast India transit access</li>
+                    <li>Illegal immigration: Assam/Bengal — domestic issue</li>
+                </ul><span class="tbl">Tension</span>
+                <div class="tbr">
+                    <div style="width:40%"></div>
+                </div>
+            </div>
+            <div class="cc a"><span class="fl">🇲🇲</span>
+                <h3>Myanmar</h3><span class="rtag c">Unstable Neighbour</span>
+                <p>2021 coup → civil war → refugee inflow into Mizoram and Manipur. China filling strategic vacuum. India must engage junta or lose influence.</p>
+                <ul class="kp">
+                    <li>Civil war: Refugee inflow into Northeast India</li>
+                    <li>NSCN nexus with Indian insurgent groups</li>
+                    <li>Kaladan Multimodal Project: India's connectivity lifeline</li>
+                    <li>India fencing the border — reversed free movement policy</li>
+                </ul><span class="tbl">Tension</span>
+                <div class="tbr">
+                    <div style="width:54%"></div>
+                </div>
+            </div>
+            <div class="cc t"><span class="fl">🇱🇰</span>
+                <h3>Sri Lanka</h3><span class="rtag f">Recovering / Strategic</span>
+                <p>Hambantota Port (China, 99-yr lease). India's 2022 economic rescue rebuilt goodwill. Sri Lanka recalibrating but can't abandon China's investment.</p>
+                <ul class="kp">
+                    <li>2022 crisis: India's USD 4 billion support — diplomatic reset</li>
+                    <li>Tamil Nadu fishermen dispute: Recurring friction</li>
+                    <li>Hambantota: China's most strategically placed Pearl</li>
+                    <li>Trincomalee: India negotiating port access</li>
+                </ul><span class="tbl">Tension</span>
+                <div class="tbr">
+                    <div style="width:28%"></div>
+                </div>
+            </div>
+            <div class="cc a"><span class="fl">🇲🇻</span>
+                <h3>Maldives</h3><span class="rtag c">Tilting / Recovering</span>
+                <p>"India Out" under Muizzu (2023). Troops withdrawn (March 2024). China agreements signed. Economic compulsions pulling Maldives back (2025).</p>
+                <ul class="kp">
+                    <li>Indian military personnel withdrawn; civilian technicians remain</li>
+                    <li>Controls critical Indian Ocean SLOC</li>
+                    <li>India's leverage: Tourism, fuel, food, medicine</li>
+                    <li>Lakshadweep: India's strategic and tourism counter</li>
+                </ul><span class="tbl">Tension</span>
+                <div class="tbr">
+                    <div style="width:50%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DOCTRINES -->
+    <div class="ctr" id="doctrines">
+        <div class="sec">
+            <div class="sec-lbl">Policy &amp; Doctrine</div>
+            <h2>India's Strategic Doctrines</h2>
+        </div>
+    </div>
+    <div style="padding:0 28px;max-width:960px;margin:0 auto;">
+        <div class="srow">
+            <div class="sp">
+                <h4>Cold Start Doctrine</h4>
+                <p>India's limited-war doctrine vs. Pakistan. Swift, shallow penetration into Pakistani territory before international pressure forces a ceasefire — denying Pakistan the "nuclear threshold" justification. Operationalised through Integrated
+                    Battle Groups (IBGs).</p>
+            </div>
+            <div class="sp l">
+                <h4>Neighbourhood First Policy</h4>
+                <p>Launched by PM Modi (2014). Prioritises SAARC neighbours in foreign policy. Aims to reduce China's influence by making India the preferred partner in South Asia through connectivity, economic aid, and cultural exchange.</p>
+            </div>
+        </div>
+        <div class="srow">
+            <div class="sp l">
+                <h4>SAGAR Doctrine</h4>
+                <p>Security And Growth for All in the Region (2015). Keeps the Indian Ocean free, open, and prosperous. Counters String of Pearls by building security partnerships with island nations — Maldives, Mauritius, Seychelles, Sri Lanka, Madagascar.</p>
+            </div>
+            <div class="sp">
+                <h4>Strategic Autonomy</h4>
+                <p>India refuses to join any military alliance while maintaining deep partnerships with the US, Russia, France, and others. Participates in QUAD while keeping the Russian S-400. The art of keeping all options open simultaneously.</p>
+            </div>
+        </div>
+        <div class="srow">
+            <div class="sp">
+                <h4>Act East Policy</h4>
+                <p>Deepening engagement with ASEAN, SE Asia, and East Asia. Counters China's influence via Kaladan project, BIMSTEC, and Vietnam defence ties — India arming China's neighbours without formally announcing it.</p>
+            </div>
+            <div class="sp l">
+                <h4>Two-Front War Preparedness</h4>
+                <p>India's military prepares for simultaneous conflict on the western (Pakistan) and northern (China) fronts. Galwan 2020 accelerated this: faster BRO roads, forward deployments, integrated theatre commands, Agni-V deployment.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SSB -->
+    <div style="padding:0 28px;max-width:960px;margin:32px auto 0;" id="ssb">
+        <div class="ssb">
+            <h3>SSB Officer's Corner</h3>
+            <div class="qgrid">
+                <div class="q">
+                    <p>"Biggest security threat — Pakistan or China?"</p>
+                    <div class="ql">Model Answer Cue</div>
+                    <div class="qa">Both — differently. China is the long-term structural challenge; Pakistan is immediate friction. India prepares for both simultaneously. Show dual-front complexity.</div>
+                </div>
+                <div class="q">
+                    <p>"Was the Balakot airstrike the right decision?"</p>
+                    <div class="ql">Model Answer Cue</div>
+                    <div class="qa">It permanently changed India's deterrence posture — targeted, proportionate, not an act of war. The key was measured response. Avoid both uncritical praise and second-guessing.</div>
+                </div>
+                <div class="q">
+                    <p>"What is the Malacca Dilemma?"</p>
+                    <div class="ql">Model Answer Cue</div>
+                    <div class="qa">80% of China's oil passes through Malacca — flanked by India's Andaman & Nicobar Command. India's strategic leverage over China's energy security. Must remain a credible threat.</div>
+                </div>
+                <div class="q">
+                    <p>"Should India maintain No-First-Use nuclear policy?"</p>
+                    <div class="ql">Model Answer Cue</div>
+                    <div class="qa">NFU is India's stated doctrine. But Pakistan's Nasr tactical nukes challenge it. Show you understand the tension between NFU's diplomatic value and military limitations.</div>
+                </div>
+                <div class="q">
+                    <p>"How to respond to China's salami-slicing?"</p>
+                    <div class="ql">Model Answer Cue</div>
+                    <div class="qa">Counter-salami-slicing: match every patrol, build infrastructure faster, maintain forward presence. Diplomatically: raise costs through QUAD, trade decoupling, arming China's neighbours.</div>
+                </div>
+                <div class="q">
+                    <p>"Is QUAD an alliance against China?"</p>
+                    <div class="ql">Model Answer Cue</div>
+                    <div class="qa">India's official position: not an alliance, not against any country. But acknowledge the reality: China's assertiveness is why it was revived in 2017. Show the gap between diplomatic language and strategic intent.</div>
+                </div>
+            </div>
+        </div>
+        <div class="gd">
+            <h3>Group Discussion Topics</h3>
+            <div class="gdt">
+                <div class="gdi">
+                    <div class="gt">QUAD vs Non-Alignment</div>
+                    <p>Is QUAD a compromise of strategic autonomy? QUAD offers security; non-alignment offers flexibility and Russia ties.</p>
+                </div>
+                <div class="gdi">
+                    <div class="gt">Water Wars in South Asia</div>
+                    <p>Brahmaputra (China), Teesta (Bangladesh), Indus (Pakistan). Water as a geopolitical weapon — India's strategic options.</p>
+                </div>
+                <div class="gdi">
+                    <div class="gt">Militarise Andaman & Nicobar?</div>
+                    <p>India's most powerful maritime card. Strategic gains vs. diplomatic costs with ASEAN — where is the right balance?</p>
+                </div>
+                <div class="gdi">
+                    <div class="gt">SAARC vs BIMSTEC</div>
+                    <p>SAARC paralysed by Pakistan. Should India fully pivot to BIMSTEC as primary regional architecture?</p>
+                </div>
+                <div class="gdi">
+                    <div class="gt">India-China: Trade &amp; Rivalry</div>
+                    <p>$120 billion bilateral trade alongside territorial conflict. Can two nuclear-armed rivals trade and compete without war?</p>
+                </div>
+                <div class="gdi">
+                    <div class="gt">Article 370: Gains &amp; Costs</div>
+                    <p>Did abrogation strengthen India's Kashmir position or create new strategic vulnerabilities (China-Pakistan alignment)?</p>
+                </div>
+            </div>
+        </div>
+        <div class="tkwy">
+            <div class="tl2">Officer's Key Takeaway</div>
+            <blockquote>"Geography doesn't change. But who controls it does — inch by inch, port by port, patrol by patrol. An officer's job is to ensure that when history judges these decades, India's borders were defended not just by bravery, but by strategic clarity."</blockquote>
+            <div class="ts">SSB Geopolitics Brief · India &amp; Neighbours · 2025–26</div>
+        </div>
+    </div>
+
+    <footer>SSB Geopolitics Brief · D3 Vector Map Edition · Geographic data: Natural Earth · For Study Purposes Only</footer>
+
+    <script>
+        // ── SHARED TOOLTIP ──
+        function showTT(ttEl, x, y, wrapEl, title, tag, body, ssb) {
+            ttEl.innerHTML = `<div class="tt-title">${title}</div><div class="tt-tag">${tag}</div><div class="tt-body">${body}</div>${ssb?`<div class="tt-ssb">🎯 SSB: ${ssb}</div>`:''}`;
   const rect = wrapEl.getBoundingClientRect();
   let lx = x + 14, ly = y + 14;
   if (lx + 250 > wrapEl.offsetWidth) lx = x - 254;
@@ -688,6 +1586,7 @@ buildMap('map4-wrap', 'tt4', proj4, 760, 580, (svg, g, path, wrap, ttEl) => {
     addMarker(g, proj4, wrap, ttEl, lon, lat, col, 9, name, tag, body, ssb);
   });
 });
-</script>
+    </script>
 </body>
+
 </html>
