@@ -1684,7 +1684,7 @@
         function countryLabel(feature) {
             const id = String(feature.id).padStart(3, '0');
             const d = allCountries.find(c => String(c.ccn3 || '').padStart(3, '0') === id);
-            return d ? .name ? .common || numericNameMap[id] || 'Country';
+            return d?.name?.common || numericNameMap[id] || 'Country';
         }
 
         function getCountryForFeature(feature) {
@@ -1699,12 +1699,12 @@
                 return {
                     weight: .65,
                     color: '#112335',
-                    fillColor: continentColors[c ? .region || k] || continentColors[k] || '#5d6a78',
+                    fillColor: continentColors[c?.region || k] || continentColors[k] || '#5d6a78',
                     fillOpacity: .82
                 };
             }
             if (currentMode === 'income') {
-                const k = c ? (worldBank[c.cca3] ? .income || 'Unknown') : 'Unknown';
+                const k = c ? (worldBank[c.cca3]?.income || 'Unknown') : 'Unknown';
                 return {
                     weight: .65,
                     color: '#112335',
@@ -1713,7 +1713,7 @@
                 };
             }
             if (currentMode === 'population') {
-                const p = c ? .population || 0;
+                const p = c?.population || 0;
                 let fill = p > 500000000 ? '#b95c5c' : p > 150000000 ? '#cc7f55' : p > 50000000 ? '#d2a960' : p > 10000000 ? '#75a8c5' : p > 1000000 ? '#5e819c' : '#3f5e72';
                 return {
                     weight: .65,
@@ -1783,11 +1783,13 @@
             try {
                 const [topoRes, countriesRes] = await Promise.all([
                     fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json'),
-                    fetch('https://restcountries.com/v3.1/all?fields=name,cca3,ccn3,capital,region,subregion,population,area,currencies,languages,latlng,landlocked,borders,flags,maps,unMember')
+                    fetch('https://raw.githubusercontent.com/mledoze/countries/master/dist/countries.json')
                 ]);
                 const topo = await topoRes.json();
-                allCountries = await countriesRes.json();
-                const members = allCountries.filter(c => c.unMember || ['Holy See', 'Vatican City', 'Palestine', 'State of Palestine'].includes(c.name ? .common));
+                const countryPayload = await countriesRes.json();
+                allCountries = Array.isArray(countryPayload) ? countryPayload : Array.isArray(countryPayload?.data) ? countryPayload.data : [];
+                if (!allCountries.length) throw new Error('Country metadata source returned no records');
+                const members = allCountries.filter(c => c.unMember || ['Holy See', 'Vatican City', 'Palestine', 'State of Palestine'].includes(c.name?.common));
                 allCountries = members.length > 180 ? members : allCountries;
                 const features = topojson.feature(topo, topo.objects.countries).features;
                 worldLayer = L.geoJSON(features, {
@@ -1801,15 +1803,15 @@
                 const wbIncome = await fetch('https://api.worldbank.org/v2/country/all?format=json&per_page=400&fields=id,iso3Code,name,region,incomeLevel').then(r => r.json());
                 (wbIncome[1] || []).forEach(x => {
                     if (x.iso3Code) worldBank[x.iso3Code] = {
-                        income: x.incomeLevel ? .value || 'Unknown'
+                        income: x.incomeLevel?.value || 'Unknown'
                     };
                 });
                 const wbGDP = await fetch('https://api.worldbank.org/v2/country/all/indicator/NY.GDP.MKTP.CD?format=json&per_page=400&date=2025').then(r => r.json());
                 (wbGDP[1] || []).forEach(x => {
-                    if (x.countryiso3code) worldBank[x.countryiso3code] || = {};
-                    worldBank[x.countryiso3code] = {...worldBank[x.countryiso3code],
-                        gdp: x.value
-                    };
+                    if (x.countryiso3code) {
+                        if (!worldBank[x.countryiso3code]) worldBank[x.countryiso3code] = {};
+                        worldBank[x.countryiso3code] = { ...worldBank[x.countryiso3code], gdp: x.value };
+                    }
                 });
                 document.getElementById('countryStatus').textContent = `${allCountries.length} country/economy profiles loaded. Income/GDP layers use World Bank data when a matching code is available.`;
                 if (worldLayer) worldLayer.setStyle(styleFor);
@@ -1835,15 +1837,15 @@
             const reg = document.getElementById('continentFilter').value;
             const inc = document.getElementById('incomeFilter').value;
             const list = allCountries.filter(c => {
-                const name = (c.name ? .common || '').toLowerCase();
+                const name = (c.name?.common || '').toLowerCase();
                 const region = continentOf(c);
-                const income = worldBank[c.cca3] ? .income || '';
+                const income = worldBank[c.cca3]?.income || '';
                 return (!q || name.includes(q)) && (!reg || region === reg) && (!inc || income === inc);
-            }).sort((a, b) => (a.name ? .common || '').localeCompare(b.name ? .common || ''));
+            }).sort((a, b) => (a.name?.common || '').localeCompare(b.name?.common || ''));
             document.getElementById('countryCount').textContent = `${list.length} shown`;
             const grid = document.getElementById('countryGrid');
             grid.innerHTML = list.slice(0, 120).map(c => {
-                        const income = worldBank[c.cca3] ? .income || '';
+                        const income = worldBank[c.cca3]?.income || '';
                         return `<div class="card country-card" onclick="showCountryByCode('${c.cca3}')"><div class="country-name">${c.name.common}</div><div class="country-meta">${continentOf(c)} • ${safe(c.subregion,'—')}</div><div style="margin-top:7px"><span class="pill">${safe(c.capital?.[0],'Capital n/a')}</span>${income?`<span class="pill">${income}</span>`:''}</div></div>`;
   }).join('');
   if(list.length>120) document.getElementById('countryStatus').textContent=`Showing first 120 of ${list.length}. Narrow the search/filter to explore more.`;
