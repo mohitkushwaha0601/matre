@@ -37,6 +37,45 @@
             text-decoration: none
         }
         
+        .home-btn {
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            z-index: 60;
+            display: inline-flex;
+            align-items: center;
+            gap: .4rem;
+            background: #14202B;
+            color: #F1F2EC;
+            border: 1px solid rgba(241, 242, 236, .25);
+            padding: .45rem .85rem;
+            border-radius: 999px;
+            font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+            font-size: .82rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, .3);
+            transition: background .15s ease, transform .15s ease;
+        }
+        
+        .home-btn:hover,
+        .home-btn:focus-visible {
+            background: #BF2F26;
+            transform: translateY(-1px);
+        }
+        
+        .home-btn svg {
+            width: 14px;
+            height: 14px;
+            flex: none;
+        }
+        
+        @media print {
+            .home-btn {
+                display: none;
+            }
+        }
+        
         .wrap {
             max-width: 1280px;
             margin: auto;
@@ -379,6 +418,10 @@
 </head>
 
 <body>
+    <a class="home-btn" href="../index.html" aria-label="Back to Handbooks homepage" title="Back to Handbooks homepage">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
+        <span>Home</span>
+    </a>
     <div class="wrap">
         <header class="hero">
             <div class="kicker">India • Defence • 2026 • SSB / Strategic Studies</div>
@@ -431,7 +474,7 @@
                             <div class="title">MILAN 2026</div>
                             <div class="service">Indian Navy • Multilateral</div>
                         </div><span class="tag multi">MULTINATIONAL</span></div>
-                    <div class="tags"><span class="tag">15–25 Feb</span><span class="tag">Visakhapatnam</span><span class="tag">74 nations</span></div>
+                    <div class="tags"><span class="tag">15-25 Feb</span><span class="tag">Visakhapatnam</span><span class="tag">74 nations</span></div>
                     <div class="meta-row"><b>What</b>
                         <div>Flagship multilateral naval exercise conducted with harbour and sea phases; the closing ceremony was held aboard INS Vikrant.</div>
                     </div>
@@ -450,7 +493,7 @@
                 <article class="card" data-tags="iaf india independent" data-state="completed">
                     <div class="card-head">
                         <div>
-                            <div class="title">Vayu Shakti–26</div>
+                            <div class="title">Vayu Shakti-26</div>
                             <div class="service">Indian Air Force • Independent firepower demonstration</div>
                         </div><span class="tag ind">INDEPENDENT</span></div>
                     <div class="tags"><span class="tag">27 Feb</span><span class="tag">Pokhran, Rajasthan</span><span class="tag">full spectrum</span></div>
@@ -469,10 +512,10 @@
                 <article class="card" data-tags="army kyrgyzstan bilateral" data-state="completed">
                     <div class="card-head">
                         <div>
-                            <div class="title">Khanjar–2026</div>
-                            <div class="service">Army • India–Kyrgyzstan Special Forces</div>
+                            <div class="title">Khanjar-2026</div>
+                            <div class="service">Army • India-Kyrgyzstan Special Forces</div>
                         </div><span class="tag bi">BILATERAL</span></div>
-                    <div class="tags"><span class="tag">4–17 Feb</span><span class="tag">Missamari, Assam</span><span class="tag">20 + 20</span></div>
+                    <div class="tags"><span class="tag">4-17 Feb</span><span class="tag">Missamari, Assam</span><span class="tag">20 + 20</span></div>
                     <div class="meta-row"><b>Focus</b>
                         <div>Counter-terrorism and special-forces operations in urban and mountainous terrain; sniping, building intervention and mountain craft.</div>
                     </div>
@@ -485,10 +528,10 @@
                 <article class="card" data-tags="army japan bilateral" data-state="completed">
                     <div class="card-head">
                         <div>
-                            <div class="title">Dharma Guardian–VII</div>
-                            <div class="service">Army • India–Japan</div>
+                            <div class="title">Dharma Guardian-VII</div>
+                            <div class="service">Army • India-Japan</div>
                         </div><span class="tag bi">BILATERAL</span></div>
-                    <div class="tags"><span class="tag">24 Feb–9 Mar</span><span class="tag">Chaubattia, Uttarakhand</span><span class="tag">120 + 120</span></div>
+                    <div class="tags"><span class="tag">24 Feb-9 Mar</span><span class="tag">Chaubattia, Uttarakhand</span><span class="tag">120 + 120</span></div>
                     <div class="meta-row"><b>Focus</b>
                         <div>Semi-urban joint operations, ISR grid, vehicle check points, cordon/search, heliborne operations and house intervention.</div>
                     </div>
@@ -501,10 +544,10 @@
                 <article class="card" data-tags="army usa bilateral special-forces" data-state="completed">
                     <div class="card-head">
                         <div>
-                            <div class="title">Vajra Prahar–16</div>
-                            <div class="service">Army • India–US Special Forces</div>
+                            <div class="title">Vajra Prahar-16</div>
+                            <div class="service">Army • India-US Special Forces</div>
                         </div><span class="tag bi">BILATERAL</span></div>
-                    <div class="tags"><span class="tag">24 Feb–16 Mar</span><span class="tag">Bakloh, HP</span><span class="tag">45 + 12</span></div>
+                    <div class="tags"><span class="tag">24 Feb-16 Mar</span><span class="tag">Bakloh, HP</span><span class="tag">45 + 12</span></div>
                     <div class="meta-row"><b>Focus</b>
                         <div>Joint mission planning, special-operations TTP exchange and operations in mountainous terrain with Indian Para SF and US Green Berets.</div>
                     </div>
@@ -517,10 +560,10 @@
                 <article class="card" data-tags="army iaf uzbekistan bilateral" data-state="completed">
                     <div class="card-head">
                         <div>
-                            <div class="title">Dustlik–2026</div>
-                            <div class="service">Army + IAF • India–Uzbekistan</div>
+                            <div class="title">Dustlik-2026</div>
+                            <div class="service">Army + IAF • India-Uzbekistan</div>
                         </div><span class="tag bi">BILATERAL</span></div>
-                    <div class="tags"><span class="tag">12–25 Apr</span><span class="tag">Namangan, Uzbekistan</span><span class="tag">Army + Air Force</span></div>
+                    <div class="tags"><span class="tag">12-25 Apr</span><span class="tag">Namangan, Uzbekistan</span><span class="tag">Army + Air Force</span></div>
                     <div class="meta-row"><b>Focus</b>
                         <div>Semi-mountainous joint operations, land navigation, strike missions, seizure of enemy-held areas and special operations validation.</div>
                     </div>
@@ -533,10 +576,10 @@
                 <article class="card" data-tags="army egypt bilateral special-forces" data-state="completed">
                     <div class="card-head">
                         <div>
-                            <div class="title">Cyclone–IV</div>
-                            <div class="service">Army • India–Egypt Special Forces</div>
+                            <div class="title">Cyclone-IV</div>
+                            <div class="service">Army • India-Egypt Special Forces</div>
                         </div><span class="tag bi">BILATERAL</span></div>
-                    <div class="tags"><span class="tag">9–17 Apr</span><span class="tag">Anshas, Egypt</span><span class="tag">desert / semi-desert</span></div>
+                    <div class="tags"><span class="tag">9-17 Apr</span><span class="tag">Anshas, Egypt</span><span class="tag">desert / semi-desert</span></div>
                     <div class="meta-row"><b>Focus</b>
                         <div>Joint mission planning and special-operations TTP exchange in desert and semi-desert terrain.</div>
                     </div>
@@ -549,10 +592,10 @@
                 <article class="card" data-tags="army cambodia bilateral" data-state="completed">
                     <div class="card-head">
                         <div>
-                            <div class="title">CINBAX–II</div>
-                            <div class="service">Army • India–Cambodia</div>
+                            <div class="title">CINBAX-II</div>
+                            <div class="service">Army • India-Cambodia</div>
                         </div><span class="tag bi">BILATERAL</span></div>
-                    <div class="tags"><span class="tag">4–17 May</span><span class="tag">Kampong Speu, Cambodia</span><span class="tag">UN Chapter VII</span></div>
+                    <div class="tags"><span class="tag">4-17 May</span><span class="tag">Kampong Speu, Cambodia</span><span class="tag">UN Chapter VII</span></div>
                     <div class="meta-row"><b>Focus</b>
                         <div>Company-level joint training for sub-conventional operations under a UN-mandated framework.</div>
                     </div>
@@ -565,10 +608,10 @@
                 <article class="card" data-tags="army multi bilateral" data-state="completed">
                     <div class="card-head">
                         <div>
-                            <div class="title">Lamitiye–2026</div>
-                            <div class="service">All three Indian Services • India–Seychelles</div>
+                            <div class="title">Lamitiye-2026</div>
+                            <div class="service">All three Indian Services • India-Seychelles</div>
                         </div><span class="tag bi">BILATERAL</span></div>
-                    <div class="tags"><span class="tag">9–20 Mar</span><span class="tag">Seychelles</span><span class="tag">tri-service participation</span></div>
+                    <div class="tags"><span class="tag">9-20 Mar</span><span class="tag">Seychelles</span><span class="tag">tri-service participation</span></div>
                     <div class="meta-row"><b>What</b>
                         <div>11th edition; Indian Army, Navy and Air Force participated together with the Seychelles Defence Forces.</div>
                     </div>
@@ -581,10 +624,10 @@
                 <article class="card" data-tags="army multinational" data-state="completed">
                     <div class="card-head">
                         <div>
-                            <div class="title">PRAGATI–2026</div>
+                            <div class="title">PRAGATI-2026</div>
                             <div class="service">Army-led • Multilateral regional</div>
                         </div><span class="tag multi">MULTILATERAL</span></div>
-                    <div class="tags"><span class="tag">20–30 May</span><span class="tag">Umroi, Meghalaya</span><span class="tag">13 countries</span></div>
+                    <div class="tags"><span class="tag">20-30 May</span><span class="tag">Umroi, Meghalaya</span><span class="tag">13 countries</span></div>
                     <div class="meta-row"><b>Participants</b>
                         <div>India + Bhutan, Cambodia, Indonesia, Laos, Malaysia, Maldives, Myanmar, Nepal, Philippines, Seychelles, Sri Lanka, Vietnam.</div>
                     </div>
@@ -600,10 +643,10 @@
                 <article class="card" data-tags="army multinational peacekeeping" data-state="completed">
                     <div class="card-head">
                         <div>
-                            <div class="title">Khaan Quest–23</div>
+                            <div class="title">Khaan Quest-23</div>
                             <div class="service">Army • Multilateral peacekeeping</div>
                         </div><span class="tag multi">MULTILATERAL</span></div>
-                    <div class="tags"><span class="tag">20 Jun–3 Jul</span><span class="tag">Ulaanbaatar, Mongolia</span><span class="tag">UN Chapter VII</span></div>
+                    <div class="tags"><span class="tag">20 Jun-3 Jul</span><span class="tag">Ulaanbaatar, Mongolia</span><span class="tag">UN Chapter VII</span></div>
                     <div class="meta-row"><b>Focus</b>
                         <div>Joint planning and peace-support tactical drills: checkpoints, cordon/search, patrolling, civilian evacuation, C-IED, combat first aid and CASEVAC.</div>
                     </div>
@@ -616,10 +659,10 @@
                 <article class="card" data-tags="army thailand bilateral" data-state="completed">
                     <div class="card-head">
                         <div>
-                            <div class="title">Maitree–XV</div>
-                            <div class="service">Army • India–Thailand</div>
+                            <div class="title">Maitree-XV</div>
+                            <div class="service">Army • India-Thailand</div>
                         </div><span class="tag bi">BILATERAL</span></div>
-                    <div class="tags"><span class="tag">18–31 Aug</span><span class="tag">Surat Thani, Thailand</span><span class="tag">85 + 85</span></div>
+                    <div class="tags"><span class="tag">18-31 Aug</span><span class="tag">Surat Thani, Thailand</span><span class="tag">85 + 85</span></div>
                     <div class="meta-row"><b>Focus</b>
                         <div>Company-level joint training in jungle and semi-urban terrain.</div>
                     </div>
@@ -632,8 +675,8 @@
                 <article class="card" data-tags="army usa bilateral" data-state="ongoing">
                     <div class="card-head">
                         <div>
-                            <div class="title">Yudh Abhyas–2026</div>
-                            <div class="service">Army • India–US</div>
+                            <div class="title">Yudh Abhyas-2026</div>
+                            <div class="service">Army • India-US</div>
                         </div><span class="tag bi">BILATERAL</span></div>
                     <div class="tags"><span class="tag">from 15 Sep</span><span class="tag">Auli + Mahajan</span><span class="tag">600 + 600</span><span class="tag">ON CUT-OFF</span></div>
                     <div class="meta-row"><b>Focus</b>
@@ -648,10 +691,10 @@
                 <article class="card" data-tags="army mongolia bilateral" data-state="ongoing">
                     <div class="card-head">
                         <div>
-                            <div class="title">Nomadic Elephant–18</div>
-                            <div class="service">Army • India–Mongolia</div>
+                            <div class="title">Nomadic Elephant-18</div>
+                            <div class="service">Army • India-Mongolia</div>
                         </div><span class="tag bi">BILATERAL</span></div>
-                    <div class="tags"><span class="tag">21 Sep–3 Oct</span><span class="tag">Pithoragarh</span><span class="tag">45 + 45</span><span class="tag">ON CUT-OFF</span></div>
+                    <div class="tags"><span class="tag">21 Sep-3 Oct</span><span class="tag">Pithoragarh</span><span class="tag">45 + 45</span><span class="tag">ON CUT-OFF</span></div>
                     <div class="meta-row"><b>Focus</b>
                         <div>Counter-insurgency in semi-urban and mountainous terrain; room intervention, heliborne operations, cyber security, drones and counter-drone systems.</div>
                     </div>
@@ -664,10 +707,10 @@
                 <article class="card" data-tags="iaf thailand bilateral" data-state="completed">
                     <div class="card-head">
                         <div>
-                            <div class="title">IAF–RTAF In-situ Exercise</div>
-                            <div class="service">IAF • India–Thailand bilateral</div>
+                            <div class="title">IAF-RTAF In-situ Exercise</div>
+                            <div class="service">IAF • India-Thailand bilateral</div>
                         </div><span class="tag bi">BILATERAL</span></div>
-                    <div class="tags"><span class="tag">9–12 Feb</span><span class="tag">Indian Ocean Region</span><span class="tag">Su-30MKI + Gripen</span></div>
+                    <div class="tags"><span class="tag">9-12 Feb</span><span class="tag">Indian Ocean Region</span><span class="tag">Su-30MKI + Gripen</span></div>
                     <div class="meta-row"><b>Focus</b>
                         <div>Air-combat training over the maritime domain, supported by IL-78 refuelling, IAF AWACS and Thai GCI.</div>
                     </div>
@@ -680,10 +723,10 @@
                 <article class="card" data-tags="iaf australia multinational" data-state="completed">
                     <div class="card-head">
                         <div>
-                            <div class="title">Pitch Black–2026</div>
+                            <div class="title">Pitch Black-2026</div>
                             <div class="service">IAF • Multinational air combat</div>
                         </div><span class="tag multi">MULTILATERAL</span></div>
-                    <div class="tags"><span class="tag">20 Jul–7 Aug</span><span class="tag">Darwin, Australia</span><span class="tag">LFE</span></div>
+                    <div class="tags"><span class="tag">20 Jul-7 Aug</span><span class="tag">Darwin, Australia</span><span class="tag">LFE</span></div>
                     <div class="meta-row"><b>Indian assets</b>
                         <div>Rafale fighters with C-17 and IL-78 support.</div>
                     </div>
@@ -696,8 +739,8 @@
                 <article class="card" data-tags="iaf malaysia bilateral australia multinational" data-state="completed">
                     <div class="card-head">
                         <div>
-                            <div class="title">Udara Shakti–2026</div>
-                            <div class="service">IAF • India–Malaysia bilateral</div>
+                            <div class="title">Udara Shakti-2026</div>
+                            <div class="service">IAF • India-Malaysia bilateral</div>
                         </div><span class="tag bi">BILATERAL</span></div>
                     <div class="tags"><span class="tag">Aug 2026</span><span class="tag">Subang, Malaysia</span><span class="tag">air combat</span></div>
                     <div class="meta-row"><b>Focus</b>
@@ -712,10 +755,10 @@
                 <article class="card" data-tags="iaf japan bilateral" data-state="completed">
                     <div class="card-head">
                         <div>
-                            <div class="title">Veer Guardian–2026</div>
-                            <div class="service">IAF • India–Japan air defence</div>
+                            <div class="title">Veer Guardian-2026</div>
+                            <div class="service">IAF • India-Japan air defence</div>
                         </div><span class="tag bi">BILATERAL</span></div>
-                    <div class="tags"><span class="tag">9–22 Sep</span><span class="tag">Jodhpur</span><span class="tag">Tejas + Su-30MKI + Rafale + F-2A</span></div>
+                    <div class="tags"><span class="tag">9-22 Sep</span><span class="tag">Jodhpur</span><span class="tag">Tejas + Su-30MKI + Rafale + F-2A</span></div>
                     <div class="meta-row"><b>Focus</b>
                         <div>Within-visual-range combat, coordinated multi-aircraft missions, mission planning, engineering, maintenance and aerospace safety.</div>
                     </div>
@@ -728,10 +771,10 @@
                 <article class="card" data-tags="iaf multinational ongoing" data-state="ongoing">
                     <div class="card-head">
                         <div>
-                            <div class="title">Tarang Shakti–2026</div>
+                            <div class="title">Tarang Shakti-2026</div>
                             <div class="service">IAF • Multinational air exercise</div>
                         </div><span class="tag multi">MULTILATERAL</span></div>
-                    <div class="tags"><span class="tag">26 Sep–12 Oct</span><span class="tag">Jodhpur + adjoining bases</span><span class="tag">ONGOING</span></div>
+                    <div class="tags"><span class="tag">26 Sep-12 Oct</span><span class="tag">Jodhpur + adjoining bases</span><span class="tag">ONGOING</span></div>
                     <div class="meta-row"><b>Participation</b>
                         <div>Public briefings identified seven Friendly Foreign Countries flying assets (Australia, Bangladesh, France, Germany, Sri Lanka, UAE, USA), with a wider observer community. Public counts vary by reporting date.</div>
                     </div>
@@ -748,10 +791,10 @@
                 <article class="card" data-tags="navy sri-lanka bilateral" data-state="completed">
                     <div class="card-head">
                         <div>
-                            <div class="title">SLINEX–26</div>
-                            <div class="service">Navy • India–Sri Lanka</div>
+                            <div class="title">SLINEX-26</div>
+                            <div class="service">Navy • India-Sri Lanka</div>
                         </div><span class="tag bi">BILATERAL</span></div>
-                    <div class="tags"><span class="tag">17–21 Sep</span><span class="tag">Visakhapatnam</span><span class="tag">ASW + VBSS</span></div>
+                    <div class="tags"><span class="tag">17-21 Sep</span><span class="tag">Visakhapatnam</span><span class="tag">ASW + VBSS</span></div>
                     <div class="meta-row"><b>Units</b>
                         <div>INS Kavaratti and INS Jyoti with SLNS Sindurala.</div>
                     </div>
@@ -764,8 +807,8 @@
                 <article class="card" data-tags="navy malaysia bilateral" data-state="completed">
                     <div class="card-head">
                         <div>
-                            <div class="title">Samudra Laksamana–4</div>
-                            <div class="service">Navy • India–Malaysia</div>
+                            <div class="title">Samudra Laksamana-4</div>
+                            <div class="service">Navy • India-Malaysia</div>
                         </div><span class="tag bi">BILATERAL</span></div>
                     <div class="tags"><span class="tag">Sep 2026</span><span class="tag">Lumut, Malaysia</span><span class="tag">harbour + sea</span></div>
                     <div class="meta-row"><b>Focus</b>
@@ -777,8 +820,8 @@
                 <article class="card" data-tags="navy france bilateral ongoing" data-state="ongoing">
                     <div class="card-head">
                         <div>
-                            <div class="title">Varuna–24th edition</div>
-                            <div class="service">Navy • India–France</div>
+                            <div class="title">Varuna-24th edition</div>
+                            <div class="service">Navy • India-France</div>
                         </div><span class="tag bi">BILATERAL</span></div>
                     <div class="tags"><span class="tag">from 22 Sep</span><span class="tag">Toulon, France</span><span class="tag">ONGOING</span></div>
                     <div class="meta-row"><b>Focus</b>
@@ -793,7 +836,7 @@
                 <article class="card" data-tags="navy multinational" data-state="completed">
                     <div class="card-head">
                         <div>
-                            <div class="title">IONS IMEX TTX–2026</div>
+                            <div class="title">IONS IMEX TTX-2026</div>
                             <div class="service">Navy • Multilateral table-top</div>
                         </div><span class="tag multi">MULTILATERAL</span></div>
                     <div class="tags"><span class="tag">27 Mar</span><span class="tag">Kochi</span><span class="tag">IOR security</span></div>
@@ -809,10 +852,10 @@
                 <article class="card" data-tags="navy multinational cmf" data-state="completed">
                     <div class="card-head">
                         <div>
-                            <div class="title">Operation Southern Readiness 26–2</div>
+                            <div class="title">Operation Southern Readiness 26-2</div>
                             <div class="service">Navy • CMF / CTF 154 multinational</div>
                         </div><span class="tag multi">MULTILATERAL</span></div>
-                    <div class="tags"><span class="tag">20–23 Jul</span><span class="tag">Kochi</span><span class="tag">276 personnel / 27 countries</span></div>
+                    <div class="tags"><span class="tag">20-23 Jul</span><span class="tag">Kochi</span><span class="tag">276 personnel / 27 countries</span></div>
                     <div class="meta-row"><b>Focus</b>
                         <div>Maritime law, MDA, information sharing, counter-narcotics, force protection, asymmetric threats and maritime uncrewed systems.</div>
                     </div>
@@ -825,7 +868,7 @@
                 <article class="card" data-tags="navy multinational asean" data-state="ongoing">
                     <div class="card-head">
                         <div>
-                            <div class="title">ADMM‑Plus Joint Cooperation Activity–2026</div>
+                            <div class="title">ADMM‑Plus Joint Cooperation Activity-2026</div>
                             <div class="service">Navy • ASEAN + Plus</div>
                         </div><span class="tag multi">MULTILATERAL</span></div>
                     <div class="tags"><span class="tag">from 20 Sep</span><span class="tag">Subic Bay, Philippines</span><span class="tag">ONGOING</span></div>
@@ -844,7 +887,7 @@
                             <div class="title">Sagar Kavach — Kerala & Mahe</div>
                             <div class="service">Coast Guard + Navy + civil agencies</div>
                         </div><span class="tag ind">NATIONAL</span></div>
-                    <div class="tags"><span class="tag">12–13 Mar</span><span class="tag">Kerala coast</span><span class="tag">coastal security</span></div>
+                    <div class="tags"><span class="tag">12-13 Mar</span><span class="tag">Kerala coast</span><span class="tag">coastal security</span></div>
                     <div class="meta-row"><b>Focus</b>
                         <div>Preparedness against asymmetric maritime threats; security of harbours and vital installations; layered surveillance and inter-agency coordination.</div>
                     </div>
@@ -857,7 +900,7 @@
                 <article class="card" data-tags="coast-guard quad multinational" data-state="ongoing">
                     <div class="card-head">
                         <div>
-                            <div class="title">QUAD‑at‑Sea Ship Observer Mission–2026</div>
+                            <div class="title">QUAD‑at‑Sea Ship Observer Mission-2026</div>
                             <div class="service">Indian Coast Guard • QUAD maritime interoperability</div>
                         </div><span class="tag multi">MULTILATERAL</span></div>
                     <div class="tags"><span class="tag">from 25 Sep</span><span class="tag">Chennai → Perth</span><span class="tag">ONGOING</span></div>
@@ -873,12 +916,12 @@
                 <article class="card" data-tags="joint army iaf civil domestic" data-state="completed">
                     <div class="card-head">
                         <div>
-                            <div class="title">Sanjha Shakti–2026</div>
+                            <div class="title">Sanjha Shakti-2026</div>
                             <div class="service">Army + 16 civilian agencies</div>
                         </div><span class="tag ind">WHOLE-OF-NATION</span></div>
-                    <div class="tags"><span class="tag">8–9 Jan</span><span class="tag">Khadki, Pune</span><span class="tag">security / emergency response</span></div>
+                    <div class="tags"><span class="tag">8-9 Jan</span><span class="tag">Khadki, Pune</span><span class="tag">security / emergency response</span></div>
                     <div class="meta-row"><b>Focus</b>
-                        <div>Military–civil fusion, rapid response and coordinated action in complex security and emergency scenarios.</div>
+                        <div>Military-civil fusion, rapid response and coordinated action in complex security and emergency scenarios.</div>
                     </div>
                     <div class="meta-row"><b>Participants</b>
                         <div>Indian Army, Maharashtra Police, Force One, fire services and other civilian agencies; more than 350 civilian participants were recorded.</div>
@@ -889,8 +932,8 @@
                 <article class="card" data-tags="joint army iaf civilian cbrn domestic" data-state="completed">
                     <div class="card-head">
                         <div>
-                            <div class="title">Sanyukt Kavach–2026</div>
-                            <div class="service">Army-led Military–Civil Fusion</div>
+                            <div class="title">Sanyukt Kavach-2026</div>
+                            <div class="service">Army-led Military-Civil Fusion</div>
                         </div><span class="tag ind">WHOLE-OF-NATION</span></div>
                     <div class="tags"><span class="tag">Mar 2026</span><span class="tag">Pune</span><span class="tag">CBRN preparedness</span></div>
                     <div class="meta-row"><b>Participants</b>
@@ -905,7 +948,7 @@
                 <article class="card" data-tags="army independent domestic" data-state="completed">
                     <div class="card-head">
                         <div>
-                            <div class="title">Agni Varsha–2026</div>
+                            <div class="title">Agni Varsha-2026</div>
                             <div class="service">Army • Southern Command</div>
                         </div><span class="tag ind">INDEPENDENT</span></div>
                     <div class="tags"><span class="tag">24 Feb</span><span class="tag">Pokhran, Jaisalmer</span><span class="tag">integrated fire + manoeuvre</span></div>
@@ -921,7 +964,7 @@
                 <article class="card" data-tags="army independent drone" data-state="completed">
                     <div class="card-head">
                         <div>
-                            <div class="title">Ashni Prahaar–2026</div>
+                            <div class="title">Ashni Prahaar-2026</div>
                             <div class="service">Army • Western Command / Kharga Corps</div>
                         </div><span class="tag ind">INDEPENDENT</span></div>
                     <div class="tags"><span class="tag">2026</span><span class="tag">Western Command</span><span class="tag">drone / ISR</span></div>
@@ -965,7 +1008,7 @@
 
             <h2>SSB / Interview lens</h2>
             <div class="callout">
-                <p><strong>What happened?</strong> India’s 2026 exercise portfolio combined combat-readiness drills, special-forces training, multinational air/naval exercises and military–civil preparedness.</p>
+                <p><strong>What happened?</strong> India’s 2026 exercise portfolio combined combat-readiness drills, special-forces training, multinational air/naval exercises and military-civil preparedness.</p>
                 <p><strong>Why it matters?</strong> Exercises convert defence relationships into rehearsed procedures: communication, command-and-control, logistics, interoperability, humanitarian response and shared TTPs.</p>
                 <p><strong>Competing viewpoints to understand:</strong> A large or frequent exercise can be read as confidence-building and interoperability-building; observers can also question whether participation produces meaningful operational integration
                     or mainly signalling. The evidence to test that distinction is the complexity of the drills, repeatability, common procedures, data-sharing, logistics, and whether training outputs are carried into doctrine and procurement.</p>
@@ -976,31 +1019,31 @@
             <div class="timeline">
                 <div class="tl">
                     <div class="month">JAN</div>
-                    <div class="tlbox"><strong>Sanjha Shakti</strong> — Military–civil fusion, Pune (8–9 Jan).</div>
+                    <div class="tlbox"><strong>Sanjha Shakti</strong> — Military-civil fusion, Pune (8-9 Jan).</div>
                 </div>
                 <div class="tl">
                     <div class="month">FEB</div>
-                    <div class="tlbox"><strong>Khanjar</strong> (4–17 Feb) • <strong>IAF–RTAF In-situ</strong> (9–12 Feb) • <strong>MILAN</strong> (15–25 Feb) • <strong>Agni Varsha</strong> (24 Feb) • <strong>Dharma Guardian</strong> (24 Feb–9 Mar) • <strong>Vajra Prahar</strong>                        (24 Feb–16 Mar) • <strong>Vayu Shakti</strong> (27 Feb).</div>
+                    <div class="tlbox"><strong>Khanjar</strong> (4-17 Feb) • <strong>IAF-RTAF In-situ</strong> (9-12 Feb) • <strong>MILAN</strong> (15-25 Feb) • <strong>Agni Varsha</strong> (24 Feb) • <strong>Dharma Guardian</strong> (24 Feb-9 Mar) • <strong>Vajra Prahar</strong>                        (24 Feb-16 Mar) • <strong>Vayu Shakti</strong> (27 Feb).</div>
                 </div>
                 <div class="tl">
                     <div class="month">MAR</div>
-                    <div class="tlbox"><strong>Sanyukt Kavach</strong> (Pune) • <strong>Lamitiye</strong> (9–20 Mar) • <strong>Sagar Kavach</strong> (12–13 Mar) • <strong>IONS IMEX TTX</strong> (27 Mar).</div>
+                    <div class="tlbox"><strong>Sanyukt Kavach</strong> (Pune) • <strong>Lamitiye</strong> (9-20 Mar) • <strong>Sagar Kavach</strong> (12-13 Mar) • <strong>IONS IMEX TTX</strong> (27 Mar).</div>
                 </div>
                 <div class="tl">
-                    <div class="month">APR–MAY</div>
-                    <div class="tlbox"><strong>Cyclone IV</strong> (9–17 Apr) • <strong>Dustlik</strong> (12–25 Apr) • <strong>CINBAX II</strong> (4–17 May) • <strong>PRAGATI</strong> (20–30 May).</div>
+                    <div class="month">APR-MAY</div>
+                    <div class="tlbox"><strong>Cyclone IV</strong> (9-17 Apr) • <strong>Dustlik</strong> (12-25 Apr) • <strong>CINBAX II</strong> (4-17 May) • <strong>PRAGATI</strong> (20-30 May).</div>
                 </div>
                 <div class="tl">
-                    <div class="month">JUN–JUL</div>
-                    <div class="tlbox"><strong>Khaan Quest</strong> (20 Jun–3 Jul) • <strong>Pitch Black</strong> (20 Jul–7 Aug) • <strong>Operation Southern Readiness</strong> (20–23 Jul).</div>
+                    <div class="month">JUN-JUL</div>
+                    <div class="tlbox"><strong>Khaan Quest</strong> (20 Jun-3 Jul) • <strong>Pitch Black</strong> (20 Jul-7 Aug) • <strong>Operation Southern Readiness</strong> (20-23 Jul).</div>
                 </div>
                 <div class="tl">
                     <div class="month">AUG</div>
-                    <div class="tlbox"><strong>Udara Shakti</strong> (Aug) • <strong>Maitree XV</strong> (18–31 Aug).</div>
+                    <div class="tlbox"><strong>Udara Shakti</strong> (Aug) • <strong>Maitree XV</strong> (18-31 Aug).</div>
                 </div>
                 <div class="tl">
                     <div class="month">SEP</div>
-                    <div class="tlbox"><strong>Samudra Laksamana</strong> (Sep) • <strong>Veer Guardian</strong> (9–22 Sep) • <strong>Yudh Abhyas</strong> (from 15 Sep) • <strong>SLINEX</strong> (17–21 Sep) • <strong>Nomadic Elephant</strong> (21 Sep–3 Oct) • <strong>ADMM-Plus JCA</strong>                        (from 20 Sep) • <strong>Varuna</strong> (from 22 Sep) • <strong>QUAD-at-Sea mission</strong> (from 25 Sep) • <strong>Tarang Shakti</strong> (from 26 Sep).</div>
+                    <div class="tlbox"><strong>Samudra Laksamana</strong> (Sep) • <strong>Veer Guardian</strong> (9-22 Sep) • <strong>Yudh Abhyas</strong> (from 15 Sep) • <strong>SLINEX</strong> (17-21 Sep) • <strong>Nomadic Elephant</strong> (21 Sep-3 Oct) • <strong>ADMM-Plus JCA</strong>                        (from 20 Sep) • <strong>Varuna</strong> (from 22 Sep) • <strong>QUAD-at-Sea mission</strong> (from 25 Sep) • <strong>Tarang Shakti</strong> (from 26 Sep).</div>
                 </div>
             </div>
 
