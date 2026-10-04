@@ -1620,7 +1620,7 @@
             zoomControl: true,
             minZoom: 1,
             maxZoom: 6,
-            worldCopyJump: true
+            worldCopyJump: false
         }).setView([17, 12], 2);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© OpenStreetMap contributors'
@@ -1681,6 +1681,46 @@
             return c.region || 'Unknown';
         }
 
+        function normalizeWorldFeature(feature) {
+            const collectLng = (coords, out = []) => {
+                if (!Array.isArray(coords)) return out;
+                if (typeof coords[0] === 'number' && typeof coords[1] === 'number') {
+                    out.push(coords[0]);
+                    return out;
+                }
+                coords.forEach(item => collectLng(item, out));
+                return out;
+            };
+
+            if (!feature || !feature.geometry || !feature.geometry.coordinates) return feature;
+            const lngs = collectLng(feature.geometry.coordinates);
+            if (!lngs.length) return feature;
+
+            const minLng = Math.min(...lngs);
+            const maxLng = Math.max(...lngs);
+            if (Math.abs(maxLng - minLng) <= 300) return feature;
+
+            const centerLng = lngs.reduce((sum, value) => sum + value, 0) / lngs.length;
+            const shouldShiftPositive = centerLng >= 0;
+
+            const rewrite = (coords) => {
+                if (!Array.isArray(coords)) return;
+                if (typeof coords[0] === 'number' && typeof coords[1] === 'number') {
+                    let lon = coords[0];
+                    if (shouldShiftPositive && lon < 0) lon += 360;
+                    if (!shouldShiftPositive && lon > 0) lon -= 360;
+                    if (lon > 180) lon -= 360;
+                    if (lon < -180) lon += 360;
+                    coords[0] = lon;
+                    return;
+                }
+                coords.forEach(rewrite);
+            };
+
+            rewrite(feature.geometry.coordinates);
+            return feature;
+        }
+
         function countryLabel(feature) {
             const id = String(feature.id).padStart(3, '0');
             const d = allCountries.find(c => String(c.ccn3 || '').padStart(3, '0') === id);
@@ -1713,7 +1753,7 @@
                 };
             }
             if (currentMode === 'population') {
-                const p = c?.population || 0;
+                const p = c ? (worldBank[c.cca3]?.population ?? c.population ?? 0) : 0;
                 let fill = p > 500000000 ? '#b95c5c' : p > 150000000 ? '#cc7f55' : p > 50000000 ? '#d2a960' : p > 10000000 ? '#75a8c5' : p > 1000000 ? '#5e819c' : '#3f5e72';
                 return {
                     weight: .65,
@@ -1789,9 +1829,10 @@
                 const countryPayload = await countriesRes.json();
                 allCountries = Array.isArray(countryPayload) ? countryPayload : Array.isArray(countryPayload?.data) ? countryPayload.data : [];
                 if (!allCountries.length) throw new Error('Country metadata source returned no records');
+                const validCountryCodes = new Set(allCountries.map(c => c.cca3).filter(Boolean));
                 const members = allCountries.filter(c => c.unMember || ['Holy See', 'Vatican City', 'Palestine', 'State of Palestine'].includes(c.name?.common));
                 allCountries = members.length > 180 ? members : allCountries;
-                const features = topojson.feature(topo, topo.objects.countries).features;
+                const features = topojson.feature(topo, topo.objects.countries).features.map(normalizeWorldFeature);
                 worldLayer = L.geoJSON(features, {
                     style: styleFor,
                     onEachFeature: bindCountryFeature
@@ -1802,18 +1843,28 @@
 
                 const wbIncome = await fetch('https://api.worldbank.org/v2/country/all?format=json&per_page=400&fields=id,iso3Code,name,region,incomeLevel').then(r => r.json());
                 (wbIncome[1] || []).forEach(x => {
-                    if (x.iso3Code) worldBank[x.iso3Code] = {
-                        income: x.incomeLevel?.value || 'Unknown'
-                    };
+                    const code = x.id || x.iso3Code;
+                    if (code && validCountryCodes.has(code)) {
+                        worldBank[code] = {
+                            income: x.incomeLevel?.value || 'Unknown'
+                        };
+                    }
                 });
                 const wbGDP = await fetch('https://api.worldbank.org/v2/country/all/indicator/NY.GDP.MKTP.CD?format=json&per_page=400&date=2025').then(r => r.json());
                 (wbGDP[1] || []).forEach(x => {
-                    if (x.countryiso3code) {
+                    if (x.countryiso3code && validCountryCodes.has(x.countryiso3code)) {
                         if (!worldBank[x.countryiso3code]) worldBank[x.countryiso3code] = {};
                         worldBank[x.countryiso3code] = { ...worldBank[x.countryiso3code], gdp: x.value };
                     }
                 });
-                document.getElementById('countryStatus').textContent = `${allCountries.length} country/economy profiles loaded. Income/GDP layers use World Bank data when a matching code is available.`;
+                const wbPop = await fetch('https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?format=json&per_page=400&date=2025').then(r => r.json());
+                (wbPop[1] || []).forEach(x => {
+                    if (x.countryiso3code && validCountryCodes.has(x.countryiso3code)) {
+                        if (!worldBank[x.countryiso3code]) worldBank[x.countryiso3code] = {};
+                        worldBank[x.countryiso3code] = { ...worldBank[x.countryiso3code], population: x.value };
+                    }
+                });
+                document.getElementById('countryStatus').textContent = `${allCountries.length} country/economy profiles loaded. Income/GDP/population layers use World Bank data when a matching code is available.`;
                 if (worldLayer) worldLayer.setStyle(styleFor);
             } catch (err) {
                 console.error(err);
@@ -1861,9 +1912,10 @@ function showCountry(c){
   const currencyNames=c.currencies?Object.entries(c.currencies).map(([k,v])=>`${k} — ${v.name}`).join(', '):'—';
   const langNames=c.languages?Object.values(c.languages).slice(0,4).join(', '):'—';
   const g=worldBank[c.cca3]||{};
+  const pop = g.population ?? c.population ?? 0;
   document.getElementById('detailTags').innerHTML=`<span class="pill">Capital: ${safe(c.capital?.[0])}</span><span class="pill">Currency: ${safe(currencyNames)}</span><span class="pill">Languages: ${safe(langNames)}</span>`;
   document.getElementById('detailMetrics').innerHTML=[
-    ['Population',fmtNum(c.population)],['Area',safe(c.area)?fmtNum(c.area)+' km²':'—'],['GDP 2025',fmtUSD(g.gdp)],['Neighbors',fmtNum(c.borders?.length||0)]
+    ['Population',fmtNum(pop)],['Area',safe(c.area)?fmtNum(c.area)+' km²':'—'],['GDP 2025',fmtUSD(g.gdp)],['Neighbors',fmtNum(c.borders?.length||0)]
   ].map(x=>`<div class="metric"><div class="v">${x[1]}</div><div class="k">${x[0]}</div></div>`).join('');
   const lens={
     'India':'Positioned between the Arabian Sea and Bay of Bengal, with the Himalayas to the north and access toward the Gulf, Southeast Asia and the Indian Ocean.',
