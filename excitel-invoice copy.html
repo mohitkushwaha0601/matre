@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tax Invoice - Excitel Broadband Pvt. Ltd.</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #e9e9e9; font-family: 'Roboto', Arial, sans-serif; color: #000; }
+  .page {
+    width: 952px; height: 1232px; margin: 20px auto; background: #fff;
+    position: relative; padding: 10px;
+  }
+  .frame { border: 1px solid #555; height: 865px; position: relative; }
+
+  .title {
+    position: absolute; top: 42px; left: 0; width: 942px; text-align: center;
+    font-size: 27px; text-decoration: underline; text-underline-offset: 4px; font-weight: 400;
+  }
+  .logo { position: absolute; top: 18px; right: 22px; display: flex; align-items: center; }
+  .logo span {
+    color: #6b3fa0; font-weight: 700; font-size: 30px; letter-spacing: 9px; margin-left: 14px;
+  }
+
+  .abs { position: absolute; font-size: 13px; line-height: 1.2; }
+  .company { top: 154px; left: 20px; font-size: 16px; font-weight: 700; }
+  .addr { top: 188px; left: 9px; width: 580px; }
+  .pan  { top: 229px; left: 20px; }
+  .gst  { top: 254px; left: 20px; }
+  .cin  { top: 279px; left: 20px; }
+
+  .inv-lbl { left: 634px; }
+  .inv-val { left: 780px; width: 130px; text-align: center; }
+
+  .cust-name { top: 322px; left: 20px; font-weight: 700; font-size: 12.5px; }
+  .cust-addr { top: 343px; left: 20px; }
+  .cust-city { top: 368px; left: 20px; }
+  .cust-state{ top: 391px; left: 20px; }
+  .cust-gst  { top: 413px; left: 20px; }
+
+  .pos { top: 492px; left: 20px; }
+
+  .tbl-wrap {
+    position: absolute; top: 569px; left: 8px; width: 924px;
+    border: 1px solid #555; padding: 1px;
+  }
+  table { border-collapse: collapse; width: 100%; table-layout: fixed; font-size: 17px; }
+  td, th { border: 1px solid #555; }
+  th {
+    background: #a51fb4; color: #fff; font-weight: 700; line-height: 1.3;
+    height: 74px; padding: 0 2px; border-color: #fff;
+  }
+  .row td { height: 55px; vertical-align: middle; padding: 0 3px; }
+  .r { text-align: right; }
+  .rate { vertical-align: top !important; text-align: right; font-size: 16px; line-height: 1.35; padding-top: 3px !important; }
+  .total td { background: #a51fb4; color: #fff; font-weight: 700; height: 26px; border-color: #fff; padding: 0 3px; }
+  .sum td { border: none; height: 27px; font-size: 17px; padding: 0 2px; }
+  .sum td.lbl { border-right: 1px solid #333; }
+  .sum.words td { height: 58px; line-height: 1.3; }
+
+  .footer { position: absolute; top: 920px; left: 0; width: 952px; text-align: center; font-size: 13px; line-height: 26px; }
+
+  /* Source PDF is US Letter (8.5in x 11in = 816 x 1056 CSS px); layout is 952 x 1232, so scale by 816/952. */
+  @page { size: 8.5in 11in; margin: 0; }
+  @media print {
+    html, body { width: 8.5in; height: 11in; overflow: hidden; background: #fff; }
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { margin: 0; transform: scale(0.857143); transform-origin: 0 0; break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="frame">
+    <div class="title">TAX INVOICE</div>
+
+    <div class="logo">
+      <svg width="58" height="72" viewBox="0 0 58 72">
+        <defs>
+          <clipPath id="c"><ellipse cx="29" cy="36" rx="28" ry="35"/></clipPath>
+        </defs>
+        <g clip-path="url(#c)" stroke="#2ec4b6" stroke-width="7">
+          <line x1="-30" y1="60" x2="40" y2="-10"/>
+          <line x1="-20" y1="75" x2="55" y2="0"/>
+          <line x1="-10" y1="90" x2="70" y2="10"/>
+          <line x1="0" y1="100" x2="80" y2="20"/>
+          <line x1="15" y1="105" x2="90" y2="30"/>
+        </g>
+        <g stroke="#fff" stroke-width="5" stroke-linecap="round" fill="none">
+          <path d="M40 22 H22 V50 H40"/>
+          <line x1="22" y1="36" x2="38" y2="36"/>
+        </g>
+      </svg>
+      <span>EXCITEL</span>
+    </div>
+
+    <div class="abs company">Excitel Broadband Pvt. Ltd.</div>
+    <div class="abs addr">7A, 3rd Floor, Kammanahalli Main Road, St. Thomas Town, near Pius X church, Bengaluru,<br>Bengaluru Urban, Karnataka, 560084</div>
+    <div class="abs pan">PAN No: AADCE9043K</div>
+    <div class="abs gst">GSTIN No: 29AADCE9043K1Z9</div>
+    <div class="abs cin">CIN: U63090DL2015PTC277612</div>
+
+    <div class="abs inv-lbl" style="top:196px;">Invoice No.:</div>
+    <div class="abs inv-val" style="top:188px;">28-<br>KAINV/1428721</div>
+    <div class="abs inv-lbl" style="top:226px;">Invoice Date:</div>
+    <div class="abs inv-val" style="top:226px;">23/09/2026</div>
+
+    <div class="abs cust-name">MOHIT KUMAR KUSHWAHA</div>
+    <div class="abs cust-addr">No 505/C ,1st floor, 18th main ,Sowparnika appartment , sector 3, Hsr layout Bangalore 560102</div>
+    <div class="abs cust-city">Bangalore-560102</div>
+    <div class="abs cust-state">Karnataka,</div>
+    <div class="abs cust-gst">GSTIN No:</div>
+
+    <div class="abs inv-lbl" style="top:320px;">UserID:</div>
+    <div class="abs" style="top:320px; left:808px; font-weight:700;">8000241898</div>
+    <div class="abs inv-lbl" style="top:342px;">Service Start Date:</div>
+    <div class="abs" style="top:342px; left:808px;">24/09/2026</div>
+
+    <div class="abs pos">Place of service: Karnataka</div>
+
+    <div class="tbl-wrap">
+      <table>
+        <colgroup>
+          <col style="width:88px"><col style="width:226px"><col style="width:72px"><col style="width:75px">
+          <col style="width:54px"><col style="width:73px"><col style="width:53px"><col style="width:74px">
+          <col style="width:48px"><col style="width:72px"><col style="width:76px">
+        </colgroup>
+        <tr>
+          <th>HSN/SAC<br>code</th>
+          <th>Description of Goods</th>
+          <th>Base<br>Price</th>
+          <th>Net<br>Taxable<br>Value</th>
+          <th>CGST<br>Rate</th>
+          <th>CGST<br>Amount</th>
+          <th>SGST<br>Rate</th>
+          <th>SGST<br>Amount</th>
+          <th>IGST<br>Rate</th>
+          <th>IGST<br>Amount</th>
+          <th>Total<br>Amount</th>
+        </tr>
+        <tr class="row">
+          <td class="r">998422</td>
+          <td style="line-height:1.3;">Excitel Fiber I 200<br>2236</td>
+          <td class="r">2638.48</td>
+          <td class="r">2236.00</td>
+          <td class="rate">9.00<br>%</td>
+          <td class="r">201.24</td>
+          <td class="rate">9.00<br>%</td>
+          <td class="r">201.24</td>
+          <td></td>
+          <td></td>
+          <td class="r">2638.48</td>
+        </tr>
+        <tr class="total">
+          <td class="r">TOTAL</td>
+          <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          <td class="r">2638.48</td>
+        </tr>
+      </table>
+      <table>
+        <colgroup><col style="width:386px"><col></colgroup>
+        <tr class="sum"><td class="lbl">Total Invoice value (in figure)</td><td class="r">2638.48</td></tr>
+        <tr class="sum"><td class="lbl">Discount Including GST</td><td class="r">0.00</td></tr>
+        <tr class="sum"><td class="lbl">Total Plan MRP</td><td class="r">2638.48</td></tr>
+        <tr class="sum words"><td class="lbl">Total Invoice value (in words)</td><td class="r">Rupees Two Thousand Six Hundred<br>Thirty Eight and Forty Eight Paise Only</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="footer">
+    Thank you for choosing Excitel!<br>
+    www.excitel.com | phone (011) 33-44-77-88
+  </div>
+
+</div>
+</body>
+</html>
