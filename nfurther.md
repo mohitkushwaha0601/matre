@@ -6,27 +6,27 @@ I cross-checked the framework against NCERT's modern-history themes, British Lib
 
 I've deliberately made these follow the **same architecture** as the Independence document: history → chronology → actors → strategic dimensions → competing perspectives → current situation → SSB analysis.
 
-### 1. India–China & LAC
+### 1. India-China & LAC
 
-> **Create a comprehensive, deeply researched learning document/PDF/HTML on India–China relations and the Line of Actual Control (LAC), from the historical origins of the boundary question to the present day.**
+> **Create a comprehensive, deeply researched learning document/PDF/HTML on India-China relations and the Line of Actual Control (LAC), from the historical origins of the boundary question to the present day.**
 >
 > Cover:
 >
-> * Ancient and historical India–China interactions
+> * Ancient and historical India-China interactions
 > * Tibet and its strategic importance
 > * British-era frontier policy and the McMahon Line
 > * Aksai Chin and the western sector
 > * Simla Convention and competing boundary interpretations
 > * Chinese Communist Revolution and Tibet's incorporation into the PRC
-> * 1950s India–China relations and Panchsheel
+> * 1950s India-China relations and Panchsheel
 > * "Hindi Chini Bhai Bhai"
 > * 1959 Tibet crisis and Dalai Lama's arrival in India
 > * Forward Policy
 > * 1962 Sino-Indian War: causes, military geography, campaigns, logistics, command decisions, mistakes and consequences
 > * Eastern, middle and western sectors
 > * Nathu La and Cho La
-> * 1986–87 Sumdorong Chu crisis
-> * 1988 Rajiv Gandhi–Deng Xiaoping breakthrough
+> * 1986-87 Sumdorong Chu crisis
+> * 1988 Rajiv Gandhi-Deng Xiaoping breakthrough
 > * 1993, 1996, 2005, 2012 and subsequent border agreements
 > * Doklam 2017
 > * Galwan 2020
@@ -39,8 +39,8 @@ I've deliberately made these follow the **same architecture** as the Independenc
 > * Indian Army's mountain warfare capabilities
 > * Tibet's strategic geography
 > * Water security and Himalayan rivers
-> * China–Pakistan strategic cooperation and CPEC
-> * India–China economic interdependence
+> * China-Pakistan strategic cooperation and CPEC
+> * India-China economic interdependence
 > * Trade imbalance, technology and supply chains
 > * Quad, Indo-Pacific and China's regional strategy
 > * Competing Indian and Chinese interpretations of the boundary dispute
@@ -63,15 +63,15 @@ I've deliberately made these follow the **same architecture** as the Independenc
 
 ---
 
-### 2. India–Pakistan & Terrorism
+### 2. India-Pakistan & Terrorism
 
-> **Create a comprehensive, deeply researched learning document/PDF/HTML on India–Pakistan relations, the Kashmir dispute and terrorism, from Partition in 1947 to the present.**
+> **Create a comprehensive, deeply researched learning document/PDF/HTML on India-Pakistan relations, the Kashmir dispute and terrorism, from Partition in 1947 to the present.**
 >
 > Cover:
 >
 > * Partition and Radcliffe boundary
 > * Accession of Jammu & Kashmir
-> * 1947–48 war
+> * 1947-48 war
 > * UN involvement and ceasefire
 > * Article 370 and constitutional history
 > * 1965 war
@@ -95,7 +95,7 @@ I've deliberately made these follow the **same architecture** as the Independenc
 > * LoC dynamics
 > * Hybrid warfare, drones, infiltration and information warfare
 > * Pakistan Army's role in national security policy
-> * China–Pakistan strategic relationship
+> * China-Pakistan strategic relationship
 > * CPEC
 > * Water disputes and Indus Waters Treaty
 > * Trade and diplomatic relations
@@ -120,7 +120,7 @@ I've deliberately made these follow the **same architecture** as the Independenc
 > Cover:
 >
 > * State of India's armed forces at independence
-> * 1947–48 Kashmir war
+> * 1947-48 Kashmir war
 > * 1962 lessons
 > * 1965 and 1971
 > * 1974 nuclear test
@@ -227,19 +227,19 @@ I've deliberately made these follow the **same architecture** as the Independenc
 
 ---
 
-### 5. India–Russia
+### 5. India-Russia
 
-> **Create a comprehensive, deeply researched learning document/PDF/HTML on India–Russia relations from the Soviet period to the present.**
+> **Create a comprehensive, deeply researched learning document/PDF/HTML on India-Russia relations from the Soviet period to the present.**
 >
 > Cover:
 >
-> * India–Soviet relations after independence
+> * India-Soviet relations after independence
 > * 1955 Khrushchev-Bulganin visit
 > * Non-Aligned Movement
 > * 1962 Sino-Indian War
 > * Soviet diplomacy
 > * 1971 Treaty of Peace, Friendship and Cooperation
-> * 1971 India–Pakistan war
+> * 1971 India-Pakistan war
 > * Soviet defence cooperation
 > * MiG, Sukhoi, T-series tanks and artillery
 > * INS Vikramaditya
@@ -248,22 +248,22 @@ I've deliberately made these follow the **same architecture** as the Independenc
 > * BrahMos
 > * space cooperation
 > * post-1991 Russia
-> * India–Russia strategic partnership
+> * India-Russia strategic partnership
 > * Ukraine war
 > * India's position on Russia's invasion of Ukraine
 > * Western sanctions
 > * defence supplies and spare parts
 > * Russian oil imports
 > * rupee-ruble/payment mechanisms
-> * China–Russia relationship and its implications for India
-> * Russia–Pakistan relationship
+> * China-Russia relationship and its implications for India
+> * Russia-Pakistan relationship
 > * Central Asia
 > * Arctic
 > * energy security
 > * nuclear energy
 > * multipolarity
 > * BRICS and SCO
-> * India–Russia–China triangle
+> * India-Russia-China triangle
 > * current challenges
 >
 > Include competing interpretations of India's strategic autonomy and the risks of excessive dependence on any one defence supplier.
@@ -272,15 +272,15 @@ I've deliberately made these follow the **same architecture** as the Independenc
 
 ---
 
-### 6. India–USA
+### 6. India-USA
 
-> **Create a comprehensive, deeply researched learning document/PDF/HTML on India–United States relations from independence to the present.**
+> **Create a comprehensive, deeply researched learning document/PDF/HTML on India-United States relations from independence to the present.**
 >
 > Cover:
 >
 > * Cold War divergence
 > * India's Non-Alignment
-> * US–Pakistan relationship
+> * US-Pakistan relationship
 > * 1962 and US assistance
 > * 1971 and the USS Enterprise episode
 > * India's 1974 nuclear test
@@ -414,9 +414,9 @@ I've deliberately made these follow the **same architecture** as the Independenc
 
 ---
 
-### 9. Israel–Palestine + Iran + Middle East
+### 9. Israel-Palestine + Iran + Middle East
 
-> **Create a comprehensive, deeply researched learning document/PDF/HTML on the geopolitics of Israel–Palestine, Iran and the wider Middle East.**
+> **Create a comprehensive, deeply researched learning document/PDF/HTML on the geopolitics of Israel-Palestine, Iran and the wider Middle East.**
 >
 > Begin with:
 >
@@ -440,8 +440,8 @@ I've deliberately made these follow the **same architecture** as the Independenc
 > * Lebanon
 > * Syria
 > * Iran's Islamic Revolution
-> * Iran–Israel rivalry
-> * Saudi Arabia–Iran competition
+> * Iran-Israel rivalry
+> * Saudi Arabia-Iran competition
 > * Gulf monarchies
 > * Yemen/Houthis
 > * Red Sea
@@ -473,9 +473,9 @@ I've deliberately made these follow the **same architecture** as the Independenc
 
 ---
 
-### 10. China–Taiwan–US Rivalry
+### 10. China-Taiwan-US Rivalry
 
-> **Create a comprehensive, deeply researched learning document/PDF/HTML on the China–Taiwan–United States strategic triangle and the possibility of conflict in the Taiwan Strait.**
+> **Create a comprehensive, deeply researched learning document/PDF/HTML on the China-Taiwan-United States strategic triangle and the possibility of conflict in the Taiwan Strait.**
 >
 > Cover:
 >

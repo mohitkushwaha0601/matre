@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Asian Games 2026 &amp; India — A Deep Knowledge Handbook</title>
+<meta name="description" content="A compact knowledge handbook on the 20th Asian Games (Aichi-Nagoya 2026): the origins of the Asian Games movement, the Olympic Council of Asia, the 2026 edition, India's participation history, sporting ecosystem and spirit, with SSB-oriented practice material.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ---------- tokens: Japanese washi paper + hinomaru red + indigo, with Indian tricolour accents ---------- */
+:root{
+  --ink:#14192B;
+  --ink-soft:#4E5770;
+  --paper:#F4F1EC;
+  --surface:#FFFFFF;
+  --surface-2:#EAE5DC;
+  --rule:#D3CCC0;
+  --rule-strong:#A39A8B;
+  --red:#B0122E;
+  --blue:#1F3F7A;
+  --gold:#9A6E0C;
+  --green:#1F6B3A;
+  --hero-bg:#121A33;
+  --hero-ink:#F4F1EC;
+  --hero-dim:#A3ADC6;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ink:#ECE8E1;
+    --ink-soft:#B0B6C6;
+    --paper:#0D1220;
+    --surface:#151C2E;
+    --surface-2:#1D263B;
+    --rule:#2E3850;
+    --rule-strong:#4A5674;
+    --red:#F07A86;
+    --blue:#86A8E8;
+    --gold:#E0B656;
+    --green:#62C58A;
+    --hero-bg:#080C17;
+    --hero-ink:#ECE8E1;
+    --hero-dim:#8C95AD;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#ECE8E1;
+  --ink-soft:#B0B6C6;
+  --paper:#0D1220;
+  --surface:#151C2E;
+  --surface-2:#1D263B;
+  --rule:#2E3850;
+  --rule-strong:#4A5674;
+  --red:#F07A86;
+  --blue:#86A8E8;
+  --gold:#E0B656;
+  --green:#62C58A;
+  --hero-bg:#080C17;
+  --hero-ink:#ECE8E1;
+  --hero-dim:#8C95AD;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1.5rem);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ---------- hero ---------- */
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
+.flagstrip{display:flex;height:12px}
+.flagstrip span{flex:1}
+/* Japan (host), India (tricolour + chakra navy), OCA sun gold */
+.f1{background:#BC002D}
+.f2{background:#FFFFFF}
+.f3{background:#FF9933}
+.f4{background:#FFFFFF}
+.f5{background:#138808}
+.f6{background:#000080}
+.f7{background:#E8B92F}
+.f8{background:radial-gradient(circle,#BC002D 0 28%,#FFFFFF 30%)}
+.hero-inner{max-width:1180px;margin:0 auto;padding:3.2rem 1.5rem 0}
+.kicker{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--hero-dim);margin:0 0 .8rem}
+.motto{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:clamp(1.7rem,5.2vw,2.9rem);line-height:1.2;margin:0;letter-spacing:.005em;max-width:26ch}
+.motto-en{margin:.55rem 0 0;color:var(--hero-dim);font-size:clamp(.95rem,2.4vw,1.1rem);font-style:italic;max-width:62ch}
+.hero h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.5rem,4.3vw,2.35rem);line-height:1.2;margin:2.6rem 0 .5rem;border-top:1px solid rgba(255,255,255,.22);padding-top:1.6rem;max-width:30ch}
+.hero-sub{margin:0;color:var(--hero-dim);max-width:68ch}
+.stamp{margin-top:1.6rem;font-size:.86rem;color:var(--hero-dim);display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+.stamp b{color:var(--hero-ink);font-weight:600}
+
+/* ---------- layout ---------- */
+.shell{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem;display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media (min-width:1000px){
+  .shell{grid-template-columns:255px minmax(0,1fr);gap:3.5rem;padding-top:2.8rem}
+}
+nav.toc{font-size:.9rem}
+@media (min-width:1000px){
+  .toc-mobile{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2rem);align-self:start;max-height:calc(100vh - 5rem);overflow-y:auto}
+}
+nav.toc h2{font-family:"Zilla Slab",Georgia,serif;font-size:.92rem;font-weight:600;margin:0 0 .7rem;padding-bottom:.45rem;border-bottom:2px solid var(--rule-strong)}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc}
+nav.toc li{border-bottom:1px solid var(--rule)}
+nav.toc li:not(.part){counter-increment:toc}
+nav.toc a{display:flex;gap:.6rem;padding:.4rem 0;color:var(--ink-soft);text-decoration:none}
+nav.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--rule-strong);font-variant-numeric:tabular-nums;flex:none}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--red)}
+nav.toc .part{border:0;margin:1.1rem 0 .3rem;font-family:"Zilla Slab",Georgia,serif;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--rule-strong)}
+nav.toc .part::before{content:none}
+.toc-mobile{display:block}
+@media (min-width:1000px){.toc-mobile summary{display:none}}
+.toc-mobile summary{cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:600;padding:.7rem .9rem;background:var(--surface);border:1px solid var(--rule);margin-bottom:1rem}
+@media (max-width:999px){
+  .toc-mobile[open] nav.toc{padding:0 .9rem 1rem}
+  .toc-mobile:not([open]) nav.toc{display:none}
+}
+
+/* ---------- sections ---------- */
+main{min-width:0}
+section{margin:0 0 3.6rem;scroll-margin-top:1.5rem}
+section > h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.45rem,3.6vw,1.95rem);line-height:1.2;margin:0 0 .3rem}
+.part-head{margin:4rem 0 2.2rem;padding:1.1rem 0 .9rem;border-top:4px double var(--rule-strong);border-bottom:1px solid var(--rule)}
+.part-head p{margin:0;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.part-head h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.3rem,3.2vw,1.7rem);margin:.3rem 0 0;color:var(--ink)}
+.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.16rem;margin:2rem 0 .5rem;line-height:1.3}
+h4{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1rem;margin:1.4rem 0 .35rem;color:var(--ink)}
+p{margin:0 0 .95rem;max-width:74ch}
+ul,ol{margin:0 0 1rem;padding-left:1.25rem;max-width:74ch}
+li{margin-bottom:.35rem}
+li::marker{color:var(--rule-strong)}
+strong{font-weight:600}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+/* ---------- components ---------- */
+.lede{font-size:1.06rem;color:var(--ink-soft);max-width:70ch}
+
+.tablewrap{overflow-x:auto;margin:0 0 1.3rem;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.92rem}
+caption{text-align:left;padding:.7rem .85rem .1rem;font-weight:600;color:var(--ink-soft);font-size:.9rem}
+th,td{text-align:left;padding:.55rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{background:var(--surface-2);font-weight:600;border-bottom:2px solid var(--rule-strong);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.num,th.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+.edge{background:var(--surface);border-left:4px solid var(--red);padding:.9rem 1.1rem;margin:1.4rem 0;max-width:74ch}
+.edge p:last-child,.edge ul:last-child,.edge ol:last-child{margin-bottom:0}
+.edge .edge-h{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);display:block;margin-bottom:.25rem;font-size:.95rem}
+.edge.gold{border-left-color:var(--gold)}
+.edge.gold .edge-h{color:var(--gold)}
+.edge.blue{border-left-color:var(--blue)}
+.edge.blue .edge-h{color:var(--blue)}
+.edge.green{border-left-color:var(--green)}
+.edge.green .edge-h{color:var(--green)}
+
+.note{background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;border:1px solid var(--rule);font-size:.95rem}
+.note p:last-child,.note ul:last-child,.note ol:last-child{margin-bottom:0}
+.note h4{margin-top:0}
+
+.panel{background:var(--surface);border:1px solid var(--rule);padding:1rem 1.1rem}
+.panel h4{margin-top:0}
+.panel ul,.panel ol{margin-bottom:0}
+.panel.blue-top{border-top:3px solid var(--blue)}
+.panel.red-top{border-top:3px solid var(--red)}
+.panel.gold-top{border-top:3px solid var(--gold)}
+.panel.green-top{border-top:3px solid var(--green)}
+
+.rungs{max-width:74ch;margin:.3rem 0 0;display:grid;grid-template-columns:9.5rem 1fr;gap:0 1rem}
+.rungs dt{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;color:var(--red);padding-top:.2rem}
+.rungs dd{margin:0 0 .5rem;font-size:.93rem}
+@media (max-width:560px){
+  .rungs{grid-template-columns:1fr;gap:0}
+  .rungs dt{padding-top:.4rem}
+}
+
+.timeline{list-style:none;padding:0;margin:1rem 0 1.4rem;max-width:74ch}
+.timeline li{display:grid;grid-template-columns:8.2rem 1fr;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--rule);margin:0}
+.timeline li:last-child{border-bottom:0}
+.timeline .yr{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);font-variant-numeric:tabular-nums}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:.1rem}}
+
+.qbank{counter-reset:q;list-style:none;padding:0;max-width:74ch}
+.qbank li{counter-increment:q;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.qbank li::before{content:counter(q,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.qbank li:last-child{border-bottom:0}
+
+.dbank{counter-reset:d;list-style:none;padding:0;max-width:74ch}
+.dbank li{counter-increment:d;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.dbank li::before{content:counter(d,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.dbank li:last-child{border-bottom:0}
+
+.grid{display:grid;gap:1rem}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
+
+.card{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--red);padding:1rem 1.1rem}
+.card h4{margin:0 0 .45rem;font-size:1rem}
+.card .name{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.2rem}
+.card .role{font-size:.9rem;color:var(--ink-soft)}
+.card .since{font-size:.78rem;color:var(--green);font-weight:600;margin-top:.45rem}
+.card p{font-size:.93rem;margin:.45rem 0 0}
+
+.term{max-width:74ch;margin:0 0 1.2rem}
+.term dt{font-weight:600;margin-top:.8rem}
+.term dd{margin:.15rem 0 0;color:var(--ink-soft)}
+
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:.1rem .45rem;border:1px solid var(--rule-strong);color:var(--ink-soft);margin-right:.35rem;vertical-align:middle}
+.tag.fact{border-color:var(--green);color:var(--green)}
+.tag.interp{border-color:var(--gold);color:var(--gold)}
+.tag.disputed{border-color:var(--red);color:var(--red)}
+.tag.verify{border-color:var(--blue);color:var(--blue)}
+.spaced{margin-top:.6rem}
+
+footer{border-top:3px double var(--rule-strong);margin:2rem auto 0;padding:1.4rem 1.5rem 3rem;color:var(--ink-soft);font-size:.9rem;max-width:1180px}
+footer a{color:var(--blue)}
+
+/* ---------- home button: fixed, links back to the collection homepage ---------- */
+.home-btn{position:fixed;top:16px;left:16px;z-index:60;display:inline-flex;align-items:center;gap:.4rem;background:#14202B;color:#F1F2EC;border:1px solid rgba(241,242,236,.25);padding:.45rem .85rem;border-radius:999px;font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.82rem;font-weight:600;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.3);transition:background .15s ease,transform .15s ease}
+.home-btn:hover,.home-btn:focus-visible{background:#BF2F26;transform:translateY(-1px)}
+.home-btn svg{width:14px;height:14px;flex:none}
+@media print{.home-btn{display:none}}
+
+@media print{
+  .hero{background:none;color:#000;padding-bottom:1rem}
+  .hero-sub,.stamp,.motto-en{color:#333}
+  .flagstrip,.toc-mobile{display:none}
+  .shell{display:block;padding:0}
+  section{page-break-inside:auto;margin-bottom:1.8rem}
+  h2,h3{page-break-after:avoid}
+  .panel,.edge,.note,.tablewrap,figure{page-break-inside:avoid}
+  .part-head{page-break-before:always}
+  body{font-size:10.5pt;background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+
+<a class="home-btn" href="../index.html" aria-label="Back to Handbooks homepage" title="Back to Handbooks homepage">
+  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
+  <span>Home</span>
+</a>
+
+<header class="hero">
+  <div class="flagstrip" aria-hidden="true">
+    <span class="f1"></span><span class="f2"></span><span class="f8"></span><span class="f7"></span><span class="f3"></span><span class="f4"></span><span class="f6"></span><span class="f5"></span>
+  </div>
+  <div class="hero-inner">
+    <p class="motto">Ever Onward</p>
+    <p class="motto-en">The motto of the Asian Games, suggested by Jawaharlal Nehru for the first Games in New Delhi, 1951.</p>
+    <h1>Asian Games 2026 (Aichi-Nagoya) &amp; India: Origins, Participation and Spirit</h1>
+    <p class="hero-sub">A two-to-three-hour handbook for SSB, UPSC and general-knowledge preparation: where the Asian Games came from, how the Olympic Council of Asia runs them, what made the 20th edition in Japan distinctive, how India has performed from 1951 to Hangzhou's "sau paar" and beyond, and what the Games say about sport, soft power and national character.</p>
+    <p class="stamp">
+      <span>Edition <b>20th Asian Games</b></span>
+      <span>Host <b>Aichi &amp; Nagoya, Japan</b></span>
+      <span>Dates <b>19 Sep - 4 Oct 2026</b></span>
+      <span>India at Hangzhou 2022 <b>107 medals · 4th</b></span>
+      <span>Motto <b>Ever Onward</b></span>
+    </p>
+  </div>
+</header>
+
+<div class="shell">
+
+<details class="toc-mobile" open>
+  <summary>Contents</summary>
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li class="part">How to use this</li>
+      <li><a href="#howto">Using this handbook</a></li>
+
+      <li class="part">Part I · Origins</li>
+      <li><a href="#origins">Origins of the Asian Games</a></li>
+      <li><a href="#oca">The Olympic Council of Asia</a></li>
+      <li><a href="#editions">Editions at a glance</a></li>
+      <li><a href="#evolution">Programme, politics &amp; evolution</a></li>
+
+      <li class="part">Part II · Aichi-Nagoya 2026</li>
+      <li><a href="#host">The host and the bid</a></li>
+      <li><a href="#programme">Sports, venues &amp; model</a></li>
+      <li><a href="#storylines">Storylines &amp; Para Games</a></li>
+
+      <li class="part">Part III · India and the Games</li>
+      <li><a href="#india-history">India's journey, 1951-2018</a></li>
+      <li><a href="#icons">Indian Asian Games icons</a></li>
+      <li><a href="#hangzhou">Hangzhou: "Is baar sau paar"</a></li>
+      <li><a href="#ecosystem">India's sports ecosystem</a></li>
+      <li><a href="#india-2026">India at Aichi-Nagoya 2026</a></li>
+      <li><a href="#spirit">The spirit: sport &amp; character</a></li>
+      <li><a href="#diplomacy">Sport, soft power &amp; hosting</a></li>
+
+      <li class="part">Knowledge toolkit</li>
+      <li><a href="#perspectives">Perspectives &amp; controversies</a></li>
+      <li><a href="#scenarios">Scenarios &amp; India's options</a></li>
+      <li><a href="#qbank">Practice bank: questions</a></li>
+      <li><a href="#debates">Debate motions</a></li>
+      <li><a href="#chronology">Master chronology</a></li>
+      <li><a href="#glossary">Glossary</a></li>
+      <li><a href="#revision">Rapid revision sheet</a></li>
+    </ol>
+  </nav>
+</details>
+
+<main>
+
+<section id="howto">
+  <h2>Using this handbook</h2><hr class="sec-rule">
+  <p class="lede">This is a compact reference on the Asian Games in general, the 20th edition held in Aichi Prefecture and Nagoya, Japan (19 September - 4 October 2026), and India's long relationship with Asia's largest multi-sport event. Part I covers origins briefly; Parts II and III carry the weight; the toolkit turns it into interview material.</p>
+  <p>Sport questions at an SSB interview are rarely about trivia. The interviewing officer wants to see whether you follow national events, whether you can connect a medal table to policy (funding, talent identification, the armed forces' role), and whether you can talk about sportsmanship and pressure with some personal conviction. Learn the anchor numbers, then practise saying <em>why</em> they matter.</p>
+  <div class="edge blue">
+    <span class="edge-h">A note on 2026 figures</span>
+    <p>This handbook was compiled as the 2026 Games closed. Historic numbers are well established; anything about the 2026 programme, venues, India's contingent and final results is marked <span class="tag verify">Re-verify</span> and should be checked against the Olympic Council of Asia (OCA), the Indian Olympic Association (IOA) and Sports Authority of India (SAI) releases before you quote it. Saying "I would want to verify the exact count, but roughly…" is a perfectly good interview answer.</p>
+  </div>
+  <p><span class="tag fact">Established</span> settled record · <span class="tag interp">Interpretation</span> analytical judgement · <span class="tag disputed">Disputed</span> contested claim · <span class="tag verify">Re-verify</span> check before quoting.</p>
+</section>
+
+<div class="part-head"><p>Part I · Origins</p><h2>Where the Asian Games came from</h2></div>
+
+<section id="origins">
+  <h2>Origins of the Asian Games</h2><hr class="sec-rule">
+  <p class="lede">The Asian Games grew out of two regional experiments and one Indian idea: that newly independent Asia should have its own festival of sport, separate from European-dominated competition.</p>
+  <ul class="timeline">
+    <li><span class="yr">1913-1934</span><span><strong>Far Eastern Championship Games</strong> (first in Manila) among the Philippines, China and Japan; collapsed in 1934 over Japan's insistence on admitting its puppet state Manchukuo.</span></li>
+    <li><span class="yr">1934</span><span><strong>Western Asiatic Games</strong> in New Delhi — India, Afghanistan, Ceylon and Palestine — driven by Indian sports administrator <strong>Guru Dutt Sondhi</strong>. A second edition planned for Tel Aviv never took place.</span></li>
+    <li><span class="yr">1948</span><span>At the London Olympics, Sondhi proposed an Asian Games to Asian team leaders; the idea won support from the Philippines, Burma, Ceylon, China, Korea and others.</span></li>
+    <li><span class="yr">13 Feb 1949</span><span>The <strong>Asian Games Federation</strong> was formally founded in New Delhi.</span></li>
+    <li><span class="yr">4-11 Mar 1951</span><span><strong>First Asian Games, New Delhi</strong> (postponed from 1950) at the National Stadium, now the Major Dhyan Chand National Stadium. Opened by President Rajendra Prasad; 11 nations, about 489 athletes, 6 sports.</span></li>
+  </ul>
+  <p>Japan topped the first table with 24 golds; India finished second with 51 medals (15 gold), still its best-ever rank. The motto "Ever Onward", suggested by Jawaharlal Nehru, captured the mood of a decolonising continent.</p>
+  <div class="edge">
+    <span class="edge-h">Interview edge</span>
+    <p>If asked "What is India's link to the Asian Games?", don't stop at "India hosted it twice." The stronger answer: an Indian proposed it, the governing federation was founded in Delhi, India hosted the first edition, and Nehru gave it its motto. India was a founder, not just a participant.</p>
+  </div>
+</section>
+
+<section id="oca">
+  <h2>The Olympic Council of Asia</h2><hr class="sec-rule">
+  <p>The Asian Games Federation ran the Games until 1981-82, when it was replaced by the <strong>Olympic Council of Asia (OCA)</strong>, founded at a meeting in New Delhi in November 1981 and headquartered in <strong>Kuwait City</strong>. The OCA is recognised by the International Olympic Committee as Asia's continental association and has <strong>45 member National Olympic Committees</strong>.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>OCA at a glance</caption>
+      <tbody>
+        <tr><th scope="row">Founded</th><td>1981-82 (succeeded the Asian Games Federation of 1949)</td></tr>
+        <tr><th scope="row">HQ</th><td>Kuwait City, Kuwait</td></tr>
+        <tr><th scope="row">Members</th><td>45 NOCs in five zones: East, South, Southeast, Central and West Asia</td></tr>
+        <tr><th scope="row">South Asia zone</th><td>Afghanistan, Bangladesh, Bhutan, India, Maldives, Nepal, Pakistan, Sri Lanka</td></tr>
+        <tr><th scope="row">President</th><td>Sheikh Talal Fahad Al-Ahmad Al-Sabah (Kuwait), elected 2024, after India's Raja Randhir Singh served as acting president 2021-24 <span class="tag verify">Re-verify</span></td></tr>
+        <tr><th scope="row">Games run</th><td>Asian Games, Asian Winter Games, Asian Indoor &amp; Martial Arts Games, Asian Beach Games, Asian Youth Games</td></tr>
+        <tr><th scope="row">Symbol</th><td>A bright red sun with interlocking rings beneath — the sun rising over Asia</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The <strong>Indian Olympic Association (IOA)</strong> is India's NOC and sends the contingent; the Union Ministry of Youth Affairs &amp; Sports, through SAI, funds most preparation and clears the final list. That split — IOA selects and enters, the government funds and approves — explains many of India's selection debates.</p>
+  <p>The Asian Para Games are run separately by the <strong>Asian Paralympic Committee</strong>, usually in the same host city a few weeks after the main Games.</p>
+</section>
+
+<section id="editions">
+  <h2>Editions at a glance</h2><hr class="sec-rule">
+  <p>The Games are held every four years, in the middle of the Olympic cycle. Japan topped the medal table at every edition up to 1978; <strong>China has topped every edition since 1982</strong>.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>All editions, 1951-2034</caption>
+      <thead><tr><th class="num">No.</th><th class="num">Year</th><th>Host</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td class="num">1951</td><td>New Delhi, India</td><td>Founding edition, 11 nations</td></tr>
+        <tr><td class="num">2</td><td class="num">1954</td><td>Manila, Philippines</td><td></td></tr>
+        <tr><td class="num">3</td><td class="num">1958</td><td>Tokyo, Japan</td><td>Milkha Singh's double gold; first torch relay</td></tr>
+        <tr><td class="num">4</td><td class="num">1962</td><td>Jakarta, Indonesia</td><td>Israel and Taiwan excluded; India's football gold</td></tr>
+        <tr><td class="num">5</td><td class="num">1966</td><td>Bangkok, Thailand</td><td>India's first hockey gold</td></tr>
+        <tr><td class="num">6</td><td class="num">1970</td><td>Bangkok, Thailand</td><td>Took over after Seoul withdrew</td></tr>
+        <tr><td class="num">7</td><td class="num">1974</td><td>Tehran, Iran</td><td>China's debut; Israel's last Games</td></tr>
+        <tr><td class="num">8</td><td class="num">1978</td><td>Bangkok, Thailand</td><td>Took over after Islamabad withdrew</td></tr>
+        <tr><td class="num">9</td><td class="num">1982</td><td>New Delhi, India</td><td>"Appu" mascot; colour TV in India; China tops table</td></tr>
+        <tr><td class="num">10</td><td class="num">1986</td><td>Seoul, South Korea</td><td>P.T. Usha's four golds</td></tr>
+        <tr><td class="num">11</td><td class="num">1990</td><td>Beijing, China</td><td>Kabaddi debut</td></tr>
+        <tr><td class="num">12</td><td class="num">1994</td><td>Hiroshima, Japan</td><td>Central Asian republics debut</td></tr>
+        <tr><td class="num">13</td><td class="num">1998</td><td>Bangkok, Thailand</td><td></td></tr>
+        <tr><td class="num">14</td><td class="num">2002</td><td>Busan, South Korea</td><td>North Korea participates in the South</td></tr>
+        <tr><td class="num">15</td><td class="num">2006</td><td>Doha, Qatar</td><td>First Games in West Asia/Gulf</td></tr>
+        <tr><td class="num">16</td><td class="num">2010</td><td>Guangzhou, China</td><td>Cricket debut</td></tr>
+        <tr><td class="num">17</td><td class="num">2014</td><td>Incheon, South Korea</td><td></td></tr>
+        <tr><td class="num">18</td><td class="num">2018</td><td>Jakarta-Palembang, Indonesia</td><td>First dual-city host</td></tr>
+        <tr><td class="num">19</td><td class="num">2022*</td><td>Hangzhou, China</td><td>*Held Sep-Oct 2023 (COVID postponement); esports as medal sport</td></tr>
+        <tr><td class="num">20</td><td class="num">2026</td><td>Aichi-Nagoya, Japan</td><td>Japan's third hosting</td></tr>
+        <tr><td class="num">21</td><td class="num">2030</td><td>Doha, Qatar</td><td>Awarded 2020</td></tr>
+        <tr><td class="num">22</td><td class="num">2034</td><td>Riyadh, Saudi Arabia</td><td>Awarded 2020</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">
+    <h4>Memory hooks</h4>
+    <ul>
+      <li><strong>Bangkok</strong> hosted four times (1966, 1970, 1978, 1998) — twice as a rescue host.</li>
+      <li><strong>Japan</strong>'s 2026 edition is its third (1958, 1994, 2026); <strong>India</strong> has hosted twice (1951, 1982).</li>
+      <li>Doha 2030 and Riyadh 2034 were awarded together in December 2020 — a sign of the Gulf's sports-hosting push.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="evolution">
+  <h2>Programme, politics &amp; evolution</h2><hr class="sec-rule">
+  <p>The Asian Games have always carried a wider and more regional programme than the Olympics. Alongside Olympic sports, they include disciplines with deep Asian roots — kabaddi, sepaktakraw, wushu, kurash, jujitsu, soft tennis, dragon boat — and, more recently, cricket and esports. The 1951 Games had 6 sports; Hangzhou had 40 sports and 481 events, more than the Olympics.</p>
+  <div class="grid two">
+    <div class="panel green-top">
+      <h4>Programme milestones</h4>
+      <ul>
+        <li><strong>1990</strong> — kabaddi debuts; India wins every men's gold until Iran breaks the run in 2018.</li>
+        <li><strong>2010</strong> — cricket debuts; India sends no teams in 2010 or 2014.</li>
+        <li><strong>2018</strong> — esports as a demonstration event.</li>
+        <li><strong>2022</strong> — esports awarded medals; India wins both cricket golds on debut.</li>
+      </ul>
+    </div>
+    <div class="panel red-top">
+      <h4>Politics at the Games</h4>
+      <ul>
+        <li><strong>1962</strong> — Indonesia refused visas to Israel and Taiwan; the IOC suspended Indonesia.</li>
+        <li><strong>1974</strong> — PRC admitted; Taiwan left the Asian Games movement, returning in 1990 as "Chinese Taipei".</li>
+        <li><strong>1976-81</strong> — Israel expelled; it now competes in European events.</li>
+        <li><strong>2002-18</strong> — joint Korean marches and a unified women's basketball team in 2018.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="edge gold">
+    <span class="edge-h">Analytical point</span>
+    <p><span class="tag interp">Interpretation</span> The Asian Games are a mirror of Asian geopolitics: decolonisation in 1951, Cold War recognition battles in the 1960s-70s, China's rise from 1982, and today's Gulf hosting push. A good interview answer links one sporting fact to one strategic trend.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part II · Aichi-Nagoya 2026</p><h2>The 20th Asian Games in Japan</h2></div>
+
+<section id="host">
+  <h2>The host and the bid</h2><hr class="sec-rule">
+  <p class="lede">The 20th Asian Games were held from <strong>19 September to 4 October 2026</strong>, jointly hosted by <strong>Aichi Prefecture</strong> and its capital, <strong>Nagoya</strong>, Japan's fourth-largest city and the heart of its automotive and manufacturing belt (Toyota's home region).</p>
+  <ul class="timeline">
+    <li><span class="yr">Sep 2016</span><span>OCA General Assembly in Da Nang, Vietnam, awards the 2026 Games to Aichi-Nagoya, the only bidder.</span></li>
+    <li><span class="yr">2020-23</span><span>COVID-19 pushes Hangzhou 2022 to 2023, compressing the gap before 2026 to three years.</span></li>
+    <li><span class="yr">2023-25</span><span>Organisers revise the cost plan, including reported reliance on existing venues and alternatives to a purpose-built athletes' village <span class="tag verify">Re-verify</span>.</span></li>
+    <li><span class="yr">19 Sep 2026</span><span>Opening ceremony; the main stadium is the redeveloped Mizuho athletics stadium in Nagoya <span class="tag verify">Re-verify</span>.</span></li>
+    <li><span class="yr">4 Oct 2026</span><span>Closing ceremony; the OCA flag passes to Doha for 2030.</span></li>
+  </ul>
+  <p>This was Japan's third Asian Games, after Tokyo 1958 and Hiroshima 1994, and its first since hosting the Tokyo 2020 Olympics (held 2021). That sequencing matters: Japan arrived with venue experience, high public sensitivity to mega-event costs after Tokyo 2020's overruns, and a reputation for organisational discipline.</p>
+  <div class="edge blue">
+    <span class="edge-h">Why Aichi?</span>
+    <p><span class="tag interp">Interpretation</span> Aichi had lost the 1988 Olympic bid to Seoul and hosted Expo 2005. The Asian Games offered a regional showcase, infrastructure renewal and a chance to brand central Japan internationally — the same motivations that drove Delhi in 1982 and Guangzhou in 2010.</p>
+  </div>
+</section>
+
+<section id="programme">
+  <h2>Sports, venues &amp; the hosting model</h2><hr class="sec-rule">
+  <p>The OCA approved a programme of about <strong>41 sports</strong> and roughly 460 events <span class="tag verify">Re-verify</span>, mixing Olympic disciplines with Asian-specific ones. For India, the most relevant inclusions were <strong>cricket</strong> (T20 format, men and women), <strong>kabaddi</strong>, <strong>hockey</strong>, <strong>esports</strong>, <strong>wushu</strong>, <strong>squash</strong> and <strong>sepaktakraw</strong>.</p>
+  <div class="grid three">
+    <div class="panel blue-top">
+      <h4>Venue model</h4>
+      <p>Heavy use of existing arenas across Aichi, with some events in neighbouring prefectures; a lean approach shaped by post-Tokyo 2020 cost scrutiny <span class="tag verify">Re-verify</span>.</p>
+    </div>
+    <div class="panel gold-top">
+      <h4>Athlete housing</h4>
+      <p>Organisers reportedly opted against a single new athletes' village, considering hotels and moored cruise ships instead <span class="tag verify">Re-verify</span>.</p>
+    </div>
+    <div class="panel green-top">
+      <h4>Olympic linkage</h4>
+      <p>Some events served as Asian qualifiers or ranking events for the Los Angeles 2028 Olympics, where cricket and squash also feature <span class="tag verify">Re-verify</span>.</p>
+    </div>
+  </div>
+  <div class="tablewrap">
+    <table>
+      <caption>Sports where India traditionally targets medals</caption>
+      <thead><tr><th>Sport</th><th>Why it matters for India</th></tr></thead>
+      <tbody>
+        <tr><td>Athletics</td><td>India's largest medal source; javelin, steeplechase, relays, throws</td></tr>
+        <tr><td>Shooting</td><td>Consistently high gold count; strong talent pipeline</td></tr>
+        <tr><td>Archery (compound)</td><td>Non-Olympic discipline where India is a world leader</td></tr>
+        <tr><td>Hockey</td><td>Historic flagship; Asian Games gold has traditionally offered an Olympic pathway</td></tr>
+        <tr><td>Kabaddi &amp; cricket</td><td>Domestic dominance; high public attention</td></tr>
+        <tr><td>Boxing, wrestling, weightlifting</td><td>Medal-dense combat and strength sports</td></tr>
+        <tr><td>Badminton, squash, tennis</td><td>Strong individual and doubles prospects</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="storylines">
+  <h2>Storylines &amp; the Asian Para Games</h2><hr class="sec-rule">
+  <p>Three big themes framed Aichi-Nagoya 2026, regardless of individual results:</p>
+  <ol>
+    <li><strong>China-Japan-Korea at the top.</strong> China's lead in the medal table has been unbroken since 1982; Japan as host aimed to narrow the gap, as hosts usually do. India's realistic target is the next tier: consolidating fourth place or staying close to it.</li>
+    <li><strong>The cost question.</strong> After Tokyo 2020's overruns and public opposition, Japan tried to show a mega-event could be run lean. That debate now shapes Doha 2030, Riyadh 2034 and India's own 2036 Olympic ambitions.</li>
+    <li><strong>Asia's sporting map widening.</strong> Gulf states are emerging as hosts, Central Asian nations (Uzbekistan, Kazakhstan) are rising powers in combat sports, and the OCA has explored closer ties with Oceania <span class="tag verify">Re-verify</span>.</li>
+  </ol>
+  <div class="note">
+    <h4>Asian Para Games 2026</h4>
+    <p>The 5th Asian Para Games were scheduled in Aichi-Nagoya in October 2026, after the main Games <span class="tag verify">Re-verify dates</span>. India's para-sport has risen fast: 111 medals at Hangzhou 2022 Asian Para Games (29 gold), then 29 medals at the Paris 2024 Paralympics. Mention para-athletes whenever you discuss India's sporting progress — it is the most striking growth story of the decade.</p>
+  </div>
+</section>
+<div class="part-head"><p>Part III · India and the Games</p><h2>Participation, performance and spirit</h2></div>
+
+<section id="india-history">
+  <h2>India's journey, 1951-2018</h2><hr class="sec-rule">
+  <p class="lede">India has competed at every Asian Games. Its story has three phases: early strength as a founder, a long plateau from the late 1980s, and a sharp rise since 2010 driven by funding, science and a wider talent base.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>India at selected editions <span class="tag verify">Re-verify against OCA records</span></caption>
+      <thead><tr><th class="num">Year</th><th>Host</th><th class="num">Gold</th><th class="num">Silver</th><th class="num">Bronze</th><th class="num">Total</th><th class="num">Rank</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1951</td><td>New Delhi</td><td class="num">15</td><td class="num">16</td><td class="num">20</td><td class="num">51</td><td class="num">2</td></tr>
+        <tr><td class="num">1962</td><td>Jakarta</td><td class="num">10</td><td class="num">13</td><td class="num">10</td><td class="num">33</td><td class="num">3</td></tr>
+        <tr><td class="num">1982</td><td>New Delhi</td><td class="num">13</td><td class="num">19</td><td class="num">25</td><td class="num">57</td><td class="num">5</td></tr>
+        <tr><td class="num">1986</td><td>Seoul</td><td class="num">5</td><td class="num">9</td><td class="num">23</td><td class="num">37</td><td class="num">5</td></tr>
+        <tr><td class="num">1990</td><td>Beijing</td><td class="num">1</td><td class="num">8</td><td class="num">14</td><td class="num">23</td><td class="num">11</td></tr>
+        <tr><td class="num">2002</td><td>Busan</td><td class="num">11</td><td class="num">12</td><td class="num">13</td><td class="num">36</td><td class="num">7</td></tr>
+        <tr><td class="num">2010</td><td>Guangzhou</td><td class="num">14</td><td class="num">17</td><td class="num">34</td><td class="num">65</td><td class="num">6</td></tr>
+        <tr><td class="num">2014</td><td>Incheon</td><td class="num">11</td><td class="num">10</td><td class="num">36</td><td class="num">57</td><td class="num">8</td></tr>
+        <tr><td class="num">2018</td><td>Jakarta-Palembang</td><td class="num">16</td><td class="num">23</td><td class="num">31</td><td class="num">70</td><td class="num">8</td></tr>
+        <tr><td class="num">2022</td><td>Hangzhou</td><td class="num">28</td><td class="num">38</td><td class="num">41</td><td class="num">107</td><td class="num">4</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The low point was <strong>Beijing 1990</strong> — a single gold, in kabaddi. Recovery came slowly through shooting, boxing and wrestling in the 2000s, and then a step change in 2018 and 2022, when athletics, shooting and archery combined with team sports to push India past 100 medals.</p>
+  <div class="edge">
+    <span class="edge-h">Interview edge</span>
+    <p>Asked "Is India a sporting power?", avoid both triumphalism and cynicism. A balanced line: "India has moved from eighth to fourth in Asia in one cycle and crossed 100 medals, but China won roughly seven times as many golds at Hangzhou. We are a rising second-tier power with depth in a few sports, not yet broad-based."</p>
+  </div>
+</section>
+
+<section id="icons">
+  <h2>Indian Asian Games icons</h2><hr class="sec-rule">
+  <p>Learn three or four of these well enough to tell a short story about each — what they won, where, and what it shows.</p>
+  <div class="grid three">
+    <div class="card">
+      <div class="name">Milkha Singh</div>
+      <div class="role">Athletics · 200 m, 400 m</div>
+      <div class="since">Gold: 1958 Tokyo (×2), 1962 Jakarta (×2)</div>
+      <p>Partition refugee turned Army athlete; the "Flying Sikh" became independent India's first track hero.</p>
+    </div>
+    <div class="card">
+      <div class="name">P.T. Usha</div>
+      <div class="role">Athletics · sprints &amp; hurdles</div>
+      <div class="since">1986 Seoul: 4 gold, 1 silver</div>
+      <p>The "Payyoli Express"; Asia's dominant female sprinter of the 1980s and, since 2022, IOA president.</p>
+    </div>
+    <div class="card">
+      <div class="name">M.C. Mary Kom</div>
+      <div class="role">Boxing · women's flyweight</div>
+      <div class="since">Gold: 2014 Incheon</div>
+      <p>India's first female boxer to win Asian Games gold, achieved as a mother of three and five-time world champion.</p>
+    </div>
+    <div class="card">
+      <div class="name">Neeraj Chopra</div>
+      <div class="role">Athletics · javelin · Indian Army</div>
+      <div class="since">Gold: 2018 Jakarta, 2022 Hangzhou</div>
+      <p>Olympic champion (Tokyo 2020) and Paris 2024 silver medallist; the face of India's athletics revival.</p>
+    </div>
+    <div class="card">
+      <div class="name">Satwik-Chirag</div>
+      <div class="role">Badminton · men's doubles</div>
+      <div class="since">Gold: 2022 Hangzhou</div>
+      <p>India's first-ever Asian Games badminton gold, in any event.</p>
+    </div>
+    <div class="card">
+      <div class="name">Jyothi Surekha Vennam</div>
+      <div class="role">Archery · compound</div>
+      <div class="since">2022 Hangzhou: 3 gold</div>
+      <p>Swept individual, women's team and mixed team golds; symbol of India's compound archery strength.</p>
+    </div>
+  </div>
+  <p class="spaced">Team icons matter as much: <strong>men's hockey</strong> (gold 1966, 1998, 2014, 2022), <strong>men's kabaddi</strong> (gold every edition 1990-2014 and 2022) and the <strong>1951 and 1962 football teams</strong>, whose golds remain India's high-water mark in that sport.</p>
+</section>
+
+<section id="hangzhou">
+  <h2>Hangzhou: "Is baar sau paar"</h2><hr class="sec-rule">
+  <p>India travelled to Hangzhou (23 September - 8 October 2023) with the slogan <em>"Is baar sau paar"</em> — "this time, past a hundred". It finished with <strong>107 medals (28 gold, 38 silver, 41 bronze)</strong> and <strong>fourth place</strong>, its best tally ever and its best rank since 1962. The medal table was led by China (201 gold, 383 total), Japan and South Korea.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Where India's Hangzhou medals came from <span class="tag verify">Re-verify sport-wise counts</span></caption>
+      <thead><tr><th>Sport</th><th class="num">Medals (gold)</th><th>Highlights</th></tr></thead>
+      <tbody>
+        <tr><td>Athletics</td><td class="num">29 (6)</td><td>Neeraj Chopra javelin gold with Kishore Jena silver; Avinash Sable steeplechase; Tajinderpal Singh Toor shot put; Parul Chaudhary 5000 m; Annu Rani javelin; men's 4×400 m relay</td></tr>
+        <tr><td>Shooting</td><td class="num">22 (7)</td><td>Most golds of any Indian sport; strong team results</td></tr>
+        <tr><td>Archery</td><td class="num">9 (5)</td><td>Compound sweep; Jyothi Surekha Vennam and Ojas Deotale</td></tr>
+        <tr><td>Squash</td><td class="num">5 (2)</td><td>Men's team gold over Pakistan; mixed doubles gold</td></tr>
+        <tr><td>Team sports</td><td class="num">—</td><td>Gold in men's hockey, men's and women's cricket, men's and women's kabaddi</td></tr>
+        <tr><td>Others</td><td class="num">—</td><td>Equestrian dressage team gold (first equestrian gold since 1982); tennis mixed doubles gold (Bopanna-Bhosale); badminton men's doubles gold</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="grid two">
+    <div class="panel green-top">
+      <h4>What went right</h4>
+      <ul>
+        <li>Long-term athlete funding (TOPS) and foreign coaching</li>
+        <li>Depth in athletics beyond one star</li>
+        <li>Non-Olympic strengths (compound archery, kabaddi, cricket) added golds</li>
+      </ul>
+    </div>
+    <div class="panel red-top">
+      <h4>What the numbers hide</h4>
+      <ul>
+        <li>No wrestling or boxing gold, in sports India usually counts on</li>
+        <li>Thin presence in swimming and gymnastics, which carry many medals</li>
+        <li>Several golds came in events not on the Olympic programme</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="ecosystem">
+  <h2>India's sports ecosystem</h2><hr class="sec-rule">
+  <p>India's rise in the medal table reflects deliberate policy. Know the main building blocks and one criticism of each.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Key institutions and schemes</caption>
+      <thead><tr><th>Element</th><th>Year</th><th>Role</th></tr></thead>
+      <tbody>
+        <tr><td>Sports Authority of India (SAI)</td><td class="num">1984</td><td>Set up after the 1982 Asian Games to manage the legacy venues; now runs national centres of excellence and coaching</td></tr>
+        <tr><td>Army Sports Institute &amp; Mission Olympic Wing</td><td class="num">2001</td><td>Armed forces' elite-sport programme in Pune; produced Neeraj Chopra, Avinash Sable and many others</td></tr>
+        <tr><td>National Sports Development Code</td><td class="num">2011</td><td>Governance norms for federations: tenure limits, elections, age caps</td></tr>
+        <tr><td>Target Olympic Podium Scheme (TOPS)</td><td class="num">2014</td><td>Individual funding for elite athletes: foreign coaching, equipment, allowances</td></tr>
+        <tr><td>Khelo India</td><td class="num">2017-18</td><td>Grassroots and youth games, talent identification, accredited academies and athlete scholarships</td></tr>
+        <tr><td>Fit India Movement</td><td class="num">2019</td><td>Mass-fitness campaign</td></tr>
+        <tr><td>National Sports Policy (Khelo Bharat Niti)</td><td class="num">2025</td><td>New national sports policy replacing the 2001 policy <span class="tag verify">Re-verify</span></td></tr>
+        <tr><td>National Sports Governance Act</td><td class="num">2025</td><td>Statutory framework for federations, a regulatory board and dispute tribunal <span class="tag verify">Re-verify</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Private and non-profit actors (Olympic Gold Quest, JSW Inspire Institute of Sport, Reliance Foundation, GoSports Foundation) now fill gaps in sports science, nutrition and coaching.</p>
+  <div class="note">
+    <h4>Persistent weaknesses</h4>
+    <ul>
+      <li><strong>Governance:</strong> federation disputes and court cases, such as the 2023 wrestlers' protest and the suspension of the Wrestling Federation of India.</li>
+      <li><strong>Doping:</strong> India has ranked among the countries with the most adverse findings in WADA testing reports <span class="tag verify">Re-verify year</span>.</li>
+      <li><strong>Pipeline:</strong> school sport and coaching remain uneven across states; a few states (Haryana, Punjab, Kerala, Manipur, Odisha) contribute far more than their share of athletes.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="india-2026">
+  <h2>India at Aichi-Nagoya 2026</h2><hr class="sec-rule">
+  <p class="lede">India went to Japan as defending fourth-place finisher, with a target of matching or beating Hangzhou's 107 medals and 28 golds. Judge India's 2026 performance against that benchmark, not against China.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Benchmark and results tracker</caption>
+      <thead><tr><th>Measure</th><th>Hangzhou 2022 (benchmark)</th><th>Aichi-Nagoya 2026</th></tr></thead>
+      <tbody>
+        <tr><td>Total medals</td><td class="num">107</td><td><span class="tag verify">Re-verify</span> official OCA table</td></tr>
+        <tr><td>Gold medals</td><td class="num">28</td><td><span class="tag verify">Re-verify</span></td></tr>
+        <tr><td>Medal-table rank</td><td class="num">4th</td><td><span class="tag verify">Re-verify</span></td></tr>
+        <tr><td>Top medal sport</td><td>Athletics (29)</td><td><span class="tag verify">Re-verify</span></td></tr>
+        <tr><td>Contingent size</td><td>~650 athletes</td><td><span class="tag verify">Re-verify</span> IOA/SAI list</td></tr>
+        <tr><td>Flag-bearers</td><td>Harmanpreet Singh &amp; Lovlina Borgohain</td><td><span class="tag verify">Re-verify</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <h3>How to analyse the result, whatever it was</h3>
+  <ul>
+    <li><strong>Olympic vs non-Olympic golds:</strong> how many came in events that will feature at LA 2028?</li>
+    <li><strong>Breadth:</strong> how many sports produced medals, and were there first-ever medals in new disciplines?</li>
+    <li><strong>Women's share:</strong> women have delivered a growing proportion of India's medals at recent Games.</li>
+    <li><strong>Team sports:</strong> did hockey retain its title and its Olympic pathway? Did cricket and kabaddi defend their golds?</li>
+    <li><strong>Services contribution:</strong> how many medallists came from the Army, Navy and Air Force?</li>
+  </ul>
+  <div class="edge gold">
+    <span class="edge-h">Interview edge</span>
+    <p>Before your interview, write down India's final 2026 tally, rank, two individual stories and one disappointment. Officers often ask, "Which Asian Games performance inspired you most?" A specific name and a specific moment beat a general answer every time.</p>
+  </div>
+</section>
+
+<section id="spirit">
+  <h2>The spirit: sport &amp; character</h2><hr class="sec-rule">
+  <p>The "spirit" of the Games is best shown through moments, not slogans. These are useful because they link sport to officer-like qualities.</p>
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>Composure under pressure</h4>
+      <p>At Hangzhou, Neeraj Chopra's first javelin throw went unmeasured because of a technical glitch. He waited, threw again and won gold. Hurdler Jyothi Yarraji protested calmly after a disputed false-start ruling and was later awarded silver.</p>
+    </div>
+    <div class="panel green-top">
+      <h4>Respect for the rival</h4>
+      <p>Neeraj Chopra and Pakistan's Arshad Nadeem shared the podium at Jakarta 2018 and have spoken of each other warmly ever since. Sport can model respect even when political relations are cold.</p>
+    </div>
+    <div class="panel gold-top">
+      <h4>Rising from modest roots</h4>
+      <p>Many medallists come from farming families and small towns: Parul Chaudhary (Meerut), Annu Rani (a village near Meerut), Avinash Sable (Beed, Maharashtra). Their stories show what access to coaching and funding can unlock.</p>
+    </div>
+    <div class="panel red-top">
+      <h4>The uniform behind the medal</h4>
+      <p>The armed forces have long been India's quiet sports academy — from Milkha Singh to Neeraj Chopra and Avinash Sable. The Army's Mission Olympic Wing gives athletes a career, discipline and long-term support.</p>
+    </div>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">SSB link</span>
+    <p>Map sport to OLQs without forcing it: <em>determination</em> (years of training for one event), <em>courage</em> (competing hurt), <em>cooperation</em> (relays, team sports), <em>self-confidence</em> (handling a bad call), <em>sense of responsibility</em> (representing the country). Then add your own example from a game you played.</p>
+  </div>
+</section>
+
+<section id="diplomacy">
+  <h2>Sport, soft power &amp; hosting</h2><hr class="sec-rule">
+  <p>The Asian Games are also a stage for diplomacy. Three themes are relevant to India.</p>
+  <h4>1. Sport and bilateral friction</h4>
+  <p><span class="tag fact">Established</span> Before Hangzhou 2023, three women wushu athletes from Arunachal Pradesh did not receive accreditation to enter China. India lodged a strong protest and the then sports minister cancelled his visit. China's position on Arunachal Pradesh was the underlying issue. India-Pakistan finals (hockey, squash, cricket) draw huge audiences and political attention.</p>
+  <h4>2. Hosting as nation-branding</h4>
+  <p>Delhi 1982 brought flyovers, stadiums, the Asian Games Village and colour television to India, and led to the creation of SAI. The 2010 Commonwealth Games in Delhi showed the opposite risk: delays and corruption allegations. India now aims at bigger events: Ahmedabad was chosen to host the <strong>2030 Commonwealth Games</strong>, and the IOA has submitted a letter of intent for the <strong>2036 Olympics</strong> <span class="tag verify">Re-verify status</span>. India has not hosted the Asian Games since 1982.</p>
+  <h4>3. Soft power</h4>
+  <p><span class="tag interp">Interpretation</span> Medals feed national pride, attract investment into sport and support India's image as a confident, youthful nation. Critics argue that hosting money is better spent on grassroots facilities. Both views are legitimate; the strongest answer weighs legacy use against cost.</p>
+</section>
+<!-- ============ KNOWLEDGE TOOLKIT ============ -->
+<div class="part-head"><p>Knowledge toolkit</p><h2>Analysis, practice and revision</h2></div>
+
+<section id="perspectives">
+  <h2>Perspectives, controversies &amp; lesser-known facts</h2><hr class="sec-rule">
+  <div class="grid two">
+    <div class="panel green-top">
+      <h4>The optimistic reading</h4>
+      <p><span class="tag interp">Interpretation</span> India's rise from 70 to 107 medals in one cycle shows that sustained funding, sports science and athlete-centred schemes work. A broader middle class, Khelo India and the services' programmes have widened the talent base. The trend line points upward.</p>
+    </div>
+    <div class="panel red-top">
+      <h4>The sceptical reading</h4>
+      <p><span class="tag interp">Interpretation</span> Asian Games medals overstate Olympic strength because several Indian golds come in non-Olympic events. China's lead is enormous, governance disputes recur, and per-capita performance remains modest for a country of 1.4 billion people.</p>
+    </div>
+  </div>
+  <h3>Recurring controversies</h3>
+  <ul>
+    <li><strong>Selection:</strong> disputes over trials, exemptions and the government's "top-eight in Asia" rule for team sports. <span class="tag disputed">Disputed</span></li>
+    <li><strong>Judging:</strong> officiating rows in boxing, athletics and combat sports recur at most editions.</li>
+    <li><strong>Cost of hosting:</strong> whether mega-events justify public spending, debated in Japan, Indonesia and India alike. <span class="tag disputed">Disputed</span></li>
+    <li><strong>Politics:</strong> visa and accreditation denials, from Jakarta 1962 to Hangzhou 2023.</li>
+  </ul>
+  <div class="note">
+    <h4>Lesser-known facts</h4>
+    <ul>
+      <li>The 1951 Games were delayed from 1950 because preparations were not ready.</li>
+      <li>India's best-ever rank (2nd) came at the first Games.</li>
+      <li>India's only gold at Beijing 1990 came in kabaddi, the sport's debut year.</li>
+      <li>SAI exists largely because Delhi needed to manage its 1982 Asian Games venues.</li>
+      <li>The Asian Games often have more events than the Summer Olympics.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="scenarios">
+  <h2>Scenarios &amp; India's options</h2><hr class="sec-rule">
+  <p>Three plausible pathways for India's Asian Games performance toward Doha 2030, presented without preference:</p>
+  <div class="grid three">
+    <div class="panel blue-top">
+      <h4>Consolidation</h4>
+      <p>India holds roughly fourth place and 100+ medals, adding depth in athletics, shooting and archery but making little headway in swimming or gymnastics.</p>
+    </div>
+    <div class="panel green-top">
+      <h4>Breakthrough</h4>
+      <p>Khelo India graduates mature, new governance laws reduce federation disputes, and India challenges South Korea or Japan for a top-three finish.</p>
+    </div>
+    <div class="panel red-top">
+      <h4>Plateau</h4>
+      <p>Governance rows, doping cases or funding fatigue after LA 2028 slow progress; India's tally slips back toward the 70-90 range.</p>
+    </div>
+  </div>
+  <h3>Policy options and trade-offs</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Option</th><th>For</th><th>Against</th></tr></thead>
+      <tbody>
+        <tr><td>Concentrate funds on medal-dense Olympic sports (swimming, gymnastics, athletics)</td><td>Highest Olympic return over time</td><td>Slow results; neglects sports where India already wins</td></tr>
+        <tr><td>Bid to host a future Asian Games</td><td>Infrastructure, momentum toward 2036</td><td>Cost; 2010 CWG reputational risk</td></tr>
+        <tr><td>Expand services and school sport pipelines</td><td>Proven model; broad base</td><td>Needs state-level capacity and long timelines</td></tr>
+        <tr><td>Stricter federation governance via statute</td><td>Transparency, athlete welfare</td><td>Concerns about government control and international autonomy rules</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="qbank">
+  <h2>Practice bank: questions</h2><hr class="sec-rule">
+  <p class="lede">Answer each aloud, standing, in about ninety seconds.</p>
+  <ol class="qbank">
+    <li>Who proposed the Asian Games, and why does India call itself a founder of the movement?</li>
+    <li>What is the Olympic Council of Asia, where is it based and how many members does it have?</li>
+    <li>Where and when were the 2026 Asian Games held? Name Japan's two earlier editions.</li>
+    <li>What did the 1982 Delhi Asian Games leave behind for India?</li>
+    <li>How did India perform at Hangzhou, and which sports delivered most medals?</li>
+    <li>How did India perform at Aichi-Nagoya 2026 compared with Hangzhou? Name one standout athlete.</li>
+    <li>Asian Games medals versus Olympic medals: which matters more for India, and why?</li>
+    <li>What is TOPS? What is Khelo India? How do they differ?</li>
+    <li>What role do the armed forces play in Indian sport?</li>
+    <li>Should India bid for the Olympics? What can it learn from hosting the Asian Games?</li>
+    <li>How should India respond when athletes are denied entry or accreditation for political reasons?</li>
+    <li>Why has India done well in shooting and archery but not in swimming?</li>
+    <li>Name three Indian Asian Games champions and what each one shows.</li>
+    <li>Is cricket's inclusion in the Asian Games good for other sports in India?</li>
+    <li>Which sportsperson inspires you, and what have you taken from their example?</li>
+  </ol>
+  <div class="panel gold-top spaced">
+    <h4>Worked example — Q7: Asian Games vs Olympic medals</h4>
+    <dl class="rungs">
+      <dt>Define</dt><dd>Asian Games medals measure continental standing; Olympic medals measure global standing.</dd>
+      <dt>Establish</dt><dd>India won 107 Asian Games medals at Hangzhou but six at the Paris 2024 Olympics.</dd>
+      <dt>Analyse</dt><dd>Some Asian Games golds come in non-Olympic events, and fields are weaker in some sports. But the Asian Games build depth, competitive experience and qualification pathways.</dd>
+      <dt>Concede</dt><dd>Medal tables shape funding and public attention, so Asian Games success should not be dismissed.</dd>
+      <dt>Close</dt><dd>"Both matter: the Asian Games are the proving ground, the Olympics the final test. The goal should be turning Asian podiums into Olympic ones."</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="debates">
+  <h2>Debate motions</h2><hr class="sec-rule">
+  <ol class="dbank">
+    <li>This house believes India should bid to host the Asian Games again before the 2036 Olympics.</li>
+    <li>This house believes non-Olympic sports deserve equal funding.</li>
+    <li>This house would separate sport from politics in India-Pakistan contests.</li>
+    <li>This house believes cricket's inclusion helps the Asian Games more than it helps Indian sport.</li>
+    <li>This house believes the armed forces should remain central to India's elite-sport system.</li>
+    <li>This house believes medal tables are a poor measure of a nation's sporting health.</li>
+    <li>This house welcomes esports as a medal sport at multi-sport Games.</li>
+  </ol>
+</section>
+
+<section id="chronology">
+  <h2>Master chronology</h2><hr class="sec-rule">
+  <ul class="timeline">
+    <li><span class="yr">1913</span><span>First Far Eastern Championship Games, Manila</span></li>
+    <li><span class="yr">1934</span><span>Western Asiatic Games, New Delhi</span></li>
+    <li><span class="yr">1948</span><span>Guru Dutt Sondhi proposes Asian Games at the London Olympics</span></li>
+    <li><span class="yr">1949</span><span>Asian Games Federation founded, New Delhi</span></li>
+    <li><span class="yr">1951</span><span>First Asian Games, New Delhi; India 2nd</span></li>
+    <li><span class="yr">1958</span><span>Tokyo; Milkha Singh wins 200 m and 400 m</span></li>
+    <li><span class="yr">1962</span><span>Jakarta; Israel and Taiwan excluded; India's football gold</span></li>
+    <li><span class="yr">1966</span><span>Bangkok; India's first hockey gold</span></li>
+    <li><span class="yr">1974</span><span>Tehran; China debuts</span></li>
+    <li><span class="yr">1981-82</span><span>OCA founded; replaces Asian Games Federation</span></li>
+    <li><span class="yr">1982</span><span>New Delhi hosts the 9th Games; China tops table for the first time</span></li>
+    <li><span class="yr">1984</span><span>Sports Authority of India established</span></li>
+    <li><span class="yr">1986</span><span>Seoul; P.T. Usha wins four golds</span></li>
+    <li><span class="yr">1990</span><span>Beijing; kabaddi debuts; India's only gold</span></li>
+    <li><span class="yr">2010</span><span>Guangzhou; cricket debuts</span></li>
+    <li><span class="yr">2014</span><span>TOPS launched; Mary Kom gold and hockey gold at Incheon</span></li>
+    <li><span class="yr">2016</span><span>Aichi-Nagoya awarded the 2026 Games</span></li>
+    <li><span class="yr">2018</span><span>Jakarta-Palembang; India 70 medals; Neeraj Chopra's first Asian gold</span></li>
+    <li><span class="yr">2020</span><span>Doha (2030) and Riyadh (2034) awarded</span></li>
+    <li><span class="yr">2023</span><span>Hangzhou (2022 edition); India 107 medals, 4th</span></li>
+    <li><span class="yr">2026</span><span>Aichi-Nagoya, 19 Sep - 4 Oct; 20th Asian Games</span></li>
+    <li><span class="yr">2028</span><span>Los Angeles Olympics, with cricket on the programme</span></li>
+    <li><span class="yr">2030</span><span>Doha Asian Games; Commonwealth Games in Ahmedabad <span class="tag verify">Re-verify</span></span></li>
+    <li><span class="yr">2034</span><span>Riyadh Asian Games</span></li>
+  </ul>
+</section>
+
+<section id="glossary">
+  <h2>Glossary</h2><hr class="sec-rule">
+  <dl class="term">
+    <dt>OCA</dt><dd>Olympic Council of Asia; Asia's IOC-recognised continental body, based in Kuwait City.</dd>
+    <dt>NOC</dt><dd>National Olympic Committee; India's is the Indian Olympic Association (IOA).</dd>
+    <dt>NSF</dt><dd>National Sports Federation; governs a single sport in India (e.g. AFI for athletics).</dd>
+    <dt>SAI</dt><dd>Sports Authority of India; the government body running training centres and schemes.</dd>
+    <dt>TOPS</dt><dd>Target Olympic Podium Scheme; targeted funding for elite athletes, launched 2014.</dd>
+    <dt>Khelo India</dt><dd>Grassroots and youth sports programme with national games and scholarships.</dd>
+    <dt>Mission Olympic Wing</dt><dd>The Indian Army's elite-sport programme, centred on the Army Sports Institute, Pune.</dd>
+    <dt>Chef de mission</dt><dd>The official leading a national contingent at a multi-sport Games.</dd>
+    <dt>Medal table</dt><dd>Ranking of nations by gold medals first, then silver, then bronze.</dd>
+    <dt>Asian Para Games</dt><dd>Multi-sport event for athletes with impairments, organised by the Asian Paralympic Committee.</dd>
+    <dt>NADA / WADA</dt><dd>National and World Anti-Doping Agencies, responsible for testing and sanctions.</dd>
+    <dt>"Ever Onward"</dt><dd>The Asian Games motto, suggested by Jawaharlal Nehru in 1951.</dd>
+  </dl>
+</section>
+
+<section id="revision">
+  <h2>Rapid revision sheet</h2><hr class="sec-rule">
+  <div class="note">
+    <h4>Asian Games &amp; India on one page</h4>
+    <ul>
+      <li><strong>Origins:</strong> Far Eastern Games (1913) → Western Asiatic Games, Delhi (1934) → Sondhi's proposal (1948) → Federation founded in Delhi (1949) → first Games, Delhi, March 1951.</li>
+      <li><strong>Motto:</strong> "Ever Onward" (Nehru). <strong>Governing body:</strong> OCA, Kuwait City, 45 NOCs, five zones.</li>
+      <li><strong>Leaders of the medal table:</strong> Japan to 1978, China every edition since 1982.</li>
+      <li><strong>2026:</strong> 20th edition, Aichi-Nagoya, Japan, 19 Sep - 4 Oct; Japan's third hosting (1958, 1994); about 41 sports including cricket, kabaddi and esports; lean, existing-venue model.</li>
+      <li><strong>Next:</strong> Doha 2030, Riyadh 2034.</li>
+      <li><strong>India's anchors:</strong> 2nd in 1951; host 1951 and 1982; low point 1990 (1 gold); 70 medals in 2018; 107 (28 G) and 4th in Hangzhou 2022.</li>
+      <li><strong>Icons:</strong> Milkha Singh, P.T. Usha, Mary Kom, Neeraj Chopra, Satwik-Chirag, Jyothi Surekha Vennam; men's hockey and kabaddi.</li>
+      <li><strong>Ecosystem:</strong> SAI (1984), Mission Olympic Wing (2001), TOPS (2014), Khelo India (2017-18), Sports Governance Act and new policy (2025).</li>
+      <li><strong>Diplomacy:</strong> Arunachal athletes' accreditation row (2023); 2030 CWG in Ahmedabad; 2036 Olympic ambition.</li>
+      <li><strong>2026 result:</strong> write India's verified tally, rank and two stories here before your interview.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer>
+  <p>Compiled from open sources. Study aid only, not an official publication. Results, medal counts and venue details for the 2026 edition should be re-verified against the Olympic Council of Asia, the Aichi-Nagoya organising committee, the Indian Olympic Association and the Sports Authority of India.</p>
+  <p>Source &amp; contributions: <a href="https://github.com/mohitkushwaha0601/matre">github.com/mohitkushwaha0601/matre</a></p>
+</footer>
+
+</body>
+</html>

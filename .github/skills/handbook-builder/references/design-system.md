@@ -97,8 +97,8 @@ uses two or three of them, since shared components reference all four.
 |---|---|---|
 | `.hero` / `.flagstrip` / `.f1`..`.f8` | Top banner + coloured strip | Strip spans = real flag colours of the countries/entities covered |
 | `.kicker` | Small eyebrow label above `<h1>` | Alternative to `.motto`/`.motto-en` epigraph |
-| `.motto` / `.motto-en` | Large vernacular quote + English gloss/context | Used in files 7–8 for an evocative opening; optional |
-| `.stamp` | Row of key stats in the hero | 4–6 `<span>Stat <b>value</b></span>` |
+| `.motto` / `.motto-en` | Large vernacular quote + English gloss/context | Used in files 7-8 for an evocative opening; optional |
+| `.stamp` | Row of key stats in the hero | 4-6 `<span>Stat <b>value</b></span>` |
 | `.shell` | Two-column grid: sticky TOC + `main` | Collapses to one column under 1000px |
 | `.toc-mobile` + `nav.toc` | Contents list | `<li class="part">` = unlinked group header; every other `<li>` wraps an `<a href="#id">` |
 | `.part-head` | Divider between major parts | `<p>` = uppercase part label in `--red`, `<h2>` = part title |
@@ -126,5 +126,5 @@ uses two or three of them, since shared components reference all four.
 Every handbook ends with some ordering of: competing perspectives/narratives →
 controversies → lesser-known facts → future scenarios → India's strategic options
 (presented neutrally, without recommending a political position) → practice question
-bank (`.qbank`, 20–25 items) → master chronology (`.timeline`) → glossary (`.term`) →
+bank (`.qbank`, 20-25 items) → master chronology (`.timeline`) → glossary (`.term`) →
 a concise one-to-two-page rapid revision sheet.

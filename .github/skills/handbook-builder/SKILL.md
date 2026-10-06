@@ -30,17 +30,17 @@ Look specifically for:
 
 If the user names a topic from `further.md` (the "10 additional deep-research prompts") or `prompt.md` (the revised HTML-only versions of the same list), open that file and use its bullet list of coverage points and closing deliverables as a **menu to select from, not a checklist to exhaust**. Group related bullets into a small number of dense sections rather than one section per bullet — do not re-invent the scope, but do compress it. Otherwise, ask the user for the topic's scope, or infer a reasonable one analogous to a short handbook (history → key actors/turning points → strategic dimensions → competing perspectives → current situation → SSB analysis).
 
-**Target length: 18–22 sections total, sized like `materials/1.indian-navy-knowledge-handbook.html` (19 sections, a 2–3 hour read) — not like the 50–60 section handbooks.** This is a hard budget: if the source coverage list would naturally produce more sections, merge topics until the count fits, rather than writing every bullet as its own section. Keep prose tight — aim for roughly 150–250 words of running text per section (tables, lists and callouts are additional but should stay compact too), so total reading time at a normal reading pace lands at 2–3 hours.
+**Target length: 18-22 sections total, sized like `materials/1.indian-navy-knowledge-handbook.html` (19 sections, a 2-3 hour read) — not like the 50-60 section handbooks.** This is a hard budget: if the source coverage list would naturally produce more sections, merge topics until the count fits, rather than writing every bullet as its own section. Keep prose tight — aim for roughly 150-250 words of running text per section (tables, lists and callouts are additional but should stay compact too), so total reading time at a normal reading pace lands at 2-3 hours.
 
 Cross-check against `README.md`'s table and `index.html`'s card grid so you don't duplicate an existing handbook.
 
 ### 3. Pick the file name and number
 
-Next sequential number = (count of files in `materials/`) + 1. Filename pattern: `materials/N.<topic-slug>-knowledge-handbook.html` (lowercase, hyphenated), matching files 1–7; file 8 shows a shorter slug is acceptable for a briefing-style doc. Ask the user only if the naming choice is ambiguous.
+Next sequential number = (count of files in `materials/`) + 1. Filename pattern: `materials/N.<topic-slug>-knowledge-handbook.html` (lowercase, hyphenated), matching files 1-7; file 8 shows a shorter slug is acceptable for a briefing-style doc. Ask the user only if the naming choice is ambiguous.
 
 ### 4. Choose a distinct palette, same token names
 
-Every existing file reuses the same variable *names* (`--ink`, `--ink-soft`, `--paper`, `--surface`, `--surface-2`, `--rule`, `--rule-strong`, `--red`, `--blue`, `--hero-bg`, `--hero-ink`, `--hero-dim`, and usually `--gold`/`--green`) but assigns new hex values per document, thematically linked to the topic (e.g. a country's flag colours, an organisation's brand colours). Always provide all three blocks: the light `:root` values, the `@media (prefers-color-scheme: dark)` override, and the identical `:root[data-theme="dark"]` override (for an explicit theme toggle if one exists in the file). Build `.flagstrip`'s `.f1`–`.f8` spans from real flag colours of the countries/entities involved.
+Every existing file reuses the same variable *names* (`--ink`, `--ink-soft`, `--paper`, `--surface`, `--surface-2`, `--rule`, `--rule-strong`, `--red`, `--blue`, `--hero-bg`, `--hero-ink`, `--hero-dim`, and usually `--gold`/`--green`) but assigns new hex values per document, thematically linked to the topic (e.g. a country's flag colours, an organisation's brand colours). Always provide all three blocks: the light `:root` values, the `@media (prefers-color-scheme: dark)` override, and the identical `:root[data-theme="dark"]` override (for an explicit theme toggle if one exists in the file). Build `.flagstrip`'s `.f1`-`.f8` spans from real flag colours of the countries/entities involved.
 
 ### 5. Generate the document
 
@@ -48,11 +48,11 @@ Start from [the template skeleton](./assets/handbook-template.html) — copy it,
 
 1. `<head>`: title, meta description (one sentence summarising scope), Google Fonts preconnect + IBM Plex Sans/Zilla Slab import, full `<style>` block (including the `.home-btn` rules — copy them verbatim from the template, they use hardcoded colours, not theme variables)
 2. Immediately after `<body>`, before `.hero`: the fixed `.home-btn` link back to `../index.html` — copy the anchor markup verbatim from the template (same SVG, same `href="../index.html"`, same label "Home"). Every handbook page must have this so a reader can get back to the collection homepage from anywhere.
-3. `.hero`: `.flagstrip`, `.kicker` (or `.motto`+`.motto-en` epigraph if the doc wants one, matching files 7–8's pattern), `<h1>`, `.hero-sub`, `.stamp` with 4–6 key stats
+3. `.hero`: `.flagstrip`, `.kicker` (or `.motto`+`.motto-en` epigraph if the doc wants one, matching files 7-8's pattern), `<h1>`, `.hero-sub`, `.stamp` with 4-6 key stats
 4. `.shell` containing:
    - `<details class="toc-mobile" open>` → `<nav class="toc">` with `<li class="part">` group headers and one `<li><a href="#id">` per section — every href must have a matching `<section id>` later in the document
-   - `<main>` with all `<section>` elements, each `<h2>` + `<hr class="sec-rule">`, grouped under `.part-head` dividers (`<p>PART LABEL</p><h2>Part title</h2>`) — with the **18–22 section budget** spread over roughly 3–4 parts (e.g. background/history, core subject-matter, strategic analysis, SSB toolkit), not 6–8 parts
-5. Required closing sections, in this order, mirroring every existing handbook's "Knowledge toolkit" part, kept intentionally short: one combined section for competing perspectives/controversies/lesser-known facts, one for scenarios and India's strategic options (presented neutrally), a `qbank` of **12–15** practice questions, **6–8** debate motions, a master chronology (`.timeline`), a glossary, and a concise rapid-revision sheet. Skip a separate lecturette-topics section and a multi-brief "framework applied" section — fold one short worked example into the answer-framework section instead of four.
+   - `<main>` with all `<section>` elements, each `<h2>` + `<hr class="sec-rule">`, grouped under `.part-head` dividers (`<p>PART LABEL</p><h2>Part title</h2>`) — with the **18-22 section budget** spread over roughly 3-4 parts (e.g. background/history, core subject-matter, strategic analysis, SSB toolkit), not 6-8 parts
+5. Required closing sections, in this order, mirroring every existing handbook's "Knowledge toolkit" part, kept intentionally short: one combined section for competing perspectives/controversies/lesser-known facts, one for scenarios and India's strategic options (presented neutrally), a `qbank` of **12-15** practice questions, **6-8** debate motions, a master chronology (`.timeline`), a glossary, and a concise rapid-revision sheet. Skip a separate lecturette-topics section and a multi-brief "framework applied" section — fold one short worked example into the answer-framework section instead of four.
 6. `<footer>` matching the existing disclaimer + GitHub link pattern
 
 Use `.edge` for single high-value callouts, `.panel` (optionally with `dl.rungs` inside for a define→locate→establish→contest→analyse→test→position→concede→close style worked example) for structured analysis blocks, `.grid.two`/`.grid.three` + `.card` for comparative or biographical items, `.tablewrap`+`table` for structured data, `.tag` with `fact`/`interp`/`disputed`/`verify` on any contested figures — this is the established way this repo distinguishes fact from interpretation on sensitive geopolitical topics.
@@ -72,7 +72,7 @@ Keep everything in one self-contained `.html` file: inline `<style>`, no externa
 
 ### 8. Update `README.md`
 
-- Add a row to the contents table: `| [emoji Title](materials/<file>) | HTML | <section count> | <estimated study time> |`, in the same style as existing rows — the study time should read **2–3 hrs** given the 18–22 section budget.
+- Add a row to the contents table: `| [emoji Title](materials/<file>) | HTML | <section count> | <estimated study time> |`, in the same style as existing rows — the study time should read **2-3 hrs** given the 18-22 section budget.
 - Update the `**Total:** N handbooks` line and the `**Updated:**` footer line.
 
 ### 9. Report
