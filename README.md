@@ -24,8 +24,9 @@ Defence, current affairs, geopolitics and strategic studies.
 | [Political Ideologies Visual Guide](materials/16.political_ideologies_visual_guide.html) | HTML | ideology, state form and political values |
 | [World Geopolitics Atlas](materials/17.world_geopolitics_map_guide.html) | HTML | strategic maps, geography and chokepoints |
 | [Asian Games 2026 & India](materials/18.asian-games-2026-knowledge-handbook.html) | HTML | Asian Games origins, Aichi-Nagoya 2026 and India's sporting journey |
+| [International Multi-Sport Games](materials/19.international-multi-sport-games-knowledge-handbook.html) | HTML | Olympics, Paralympics, Commonwealth and other Games: origins, history and eminence |
 
-**Total:** 18 study pages
+**Total:** 19 study pages
 
 ---
 
