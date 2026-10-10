@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Economic Terms &amp; India’s Future — A Deep Knowledge Handbook</title>
+<meta name="description" content="A neutral primer on GDP, inflation, fiscal policy, debt, growth drivers and the macro risks shaping India’s next decade.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#111d2c;
+  --ink-soft:#4f6374;
+  --paper:#f1f3ef;
+  --surface:#ffffff;
+  --surface-2:#e8ece9;
+  --rule:#c7d0cc;
+  --rule-strong:#9aa9a3;
+  --red:#b21f1d;
+  --blue:#1c5d93;
+  --gold:#c68d1a;
+  --green:#1b6b48;
+  --hero-bg:#0d1f2d;
+  --hero-ink:#f3f3ef;
+  --hero-dim:#a8bac4;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ink:#e6eaed;
+    --ink-soft:#a8bac4;
+    --paper:#090f14;
+    --surface:#101d26;
+    --surface-2:#182a33;
+    --rule:#2a3d47;
+    --rule-strong:#4f6771;
+    --red:#e98b7e;
+    --blue:#8ec1f0;
+    --gold:#e4ba5b;
+    --green:#77d0a1;
+    --hero-bg:#050b10;
+    --hero-ink:#edf3f3;
+    --hero-dim:#8ca2ad;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#e6eaed;
+  --ink-soft:#a8bac4;
+  --paper:#090f14;
+  --surface:#101d26;
+  --surface-2:#182a33;
+  --rule:#2a3d47;
+  --rule-strong:#4f6771;
+  --red:#e98b7e;
+  --blue:#8ec1f0;
+  --gold:#e4ba5b;
+  --green:#77d0a1;
+  --hero-bg:#050b10;
+  --hero-ink:#edf3f3;
+  --hero-dim:#8ca2ad;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1.5rem);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
+.flagstrip{display:flex;height:12px}
+.flagstrip span{flex:1}
+.f1{background:#FF9933}
+.f2{background:#FFFFFF}
+.f3{background:#138808}
+.f4{background:#0B3B8C}
+.f5{background:#C32128}
+.f6{background:linear-gradient(90deg,#FF9933 33%,#FFFFFF 33%,#FFFFFF 66%,#138808 66%)}
+.f7{background:linear-gradient(90deg,#0B3B8C 50%,#C32128 50%)}
+.f8{background:#91AFAE}
+.hero-inner{max-width:1180px;margin:0 auto;padding:3.2rem 1.5rem 0}
+.kicker{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--hero-dim);margin:0 0 .8rem}
+.hero h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.5rem,4.3vw,2.35rem);line-height:1.2;margin:2.6rem 0 .5rem;border-top:1px solid rgba(255,255,255,.22);padding-top:1.6rem;max-width:30ch}
+.hero-sub{margin:0;color:var(--hero-dim);max-width:68ch}
+.stamp{margin-top:1.6rem;font-size:.86rem;color:var(--hero-dim);display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+.stamp b{color:var(--hero-ink);font-weight:600}
+.shell{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem;display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media (min-width:1000px){
+  .shell{grid-template-columns:255px minmax(0,1fr);gap:3.5rem;padding-top:2.8rem}
+}
+nav.toc{font-size:.9rem}
+@media (min-width:1000px){
+  .toc-mobile{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2rem);align-self:start;max-height:calc(100vh - 5rem);overflow-y:auto}
+}
+nav.toc h2{font-family:"Zilla Slab",Georgia,serif;font-size:.92rem;font-weight:600;margin:0 0 .7rem;padding-bottom:.45rem;border-bottom:2px solid var(--rule-strong)}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc}
+nav.toc li{border-bottom:1px solid var(--rule)}
+nav.toc li:not(.part){counter-increment:toc}
+nav.toc a{display:flex;gap:.6rem;padding:.4rem 0;color:var(--ink-soft);text-decoration:none}
+nav.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--rule-strong);font-variant-numeric:tabular-nums;flex:none}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--red)}
+nav.toc .part{border:0;margin:1.1rem 0 .3rem;font-family:"Zilla Slab",Georgia,serif;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--rule-strong)}
+nav.toc .part::before{content:none}
+.toc-mobile{display:block}
+@media (min-width:1000px){.toc-mobile summary{display:none}}
+.toc-mobile summary{cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:600;padding:.7rem .9rem;background:var(--surface);border:1px solid var(--rule);margin-bottom:1rem}
+@media (max-width:999px){
+  .toc-mobile[open] nav.toc{padding:0 .9rem 1rem}
+  .toc-mobile:not([open]) nav.toc{display:none}
+}
+main{min-width:0}
+section{margin:0 0 3.6rem;scroll-margin-top:1.5rem}
+section > h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.45rem,3.6vw,1.95rem);line-height:1.2;margin:0 0 .3rem}
+.part-head{margin:4rem 0 2.2rem;padding:1.1rem 0 .9rem;border-top:4px double var(--rule-strong);border-bottom:1px solid var(--rule)}
+.part-head p{margin:0;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.part-head h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.3rem,3.2vw,1.7rem);margin:.3rem 0 0;color:var(--ink)}
+.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.16rem;margin:2rem 0 .5rem;line-height:1.3}
+h4{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1rem;margin:1.4rem 0 .35rem;color:var(--ink)}
+p{margin:0 0 .95rem;max-width:74ch}
+ul,ol{margin:0 0 1rem;padding-left:1.25rem;max-width:74ch}
+li{margin-bottom:.35rem}li::marker{color:var(--rule-strong)}
+strong{font-weight:600}a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.lede{font-size:1.06rem;color:var(--ink-soft);max-width:70ch}
+.tablewrap{overflow-x:auto;margin:0 0 1.3rem;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.92rem}
+caption{text-align:left;padding:.7rem .85rem .1rem;font-weight:600;color:var(--ink-soft);font-size:.9rem}
+th,td{text-align:left;padding:.55rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{background:var(--surface-2);font-weight:600;border-bottom:2px solid var(--rule-strong);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+.num,th.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.edge{background:var(--surface);border-left:4px solid var(--red);padding:.9rem 1.1rem;margin:1.4rem 0;max-width:74ch}
+.edge p:last-child,.edge ul:last-child,.edge ol:last-child{margin-bottom:0}
+.edge .edge-h{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);display:block;margin-bottom:.25rem;font-size:.95rem}
+.edge.gold{border-left-color:var(--gold)}
+.edge.gold .edge-h{color:var(--gold)}
+.edge.blue{border-left-color:var(--blue)}
+.edge.blue .edge-h{color:var(--blue)}
+.edge.green{border-left-color:var(--green)}
+.edge.green .edge-h{color:var(--green)}
+.note{background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;border:1px solid var(--rule);font-size:.95rem}
+.note p:last-child,.note ul:last-child,.note ol:last-child{margin-bottom:0}
+.note h4{margin-top:0}
+.panel{background:var(--surface);border:1px solid var(--rule);padding:1rem 1.1rem}
+.panel h4{margin-top:0}.panel ul,.panel ol{margin-bottom:0}
+.panel.blue-top{border-top:3px solid var(--blue)}
+.panel.red-top{border-top:3px solid var(--red)}
+.panel.gold-top{border-top:3px solid var(--gold)}
+.panel.green-top{border-top:3px solid var(--green)}
+.rungs{max-width:74ch;margin:.3rem 0 0;display:grid;grid-template-columns:9.5rem 1fr;gap:0 1rem}
+.rungs dt{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;color:var(--red);padding-top:.2rem}
+.rungs dd{margin:0 0 .5rem;font-size:.93rem}
+@media (max-width:560px){.rungs{grid-template-columns:1fr;gap:0}.rungs dt{padding-top:.4rem}}
+.timeline{list-style:none;padding:0;margin:1rem 0 1.4rem;max-width:74ch}
+.timeline li{display:grid;grid-template-columns:8.2rem 1fr;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--rule);margin:0}
+.timeline li:last-child{border-bottom:0}
+.timeline .yr{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);font-variant-numeric:tabular-nums}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:.1rem}}
+.qbank{counter-reset:q;list-style:none;padding:0;max-width:74ch}
+.qbank li{counter-increment:q;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.qbank li::before{content:counter(q,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.qbank li:last-child{border-bottom:0}
+.dbank{counter-reset:d;list-style:none;padding:0;max-width:74ch}
+.dbank li{counter-increment:d;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.dbank li::before{content:counter(d,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.dbank li:last-child{border-bottom:0}
+.grid{display:grid;gap:1rem}.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}@media (max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--red);padding:1rem 1.1rem}
+.card h4{margin:0 0 .45rem;font-size:1rem}
+.card .name{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.2rem}
+.card .role{font-size:.9rem;color:var(--ink-soft)}
+.card .since{font-size:.78rem;color:var(--green);font-weight:600;margin-top:.45rem}
+.term{max-width:74ch;margin:0 0 1.2rem}.term dt{font-weight:600;margin-top:.8rem}.term dd{margin:.15rem 0 0;color:var(--ink-soft)}
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:.1rem .45rem;border:1px solid var(--rule-strong);color:var(--ink-soft);margin-right:.35rem;vertical-align:middle}
+.tag.fact{border-color:var(--green);color:var(--green)}
+.tag.interp{border-color:var(--gold);color:var(--gold)}
+.tag.disputed{border-color:var(--red);color:var(--red)}
+.tag.verify{border-color:var(--blue);color:var(--blue)}
+.spaced{margin-top:.6rem}
+footer{border-top:3px double var(--rule-strong);margin-top:2rem;padding-top:1.4rem;color:var(--ink-soft);font-size:.9rem;max-width:74ch}
+footer a{color:var(--blue)}
+.home-btn{position:fixed;top:16px;left:16px;z-index:60;display:inline-flex;align-items:center;gap:.4rem;background:#14202B;color:#F1F2EC;border:1px solid rgba(241,242,236,.25);padding:.45rem .85rem;border-radius:999px;font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.82rem;font-weight:600;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.3);transition:background .15s ease,transform .15s ease}
+.home-btn:hover,.home-btn:focus-visible{background:#BF2F26;transform:translateY(-1px)}
+.home-btn svg{width:14px;height:14px;flex:none}
+@media print{.home-btn{display:none}}
+@media print{
+  .hero{background:none;color:#000;padding-bottom:1rem}
+  .hero-sub,.stamp{color:#333}
+  .flagstrip,.toc-mobile{display:none}
+  .shell{display:block;padding:0}
+  section{page-break-inside:auto;margin-bottom:1.8rem}
+  h2,h3{page-break-after:avoid}
+  .panel,.edge,.note,.tablewrap,figure{page-break-inside:avoid}
+  .part-head{page-break-before:always}
+  body{font-size:10.5pt;background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+<a class="home-btn" href="../index.html" aria-label="Back to Handbooks homepage" title="Back to Handbooks homepage">
+  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
+  <span>Home</span>
+</a>
+
+<header class="hero">
+  <div class="flagstrip" aria-hidden="true">
+    <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f5"></span><span class="f6"></span><span class="f7"></span><span class="f8"></span>
+  </div>
+  <div class="hero-inner">
+    <p class="kicker">Macro economy · public policy · India’s growth story</p>
+    <h1>Economic Terms &amp; India’s Future</h1>
+    <p class="hero-sub">A concise, neutral guide to the words and mechanisms behind GDP, inflation, fiscal policy, debt, productivity and macro risk — built for UPSC, SSB, interviews and serious civic reading on India’s next decade.</p>
+    <p class="stamp">
+      <span>Focus <b>India</b></span>
+      <span>Scope <b>Macroeconomics</b></span>
+      <span>Reading time <b>2–3 hrs</b></span>
+      <span>Format <b>Static HTML</b></span>
+    </p>
+  </div>
+</header>
+
+<div class="shell">
+  <details class="toc-mobile" open>
+    <summary>Contents</summary>
+    <nav class="toc" aria-label="Contents">
+      <h2>Contents</h2>
+      <ol>
+        <li class="part">How to use this</li>
+        <li><a href="#howto">Using this handbook</a></li>
+
+        <li class="part">Part I · Foundations</li>
+        <li><a href="#why-terms">Why the language of economics matters</a></li>
+        <li><a href="#gdp">GDP, output and productivity</a></li>
+        <li><a href="#inflation">Inflation and price stability</a></li>
+        <li><a href="#budget">Fiscal policy and the budget</a></li>
+
+        <li class="part">Part II · Policy levers</li>
+        <li><a href="#monetary">Monetary policy and interest rates</a></li>
+        <li><a href="#debt">Debt, deficits and sustainability</a></li>
+        <li><a href="#taxes">Taxation and public spending</a></li>
+        <li><a href="#external">External sector and current account</a></li>
+
+        <li class="part">Part III · India’s macro canvas</li>
+        <li><a href="#labour">Labour, productivity and formalisation</a></li>
+        <li><a href="#investment">Investment, infrastructure and capital formation</a></li>
+        <li><a href="#credit">Banking, credit and financial risk</a></li>
+        <li><a href="#india-growth">India’s growth story</a></li>
+        <li><a href="#risks">Macro risks and vulnerabilities</a></li>
+        <li><a href="#global-linkages">Global linkages and trade shocks</a></li>
+
+        <li class="part">Knowledge toolkit</li>
+        <li><a href="#perspectives">Competing perspectives</a></li>
+        <li><a href="#scenarios">Scenarios and strategic choices</a></li>
+        <li><a href="#qbank">Practice bank: questions</a></li>
+        <li><a href="#debates">Debate motions</a></li>
+        <li><a href="#chronology">Master chronology</a></li>
+        <li><a href="#glossary">Glossary</a></li>
+        <li><a href="#revision">Rapid revision sheet</a></li>
+      </ol>
+    </nav>
+  </details>
+
+  <main>
+    <section id="howto">
+      <h2>Using this handbook</h2><hr class="sec-rule">
+      <p class="lede">This handbook is designed to make the vocabulary of macroeconomics less abstract. It focuses on the terms that appear repeatedly in budget speeches, RBI debates, news analysis, and interviews: GDP, inflation, fiscal deficit, debt, current account, real versus nominal growth, productivity, and risk. The aim is not to present a party line, but to build a stable frame for analysis.</p>
+      <div class="edge blue">
+        <span class="edge-h">Read like a policymaker</span>
+        <p>Ask three questions every time you meet a headline: what is the variable, what is the time frame, and what is the source of the number? A rate can rise in nominal terms while real output is fragile, and a government can claim “strong growth” while households still feel weak consumption and slow wages.</p>
+      </div>
+      <p><span class="tag fact">Established</span> factual baseline · <span class="tag interp">Interpretation</span> analytical judgement · <span class="tag disputed">Disputed</span> contested or debated claim · <span class="tag verify">Re-verify</span> important figure or current estimate.</p>
+    </section>
+
+    <div class="part-head"><p>Part I · Foundations</p><h2>Reading the basic macro vocabulary</h2></div>
+
+    <section id="why-terms">
+      <h2>Why the language of economics matters</h2><hr class="sec-rule">
+      <p>Economic debates are often noisy because the same word can mean different things in different contexts. “Growth” may refer to nominal GDP, real GDP, per-capita income, or private consumption. “Inflation” can be measured by CPI, WPI, food inflation, or core inflation, each telling a different story about household stress. “Development” is not the same thing as short-term growth, and “reform” can mean fiscal consolidation, administrative efficiency, or a shift in incentives.</p>
+      <p>For India, these distinctions matter because the country faces a very familiar mix: a large young population, uneven regional growth, a large informal workforce, rising infrastructure demand, and a dependence on global trade and capital flows. In other words, the macro numbers are not abstract statistics; they are tools for deciding whether people feel safer jobs, cheaper costs, stronger public services, and more credible future prospects.</p>
+      <div class="note">
+        <h4>Macro literacy in one line</h4>
+        <ul>
+          <li>Output measures what is produced.</li>
+          <li>Inflation measures how prices move.</li>
+          <li>Fiscal policy measures how the state taxes and spends.</li>
+          <li>Monetary policy measures how interest rates and liquidity are managed.</li>
+          <li>Growth only becomes “development” when it translates into jobs, incomes and resilience.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="gdp">
+      <h2>GDP, output and productivity</h2><hr class="sec-rule">
+      <p><strong>Gross Domestic Product (GDP)</strong> is the market value of final goods and services produced within a country in a given period. It is the headline measure of economic output, but it has limits. GDP can rise because of inflation, because of nominal price increases, or because of a short-term export spike — not necessarily because ordinary households are better off.</p>
+      <p>Real GDP adjusts for inflation and is therefore more useful for measuring true output growth. The more important question for India is not only how fast GDP grows, but whether growth is broad-based: is it driven by private consumption, capital investment, productivity, exports, and formal employment?</p>
+      <p>The best macro reading in India often comes from looking at the mix of growth. A country can have high output but poor job quality. It can have high GDP and weak public finances. To understand the real economy, pair GDP with wages, labor-force participation, household consumption, investment, productivity, and regional growth patterns.</p>
+      <div class="panel red-top">
+        <h4>Quick distinction</h4>
+        <dl class="rungs">
+          <dt>Nominal GDP</dt><dd>Output measured at current prices, includes inflation.</dd>
+          <dt>Real GDP</dt><dd>Output adjusted for price rise, better for comparing years.</dd>
+          <dt>Per-capita GDP</dt><dd>Average output per person, useful but still incomplete.</dd>
+          <dt>Productivity</dt><dd>Output per worker or per hour of work — often the deeper long-run driver.</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section id="inflation">
+      <h2>Inflation and price stability</h2><hr class="sec-rule">
+      <p>Inflation is the sustained increase in the general price level. In India, the most watched measure is often CPI-based retail inflation, which captures prices felt by households. Food, fuel, housing, education and healthcare can all drive inflation differentially, and food shocks can hit rural and urban households differently.</p>
+      <p>Inflation is not always “bad” in a simple sense. Moderate inflation can signal demand, rising wages and healthy activity. Very high inflation, however, erodes real incomes, erodes savings and increases uncertainty. Inflation also changes the real interest rate: if nominal rates are high but inflation is higher still, the real burden on borrowers may be lower than it appears.</p>
+      <p>For policymakers, the key is stabilisation. High inflation can push the RBI to raise rates and tighten liquidity; low inflation, when accompanied by weak demand, can justify easing. The challenge is that many inflation shocks are supply-side, not demand-side, and policy cannot always correct them without hurting growth.</p>
+      <div class="edge gold">
+        <span class="edge-h">A useful frame</span>
+        <p>Inflation is not only about a number; it is about who pays. A spike in food prices while urban incomes remain stable is not the same as a spike in shelter or services prices while wages stagnate. The macro story hides different household realities.</p>
+      </div>
+    </section>
+
+    <section id="budget">
+      <h2>Fiscal policy and the budget</h2><hr class="sec-rule">
+      <p>Fiscal policy refers to the government's use of taxation and expenditure to influence the economy. A budget is a snapshot of spending priorities: infrastructure, education, health, welfare, defence, interest payments, subsidies, and capital formation. It also signals the government's confidence in growth, tax compliance and borrowing capacity.</p>
+      <p>When governments spend more than they collect in revenue, they run a <strong>fiscal deficit</strong>. The deficit is often discussed as a percentage of GDP. A deficit can be stabilising if it finances productive investment or a downturn; it can become risky if it is funding recurring expenditure without new productive capacity. Borrowing to build roads, power, logistics and digital systems is more growth-positive than borrowing to support an unsustainable consumption pattern.</p>
+      <p>India’s challenge is balancing two objectives: maintaining growth momentum and keeping debt sustainable. That is why a budget is often judged not just by headline spending, but by composition: capital expenditure versus revenue expenditure, tax buoyancy, subsidy burden, and the quality of public investment.</p>
+    </section>
+
+    <div class="part-head"><p>Part II · Policy levers</p><h2>How states steer the economy</h2></div>
+
+    <section id="monetary">
+      <h2>Monetary policy and interest rates</h2><hr class="sec-rule">
+      <p>Monetary policy is managed primarily by the central bank, which influences interest rates, liquidity, and credit conditions. In India, the Reserve Bank of India (RBI) uses policy rates, repo decisions, reserve ratios and liquidity operations to try to keep inflation within a target range while supporting growth and financial stability.</p>
+      <p>Lower interest rates generally support borrowing and investment, but they can also fuel asset prices or encourage excess credit if used too aggressively. Higher rates lower inflation pressure but can slow growth and raise debt-servicing costs for businesses and households. The real test is whether price stability and growth are being balanced without creating a credit crunch or financial instability.</p>
+      <p>This is why “tightening” and “easing” are often discussed as balancing acts rather than simple ideological choices. A central bank is not just reacting to yesterday’s inflation; it is trying to steer expectations for tomorrow.</p>
+      <div class="panel blue-top">
+        <h4>Rate mechanics, in plain English</h4>
+        <ul>
+          <li><strong>Repo rate</strong>: the dominant policy rate used for signalling monetary stance.</li>
+          <li><strong>Inflation target</strong>: the benchmark against which the central bank seeks stability.</li>
+          <li><strong>Real rate</strong>: nominal rate minus inflation, the true burden or incentive.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="debt">
+      <h2>Debt, deficits and sustainability</h2><hr class="sec-rule">
+      <p>Debt is money borrowed and owed. Public debt becomes a macro issue when it grows faster than the economy, especially when borrowing finances low-return or recurrent expenditure. The key questions are not only “how much debt?” but “what is it used for?” and “can it be serviced without stress?”</p>
+      <p>A government can carry high debt if it has credible tax revenue, strong growth, low borrowing costs, and productive assets. It can also face stress when debt rises while growth slows, rates rise, or the fiscal base weakens. Debt sustainability is a political and economic judgement, not a moral verdict alone.</p>
+      <p>In India, debt debates are often combined with discussions of subsidies, public investment, and state-level borrowing. The bigger issue is not the existence of debt alone, but whether debt is funding future capacity or merely financing present consumption.</p>
+    </section>
+
+    <section id="taxes">
+      <h2>Taxation and public spending</h2><hr class="sec-rule">
+      <p>Tax policy determines how revenue is collected and how a government allocates burdens across citizens, corporations and the informal economy. A tax system can be designed to mobilise revenue, encourage investment, reduce inequality, or support specific sectors. The same is true of expenditure: health and education spending can raise long-run productivity, while poorly targeted subsidies can widen fiscal pressure without corresponding output gains.</p>
+      <p>India’s tax structure is often described as a mix of direct taxes, indirect taxes, customs duties, GST and excise levies. The policy debate is often less about “more tax” or “less tax” than about the composition of the tax base and the efficiency of collection. A narrow tax base may create high rates, compliance burden and weak state capacity. A broader base, if well-designed, can improve both fairness and revenue.</p>
+      <p>Public spending is equally strategic. Spending on roads, rail, power, logistics, ports, education and digital infrastructure can raise productive capacity; spending on transfers may support demand and equity but can come with fiscal costs if not targeted well.</p>
+    </section>
+
+    <section id="external">
+      <h2>External sector and current account</h2><hr class="sec-rule">
+      <p>The external sector covers trade, capital flows, exchange rates and foreign financing. The balance of payments shows how a country pays for imports, receives remittances, attracts investment and manages its reserves. The current account tracks trade in goods and services plus net primary and secondary income. A deficit can be manageable if it is financed by long-term capital inflows.</p>
+      <p>India’s external story has long been shaped by energy imports, merchandise trade deficits, export competitiveness, remittances, and global capital flow swings. A weaker rupee can help exporters by making goods cheaper abroad, but it also raises costs for imported fuel, food, and capital goods. External vulnerability is not simply a matter of a trade deficit alone; it depends on the quality of financing and the resilience of domestic supply chains.</p>
+      <p>In a global economy, macro stability is partly an external discipline problem. Strategies that reduce import dependence, expand manufacturing value chains, and improve logistics can matter as much as short-term exchange-rate management.</p>
+    </section>
+
+    <div class="part-head"><p>Part III · India’s macro canvas</p><h2>What drives Indian growth and stress</h2></div>
+
+    <section id="labour">
+      <h2>Labour, productivity and formalisation</h2><hr class="sec-rule">
+      <p>High GDP can coexist with poor labour outcomes if many workers remain in low-productivity jobs or the informal economy. India’s growth challenge is not only to expand output, but to convert economic activity into reliable jobs, upward mobility, and household income growth. The distinction between GDP growth and employment-intensive growth matters.</p>
+      <p>Formalisation, skill formation, labour mobility and urban-rural productivity gaps all influence how development unfolds. A country with a large demographic dividend can face underemployment, low average productivity and uneven earnings if it lacks education, transport, and employer capacity. Growth is more durable when the labour force is both productive and absorbent.</p>
+      <p>That is why “employment data” and “productivity” are central to macro analysis. A strong investment story is incomplete if workers are not receiving a material share of the gains.</p>
+    </section>
+
+    <section id="investment">
+      <h2>Investment, infrastructure and capital formation</h2><hr class="sec-rule">
+      <p>Investment is the engine of future output. In macroeconomics, capital formation means building factories, roads, logistics systems, ports, telecom networks, power capacity and digital infrastructure. This expands the economy’s productive capacity over time. Public investment especially matters when private credit is weak or when the state is addressing large bottlenecks.</p>
+      <p>India’s recent growth story has been closely linked to infrastructure, digitalisation, industrial policy, and increased manufacturing ambition. But infrastructure alone does not automatically trigger productivity gains. It must be connected to skills, policy clarity, land and regulatory efficiency, and private investment confidence.</p>
+      <p>Capital expenditure can be fiscally heavy, but when it raises long-run efficiency it can produce a multiplier effect. When it is poorly targeted or politically driven, it creates capacity without productivity gains.</p>
+      <div class="tablewrap">
+        <table>
+          <caption>Core macro terms worth pairing in any answer</caption>
+          <thead>
+            <tr><th>Term</th><th>What it tells you</th><th>Why it matters</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>GDP growth</td><td>Output expansion</td><td>Overall scale of expansion</td></tr>
+            <tr><td>Inflation</td><td>Price movement</td><td>Real purchasing power and policy stance</td></tr>
+            <tr><td>Fiscal deficit</td><td>Gap between spending and revenue</td><td>Borrowing needs and future sustainability</td></tr>
+            <tr><td>Current account</td><td>External trade and income balance</td><td>Import dependence and external resilience</td></tr>
+            <tr><td>Productivity</td><td>Output per worker</td><td>Long-run competitiveness and wages</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="credit">
+      <h2>Banking, credit and financial risk</h2><hr class="sec-rule">
+      <p>Banking and credit matter because they channel savings into investment. If bank lending is too weak, businesses expand slowly; if credit quality deteriorates, bad loans, risk appetite and balance-sheet fragility can threaten the system. Financial stability and macro stability are tightly linked.</p>
+      <p>India’s financial system is large and layered, including public sector banks, private lenders, non-banking financial companies, capital markets and household credit. A crucial policy challenge is to sustain credit access without creating unsustainable leverage, real-estate bubbles or excess borrowing in weak sectors.</p>
+      <p>Financial risk is often underestimated until it becomes visible in stress episodes: rising defaults, liquidity squeezes, lending slowdowns, or a drop in investor confidence. Macro analysis should therefore examine both the real economy and the financial structure behind it.</p>
+    </section>
+
+    <section id="india-growth">
+      <h2>India’s growth story</h2><hr class="sec-rule">
+      <p>India’s growth story is defined by a combination of a large domestic market, service-sector expansion, digital public infrastructure, rising investment in logistics and manufacturing, and rapid urbanisation. It has also been shaped by policy continuity, a sizable youth demographic, and an increasingly entrepreneurial ecosystem. The country is not simply “growing” in a generic sense — it is trying to convert a large and diverse economy into more stable, productive and inclusive growth.</p>
+      <p>At the same time, the country faces structural bottlenecks: uneven infrastructure, labour absorption issues, regional inequality, energy and logistics constraints, and gaps in productivity at the state and district level. Growth can remain impressive on aggregate numbers while households still feel high prices, weak job quality, or regional imbalance.</p>
+      <p>The Indian growth narrative therefore needs a dual lens: performance at the aggregate level and lived experience at the household and regional level. That is the difference between a strong headline and a resilient economy.</p>
+    </section>
+
+    <section id="risks">
+      <h2>Macro risks and vulnerabilities</h2><hr class="sec-rule">
+      <p>Every economy has vulnerabilities, but the most important ones come from the interaction of debt, inflation, global shocks and weak productivity. In India’s case, recurring risks include food-price volatility, energy dependence, uneven private investment, stress in credit markets, geopolitical supply disruption, and the burden of public support programmes if not designed sharply.</p>
+      <p>Another core risk is the difference between short-run public optimism and medium-run economic resilience. Governments can stimulate growth in the short term, but structural risks remain if the tax base is weak, labour productivity is low, or infrastructure and logistics remain uneven. This is one reason macro policy often focuses on “quality of growth,” not just quantity.</p>
+      <p>In risk terms, a country is vulnerable when a small external shock turns into a broad internal stress. That is why diversification, sound public finances, strong institutions, and resilient supply chains matter as much as headline growth percentages.</p>
+    </section>
+
+    <section id="global-linkages">
+      <h2>Global linkages and trade shocks</h2><hr class="sec-rule">
+      <p>India is not insulated from global financial cycles, commodity prices, shipping disruptions, tariff changes, or geopolitical conflict. Energy prices, food imports, manufacturing inputs, technology supply and capital flows all connect the Indian economy to global conditions. A rise in oil prices can change inflation, the current account and fiscal outlook at once.</p>
+      <p>Globalisation has also shaped India’s strategic options: trade diversification, resilient supply chains, stronger manufacturing, and access to technology. The challenge is not to seek autonomy at all costs, but to reduce the vulnerabilities created by overdependence on a single geography or source of supply. In macro strategy, resilience is often a better goal than maximal openness without safeguards.</p>
+      <p>That is why debates about “Atmanirbhar Bharat,” supply-chain localisation, and strategic trade policy are macroeconomic debates as much as industrial policy debates. They all speak to a broader question: how much resilience does the economy need in a volatile world?</p>
+    </section>
+
+    <div class="part-head"><p>Knowledge toolkit</p><h2>Analysis, practice and revision</h2></div>
+
+    <section id="perspectives">
+      <h2>Competing perspectives</h2><hr class="sec-rule">
+      <p><span class="tag fact">Established</span> Most analysts agree that India’s long-term growth potential remains significant because of demographics, digital infrastructure, a large consumer market and a large services base. <span class="tag interp">Interpretation</span> The main debate is whether this growth is deep enough to absorb labour, maintain inflation discipline and strengthen public finances. <span class="tag disputed">Disputed</span> Some argue that recent gains are too consumption-led and too dependent on capital-intensive sectors; others stress the gains from digitalisation and formalisation. <span class="tag verify">Re-verify</span> country-level numbers and sectoral trends before making a strong claim about a single year’s growth composition.</p>
+      <div class="grid two">
+        <div class="panel green-top">
+          <h4>Supporters of growth optimism</h4>
+          <p>India is large, diversified and increasingly digitised; this gives it a strong structural base. Capital expenditure, manufacturing incentives and logistics investment can lift productivity if executed well.</p>
+        </div>
+        <div class="panel red-top">
+          <h4>Critics of growth fragility</h4>
+          <p>Growth can look strong while household consumption remains uneven, job quality remains mixed, and public finances face pressure from subsidies, debt and growth-risk shocks.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="scenarios">
+      <h2>Scenarios and strategic choices</h2><hr class="sec-rule">
+      <p>Scenario analysis is useful because macro outcomes are shaped by both domestic policy and external shocks. A moderate-inflation, high-growth path is possible if infrastructure, tax mobilisation and labour productivity improve together. A weaker path emerges if inflation remains sticky, credit weakens, and global commodity shocks hit households and businesses simultaneously.</p>
+      <p>India’s strategic choices are therefore not binary ideological fights so much as choices about sequencing: invest in productivity first, use fiscal space carefully, keep inflation under control but avoid excessive austerity, and reduce vulnerability to import dependence and volatile global capital flows. The objective is resilience, not just output numbers.</p>
+      <div class="note">
+        <h4>Three simplified scenarios</h4>
+        <ul>
+          <li><strong>Scenario A:</strong> productivity rises, inflation falls, and public investment remains high.</li>
+          <li><strong>Scenario B:</strong> inflation stays elevated, consumption weakens and credit quality deteriorates.</li>
+          <li><strong>Scenario C:</strong> global shocks disrupt energy and trade, prompting slower growth and higher fiscal pressure.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="qbank">
+      <h2>Practice bank: questions</h2><hr class="sec-rule">
+      <p class="lede">Answer each question aloud in ninety seconds. The aim is to explain the term, define its use and identify the policy or social trade-off it implies.</p>
+      <ol class="qbank">
+        <li>What is the difference between nominal GDP and real GDP, and why does the distinction matter in Indian policy debates?</li>
+        <li>How does inflation affect real wages, household budgets and interest-rate decisions?</li>
+        <li>Why is a fiscal deficit not automatically a sign of bad policy?</li>
+        <li>What is the difference between a revenue deficit and a capital expenditure push?</li>
+        <li>How does RBI policy influence credit, inflation and growth expectations?</li>
+        <li>Why can a strong GDP number coexist with weak job quality or uneven consumption?</li>
+        <li>What is meant by productivity, and why is it a better long-run indicator than output alone?</li>
+        <li>How does a current account deficit differ from a fiscal deficit?</li>
+        <li>What are the macro risks of a sharp rise in oil or food prices?</li>
+        <li>Why is formalisation important for India’s economic growth story?</li>
+        <li>How do public investment and infrastructure affect future productivity?</li>
+        <li>Why is debt sustainability judged by both the level of debt and the growth context?</li>
+        <li>What is the relationship between capital flows, exchange rates and trade competitiveness?</li>
+        <li>Explain why growth can be “good” in aggregate but still feel weak to households.</li>
+        <li>How does the quality of public spending matter more than the headline amount spent?</li>
+      </ol>
+    </section>
+
+    <section id="debates">
+      <h2>Debate motions</h2><hr class="sec-rule">
+      <ol class="dbank">
+        <li>“India’s growth story is stronger than its employment story.”</li>
+        <li>“Fiscal deficit is a sign of economic weakness rather than a policy tool.”</li>
+        <li>“Lower interest rates should always be welcomed during a growth slowdown.”</li>
+        <li>“High public investment is a better use of borrowing than large subsidy spending.”</li>
+        <li>“Inflation control should take precedence over short-term growth support.”</li>
+        <li>“India must reduce external dependence on imported energy to be genuinely resilient.”</li>
+        <li>“Productivity is the real measure of national progress, not just nominal GDP.”</li>
+        <li>“A rising current account deficit is more dangerous than a rising fiscal deficit.”</li>
+      </ol>
+    </section>
+
+    <section id="chronology">
+      <h2>Master chronology</h2><hr class="sec-rule">
+      <ul class="timeline">
+        <li><span class="yr">2014</span><span>India begins a new phase of policy emphasis on growth, digitalisation and infrastructure-led expansion.</span></li>
+        <li><span class="yr">2016</span><span>GST introduces a major tax reform intended to simplify the indirect tax structure and broaden the base.</span></li>
+        <li><span class="yr">2017-18</span><span>Bank recapitalisation and credit reforms respond to stress in public-sector banking and impaired assets.</span></li>
+        <li><span class="yr">2019</span><span>India’s growth trajectory remains broadly resilient, but debates intensify over job quality, productivity and rural demand.</span></li>
+        <li><span class="yr">2020</span><span>COVID-19 shock causes an abrupt contraction in activity and a major macro policy response across fiscal and monetary channels.</span></li>
+        <li><span class="yr">2021-22</span><span>Recovery is driven by reopening demand, infrastructure spending, and a rebound in services and consumption.</span></li>
+        <li><span class="yr">2022</span><span>Inflation spikes globally, especially in food and energy, prompting tighter monetary policy and renewed debate on real versus nominal growth.</span></li>
+        <li><span class="yr">2023-24</span><span>India continues to attract investment and digital infrastructure attention while fiscal and external vulnerability debates remain active.</span></li>
+        <li><span class="yr">2025-26</span><span>Policy discourse focuses on productivity, capital expenditure, manufacturing resilience and guarding against global shocks.</span></li>
+      </ul>
+    </section>
+
+    <section id="glossary">
+      <h2>Glossary</h2><hr class="sec-rule">
+      <dl class="term">
+        <dt>GDP</dt><dd>The total value of final goods and services produced within a country in a period.</dd>
+        <dt>Inflation</dt><dd>A sustained rise in the general price level, reducing the purchasing power of money.</dd>
+        <dt>Fiscal deficit</dt><dd>The gap between government spending and total revenue, often expressed as a percentage of GDP.</dd>
+        <dt>Debt sustainability</dt><dd>The ability of a borrower, especially the state, to service debt without severe stress.</dd>
+        <dt>Current account</dt><dd>The balance of goods, services and net income in international transactions.</dd>
+        <dt>Productivity</dt><dd>Output generated per worker or per unit of input, the deeper long-run driver of wages and competitiveness.</dd>
+        <dt>Monetary policy</dt><dd>Actions by the central bank to influence rates, liquidity and credit conditions.</dd>
+        <dt>Capital formation</dt><dd>Investment in physical and digital assets that expand future productive capacity.</dd>
+      </dl>
+    </section>
+
+    <section id="revision">
+      <h2>Rapid revision sheet</h2><hr class="sec-rule">
+      <div class="note">
+        <h4>One-page answer framework</h4>
+        <ul>
+          <li>Start with the measure: GDP, inflation, deficit, debt, current account or productivity.</li>
+          <li>Identify whether the term is nominal or real, and whether the issue is output, prices, spending or financing.</li>
+          <li>Link the variable to policy: fiscal, monetary, trade, tax or investment decisions.</li>
+          <li>Explain the social effect: wages, jobs, inflation burden, equity, stability and resilience.</li>
+          <li>Close by stating the deeper trade-off: short-run stimulus versus long-run sustainability, or efficiency versus equity.</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <p>Compiled from open sources. Study aid only, not an official publication.</p>
+  <p>Source &amp; contributions: <a href="https://github.com/mohitkushwaha0601/matre">github.com/mohitkushwaha0601/matre</a></p>
+</footer>
+
+</body>
+</html>

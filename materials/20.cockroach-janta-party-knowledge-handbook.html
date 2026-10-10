@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cockroach Janta Party — A Deep Knowledge Handbook</title>
+<meta name="description" content="A neutral case study of the Cockroach Janta Party within India's wider ecosystem of registered-unrecognised, satire and protest-vote political outfits: reported origins, public stunts, stated vision, and a weighed assessment of pros and cons.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1C1B16;
+  --ink-soft:#5C5748;
+  --paper:#F2EFE6;
+  --surface:#FFFFFF;
+  --surface-2:#E8E2D0;
+  --rule:#D3CBB4;
+  --rule-strong:#A89F82;
+  --red:#A6291F;
+  --blue:#134B70;
+  --gold:#B8860B;
+  --green:#2E6B3E;
+  --hero-bg:#1C1B16;
+  --hero-ink:#F2EFE6;
+  --hero-dim:#B8AE8F;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ink:#EDE8D8;
+    --ink-soft:#BCB29A;
+    --paper:#121108;
+    --surface:#1C1A12;
+    --surface-2:#262315;
+    --rule:#3A3522;
+    --rule-strong:#55502F;
+    --red:#E8766A;
+    --blue:#6FB3DE;
+    --gold:#E8C168;
+    --green:#6FCB8B;
+    --hero-bg:#0A0905;
+    --hero-ink:#EDE8D8;
+    --hero-dim:#9B9272;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#EDE8D8;
+  --ink-soft:#BCB29A;
+  --paper:#121108;
+  --surface:#1C1A12;
+  --surface-2:#262315;
+  --rule:#3A3522;
+  --rule-strong:#55502F;
+  --red:#E8766A;
+  --blue:#6FB3DE;
+  --gold:#E8C168;
+  --green:#6FCB8B;
+  --hero-bg:#0A0905;
+  --hero-ink:#EDE8D8;
+  --hero-dim:#9B9272;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1.5rem);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ---------- hero ---------- */
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
+.flagstrip{display:flex;height:12px}
+.flagstrip span{flex:1}
+.f1{background:#FF9933}
+.f2{background:#FFFFFF}
+.f3{background:#138808}
+.f4{background:#000080}
+.f5{background:#1C1B16}
+.f6{background:linear-gradient(90deg,#1C1B16 50%,#B8860B 50%)}
+.f7{background:#134B70}
+.f8{background:#B8860B}
+.hero-inner{max-width:1180px;margin:0 auto;padding:3.2rem 1.5rem 0}
+.kicker{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--hero-dim);margin:0 0 .8rem}
+.motto{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:clamp(1.7rem,5.2vw,2.9rem);line-height:1.2;margin:0;letter-spacing:.005em;max-width:26ch}
+.motto-en{margin:.55rem 0 0;color:var(--hero-dim);font-size:clamp(.95rem,2.4vw,1.1rem);font-style:italic;max-width:62ch}
+.hero h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.5rem,4.3vw,2.35rem);line-height:1.2;margin:2.6rem 0 .5rem;border-top:1px solid rgba(255,255,255,.22);padding-top:1.6rem;max-width:30ch}
+.hero-sub{margin:0;color:var(--hero-dim);max-width:68ch}
+.stamp{margin-top:1.6rem;font-size:.86rem;color:var(--hero-dim);display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+.stamp b{color:var(--hero-ink);font-weight:600}
+
+/* ---------- layout ---------- */
+.shell{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem;display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media (min-width:1000px){
+  .shell{grid-template-columns:255px minmax(0,1fr);gap:3.5rem;padding-top:2.8rem}
+}
+nav.toc{font-size:.9rem}
+@media (min-width:1000px){
+  .toc-mobile{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2rem);align-self:start;max-height:calc(100vh - 5rem);overflow-y:auto}
+}
+nav.toc h2{font-family:"Zilla Slab",Georgia,serif;font-size:.92rem;font-weight:600;margin:0 0 .7rem;padding-bottom:.45rem;border-bottom:2px solid var(--rule-strong)}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc}
+nav.toc li{border-bottom:1px solid var(--rule)}
+nav.toc li:not(.part){counter-increment:toc}
+nav.toc a{display:flex;gap:.6rem;padding:.4rem 0;color:var(--ink-soft);text-decoration:none}
+nav.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--rule-strong);font-variant-numeric:tabular-nums;flex:none}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--red)}
+nav.toc .part{border:0;margin:1.1rem 0 .3rem;font-family:"Zilla Slab",Georgia,serif;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--rule-strong)}
+nav.toc .part::before{content:none}
+.toc-mobile{display:block}
+@media (min-width:1000px){.toc-mobile summary{display:none}}
+.toc-mobile summary{cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:600;padding:.7rem .9rem;background:var(--surface);border:1px solid var(--rule);margin-bottom:1rem}
+@media (max-width:999px){
+  .toc-mobile[open] nav.toc{padding:0 .9rem 1rem}
+  .toc-mobile:not([open]) nav.toc{display:none}
+}
+
+/* ---------- sections ---------- */
+main{min-width:0}
+section{margin:0 0 3.6rem;scroll-margin-top:1.5rem}
+section > h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.45rem,3.6vw,1.95rem);line-height:1.2;margin:0 0 .3rem}
+.part-head{margin:4rem 0 2.2rem;padding:1.1rem 0 .9rem;border-top:4px double var(--rule-strong);border-bottom:1px solid var(--rule)}
+.part-head p{margin:0;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.part-head h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.3rem,3.2vw,1.7rem);margin:.3rem 0 0;color:var(--ink)}
+.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.16rem;margin:2rem 0 .5rem;line-height:1.3}
+h4{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1rem;margin:1.4rem 0 .35rem;color:var(--ink)}
+p{margin:0 0 .95rem;max-width:74ch}
+ul,ol{margin:0 0 1rem;padding-left:1.25rem;max-width:74ch}
+li{margin-bottom:.35rem}
+li::marker{color:var(--rule-strong)}
+strong{font-weight:600}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+/* ---------- components ---------- */
+.lede{font-size:1.06rem;color:var(--ink-soft);max-width:70ch}
+
+.tablewrap{overflow-x:auto;margin:0 0 1.3rem;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.92rem}
+caption{text-align:left;padding:.7rem .85rem .1rem;font-weight:600;color:var(--ink-soft);font-size:.9rem}
+th,td{text-align:left;padding:.55rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{background:var(--surface-2);font-weight:600;border-bottom:2px solid var(--rule-strong);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.num,th.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+.edge{background:var(--surface);border-left:4px solid var(--red);padding:.9rem 1.1rem;margin:1.4rem 0;max-width:74ch}
+.edge p:last-child,.edge ul:last-child,.edge ol:last-child{margin-bottom:0}
+.edge .edge-h{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);display:block;margin-bottom:.25rem;font-size:.95rem}
+.edge.gold{border-left-color:var(--gold)}
+.edge.gold .edge-h{color:var(--gold)}
+.edge.blue{border-left-color:var(--blue)}
+.edge.blue .edge-h{color:var(--blue)}
+.edge.green{border-left-color:var(--green)}
+.edge.green .edge-h{color:var(--green)}
+
+.note{background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;border:1px solid var(--rule);font-size:.95rem}
+.note p:last-child,.note ul:last-child,.note ol:last-child{margin-bottom:0}
+.note h4{margin-top:0}
+
+.panel{background:var(--surface);border:1px solid var(--rule);padding:1rem 1.1rem}
+.panel h4{margin-top:0}
+.panel ul,.panel ol{margin-bottom:0}
+.panel.blue-top{border-top:3px solid var(--blue)}
+.panel.red-top{border-top:3px solid var(--red)}
+.panel.gold-top{border-top:3px solid var(--gold)}
+.panel.green-top{border-top:3px solid var(--green)}
+
+.rungs{max-width:74ch;margin:.3rem 0 0;display:grid;grid-template-columns:9.5rem 1fr;gap:0 1rem}
+.rungs dt{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;color:var(--red);padding-top:.2rem}
+.rungs dd{margin:0 0 .5rem;font-size:.93rem}
+@media (max-width:560px){
+  .rungs{grid-template-columns:1fr;gap:0}
+  .rungs dt{padding-top:.4rem}
+}
+
+.timeline{list-style:none;padding:0;margin:1rem 0 1.4rem;max-width:74ch}
+.timeline li{display:grid;grid-template-columns:8.2rem 1fr;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--rule);margin:0}
+.timeline li:last-child{border-bottom:0}
+.timeline .yr{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);font-variant-numeric:tabular-nums}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:.1rem}}
+
+.qbank{counter-reset:q;list-style:none;padding:0;max-width:74ch}
+.qbank li{counter-increment:q;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.qbank li::before{content:counter(q,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.qbank li:last-child{border-bottom:0}
+
+.dbank{counter-reset:d;list-style:none;padding:0;max-width:74ch}
+.dbank li{counter-increment:d;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.dbank li::before{content:counter(d,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.dbank li:last-child{border-bottom:0}
+
+.grid{display:grid;gap:1rem}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
+
+.card{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--red);padding:1rem 1.1rem}
+.card h4{margin:0 0 .45rem;font-size:1rem}
+.card .name{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.2rem}
+.card .role{font-size:.9rem;color:var(--ink-soft)}
+.card .since{font-size:.78rem;color:var(--green);font-weight:600;margin-top:.45rem}
+
+.term{max-width:74ch;margin:0 0 1.2rem}
+.term dt{font-weight:600;margin-top:.8rem}
+.term dd{margin:.15rem 0 0;color:var(--ink-soft)}
+
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:.1rem .45rem;border:1px solid var(--rule-strong);color:var(--ink-soft);margin-right:.35rem;vertical-align:middle}
+.tag.fact{border-color:var(--green);color:var(--green)}
+.tag.interp{border-color:var(--gold);color:var(--gold)}
+.tag.disputed{border-color:var(--red);color:var(--red)}
+.tag.verify{border-color:var(--blue);color:var(--blue)}
+.spaced{margin-top:.6rem}
+
+footer{border-top:3px double var(--rule-strong);margin-top:2rem;padding-top:1.4rem;color:var(--ink-soft);font-size:.9rem;max-width:74ch}
+footer a{color:var(--blue)}
+
+/* ---------- home button: fixed, links back to the collection homepage ---------- */
+.home-btn{position:fixed;top:16px;left:16px;z-index:60;display:inline-flex;align-items:center;gap:.4rem;background:#14202B;color:#F1F2EC;border:1px solid rgba(241,242,236,.25);padding:.45rem .85rem;border-radius:999px;font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.82rem;font-weight:600;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.3);transition:background .15s ease,transform .15s ease}
+.home-btn:hover,.home-btn:focus-visible{background:#BF2F26;transform:translateY(-1px)}
+.home-btn svg{width:14px;height:14px;flex:none}
+@media print{.home-btn{display:none}}
+
+@media print{
+  .hero{background:none;color:#000;padding-bottom:1rem}
+  .hero-sub,.stamp,.motto-en{color:#333}
+  .flagstrip,.toc-mobile{display:none}
+  .shell{display:block;padding:0}
+  section{page-break-inside:auto;margin-bottom:1.8rem}
+  h2,h3{page-break-after:avoid}
+  .panel,.edge,.note,.tablewrap,figure{page-break-inside:avoid}
+  .part-head{page-break-before:always}
+  body{font-size:10.5pt;background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+
+<a class="home-btn" href="../index.html" aria-label="Back to Handbooks homepage" title="Back to Handbooks homepage">
+  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
+  <span>Home</span>
+</a>
+
+<header class="hero">
+  <div class="flagstrip" aria-hidden="true">
+    <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f5"></span><span class="f6"></span><span class="f7"></span><span class="f8"></span>
+  </div>
+  <div class="hero-inner">
+    <p class="kicker">Fringe politics · satire &amp; protest-vote parties · the Indian electoral system</p>
+    <h1>Cockroach Janta Party: Origins, Stunts, Vision &amp; a Weighed Verdict</h1>
+    <p class="hero-sub">A case study of the Cockroach Janta Party (CJP) within India's wider ecosystem of registered-unrecognised, satire and protest-vote outfits — covering its reported origins, public theatre, stated vision, and a neutral weighing of pros and cons, built for SSB, UPSC and general-knowledge preparation.</p>
+    <p class="stamp">
+      <span>Category <b>Registered-unrecognised / satire outfit</b></span>
+      <span>Core mascot <b>Cockroach (survivability)</b></span>
+      <span>Primary mode <b>Social media &amp; street theatre</b></span>
+      <span>Win condition <b>Attention, not seats</b></span>
+      <span>Evidentiary status <b>Mostly unverified specifics</b></span>
+    </p>
+  </div>
+</header>
+
+<div class="shell">
+
+<details class="toc-mobile" open>
+  <summary>Contents</summary>
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li class="part">How to use this</li>
+      <li><a href="#howto">Using this handbook</a></li>
+
+      <li class="part">Part I · Origins &amp; Context</li>
+      <li><a href="#what-is">What is the Cockroach Janta Party?</a></li>
+      <li><a href="#landscape">India's fringe-party landscape</a></li>
+      <li><a href="#founding">Founding moment and early claims</a></li>
+
+      <li class="part">Part II · Public Theatre &amp; Organisation</li>
+      <li><a href="#stunts">Notable stunts &amp; campaigns</a></li>
+      <li><a href="#symbol-messaging">Symbols, messaging &amp; the satire playbook</a></li>
+      <li><a href="#leadership">Leadership &amp; structure</a></li>
+
+      <li class="part">Part III · Vision, Positioning &amp; Effect</li>
+      <li><a href="#vision">Stated vision &amp; objective</a></li>
+      <li><a href="#ideology-appeal">Ideology and who it appeals to</a></li>
+      <li><a href="#discourse-impact">Impact on political discourse</a></li>
+
+      <li class="part">Part IV · Comparative &amp; Strategic Assessment</li>
+      <li><a href="#comparators">Global comparators</a></li>
+      <li><a href="#weighing">Weighing the party: pros &amp; cons</a></li>
+      <li><a href="#institutional-implications">Institutional implications</a></li>
+
+      <li class="part">Knowledge toolkit</li>
+      <li><a href="#perspectives">Perspectives &amp; controversies</a></li>
+      <li><a href="#scenarios">Scenarios &amp; options</a></li>
+      <li><a href="#qbank">Practice bank: questions</a></li>
+      <li><a href="#debates">Debate motions</a></li>
+      <li><a href="#chronology">Master chronology</a></li>
+      <li><a href="#glossary">Glossary</a></li>
+      <li><a href="#revision">Rapid revision sheet</a></li>
+    </ol>
+  </nav>
+</details>
+
+<main>
+
+<section id="howto">
+  <h2>Using this handbook</h2><hr class="sec-rule">
+  <p class="lede">This handbook treats the Cockroach Janta Party (CJP) as a case study in a well-documented but under-studied corner of Indian democracy: small, often short-lived outfits that register with the Election Commission of India (ECI), adopt a provocative mascot or name, and use satire or street theatre rather than cadre-based organising to be heard. Independent, verifiable reporting on any single such outfit is thin and changes quickly, so this document teaches the pattern as much as the specific name.</p>
+
+  <div class="edge blue">
+    <span class="edge-h">Read this with a verifying eye</span>
+    <p>Wherever a claim about the CJP's founding, leadership or a specific stunt cannot be traced to a stable public record, it is marked <span class="tag verify">Re-verify</span>. Treat those passages as a description of the <em>kind</em> of claim made about such parties, not as a confirmed fact file. In an interview, "reports describe it as..." is safer and more accurate than asserting a disputed detail with false confidence.</p>
+  </div>
+  <p><span class="tag fact">Established</span> settled record · <span class="tag interp">Interpretation</span> analytical judgement · <span class="tag disputed">Disputed</span> contested claim · <span class="tag verify">Re-verify</span> check before quoting.</p>
+</section>
+
+<div class="part-head"><p>Part I · Origins &amp; Context</p><h2>Where the name and the idea come from</h2></div>
+
+<section id="what-is">
+  <h2>What is the Cockroach Janta Party?</h2><hr class="sec-rule">
+  <p>The <strong>Cockroach Janta Party</strong> is described in media and social-media chatter as a small, India-based political outfit that uses the cockroach — an insect popularly associated with surviving almost anything — as its central symbol <span class="tag verify">Re-verify core claim</span>. "Janta" is a common spelling of <em>Janata</em> ("the people"), a word used by dozens of Indian parties since the 1970s Janata movement, signalling a claim to speak for ordinary citizens rather than an establishment elite.</p>
+  <p>Read literally, the name fuses two ideas: survivability and popular mandate. <span class="tag interp">Interpretation</span> outfits of this kind typically position themselves as a mirror held up to mainstream politics — the implied argument being that career politicians, like cockroaches, outlast scandals, defections and election losses regardless of merit. Whether the CJP is formally registered with the ECI as a Registered Unrecognised Political Party (RUPP), is a social-media-only persona, or is a loose label applied to several unconnected local initiatives is itself <span class="tag disputed">Disputed</span> and worth confirming before quoting any single fact about it.</p>
+
+  <div class="edge">
+    <span class="edge-h">Interview edge</span>
+    <p>Lead with the category, not the headline: "it belongs to a known genre of registered-unrecognised satire outfits" is a stronger opening line than any unverified specific about this one party.</p>
+  </div>
+</section>
+
+<section id="landscape">
+  <h2>India's fringe-party landscape</h2><hr class="sec-rule">
+  <p>India's party system has two tiers: a small number of <strong>recognised</strong> national and state parties that clear vote-share thresholds, and several thousand <strong>Registered Unrecognised Political Parties (RUPPs)</strong> that file with the ECI under Section 29A of the Representation of the People Act, 1951, but never cross the recognition bar <span class="tag fact">Established</span>. RUPP counts fluctuate year to year and are best re-checked against the latest ECI list rather than quoted from memory <span class="tag verify">Re-verify current count</span>.</p>
+  <p>Most RUPPs never contest an election, exist mainly for symbol or tax-exemption purposes, or are vehicles for a single local leader. A smaller subset is openly satirical or protest-oriented, using an absurd name, mascot or manifesto to draw attention to apathy, corruption or the "lesser of two evils" feel of first-past-the-post voting. The CJP sits in this satire/protest bracket, alongside other India-registered outfits with similarly pointed names, rather than in the cadre-based, ideology-first bracket of the larger recognised parties.</p>
+
+  <div class="note">
+    <h4>Why this bracket exists at all</h4>
+    <ul>
+      <li>India's registration bar for a new party is deliberately low, to keep the system open to outsiders.</li>
+      <li>A party need not contest an election to stay registered, only to remain inactive without formal consequence for some time.</li>
+      <li>This openness is both the system's democratic strength and the source of its "paper party" clutter problem.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="founding">
+  <h2>Founding moment and early claims</h2><hr class="sec-rule">
+  <p>Accounts of when and by whom the CJP was founded are not consistently documented in open sources at the time of writing <span class="tag verify">Re-verify founder, year and city</span>. Outfits of this type commonly trace their founding to a specific local grievance — a civic failure, a corruption scandal, or frustration with repeat candidates switching parties ("Aaya Ram Gaya Ram" defections) — rather than to a national ideological debate.</p>
+
+  <div class="edge gold">
+    <span class="edge-h">What to say if asked directly</span>
+    <p>The safest answer is to describe the category accurately — "a registered-unrecognised, satire-style outfit; I'd want to verify the specific founding details before commenting further" — and then pivot to what you know with confidence: how RUPPs are registered, why such parties emerge, and what they reveal about voter sentiment. That shows judgement rather than guessing.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part II · Public Theatre &amp; Organisation</p><h2>How such outfits are run and seen</h2></div>
+
+<section id="stunts">
+  <h2>Notable stunts &amp; campaigns</h2><hr class="sec-rule">
+  <p>Satire and protest outfits in this bracket are generally reported to favour low-cost, high-visibility theatre over large rallies: mock "award" ceremonies outside government offices, costume marches featuring the party's mascot, spoof manifestos circulated on social media, and candidates filing nominations with deliberately provocative symbols or slogans <span class="tag interp">Interpretation</span> of the genre generally. Any specific stunt attributed to the CJP by name should be treated as <span class="tag verify">Re-verify</span> until traced to a dated, named source — social-media virality often outruns factual confirmation for outfits of this size.</p>
+
+  <div class="note">
+    <h4>Why the "stunt" label is not automatically dismissive</h4>
+    <p>Election-time theatre has a long Indian pedigree: independent candidates contesting on a protest theme, or symbolic acts outside legislatures, have periodically shifted media coverage toward an issue the major parties preferred to downplay. Judge a stunt by whether it names a real grievance, not only by whether it is funny.</p>
+  </div>
+</section>
+
+<section id="symbol-messaging">
+  <h2>Symbols, messaging &amp; the satire playbook</h2><hr class="sec-rule">
+  <p>Every candidate needs a ballot symbol allotted by the ECI under the Election Symbols (Reservation and Allotment) Order, 1968; recognised parties keep a reserved symbol, while RUPP and independent candidates draw from a "free symbols" list for each election, which can include mundane household objects rather than anything party-chosen <span class="tag fact">Established</span> process. A party built around an insect mascot would not necessarily receive that insect as its ballot symbol — branding and the administrative symbol allotment are usually separate things.</p>
+  <p>Messaging for such outfits leans on short-form video, memes and a deliberately irreverent tone, aimed at viewers who find mainstream party rhetoric interchangeable. <span class="tag interp">Interpretation</span> this is a low-cost substitute for the ground organisation larger parties use, trading reach for depth: such content can travel far online while converting into very few actual votes.</p>
+</section>
+
+<section id="leadership">
+  <h2>Leadership &amp; structure</h2><hr class="sec-rule">
+  <p>Public information on who leads, funds or formally structures the CJP is sparse and inconsistent across sources <span class="tag verify">Re-verify</span>. Many RUPPs of this kind are effectively a single founder-spokesperson plus a small informal circle, rather than a layered organisation with state units, an elected working committee, or a published constitution — a structural feature, not a judgement, since the law does not require a RUPP to build cadre strength to remain registered.</p>
+  <p>This thin structure is itself diagnostic: it explains why such parties rarely win a seat, why they can appear and disappear between election cycles, and why media coverage of them tends to spike around nomination day and fade soon after, rather than sustaining through a term.</p>
+</section>
+
+<div class="part-head"><p>Part III · Vision, Positioning &amp; Effect</p><h2>What it claims to want, and what it actually does</h2></div>
+
+<section id="vision">
+  <h2>Stated vision &amp; objective</h2><hr class="sec-rule">
+  <p>Where a stated vision or manifesto is attributed to the CJP, it typically centres on anti-corruption, anti-incumbency and distrust of dynastic or defection-driven politics <span class="tag verify">Re-verify exact wording</span>, echoing the broader protest-vote constituency that outfits like this court. The "objective," as commonly described for parties of this kind, is less to form a government than to be a visible reminder that voters are not obligated to choose between a fixed set of established options.</p>
+
+  <div class="edge">
+    <span class="edge-h">Interview edge</span>
+    <p>Frame this as a <em>signalling</em> strategy rather than a governing strategy: the party's "win condition" is attention and symbolic protest, not seats. That distinction is the single most useful thing to say about any outfit in this category.</p>
+  </div>
+</section>
+
+<section id="ideology-appeal">
+  <h2>Ideology and who it appeals to</h2><hr class="sec-rule">
+  <p>Ideologically, satire-and-protest outfits are usually thin by design — they borrow anti-establishment language from across the spectrum without committing to a coherent left-right position, which lets them appeal to disaffected voters regardless of which mainstream party those voters previously backed. <span class="tag interp">Interpretation</span> this is a feature, not a gap: a sharply defined ideology would narrow, rather than widen, the protest coalition such outfits try to assemble.</p>
+  <p>Their core audience tends to be young, urban, online and politically disengaged but not apathetic — people who vote rarely, distrust much coverage of mainstream parties, and respond to humour and irreverence more readily than to policy detail. This is a narrower and more volatile base than a recognised party's cadre, which is part of why such outfits rarely convert attention into vote share.</p>
+</section>
+
+<section id="discourse-impact">
+  <h2>Impact on political discourse</h2><hr class="sec-rule">
+  <p>Even without winning seats, satire parties can shift discourse at the margins: forcing a local issue into news coverage, giving journalists a sharper quote than official party spokespeople typically offer, or giving young voters a lower-stakes entry point into following elections at all. <span class="tag interp">Interpretation</span> their main measurable effect is usually reach — impressions, shares, press mentions — rather than electoral outcome.</p>
+  <p>Mainstream parties occasionally respond by adopting the satirical framing themselves, or by dismissing it as a distraction; both reactions keep the small outfit in the news cycle longer than its vote share alone would justify. This disproportion between attention and electoral weight is the central analytical fact to remember about the category.</p>
+</section>
+
+<div class="part-head"><p>Part IV · Comparative &amp; Strategic Assessment</p><h2>How it compares, and how it should be judged</h2></div>
+
+<section id="comparators">
+  <h2>Global comparators</h2><hr class="sec-rule">
+  <div class="tablewrap">
+    <table>
+      <caption>Satire and protest parties elsewhere — for comparative framing <span class="tag verify">Re-verify current status</span></caption>
+      <thead><tr><th>Country</th><th>Party</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>United Kingdom</td><td>Official Monster Raving Loony Party</td><td>Founded 1983; fields joke candidates to highlight "free symbol"/lost-deposit quirks of UK elections</td></tr>
+        <tr><td>Canada</td><td>Rhinoceros Party</td><td>Active 1963-1993, later revived; ran deliberately absurd manifestos as protest against politics-as-usual</td></tr>
+        <tr><td>United States</td><td>Write-in &amp; joke candidacies</td><td>No single national satire party; satire runs mostly through write-in campaigns and media stunts</td></tr>
+        <tr><td>Germany</td><td>Die PARTEI</td><td>Founded 2004 by satirists; has won European Parliament seats, blending satire with real representation</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><span class="tag interp">Interpretation</span> India's satire outfits generally stay local and short-lived compared with Die PARTEI, which shows a satire party <em>can</em> professionalise into a durable minor party if it builds real organisation — a path open to, but not yet taken by, most Indian equivalents.</p>
+</section>
+
+<section id="weighing">
+  <h2>Weighing the party: pros &amp; cons</h2><hr class="sec-rule">
+  <p class="lede">Judged as a type rather than by any single unverified claim, this style of politics carries a genuine, if modest, mix of democratic upside and structural weakness.</p>
+  <div class="grid two">
+    <div class="panel green-top">
+      <h4>What this style of politics gets right</h4>
+      <ul>
+        <li>Lowers the barrier to political participation for disengaged, especially younger, voters.</li>
+        <li>Exposes real absurdities in party-hopping, defection and symbolic politics through ridicule.</li>
+        <li>Costs the exchequer and the outfit very little, unlike large-scale campaigning.</li>
+        <li>Can force a local issue into coverage that mainstream parties would rather avoid.</li>
+      </ul>
+    </div>
+    <div class="panel red-top">
+      <h4>Where it falls short</h4>
+      <ul>
+        <li>Rarely converts attention into votes, seats or durable local organisation.</li>
+        <li>Thin structure and unclear leadership make accountability difficult to assess.</li>
+        <li>Can trivialise real grievances if the humour overtakes the substance.</li>
+        <li>A weak public record makes such outfits easy to misquote or over-attribute online — a risk this handbook has tried to avoid by tagging uncertain claims throughout.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="institutional-implications">
+  <h2>Institutional implications</h2><hr class="sec-rule">
+  <p>The existence of thousands of RUPPs, many dormant or symbolic, has prompted the ECI to tighten verification and periodically act against parties that do not contest elections or file required returns <span class="tag fact">Established</span> general practice, though specific drives and numbers should be re-verified against current ECI notifications <span class="tag verify">Re-verify</span>. Satire outfits sit inside this broader reform conversation: they are legal to register, but they also illustrate why documentation, funding disclosure and genuine electoral participation are reasonable conditions to keep attached to registration.</p>
+  <p><span class="tag interp">Interpretation</span> a healthy democracy can tolerate, and arguably benefits from, a margin of satire and protest candidacies; the institutional challenge is distinguishing a genuine, if small, political voice from a purely symbolic registration with no intention of contesting or disclosing anything.</p>
+</section>
+
+<div class="part-head"><p>Knowledge toolkit</p><h2>Analysis, practice and revision</h2></div>
+
+<section id="perspectives">
+  <h2>Perspectives &amp; controversies</h2><hr class="sec-rule">
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>Sympathetic view</h4>
+      <p><span class="tag interp">Interpretation</span> Supporters frame such parties as a healthy safety valve — proof that India's low barrier to registering a party keeps the system open to outsiders, and that satire is a legitimate form of political speech, protected much as a pamphlet or a protest march would be.</p>
+    </div>
+    <div class="panel red-top">
+      <h4>Critical view</h4>
+      <p><span class="tag interp">Interpretation</span> Critics argue that thinly organised, rarely-contesting outfits clutter the ECI's rolls, can be misused for reasons unrelated to politics, and that media attention to a joke candidacy sometimes crowds out coverage of serious independents with a genuine local base.</p>
+    </div>
+  </div>
+  <div class="note">
+    <h4>Lesser-known fact</h4>
+    <p>A large share of India's RUPPs have never contested a single election since registering <span class="tag verify">Re-verify current share</span> — a satire outfit like the CJP is a visible minority within a much larger, mostly invisible population of paper parties.</p>
+  </div>
+</section>
+
+<section id="scenarios">
+  <h2>Scenarios &amp; options</h2><hr class="sec-rule">
+  <p>Three broad paths are available to an outfit like the CJP, presented neutrally rather than as a recommendation:</p>
+  <div class="grid three">
+    <div class="panel green-top">
+      <h4>Professionalise</h4>
+      <p>Build a real local base, contest consistently, and gradually shed the purely satirical framing — the Die PARTEI path. Raises credibility but risks losing the attention-generating irreverence that built its following.</p>
+    </div>
+    <div class="panel gold-top">
+      <h4>Stay symbolic</h4>
+      <p>Continue as an occasional, attention-generating presence around election season without sustained organisation. Keeps costs low but caps long-term influence and credibility.</p>
+    </div>
+    <div class="panel red-top">
+      <h4>Fade out</h4>
+      <p>Many RUPPs of this kind simply stop filing or contesting and are eventually acted upon by the ECI for inactivity — the most common outcome for small registered-unrecognised parties generally.</p>
+    </div>
+  </div>
+</section>
+
+<section id="qbank">
+  <h2>Practice bank: questions</h2><hr class="sec-rule">
+  <p class="lede">Answer each aloud in about ninety seconds.</p>
+  <ol class="qbank">
+    <li>What is a Registered Unrecognised Political Party (RUPP), and how does it differ from a recognised party?</li>
+    <li>Why might a group choose a deliberately provocative name and mascot, such as a cockroach, for a political outfit?</li>
+    <li>What is the "win condition" for a satire or protest-vote party, if it is not winning seats?</li>
+    <li>How does the ECI's free-symbol allotment system work for independents and RUPPs?</li>
+    <li>What risks arise from treating unverified social-media claims about a small party as settled fact?</li>
+    <li>Compare the CJP-type outfit with Germany's Die PARTEI. What would it take for one to professionalise like the other?</li>
+    <li>Why do thousands of RUPPs never contest an election after registering?</li>
+    <li>What is the "Aaya Ram Gaya Ram" phenomenon, and how does it feed anti-defection protest politics?</li>
+    <li>Is political satire a legitimate form of democratic participation, or does it trivialise serious issues? Argue both sides.</li>
+    <li>What institutional reforms could distinguish genuine small parties from purely symbolic registrations?</li>
+    <li>How should a candidate or officer respond, in an interview, to a question about an entity they cannot verify?</li>
+    <li>What does the disproportion between media attention and vote share tell us about modern political communication?</li>
+    <li>If you were advising the ECI, what minimum activity threshold would you set before delisting a dormant RUPP?</li>
+  </ol>
+</section>
+
+<section id="debates">
+  <h2>Debate motions</h2><hr class="sec-rule">
+  <ol class="dbank">
+    <li>This house believes satire parties strengthen, rather than weaken, democratic participation.</li>
+    <li>This house would raise the registration bar for new political parties in India.</li>
+    <li>This house believes media coverage of joke candidacies does more harm than good.</li>
+    <li>This house would require all RUPPs to contest at least one election within five years or be delisted.</li>
+    <li>This house believes anti-incumbency sentiment is better expressed through NOTA than through a protest party.</li>
+    <li>This house believes humour is a legitimate tool of political accountability.</li>
+    <li>This house would mandate public disclosure of leadership and funding for every registered party, however small.</li>
+  </ol>
+</section>
+
+<section id="chronology">
+  <h2>Master chronology</h2><hr class="sec-rule">
+  <ul class="timeline">
+    <li><span class="yr">1951</span><span>Representation of the People Act enacted, later amended to add Section 29A governing party registration.</span></li>
+    <li><span class="yr">1963</span><span>Canada's Rhinoceros Party founded, an early modern template for satire-party protest politics.</span></li>
+    <li><span class="yr">1968</span><span>Election Symbols (Reservation and Allotment) Order issued, creating the reserved/free symbol system still used today.</span></li>
+    <li><span class="yr">1977</span><span>The original Janata Party forms, popularising "Janata" as a party-name prefix in India.</span></li>
+    <li><span class="yr">1983</span><span>UK's Official Monster Raving Loony Party founded.</span></li>
+    <li><span class="yr">1989</span><span>Section 29A added to the Representation of the People Act, formalising party registration with the ECI.</span></li>
+    <li><span class="yr">2004</span><span>Germany's Die PARTEI founded by satirists; later wins European Parliament seats.</span></li>
+    <li><span class="yr">2013</span><span>NOTA (None of the Above) introduced on Indian ballots, offering a formal protest-vote channel.</span></li>
+    <li><span class="yr">2019-2024</span><span>ECI periodically reviews and acts against inactive RUPPs as part of electoral-roll clean-up drives <span class="tag verify">Re-verify specific drives</span>.</span></li>
+    <li><span class="yr">Undated</span><span>Reports describe a "Cockroach Janta Party" active in India's satire/protest-politics space <span class="tag verify">Re-verify founding details</span>.</span></li>
+  </ul>
+</section>
+
+<section id="glossary">
+  <h2>Glossary</h2><hr class="sec-rule">
+  <dl class="term">
+    <dt>RUPP</dt>
+    <dd>Registered Unrecognised Political Party — registered with the ECI under Section 29A but not meeting the vote-share thresholds for formal recognition.</dd>
+    <dt>Recognised party</dt>
+    <dd>A national or state party that has crossed ECI-defined vote-share or seat thresholds, earning a reserved symbol and other privileges.</dd>
+    <dt>Free symbol</dt>
+    <dd>A ballot symbol drawn from the ECI's unreserved list, allotted to independents and RUPP candidates for a given election.</dd>
+    <dt>Anti-incumbency</dt>
+    <dd>Voter preference for change over continuity, often exploited by protest and satire candidacies.</dd>
+    <dt>Aaya Ram Gaya Ram</dt>
+    <dd>Colloquial phrase for frequent political defection, originating from a 1967 Haryana legislator who switched parties multiple times in a day.</dd>
+    <dt>Protest vote</dt>
+    <dd>A vote cast to express dissatisfaction with available choices rather than positive support for a candidate.</dd>
+    <dt>NOTA</dt>
+    <dd>"None of the Above" — a ballot option introduced in India in 2013 allowing voters to formally reject all contesting candidates.</dd>
+    <dt>Lost deposit</dt>
+    <dd>Forfeiture of a candidate's security deposit for failing to secure a minimum vote-share threshold, common among fringe candidates.</dd>
+  </dl>
+</section>
+
+<section id="revision">
+  <h2>Rapid revision sheet</h2><hr class="sec-rule">
+  <div class="note">
+    <h4>Cockroach Janta Party on one page</h4>
+    <ul>
+      <li><strong>What it is:</strong> a reported registered-unrecognised/satire-style outfit using a cockroach mascot to symbolise political survivability; core founding specifics are unverified.</li>
+      <li><strong>System it sits in:</strong> RUPPs under Section 29A of the RP Act, 1951; thousands registered, most inactive.</li>
+      <li><strong>Method:</strong> low-cost street theatre, mock events, social-media satire, free-symbol nominations.</li>
+      <li><strong>Structure:</strong> thin, founder-centric, rarely documented in detail.</li>
+      <li><strong>Vision:</strong> anti-corruption, anti-incumbency, anti-dynasty protest signalling rather than a governing programme.</li>
+      <li><strong>Appeal:</strong> young, urban, disengaged-but-not-apathetic voters.</li>
+      <li><strong>Pros:</strong> participation on-ramp, exposes absurdities, low cost, forces local issues into coverage.</li>
+      <li><strong>Cons:</strong> rarely converts to votes, weak accountability, risk of trivialising real grievances, easy to misquote.</li>
+      <li><strong>Comparators:</strong> Monster Raving Loony Party (UK, 1983), Rhinoceros Party (Canada, 1963), Die PARTEI (Germany, 2004, the only one to professionalise into real representation).</li>
+      <li><strong>Golden rule:</strong> tag every unverified specific; lead with the category, not the headline.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer>
+  <p>Compiled from open sources and general knowledge of India's party-registration system. Study aid only, not an official publication. Any claim marked "Re-verify" should be checked against current Election Commission of India records and dated news sources before being quoted as fact.</p>
+  <p>Source &amp; contributions: <a href="https://github.com/mohitkushwaha0601/matre">github.com/mohitkushwaha0601/matre</a></p>
+</footer>
+</body>
+</html>

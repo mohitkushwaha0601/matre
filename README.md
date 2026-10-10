@@ -25,8 +25,13 @@ Defence, current affairs, geopolitics and strategic studies.
 | [World Geopolitics Atlas](materials/17.world_geopolitics_map_guide.html) | HTML | strategic maps, geography and chokepoints |
 | [Asian Games 2026 & India](materials/18.asian-games-2026-knowledge-handbook.html) | HTML | Asian Games origins, Aichi-Nagoya 2026 and India's sporting journey |
 | [International Multi-Sport Games](materials/19.international-multi-sport-games-knowledge-handbook.html) | HTML | Olympics, Paralympics, Commonwealth and other Games: origins, history and eminence |
+| [Cockroach Janta Party](materials/20.cockroach-janta-party-knowledge-handbook.html) | HTML | registered-unrecognised and satire parties in India: origins, stunts, vision and a weighed verdict |
+| [Economic Terms & India’s Future](materials/21.economic-terms-india-knowledge-handbook.html) | HTML | GDP, fiscal policy, inflation, debt, growth risks and the roadmap for India’s next decade |
+| [Exercise Tarang Shakti 2026](materials/22.exercise-tarang-shakti-2026-knowledge-handbook.html) | HTML | multilateral air combat, interoperability, force integration and strategic exercise design |
+| [Naval Exercises in 2025-26](materials/23.naval-exercises-2025-26-knowledge-handbook.html) | HTML | maritime readiness, interoperability, sea-lane security and naval exercise design |
+| [Indian Coast Guard vs Indian Navy](materials/24.indian-coast-guard-vs-indian-navy-knowledge-handbook.html) | HTML | mandates, force design, coastal security, deterrence and the maritime overlap between India’s two leading services |
 
-**Total:** 19 study pages
+**Total:** 24 study pages
 
 ---
 
@@ -41,4 +46,4 @@ This project is designed for a lightweight static HTML workflow. The documents a
 
 ---
 
-**Updated:** 06 October 2026 | **Format:** static HTML study library
+**Updated:** 10 October 2026 | **Format:** static HTML study library
