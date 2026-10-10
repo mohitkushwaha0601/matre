@@ -30,7 +30,7 @@ Defence, current affairs, geopolitics and strategic studies.
 | [Exercise Tarang Shakti 2026](materials/22.exercise-tarang-shakti-2026-knowledge-handbook.html) | HTML | multilateral air combat, interoperability, force integration and strategic exercise design |
 | [Naval Exercises in 2025-26](materials/23.naval-exercises-2025-26-knowledge-handbook.html) | HTML | maritime readiness, interoperability, sea-lane security and naval exercise design |
 | [Indian Coast Guard vs Indian Navy](materials/24.indian-coast-guard-vs-indian-navy-knowledge-handbook.html) | HTML | mandates, force design, coastal security, deterrence and the maritime overlap between India’s two leading services |
-| [Reasoning for National & Global Issues](materials/25.reasoning-for-national-global-issues-technology-ethics-defence-policy-knowledge-handbook.html) | HTML | a practical framework for forming defensible views on governance, technology, ethics, security and defence policy |
+| [India’s Domestic & Global Issues](materials/25.reasoning-for-national-global-issues-technology-ethics-defence-policy-knowledge-handbook.html) | HTML | policy-brief style analysis of growth, governance, China, Pakistan, the US, the Indo-Pacific, technology and defence with arguments for/against and way-forward |
 
 **Total:** 25 study pages
 
