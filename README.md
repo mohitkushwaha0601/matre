@@ -31,8 +31,10 @@ Defence, current affairs, geopolitics and strategic studies.
 | [Naval Exercises in 2025-26](materials/23.naval-exercises-2025-26-knowledge-handbook.html) | HTML | maritime readiness, interoperability, sea-lane security and naval exercise design |
 | [Indian Coast Guard vs Indian Navy](materials/24.indian-coast-guard-vs-indian-navy-knowledge-handbook.html) | HTML | mandates, force design, coastal security, deterrence and the maritime overlap between India’s two leading services |
 | [India’s Domestic & Global Issues](materials/25.reasoning-for-national-global-issues-technology-ethics-defence-policy-knowledge-handbook.html) | HTML | policy-brief style analysis of growth, governance, China, Pakistan, the US, the Indo-Pacific, technology and defence with arguments for/against and way-forward |
+| [Bharwari — A Hometown Knowledge Handbook](materials/26.bharwari-uttar-pradesh-knowledge-handbook.html) | HTML | general-knowledge profile of Bharwari (Kaushambi district, UP): geography, ancient Kaushambi links, history, railway/sugar-mill economy and local culture, not SSB-specific |
+| [Prayagraj — Defence, Heritage & Geopolitics Handbook](materials/27.prayagraj-defence-geopolitics-knowledge-handbook.html) | HTML | Sangam geography, Mughal-fort and post-1857 garrison history, Allahabad Cantonment and Air Force Station Bamrauli, and why heartland garrison cities matter to India's strategic geography |
 
-**Total:** 25 study pages
+**Total:** 27 study pages
 
 ---
 
@@ -47,4 +49,4 @@ This project is designed for a lightweight static HTML workflow. The documents a
 
 ---
 
-**Updated:** 10 October 2026 | **Format:** static HTML study library
+**Updated:** 11 October 2026 | **Format:** static HTML study library
