@@ -42,8 +42,9 @@ Defence, current affairs, geopolitics and strategic studies.
 | [India's Coastal Regions, Navy and Coast Guard](materials/34.indian-coastal-regions-navy-coast-guard-knowledge-handbook.html) | HTML | coast-by-coast regions, bases and ports, Navy and Coast Guard presence, post-26/11 coastal security, threats, disaster response (21 sections, 2-3 hrs) |
 | [Indian Navy's Humanitarian Efforts](materials/35.indian-navy-humanitarian-efforts-knowledge-handbook.html) | HTML | HADR and NEO concepts, 2004 tsunami, evacuations, floods and cyclones, neighbourhood and distant relief, rescue at sea, soft power and limits (21 sections, 2-3 hrs) |
 | [Political Status of India's States and UTs](materials/36.political-status-states-uts-india-knowledge-handbook.html) | HTML | Union of States, UTs, Articles 370 and 371, Fifth and Sixth Schedules, Northeast, centre-state powers, statehood, delimitation, language politics (21 sections, 2-3 hrs) |
+| [International Alliances, Groups and Institutions](materials/37.international-alliances-groups-institutions-knowledge-handbook.html) | HTML | UN system and Security Council, NATO, US alliances, Quad, SCO, arms-control regimes, G20, BRICS, regional bodies, IMF/WTO, ICJ/ICC, India's multi-alignment (21 sections, 2-3 hrs) |
 
-**Total:** 36 study pages
+**Total:** 37 study pages
 
 ---
 

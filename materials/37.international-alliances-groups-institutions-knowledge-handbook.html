@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>International Alliances, Groups and Institutions — A Deep Knowledge Handbook</title>
+<meta name="description" content="A 21-section handbook on the main international alliances, groupings and institutions: the United Nations system and Security Council, NATO and US-led alliances, Eurasian blocs, arms-control regimes, G7, G20, BRICS, regional organisations, financial and legal bodies, India's strategic autonomy and SSB-style practice material.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0F1E2E;
+  --ink-soft:#4E6074;
+  --paper:#F2F5F8;
+  --surface:#FFFFFF;
+  --surface-2:#E4EAF0;
+  --rule:#CFD8E1;
+  --rule-strong:#8DA0B3;
+  --red:#B3342B;
+  --blue:#1F6FB2;
+  --gold:#A67A0F;
+  --green:#2E7D55;
+  --hero-bg:#0B2A4A;
+  --hero-ink:#F2F5F8;
+  --hero-dim:#A9BDD1;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ink:#E8EEF4;
+    --ink-soft:#AEBCCB;
+    --paper:#0B121A;
+    --surface:#121C27;
+    --surface-2:#192634;
+    --rule:#263646;
+    --rule-strong:#4A6078;
+    --red:#F08F86;
+    --blue:#7FBDF0;
+    --gold:#E3B65A;
+    --green:#77C99A;
+    --hero-bg:#050A10;
+    --hero-ink:#E8EEF4;
+    --hero-dim:#8FA1B3;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E8EEF4;
+  --ink-soft:#AEBCCB;
+  --paper:#0B121A;
+  --surface:#121C27;
+  --surface-2:#192634;
+  --rule:#263646;
+  --rule-strong:#4A6078;
+  --red:#F08F86;
+  --blue:#7FBDF0;
+  --gold:#E3B65A;
+  --green:#77C99A;
+  --hero-bg:#050A10;
+  --hero-ink:#E8EEF4;
+  --hero-dim:#8FA1B3;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1.5rem);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ---------- hero ---------- */
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
+.flagstrip{display:flex;height:12px}
+.flagstrip span{flex:1}
+.f1{background:#0B2A4A}
+.f2{background:#009EDB}
+.f3{background:#FFFFFF}
+.f4{background:#003399}
+.f5{background:#FFCC00}
+.f6{background:#DE2910}
+.f7{background:#2E7D55}
+.f8{background:#0A1622}
+.hero-inner{max-width:1180px;margin:0 auto;padding:3.2rem 1.5rem 0}
+.kicker{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--hero-dim);margin:0 0 .8rem}
+.motto{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:clamp(1.7rem,5.2vw,2.9rem);line-height:1.2;margin:0;letter-spacing:.005em;max-width:26ch}
+.motto-en{margin:.55rem 0 0;color:var(--hero-dim);font-size:clamp(.95rem,2.4vw,1.1rem);font-style:italic;max-width:62ch}
+.hero h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.5rem,4.3vw,2.35rem);line-height:1.2;margin:2.6rem 0 .5rem;border-top:1px solid rgba(255,255,255,.22);padding-top:1.6rem;max-width:30ch}
+.hero-sub{margin:0;color:var(--hero-dim);max-width:68ch}
+.stamp{margin-top:1.6rem;font-size:.86rem;color:var(--hero-dim);display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+.stamp b{color:var(--hero-ink);font-weight:600}
+
+/* ---------- layout ---------- */
+.shell{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem;display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media (min-width:1000px){
+  .shell{grid-template-columns:255px minmax(0,1fr);gap:3.5rem;padding-top:2.8rem}
+}
+nav.toc{font-size:.9rem}
+@media (min-width:1000px){
+  .toc-mobile{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2rem);align-self:start;max-height:calc(100vh - 5rem);overflow-y:auto}
+}
+nav.toc h2{font-family:"Zilla Slab",Georgia,serif;font-size:.92rem;font-weight:600;margin:0 0 .7rem;padding-bottom:.45rem;border-bottom:2px solid var(--rule-strong)}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc}
+nav.toc li{border-bottom:1px solid var(--rule)}
+nav.toc li:not(.part){counter-increment:toc}
+nav.toc a{display:flex;gap:.6rem;padding:.4rem 0;color:var(--ink-soft);text-decoration:none}
+nav.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--rule-strong);font-variant-numeric:tabular-nums;flex:none}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--red)}
+nav.toc .part{border:0;margin:1.1rem 0 .3rem;font-family:"Zilla Slab",Georgia,serif;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--rule-strong)}
+nav.toc .part::before{content:none}
+.toc-mobile{display:block}
+@media (min-width:1000px){.toc-mobile summary{display:none}}
+.toc-mobile summary{cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:600;padding:.7rem .9rem;background:var(--surface);border:1px solid var(--rule);margin-bottom:1rem}
+@media (max-width:999px){
+  .toc-mobile[open] nav.toc{padding:0 .9rem 1rem}
+  .toc-mobile:not([open]) nav.toc{display:none}
+}
+
+/* ---------- sections ---------- */
+main{min-width:0}
+section{margin:0 0 3.6rem;scroll-margin-top:1.5rem}
+section > h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.45rem,3.6vw,1.95rem);line-height:1.2;margin:0 0 .3rem}
+.part-head{margin:4rem 0 2.2rem;padding:1.1rem 0 .9rem;border-top:4px double var(--rule-strong);border-bottom:1px solid var(--rule)}
+.part-head p{margin:0;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.part-head h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.3rem,3.2vw,1.7rem);margin:.3rem 0 0;color:var(--ink)}
+.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.16rem;margin:2rem 0 .5rem;line-height:1.3}
+h4{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1rem;margin:1.4rem 0 .35rem;color:var(--ink)}
+p{margin:0 0 .95rem;max-width:74ch}
+ul,ol{margin:0 0 1rem;padding-left:1.25rem;max-width:74ch}
+li{margin-bottom:.35rem}
+li::marker{color:var(--rule-strong)}
+strong{font-weight:600}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+/* ---------- components ---------- */
+.lede{font-size:1.06rem;color:var(--ink-soft);max-width:70ch}
+
+.tablewrap{overflow-x:auto;margin:0 0 1.3rem;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.92rem}
+caption{text-align:left;padding:.7rem .85rem .1rem;font-weight:600;color:var(--ink-soft);font-size:.9rem}
+th,td{text-align:left;padding:.55rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{background:var(--surface-2);font-weight:600;border-bottom:2px solid var(--rule-strong);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.num,th.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+.edge{background:var(--surface);border-left:4px solid var(--red);padding:.9rem 1.1rem;margin:1.4rem 0;max-width:74ch}
+.edge p:last-child,.edge ul:last-child,.edge ol:last-child{margin-bottom:0}
+.edge .edge-h{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);display:block;margin-bottom:.25rem;font-size:.95rem}
+.edge.gold{border-left-color:var(--gold)}
+.edge.gold .edge-h{color:var(--gold)}
+.edge.blue{border-left-color:var(--blue)}
+.edge.blue .edge-h{color:var(--blue)}
+.edge.green{border-left-color:var(--green)}
+.edge.green .edge-h{color:var(--green)}
+
+.note{background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;border:1px solid var(--rule);font-size:.95rem}
+.note p:last-child,.note ul:last-child,.note ol:last-child{margin-bottom:0}
+.note h4{margin-top:0}
+
+.panel{background:var(--surface);border:1px solid var(--rule);padding:1rem 1.1rem}
+.panel h4{margin-top:0}
+.panel ul,.panel ol{margin-bottom:0}
+.panel.blue-top{border-top:3px solid var(--blue)}
+.panel.red-top{border-top:3px solid var(--red)}
+.panel.gold-top{border-top:3px solid var(--gold)}
+.panel.green-top{border-top:3px solid var(--green)}
+
+.rungs{max-width:74ch;margin:.3rem 0 0;display:grid;grid-template-columns:9.5rem 1fr;gap:0 1rem}
+.rungs dt{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;color:var(--red);padding-top:.2rem}
+.rungs dd{margin:0 0 .5rem;font-size:.93rem}
+@media (max-width:560px){
+  .rungs{grid-template-columns:1fr;gap:0}
+  .rungs dt{padding-top:.4rem}
+}
+
+.timeline{list-style:none;padding:0;margin:1rem 0 1.4rem;max-width:74ch}
+.timeline li{display:grid;grid-template-columns:8.2rem 1fr;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--rule);margin:0}
+.timeline li:last-child{border-bottom:0}
+.timeline .yr{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);font-variant-numeric:tabular-nums}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:.1rem}}
+
+.qbank{counter-reset:q;list-style:none;padding:0;max-width:74ch}
+.qbank li{counter-increment:q;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.qbank li::before{content:counter(q,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.qbank li:last-child{border-bottom:0}
+
+.dbank{counter-reset:d;list-style:none;padding:0;max-width:74ch}
+.dbank li{counter-increment:d;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.dbank li::before{content:counter(d,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.dbank li:last-child{border-bottom:0}
+
+.grid{display:grid;gap:1rem}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
+
+.card{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--red);padding:1rem 1.1rem}
+.card h4{margin:0 0 .45rem;font-size:1rem}
+.card .name{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.2rem}
+.card .role{font-size:.9rem;color:var(--ink-soft)}
+.card .since{font-size:.78rem;color:var(--green);font-weight:600;margin-top:.45rem}
+
+.term{max-width:74ch;margin:0 0 1.2rem}
+.term dt{font-weight:600;margin-top:.8rem}
+.term dd{margin:.15rem 0 0;color:var(--ink-soft)}
+
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:.1rem .45rem;border:1px solid var(--rule-strong);color:var(--ink-soft);margin-right:.35rem;vertical-align:middle}
+.tag.fact{border-color:var(--green);color:var(--green)}
+.tag.interp{border-color:var(--gold);color:var(--gold)}
+.tag.disputed{border-color:var(--red);color:var(--red)}
+.tag.verify{border-color:var(--blue);color:var(--blue)}
+.spaced{margin-top:.6rem}
+
+footer{border-top:3px double var(--rule-strong);margin-top:2rem;padding-top:1.4rem;color:var(--ink-soft);font-size:.9rem;max-width:74ch}
+footer a{color:var(--blue)}
+
+/* ---------- home button: fixed, links back to the collection homepage ---------- */
+.home-btn{position:fixed;top:16px;left:16px;z-index:60;display:inline-flex;align-items:center;gap:.4rem;background:#14202B;color:#F1F2EC;border:1px solid rgba(241,242,236,.25);padding:.45rem .85rem;border-radius:999px;font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.82rem;font-weight:600;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.3);transition:background .15s ease,transform .15s ease}
+.home-btn:hover,.home-btn:focus-visible{background:#BF2F26;transform:translateY(-1px)}
+.home-btn svg{width:14px;height:14px;flex:none}
+@media print{.home-btn{display:none}}
+
+@media print{
+  .hero{background:none;color:#000;padding-bottom:1rem}
+  .hero-sub,.stamp,.motto-en{color:#333}
+  .flagstrip,.toc-mobile{display:none}
+  .shell{display:block;padding:0}
+  section{page-break-inside:auto;margin-bottom:1.8rem}
+  h2,h3{page-break-after:avoid}
+  .panel,.edge,.note,.tablewrap,figure{page-break-inside:avoid}
+  .part-head{page-break-before:always}
+  body{font-size:10.5pt;background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+
+<a class="home-btn" href="../index.html" aria-label="Back to Handbooks homepage" title="Back to Handbooks homepage">
+  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
+  <span>Home</span>
+</a>
+
+<header class="hero">
+  <div class="flagstrip" aria-hidden="true">
+    <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f5"></span><span class="f6"></span><span class="f7"></span><span class="f8"></span>
+  </div>
+  <div class="hero-inner">
+    <p class="kicker">United Nations · NATO · Quad · SCO · BRICS · G20 · regional bodies · arms control · financial and legal institutions</p>
+    <h1>International Alliances, Groups and Institutions</h1>
+    <p class="hero-sub">Who belongs to which grouping, what each one can and cannot do, and where India stands in them. The handbook separates military alliances from forums and from rule-making institutions, covers the United Nations system in detail, and ends with India's strategy of multi-alignment and SSB-style practice material. Membership lists and recent decisions change often, so figures were written from memory and are tagged for re-verification.</p>
+    <p class="stamp">
+      <span>UN members <b>193</b></span>
+      <span>NATO members <b>32</b></span>
+      <span>Security Council <b>5 permanent + 10 elected</b></span>
+      <span>Sections <b>21</b></span>
+      <span>Reading time <b>2-3 hrs</b></span>
+    </p>
+  </div>
+</header>
+
+<div class="shell">
+
+<details class="toc-mobile" open>
+  <summary>Contents</summary>
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li class="part">Part I · The United Nations and the idea of a grouping</li>
+      <li><a href="#snapshot">Snapshot and how to read</a></li>
+      <li><a href="#types">Alliance, bloc, forum, institution</a></li>
+      <li><a href="#un-system">The United Nations system</a></li>
+      <li><a href="#unsc">The Security Council, the veto and reform</a></li>
+      <li><a href="#peacekeeping">Peacekeeping and India's role</a></li>
+
+      <li class="part">Part II · Security alliances and blocs</li>
+      <li><a href="#nato">NATO</a></li>
+      <li><a href="#us-alliances">US alliances, AUKUS, Quad and Five Eyes</a></li>
+      <li><a href="#eurasian-blocs">CSTO, EAEU and the SCO</a></li>
+      <li><a href="#arms-control">Arms-control and export-control regimes</a></li>
+
+      <li class="part">Part III · Economic, regional and legal bodies</li>
+      <li><a href="#g7-g20">G7 and G20</a></li>
+      <li><a href="#brics">BRICS and its expansion</a></li>
+      <li><a href="#regional">EU, ASEAN, AU and other regional bodies</a></li>
+      <li><a href="#south-asia">South Asia and the Indian Ocean</a></li>
+      <li><a href="#finance">IMF, World Bank, WTO, NDB and AIIB</a></li>
+      <li><a href="#law-bodies">ICJ, ICC, IAEA and WHO</a></li>
+
+      <li class="part">Part IV · India's position</li>
+      <li><a href="#india-position">Non-alignment to multi-alignment</a></li>
+
+      <li class="part">Knowledge toolkit</li>
+      <li><a href="#perspectives">Perspectives, controversies and facts</a></li>
+      <li><a href="#scenarios-options">Scenarios and strategic options</a></li>
+      <li><a href="#answer-framework">Answer framework and worked example</a></li>
+      <li><a href="#qbank">Practice bank: questions and motions</a></li>
+      <li><a href="#revision">Chronology, glossary and revision sheet</a></li>
+    </ol>
+  </nav>
+</details>
+
+<main>
+
+<div class="part-head"><p>Part I · The United Nations and the idea of a grouping</p><h2>From alliances to universal institutions</h2></div>
+
+<section id="snapshot">
+  <h2>Snapshot and how to read</h2><hr class="sec-rule">
+  <p class="lede">Hundreds of international bodies exist, but only a few shape security, trade and law in a way that SSB-style discussion keeps returning to. This handbook is a reference to those few.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>The main bodies at a glance</caption>
+      <thead><tr><th>Body</th><th>Type</th><th>Core purpose</th><th>India</th></tr></thead>
+      <tbody>
+        <tr><td>United Nations</td><td>Universal institution</td><td>Peace, security, development, law</td><td>Founding member</td></tr>
+        <tr><td>NATO</td><td>Collective-defence alliance</td><td>Mutual defence of members</td><td>Not a member or partner</td></tr>
+        <tr><td>Quad</td><td>Informal grouping</td><td>Indo-Pacific cooperation</td><td>Member</td></tr>
+        <tr><td>SCO</td><td>Eurasian security and economic grouping</td><td>Regional security, counter-terrorism, connectivity</td><td>Member since 2017</td></tr>
+        <tr><td>BRICS</td><td>Plurilateral grouping</td><td>Reform of global governance, development finance</td><td>Founding member</td></tr>
+        <tr><td>G20</td><td>Leaders' forum</td><td>Global economic coordination</td><td>Member; hosted 2023</td></tr>
+        <tr><td>IMF, World Bank, WTO</td><td>Rule-making institutions</td><td>Finance, development, trade</td><td>Member</td></tr>
+        <tr><td>ICJ, ICC, IAEA</td><td>Legal and technical bodies</td><td>Disputes, crimes, nuclear safeguards</td><td>ICJ and IAEA yes; ICC no</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">
+    <h4>How to use this handbook</h4>
+    <p>Read Part I first, then compare Parts II and III by asking three questions of each body: does it bind members to defend each other, does it make binding rules, and can members leave freely? Part IV applies this to India, and the toolkit gives practice material. Tags show confidence: <span class="tag fact">Established</span> <span class="tag interp">Interpretation</span> <span class="tag disputed">Disputed</span> <span class="tag verify">Re-verify</span>.</p>
+  </div>
+</section>
+
+<section id="types">
+  <h2>Alliance, bloc, forum, institution</h2><hr class="sec-rule">
+  <p>The words are often used loosely, and mixing them up leads to wrong answers. A <strong>military alliance</strong> is a treaty in which members promise to help one another, as in NATO's Article 5. <strong>Collective security</strong> is different: members agree to act together against any aggressor, including one of their own, which is the UN Security Council idea. A <strong>bloc</strong> or <strong>grouping</strong> is a looser set of states with shared interests, such as BRICS. A <strong>forum</strong> is a regular meeting without binding power, such as the G20. An <strong>institution</strong> has a secretariat, rules and often a budget, such as the IMF. A <strong>regime</strong> is a set of rules around one subject, such as the nuclear non-proliferation regime.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Five forms compared</caption>
+      <thead><tr><th>Form</th><th>Binding duty to help?</th><th>Examples</th></tr></thead>
+      <tbody>
+        <tr><td>Collective-defence alliance</td><td>Yes, by treaty</td><td>NATO, ANZUS, CSTO</td></tr>
+        <tr><td>Collective-security body</td><td>Yes, in principle, against aggressors</td><td>UN Security Council</td></tr>
+        <tr><td>Strategic partnership or grouping</td><td>No</td><td>Quad, BRICS, SCO</td></tr>
+        <tr><td>Forum</td><td>No</td><td>G7, G20, East Asia Summit</td></tr>
+        <tr><td>Rule-making institution</td><td>Binding rules on members</td><td>WTO, IMF, ICJ (for consenting states)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge blue">
+    <span class="edge-h">Why the difference matters for India</span>
+    <p>India has avoided treaty alliances since independence but joins many groupings and institutions, including some that rival one another. Understanding the forms explains how that is possible: it takes on no defence duties but gains a voice in many rooms. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<section id="un-system">
+  <h2>The United Nations system</h2><hr class="sec-rule">
+  <p>The UN was founded in 1945, after the Charter was signed at San Francisco in June and came into force on 24 October. It has 193 member states, with the Holy See and Palestine as non-member observers. India was an original member. The UN's purposes are to maintain peace and security, develop friendly relations, promote human rights and development, and be a centre for harmonising national action. <span class="tag fact">Established</span></p>
+  <div class="tablewrap">
+    <table>
+      <caption>The six principal organs</caption>
+      <thead><tr><th>Organ</th><th>Role</th><th>Key point</th></tr></thead>
+      <tbody>
+        <tr><td>General Assembly</td><td>Deliberation, budget, elections</td><td>One state, one vote; resolutions are recommendations</td></tr>
+        <tr><td>Security Council</td><td>International peace and security</td><td>Only organ whose decisions bind members</td></tr>
+        <tr><td>Economic and Social Council (ECOSOC)</td><td>Economic and social coordination</td><td>Links to specialised agencies</td></tr>
+        <tr><td>Trusteeship Council</td><td>Decolonisation of trust territories</td><td>Suspended since 1994</td></tr>
+        <tr><td>International Court of Justice</td><td>Judicial organ</td><td>Sits at The Hague</td></tr>
+        <tr><td>Secretariat</td><td>Administration, headed by the Secretary-General</td><td>António Guterres's term ends 31 December 2026; check the successor <span class="tag verify">Re-verify</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Around the organs sit funds and programmes (UNDP, UNICEF, UNHCR, WFP) and specialised agencies with their own treaties and budgets, including WHO, FAO, UNESCO, ILO, ICAO and the IMO. The IMF and World Bank are formally specialised agencies but work independently. The UN is funded by assessed contributions based on ability to pay and by voluntary funds, and funding gaps have repeatedly limited operations. <span class="tag verify">Re-verify the current scale of contributions</span></p>
+</section>
+
+<section id="unsc">
+  <h2>The Security Council, the veto and reform</h2><hr class="sec-rule">
+  <p>The Security Council has 15 members: five permanent (the United States, United Kingdom, France, Russia and China) and ten elected for two-year terms, with seats shared among regions. A resolution needs nine votes and no veto by a permanent member. Chapter VI of the Charter covers peaceful settlement, and Chapter VII allows sanctions and force. Russia took the Soviet seat in 1991, and the People's Republic of China replaced the Republic of China in 1971 under General Assembly Resolution 2758. <span class="tag fact">Established</span></p>
+  <ul>
+    <li><strong>The veto</strong> reflects the power balance of 1945 and has blocked action on Syria, Ukraine, Gaza and other crises. The General Assembly's 1950 "Uniting for Peace" resolution and a 2022 rule requiring the Assembly to debate after a veto are partial responses.</li>
+    <li><strong>India's record:</strong> India has been elected eight times, most recently for 2021-22, and has an endorsed candidacy for a later term. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Reform camps:</strong> the G4 (India, Brazil, Germany, Japan) seek permanent seats. The "Uniting for Consensus" group, which includes Pakistan and Italy, opposes new permanent seats. The African Union's Ezulwini Consensus asks for two permanent seats with veto for Africa.</li>
+    <li><strong>Why reform stalls:</strong> a Charter amendment needs two-thirds of the General Assembly and ratification by all five permanent members, so any one can block it, and talks have continued since 2009 without a text. <span class="tag fact">Established</span></li>
+  </ul>
+  <div class="edge">
+    <span class="edge-h">India's case and its limits</span>
+    <p>India points to its population, economy, peacekeeping record and nuclear status. Opponents point to regional rivals, doubts about new vetoes and the practical need for the support of every permanent member. China's position is the one most often discussed. <span class="tag disputed">Disputed</span></p>
+  </div>
+</section>
+
+<section id="peacekeeping">
+  <h2>Peacekeeping and India's role</h2><hr class="sec-rule">
+  <p>UN peacekeeping began in 1948 with observers in the Middle East. It is not in the Charter as such, and is often called "Chapter VI and a half". Traditional principles are consent of the parties, impartiality and non-use of force except in self-defence and defence of the mandate, though some missions have robust mandates under Chapter VII. Missions are authorised by the Security Council, staffed by contributed national units, and paid for from a separate peacekeeping budget. <span class="tag fact">Established</span></p>
+  <ul>
+    <li><strong>India's contribution:</strong> India has served in dozens of missions since the Korean War custodian force in the 1950s, and has sent a very large cumulative number of personnel, with the loss of well over a hundred Indian peacekeepers. <span class="tag verify">Re-verify the figures</span></li>
+    <li><strong>Notable firsts:</strong> India deployed the first all-women formed police unit to Liberia in 2007.</li>
+    <li><strong>Current areas:</strong> Indian units have served in Lebanon, South Sudan, the Democratic Republic of the Congo, the Golan Heights and Abyei, among others. <span class="tag verify">Re-verify current deployments</span></li>
+    <li><strong>Criticisms:</strong> troop contributors want more say in mandates, and missions have faced allegations of abuse and failures to protect civilians.</li>
+  </ul>
+  <div class="edge green">
+    <span class="edge-h">Link to the Security Council bid</span>
+    <p>India argues that major troop contributors should be consulted in drafting mandates and uses its record to support its claim for a larger role. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part II · Security alliances and blocs</p><h2>Who is bound to defend whom</h2></div>
+
+<section id="nato">
+  <h2>NATO</h2><hr class="sec-rule">
+  <p>The North Atlantic Treaty Organization was created by the Washington Treaty of 4 April 1949 to counter Soviet power in Europe. Its core is <strong>Article 5</strong>: an armed attack on one member is treated as an attack on all, with each ally taking "such action as it deems necessary", which does not automatically mean military force. Article 4 allows consultation when a member feels threatened. Article 5 has been invoked once, after the attacks of 11 September 2001. <span class="tag fact">Established</span></p>
+  <ul>
+    <li><strong>Membership:</strong> 32 members after Finland (2023) and Sweden (2024) joined, a direct consequence of Russia's 2022 invasion of Ukraine. The headquarters are in Brussels and the Secretary General since 2024 is Mark Rutte. <span class="tag verify">Re-verify</span></li>
+    <li><strong>History:</strong> the Warsaw Pact (1955-91) was the Soviet counterpart. France left the integrated military command in 1966 and rejoined in 2009. Enlargement after 1999 is central to Russia's grievances. <span class="tag disputed">Disputed</span></li>
+    <li><strong>Spending:</strong> at the 2025 summit allies agreed a target of 5% of GDP on defence and related spending by 2035. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Partners:</strong> NATO has partnership programmes and works with Indo-Pacific partners such as Japan, Australia, South Korea and New Zealand. India is not a partner.</li>
+    <li><strong>Strains:</strong> burden sharing, differing views on Russia, and questions about US commitment have appeared repeatedly. <span class="tag interp">Interpretation</span></li>
+  </ul>
+  <div class="edge blue">
+    <span class="edge-h">Not a global alliance</span>
+    <p>Article 5 covers only the territory of members in Europe and North America, so it does not extend to the Indo-Pacific. The "NATO-plus" and "Asian NATO" labels sometimes applied to the Quad are inaccurate. <span class="tag fact">Established</span></p>
+  </div>
+</section>
+
+<section id="us-alliances">
+  <h2>US alliances, AUKUS, Quad and Five Eyes</h2><hr class="sec-rule">
+  <p>Outside Europe the United States built bilateral treaty alliances, the "hub and spoke" system: Japan (1951, revised 1960), South Korea (1953), the Philippines (1951), Australia and New Zealand (ANZUS, 1951) and Thailand. Each spoke is tied to the US, not necessarily to the others, though trilateral links such as US-Japan-South Korea cooperation have grown since 2023. <span class="tag fact">Established</span></p>
+  <div class="tablewrap">
+    <table>
+      <caption>Selected US-linked groupings</caption>
+      <thead><tr><th>Grouping</th><th>Members</th><th>Nature</th></tr></thead>
+      <tbody>
+        <tr><td>Five Eyes</td><td>US, UK, Canada, Australia, New Zealand</td><td>Intelligence-sharing arrangement dating from the 1946 UKUSA agreement</td></tr>
+        <tr><td>AUKUS (2021)</td><td>Australia, UK, US</td><td>Nuclear-powered submarines for Australia (Pillar 1) and advanced technology (Pillar 2)</td></tr>
+        <tr><td>Quad</td><td>Australia, India, Japan, US</td><td>Informal grouping; revived in 2017 and elevated to leaders' level in 2021</td></tr>
+        <tr><td>ANZUS</td><td>Australia, US (New Zealand suspended)</td><td>Treaty alliance</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The Quad has no treaty, secretariat or mutual-defence clause. Its agenda includes maritime domain awareness, vaccines, critical technology, infrastructure and humanitarian relief, and it began with the 2004 tsunami core group. Leaders' summits have been delayed on occasion, and the group's pace depends on US-India ties, which were strained in 2025 by tariff disputes. <span class="tag verify">Re-verify the present position</span></p>
+  <div class="edge gold">
+    <span class="edge-h">India and the US framework</span>
+    <p>India signed the foundational military agreements (GSOMIA, LEMOA, COMCASA, BECA) but stays outside any treaty alliance. It values access and interoperability while avoiding obligation. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<section id="eurasian-blocs">
+  <h2>CSTO, EAEU and the SCO</h2><hr class="sec-rule">
+  <p>The Collective Security Treaty Organisation (CSTO) is Russia's alliance in the former Soviet space. Its treaty dates from 1992, and its members have included Russia, Belarus, Kazakhstan, Kyrgyzstan, Tajikistan and Armenia, though Armenia has frozen its participation. The CSTO sent forces to Kazakhstan in January 2022 but did not act in the Armenia-Azerbaijan conflicts, which raised doubts about its reliability. <span class="tag verify">Re-verify membership</span> The Eurasian Economic Union (2015) is its economic counterpart.</p>
+  <p>The <strong>Shanghai Cooperation Organisation (SCO)</strong> grew from the "Shanghai Five" of 1996 and was formed in 2001. India and Pakistan joined in 2017, Iran in 2023 and Belarus in 2024, giving ten members. <span class="tag verify">Re-verify</span> Its regional anti-terrorism structure is in Tashkent, and its main activities are security consultation, counter-terrorism exercises and economic projects. It is not a military alliance.</p>
+  <ul>
+    <li><strong>India's interests:</strong> access to Central Asia, a platform on terrorism, and a seat in a non-Western body.</li>
+    <li><strong>India's reservations:</strong> India has declined to endorse China's Belt and Road because the China-Pakistan Economic Corridor crosses disputed territory, and it has had differences over how terrorism is described in joint texts.</li>
+    <li><strong>Other treaties:</strong> China's only formal treaty ally is North Korea (1961), and Russia and North Korea signed a mutual-defence treaty in 2024. <span class="tag verify">Re-verify</span></li>
+  </ul>
+  <div class="edge">
+    <span class="edge-h">Contrast</span>
+    <p>The CSTO is a collective-defence alliance, while the SCO is a grouping with a security agenda. In an answer, never call the SCO "the Russian-Chinese NATO". <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<section id="arms-control">
+  <h2>Arms-control and export-control regimes</h2><hr class="sec-rule">
+  <p>These regimes decide who may hold or trade sensitive technology, and they directly affect India. The <strong>Non-Proliferation Treaty (NPT)</strong>, opened in 1968 and in force from 1970, recognises five nuclear-weapon states, defined as those that had tested before 1 January 1967. India, Pakistan and Israel never joined, and India calls the treaty discriminatory. North Korea withdrew in 2003. The Comprehensive Test Ban Treaty (1996) is not in force and India has not signed it. <span class="tag fact">Established</span></p>
+  <div class="tablewrap">
+    <table>
+      <caption>Export-control regimes and India</caption>
+      <thead><tr><th>Regime</th><th>Subject</th><th>India's status</th></tr></thead>
+      <tbody>
+        <tr><td>Nuclear Suppliers Group (1974)</td><td>Nuclear trade</td><td>2008 waiver; not a member, as China insists on NPT membership as a criterion</td></tr>
+        <tr><td>Missile Technology Control Regime (1987)</td><td>Missiles and drones</td><td>Joined 2016</td></tr>
+        <tr><td>Wassenaar Arrangement</td><td>Conventional arms and dual-use goods</td><td>Joined 2017</td></tr>
+        <tr><td>Australia Group</td><td>Chemical and biological precursors</td><td>Joined 2018</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The Chemical Weapons Convention (1997) and the Biological Weapons Convention cover other weapons, and the 2017 Treaty on the Prohibition of Nuclear Weapons, which entered into force in 2021, is not joined by nuclear states, including India. The last US-Russia treaty limiting strategic arsenals, New START, was due to expire in February 2026, so check what replaced it. <span class="tag verify">Re-verify</span></p>
+  <div class="edge blue">
+    <span class="edge-h">The 1974 link</span>
+    <p>The NSG was founded in response to India's 1974 nuclear test, which is why its membership is a recurring issue for India. <span class="tag fact">Established</span></p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part III · Economic, regional and legal bodies</p><h2>Forums, regional groupings and rule-makers</h2></div>
+
+<section id="g7-g20">
+  <h2>G7 and G20</h2><hr class="sec-rule">
+  <p>The <strong>G7</strong> (Canada, France, Germany, Italy, Japan, the United Kingdom and the United States, with the EU attending) began in 1975 as a group of advanced economies. Russia joined in 1997 to make a G8 and was suspended after annexing Crimea in 2014. The G7 is a club of like-minded democracies with no treaty or secretariat, and it often invites India and other partners as guests. <span class="tag fact">Established</span></p>
+  <p>The <strong>G20</strong> was created in 1999 for finance ministers after the Asian financial crisis, and raised to leaders' level in 2008 during the global financial crisis. It has 19 countries, the European Union and, since 2023, the African Union, which together account for most of world output, trade and population. It decides by consensus and has no binding power. <span class="tag fact">Established</span></p>
+  <ul>
+    <li><strong>India's presidency (December 2022 to November 2023)</strong> produced the New Delhi Declaration by consensus despite divisions over Ukraine, the admission of the African Union and the India-Middle East-Europe Economic Corridor announcement.</li>
+    <li><strong>Later hosts:</strong> Brazil (2024), South Africa (2025) and the United States (2026). <span class="tag verify">Re-verify the present status</span></li>
+    <li><strong>Limits:</strong> the G20's agenda is wide, outcomes are voluntary, and it is strained when major members disagree.</li>
+  </ul>
+  <div class="edge gold">
+    <span class="edge-h">Club versus forum</span>
+    <p>The G7 is a club of similar economies, and the G20 is a broader forum with rivals sitting together. India belongs only to the second, though it attends the first as a guest. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<section id="brics">
+  <h2>BRICS and its expansion</h2><hr class="sec-rule">
+  <p>The acronym BRIC was coined in 2001 by an economist at Goldman Sachs for Brazil, Russia, India and China. The four held their first summit in 2009, and South Africa joined in 2010. From January 2024, Egypt, Ethiopia, Iran and the United Arab Emirates joined, and Indonesia joined in 2025. A new "partner country" category was created in 2024-25. Saudi Arabia was invited but its status has been unclear. <span class="tag verify">Re-verify the member and partner lists</span></p>
+  <ul>
+    <li><strong>Institutions:</strong> the New Development Bank (2015, Shanghai) and the Contingent Reserve Arrangement.</li>
+    <li><strong>Agenda:</strong> reform of global governance, development finance, and a greater voice for the Global South.</li>
+    <li><strong>Differences:</strong> members hold diverse positions. China and Russia see BRICS as a counterweight to Western power, while India and Brazil stress that it is not anti-Western. <span class="tag disputed">Disputed</span></li>
+    <li><strong>Currency:</strong> proposals for a common currency or for de-dollarisation have been discussed, but India has said it does not seek to replace the dollar. <span class="tag verify">Re-verify</span></li>
+    <li><strong>India's 2026 role:</strong> India holds the chair and hosts the summit in 2026. <span class="tag verify">Re-verify</span></li>
+  </ul>
+  <div class="edge blue">
+    <span class="edge-h">Expansion dilemma</span>
+    <p>Larger membership raises BRICS's weight but makes consensus harder and increases the risk that the group is seen as a China-led bloc, which is a concern for India. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<section id="regional">
+  <h2>EU, ASEAN, AU and other regional bodies</h2><hr class="sec-rule">
+  <div class="tablewrap">
+    <table>
+      <caption>Major regional organisations</caption>
+      <thead><tr><th>Body</th><th>Founded</th><th>Members</th><th>Key feature</th></tr></thead>
+      <tbody>
+        <tr><td>European Union</td><td>1993 (Maastricht Treaty)</td><td>27 after Brexit</td><td>Single market, common trade policy, partial common foreign policy, euro for most members</td></tr>
+        <tr><td>ASEAN</td><td>1967 (Bangkok)</td><td>10, plus Timor-Leste admitted in 2025 <span class="tag verify">Re-verify</span></td><td>Consensus, non-interference, "ASEAN centrality"</td></tr>
+        <tr><td>African Union</td><td>2002 (replacing the OAU of 1963)</td><td>55</td><td>Agenda 2063; African Continental Free Trade Area</td></tr>
+        <tr><td>Arab League</td><td>1945</td><td>22</td><td>Political coordination; Cairo</td></tr>
+        <tr><td>Gulf Cooperation Council</td><td>1981</td><td>6</td><td>Saudi Arabia, UAE, Kuwait, Qatar, Bahrain, Oman</td></tr>
+        <tr><td>Organisation of Islamic Cooperation</td><td>1969</td><td>57</td><td>Jeddah-based; Pakistan raises Kashmir there</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>ASEAN is central to the Indo-Pacific because it hosts the East Asia Summit, the ASEAN Regional Forum and the ADMM-Plus defence meetings, and India is a dialogue partner and part of the East Asia Summit. India withdrew from the Regional Comprehensive Economic Partnership (RCEP) talks in 2019 over trade-deficit and market-access concerns. <span class="tag fact">Established</span></p>
+  <p>The EU is a major trade and technology partner. India and the EU announced the conclusion of free-trade negotiations in early 2026. <span class="tag verify">Re-verify the status of the agreement</span> India was a guest of honour at the OIC foreign ministers' session in 2019 and does not belong to the body.</p>
+</section>
+
+<section id="south-asia">
+  <h2>South Asia and the Indian Ocean</h2><hr class="sec-rule">
+  <p>The South Asian Association for Regional Cooperation (SAARC) was formed in Dhaka in 1985 with seven members, and Afghanistan joined in 2007. It has been largely inactive since the 2016 Islamabad summit was cancelled after India and others withdrew following the Uri attack. Pakistan's refusal to allow transit and India-Pakistan hostility are the main obstacles. <span class="tag fact">Established</span></p>
+  <ul>
+    <li><strong>BIMSTEC</strong> (Bay of Bengal Initiative for Multi-Sectoral Technical and Economic Cooperation, 1997) links Bangladesh, India, Myanmar, Sri Lanka, Thailand, Nepal and Bhutan, with a secretariat in Dhaka. India favours it as a SAARC alternative that excludes Pakistan. Its sixth summit was held in Bangkok in 2025. <span class="tag verify">Re-verify</span></li>
+    <li><strong>IORA</strong> (Indian Ocean Rim Association, 1997) covers the wider region, and the Colombo Security Conclave deals with maritime security among India, Sri Lanka, the Maldives and Mauritius. <span class="tag verify">Re-verify membership</span> See handbook 10 for the maritime detail.</li>
+    <li><strong>Competing frameworks:</strong> China has sought its own regional formats with Pakistan and Bangladesh, and the extent of these is evolving. <span class="tag verify">Re-verify</span></li>
+    <li><strong>India's approach:</strong> the "Neighbourhood First" policy prefers sub-regional links (BBIN, BIMSTEC) to a stalled SAARC.</li>
+  </ul>
+</section>
+
+<section id="finance">
+  <h2>IMF, World Bank, WTO, NDB and AIIB</h2><hr class="sec-rule">
+  <p>The IMF and World Bank were designed at the Bretton Woods conference in 1944. The <strong>IMF</strong> supports balance of payments and monetary cooperation, and its votes are weighted by quota, with the United States holding the largest share and an effective veto over decisions needing an 85% majority. The <strong>World Bank</strong> lends for development, and its president since 2023 is Ajay Banga. <span class="tag fact">Established</span> The <strong>WTO</strong> replaced the GATT in 1995, works by consensus, and has a dispute-settlement system whose Appellate Body has been paralysed since late 2019 because of blocked appointments. <span class="tag verify">Re-verify</span></p>
+  <div class="tablewrap">
+    <table>
+      <caption>Older institutions and newer alternatives</caption>
+      <thead><tr><th>Body</th><th>Established</th><th>Key point</th></tr></thead>
+      <tbody>
+        <tr><td>IMF</td><td>1944-45</td><td>Weighted voting; reform of quotas is slow</td></tr>
+        <tr><td>World Bank</td><td>1944-45</td><td>Traditionally led by an American</td></tr>
+        <tr><td>WTO</td><td>1995</td><td>Consensus rules, stalled dispute appeals</td></tr>
+        <tr><td>New Development Bank</td><td>2015</td><td>BRICS-founded, based in Shanghai</td></tr>
+        <tr><td>Asian Infrastructure Investment Bank</td><td>2016</td><td>China-initiated; India is a large shareholder and borrower</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge">
+    <span class="edge-h">Reform argument</span>
+    <p>Emerging economies say that voting power in the Bretton Woods bodies still reflects 1945 and that the newer banks give them alternatives. Western governments reply that the older institutions set higher standards and that newer ones can be used for influence. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<section id="law-bodies">
+  <h2>ICJ, ICC, IAEA and WHO</h2><hr class="sec-rule">
+  <ul>
+    <li><strong>International Court of Justice (ICJ):</strong> the UN's judicial organ, with 15 judges elected for nine-year terms by the General Assembly and Security Council. It decides disputes between states that accept its jurisdiction and gives advisory opinions. Judgments bind the parties but enforcement depends on the Security Council. In 2019 it ruled against Pakistan on consular access in the Kulbhushan Jadhav case. <span class="tag fact">Established</span></li>
+    <li><strong>International Criminal Court (ICC):</strong> set up by the 1998 Rome Statute, in force 2002, to try individuals for genocide, war crimes and crimes against humanity. India, the United States, China and Russia are not parties. Arrest warrants against Vladimir Putin (2023) and Benjamin Netanyahu (2024) show both its reach and its enforcement limits. <span class="tag verify">Re-verify</span></li>
+    <li><strong>IAEA:</strong> the International Atomic Energy Agency (1957, Vienna) promotes peaceful nuclear use and runs safeguards. India has an India-specific safeguards agreement from 2008 that supports civil nuclear trade.</li>
+    <li><strong>WHO:</strong> founded 1948, it coordinates global health. The United States announced its withdrawal in 2025, and its effect on funding is still being worked out. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Other bodies:</strong> the Permanent Court of Arbitration and the tribunal under UNCLOS settled the 2016 South China Sea case that China rejects, and a 2025 arbitration dispute over the Indus Waters Treaty is contested by India. <span class="tag disputed">Disputed</span></li>
+  </ul>
+  <div class="edge blue">
+    <span class="edge-h">Law without police</span>
+    <p>International courts rely on consent and political pressure rather than force, so powerful states can ignore them at a cost. India accepts the ICJ's jurisdiction with reservations and does not accept the ICC's. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part IV · India's position</p><h2>Autonomy without isolation</h2></div>
+
+<section id="india-position">
+  <h2>Non-alignment to multi-alignment</h2><hr class="sec-rule">
+  <p>India refused to join either bloc in the Cold War. Nehru's non-alignment found expression at Bandung in 1955 and in the Non-Aligned Movement founded in Belgrade in 1961. In practice India leaned toward the Soviet Union, culminating in the 1971 Treaty of Peace, Friendship and Cooperation. After 1991 it opened to the United States and the West while keeping its Russian ties. Today's policy is usually called <strong>strategic autonomy</strong> or <strong>multi-alignment</strong>: partnerships on specific issues with different powers, without treaty alliances. <span class="tag fact">Established</span></p>
+  <div class="tablewrap">
+    <table>
+      <caption>Where India sits</caption>
+      <thead><tr><th>Domain</th><th>Groupings India joins</th><th>What it avoids</th></tr></thead>
+      <tbody>
+        <tr><td>Security</td><td>Quad, SCO, bilateral defence partnerships</td><td>Treaty alliances and mutual-defence clauses</td></tr>
+        <tr><td>Economy</td><td>G20, BRICS, WTO, IMF, AIIB, NDB</td><td>RCEP; BRI</td></tr>
+        <tr><td>Initiatives India leads</td><td>International Solar Alliance (2015, with France), Coalition for Disaster Resilient Infrastructure, Global Biofuels Alliance</td><td>-</td></tr>
+        <tr><td>Global South</td><td>Voice of the Global South summits, African Union G20 membership push</td><td>Claiming leadership of a bloc</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>India also joins smaller minilaterals such as I2U2 (India, Israel, UAE, United States) and RIC (Russia-India-China, dormant for years), and promotes connectivity projects such as the India-Middle East-Europe Economic Corridor. <span class="tag verify">Re-verify the active status of each</span> Critics say multi-alignment risks being seen as unreliable by all sides, and supporters say it maximises options in a world with several power centres. <span class="tag disputed">Disputed</span></p>
+  <div class="edge gold">
+    <span class="edge-h">The test of autonomy</span>
+    <p>Autonomy is tested when two partners clash, as with Russian oil purchases and Western sanctions, or tariffs and trade deals with the United States. How India answers in practice, more than its slogans, shows its policy. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<div class="part-head"><p>Knowledge toolkit</p><h2>Analysis, practice and revision</h2></div>
+
+<section id="perspectives">
+  <h2>Perspectives, controversies and facts</h2><hr class="sec-rule">
+  <p><span class="tag interp">Interpretation</span> <strong>Are alliances stabilising?</strong> Supporters say they deter aggression and reassure members. Critics say they raise tension, trap members in others' quarrels and provoke counter-blocs.</p>
+  <p><span class="tag interp">Interpretation</span> <strong>Is the UN still relevant?</strong> It cannot stop wars involving permanent members, yet its humanitarian, health, peacekeeping and norm-setting work continues, and there is no replacement.</p>
+  <p><span class="tag interp">Interpretation</span> <strong>BRICS: counterweight or talking shop?</strong> It gives emerging economies visibility and alternative finance, but its members disagree on goals.</p>
+  <p><span class="tag interp">Interpretation</span> <strong>Is multi-alignment sustainable?</strong> It works while major powers compete for India's support, and may be harder if they press for a choice.</p>
+  <h3>Lesser-known facts</h3>
+  <ul>
+    <li><span class="tag fact">Established</span> The UN's six official languages are Arabic, Chinese, English, French, Russian and Spanish.</li>
+    <li><span class="tag fact">Established</span> Article 5 of the NATO treaty has been invoked only once.</li>
+    <li><span class="tag fact">Established</span> The NSG was created after India's 1974 test.</li>
+    <li><span class="tag fact">Established</span> India joined three of the four export-control regimes after 2016.</li>
+    <li><span class="tag fact">Established</span> The African Union became a permanent G20 member at the 2023 New Delhi summit.</li>
+    <li><span class="tag fact">Established</span> The Quad has no treaty and no permanent secretariat.</li>
+  </ul>
+</section>
+
+<section id="scenarios-options">
+  <h2>Scenarios and strategic options</h2><hr class="sec-rule">
+  <p>Presented neutrally, without recommending a political position:</p>
+  <div class="grid two">
+    <div class="panel red-top">
+      <h4>A Security Council seat remains out of reach</h4>
+      <p>Reform talks stall for another decade. India must decide whether to keep investing in the effort or to prioritise other forums.</p>
+    </div>
+    <div class="panel blue-top">
+      <h4>BRICS turns more anti-Western</h4>
+      <p>Expanded membership pulls the group toward confrontation with the West. India must weigh staying to moderate against reducing its role.</p>
+    </div>
+    <div class="panel gold-top">
+      <h4>The Quad is asked to take on a defence role</h4>
+      <p>Members push for more military coordination. India must decide how far to go without a treaty.</p>
+    </div>
+    <div class="panel green-top">
+      <h4>US-China rivalry forces choices</h4>
+      <p>Partners press India to align on technology, trade and sanctions. Autonomy depends on India's bargaining power.</p>
+    </div>
+  </div>
+  <div class="tablewrap">
+    <table>
+      <caption>Options and trade-offs</caption>
+      <thead><tr><th>Option</th><th>Benefit</th><th>Risk or cost</th></tr></thead>
+      <tbody>
+        <tr><td>Keep multi-alignment as the main line</td><td>Flexibility and access to many partners</td><td>Doubts about reliability</td></tr>
+        <tr><td>Deepen Quad and US defence ties</td><td>Technology and interoperability</td><td>Entanglement and friction with Russia and China</td></tr>
+        <tr><td>Strengthen the Global South role</td><td>Votes and legitimacy in the UN and G20</td><td>Overstretch; different interests among partners</td></tr>
+        <tr><td>Invest in Indian-led initiatives (ISA, CDRI)</td><td>Agenda-setting power at low cost</td><td>Limited reach and funding</td></tr>
+        <tr><td>Push for Security Council and IMF reform together with allies</td><td>Larger collective weight</td><td>Rivals can form counter-coalitions</td></tr>
+        <tr><td>Rebuild regional bodies (BIMSTEC, IORA)</td><td>Stability in the neighbourhood</td><td>China's competing offers</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="answer-framework">
+  <h2>Answer framework and worked example</h2><hr class="sec-rule">
+  <p>For any question on a grouping or institution, move through definition, location, evidence, contest, analysis, test, position, concession and close. One compressed example follows.</p>
+  <div class="panel red-top">
+    <h4>Worked example: "Should India join a formal military alliance?"</h4>
+    <dl class="rungs">
+      <dt>Define</dt><dd>A formal military alliance is a treaty that commits members to defend one another, as in NATO's Article 5.</dd>
+      <dt>Locate</dt><dd>Existing alliances are mostly Euro-Atlantic and US-centred in East Asia, with Russian and Chinese equivalents in Eurasia and Korea.</dd>
+      <dt>Establish</dt><dd>India has stayed outside treaty alliances since 1947, signed the 1971 treaty with the Soviet Union, and today joins the Quad and SCO without defence obligations.</dd>
+      <dt>Contest</dt><dd>Supporters say an alliance would deter China and give security guarantees. Opponents say it would reduce choice, drag India into others' wars and strain ties with Russia and others.</dd>
+      <dt>Analyse</dt><dd>India's main threats are land borders and terrorism, which allies are unlikely to fight for it, while its main need is technology, finance and diplomatic cover, which partnerships can provide without treaties.</dd>
+      <dt>Test</dt><dd>Look at whether allies stand by their guarantees (the CSTO case), and whether India's partners respect its red lines in practice.</dd>
+      <dt>Position</dt><dd>India is better served by issue-based partnerships and strong national capability than by a treaty alliance.</dd>
+      <dt>Concede</dt><dd>If a direct threat from a major power grew sharply, the balance could change. <span class="tag verify">Re-verify the current context</span></dd>
+      <dt>Close</dt><dd>Autonomy is a means of keeping options open, and it works only if India keeps building its own strength.</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="qbank">
+  <h2>Practice bank: questions and motions</h2><hr class="sec-rule">
+  <p class="lede">Fourteen questions. Answer each aloud, standing, in ninety seconds.</p>
+  <ol class="qbank">
+    <li>Distinguish an alliance, a bloc, a forum and an institution, with an example of each.</li>
+    <li>Name the six principal organs of the UN and say which one binds members.</li>
+    <li>Explain how the veto works and why Security Council reform is stuck.</li>
+    <li>Who are the G4, and what do the "Uniting for Consensus" group and the African Union want?</li>
+    <li>What are the principles of UN peacekeeping, and what is India's record?</li>
+    <li>What does Article 5 of the NATO treaty say, and when was it used?</li>
+    <li>Why is the Quad not an alliance?</li>
+    <li>Compare the CSTO and the SCO.</li>
+    <li>What is the NPT, and why has India not joined?</li>
+    <li>Which export-control regimes has India joined, and what blocks its NSG entry?</li>
+    <li>Compare the G7 and the G20, and describe India's G20 presidency.</li>
+    <li>What is BRICS, who has joined recently, and why does expansion matter?</li>
+    <li>Why is SAARC inactive, and what has India turned to instead?</li>
+    <li>What is "strategic autonomy", and how is it different from non-alignment?</li>
+  </ol>
+  <h3>Debate motions</h3>
+  <ol class="dbank">
+    <li>This house believes the UN Security Council should add new permanent members.</li>
+    <li>This house believes the veto should be abolished or restricted.</li>
+    <li>This house believes India should join a formal military alliance.</li>
+    <li>This house believes BRICS expansion helps India.</li>
+    <li>This house believes the Quad should become a military alliance.</li>
+    <li>This house believes regional groupings are better than global institutions for South Asia.</li>
+    <li>This house believes India should accept the jurisdiction of the ICC.</li>
+  </ol>
+</section>
+
+<section id="revision">
+  <h2>Chronology, glossary and revision sheet</h2><hr class="sec-rule">
+  <h3>Master chronology</h3>
+  <ul class="timeline">
+    <li><span class="yr">1944</span><span>Bretton Woods conference creates the IMF and World Bank framework.</span></li>
+    <li><span class="yr">1945</span><span>UN Charter in force on 24 October; Arab League founded.</span></li>
+    <li><span class="yr">1949</span><span>NATO founded.</span></li>
+    <li><span class="yr">1955</span><span>Bandung conference; Warsaw Pact formed.</span></li>
+    <li><span class="yr">1961</span><span>Non-Aligned Movement founded in Belgrade.</span></li>
+    <li><span class="yr">1967</span><span>ASEAN founded.</span></li>
+    <li><span class="yr">1968-70</span><span>NPT opened and entered into force.</span></li>
+    <li><span class="yr">1971</span><span>PRC takes China's UN seat; Indo-Soviet treaty.</span></li>
+    <li><span class="yr">1974</span><span>India's nuclear test; NSG founded.</span></li>
+    <li><span class="yr">1985</span><span>SAARC founded.</span></li>
+    <li><span class="yr">1991</span><span>Soviet Union dissolves; India's economic opening.</span></li>
+    <li><span class="yr">1995</span><span>WTO replaces the GATT.</span></li>
+    <li><span class="yr">1999-2008</span><span>G20 created, then raised to leaders' level.</span></li>
+    <li><span class="yr">2001</span><span>SCO formed; BRIC acronym coined.</span></li>
+    <li><span class="yr">2008</span><span>NSG waiver for India.</span></li>
+    <li><span class="yr">2015-16</span><span>New Development Bank and AIIB created; International Solar Alliance launched.</span></li>
+    <li><span class="yr">2016-18</span><span>India joins MTCR, Wassenaar and the Australia Group.</span></li>
+    <li><span class="yr">2017</span><span>India and Pakistan join the SCO; Quad revived.</span></li>
+    <li><span class="yr">2021</span><span>AUKUS announced; first Quad leaders' summit.</span></li>
+    <li><span class="yr">2023</span><span>India's G20 presidency; AU joins the G20; Finland joins NATO.</span></li>
+    <li><span class="yr">2024-25</span><span>BRICS expands; Sweden joins NATO; NATO agrees 5% target. <span class="tag verify">Re-verify</span></span></li>
+  </ul>
+  <h3>Glossary</h3>
+  <dl class="term">
+    <dt>Article 5</dt><dd>NATO's collective-defence clause.</dd>
+    <dt>Bloc</dt><dd>A group of states with shared interests and a common orientation.</dd>
+    <dt>Chapter VII</dt><dd>The part of the UN Charter that allows sanctions and force.</dd>
+    <dt>Collective security</dt><dd>An arrangement where members act together against any aggressor.</dd>
+    <dt>G4</dt><dd>India, Brazil, Germany and Japan, which jointly seek permanent Security Council seats.</dd>
+    <dt>Hub and spoke</dt><dd>The US system of separate bilateral alliances.</dd>
+    <dt>Minilateral</dt><dd>A small group formed around a specific issue.</dd>
+    <dt>Multi-alignment</dt><dd>Partnerships with several powers without joining any bloc.</dd>
+    <dt>Non-alignment</dt><dd>The Cold War policy of staying out of both blocs.</dd>
+    <dt>Regime</dt><dd>A set of rules, norms and procedures around one subject.</dd>
+    <dt>Strategic autonomy</dt><dd>The ability to decide foreign and security policy independently.</dd>
+    <dt>Veto</dt><dd>A permanent member's power to block a Security Council resolution.</dd>
+  </dl>
+  <h3>Rapid revision sheet</h3>
+  <div class="note">
+    <h4>UN</h4>
+    <ul>
+      <li>193 members; six organs; only the Security Council binds.</li>
+      <li>Five permanent members with veto; 10 elected; India elected eight times.</li>
+      <li>Reform needs two-thirds of the Assembly and all five permanent members.</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h4>Alliances and groupings</h4>
+    <ul>
+      <li>NATO (32, Article 5 used once); CSTO; US hub-and-spoke; AUKUS; Five Eyes.</li>
+      <li>Quad and SCO are not alliances; BRICS and G20 are forums.</li>
+      <li>India: in Quad, SCO, BRICS and G20; outside NATO, ICC and RCEP.</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h4>Rules and India</h4>
+    <ul>
+      <li>NPT not signed; MTCR, Wassenaar and Australia Group joined; NSG blocked.</li>
+      <li>IMF, World Bank, WTO versus NDB and AIIB; ICJ, ICC, IAEA, WHO.</li>
+      <li>Strategic autonomy and multi-alignment; Neighbourhood First; BIMSTEC over SAARC.</li>
+      <li>Always tag uncertain recent developments for re-verification.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer>
+  <p>Compiled from open sources. Study aid only, not an official publication.</p>
+  <p>Source &amp; contributions: <a href="https://github.com/mohitkushwaha0601/matre">github.com/mohitkushwaha0601/matre</a></p>
+</footer>
+
+</body>
+</html>
