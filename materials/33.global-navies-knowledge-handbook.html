@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Global Navies — A Deep Knowledge Handbook</title>
+<meta name="description" content="A 21-section comparative handbook on the world's navies: what navies do, ships and technology, the US, Chinese, Russian and other major fleets, alliances, flashpoints, lessons for India and SSB-style practice material.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1B232C;
+  --ink-soft:#56626E;
+  --paper:#F3F3F0;
+  --surface:#FFFFFF;
+  --surface-2:#E6E7E2;
+  --rule:#D0D3CD;
+  --rule-strong:#9AA09A;
+  --red:#A63A2E;
+  --blue:#2F6690;
+  --gold:#9A6B0C;
+  --green:#3A7556;
+  --hero-bg:#1C2630;
+  --hero-ink:#F3F3F0;
+  --hero-dim:#A8B3BF;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ink:#E9ECEF;
+    --ink-soft:#B0BAC4;
+    --paper:#0C1218;
+    --surface:#151D26;
+    --surface-2:#1E2A36;
+    --rule:#2E3B49;
+    --rule-strong:#4E6074;
+    --red:#EE8D80;
+    --blue:#7FB4E0;
+    --gold:#E2B552;
+    --green:#6EC39A;
+    --hero-bg:#080C11;
+    --hero-ink:#E9ECEF;
+    --hero-dim:#8795A4;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E9ECEF;
+  --ink-soft:#B0BAC4;
+  --paper:#0C1218;
+  --surface:#151D26;
+  --surface-2:#1E2A36;
+  --rule:#2E3B49;
+  --rule-strong:#4E6074;
+  --red:#EE8D80;
+  --blue:#7FB4E0;
+  --gold:#E2B552;
+  --green:#6EC39A;
+  --hero-bg:#080C11;
+  --hero-ink:#E9ECEF;
+  --hero-dim:#8795A4;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1.5rem);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ---------- hero ---------- */
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
+.flagstrip{display:flex;height:12px}
+.flagstrip span{flex:1}
+.f1{background:#1C2630}
+.f2{background:#2F6690}
+.f3{background:#E8EEF2}
+.f4{background:#A63A2E}
+.f5{background:#E0B341}
+.f6{background:#3A7556}
+.f7{background:#6B7B8C}
+.f8{background:#0E1A24}
+.hero-inner{max-width:1180px;margin:0 auto;padding:3.2rem 1.5rem 0}
+.kicker{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--hero-dim);margin:0 0 .8rem}
+.motto{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:clamp(1.7rem,5.2vw,2.9rem);line-height:1.2;margin:0;letter-spacing:.005em;max-width:26ch}
+.motto-en{margin:.55rem 0 0;color:var(--hero-dim);font-size:clamp(.95rem,2.4vw,1.1rem);font-style:italic;max-width:62ch}
+.hero h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.5rem,4.3vw,2.35rem);line-height:1.2;margin:2.6rem 0 .5rem;border-top:1px solid rgba(255,255,255,.22);padding-top:1.6rem;max-width:30ch}
+.hero-sub{margin:0;color:var(--hero-dim);max-width:68ch}
+.stamp{margin-top:1.6rem;font-size:.86rem;color:var(--hero-dim);display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+.stamp b{color:var(--hero-ink);font-weight:600}
+
+/* ---------- layout ---------- */
+.shell{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem;display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media (min-width:1000px){
+  .shell{grid-template-columns:255px minmax(0,1fr);gap:3.5rem;padding-top:2.8rem}
+}
+nav.toc{font-size:.9rem}
+@media (min-width:1000px){
+  .toc-mobile{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2rem);align-self:start;max-height:calc(100vh - 5rem);overflow-y:auto}
+}
+nav.toc h2{font-family:"Zilla Slab",Georgia,serif;font-size:.92rem;font-weight:600;margin:0 0 .7rem;padding-bottom:.45rem;border-bottom:2px solid var(--rule-strong)}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc}
+nav.toc li{border-bottom:1px solid var(--rule)}
+nav.toc li:not(.part){counter-increment:toc}
+nav.toc a{display:flex;gap:.6rem;padding:.4rem 0;color:var(--ink-soft);text-decoration:none}
+nav.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--rule-strong);font-variant-numeric:tabular-nums;flex:none}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--red)}
+nav.toc .part{border:0;margin:1.1rem 0 .3rem;font-family:"Zilla Slab",Georgia,serif;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--rule-strong)}
+nav.toc .part::before{content:none}
+.toc-mobile{display:block}
+@media (min-width:1000px){.toc-mobile summary{display:none}}
+.toc-mobile summary{cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:600;padding:.7rem .9rem;background:var(--surface);border:1px solid var(--rule);margin-bottom:1rem}
+@media (max-width:999px){
+  .toc-mobile[open] nav.toc{padding:0 .9rem 1rem}
+  .toc-mobile:not([open]) nav.toc{display:none}
+}
+
+/* ---------- sections ---------- */
+main{min-width:0}
+section{margin:0 0 3.6rem;scroll-margin-top:1.5rem}
+section > h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.45rem,3.6vw,1.95rem);line-height:1.2;margin:0 0 .3rem}
+.part-head{margin:4rem 0 2.2rem;padding:1.1rem 0 .9rem;border-top:4px double var(--rule-strong);border-bottom:1px solid var(--rule)}
+.part-head p{margin:0;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.part-head h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.3rem,3.2vw,1.7rem);margin:.3rem 0 0;color:var(--ink)}
+.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.16rem;margin:2rem 0 .5rem;line-height:1.3}
+h4{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1rem;margin:1.4rem 0 .35rem;color:var(--ink)}
+p{margin:0 0 .95rem;max-width:74ch}
+ul,ol{margin:0 0 1rem;padding-left:1.25rem;max-width:74ch}
+li{margin-bottom:.35rem}
+li::marker{color:var(--rule-strong)}
+strong{font-weight:600}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+/* ---------- components ---------- */
+.lede{font-size:1.06rem;color:var(--ink-soft);max-width:70ch}
+
+.tablewrap{overflow-x:auto;margin:0 0 1.3rem;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.92rem}
+caption{text-align:left;padding:.7rem .85rem .1rem;font-weight:600;color:var(--ink-soft);font-size:.9rem}
+th,td{text-align:left;padding:.55rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{background:var(--surface-2);font-weight:600;border-bottom:2px solid var(--rule-strong);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.num,th.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+.edge{background:var(--surface);border-left:4px solid var(--red);padding:.9rem 1.1rem;margin:1.4rem 0;max-width:74ch}
+.edge p:last-child,.edge ul:last-child,.edge ol:last-child{margin-bottom:0}
+.edge .edge-h{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);display:block;margin-bottom:.25rem;font-size:.95rem}
+.edge.gold{border-left-color:var(--gold)}
+.edge.gold .edge-h{color:var(--gold)}
+.edge.blue{border-left-color:var(--blue)}
+.edge.blue .edge-h{color:var(--blue)}
+.edge.green{border-left-color:var(--green)}
+.edge.green .edge-h{color:var(--green)}
+
+.note{background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;border:1px solid var(--rule);font-size:.95rem}
+.note p:last-child,.note ul:last-child,.note ol:last-child{margin-bottom:0}
+.note h4{margin-top:0}
+
+.panel{background:var(--surface);border:1px solid var(--rule);padding:1rem 1.1rem}
+.panel h4{margin-top:0}
+.panel ul,.panel ol{margin-bottom:0}
+.panel.blue-top{border-top:3px solid var(--blue)}
+.panel.red-top{border-top:3px solid var(--red)}
+.panel.gold-top{border-top:3px solid var(--gold)}
+.panel.green-top{border-top:3px solid var(--green)}
+
+.rungs{max-width:74ch;margin:.3rem 0 0;display:grid;grid-template-columns:9.5rem 1fr;gap:0 1rem}
+.rungs dt{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;color:var(--red);padding-top:.2rem}
+.rungs dd{margin:0 0 .5rem;font-size:.93rem}
+@media (max-width:560px){
+  .rungs{grid-template-columns:1fr;gap:0}
+  .rungs dt{padding-top:.4rem}
+}
+
+.timeline{list-style:none;padding:0;margin:1rem 0 1.4rem;max-width:74ch}
+.timeline li{display:grid;grid-template-columns:8.2rem 1fr;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--rule);margin:0}
+.timeline li:last-child{border-bottom:0}
+.timeline .yr{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);font-variant-numeric:tabular-nums}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:.1rem}}
+
+.qbank{counter-reset:q;list-style:none;padding:0;max-width:74ch}
+.qbank li{counter-increment:q;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.qbank li::before{content:counter(q,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.qbank li:last-child{border-bottom:0}
+
+.dbank{counter-reset:d;list-style:none;padding:0;max-width:74ch}
+.dbank li{counter-increment:d;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.dbank li::before{content:counter(d,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.dbank li:last-child{border-bottom:0}
+
+.grid{display:grid;gap:1rem}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
+
+.card{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--red);padding:1rem 1.1rem}
+.card h4{margin:0 0 .45rem;font-size:1rem}
+.card .name{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.2rem}
+.card .role{font-size:.9rem;color:var(--ink-soft)}
+.card .since{font-size:.78rem;color:var(--green);font-weight:600;margin-top:.45rem}
+
+.term{max-width:74ch;margin:0 0 1.2rem}
+.term dt{font-weight:600;margin-top:.8rem}
+.term dd{margin:.15rem 0 0;color:var(--ink-soft)}
+
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:.1rem .45rem;border:1px solid var(--rule-strong);color:var(--ink-soft);margin-right:.35rem;vertical-align:middle}
+.tag.fact{border-color:var(--green);color:var(--green)}
+.tag.interp{border-color:var(--gold);color:var(--gold)}
+.tag.disputed{border-color:var(--red);color:var(--red)}
+.tag.verify{border-color:var(--blue);color:var(--blue)}
+.spaced{margin-top:.6rem}
+
+footer{border-top:3px double var(--rule-strong);margin-top:2rem;padding-top:1.4rem;color:var(--ink-soft);font-size:.9rem;max-width:74ch}
+footer a{color:var(--blue)}
+
+/* ---------- home button: fixed, links back to the collection homepage ---------- */
+.home-btn{position:fixed;top:16px;left:16px;z-index:60;display:inline-flex;align-items:center;gap:.4rem;background:#14202B;color:#F1F2EC;border:1px solid rgba(241,242,236,.25);padding:.45rem .85rem;border-radius:999px;font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.82rem;font-weight:600;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.3);transition:background .15s ease,transform .15s ease}
+.home-btn:hover,.home-btn:focus-visible{background:#BF2F26;transform:translateY(-1px)}
+.home-btn svg{width:14px;height:14px;flex:none}
+@media print{.home-btn{display:none}}
+
+@media print{
+  .hero{background:none;color:#000;padding-bottom:1rem}
+  .hero-sub,.stamp,.motto-en{color:#333}
+  .flagstrip,.toc-mobile{display:none}
+  .shell{display:block;padding:0}
+  section{page-break-inside:auto;margin-bottom:1.8rem}
+  h2,h3{page-break-after:avoid}
+  .panel,.edge,.note,.tablewrap,figure{page-break-inside:avoid}
+  .part-head{page-break-before:always}
+  body{font-size:10.5pt;background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+
+<a class="home-btn" href="../index.html" aria-label="Back to Handbooks homepage" title="Back to Handbooks homepage">
+  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
+  <span>Home</span>
+</a>
+
+<header class="hero">
+  <div class="flagstrip" aria-hidden="true">
+    <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f5"></span><span class="f6"></span><span class="f7"></span><span class="f8"></span>
+  </div>
+  <div class="hero-inner">
+    <p class="kicker">Comparative naval power · ships and technology · major fleets · alliances and flashpoints · lessons for India</p>
+    <h1>Global Navies</h1>
+    <p class="hero-sub">What navies are for, how fleets are built and fought, how the United States, China, Russia and other navies compare, and what recent conflicts teach. This handbook complements the Indian Navy, exercises, Coast Guard and oceans handbooks (nos. 1, 23, 24 and 32) and points to them instead of repeating them. Fleet sizes and orders of battle change often, so figures are approximate and tagged for re-verification.</p>
+    <p class="stamp">
+      <span>Leading navies <b>United States, China, Russia</b></span>
+      <span>Alliances <b>NATO, Quad, AUKUS</b></span>
+      <span>Key flashpoints <b>South China Sea, Taiwan Strait, Black Sea, Red Sea</b></span>
+      <span>Sections <b>21</b></span>
+      <span>Reading time <b>2-3 hrs</b></span>
+    </p>
+  </div>
+</header>
+
+<div class="shell">
+
+<details class="toc-mobile" open>
+  <summary>Contents</summary>
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li class="part">How to use this</li>
+      <li><a href="#snapshot">Snapshot and how to read</a></li>
+
+      <li class="part">Part I · Foundations</li>
+      <li><a href="#roles">What navies do: strategy and theory</a></li>
+      <li><a href="#anatomy">Fleet anatomy and ship types</a></li>
+      <li><a href="#technology">Naval technology and the changing battlefield</a></li>
+      <li><a href="#history">Sea power in history</a></li>
+
+      <li class="part">Part II · The major navies</li>
+      <li><a href="#usn">The United States Navy</a></li>
+      <li><a href="#plan">China's PLA Navy</a></li>
+      <li><a href="#russia">Russia's navy</a></li>
+      <li><a href="#midsize">The UK, France, Japan, South Korea and Australia</a></li>
+      <li><a href="#others">Other navies of note</a></li>
+      <li><a href="#comparison">Comparative table, with India</a></li>
+
+      <li class="part">Part III · Strategy and flashpoints</li>
+      <li><a href="#alliances">Alliances and groupings</a></li>
+      <li><a href="#flashpoints">Maritime flashpoints</a></li>
+      <li><a href="#lessons">Lessons of recent conflicts</a></li>
+
+      <li class="part">Knowledge toolkit</li>
+      <li><a href="#perspectives">Perspectives, controversies and facts</a></li>
+      <li><a href="#scenarios-options">Scenarios and strategic options</a></li>
+      <li><a href="#answer-framework">Answer framework and worked example</a></li>
+      <li><a href="#qbank">Practice bank: questions and motions</a></li>
+      <li><a href="#chronology">Master chronology</a></li>
+      <li><a href="#glossary">Glossary</a></li>
+      <li><a href="#revision">Rapid revision sheet</a></li>
+    </ol>
+  </nav>
+</details>
+
+<main>
+
+<section id="snapshot">
+  <h2>Snapshot and how to read</h2><hr class="sec-rule">
+  <p class="lede">A navy is the part of a state's power that works across the 70% of the planet covered by water. The United States has the most capable and globally deployed navy. China has overtaken it in number of ships and is closing capability gaps. Russia's fleet is smaller but nuclear-armed and has been hurt in the Black Sea. Mid-sized navies such as those of the UK, France, Japan and India matter through alliances, technology and geography.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Navy types by reach (common classification)</caption>
+      <thead><tr><th>Type</th><th>Operating area</th><th>Examples</th></tr></thead>
+      <tbody>
+        <tr><td>Blue-water</td><td>Global, sustained, far from home bases</td><td>United States; increasingly China; France, UK</td></tr>
+        <tr><td>Green-water</td><td>Regional seas and coastal approaches</td><td>Many mid-sized navies; India aims to be blue-water in its region</td></tr>
+        <tr><td>Brown-water</td><td>Rivers, ports and the littoral</td><td>Small and riverine forces</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge blue">
+    <span class="edge-h">How to read this handbook</span>
+    <p>Facts are stated plainly. Contested claims carry tags (<span class="tag fact">Established</span> <span class="tag interp">Interpretation</span> <span class="tag disputed">Disputed</span> <span class="tag verify">Re-verify</span>). Fleet counts, carrier and submarine numbers, deliveries and programme status were written from memory of open sources and change frequently, so treat them as approximate and check current references. Related handbooks: no. 1 (Indian Navy), 10 (Indian Ocean security), 23 (naval exercises), 24 (Coast Guard vs Navy), 32 (Oceans and India's role).</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part I · Foundations</p><h2>Theory, ships, technology and history</h2></div>
+
+<section id="roles">
+  <h2>What navies do: strategy and theory</h2><hr class="sec-rule">
+  <p>Navies carry out a handful of tasks that are often grouped by Western doctrine as <strong>sea control</strong> (using an area of sea and denying it to the enemy), <strong>sea denial</strong> (preventing the enemy from using it, without necessarily using it oneself), <strong>power projection</strong> (striking land from the sea), <strong>deterrence</strong> (especially nuclear, through missile submarines) and <strong>maritime security and diplomacy</strong> (piracy, relief, port calls and exercises).</p>
+  <ul>
+    <li><strong>Alfred Thayer Mahan</strong> (1890): sea power rests on a strong fleet, bases and commerce, and decisive battle wins control of the sea.</li>
+    <li><strong>Julian Corbett</strong> (1911): the sea matters because of its effect on land events and trade; controlling communications and joint operations matter more than seeking one decisive battle. A "fleet in being" can influence events without fighting.</li>
+    <li><strong>Sergey Gorshkov</strong>: the Soviet admiral who built a "balanced fleet" in the Cold War, with a strong submarine arm and defence of bastions for ballistic-missile submarines. <span class="tag interp">Interpretation</span></li>
+    <li><strong>Anti-access/area denial (A2/AD):</strong> using missiles, submarines, mines and sensors to keep a stronger navy out of a region.</li>
+  </ul>
+  <div class="edge gold">
+    <span class="edge-h">Sea control versus sea denial</span>
+    <p>The weaker side in a contest usually tries sea denial, and the stronger side tries sea control. Ukraine's attacks on Russia's Black Sea Fleet are a recent example of denial by a state with almost no conventional navy. A candidate who can use the two terms precisely and give an example sounds well prepared.</p>
+  </div>
+</section>
+
+<section id="anatomy">
+  <h2>Fleet anatomy and ship types</h2><hr class="sec-rule">
+  <div class="tablewrap">
+    <table>
+      <caption>Principal ship types and roles</caption>
+      <thead><tr><th>Type</th><th>Role</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Aircraft carrier</td><td>Air power at sea; projection and fleet air defence</td><td>Launch styles: CATOBAR (catapult), STOBAR (ski-jump), STOVL (short take-off, vertical landing). Nuclear or conventional power.</td></tr>
+        <tr><td>Cruiser and destroyer</td><td>Fleet air and missile defence; strike; escort</td><td>Aegis-type systems; large modern destroyers now approach cruiser size</td></tr>
+        <tr><td>Frigate and corvette</td><td>Escort, anti-submarine and patrol work</td><td>The backbone of many navies</td></tr>
+        <tr><td>SSBN</td><td>Nuclear-powered ballistic-missile submarine for second-strike deterrence</td><td>Quiet and hard to find</td></tr>
+        <tr><td>SSN / SSGN</td><td>Nuclear-powered attack or cruise-missile submarine</td><td>High speed and endurance; hunts ships and submarines</td></tr>
+        <tr><td>SSK</td><td>Conventional diesel-electric submarine</td><td>Quiet on batteries; air-independent propulsion (AIP) extends submerged time</td></tr>
+        <tr><td>Amphibious ships</td><td>Land troops and helicopters from the sea (LHD, LPD)</td><td>Marines, disaster relief and evacuation</td></tr>
+        <tr><td>Mine warfare and auxiliaries</td><td>Mine clearance; oilers, supply and hospital ships</td><td>Logistics decides how long a fleet can stay at sea</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Fleet strength is usually counted in hulls and displacement, but both mislead. A large number of small patrol ships is not equal to a few large destroyers, and the real measure is the ability to defend against missiles, hunt submarines, sustain operations and fight alongside others.</p>
+</section>
+
+<section id="technology">
+  <h2>Naval technology and the changing battlefield</h2><hr class="sec-rule">
+  <ul>
+    <li><strong>Missiles:</strong> long-range anti-ship cruise missiles (Harpoon, Exocet, BrahMos, YJ-18, Kalibr), anti-ship ballistic missiles (China's DF-21D and DF-26) and hypersonic weapons (Russia's Zircon, Chinese glide vehicles) shorten warning times. <span class="tag verify">Re-verify systems and deployments</span></li>
+    <li><strong>Defence:</strong> Aegis-type combat systems with vertical launch cells, layered missile defence, electronic warfare and decoys.</li>
+    <li><strong>Undersea warfare:</strong> quieter submarines, towed sonar, seabed sensors and maritime patrol aircraft such as the P-8 (India's P-8I). Finding submarines is harder than building them.</li>
+    <li><strong>Unmanned systems:</strong> uncrewed surface and underwater vessels, from Ukraine's explosive sea drones to US experimental large unmanned submarines. Mass and low cost are the point.</li>
+    <li><strong>Space, cyber and information:</strong> satellites give targeting data and communication, and both are targets. Undersea cables carry most data. <span class="tag interp">Interpretation</span></li>
+    <li><strong>Power and propulsion:</strong> electromagnetic catapults (EMALS), lithium-ion batteries on newer submarines, directed-energy weapons under test.</li>
+  </ul>
+  <div class="edge blue">
+    <span class="edge-h">The carrier question</span>
+    <p>Some analysts argue that cheap anti-ship missiles and drones make large carriers too vulnerable. Others argue that carriers, with their escorts and layered defence, remain the most flexible tool for power projection and are hard to find and hit at long range. The debate is unresolved. <span class="tag disputed">Disputed</span></p>
+  </div>
+</section>
+
+<section id="history">
+  <h2>Sea power in history</h2><hr class="sec-rule">
+  <ul class="timeline">
+    <li><span class="yr">1588</span><span>Spanish Armada defeated by England, with weather and logistics as factors.</span></li>
+    <li><span class="yr">1805</span><span>Trafalgar: Nelson's victory gives Britain sea control for a century.</span></li>
+    <li><span class="yr">1905-06</span><span>Tsushima (Japan destroys the Russian fleet) and the launch of HMS Dreadnought, which changed battleship design.</span></li>
+    <li><span class="yr">1916</span><span>Jutland, the largest fleet action of the First World War.</span></li>
+    <li><span class="yr">1922</span><span>Washington Naval Treaty limits capital ships.</span></li>
+    <li><span class="yr">1939-45</span><span>Battle of the Atlantic: convoys, escorts and aircraft defeat the U-boat campaign.</span></li>
+    <li><span class="yr">1941-42</span><span>Pearl Harbor and Midway: carriers replace battleships as the decisive ships.</span></li>
+    <li><span class="yr">1954</span><span>USS Nautilus, the first nuclear-powered submarine.</span></li>
+    <li><span class="yr">1962</span><span>Cuban Missile Crisis: a naval "quarantine" is central.</span></li>
+    <li><span class="yr">1982</span><span>Falklands War: the British sub HMS Conqueror sinks the Argentine cruiser General Belgrano, and Exocet missiles sink HMS Sheffield and others.</span></li>
+  </ul>
+  <p>Three lessons recur: sea control depends on logistics and bases as much as ships; new technology (carriers, submarines, missiles) repeatedly overturned the "decisive" platform; and navies that were underestimated, such as Japan's in 1905 and 1941, shaped the century that followed. India's own naval history is covered in handbook 1.</p>
+</section>
+
+<div class="part-head"><p>Part II · The major navies</p><h2>Who has what, and why it matters</h2></div>
+
+<section id="usn">
+  <h2>The United States Navy</h2><hr class="sec-rule">
+  <p>The US Navy is the only navy with a worldwide network of bases and a fleet of nuclear-powered carriers, with around eleven in recent years, plus nuclear attack and ballistic-missile submarines, Aegis destroyers and a large amphibious force. It operates through numbered fleets: the Seventh Fleet from Japan covers the Western Pacific, the Fifth Fleet from Bahrain covers the Gulf and Arabian Sea, and the Sixth covers Europe and Africa. <span class="tag verify">Re-verify fleet size, carrier count and retirements</span></p>
+  <ul>
+    <li><strong>Strengths:</strong> carrier air power, nuclear submarines, experience of global operations, allies and basing (Japan, South Korea, Guam, Bahrain, Diego Garcia).</li>
+    <li><strong>Strains:</strong> shipbuilding delays on carriers, Virginia-class attack submarines and the Columbia-class ballistic-missile submarines; ageing ships; limited maintenance capacity; and the cost of defending against cheap missiles and drones, as seen in the Red Sea. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Law:</strong> the United States follows UNCLOS rules as customary law but has not ratified the convention, and conducts freedom-of-navigation operations to contest claims it regards as excessive. <span class="tag fact">Established</span></li>
+  </ul>
+  <div class="edge">
+    <span class="edge-h">Shipbuilding as the weak point</span>
+    <p>US naval analysts frequently warn that China's shipbuilding base is many times larger. Naval power in a long war depends on the ability to build and repair, not only on the ships on the day war begins. <span class="tag verify">Re-verify the comparison figures</span></p>
+  </div>
+</section>
+
+<section id="plan">
+  <h2>China's PLA Navy</h2><hr class="sec-rule">
+  <p>China's People's Liberation Army Navy (PLAN) has become the largest navy by number of battle-force ships, with recent US defence estimates of roughly 370 battle-force ships and a plan for continued growth. It has three carriers: Liaoning (ex-Soviet Varyag, 2012), Shandong (the first built in China, 2019) and Fujian (a catapult-launched carrier, commissioned in 2025). It also operates large Type 055 destroyers, Type 075 amphibious assault ships and a growing submarine force that includes nuclear ballistic-missile submarines. <span class="tag verify">Re-verify counts and commissioning dates</span></p>
+  <ul>
+    <li><strong>Doctrine:</strong> from "near seas" defence toward "far seas protection". Missiles such as the DF-21D and DF-26 are intended to hold US carriers at risk (A2/AD). <span class="tag interp">Interpretation</span></li>
+    <li><strong>Bases and access:</strong> a naval support base at Djibouti (2017), reported access at Ream in Cambodia, and commercial ports with potential dual use (Gwadar, Hambantota). Whether these amount to a "string of pearls" is debated. <span class="tag disputed">Disputed</span></li>
+    <li><strong>South China Sea:</strong> artificial islands with runways and missile sites in the Spratlys and Paracels; coast guard and maritime-militia pressure on others' claims.</li>
+    <li><strong>Indian Ocean:</strong> anti-piracy patrols since 2008, submarine visits, and research vessels that call at regional ports, which India watches closely. See handbook 10.</li>
+  </ul>
+  <div class="edge blue">
+    <span class="edge-h">Quantity and quality</span>
+    <p>China leads in number of hulls and shipbuilding capacity. The United States leads in operational experience, nuclear submarines, allies and undersea warfare. A balanced answer notes that both statements are true and that the gap is narrowing in some areas. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<section id="russia">
+  <h2>Russia's navy</h2><hr class="sec-rule">
+  <p>Russia's navy is organised into the Northern, Pacific, Baltic and Black Sea fleets and the Caspian Flotilla. Its core strength is nuclear submarines: Borei-class ballistic-missile submarines and Yasen-class cruise-missile submarines, supported by the Northern Fleet's Kola Peninsula bases. Surface forces are older, and its only aircraft carrier, Admiral Kuznetsov, has spent years in repair. <span class="tag verify">Re-verify</span></p>
+  <ul>
+    <li><strong>Strategic role:</strong> protecting "bastions" for ballistic-missile submarines and holding NATO's northern flank at risk.</li>
+    <li><strong>Black Sea war:</strong> the cruiser Moskva sank in April 2022 after Ukrainian missile strikes, and sea-drone and missile attacks later forced much of the Black Sea Fleet away from Sevastopol to Novorossiysk. Turkey invoked the Montreux Convention to restrict warship passage through the Straits. <span class="tag verify">Re-verify losses and current positions</span></li>
+    <li><strong>Weapons:</strong> Kalibr cruise missiles fired from ships and submarines, and the Zircon hypersonic missile. <span class="tag verify">Re-verify</span></li>
+    <li><strong>India link:</strong> Russia built or supplied INS Vikramaditya, Kilo-class submarines, Talwar-class frigates and has leased nuclear submarines in the past. See handbook 1.</li>
+  </ul>
+</section>
+
+<section id="midsize">
+  <h2>The UK, France, Japan, South Korea and Australia</h2><hr class="sec-rule">
+  <div class="tablewrap">
+    <table>
+      <caption>Mid-sized, high-capability navies <span class="tag verify">Re-verify</span></caption>
+      <thead><tr><th>Navy</th><th>Notable features</th></tr></thead>
+      <tbody>
+        <tr><td>United Kingdom</td><td>Two Queen Elizabeth-class carriers with F-35B; Astute attack submarines; Vanguard ballistic-missile submarines being replaced by the Dreadnought class; Type 45 destroyers. A carrier group deployed to the Indo-Pacific in 2025.</td></tr>
+        <tr><td>France</td><td>The only nuclear-powered carrier outside the US (Charles de Gaulle); nuclear attack and ballistic-missile submarines; bases and a very large EEZ through overseas territories such as Réunion and French Polynesia.</td></tr>
+        <tr><td>Japan</td><td>Maritime Self-Defense Force with Aegis destroyers, an advanced conventional submarine force, and helicopter carriers (Izumo, Kaga) modified to operate F-35B aircraft. Constrained by Article 9 of its constitution, though that is being reinterpreted.</td></tr>
+        <tr><td>South Korea</td><td>Modern destroyers, a growing submarine force, shipbuilding strength, and interest in nuclear-powered submarines. <span class="tag verify">Re-verify</span></td></tr>
+        <tr><td>Australia</td><td>Collins-class submarines being supplemented by nuclear-powered boats under AUKUS; a choice of Japanese-derived frigates. <span class="tag verify">Re-verify</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>France and the UK have been important partners for India (exercises such as Varuna and Konkan, the Rafale-M and Scorpene programmes). Japan and Australia are Quad partners. All four are closely linked to the Indo-Pacific balance.</p>
+</section>
+
+<section id="others">
+  <h2>Other navies of note</h2><hr class="sec-rule">
+  <ul>
+    <li><strong>Turkey:</strong> controls the Straits under the 1936 Montreux Convention, follows the "Blue Homeland" (Mavi Vatan) maritime claims, and has built the amphibious assault ship and drone carrier TCG Anadolu.</li>
+    <li><strong>Germany and Italy:</strong> Germany is rebuilding after its 2022 defence spending increase, with frigate and submarine programmes affected by delays. Italy operates the carriers Cavour and Trieste. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Israel:</strong> small but capable, with German-built Dolphin-class submarines and missile corvettes. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Iran:</strong> two forces, the regular navy and the IRGC Navy. The IRGC uses fast boats, mines and missiles to threaten the Strait of Hormuz. <span class="tag interp">Interpretation</span></li>
+    <li><strong>Pakistan:</strong> acquiring Chinese-built Type 054A/P frigates and Hangor-class submarines (a programme with Chinese support), and Turkish-designed corvettes. <span class="tag verify">Re-verify delivery status</span></li>
+    <li><strong>Others:</strong> Indonesia, Vietnam and Brazil (with its nuclear-submarine ambition) are growing regional navies.</li>
+  </ul>
+  <div class="edge green">
+    <span class="edge-h">Why Pakistan matters in a global comparison</span>
+    <p>For India, the Pakistan Navy is a small but supported navy: Chinese ships and submarines add reach and complicate planning in the Arabian Sea. See handbooks 10 and 23.</p>
+  </div>
+</section>
+
+<section id="comparison">
+  <h2>Comparative table, with India</h2><hr class="sec-rule">
+  <div class="tablewrap">
+    <table>
+      <caption>Approximate comparison <span class="tag verify">Order-of-magnitude figures; re-verify all</span></caption>
+      <thead><tr><th>Navy</th><th>Aircraft carriers</th><th>Nuclear submarines</th><th>Remarks</th></tr></thead>
+      <tbody>
+        <tr><td>United States</td><td>About 11, all nuclear</td><td>About 70 (SSBN, SSGN, SSN)</td><td>Global reach; largest tonnage</td></tr>
+        <tr><td>China</td><td>3</td><td>About a dozen</td><td>Most ships by count; rapid growth</td></tr>
+        <tr><td>Russia</td><td>1 (long in refit)</td><td>About 30</td><td>Submarine-centred; Black Sea losses</td></tr>
+        <tr><td>United Kingdom</td><td>2</td><td>About 10</td><td>Nuclear deterrent at sea</td></tr>
+        <tr><td>France</td><td>1 (nuclear)</td><td>About 10</td><td>Large overseas EEZ</td></tr>
+        <tr><td>India</td><td>2 (Vikramaditya, Vikrant)</td><td>A small ballistic-missile submarine force (Arihant, Arighaat)</td><td>Third carrier and more submarines planned</td></tr>
+        <tr><td>Japan</td><td>Helicopter carriers adapted for F-35B</td><td>None</td><td>Strong anti-submarine and Aegis fleet</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>India's recent additions include INS Vikrant (commissioned 2022), a second ballistic-missile submarine (Arighaat, 2024), an order for Rafale-M fighters, and plans for additional Scorpene-class and new-design submarines. <span class="tag verify">Re-verify status</span> The wider picture of India's fleet and the force-structure debate is in handbook 1.</p>
+</section>
+
+<div class="part-head"><p>Part III · Strategy and flashpoints</p><h2>Alliances, contested seas and what recent wars taught</h2></div>
+
+<section id="alliances">
+  <h2>Alliances and groupings</h2><hr class="sec-rule">
+  <ul>
+    <li><strong>NATO (1949):</strong> collective defence under Article 5, with standing maritime groups. Finland (2023) and Sweden (2024) joined, which makes the Baltic Sea largely a NATO sea.</li>
+    <li><strong>AUKUS (2021):</strong> Australia, the UK and the US. Pillar I gives Australia nuclear-powered submarines; Pillar II covers advanced technology such as AI and hypersonics. Critics question the cost and non-proliferation precedent of transferring naval nuclear material to a non-nuclear-weapon state. <span class="tag interp">Interpretation</span> <span class="tag verify">Re-verify current status</span></li>
+    <li><strong>Quad:</strong> India, the US, Japan and Australia. The Malabar naval exercise now includes all four. It is not a military alliance. See handbook 23.</li>
+    <li><strong>Five Eyes:</strong> an intelligence-sharing arrangement among the US, UK, Canada, Australia and New Zealand.</li>
+    <li><strong>US bilateral alliances:</strong> with Japan, South Korea, the Philippines and Australia, which provide basing and joint operations.</li>
+    <li><strong>China-Russia cooperation:</strong> joint exercises and patrols in the Pacific, though without a formal alliance. <span class="tag interp">Interpretation</span></li>
+    <li><strong>Ad hoc coalitions:</strong> the Red Sea operations Prosperity Guardian (US-led) and the EU's Aspides, set up after Houthi attacks on shipping.</li>
+  </ul>
+  <div class="edge blue">
+    <span class="edge-h">India's pattern</span>
+    <p>India avoids formal alliances. It partners with several groupings (Quad, IORA, Colombo Security Conclave), buys arms from the US, France and Russia, and keeps its own strategic autonomy. A balanced answer explains both the benefits (access, technology) and costs (dependence, entanglement).</p>
+  </div>
+</section>
+
+<section id="flashpoints">
+  <h2>Maritime flashpoints</h2><hr class="sec-rule">
+  <div class="tablewrap">
+    <table>
+      <caption>Principal contested seas <span class="tag verify">Re-verify current events</span></caption>
+      <thead><tr><th>Area</th><th>Issue</th><th>Key actors</th></tr></thead>
+      <tbody>
+        <tr><td>South China Sea</td><td>Claims within China's nine-dash line, rejected by the 2016 arbitration; confrontations at Second Thomas Shoal and Scarborough Shoal; freedom-of-navigation operations</td><td>China, the Philippines, Vietnam, the US</td></tr>
+        <tr><td>Taiwan Strait</td><td>China claims Taiwan and holds large exercises around the island; the US supports Taiwan's self-defence under the Taiwan Relations Act (1979) while keeping a "one-China" policy</td><td>China, Taiwan, the US, Japan</td></tr>
+        <tr><td>Black Sea</td><td>War in Ukraine; grain exports; the Montreux Convention; naval drones</td><td>Russia, Ukraine, Turkey, NATO states</td></tr>
+        <tr><td>Red Sea and Bab-el-Mandeb</td><td>Houthi missile and drone attacks on shipping since late 2023, diverting traffic around Africa</td><td>Houthis, US and European navies, India and others escorting traffic</td></tr>
+        <tr><td>Strait of Hormuz</td><td>Iran's capacity to threaten oil traffic; tanker seizures</td><td>Iran, Gulf states, the US</td></tr>
+        <tr><td>Arctic and Baltic</td><td>Ice melt opening northern routes; Russian military build-up; undersea cable damage in the Baltic</td><td>Russia, NATO, China as an interested party</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Several of these touch India directly: Hormuz and the Red Sea affect its energy and trade, the South China Sea affects its Indo-Pacific partners, and Taiwan could draw in the Quad. See handbooks 10 and 32.</p>
+</section>
+
+<section id="lessons">
+  <h2>Lessons of recent conflicts</h2><hr class="sec-rule">
+  <ul>
+    <li><strong>Cheap drones can contest a large navy:</strong> Ukraine's uncrewed surface vessels and missiles pushed the Black Sea Fleet back without Ukraine having a conventional navy.</li>
+    <li><strong>Cost-exchange problem:</strong> in the Red Sea, expensive interceptors were used against cheap drones and missiles. Magazine depth and cheaper defences matter. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Merchant shipping is part of the battlespace:</strong> insurance rates, rerouting and port security can be attacked without sinking warships.</li>
+    <li><strong>Seabed infrastructure is vulnerable:</strong> cable and pipeline incidents show the need for surveillance and repair capacity.</li>
+    <li><strong>Industrial depth wins long wars:</strong> shipyards, munitions and repair capacity matter alongside the fleet.</li>
+    <li><strong>Surface ships need layered defence:</strong> a single high-value ship loss (Moskva) has strategic and morale effects.</li>
+  </ul>
+  <div class="edge gold">
+    <span class="edge-h">What India can draw from this</span>
+    <p>Invest in layered air and missile defence, uncrewed systems, maritime domain awareness (including the Information Fusion Centre-IOR), indigenous shipbuilding and a larger submarine force, and keep partnerships active. See handbooks 1 and 23 for the Navy's own programmes and exercises. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<div class="part-head"><p>Knowledge toolkit</p><h2>Analysis, practice and revision</h2></div>
+
+<section id="perspectives">
+  <h2>Perspectives, controversies and facts</h2><hr class="sec-rule">
+  <p><span class="tag interp">Interpretation</span> <strong>Is China an unstoppable naval power?</strong> One view stresses its shipbuilding scale and missile range. Another stresses its limited combat experience, geographic constraints (the "first island chain") and weaker undersea warfare. Both contain truth. <span class="tag disputed">Disputed</span></p>
+  <p><span class="tag interp">Interpretation</span> <strong>AUKUS.</strong> Supporters see a durable undersea balance; critics point to cost, delays and the precedent of non-nuclear-weapon states acquiring naval reactors.</p>
+  <p><span class="tag interp">Interpretation</span> <strong>Are carriers obsolete?</strong> The debate pits vulnerability to missiles against the flexibility of air power at sea, as noted in the technology section.</p>
+  <p><span class="tag interp">Interpretation</span> <strong>Chinese overseas bases.</strong> Some see debt traps and military ambitions; others see commercial ports with limited military use. Evidence varies by site.</p>
+  <h3>Lesser-known facts</h3>
+  <ul>
+    <li><span class="tag fact">Established</span> The United States has not ratified UNCLOS but follows most of it as customary law.</li>
+    <li><span class="tag fact">Established</span> France has the world's second-largest EEZ because of its overseas territories. <span class="tag verify">Re-verify</span></li>
+    <li><span class="tag fact">Established</span> Under the Montreux Convention (1936), Turkey controls warship passage through the Bosporus and Dardanelles.</li>
+    <li><span class="tag fact">Established</span> HMS Dreadnought (1906) was so influential that earlier battleships were called "pre-dreadnoughts".</li>
+  </ul>
+</section>
+
+<section id="scenarios-options">
+  <h2>Scenarios and strategic options</h2><hr class="sec-rule">
+  <p>Presented neutrally, without recommending a political position:</p>
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>Taiwan Strait crisis</h4>
+      <p>A blockade or conflict would disrupt trade and test US and allied navies. India would face economic effects and pressure over its Quad role.</p>
+    </div>
+    <div class="panel red-top">
+      <h4>Growing PLAN presence in the Indian Ocean</h4>
+      <p>More Chinese submarines, research ships and base access would raise India's need for surveillance, submarines and regional partnerships.</p>
+    </div>
+    <div class="panel gold-top">
+      <h4>Mass unmanned warfare</h4>
+      <p>Large numbers of cheap drones change the calculation for expensive ships, favouring defence, dispersion and industrial capacity.</p>
+    </div>
+    <div class="panel green-top">
+      <h4>Arctic and northern routes</h4>
+      <p>Ice loss opens routes and resources, increasing military activity by Russia and interest from China and NATO states.</p>
+    </div>
+  </div>
+  <div class="tablewrap">
+    <table>
+      <caption>Options and trade-offs for India</caption>
+      <thead><tr><th>Option</th><th>Benefit</th><th>Risk or cost</th></tr></thead>
+      <tbody>
+        <tr><td>Expand submarines and indigenous shipbuilding</td><td>Sea denial, self-reliance, jobs</td><td>Cost, long timelines, dependence on imported parts</td></tr>
+        <tr><td>Deepen partnerships (Quad, France, UK, Japan)</td><td>Technology, access, shared awareness</td><td>Perceived alignment; strategic autonomy concerns</td></tr>
+        <tr><td>Invest in drones and layered defence</td><td>Cost-effective protection and surveillance</td><td>Rapid change; doctrine must keep up</td></tr>
+        <tr><td>Strengthen island bases (Andaman and Nicobar)</td><td>Forward surveillance near Malacca</td><td>Environmental and political objections</td></tr>
+        <tr><td>Third aircraft carrier</td><td>Power projection in both seas</td><td>Cost, vulnerability debate, escorts needed</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="answer-framework">
+  <h2>Answer framework and worked example</h2><hr class="sec-rule">
+  <p>For any "Which navy matters most?" or "What should India learn?" question, move through definition, location, evidence, contest, analysis, test, position, concession and close. One compressed example follows.</p>
+  <div class="panel red-top">
+    <h4>Worked example: "Does China's naval growth threaten India?"</h4>
+    <dl class="rungs">
+      <dt>Define</dt><dd>PLAN growth means more ships, submarines, carriers and overseas access.</dd>
+      <dt>Locate</dt><dd>Main effort in the Western Pacific; growing presence in the Indian Ocean through anti-piracy patrols, port calls and Djibouti.</dd>
+      <dt>Establish</dt><dd>The PLAN is the largest navy by hull count, has three carriers and is building submarines; it has research and survey ships active in the Indian Ocean.</dd>
+      <dt>Contest</dt><dd>China's priority remains the Pacific, and its Indian Ocean presence is small and far from home bases.</dd>
+      <dt>Analyse</dt><dd>India's advantage is geography, bases such as Andaman and Nicobar, and the chokepoints through which Chinese trade must pass.</dd>
+      <dt>Test</dt><dd>Compare Chinese presence now with that over the next decade, and India's surveillance and submarine capacity.</dd>
+      <dt>Position</dt><dd>A growing challenge to be managed through capability, partnerships and awareness, not an immediate threat to India's control of its own waters.</dd>
+      <dt>Concede</dt><dd>Fleet figures and basing arrangements change quickly. <span class="tag verify">Re-verify</span></dd>
+      <dt>Close</dt><dd>India's response should combine its own build-up, partnerships and watchfulness at the chokepoints.</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="qbank">
+  <h2>Practice bank: questions and motions</h2><hr class="sec-rule">
+  <p class="lede">Fourteen questions. Answer each aloud, standing, in ninety seconds.</p>
+  <ol class="qbank">
+    <li>Distinguish sea control from sea denial, with a recent example.</li>
+    <li>What did Mahan and Corbett each argue?</li>
+    <li>Compare a CATOBAR, STOBAR and STOVL carrier.</li>
+    <li>What are SSBN, SSN and SSK submarines, and why does each matter?</li>
+    <li>What is A2/AD, and how does China use it?</li>
+    <li>Compare the US Navy and the PLA Navy in quantity and quality.</li>
+    <li>What happened to Russia's Black Sea Fleet, and what does it teach?</li>
+    <li>What is AUKUS, and why is it controversial?</li>
+    <li>What is the Montreux Convention?</li>
+    <li>What are the Houthi attacks in the Red Sea, and what has been the response?</li>
+    <li>Why do the Taiwan Strait and South China Sea matter to India?</li>
+    <li>How does China's presence in the Indian Ocean affect India?</li>
+    <li>What lessons should India draw from the Ukraine and Red Sea experiences?</li>
+    <li>How would you compare the Indian Navy with one other navy of your choice?</li>
+  </ol>
+  <h3>Debate motions</h3>
+  <ol class="dbank">
+    <li>This house believes aircraft carriers are obsolete in the age of anti-ship missiles.</li>
+    <li>This house believes India should build a third aircraft carrier.</li>
+    <li>This house believes India should join a formal military alliance.</li>
+    <li>This house believes unmanned vessels will replace large surface warships.</li>
+    <li>This house believes AUKUS-style transfers of naval nuclear technology weaken non-proliferation.</li>
+    <li>This house believes China's overseas bases are primarily military.</li>
+    <li>This house believes submarines are more important than carriers to India.</li>
+  </ol>
+</section>
+
+<section id="chronology">
+  <h2>Master chronology</h2><hr class="sec-rule">
+  <ul class="timeline">
+    <li><span class="yr">1588</span><span>Spanish Armada defeated.</span></li>
+    <li><span class="yr">1805</span><span>Battle of Trafalgar.</span></li>
+    <li><span class="yr">1890</span><span>Mahan's <em>The Influence of Sea Power upon History</em>.</span></li>
+    <li><span class="yr">1905-06</span><span>Tsushima; HMS Dreadnought launched.</span></li>
+    <li><span class="yr">1911</span><span>Corbett's <em>Some Principles of Maritime Strategy</em>.</span></li>
+    <li><span class="yr">1916</span><span>Battle of Jutland.</span></li>
+    <li><span class="yr">1922</span><span>Washington Naval Treaty.</span></li>
+    <li><span class="yr">1941-42</span><span>Pearl Harbor and Midway.</span></li>
+    <li><span class="yr">1954</span><span>USS Nautilus.</span></li>
+    <li><span class="yr">1962</span><span>Cuban Missile Crisis naval quarantine.</span></li>
+    <li><span class="yr">1982</span><span>Falklands War; UNCLOS adopted.</span></li>
+    <li><span class="yr">2008</span><span>PLAN begins Gulf of Aden anti-piracy patrols.</span></li>
+    <li><span class="yr">2012</span><span>China commissions its first carrier, Liaoning.</span></li>
+    <li><span class="yr">2016</span><span>South China Sea arbitration award.</span></li>
+    <li><span class="yr">2021</span><span>AUKUS announced.</span></li>
+    <li><span class="yr">2022</span><span>Moskva sunk; INS Vikrant commissioned.</span></li>
+    <li><span class="yr">2023-24</span><span>Houthi attacks on Red Sea shipping; Finland and Sweden join NATO.</span></li>
+    <li><span class="yr">2025</span><span>China's Fujian carrier enters service. <span class="tag verify">Re-verify</span></span></li>
+  </ul>
+</section>
+
+<section id="glossary">
+  <h2>Glossary</h2><hr class="sec-rule">
+  <dl class="term">
+    <dt>A2/AD</dt><dd>Anti-access/area denial: measures that keep a stronger force out of a region.</dd>
+    <dt>AIP</dt><dd>Air-independent propulsion, which lets conventional submarines stay submerged longer.</dd>
+    <dt>Aegis</dt><dd>US-origin naval combat system for air and missile defence.</dd>
+    <dt>Battle force ships</dt><dd>A counting convention for commissioned combatants and key support ships.</dd>
+    <dt>Blue-water navy</dt><dd>A navy able to operate globally and sustain forces far from home.</dd>
+    <dt>CATOBAR / STOBAR / STOVL</dt><dd>Carrier launch and recovery methods.</dd>
+    <dt>Fleet in being</dt><dd>A fleet whose existence constrains the enemy without fighting.</dd>
+    <dt>FONOP</dt><dd>Freedom-of-navigation operation, a naval transit that challenges excessive claims.</dd>
+    <dt>Second-strike capability</dt><dd>The ability to retaliate after an enemy nuclear attack, usually by submarines.</dd>
+    <dt>Sea control</dt><dd>Ability to use an area of sea and deny it to the enemy.</dd>
+    <dt>Sea denial</dt><dd>Preventing an enemy from using an area of sea.</dd>
+    <dt>SSBN / SSN / SSK</dt><dd>Nuclear ballistic-missile, nuclear attack and conventional submarines.</dd>
+    <dt>USV / UUV</dt><dd>Uncrewed surface and underwater vessels.</dd>
+    <dt>VLS</dt><dd>Vertical launch system for missiles on ships.</dd>
+  </dl>
+</section>
+
+<section id="revision">
+  <h2>Rapid revision sheet</h2><hr class="sec-rule">
+  <div class="note">
+    <h4>Theory and technology</h4>
+    <ul>
+      <li>Sea control, sea denial, power projection, deterrence; Mahan, Corbett, Gorshkov.</li>
+      <li>Carriers: CATOBAR, STOBAR, STOVL; submarines: SSBN, SSN, SSK, AIP.</li>
+      <li>Missiles, hypersonics, drones, undersea sensors; the carrier-vulnerability debate.</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h4>The major navies</h4>
+    <ul>
+      <li>US: about 11 nuclear carriers, global bases, shipbuilding strain.</li>
+      <li>China: most ships by count; 3 carriers (Liaoning, Shandong, Fujian); Djibouti; A2/AD.</li>
+      <li>Russia: submarine-centred; Moskva loss and Black Sea retreat; Montreux Convention.</li>
+      <li>UK, France, Japan, South Korea, Australia (AUKUS); Turkey, Iran, Pakistan, Israel.</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h4>Strategy and India</h4>
+    <ul>
+      <li>NATO, Quad (Malabar), AUKUS, Five Eyes; flashpoints: South China Sea, Taiwan, Black Sea, Red Sea, Hormuz, Arctic.</li>
+      <li>Lessons: cheap drones, cost-exchange, merchant shipping, seabed infrastructure, industrial depth.</li>
+      <li>India: two carriers, small SSBN force, indigenisation, partnerships, Andaman and Nicobar.</li>
+      <li>Always tag uncertain figures for re-verification.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer>
+  <p>Compiled from open sources. Study aid only, not an official publication.</p>
+  <p>Source &amp; contributions: <a href="https://github.com/mohitkushwaha0601/matre">github.com/mohitkushwaha0601/matre</a></p>
+</footer>
+
+</body>
+</html>

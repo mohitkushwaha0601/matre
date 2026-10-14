@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Indian Navy's Humanitarian Efforts — A Deep Knowledge Handbook</title>
+<meta name="description" content="A 21-section handbook on the Indian Navy's humanitarian work: HADR concepts and assets, tsunami relief, evacuations from Lebanon to Sudan, floods and cyclones, neighbourhood and distant relief, rescue at sea, soft-power diplomacy, limits and critiques, with SSB-style practice material.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#142238;
+  --ink-soft:#52607A;
+  --paper:#F4F3EE;
+  --surface:#FFFFFF;
+  --surface-2:#E7E8EC;
+  --rule:#D2D5DC;
+  --rule-strong:#9AA3B5;
+  --red:#C0392B;
+  --blue:#1E5AA8;
+  --gold:#B07A10;
+  --green:#2E7D5B;
+  --hero-bg:#10264A;
+  --hero-ink:#F4F3EE;
+  --hero-dim:#A9B8D4;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ink:#E8ECF4;
+    --ink-soft:#AEB9CE;
+    --paper:#0A1220;
+    --surface:#111C30;
+    --surface-2:#19263E;
+    --rule:#2B3A57;
+    --rule-strong:#54698F;
+    --red:#F08A7C;
+    --blue:#86B4EE;
+    --gold:#E3B65A;
+    --green:#6FCBA0;
+    --hero-bg:#060D1A;
+    --hero-ink:#E8ECF4;
+    --hero-dim:#8195B5;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E8ECF4;
+  --ink-soft:#AEB9CE;
+  --paper:#0A1220;
+  --surface:#111C30;
+  --surface-2:#19263E;
+  --rule:#2B3A57;
+  --rule-strong:#54698F;
+  --red:#F08A7C;
+  --blue:#86B4EE;
+  --gold:#E3B65A;
+  --green:#6FCBA0;
+  --hero-bg:#060D1A;
+  --hero-ink:#E8ECF4;
+  --hero-dim:#8195B5;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1.5rem);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ---------- hero ---------- */
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
+.flagstrip{display:flex;height:12px}
+.flagstrip span{flex:1}
+.f1{background:#10264A}
+.f2{background:#1E5AA8}
+.f3{background:#FFFFFF}
+.f4{background:#C0392B}
+.f5{background:#E58A1F}
+.f6{background:#2E7D5B}
+.f7{background:#8FB4E3}
+.f8{background:#081428}
+.hero-inner{max-width:1180px;margin:0 auto;padding:3.2rem 1.5rem 0}
+.kicker{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--hero-dim);margin:0 0 .8rem}
+.motto{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:clamp(1.7rem,5.2vw,2.9rem);line-height:1.2;margin:0;letter-spacing:.005em;max-width:26ch}
+.motto-en{margin:.55rem 0 0;color:var(--hero-dim);font-size:clamp(.95rem,2.4vw,1.1rem);font-style:italic;max-width:62ch}
+.hero h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.5rem,4.3vw,2.35rem);line-height:1.2;margin:2.6rem 0 .5rem;border-top:1px solid rgba(255,255,255,.22);padding-top:1.6rem;max-width:30ch}
+.hero-sub{margin:0;color:var(--hero-dim);max-width:68ch}
+.stamp{margin-top:1.6rem;font-size:.86rem;color:var(--hero-dim);display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+.stamp b{color:var(--hero-ink);font-weight:600}
+
+/* ---------- layout ---------- */
+.shell{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem;display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media (min-width:1000px){
+  .shell{grid-template-columns:255px minmax(0,1fr);gap:3.5rem;padding-top:2.8rem}
+}
+nav.toc{font-size:.9rem}
+@media (min-width:1000px){
+  .toc-mobile{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2rem);align-self:start;max-height:calc(100vh - 5rem);overflow-y:auto}
+}
+nav.toc h2{font-family:"Zilla Slab",Georgia,serif;font-size:.92rem;font-weight:600;margin:0 0 .7rem;padding-bottom:.45rem;border-bottom:2px solid var(--rule-strong)}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc}
+nav.toc li{border-bottom:1px solid var(--rule)}
+nav.toc li:not(.part){counter-increment:toc}
+nav.toc a{display:flex;gap:.6rem;padding:.4rem 0;color:var(--ink-soft);text-decoration:none}
+nav.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--rule-strong);font-variant-numeric:tabular-nums;flex:none}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--red)}
+nav.toc .part{border:0;margin:1.1rem 0 .3rem;font-family:"Zilla Slab",Georgia,serif;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--rule-strong)}
+nav.toc .part::before{content:none}
+.toc-mobile{display:block}
+@media (min-width:1000px){.toc-mobile summary{display:none}}
+.toc-mobile summary{cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:600;padding:.7rem .9rem;background:var(--surface);border:1px solid var(--rule);margin-bottom:1rem}
+@media (max-width:999px){
+  .toc-mobile[open] nav.toc{padding:0 .9rem 1rem}
+  .toc-mobile:not([open]) nav.toc{display:none}
+}
+
+/* ---------- sections ---------- */
+main{min-width:0}
+section{margin:0 0 3.6rem;scroll-margin-top:1.5rem}
+section > h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.45rem,3.6vw,1.95rem);line-height:1.2;margin:0 0 .3rem}
+.part-head{margin:4rem 0 2.2rem;padding:1.1rem 0 .9rem;border-top:4px double var(--rule-strong);border-bottom:1px solid var(--rule)}
+.part-head p{margin:0;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.part-head h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.3rem,3.2vw,1.7rem);margin:.3rem 0 0;color:var(--ink)}
+.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.16rem;margin:2rem 0 .5rem;line-height:1.3}
+h4{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1rem;margin:1.4rem 0 .35rem;color:var(--ink)}
+p{margin:0 0 .95rem;max-width:74ch}
+ul,ol{margin:0 0 1rem;padding-left:1.25rem;max-width:74ch}
+li{margin-bottom:.35rem}
+li::marker{color:var(--rule-strong)}
+strong{font-weight:600}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+/* ---------- components ---------- */
+.lede{font-size:1.06rem;color:var(--ink-soft);max-width:70ch}
+
+.tablewrap{overflow-x:auto;margin:0 0 1.3rem;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.92rem}
+caption{text-align:left;padding:.7rem .85rem .1rem;font-weight:600;color:var(--ink-soft);font-size:.9rem}
+th,td{text-align:left;padding:.55rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{background:var(--surface-2);font-weight:600;border-bottom:2px solid var(--rule-strong);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.num,th.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+.edge{background:var(--surface);border-left:4px solid var(--red);padding:.9rem 1.1rem;margin:1.4rem 0;max-width:74ch}
+.edge p:last-child,.edge ul:last-child,.edge ol:last-child{margin-bottom:0}
+.edge .edge-h{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);display:block;margin-bottom:.25rem;font-size:.95rem}
+.edge.gold{border-left-color:var(--gold)}
+.edge.gold .edge-h{color:var(--gold)}
+.edge.blue{border-left-color:var(--blue)}
+.edge.blue .edge-h{color:var(--blue)}
+.edge.green{border-left-color:var(--green)}
+.edge.green .edge-h{color:var(--green)}
+
+.note{background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;border:1px solid var(--rule);font-size:.95rem}
+.note p:last-child,.note ul:last-child,.note ol:last-child{margin-bottom:0}
+.note h4{margin-top:0}
+
+.panel{background:var(--surface);border:1px solid var(--rule);padding:1rem 1.1rem}
+.panel h4{margin-top:0}
+.panel ul,.panel ol{margin-bottom:0}
+.panel.blue-top{border-top:3px solid var(--blue)}
+.panel.red-top{border-top:3px solid var(--red)}
+.panel.gold-top{border-top:3px solid var(--gold)}
+.panel.green-top{border-top:3px solid var(--green)}
+
+.rungs{max-width:74ch;margin:.3rem 0 0;display:grid;grid-template-columns:9.5rem 1fr;gap:0 1rem}
+.rungs dt{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;color:var(--red);padding-top:.2rem}
+.rungs dd{margin:0 0 .5rem;font-size:.93rem}
+@media (max-width:560px){
+  .rungs{grid-template-columns:1fr;gap:0}
+  .rungs dt{padding-top:.4rem}
+}
+
+.timeline{list-style:none;padding:0;margin:1rem 0 1.4rem;max-width:74ch}
+.timeline li{display:grid;grid-template-columns:8.2rem 1fr;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--rule);margin:0}
+.timeline li:last-child{border-bottom:0}
+.timeline .yr{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);font-variant-numeric:tabular-nums}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:.1rem}}
+
+.qbank{counter-reset:q;list-style:none;padding:0;max-width:74ch}
+.qbank li{counter-increment:q;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.qbank li::before{content:counter(q,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.qbank li:last-child{border-bottom:0}
+
+.dbank{counter-reset:d;list-style:none;padding:0;max-width:74ch}
+.dbank li{counter-increment:d;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.dbank li::before{content:counter(d,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.dbank li:last-child{border-bottom:0}
+
+.grid{display:grid;gap:1rem}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
+
+.card{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--red);padding:1rem 1.1rem}
+.card h4{margin:0 0 .45rem;font-size:1rem}
+.card .name{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.2rem}
+.card .role{font-size:.9rem;color:var(--ink-soft)}
+.card .since{font-size:.78rem;color:var(--green);font-weight:600;margin-top:.45rem}
+
+.term{max-width:74ch;margin:0 0 1.2rem}
+.term dt{font-weight:600;margin-top:.8rem}
+.term dd{margin:.15rem 0 0;color:var(--ink-soft)}
+
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:.1rem .45rem;border:1px solid var(--rule-strong);color:var(--ink-soft);margin-right:.35rem;vertical-align:middle}
+.tag.fact{border-color:var(--green);color:var(--green)}
+.tag.interp{border-color:var(--gold);color:var(--gold)}
+.tag.disputed{border-color:var(--red);color:var(--red)}
+.tag.verify{border-color:var(--blue);color:var(--blue)}
+.spaced{margin-top:.6rem}
+
+footer{border-top:3px double var(--rule-strong);margin-top:2rem;padding-top:1.4rem;color:var(--ink-soft);font-size:.9rem;max-width:74ch}
+footer a{color:var(--blue)}
+
+/* ---------- home button: fixed, links back to the collection homepage ---------- */
+.home-btn{position:fixed;top:16px;left:16px;z-index:60;display:inline-flex;align-items:center;gap:.4rem;background:#14202B;color:#F1F2EC;border:1px solid rgba(241,242,236,.25);padding:.45rem .85rem;border-radius:999px;font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.82rem;font-weight:600;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.3);transition:background .15s ease,transform .15s ease}
+.home-btn:hover,.home-btn:focus-visible{background:#BF2F26;transform:translateY(-1px)}
+.home-btn svg{width:14px;height:14px;flex:none}
+@media print{.home-btn{display:none}}
+
+@media print{
+  .hero{background:none;color:#000;padding-bottom:1rem}
+  .hero-sub,.stamp,.motto-en{color:#333}
+  .flagstrip,.toc-mobile{display:none}
+  .shell{display:block;padding:0}
+  section{page-break-inside:auto;margin-bottom:1.8rem}
+  h2,h3{page-break-after:avoid}
+  .panel,.edge,.note,.tablewrap,figure{page-break-inside:avoid}
+  .part-head{page-break-before:always}
+  body{font-size:10.5pt;background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+
+<a class="home-btn" href="../index.html" aria-label="Back to Handbooks homepage" title="Back to Handbooks homepage">
+  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
+  <span>Home</span>
+</a>
+
+<header class="hero">
+  <div class="flagstrip" aria-hidden="true">
+    <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f5"></span><span class="f6"></span><span class="f7"></span><span class="f8"></span>
+  </div>
+  <div class="hero-inner">
+    <p class="kicker">HADR · evacuations · disaster relief · rescue at sea · neighbourhood and distant relief · soft power · limits and critiques</p>
+    <h1>Indian Navy's Humanitarian Efforts</h1>
+    <p class="hero-sub">What the Indian Navy does when the task is relief, rescue or evacuation rather than war: the concepts, the ships and aircraft, the main operations from the 2004 tsunami to recent cyclones and evacuations, the diplomatic value and the limits. This handbook complements nos. 1, 24, 32 and 34 and points to them for force structure, the Coast Guard, ocean policy and coastal disasters. Operation names, dates and figures were written from memory and are tagged for re-verification.</p>
+    <p class="stamp">
+      <span>Core idea <b>HADR and NEO</b></span>
+      <span>Landmark case <b>Tsunami 2004</b></span>
+      <span>Mission label <b>First responder in the Indian Ocean</b></span>
+      <span>Sections <b>21</b></span>
+      <span>Reading time <b>2-3 hrs</b></span>
+    </p>
+  </div>
+</header>
+
+<div class="shell">
+
+<details class="toc-mobile" open>
+  <summary>Contents</summary>
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li class="part">Part I · Foundations</li>
+      <li><a href="#snapshot">Snapshot and how to read</a></li>
+      <li><a href="#why">Why navies do humanitarian work</a></li>
+      <li><a href="#organisation">Assets and organisation</a></li>
+      <li><a href="#early">Early history and doctrine</a></li>
+
+      <li class="part">Part II · Case studies by type</li>
+      <li><a href="#tsunami">The 2004 tsunami</a></li>
+      <li><a href="#evac-one">Evacuations I: Lebanon, Libya, Yemen</a></li>
+      <li><a href="#evac-two">Evacuations II: COVID-19 and Sudan</a></li>
+      <li><a href="#home-disasters">Floods and cyclones at home</a></li>
+      <li><a href="#neighbourhood">Neighbourhood relief</a></li>
+      <li><a href="#distant">Distant and recent relief missions</a></li>
+      <li><a href="#medical">Medical support and health diplomacy</a></li>
+      <li><a href="#rescue-sea">Rescue at sea and merchant-ship protection</a></li>
+      <li><a href="#pollution">Marine incidents and pollution</a></li>
+
+      <li class="part">Part III · Strategy and critique</li>
+      <li><a href="#diplomacy">HADR as diplomacy</a></li>
+      <li><a href="#joint">Joint and multinational HADR</a></li>
+      <li><a href="#limits">Costs, limits and critiques</a></li>
+
+      <li class="part">Knowledge toolkit</li>
+      <li><a href="#perspectives">Perspectives, controversies and facts</a></li>
+      <li><a href="#scenarios-options">Scenarios and strategic options</a></li>
+      <li><a href="#answer-framework">Answer framework and worked example</a></li>
+      <li><a href="#qbank">Practice bank: questions and motions</a></li>
+      <li><a href="#revision">Chronology, glossary and revision sheet</a></li>
+    </ol>
+  </nav>
+</details>
+
+<main>
+
+<div class="part-head"><p>Part I · Foundations</p><h2>Concepts, assets and early history</h2></div>
+
+<section id="snapshot">
+  <h2>Snapshot and how to read</h2><hr class="sec-rule">
+  <p class="lede">Humanitarian assistance and disaster relief (HADR) is now a routine task of the Indian Navy, listed in its doctrine alongside war fighting, diplomacy and constabulary duties. Ships reach coasts before roads and airfields do, carry their own food, water, power and medical care, and can stay for weeks. The pattern since 2004 is a Navy that moves fast to help India's neighbours and distant partners, and that is also used to bring Indians home from conflicts and disasters.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Types of humanitarian task covered here</caption>
+      <thead><tr><th>Type</th><th>What it means</th><th>Typical example</th></tr></thead>
+      <tbody>
+        <tr><td>HADR</td><td>Relief after floods, cyclones, earthquakes and similar disasters</td><td>Tsunami 2004; Cyclone Idai 2019</td></tr>
+        <tr><td>NEO</td><td>Non-combatant evacuation operation: moving civilians out of danger</td><td>Lebanon 2006; Yemen 2015; Sudan 2023</td></tr>
+        <tr><td>Search and rescue</td><td>Saving people from ships, boats and the sea</td><td>Rescues in the Gulf of Aden, 2024</td></tr>
+        <tr><td>Health and supply missions</td><td>Medical support, oxygen, food and water</td><td>Operation Neer 2014; Samudra Setu II 2021</td></tr>
+        <tr><td>Environmental response</td><td>Helping with oil spills and marine accidents</td><td>Mostly led by the Coast Guard</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge blue">
+    <span class="edge-h">How to read this handbook</span>
+    <p>Facts are stated plainly. Contested claims carry tags (<span class="tag fact">Established</span> <span class="tag interp">Interpretation</span> <span class="tag disputed">Disputed</span> <span class="tag verify">Re-verify</span>). Operation names, ship names, dates and numbers of people rescued or evacuated were written from memory and should be checked. Related handbooks: no. 1 (Indian Navy), 24 (Coast Guard versus Navy), 32 (Oceans and India's role), 34 (Coastal regions and disaster response).</p>
+  </div>
+</section>
+
+<section id="why">
+  <h2>Why navies do humanitarian work</h2><hr class="sec-rule">
+  <p>Three reasons usually stand out. First, a ship is a ready-made relief base: it has fuel, water, helicopters, divers, cooks, doctors and communications. Second, the sea often reaches places that land and air routes cannot, such as small islands or a damaged coast. Third, helping in a crisis builds trust and presence without the political weight of a military deployment. <span class="tag interp">Interpretation</span></p>
+  <ul>
+    <li><strong>Law and legitimacy:</strong> relief to another state is normally offered at that state's request or with its consent, which separates it from intervention. A ship may also rescue persons in distress at sea under the duty of mariners and the SAR conventions, regardless of nationality.</li>
+    <li><strong>Evacuation of nationals:</strong> a state's duty to protect its citizens abroad is the basis for NEOs. Evacuees are often also foreign nationals, which is a form of goodwill.</li>
+    <li><strong>Doctrine:</strong> India's maritime doctrine and security strategy documents list benign roles such as humanitarian assistance and disaster relief alongside military and diplomatic roles. <span class="tag verify">Re-verify document titles and years</span></li>
+    <li><strong>Soft power:</strong> India presents itself as a "first responder" in the Indian Ocean Region, a term used by Indian officials and commentators. <span class="tag interp">Interpretation</span></li>
+  </ul>
+  <div class="edge gold">
+    <span class="edge-h">A useful distinction</span>
+    <p>Assistance (relief) differs from intervention (coercive action). The 1988 Maldives operation in section 4 shows why the line matters: India acted at the Maldivian government's request, which is why it is generally described as assistance rather than invasion.</p>
+  </div>
+</section>
+
+<section id="organisation">
+  <h2>Assets and organisation</h2><hr class="sec-rule">
+  <div class="tablewrap">
+    <table>
+      <caption>Platforms and capabilities relevant to humanitarian tasks</caption>
+      <thead><tr><th>Asset</th><th>Use in relief and evacuation</th></tr></thead>
+      <tbody>
+        <tr><td>Landing Platform Dock (INS Jalashwa)</td><td>Large deck, well dock, helicopters and boats; carries stores, vehicles and many evacuees</td></tr>
+        <tr><td>Landing Ship Tank (Magar and Shardul classes)</td><td>Beach landing and heavy cargo; used for relief supplies, repatriation and COVID missions <span class="tag verify">Re-verify class names</span></td></tr>
+        <tr><td>Destroyers, frigates and corvettes</td><td>Escort, rescue, helicopter platform, desalination and medical teams</td></tr>
+        <tr><td>Fleet tankers and support ships</td><td>Fuel, fresh water and stores for other ships and for relief</td></tr>
+        <tr><td>Helicopters and maritime patrol aircraft</td><td>Rescue, casualty evacuation, search and supply drops</td></tr>
+        <tr><td>Divers, rescue and medical teams</td><td>Flood rescue, underwater tasks and field medical care</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The Navy has no dedicated hospital ship, unlike the United States and China, so it fits medical facilities and teams on amphibious and other ships as needed. <span class="tag verify">Re-verify</span> Coordination runs through the Ministry of Defence and the Ministry of External Affairs for foreign missions and through the National Disaster Management Authority, the National Disaster Response Force and state governments at home. Naval ships on <strong>mission-based deployments</strong> at key points in the Indian Ocean are positioned so they can respond quickly to an incident.</p>
+  <p>Force structure and the fleet are covered in handbook 1, and the Coast Guard's parallel role in search and rescue and coastal disasters in handbooks 24 and 34.</p>
+</section>
+
+<section id="early">
+  <h2>Early history and doctrine</h2><hr class="sec-rule">
+  <p>Before the 2000s the Navy's work in this field was real but irregular and rarely described as a mission in itself. Naval ships and helicopters supported relief after cyclones and floods on India's coast, such as the 1999 Odisha super cyclone and the 2001 Gujarat earthquake, though it was mainly the Army, Air Force and civil agencies that were visible in those operations. <span class="tag verify">Re-verify naval roles</span></p>
+  <ul>
+    <li><strong>1988, Maldives (Operation Cactus):</strong> mercenaries tried to overthrow the government in Malé. At the president's request, Indian paratroopers were airlifted in, and naval frigates intercepted the hijacked ship carrying the mercenaries. The operation is cited as a model of rapid assistance to a neighbour. <span class="tag fact">Established</span></li>
+    <li><strong>Neighbourhood context:</strong> Sri Lanka and the Maldives are small, close and dependent on the sea, and these relationships made naval assistance a natural tool.</li>
+    <li><strong>Turning point:</strong> the response to the 2004 tsunami changed both the scale of the work and the way the Navy and government spoke about it.</li>
+  </ul>
+  <div class="note">
+    <h4>How doctrine caught up</h4>
+    <p>Indian maritime doctrine and strategy papers published from the mid-2000s onward formalised humanitarian roles and described them as part of the Navy's "benign" tasks. In the 2010s, mission-based deployments and regular HADR participation in exercises made the role routine. <span class="tag verify">Re-verify dates</span></p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part II · Case studies by type</p><h2>Tsunami, evacuations, floods and relief missions</h2></div>
+
+<section id="tsunami">
+  <h2>The 2004 tsunami</h2><hr class="sec-rule">
+  <p>On 26 December 2004 an undersea earthquake off Sumatra generated a tsunami that killed more than 200,000 people around the Indian Ocean, including thousands on India's coast and in the Andaman and Nicobar Islands. India chose to manage its own relief and not seek foreign aid, while sending help to neighbours. The Navy was central to both.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Naval relief operations after the tsunami</caption>
+      <thead><tr><th>Operation</th><th>Area</th><th>What was done</th></tr></thead>
+      <tbody>
+        <tr><td>Madad</td><td>Mainland coast of Tamil Nadu, Puducherry and others</td><td>Relief supplies, medical teams, helicopters, repair and clearance of ports</td></tr>
+        <tr><td>Sea Waves</td><td>Andaman and Nicobar Islands</td><td>Rescue, relief and restoration of communications on devastated islands</td></tr>
+        <tr><td>Castor</td><td>Maldives</td><td>Ships with relief material and teams to a country with a large share of its land at sea level</td></tr>
+        <tr><td>Rainbow</td><td>Sri Lanka</td><td>Ships and helicopters with supplies, medical teams and engineers</td></tr>
+        <tr><td>Gambhir</td><td>Indonesia (Aceh)</td><td>Relief shipments and medical aid to the worst-hit area</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Ships sailed within a day or two of the disaster, and India was among the earliest outside helpers to reach Sri Lanka and the Maldives. <span class="tag verify">Re-verify names, ships and timings</span> The Navy and the Air Force were themselves hit: the Car Nicobar air base was damaged and personnel were killed.</p>
+  <div class="edge">
+    <span class="edge-h">Why 2004 matters beyond relief</span>
+    <p>During the response, the United States, India, Japan and Australia formed an informal "Tsunami Core Group" to coordinate relief. It is often cited as an early origin of the Quad. <span class="tag interp">Interpretation of the link</span> The wider Quad story is in other handbooks.</p>
+  </div>
+</section>
+
+<section id="evac-one">
+  <h2>Evacuations I: Lebanon, Libya and Yemen</h2><hr class="sec-rule">
+  <p>A naval evacuation needs a port, a reliable sea route, permission from local authorities and a safe window, and ships can carry many more people than aircraft can. Three operations illustrate how Indian practice developed.</p>
+  <ul>
+    <li><strong>Lebanon, 2006 (Operation Sukoon):</strong> during the Israel-Hezbollah war, naval ships including INS Mumbai, Brahmaputra and Betwa took people from Beirut by sea to Cyprus, from where they were flown home. The operation moved roughly two thousand people, Indians and nationals of other countries including Nepal and Sri Lanka. <span class="tag verify">Re-verify ships and figures</span> It is often described as the Navy's first major NEO.</li>
+    <li><strong>Libya, 2011 (Operation Safe Homecoming):</strong> as the civil war began, India evacuated more than 15,000 people, mostly by air and by chartered ships, with Indian naval ships on station off the coast. <span class="tag verify">Re-verify the naval share</span></li>
+    <li><strong>Yemen, 2015 (Operation Raahat):</strong> during the conflict in Yemen, India brought out more than 4,500 Indians and several hundred foreign nationals of dozens of countries from Aden, Hodeidah and Mukalla by sea and air, with naval ships such as INS Sumitra, Mumbai and Tarkash and with Air India and Air Force aircraft. <span class="tag verify">Re-verify numbers and ships</span></li>
+  </ul>
+  <div class="edge green">
+    <span class="edge-h">Goodwill by carrying foreigners</span>
+    <p>In Yemen and elsewhere, India also took foreign nationals on its ships and aircraft, and several governments publicly thanked it. That is cited as evidence of the soft-power dividend of evacuations. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<section id="evac-two">
+  <h2>Evacuations II: COVID-19 and Sudan</h2><hr class="sec-rule">
+  <h3>Operation Samudra Setu (2020-21)</h3>
+  <p>When international flights stopped in 2020, the Navy used amphibious and other ships, including INS Jalashwa and Magar, to bring Indians home from the Maldives, Sri Lanka and Iran, with strict health protocols. Several thousand people were repatriated in total. <span class="tag verify">Re-verify the number</span> In 2021 <strong>Samudra Setu II</strong> used ships to bring liquid medical oxygen and cylinders from the Gulf and Singapore during the second wave of the pandemic, filling a supply gap by sea. <span class="tag verify">Re-verify quantities</span></p>
+  <h3>Sudan (Operation Kaveri, 2023)</h3>
+  <p>When fighting broke out in Sudan in April 2023, India evacuated its citizens through Port Sudan using naval ships such as INS Sumedha and INS Teg, together with Air Force transports, taking people across the Red Sea to Jeddah in Saudi Arabia and then home. Several thousand were moved. <span class="tag verify">Re-verify</span></p>
+  <div class="note">
+    <h4>Not every evacuation was naval</h4>
+    <p>Operation Ganga (Ukraine, 2022) was mainly run by air and land routes through neighbouring countries because of the Black Sea war zone, so the Navy had little part in it. Examiners may ask why some evacuations rely on ships and others on aircraft: the answer is access, distance, number of people and security conditions.</p>
+  </div>
+</section>
+
+<section id="home-disasters">
+  <h2>Floods and cyclones at home</h2><hr class="sec-rule">
+  <p>At home the Navy is a supporting force: the National Disaster Response Force and state agencies lead, and naval boats, helicopters, divers and medical teams add capacity, especially on the coast and in large floods. More detail on coastal disasters is in handbook 34.</p>
+  <ul>
+    <li><strong>Chennai floods (2015):</strong> naval boats, helicopters and teams helped rescue people from flooded neighbourhoods. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Kerala floods (2018):</strong> Operation Madad. Naval boats, helicopters, divers and aircraft rescued and supplied large numbers of people, and the ships at Kochi served as a base. <span class="tag verify">Re-verify numbers</span></li>
+    <li><strong>Cyclone Hudhud (2014):</strong> the Navy's own base at Visakhapatnam was hit, yet naval ships and teams supported the city's recovery.</li>
+    <li><strong>Cyclone Fani (2019):</strong> naval ships and aircraft were put on standby on the east coast while Odisha carried out a large evacuation, showing prevention and pre-positioning.</li>
+    <li><strong>Cyclone Tauktae (2021):</strong> naval ships and aircraft rescued crews of oil-field barges, including the barge P305 that sank off Mumbai with heavy loss of life, in difficult conditions. <span class="tag verify">Re-verify figures</span></li>
+    <li><strong>Cyclone Biparjoy (2023):</strong> naval and Coast Guard assets were readied on the Gujarat coast with large evacuations.</li>
+  </ul>
+  <div class="edge blue">
+    <span class="edge-h">Prevention is also humanitarian</span>
+    <p>Improved cyclone warnings and pre-positioned assets are why recent cyclones caused far fewer deaths than the 1999 super cyclone. The Navy contributes mainly through readiness and rescue after landfall. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<section id="neighbourhood">
+  <h2>Neighbourhood relief</h2><hr class="sec-rule">
+  <p>India's closest neighbours by sea, Sri Lanka and the Maldives, are also the places where naval help is fastest and most visible. The Navy's presence in the Indian Ocean makes it a natural first call.</p>
+  <h3>Maldives: Operation Neer (2014)</h3>
+  <p>In December 2014 a fire at the water treatment plant in Malé left much of the capital without drinking water. India sent water by air and by sea. Naval ships, including INS Sukanya with desalination capacity and a tanker carrying fresh water, supplied Malé from the sea until repairs were complete. <span class="tag verify">Re-verify ships and quantities</span> The operation is a standard example of naval HADR meeting an immediate, life-critical need.</p>
+  <h3>Sri Lanka</h3>
+  <p>After the 2004 tsunami (Operation Rainbow) and again after floods and landslides in 2017, Indian ships and helicopters delivered food, medicine and supplies and carried medical teams. <span class="tag verify">Re-verify 2017 ships</span> During Sri Lanka's economic crisis in 2022, India's help was largely credit lines, fuel and food shipped commercially, with little naval role. That distinction matters in an answer: humanitarian help is not always naval.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Neighbourhood cases at a glance</caption>
+      <thead><tr><th>Year</th><th>Place</th><th>Need</th><th>Naval contribution</th></tr></thead>
+      <tbody>
+        <tr><td class="num">2004</td><td>Sri Lanka, Maldives</td><td>Tsunami relief</td><td>Ships, helicopters, medical teams</td></tr>
+        <tr><td class="num">2014</td><td>Maldives</td><td>Drinking water crisis</td><td>Desalination and fresh water by ship</td></tr>
+        <tr><td class="num">2017</td><td>Sri Lanka</td><td>Floods and landslides</td><td>Relief ships and helicopters</td></tr>
+        <tr><td class="num">2020</td><td>Maldives, Mauritius, Madagascar, Comoros, Seychelles</td><td>COVID-19 supplies</td><td>Mission Sagar (see section 14)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="distant">
+  <h2>Distant and recent relief missions</h2><hr class="sec-rule">
+  <p>Since the mid-2010s the Navy has also carried relief to countries well beyond the neighbourhood, using ships that were already deployed or could reach the area in a few days.</p>
+  <ul>
+    <li><strong>Mozambique, 2019 (Operation Sahayata):</strong> after Cyclone Idai flooded much of Beira, naval ships including INS Sujata, Sarathi and Shardul delivered supplies, ran medical camps and rescued people from the floodwaters using boats and helicopters. <span class="tag verify">Re-verify ships and numbers</span></li>
+    <li><strong>Myanmar, 2023 onwards:</strong> after Cyclone Mocha (2023), Typhoon Yagi (2024) and the March 2025 earthquake (Operation Brahma), Indian Navy ships brought relief supplies to Yangon alongside air transport. <span class="tag verify">Re-verify ships and operation names</span></li>
+    <li><strong>Sri Lanka, 2025:</strong> following a severe cyclone, India launched a relief operation with naval and air assets. <span class="tag verify">Re-verify details</span></li>
+    <li><strong>Others:</strong> naval help has also gone to Indonesia, Tonga, Bangladesh and several African and island states at various times. <span class="tag verify">Re-verify cases</span></li>
+  </ul>
+  <div class="edge gold">
+    <span class="edge-h">Reading the geography</span>
+    <p>The destinations form a map of India's interests: the Indian Ocean littoral, Southeast Asia and East Africa. That is why analysts treat HADR as both humanitarian and strategic, and why the same ships that carry rice also carry flags. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<section id="medical">
+  <h2>Medical support and health diplomacy</h2><hr class="sec-rule">
+  <p>Medical care is one of the most valued naval contributions because it is quick to deploy and needed in almost every disaster. The Navy fits medical teams, supplies and sometimes field facilities onto amphibious and other ships, and runs medical camps during foreign deployments and port visits.</p>
+  <ul>
+    <li><strong>Disaster medicine:</strong> medical teams on ships and helicopters treat the injured, run triage and move casualties between ship and shore.</li>
+    <li><strong>COVID-19:</strong> naval ships ferried oxygen in 2021 and medicines to partner countries in 2020 under Mission Sagar, and naval medical staff supported national efforts. India's vaccine diplomacy (Vaccine Maitri, 2021) was mainly delivered by air. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Medical evacuation:</strong> naval helicopters and ships take seriously ill sailors off merchant and fishing vessels at sea.</li>
+    <li><strong>Comparison:</strong> the United States (USNS Mercy and Comfort) and China (Peace Ark) operate dedicated hospital ships and use them in widely noted goodwill tours. India has no equivalent, which some analysts cite as a gap. <span class="tag verify">Re-verify Indian plans</span></li>
+  </ul>
+  <div class="note">
+    <h4>Hospital ship: a question for the exam</h4>
+    <p>Arguments for: visible goodwill, dedicated capability and independence from ships needed for war. Arguments against: cost, a ship that is idle between crises, and the option of fitting medical modules on existing amphibious ships. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<section id="rescue-sea">
+  <h2>Rescue at sea and merchant-ship protection</h2><hr class="sec-rule">
+  <p>Search and rescue (SAR) at sea is a duty under international law and a daily task for the Coast Guard, with Navy support. India coordinates SAR over a very large ocean area through the main rescue coordination centre at Mumbai and regional centres. <span class="tag verify">Re-verify area and structure</span> Since 2008 the Navy has also escorted and protected merchant ships against piracy, and in recent years against missile and drone attacks.</p>
+  <ul>
+    <li><strong>Abhilash Tomy (2018):</strong> a naval officer taking part in a round-the-world race was injured in a storm in the southern Indian Ocean. Indian naval aircraft and ships joined the search, and he was recovered by a French vessel. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Gulf of Aden and Arabian Sea, 2023-24:</strong> naval ships responded to attacks on merchant ships, for instance INS Visakhapatnam aiding the burning tanker Marlin Luanda in January 2024. <span class="tag verify">Re-verify ship and date</span></li>
+    <li><strong>MV Ruen (2024):</strong> after a ship hijacked by Somali pirates was boarded, INS Kolkata secured the surrender of the pirates and the release of the crew. <span class="tag verify">Re-verify numbers</span></li>
+    <li><strong>Fishing vessels:</strong> in early 2024 naval ships responded to hijacked Iranian and other fishing vessels, rescuing their crews, a good example of help to non-Indians. <span class="tag verify">Re-verify</span></li>
+  </ul>
+  <p>Escort and anti-piracy operations such as Operation Sankalp are covered in handbooks 1 and 23, and the legal background in handbook 32. The point here is that they are partly humanitarian: they protect seafarers of many nationalities.</p>
+</section>
+
+<section id="pollution">
+  <h2>Marine incidents and pollution</h2><hr class="sec-rule">
+  <p>Oil spills, ship fires and groundings are environmental and humanitarian emergencies, and in India the <strong>Coast Guard</strong> is the lead agency and national coordinating authority for marine oil-spill response. The Navy supports with ships, helicopters, divers and firefighting where its assets are closest. <span class="tag verify">Re-verify the exact arrangement</span></p>
+  <ul>
+    <li><strong>Ennore, Chennai (2017):</strong> two vessels collided off the port and spilled oil onto Chennai's beaches, with the Coast Guard leading the clean-up with state agencies.</li>
+    <li><strong>Mauritius (2020):</strong> after the grounding and breakup of the bulk carrier Wakashio, India sent Coast Guard pollution-response equipment and experts by air. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Sri Lanka (2021):</strong> after the chemical-laden ship X-Press Pearl caught fire and sank, India sent Coast Guard ships and help to fight the fire and the pollution. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Kerala coast (2025):</strong> container-ship accidents off the coast led to a joint response and concern about spilled cargo and fuel. <span class="tag verify">Re-verify</span></li>
+  </ul>
+  <div class="edge">
+    <span class="edge-h">Exam point</span>
+    <p>If a question asks about the Navy's role in an oil spill, say that the Coast Guard leads under the national contingency plan and that the Navy supports. Mixing up the roles is a common error.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part III · Strategy and critique</p><h2>Diplomacy, partnerships and limits</h2></div>
+
+<section id="diplomacy">
+  <h2>HADR as diplomacy</h2><hr class="sec-rule">
+  <p>Humanitarian work is one of the main ways India shows that its Navy serves the region, not only itself. It fits the doctrine of <strong>SAGAR</strong> (Security and Growth for All in the Region), announced in 2015, and its 2025 successor <strong>MAHASAGAR</strong>, which broadens the focus to the Global South. Both are covered in handbook 32.</p>
+  <ul>
+    <li><strong>Mission Sagar I (2020):</strong> during COVID-19, INS Kesari carried food, medicines and medical teams to the Maldives, Mauritius, Seychelles, Madagascar and Comoros. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Mission Sagar II (2020):</strong> INS Airavat delivered food aid to Sudan, South Sudan, Djibouti and Eritrea. Later "Sagar" missions followed. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Information sharing:</strong> the Information Fusion Centre for the Indian Ocean Region, opened in 2018, shares shipping information with partner navies, which supports rescue and security alike.</li>
+    <li><strong>Neighbourhood First:</strong> the government's wider policy gives naval relief a political purpose, to show that India is the reliable neighbour.</li>
+    <li><strong>Competition:</strong> other powers, notably China, also use hospital ships, port calls and relief as tools of influence, so India's record is partly a competition for goodwill. <span class="tag interp">Interpretation</span></li>
+  </ul>
+  <div class="edge blue">
+    <span class="edge-h">What "first responder" means</span>
+    <p>The phrase claims that India is usually the first state to reach a stricken neighbour, because of proximity, ships on station and speed of decision. It is a political description more than a legal status, and its accuracy differs between cases. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<section id="joint">
+  <h2>Joint and multinational HADR</h2><hr class="sec-rule">
+  <p>Large disasters need many actors, so navies train together for HADR. India takes part in several formats:</p>
+  <ul>
+    <li><strong>Quad:</strong> the United States, Japan, Australia and India include HADR in their cooperation. The grouping's roots are often traced to the 2004 tsunami response and its revival after 2017. Initiatives such as an Indo-Pacific partnership for maritime domain awareness also assist rescue as well as security. <span class="tag verify">Re-verify names and dates</span></li>
+    <li><strong>Exercises:</strong> HADR features in Malabar, in multinational exercises such as MILAN at Visakhapatnam, and in bilateral drills. Tiger Triumph, an India-US tri-service exercise, is built around HADR. <span class="tag verify">Re-verify years</span></li>
+    <li><strong>Regional bodies:</strong> the Indian Ocean Naval Symposium, which India helped found, runs working groups on HADR, and the Indian Ocean Rim Association addresses disaster-risk management. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Resilience:</strong> India also leads the Coalition for Disaster Resilient Infrastructure, launched in 2019, which links disaster preparedness to development rather than to the Navy.</li>
+  </ul>
+  <p>Detailed exercise lists are in handbook 23, and the Quad's structure in the Indo-Pacific handbooks. The humanitarian angle gives partnerships a non-confrontational face, which is useful for states that do not want to appear aligned against anyone.</p>
+</section>
+
+<section id="limits">
+  <h2>Costs, limits and critiques</h2><hr class="sec-rule">
+  <ul>
+    <li><strong>Capability gaps:</strong> few large amphibious ships, no hospital ship and an ageing landing-ship fleet limit how much India can carry or sustain, especially if two crises overlap. <span class="tag interp">Interpretation</span></li>
+    <li><strong>Competing demands:</strong> ships on relief are not on patrol. The Navy was also busy with anti-piracy and Red Sea deployments in 2023-24, showing how tasks compete.</li>
+    <li><strong>Coordination:</strong> relief works best when it is requested, planned with local authorities and aligned with civil agencies. Offers that are not wanted can create friction.</li>
+    <li><strong>Perception:</strong> neighbours may value the help while still fearing dependence. Some commentators treat HADR as a polite form of influence-seeking. <span class="tag interp">Interpretation</span></li>
+    <li><strong>Measurement:</strong> public numbers for rescues, tonnage and cost are patchy, so claims of success are hard to test. <span class="tag verify">Re-verify any figure before use</span></li>
+    <li><strong>Mission creep:</strong> the more relief the Navy does, the more it is expected to do, which may stretch an organisation whose first task is war fighting.</li>
+  </ul>
+  <div class="edge">
+    <span class="edge-h">A balanced answer</span>
+    <p>Humanitarian work is a genuine good, a low-risk way to build goodwill and an opportunity to practise skills useful in war, such as logistics and amphibious operations. It is also limited by assets and does not replace deterrence. State both sides before choosing a position.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Knowledge toolkit</p><h2>Analysis, practice and revision</h2></div>
+
+<section id="perspectives">
+  <h2>Perspectives, controversies and facts</h2><hr class="sec-rule">
+  <p><span class="tag interp">Interpretation</span> <strong>Soft power or strategy?</strong> One view treats naval HADR as simple duty to people in need. Another sees it as an instrument for access and influence in the Indian Ocean. Most analysts accept both motives. <span class="tag disputed">Disputed</span></p>
+  <p><span class="tag interp">Interpretation</span> <strong>Should India build a hospital ship?</strong> Supporters point to China's and America's examples. Opponents point to cost and say modular medical facilities are more flexible.</p>
+  <p><span class="tag interp">Interpretation</span> <strong>Help versus intervention.</strong> Relief at the host's request builds trust. Without consent it can look like pressure. The Maldives of 1988 and later cases are cited by both sides.</p>
+  <p><span class="tag interp">Interpretation</span> <strong>Who should lead at home?</strong> The civil disaster agencies lead, and critics warn against turning every flood into a military mission, while supporters stress that the Navy's speed saves lives.</p>
+  <h3>Lesser-known facts</h3>
+  <ul>
+    <li><span class="tag fact">Established</span> The 2004 tsunami response is often linked to the creation of the Quad's first core group.</li>
+    <li><span class="tag fact">Established</span> India declined foreign aid in 2004 while sending ships to help neighbours.</li>
+    <li><span class="tag fact">Established</span> The Navy's first big evacuation by sea is generally taken to be Lebanon in 2006. <span class="tag verify">Re-verify</span></li>
+    <li><span class="tag fact">Established</span> The Coast Guard, not the Navy, leads marine oil-spill response.</li>
+    <li><span class="tag fact">Established</span> Not every Indian evacuation is naval: Operation Ganga (Ukraine, 2022) relied mostly on air and land routes.</li>
+  </ul>
+</section>
+
+<section id="scenarios-options">
+  <h2>Scenarios and strategic options</h2><hr class="sec-rule">
+  <p>Presented neutrally, without recommending a political position:</p>
+  <div class="grid two">
+    <div class="panel red-top">
+      <h4>Evacuation from a distant war</h4>
+      <p>A conflict erupts near a port where many Indians live, as in Yemen or Sudan. Ships may be the only way out, and access, escorts and consent decide success.</p>
+    </div>
+    <div class="panel blue-top">
+      <h4>Two disasters at once</h4>
+      <p>A cyclone hits the east coast while a neighbour requests urgent help. Ship and helicopter numbers, crews and logistics are stretched.</p>
+    </div>
+    <div class="panel gold-top">
+      <h4>A request in a politically tense country</h4>
+      <p>A partner asks for help while its domestic politics are divided. Accepting or declining has diplomatic consequences, and local perception matters.</p>
+    </div>
+    <div class="panel green-top">
+      <h4>A major oil spill or ship fire close to shore</h4>
+      <p>The Coast Guard leads and the Navy supports. Clear command, shared plans and equipment decide the outcome.</p>
+    </div>
+  </div>
+  <div class="tablewrap">
+    <table>
+      <caption>Options and trade-offs</caption>
+      <thead><tr><th>Option</th><th>Benefit</th><th>Risk or cost</th></tr></thead>
+      <tbody>
+        <tr><td>Build more amphibious and sealift ships</td><td>Greater carrying and sustaining capacity, useful in war and relief</td><td>High cost; competition with other priorities</td></tr>
+        <tr><td>Create a dedicated hospital ship or modules</td><td>Visible, quick medical help</td><td>Cost and low use between crises</td></tr>
+        <tr><td>Pre-position stores in partner states</td><td>Faster response in the Indian Ocean</td><td>Politics, upkeep, host sensitivities</td></tr>
+        <tr><td>Institutionalise joint HADR exercises with partners</td><td>Interoperability and legitimacy</td><td>Perceived alignment</td></tr>
+        <tr><td>Strengthen coordination with civil agencies and the Coast Guard</td><td>Clear roles at home</td><td>Turf concerns; planning effort</td></tr>
+        <tr><td>Publish clearer data on operations</td><td>Credibility and public understanding</td><td>Security and diplomatic sensitivities</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="answer-framework">
+  <h2>Answer framework and worked example</h2><hr class="sec-rule">
+  <p>For any question on humanitarian operations, move through definition, location, evidence, contest, analysis, test, position, concession and close. One compressed example follows.</p>
+  <div class="panel red-top">
+    <h4>Worked example: "Is the Navy's humanitarian role a source of soft power or a distraction from war fighting?"</h4>
+    <dl class="rungs">
+      <dt>Define</dt><dd>HADR and NEO are relief and evacuation tasks; soft power is influence through attraction and goodwill.</dd>
+      <dt>Locate</dt><dd>Mostly the Indian Ocean Region, but also Southeast Asia, the Gulf, the Red Sea and East Africa.</dd>
+      <dt>Establish</dt><dd>Operations from the 2004 tsunami, Lebanon, Yemen, Operation Neer, Mozambique, Samudra Setu and Sudan show a repeated record of fast action and thanks from governments, including help to foreigners.</dd>
+      <dt>Contest</dt><dd>Critics say the ships and crews are not free, that capability gaps remain, and that goodwill does not become alliances.</dd>
+      <dt>Analyse</dt><dd>Many of the skills used (logistics, amphibious landings, command and control, medical support) are also war skills, so overlap is large. Conflict arises only when forces are stretched.</dd>
+      <dt>Test</dt><dd>Look at whether neighbours cooperated more with India after relief, and at readiness during simultaneous tasks.</dd>
+      <dt>Position</dt><dd>Mainly a source of soft power and practice, provided capacity is sized so that war fighting is not weakened.</dd>
+      <dt>Concede</dt><dd>Public data on costs and effect on neighbours is limited. <span class="tag verify">Re-verify figures</span></dd>
+      <dt>Close</dt><dd>Invest in sealift and medical capability that serves both war and relief, and keep the Coast Guard and civil agencies in the lead at home.</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="qbank">
+  <h2>Practice bank: questions and motions</h2><hr class="sec-rule">
+  <p class="lede">Fourteen questions. Answer each aloud, standing, in ninety seconds.</p>
+  <ol class="qbank">
+    <li>Define HADR and NEO, and give an Indian example of each.</li>
+    <li>Why are ships well suited to humanitarian operations?</li>
+    <li>How did the Indian Navy respond to the 2004 tsunami, and why does it matter to the Quad?</li>
+    <li>What was Operation Sukoon, and why is it called the Navy's first major NEO?</li>
+    <li>Describe Operation Raahat in Yemen.</li>
+    <li>What were Operations Samudra Setu I and II?</li>
+    <li>Why was Operation Ganga not a naval operation?</li>
+    <li>What was Operation Neer in the Maldives?</li>
+    <li>What role did the Navy play in the Kerala floods of 2018?</li>
+    <li>What is Mission Sagar, and what did it show?</li>
+    <li>Who leads marine oil-spill response in India, and what does the Navy do?</li>
+    <li>Why might India build a hospital ship, and what are the objections?</li>
+    <li>Compare India's HADR efforts with those of China or the United States.</li>
+    <li>What limits India's humanitarian naval capacity?</li>
+  </ol>
+  <h3>Debate motions</h3>
+  <ol class="dbank">
+    <li>This house believes humanitarian operations strengthen India's navy rather than distract it.</li>
+    <li>This house believes India should build a dedicated hospital ship.</li>
+    <li>This house believes naval relief is mainly a tool of influence.</li>
+    <li>This house believes the Navy should never lead disaster relief at home.</li>
+    <li>This house believes India should always offer help even when it is not requested.</li>
+    <li>This house believes HADR is the best basis for the Quad's cooperation.</li>
+    <li>This house believes India should publish detailed data on its overseas relief operations.</li>
+  </ol>
+</section>
+
+<section id="revision">
+  <h2>Chronology, glossary and revision sheet</h2><hr class="sec-rule">
+  <h3>Master chronology</h3>
+  <ul class="timeline">
+    <li><span class="yr">1988</span><span>Operation Cactus in the Maldives.</span></li>
+    <li><span class="yr">1999</span><span>Odisha super cyclone relief.</span></li>
+    <li><span class="yr">2001</span><span>Gujarat earthquake relief.</span></li>
+    <li><span class="yr">2004</span><span>Tsunami: Operations Madad, Sea Waves, Castor, Rainbow and Gambhir. <span class="tag verify">Re-verify</span></span></li>
+    <li><span class="yr">2006</span><span>Operation Sukoon, evacuation from Lebanon.</span></li>
+    <li><span class="yr">2008</span><span>Naval anti-piracy patrols begin in the Gulf of Aden.</span></li>
+    <li><span class="yr">2011</span><span>Libya evacuation (Operation Safe Homecoming).</span></li>
+    <li><span class="yr">2014</span><span>Cyclone Hudhud; Operation Neer in the Maldives.</span></li>
+    <li><span class="yr">2015</span><span>SAGAR doctrine announced; Operation Raahat in Yemen; Chennai floods.</span></li>
+    <li><span class="yr">2018</span><span>Kerala floods and Operation Madad; Information Fusion Centre opens.</span></li>
+    <li><span class="yr">2019</span><span>Cyclone Idai relief in Mozambique (Operation Sahayata).</span></li>
+    <li><span class="yr">2020</span><span>Operation Samudra Setu; Mission Sagar I and II.</span></li>
+    <li><span class="yr">2021</span><span>Samudra Setu II (oxygen); Cyclone Tauktae rescues.</span></li>
+    <li><span class="yr">2023</span><span>Operation Kaveri in Sudan; Cyclone Mocha relief to Myanmar.</span></li>
+    <li><span class="yr">2024</span><span>Marlin Luanda and MV Ruen responses; relief after Typhoon Yagi. <span class="tag verify">Re-verify</span></span></li>
+    <li><span class="yr">2025</span><span>Operation Brahma after the Myanmar earthquake; MAHASAGAR announced. <span class="tag verify">Re-verify</span></span></li>
+  </ul>
+  <h3>Glossary</h3>
+  <dl class="term">
+    <dt>Benign role</dt><dd>A non-combat naval task such as relief, rescue or diplomacy.</dd>
+    <dt>CDRI</dt><dd>Coalition for Disaster Resilient Infrastructure, led by India.</dd>
+    <dt>Desalination</dt><dd>Turning seawater into fresh water on board a ship.</dd>
+    <dt>First responder</dt><dd>The state or force first to arrive and help after a disaster.</dd>
+    <dt>HADR</dt><dd>Humanitarian assistance and disaster relief.</dd>
+    <dt>IONS</dt><dd>Indian Ocean Naval Symposium, a forum of regional navies.</dd>
+    <dt>LPD / LST</dt><dd>Landing platform dock and landing ship tank, amphibious ships useful for sealift and relief.</dd>
+    <dt>Mission-based deployment</dt><dd>Positioning ships at key locations to respond quickly to incidents.</dd>
+    <dt>MRCC</dt><dd>Maritime Rescue Coordination Centre.</dd>
+    <dt>NEO</dt><dd>Non-combatant evacuation operation.</dd>
+    <dt>SAR</dt><dd>Search and rescue.</dd>
+    <dt>Soft power</dt><dd>Influence gained through attraction and goodwill rather than coercion.</dd>
+    <dt>Tsunami Core Group</dt><dd>The informal 2004 group of the United States, India, Japan and Australia.</dd>
+  </dl>
+  <h3>Rapid revision sheet</h3>
+  <div class="note">
+    <h4>Concepts and assets</h4>
+    <ul>
+      <li>HADR, NEO, SAR, benign roles; consent separates assistance from intervention.</li>
+      <li>Assets: INS Jalashwa (LPD), LSTs, frigates and destroyers, tankers, helicopters, divers; no hospital ship.</li>
+      <li>Early: Cactus (1988); turning point 2004.</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h4>Key operations</h4>
+    <ul>
+      <li>2004 tsunami: Madad, Sea Waves, Castor, Rainbow, Gambhir; Tsunami Core Group.</li>
+      <li>NEOs: Sukoon (Lebanon, 2006), Libya (2011), Raahat (Yemen, 2015), Samudra Setu (2020-21), Kaveri (Sudan, 2023).</li>
+      <li>Relief: Neer (Maldives, 2014), Sahayata (Mozambique, 2019), Myanmar (2023-25), Kerala 2018, Tauktae 2021.</li>
+      <li>Rescue and pollution: Ruen, Marlin Luanda; the Coast Guard leads oil-spill response.</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h4>Strategy and critique</h4>
+    <ul>
+      <li>SAGAR (2015), MAHASAGAR (2025), Mission Sagar, IFC-IOR, Quad, IONS, CDRI.</li>
+      <li>Limits: sealift, no hospital ship, competing tasks, patchy data.</li>
+      <li>Always tag uncertain figures for re-verification.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer>
+  <p>Compiled from open sources. Study aid only, not an official publication.</p>
+  <p>Source &amp; contributions: <a href="https://github.com/mohitkushwaha0601/matre">github.com/mohitkushwaha0601/matre</a></p>
+</footer>
+
+</body>
+</html>

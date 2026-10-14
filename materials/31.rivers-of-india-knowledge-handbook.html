@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rivers of India — A Deep Knowledge Handbook</title>
+<meta name="description" content="A 22-section study handbook on the rivers of India: river systems, culture, water law and disputes, dams and conservation, the Indus Waters Treaty, China and the Brahmaputra, neighbours, military dimensions and SSB-style practice material.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#12232E;
+  --ink-soft:#4A5F6C;
+  --paper:#F2F6F7;
+  --surface:#FFFFFF;
+  --surface-2:#E3ECEF;
+  --rule:#CBD8DD;
+  --rule-strong:#94A9B2;
+  --red:#B3472A;
+  --blue:#14699C;
+  --gold:#9A6B0C;
+  --green:#2A7355;
+  --hero-bg:#0B2C45;
+  --hero-ink:#F2F6F7;
+  --hero-dim:#9DB8C6;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ink:#E5EEF1;
+    --ink-soft:#A9BFC8;
+    --paper:#09151C;
+    --surface:#10222C;
+    --surface-2:#18303C;
+    --rule:#29414D;
+    --rule-strong:#4A6877;
+    --red:#EE9272;
+    --blue:#6CB9E6;
+    --gold:#E0B650;
+    --green:#6CC49E;
+    --hero-bg:#060F14;
+    --hero-ink:#E5EEF1;
+    --hero-dim:#7F9BA8;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E5EEF1;
+  --ink-soft:#A9BFC8;
+  --paper:#09151C;
+  --surface:#10222C;
+  --surface-2:#18303C;
+  --rule:#29414D;
+  --rule-strong:#4A6877;
+  --red:#EE9272;
+  --blue:#6CB9E6;
+  --gold:#E0B650;
+  --green:#6CC49E;
+  --hero-bg:#060F14;
+  --hero-ink:#E5EEF1;
+  --hero-dim:#7F9BA8;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1.5rem);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ---------- hero ---------- */
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
+.flagstrip{display:flex;height:12px}
+.flagstrip span{flex:1}
+.f1{background:#0B2C45}
+.f2{background:#14699C}
+.f3{background:#4FB3D9}
+.f4{background:#CFE8F1}
+.f5{background:#2A7355}
+.f6{background:#C9A227}
+.f7{background:#8C5A2B}
+.f8{background:#B3472A}
+.hero-inner{max-width:1180px;margin:0 auto;padding:3.2rem 1.5rem 0}
+.kicker{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--hero-dim);margin:0 0 .8rem}
+.motto{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:clamp(1.7rem,5.2vw,2.9rem);line-height:1.2;margin:0;letter-spacing:.005em;max-width:26ch}
+.motto-en{margin:.55rem 0 0;color:var(--hero-dim);font-size:clamp(.95rem,2.4vw,1.1rem);font-style:italic;max-width:62ch}
+.hero h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.5rem,4.3vw,2.35rem);line-height:1.2;margin:2.6rem 0 .5rem;border-top:1px solid rgba(255,255,255,.22);padding-top:1.6rem;max-width:30ch}
+.hero-sub{margin:0;color:var(--hero-dim);max-width:68ch}
+.stamp{margin-top:1.6rem;font-size:.86rem;color:var(--hero-dim);display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+.stamp b{color:var(--hero-ink);font-weight:600}
+
+/* ---------- layout ---------- */
+.shell{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem;display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media (min-width:1000px){
+  .shell{grid-template-columns:255px minmax(0,1fr);gap:3.5rem;padding-top:2.8rem}
+}
+nav.toc{font-size:.9rem}
+@media (min-width:1000px){
+  .toc-mobile{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2rem);align-self:start;max-height:calc(100vh - 5rem);overflow-y:auto}
+}
+nav.toc h2{font-family:"Zilla Slab",Georgia,serif;font-size:.92rem;font-weight:600;margin:0 0 .7rem;padding-bottom:.45rem;border-bottom:2px solid var(--rule-strong)}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc}
+nav.toc li{border-bottom:1px solid var(--rule)}
+nav.toc li:not(.part){counter-increment:toc}
+nav.toc a{display:flex;gap:.6rem;padding:.4rem 0;color:var(--ink-soft);text-decoration:none}
+nav.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--rule-strong);font-variant-numeric:tabular-nums;flex:none}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--red)}
+nav.toc .part{border:0;margin:1.1rem 0 .3rem;font-family:"Zilla Slab",Georgia,serif;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--rule-strong)}
+nav.toc .part::before{content:none}
+.toc-mobile{display:block}
+@media (min-width:1000px){.toc-mobile summary{display:none}}
+.toc-mobile summary{cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:600;padding:.7rem .9rem;background:var(--surface);border:1px solid var(--rule);margin-bottom:1rem}
+@media (max-width:999px){
+  .toc-mobile[open] nav.toc{padding:0 .9rem 1rem}
+  .toc-mobile:not([open]) nav.toc{display:none}
+}
+
+/* ---------- sections ---------- */
+main{min-width:0}
+section{margin:0 0 3.6rem;scroll-margin-top:1.5rem}
+section > h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.45rem,3.6vw,1.95rem);line-height:1.2;margin:0 0 .3rem}
+.part-head{margin:4rem 0 2.2rem;padding:1.1rem 0 .9rem;border-top:4px double var(--rule-strong);border-bottom:1px solid var(--rule)}
+.part-head p{margin:0;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.part-head h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.3rem,3.2vw,1.7rem);margin:.3rem 0 0;color:var(--ink)}
+.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.16rem;margin:2rem 0 .5rem;line-height:1.3}
+h4{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1rem;margin:1.4rem 0 .35rem;color:var(--ink)}
+p{margin:0 0 .95rem;max-width:74ch}
+ul,ol{margin:0 0 1rem;padding-left:1.25rem;max-width:74ch}
+li{margin-bottom:.35rem}
+li::marker{color:var(--rule-strong)}
+strong{font-weight:600}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+/* ---------- components ---------- */
+.lede{font-size:1.06rem;color:var(--ink-soft);max-width:70ch}
+
+.tablewrap{overflow-x:auto;margin:0 0 1.3rem;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.92rem}
+caption{text-align:left;padding:.7rem .85rem .1rem;font-weight:600;color:var(--ink-soft);font-size:.9rem}
+th,td{text-align:left;padding:.55rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{background:var(--surface-2);font-weight:600;border-bottom:2px solid var(--rule-strong);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.num,th.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+.edge{background:var(--surface);border-left:4px solid var(--red);padding:.9rem 1.1rem;margin:1.4rem 0;max-width:74ch}
+.edge p:last-child,.edge ul:last-child,.edge ol:last-child{margin-bottom:0}
+.edge .edge-h{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);display:block;margin-bottom:.25rem;font-size:.95rem}
+.edge.gold{border-left-color:var(--gold)}
+.edge.gold .edge-h{color:var(--gold)}
+.edge.blue{border-left-color:var(--blue)}
+.edge.blue .edge-h{color:var(--blue)}
+.edge.green{border-left-color:var(--green)}
+.edge.green .edge-h{color:var(--green)}
+
+.note{background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;border:1px solid var(--rule);font-size:.95rem}
+.note p:last-child,.note ul:last-child,.note ol:last-child{margin-bottom:0}
+.note h4{margin-top:0}
+
+.panel{background:var(--surface);border:1px solid var(--rule);padding:1rem 1.1rem}
+.panel h4{margin-top:0}
+.panel ul,.panel ol{margin-bottom:0}
+.panel.blue-top{border-top:3px solid var(--blue)}
+.panel.red-top{border-top:3px solid var(--red)}
+.panel.gold-top{border-top:3px solid var(--gold)}
+.panel.green-top{border-top:3px solid var(--green)}
+
+.rungs{max-width:74ch;margin:.3rem 0 0;display:grid;grid-template-columns:9.5rem 1fr;gap:0 1rem}
+.rungs dt{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;color:var(--red);padding-top:.2rem}
+.rungs dd{margin:0 0 .5rem;font-size:.93rem}
+@media (max-width:560px){
+  .rungs{grid-template-columns:1fr;gap:0}
+  .rungs dt{padding-top:.4rem}
+}
+
+.timeline{list-style:none;padding:0;margin:1rem 0 1.4rem;max-width:74ch}
+.timeline li{display:grid;grid-template-columns:8.2rem 1fr;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--rule);margin:0}
+.timeline li:last-child{border-bottom:0}
+.timeline .yr{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);font-variant-numeric:tabular-nums}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:.1rem}}
+
+.qbank{counter-reset:q;list-style:none;padding:0;max-width:74ch}
+.qbank li{counter-increment:q;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.qbank li::before{content:counter(q,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.qbank li:last-child{border-bottom:0}
+
+.dbank{counter-reset:d;list-style:none;padding:0;max-width:74ch}
+.dbank li{counter-increment:d;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.dbank li::before{content:counter(d,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.dbank li:last-child{border-bottom:0}
+
+.grid{display:grid;gap:1rem}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
+
+.card{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--red);padding:1rem 1.1rem}
+.card h4{margin:0 0 .45rem;font-size:1rem}
+.card .name{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.2rem}
+.card .role{font-size:.9rem;color:var(--ink-soft)}
+.card .since{font-size:.78rem;color:var(--green);font-weight:600;margin-top:.45rem}
+
+.term{max-width:74ch;margin:0 0 1.2rem}
+.term dt{font-weight:600;margin-top:.8rem}
+.term dd{margin:.15rem 0 0;color:var(--ink-soft)}
+
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:.1rem .45rem;border:1px solid var(--rule-strong);color:var(--ink-soft);margin-right:.35rem;vertical-align:middle}
+.tag.fact{border-color:var(--green);color:var(--green)}
+.tag.interp{border-color:var(--gold);color:var(--gold)}
+.tag.disputed{border-color:var(--red);color:var(--red)}
+.tag.verify{border-color:var(--blue);color:var(--blue)}
+.spaced{margin-top:.6rem}
+
+footer{border-top:3px double var(--rule-strong);margin-top:2rem;padding-top:1.4rem;color:var(--ink-soft);font-size:.9rem;max-width:74ch}
+footer a{color:var(--blue)}
+
+/* ---------- home button: fixed, links back to the collection homepage ---------- */
+.home-btn{position:fixed;top:16px;left:16px;z-index:60;display:inline-flex;align-items:center;gap:.4rem;background:#14202B;color:#F1F2EC;border:1px solid rgba(241,242,236,.25);padding:.45rem .85rem;border-radius:999px;font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.82rem;font-weight:600;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.3);transition:background .15s ease,transform .15s ease}
+.home-btn:hover,.home-btn:focus-visible{background:#BF2F26;transform:translateY(-1px)}
+.home-btn svg{width:14px;height:14px;flex:none}
+@media print{.home-btn{display:none}}
+
+@media print{
+  .hero{background:none;color:#000;padding-bottom:1rem}
+  .hero-sub,.stamp,.motto-en{color:#333}
+  .flagstrip,.toc-mobile{display:none}
+  .shell{display:block;padding:0}
+  section{page-break-inside:auto;margin-bottom:1.8rem}
+  h2,h3{page-break-after:avoid}
+  .panel,.edge,.note,.tablewrap,figure{page-break-inside:avoid}
+  .part-head{page-break-before:always}
+  body{font-size:10.5pt;background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+
+<a class="home-btn" href="../index.html" aria-label="Back to Handbooks homepage" title="Back to Handbooks homepage">
+  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
+  <span>Home</span>
+</a>
+
+<header class="hero">
+  <div class="flagstrip" aria-hidden="true">
+    <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f5"></span><span class="f6"></span><span class="f7"></span><span class="f8"></span>
+  </div>
+  <div class="hero-inner">
+    <p class="kicker">Hydrography · Culture · Water law and federalism · Transboundary rivers · defence and strategic dimensions</p>
+    <h1>Rivers of India</h1>
+    <p class="hero-sub">How India's river systems are arranged, why they sit at the centre of its civilisation, law, economy and security, and what the Indus, Ganga and Brahmaputra systems mean for relations with Pakistan, China, Nepal, Bangladesh and Bhutan. Figures and treaty positions that change over time are tagged for re-verification.</p>
+    <p class="stamp">
+      <span>Himalayan systems <b>Indus, Ganga, Brahmaputra</b></span>
+      <span>Peninsular <b>Godavari, Krishna, Kaveri, Narmada, Mahanadi</b></span>
+      <span>Treaties <b>Indus 1960 (in abeyance since Apr 2025), Ganga 1996</b></span>
+      <span>Sections <b>22</b></span>
+      <span>Reading time <b>2-3 hrs</b></span>
+    </p>
+  </div>
+</header>
+
+<div class="shell">
+
+<details class="toc-mobile" open>
+  <summary>Contents</summary>
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li class="part">How to use this</li>
+      <li><a href="#snapshot">Snapshot and how to read</a></li>
+
+      <li class="part">Part I · The river systems and their civilisation</li>
+      <li><a href="#systems">River systems, divides and basins</a></li>
+      <li><a href="#indus-ganga">The Indus and Ganga systems</a></li>
+      <li><a href="#brahmaputra">The Brahmaputra and Barak systems</a></li>
+      <li><a href="#peninsular">The Peninsular rivers</a></li>
+      <li><a href="#culture">Rivers in civilisation, religion and culture</a></li>
+
+      <li class="part">Part II · Law, economy and the environment</li>
+      <li><a href="#law">Water in the Constitution and law</a></li>
+      <li><a href="#disputes">Inter-state river disputes</a></li>
+      <li><a href="#dams">Irrigation, dams and hydropower</a></li>
+      <li><a href="#conservation">Pollution, Namami Gange and conservation</a></li>
+      <li><a href="#climate-links">River linking, floods and climate</a></li>
+
+      <li class="part">Part III · Transboundary and strategic dimensions</li>
+      <li><a href="#iwt">The Indus Waters Treaty</a></li>
+      <li><a href="#china">The Brahmaputra and China</a></li>
+      <li><a href="#neighbours">Bangladesh, Nepal, Bhutan and Afghanistan</a></li>
+      <li><a href="#military">Rivers and military affairs</a></li>
+
+      <li class="part">Knowledge toolkit</li>
+      <li><a href="#perspectives">Perspectives, controversies and facts</a></li>
+      <li><a href="#scenarios-options">Scenarios and strategic options</a></li>
+      <li><a href="#answer-framework">Answer framework and worked example</a></li>
+      <li><a href="#qbank">Practice bank: questions and motions</a></li>
+      <li><a href="#chronology">Master chronology</a></li>
+      <li><a href="#glossary">Glossary</a></li>
+      <li><a href="#revision">Rapid revision sheet</a></li>
+    </ol>
+  </nav>
+</details>
+
+<main>
+
+<section id="snapshot">
+  <h2>Snapshot and how to read</h2><hr class="sec-rule">
+  <p class="lede">India's rivers feed most of its farmland, hold most of its pilgrimage geography, carry its largest cities' wastewater, and cross the borders of five neighbours. Three Himalayan systems (Indus, Ganga, Brahmaputra) and a set of Peninsular rivers carry the country's surface water. Their management raises questions of federalism, ecology, treaty law and defence all at once.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>The main rivers at a glance <span class="tag verify">Re-verify lengths and areas</span></caption>
+      <thead><tr><th>River</th><th>Origin</th><th>Outfall</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Indus</td><td>Tibet, near Mansarovar</td><td>Arabian Sea (Pakistan)</td><td>About 709 km in India; Jhelum, Chenab, Ravi, Beas, Sutlej join it in Pakistan</td></tr>
+        <tr><td>Ganga</td><td>Gangotri (Bhagirathi); Devprayag confluence</td><td>Bay of Bengal (Bangladesh and India)</td><td>About 2,525 km; India's largest basin; National River (2008)</td></tr>
+        <tr><td>Brahmaputra</td><td>Tibet (Yarlung Tsangpo)</td><td>Bay of Bengal via Bangladesh</td><td>About 916 km in India; the largest discharge among Indian rivers</td></tr>
+        <tr><td>Godavari</td><td>Trimbak, Nashik</td><td>Bay of Bengal</td><td>Largest Peninsular river, "Dakshin Ganga"</td></tr>
+        <tr><td>Krishna</td><td>Mahabaleshwar</td><td>Bay of Bengal</td><td>Srisailam and Nagarjuna Sagar; Telangana-Andhra dispute</td></tr>
+        <tr><td>Kaveri</td><td>Talakaveri, Kodagu</td><td>Bay of Bengal</td><td>Karnataka-Tamil Nadu dispute</td></tr>
+        <tr><td>Narmada</td><td>Amarkantak</td><td>Arabian Sea</td><td>West-flowing in a rift valley; Sardar Sarovar</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge blue">
+    <span class="edge-h">How to read this handbook</span>
+    <p>Facts are stated plainly. Contested claims carry tags (<span class="tag fact">Established</span> <span class="tag interp">Interpretation</span> <span class="tag disputed">Disputed</span> <span class="tag verify">Re-verify</span>). Treaty positions, dam capacities, project status and statistics have been written from memory of open sources and must be checked before use. Related handbooks: no. 7 (India-Pakistan), no. 6 (India-China LAC), no. 27 (Prayagraj) and no. 30 (Bhopal and Ujjain).</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part I · The river systems and their civilisation</p><h2>Divides, basins, great rivers and what they meant</h2></div>
+
+<section id="systems">
+  <h2>River systems, divides and basins</h2><hr class="sec-rule">
+  <p>Indian rivers fall into two broad groups. The <strong>Himalayan rivers</strong> (Indus, Ganga, Brahmaputra) are fed by both snow and rain, so they are perennial. They are old rivers that cut deep gorges through a rising range (antecedent drainage) and build huge floodplains and deltas. The <strong>Peninsular rivers</strong> depend mainly on the monsoon, so they are seasonal, flow in shallow valleys and have more stable courses.</p>
+  <p>The Western Ghats form the main water divide of the Peninsula. Short, fast rivers (Sharavati, Periyar, Bharathapuzha) drop west to the Arabian Sea, while the long rivers (Godavari, Krishna, Kaveri, Mahanadi) flow east across the plateau and form deltas. The Narmada and Tapi are exceptions: they run west through rift valleys. Rajasthan has inland drainage, including the Luni, which ends in the Rann of Kachchh, and the dry Ghaggar-Hakra channel.</p>
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>Himalayan</h4>
+      <ul>
+        <li>Perennial: snowmelt plus monsoon</li>
+        <li>Long, with deep gorges and large floodplains</li>
+        <li>Navigation, irrigation, hydropower</li>
+        <li>High flood and glacial-hazard exposure</li>
+      </ul>
+    </div>
+    <div class="panel green-top">
+      <h4>Peninsular</h4>
+      <ul>
+        <li>Seasonal: rain-fed</li>
+        <li>Shorter, with graded profiles and deltas on the east</li>
+        <li>Heavily dammed and irrigated</li>
+        <li>Dispute-prone because water is scarce relative to demand</li>
+      </ul>
+    </div>
+  </div>
+  <p>India's average annual water resource is roughly 2,000 billion cubic metres, of which about 1,100 BCM is usable, and per-capita availability has dropped below the 1,700 m³ conventional "stress" threshold. <span class="tag verify">Re-verify figures</span> The Central Water Commission treats about a dozen river systems as major basins (catchment above 20,000 km²), and the Ganga, Godavari, Krishna and Indus (Indian portion) are among the largest by area. <span class="tag verify">Re-verify</span></p>
+</section>
+
+<section id="indus-ganga">
+  <h2>The Indus and Ganga systems</h2><hr class="sec-rule">
+  <h3>Indus system</h3>
+  <p>The Indus rises near Mansarovar in Tibet, enters India in Ladakh and flows through Gilgit-Baltistan into Pakistan. Its Indian tributaries, from west to east, are the <strong>Jhelum</strong> (Verinag, Kashmir), the <strong>Chenab</strong> (Chandra and Bhaga meet at Tandi in Himachal), the <strong>Ravi</strong>, the <strong>Beas</strong> and the <strong>Sutlej</strong> (which enters India through Shipki La). They come together as the Panjnad before joining the Indus in Pakistan. The Siachen and other Karakoram glaciers feed the Nubra-Shyok and so the Indus. <span class="tag fact">Established</span></p>
+  <h3>Ganga system</h3>
+  <p>The Ganga is formed by the Bhagirathi (from Gangotri) and Alaknanda at Devprayag, with four other prayags upstream on the Alaknanda. It enters the plains at Haridwar and is joined by the <strong>Yamuna</strong> at Prayagraj, the <strong>Ghaghara</strong>, <strong>Gandak</strong> and <strong>Kosi</strong> from the north (Nepal) and the <strong>Son</strong> from the south. Chambal, Betwa and Ken reach it through the Yamuna. Below the Farakka Barrage, the Bhagirathi-Hooghly takes a share of water toward Kolkata, while the main stream enters Bangladesh as the Padma and meets the Brahmaputra (Jamuna) and then the Meghna. <span class="tag fact">Established</span></p>
+  <div class="edge gold">
+    <span class="edge-h">Why Ganga's basin dominates</span>
+    <p>The Ganga basin holds roughly a quarter of India's land and a very large share of its population, so its water quality, flows and floods shape national policy. Its delta with the Brahmaputra, including the Sundarbans (a UNESCO World Heritage Site), is the world's largest. <span class="tag verify">Re-verify shares</span></p>
+  </div>
+</section>
+
+<section id="brahmaputra">
+  <h2>The Brahmaputra and Barak systems</h2><hr class="sec-rule">
+  <p>The Brahmaputra begins as the Yarlung Tsangpo in Tibet, runs east for more than a thousand kilometres, and then turns sharply around Namcha Barwa at the Great Bend. After a steep fall through the gorge it enters Arunachal Pradesh as the Siang (Dihang). It is joined by the Dibang and Lohit to become the Brahmaputra in Assam. In Bangladesh it is called the Jamuna. <span class="tag fact">Established</span></p>
+  <ul>
+    <li><strong>Character:</strong> a very high discharge, heavy silt load and a braided course with shifting channels. Floods and bank erosion are annual events in Assam.</li>
+    <li><strong>Tributaries:</strong> Subansiri, Kameng, Manas and Teesta (the last joins in Bangladesh).</li>
+    <li><strong>Landmarks:</strong> Majuli (among the world's largest river islands), Kaziranga floodplains, and bridges at Dhola-Sadiya (2017) and Bogibeel (2018). <span class="tag verify">Re-verify</span></li>
+    <li><strong>Barak:</strong> rises in the Manipur hills, flows through Cachar in Assam and enters Bangladesh as the Surma and Kushiyara, which form the Meghna.</li>
+  </ul>
+  <div class="edge blue">
+    <span class="edge-h">An upstream-downstream chain</span>
+    <p>China is upstream on the Yarlung Tsangpo, India is a middle riparian, and Bangladesh is the lowest. Each state tends to see the others as either threat or pressure point, so any engineering change on the main stem is read strategically. See the China section later in this handbook.</p>
+  </div>
+</section>
+
+<section id="peninsular">
+  <h2>The Peninsular rivers</h2><hr class="sec-rule">
+  <div class="tablewrap">
+    <table>
+      <caption>Principal Peninsular rivers <span class="tag verify">Re-verify</span></caption>
+      <thead><tr><th>River</th><th>Direction</th><th>Key features</th></tr></thead>
+      <tbody>
+        <tr><td>Mahanadi</td><td>East</td><td>Rises in Chhattisgarh; Hirakud Dam (1957) in Odisha; Cuttack delta</td></tr>
+        <tr><td>Godavari</td><td>East</td><td>Longest Peninsular river; Nashik Kumbh; Polavaram project; Kaleshwaram lift scheme</td></tr>
+        <tr><td>Krishna</td><td>East</td><td>Srisailam, Nagarjuna Sagar, Almatti dams; tribunals KWDT-I and II</td></tr>
+        <tr><td>Kaveri</td><td>East</td><td>KRS and Mettur dams; ancient Grand Anicut (Kallanai); delta granary of Tamil Nadu</td></tr>
+        <tr><td>Narmada</td><td>West</td><td>Rift valley; Omkareshwar; Sardar Sarovar Dam; Narmada Parikrama</td></tr>
+        <tr><td>Tapi</td><td>West</td><td>Rift valley; Ukai Dam; Surat</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>These rivers are more heavily regulated than the Himalayan ones. Almost every major Peninsular river has several large reservoirs, and in dry years the demand from farms, cities and industry exceeds the supply. That is why most of India's inter-state water disputes are Peninsular. The Godavari-Krishna-Kaveri axis also forms the proposed southern link in India's river-linking plans, discussed later.</p>
+</section>
+
+<section id="culture">
+  <h2>Rivers in civilisation, religion and culture</h2><hr class="sec-rule">
+  <p>Early cities grew on rivers. The Indus Valley Civilisation had major sites on the Indus (Mohenjo-daro), Ravi (Harappa) and the Ghaggar-Hakra (Kalibangan). The Rigveda praises the Sapta Sindhu and a river called Saraswati; many scholars link it to the Ghaggar-Hakra, but the identification is <span class="tag disputed">Disputed</span>. Later, Patliputra (Patna) rose at the Ganga-Son confluence and became the Mauryan capital.</p>
+  <ul>
+    <li><strong>Sacred rivers:</strong> the tradition lists seven (Ganga, Yamuna, Godavari, Saraswati, Narmada, Sindhu, Kaveri). The Ganga is revered as a goddess, and the Narmada is circumambulated in a parikrama. <span class="tag interp">Interpretation: lists vary by tradition</span></li>
+    <li><strong>Kumbh:</strong> the four sites are Haridwar (Ganga), Prayagraj (Ganga-Yamuna-Saraswati), Nashik (Godavari) and Ujjain (Kshipra). See handbooks 27 and 30.</li>
+    <li><strong>Festivals and practices:</strong> Ganga Aarti, Chhath on riverbanks, Pushkaram festivals, and immersion and cremation rites that also create pollution problems.</li>
+    <li><strong>Legal personhood:</strong> in 2017 the Uttarakhand High Court declared the Ganga and Yamuna legal persons; the Supreme Court later stayed that order. <span class="tag verify">Re-verify</span></li>
+  </ul>
+  <div class="edge green">
+    <span class="edge-h">Why culture matters for policy</span>
+    <p>Because rivers are sacred, pollution is both an environmental and a cultural-political issue. Governments can mobilise support for cleaning them, but religious practice at the water's edge also complicates enforcement.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part II · Law, economy and the environment</p><h2>Who governs water, who builds on it, and who cleans it</h2></div>
+
+<section id="law">
+  <h2>Water in the Constitution and law</h2><hr class="sec-rule">
+  <p>Water is primarily a <strong>State subject</strong>: Entry 17 of the State List covers water supply, irrigation, canals, drainage, embankments, storage and water power. That entry is "subject to" Entry 56 of the Union List, which lets Parliament regulate and develop inter-state rivers and river valleys to the extent it declares by law to be expedient in the public interest. <span class="tag fact">Established</span></p>
+  <ul>
+    <li><strong>Article 262:</strong> Parliament may provide by law for the adjudication of disputes over the waters of inter-state rivers and may bar the courts from hearing them.</li>
+    <li><strong>Inter-State River Water Disputes Act, 1956:</strong> the basis for ad hoc tribunals. A 2019 amendment bill proposed a single standing tribunal with multiple benches and time limits. <span class="tag verify">Re-verify the bill's status</span></li>
+    <li><strong>River Boards Act, 1956:</strong> allows river boards for inter-state basins, but it has hardly been used. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Other laws and bodies:</strong> Water (Prevention and Control of Pollution) Act 1974, the Environment (Protection) Act 1986, Dam Safety Act 2021, the Central Water Commission, and the Ministry of Jal Shakti (formed 2019).</li>
+    <li><strong>Policy:</strong> National Water Policy (2012 version) treats water as a scarce national resource and promotes basin-level planning.</li>
+  </ul>
+  <div class="edge">
+    <span class="edge-h">The structural tension</span>
+    <p>Rivers do not follow state boundaries, but the main powers over water sit with the states. This gap between hydrology and politics explains why disputes drag on and why the Centre's leverage is mainly through tribunals, funding and new authorities.</p>
+  </div>
+</section>
+
+<section id="disputes">
+  <h2>Inter-state river disputes</h2><hr class="sec-rule">
+  <div class="tablewrap">
+    <table>
+      <caption>Major disputes <span class="tag verify">Re-verify current status</span></caption>
+      <thead><tr><th>Dispute</th><th>States</th><th>Status in brief</th></tr></thead>
+      <tbody>
+        <tr><td>Kaveri</td><td>Karnataka, Tamil Nadu, Kerala, Puducherry</td><td>Tribunal set up 1990, award 2007, Supreme Court modified it in 2018; Cauvery Water Management Authority formed. Distress-year sharing remains contentious.</td></tr>
+        <tr><td>Krishna</td><td>Maharashtra, Karnataka, Andhra Pradesh, Telangana</td><td>Two tribunals (KWDT-I and KWDT-II); the split of Andhra Pradesh in 2014 reopened allocation between the two successor states.</td></tr>
+        <tr><td>Godavari</td><td>Several states</td><td>Tribunal award of 1979 enabled Polavaram; concerns over submergence in Odisha and Chhattisgarh.</td></tr>
+        <tr><td>Ravi-Beas / Sutlej-Yamuna Link</td><td>Punjab, Haryana (and Rajasthan)</td><td>Long-running; the SYL canal remains incomplete, with the Supreme Court involved.</td></tr>
+        <tr><td>Mahadayi</td><td>Goa, Karnataka, Maharashtra</td><td>Tribunal decision in 2018 and continuing challenges.</td></tr>
+        <tr><td>Narmada</td><td>Madhya Pradesh, Gujarat, Maharashtra, Rajasthan</td><td>Tribunal award in 1979; Sardar Sarovar built to full height, with sustained resettlement and rehabilitation controversy.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The pattern is consistent: allocation disputes peak in poor monsoon years, tribunal awards take decades, and political cost makes each state reluctant to concede. River Management Boards for the Krishna and Godavari were set up after the 2014 reorganisation. <span class="tag verify">Re-verify</span> <span class="tag interp">Interpretation: a basin-level authority with data transparency is widely proposed as a remedy</span></p>
+</section>
+
+<section id="dams">
+  <h2>Irrigation, dams and hydropower</h2><hr class="sec-rule">
+  <p>Agriculture takes the bulk of India's freshwater withdrawals, with groundwater now the largest source for irrigation. India extracts more groundwater than any other country. <span class="tag verify">Re-verify shares</span> Post-independence planning treated dams as "temples of modern India". Bhakra on the Sutlej (completed in the early 1960s) and Hirakud on the Mahanadi (1957) are early examples.</p>
+  <ul>
+    <li><strong>Tehri (Bhagirathi):</strong> among the tallest dams in India, built in the Himalaya despite seismic and displacement objections.</li>
+    <li><strong>Sardar Sarovar (Narmada):</strong> filled to full reservoir level in 2017 after decades of litigation and protest by the Narmada Bachao Andolan. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Polavaram (Godavari):</strong> a national project with large submergence and rehabilitation questions.</li>
+    <li><strong>Hydropower:</strong> India's large hydro capacity is under 50 GW, and the largest untapped potential is in the Himalayan north-east, especially Arunachal Pradesh. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Dam safety:</strong> the Dam Safety Act (2021) sets up national and state authorities to oversee safe operation.</li>
+  </ul>
+  <div class="edge gold">
+    <span class="edge-h">The trade-off</span>
+    <p>Dams give storage, irrigation and power, and cut flood peaks, but they displace people, trap sediment, alter ecology and can create downstream disputes. Large Himalayan projects add seismic and glacial-lake flood risk (see the climate section).</p>
+  </div>
+</section>
+
+<section id="conservation">
+  <h2>Pollution, Namami Gange and conservation</h2><hr class="sec-rule">
+  <p>Untreated sewage, industrial effluent, solid waste and agricultural runoff pollute most urban river stretches. The Ganga Action Plan began in 1985 and the broader National River Conservation Plan followed in 1995, but results were limited. The National Ganga River Basin Authority was set up in 2009. The <strong>Namami Gange</strong> programme, launched in 2014 under the National Mission for Clean Ganga (NMCG), gives priority to sewage treatment, riverfront development, biodiversity and the "Arth Ganga" economic model. <span class="tag verify">Re-verify budgets, targets and extensions</span></p>
+  <ul>
+    <li><strong>Environmental flow:</strong> a 2018 notification set minimum flow norms for the Ganga, which hydropower developers and conservationists have debated. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Yamuna:</strong> the stretch through Delhi is a small part of its length but contributes a large share of its pollution load. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Gangetic dolphin:</strong> declared the national aquatic animal in 2009; an indicator species for river health.</li>
+    <li><strong>Courts:</strong> the Supreme Court and the National Green Tribunal have issued many orders, but enforcement is uneven.</li>
+  </ul>
+  <div class="edge blue">
+    <span class="edge-h">Two measurements</span>
+    <p>Infrastructure indicators (sewage treatment capacity, plants built) and ecological indicators (dissolved oxygen, biological oxygen demand, fish and dolphin counts) can tell different stories. A balanced answer cites both and notes that capacity built is not the same as capacity operating.</p>
+  </div>
+</section>
+
+<section id="climate-links">
+  <h2>River linking, floods and climate</h2><hr class="sec-rule">
+  <h3>River linking</h3>
+  <p>The National Perspective Plan (1980) outlined Himalayan and Peninsular link components, with the National Water Development Agency studying them. The first major project to move ahead is the <strong>Ken-Betwa Link</strong>, with a funding and sharing agreement among the Centre, Madhya Pradesh and Uttar Pradesh signed in 2021 and construction launched in December 2024. Supporters cite water for the Bundelkhand region, while critics point to the loss of forest and tiger habitat in the Panna reserve. <span class="tag disputed">Disputed</span> <span class="tag verify">Re-verify</span> Large links such as those between Himalayan and Peninsular basins also raise cost, ecological and diplomatic issues.</p>
+  <h3>Floods</h3>
+  <p>Assam and Bihar flood almost every monsoon. The Kosi is called the "sorrow of Bihar", and its 2008 embankment breach in Nepal displaced millions. Flood forecasting by the Central Water Commission, embankments, and basin-level cooperation with Nepal and China are the main tools. <span class="tag verify">Re-verify</span></p>
+  <h3>Climate and glaciers</h3>
+  <p>Himalayan glaciers feed the Indus, Ganga and Brahmaputra, so warming changes seasonal flows and raises the risk of glacial-lake outburst floods. Examples include the 2013 Kedarnath disaster, the Chamoli flood in February 2021 and the October 2023 South Lhonak lake flood in Sikkim that destroyed the Teesta-III dam. <span class="tag verify">Re-verify details</span> <span class="tag interp">Interpretation: long-term effect on river flows is debated; many studies expect higher flows first and then a decline</span></p>
+</section>
+
+<div class="part-head"><p>Part III · Transboundary and strategic dimensions</p><h2>Treaties, upstream power and rivers in uniform</h2></div>
+
+<section id="iwt">
+  <h2>The Indus Waters Treaty</h2><hr class="sec-rule">
+  <p>The Indus Waters Treaty (IWT) was signed in Karachi on 19 September 1960 by Prime Minister Nehru and President Ayub Khan, with the World Bank as a party to certain provisions. It divided the basin: the three <strong>eastern rivers</strong> (Ravi, Beas, Sutlej) go to India for unrestricted use, and the three <strong>western rivers</strong> (Indus, Jhelum, Chenab) go to Pakistan, with India allowed limited uses such as run-of-river hydropower, domestic use, limited irrigation and capped storage. <span class="tag fact">Established</span></p>
+  <ul>
+    <li><strong>Machinery:</strong> a Permanent Indus Commission with a commissioner from each side. Disputes move in steps: a "question" to the Commission, a "difference" to a Neutral Expert, and a "dispute" to a Court of Arbitration.</li>
+    <li><strong>Past disputes:</strong> Baglihar (Neutral Expert, 2007) and Kishanganga (Court of Arbitration, 2013). Both sides also argue over Ratle and other design features. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Pressure on the treaty:</strong> India issued notices seeking modification and review in 2023 and 2024, citing changed circumstances and Pakistan's conduct. <span class="tag verify">Re-verify</span></li>
+    <li><strong>April 2025:</strong> after the Pahalgam attack (22 April), India announced that the treaty was being held "in abeyance". Pakistan rejected this and called any stoppage of water an act of war. A Court of Arbitration continued proceedings, which India does not accept. <span class="tag disputed">Disputed</span> <span class="tag verify">Re-verify the legal position and current status</span></li>
+  </ul>
+  <div class="edge">
+    <span class="edge-h">What the abeyance can and cannot do</span>
+    <p>India has little large storage on the western rivers, so the immediate effect on flows is limited and mainly operational: reservoir flushing, data sharing and design reviews. Over time, new storage and canal projects (for instance on the Chenab, and proposals to move water toward Punjab, Haryana and Rajasthan) could change the picture, but they need years and large investment. <span class="tag interp">Interpretation</span> <span class="tag verify">Re-verify project status</span></p>
+  </div>
+  <p>The treaty survived the wars of 1965 and 1971 and the 1999 Kargil conflict, and was often called one of the world's more durable water agreements. Pakistan relies on the Indus system for most of its irrigated agriculture, so it treats any change as an existential concern. See handbook 7 for the wider India-Pakistan context.</p>
+</section>
+
+<section id="china">
+  <h2>The Brahmaputra and China</h2><hr class="sec-rule">
+  <p>China is the upstream state on the Brahmaputra and Sutlej. There is no water-sharing treaty. The two countries have an Expert Level Mechanism (set up in 2006) and used to share flood-season hydrological data under periodic memoranda, which have lapsed or been interrupted in recent years. <span class="tag verify">Re-verify the data-sharing status</span></p>
+  <ul>
+    <li><strong>Chinese projects:</strong> Zangmu (a run-of-river dam in Tibet) is operating. In July 2025, China formally began construction of a very large hydropower scheme on the lower Yarlung Tsangpo near the Great Bend, near Medog. Reported capacity and cost are very large. <span class="tag verify">Re-verify capacity and cost figures</span></li>
+    <li><strong>Indian concerns:</strong> flow regulation, sediment, flood warning data, and a strategic lever near a disputed border. Arunachal Pradesh is claimed by China, which adds a territorial dimension.</li>
+    <li><strong>Chinese position:</strong> projects are run-of-river, do not reduce downstream flow, and serve clean energy goals. <span class="tag interp">Interpretation: Indian analysts doubt that a huge scheme leaves flows entirely unaffected</span></li>
+    <li><strong>Indian response:</strong> the proposed Siang Upper Multipurpose Project in Arunachal, intended to store water and generate power, which has met local opposition; and efforts to restore regular data sharing. <span class="tag verify">Re-verify</span></li>
+  </ul>
+  <div class="edge blue">
+    <span class="edge-h">An asymmetry</span>
+    <p>China is not bound by a treaty and holds the head of the river, while India holds the head of the Indus tributaries and is a lower riparian on the Brahmaputra. Critics of India's 2025 treaty move note this reverses the position India says it fears from China. Supporters reply that the two cases differ legally and politically. <span class="tag interp">Interpretation</span> See handbook 6 for the LAC context.</p>
+  </div>
+</section>
+
+<section id="neighbours">
+  <h2>Bangladesh, Nepal, Bhutan and Afghanistan</h2><hr class="sec-rule">
+  <div class="tablewrap">
+    <table>
+      <caption>Principal arrangements and issues <span class="tag verify">Re-verify</span></caption>
+      <thead><tr><th>Neighbour</th><th>Rivers and instruments</th><th>Issue</th></tr></thead>
+      <tbody>
+        <tr><td>Bangladesh</td><td>Ganga Water Treaty (1996, 30 years); about 54 shared rivers; Joint Rivers Commission</td><td>The Ganga treaty is due to expire at the end of 2026, so renewal is a live question. The Teesta agreement drafted in 2011 was not concluded because of West Bengal's objections. Bangladesh has also looked to China for Teesta projects.</td></tr>
+        <tr><td>Nepal</td><td>Kosi (1954, revised 1966), Gandak (1959), Mahakali Treaty (1996)</td><td>Flood control, embankments and the long-delayed Pancheshwar project; Nepal's hydropower exports to India.</td></tr>
+        <tr><td>Bhutan</td><td>Chukha, Tala, Mangdechhu and other hydropower projects</td><td>Hydropower exports are a pillar of the relationship. Dams on the Bhutanese side feed Indian grids and affect flows in Assam.</td></tr>
+        <tr><td>Afghanistan</td><td>Kabul river basin; Indian-assisted Salma Dam on the Hari Rud</td><td>Pakistan shares the Kabul basin, so Afghan dam plans have a regional angle. <span class="tag verify">Re-verify</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Cooperation as the norm</span>
+    <p>Most of India's river arrangements with neighbours are about flood data, hydropower exchange and navigation, not confrontation. The Siliguri corridor and Teesta make Bangladesh's choices a defence as well as a water issue, which is why third-country involvement draws attention in India. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<section id="military">
+  <h2>Rivers and military affairs</h2><hr class="sec-rule">
+  <ul>
+    <li><strong>Rivers as obstacles:</strong> the Sutlej, Beas, Ravi and Brahmaputra with its tributaries are major obstacles to movement. In the Punjab sector, canals such as the Ichhogil (Lahore) and the BRB form defensive lines, and bridging, crossing and engineer support are decisive in any plains offensive.</li>
+    <li><strong>Logistics:</strong> the Brahmaputra splits Assam and the Northeast. The Dhola-Sadiya and Bogibeel bridges improved movement toward eastern Arunachal. Roads and bridges built by the Border Roads Organisation and the Army's Corps of Engineers support forward areas. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Inland waterways:</strong> National Waterway 1 (Ganga) and National Waterway 2 (Brahmaputra) matter for bulk freight and, potentially, for civil-military movement; the Indo-Bangladesh Protocol route links Kolkata and Assam. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Relief:</strong> the Army, Air Force, Navy and NDRF respond to floods (Kashmir 2014, Uttarakhand 2013, Assam each year). Humanitarian assistance and disaster relief is a core peacetime role.</li>
+    <li><strong>Riverine forces:</strong> the BSF Water Wing and Army engineers operate in delta and riverine terrain, including the Sundarbans. <span class="tag verify">Re-verify unit details</span></li>
+    <li><strong>Dams and law of war:</strong> Additional Protocol I to the Geneva Conventions (Article 56) protects dams and dykes from attack when this would cause severe civilian losses. India has not ratified that protocol. <span class="tag verify">Re-verify</span></li>
+  </ul>
+  <div class="edge">
+    <span class="edge-h">Water as a strategic instrument</span>
+    <p>Control of rivers is not just a military or legal matter. Data, storage, treaty design and diplomacy are the main levers, and the risk that water becomes an instrument of coercion shapes both Indian and neighbouring planning. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<div class="part-head"><p>Knowledge toolkit</p><h2>Analysis, practice and revision</h2></div>
+
+<section id="perspectives">
+  <h2>Perspectives, controversies and facts</h2><hr class="sec-rule">
+  <p><span class="tag interp">Interpretation</span> <strong>Dams: development or damage.</strong> Supporters point to irrigation, power and flood control; critics point to displacement, sediment loss, seismic risk and ecology. The Narmada and Tehri debates show both sides.</p>
+  <p><span class="tag interp">Interpretation</span> <strong>River linking.</strong> Advocates see a way to move water from surplus to deficit basins; sceptics argue demand management, groundwater recharge and efficiency are cheaper and less risky. <span class="tag disputed">Disputed</span></p>
+  <p><span class="tag interp">Interpretation</span> <strong>The Indus abeyance.</strong> One view holds that the treaty gave Pakistan a generous share and could not survive sustained terrorism. Another holds that unilateral suspension weakens India's case as an upstream state elsewhere, and invites China to do the same on the Brahmaputra. A balanced answer sets out the legal, strategic and reputational costs of each position.</p>
+  <p><span class="tag interp">Interpretation</span> <strong>Cleaning the Ganga.</strong> Large sums have been spent and treatment capacity has grown, yet stretches remain heavily polluted. Disagreement centres on measurement, operation and maintenance, and environmental flow rather than on intent.</p>
+  <h3>Lesser-known facts</h3>
+  <ul>
+    <li><span class="tag fact">Established</span> The Grand Anicut (Kallanai) on the Kaveri, built in the Chola period, is still in use.</li>
+    <li><span class="tag fact">Established</span> The Ganga was declared India's National River in 2008 and the Gangetic dolphin the national aquatic animal in 2009.</li>
+    <li><span class="tag fact">Established</span> The Brahmaputra's Majuli is among the world's largest river islands and became India's first river-island district in 2016.</li>
+    <li><span class="tag fact">Established</span> Three of the four Kumbh sites (Haridwar, Prayagraj, Nashik) lie on the Ganga, Yamuna or Godavari and the fourth, Ujjain, lies on the Kshipra.</li>
+  </ul>
+</section>
+
+<section id="scenarios-options">
+  <h2>Scenarios and strategic options</h2><hr class="sec-rule">
+  <p>Presented neutrally, without recommending a political position:</p>
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>Indus abeyance continues</h4>
+      <p>India builds storage and diversions on the western rivers over many years, while Pakistan pursues legal, diplomatic and international routes. Risk of escalation is tied to the wider security relationship.</p>
+    </div>
+    <div class="panel red-top">
+      <h4>Upstream squeeze on the Brahmaputra</h4>
+      <p>Large Chinese storage or diversion would affect flows and flood warning. India would need data agreements, its own storage (Siang) and diplomatic leverage.</p>
+    </div>
+    <div class="panel gold-top">
+      <h4>Ganga treaty renewal</h4>
+      <p>Renewal or renegotiation of the 1996 treaty with Bangladesh ties together water sharing, Teesta, security of the Siliguri corridor and regional politics.</p>
+    </div>
+    <div class="panel green-top">
+      <h4>Domestic water stress</h4>
+      <p>Groundwater depletion, urban demand and a warming climate make allocation disputes between states more frequent and harder to settle.</p>
+    </div>
+  </div>
+  <div class="tablewrap">
+    <table>
+      <caption>Policy options and trade-offs</caption>
+      <thead><tr><th>Option</th><th>Benefit</th><th>Risk or cost</th></tr></thead>
+      <tbody>
+        <tr><td>Build storage on western Indus rivers</td><td>Greater control over flows and power</td><td>Cost, time, ecological and diplomatic consequences; precedent for upstream states</td></tr>
+        <tr><td>Siang Upper Multipurpose Project</td><td>Buffer against upstream changes; power and storage</td><td>Local opposition, ecology, seismic risk, cost</td></tr>
+        <tr><td>Standing basin authorities with open data</td><td>Faster dispute resolution, shared evidence</td><td>States may resist loss of control</td></tr>
+        <tr><td>Demand management and groundwater recharge</td><td>Cheaper and faster than new mega-projects</td><td>Needs behavioural and pricing change</td></tr>
+        <tr><td>Treaty renewal with Bangladesh and Nepal</td><td>Stable cooperation and flood data</td><td>Domestic state-level politics, especially on the Teesta</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="answer-framework">
+  <h2>Answer framework and worked example</h2><hr class="sec-rule">
+  <p>For any "Why do rivers matter for India's security?" question, move through definition, location, evidence, contest, analysis, test, position, concession and close. One compressed example follows.</p>
+  <div class="panel red-top">
+    <h4>Worked example: "Does India's decision to hold the Indus Waters Treaty in abeyance serve its interests?"</h4>
+    <dl class="rungs">
+      <dt>Define</dt><dd>The IWT is a 1960 treaty allocating the three western rivers to Pakistan and three eastern rivers to India; abeyance is India's April 2025 suspension of its obligations.</dd>
+      <dt>Locate</dt><dd>Indus basin across J&amp;K, Punjab and Pakistan; Chenab and Jhelum projects in J&amp;K.</dd>
+      <dt>Establish</dt><dd>India announced it after the Pahalgam attack; Pakistan rejected the move; India has little storage on the western rivers.</dd>
+      <dt>Contest</dt><dd>Critics say it is legally contested, has limited immediate effect and sets a precedent China can invoke.</dd>
+      <dt>Analyse</dt><dd>Value lies in leverage, design flexibility and future projects, not in cutting flows soon.</dd>
+      <dt>Test</dt><dd>Compare effects on Pakistan, on Indian projects and on India's upstream-downstream positions.</dd>
+      <dt>Position</dt><dd>A pressure instrument with real long-term options, but with costs that must be managed.</dd>
+      <dt>Concede</dt><dd>Legal positions and project timelines are uncertain. <span class="tag verify">Re-verify</span></dd>
+      <dt>Close</dt><dd>Water policy needs to be paired with storage, diplomacy and credible rules for upstream and downstream behaviour.</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="qbank">
+  <h2>Practice bank: questions and motions</h2><hr class="sec-rule">
+  <p class="lede">Fourteen questions. Answer each aloud, standing, in ninety seconds.</p>
+  <ol class="qbank">
+    <li>Distinguish Himalayan from Peninsular rivers, with two examples of each.</li>
+    <li>Trace the Ganga from Gangotri to the Bay of Bengal, naming five tributaries.</li>
+    <li>What are the six rivers of the Indus system, and which belong to India under the 1960 treaty?</li>
+    <li>Explain the Great Bend of the Yarlung Tsangpo and why it matters strategically.</li>
+    <li>Why is water mainly a State subject, and what role does Article 262 play?</li>
+    <li>Why do the Kaveri and Krishna disputes recur?</li>
+    <li>What are the main provisions of the Indus Waters Treaty and its dispute machinery?</li>
+    <li>What happened to the treaty in April 2025, and what are the arguments for and against?</li>
+    <li>Why does China's Medog hydropower project concern India?</li>
+    <li>What is the status and significance of the 1996 Ganga Water Treaty with Bangladesh?</li>
+    <li>Explain the Teesta issue and why it involves West Bengal.</li>
+    <li>What is Namami Gange, and how would you judge its success?</li>
+    <li>What roles do rivers play in military logistics and in disaster relief?</li>
+    <li>What risks do glacial-lake outburst floods pose to Himalayan hydropower?</li>
+  </ol>
+  <h3>Debate motions</h3>
+  <ol class="dbank">
+    <li>This house believes India was right to hold the Indus Waters Treaty in abeyance.</li>
+    <li>This house believes water should be moved from the State List to the Concurrent List.</li>
+    <li>This house believes river-linking is the answer to India's water scarcity.</li>
+    <li>This house believes large Himalayan dams do more harm than good.</li>
+    <li>This house believes India should build storage on the Brahmaputra to counter Chinese dams.</li>
+    <li>This house believes a rivers' legal personhood would improve their protection.</li>
+    <li>This house believes water-sharing agreements with neighbours should be renewed on their existing terms.</li>
+  </ol>
+</section>
+
+<section id="chronology">
+  <h2>Master chronology</h2><hr class="sec-rule">
+  <ul class="timeline">
+    <li><span class="yr">c. 2600 BCE</span><span>Mature Indus Valley cities on the Indus and Ghaggar-Hakra systems.</span></li>
+    <li><span class="yr">2nd c. CE</span><span>Grand Anicut (Kallanai) in the Chola period, traditionally dated earlier. <span class="tag verify">Re-verify dating</span></span></li>
+    <li><span class="yr">1947-48</span><span>Partition divides the Indus basin; a canal-water dispute between India and Pakistan follows in 1948.</span></li>
+    <li><span class="yr">1956</span><span>Inter-State River Water Disputes Act and River Boards Act.</span></li>
+    <li><span class="yr">1957-63</span><span>Hirakud and Bhakra dams completed.</span></li>
+    <li><span class="yr">1960</span><span>Indus Waters Treaty signed at Karachi.</span></li>
+    <li><span class="yr">1975</span><span>Farakka Barrage commissioned. <span class="tag verify">Re-verify</span></span></li>
+    <li><span class="yr">1985</span><span>Ganga Action Plan launched.</span></li>
+    <li><span class="yr">1996</span><span>Ganga Water Treaty with Bangladesh; Mahakali Treaty with Nepal.</span></li>
+    <li><span class="yr">2007</span><span>Kaveri tribunal award; Baglihar Neutral Expert decision.</span></li>
+    <li><span class="yr">2008-09</span><span>Ganga declared National River and dolphin the national aquatic animal.</span></li>
+    <li><span class="yr">2013</span><span>Kishanganga Court of Arbitration award; Kedarnath floods.</span></li>
+    <li><span class="yr">2014</span><span>Namami Gange launched.</span></li>
+    <li><span class="yr">2017</span><span>Sardar Sarovar reaches full reservoir level; Dhola-Sadiya bridge opens.</span></li>
+    <li><span class="yr">2018</span><span>Supreme Court modifies the Kaveri award; Bogibeel bridge opens.</span></li>
+    <li><span class="yr">2021</span><span>Dam Safety Act; Chamoli flood.</span></li>
+    <li><span class="yr">2023</span><span>South Lhonak lake flood in Sikkim; Indian notices on the IWT.</span></li>
+    <li><span class="yr">Dec 2024</span><span>Ken-Betwa Link foundation laid.</span></li>
+    <li><span class="yr">Apr 2025</span><span>India puts the Indus Waters Treaty in abeyance after Pahalgam.</span></li>
+    <li><span class="yr">Jul 2025</span><span>China begins construction of the Medog hydropower scheme. <span class="tag verify">Re-verify</span></span></li>
+    <li><span class="yr">Dec 2026</span><span>Scheduled expiry of the Ganga Water Treaty. <span class="tag verify">Re-verify</span></span></li>
+  </ul>
+</section>
+
+<section id="glossary">
+  <h2>Glossary</h2><hr class="sec-rule">
+  <dl class="term">
+    <dt>Antecedent drainage</dt><dd>A river that keeps its course while the land rises across it, cutting a gorge.</dd>
+    <dt>Article 262</dt><dd>The constitutional provision for adjudicating inter-state river disputes.</dd>
+    <dt>Cusec</dt><dd>Cubic foot per second; a flow unit used in water-sharing agreements.</dd>
+    <dt>E-flow</dt><dd>The minimum flow left in a river to sustain its ecology.</dd>
+    <dt>GLOF</dt><dd>Glacial lake outburst flood.</dd>
+    <dt>Lower riparian</dt><dd>A state downstream on a shared river.</dd>
+    <dt>NMCG</dt><dd>National Mission for Clean Ganga, the implementing body of Namami Gange.</dd>
+    <dt>Neutral Expert</dt><dd>A technical adjudicator under the IWT for "differences".</dd>
+    <dt>Panjnad</dt><dd>The confluence of five rivers of Punjab before joining the Indus.</dd>
+    <dt>Prayag</dt><dd>A sacred river confluence.</dd>
+    <dt>Run-of-river</dt><dd>A hydropower design with little storage that uses the natural flow.</dd>
+    <dt>TMC</dt><dd>Thousand million cubic feet, a unit used in the Kaveri and Krishna awards.</dd>
+    <dt>Upper riparian</dt><dd>A state upstream on a shared river.</dd>
+  </dl>
+</section>
+
+<section id="revision">
+  <h2>Rapid revision sheet</h2><hr class="sec-rule">
+  <div class="note">
+    <h4>Systems and culture</h4>
+    <ul>
+      <li>Himalayan: perennial, antecedent, deltas. Peninsular: seasonal, mostly east-flowing; Narmada and Tapi flow west.</li>
+      <li>Indus: Jhelum, Chenab, Ravi, Beas, Sutlej. Ganga: Yamuna, Ghaghara, Gandak, Kosi, Son. Brahmaputra: Siang, Dibang, Lohit, Subansiri.</li>
+      <li>Kumbh sites: Haridwar, Prayagraj, Nashik, Ujjain; the Ganga is the National River (2008).</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h4>Law and economy</h4>
+    <ul>
+      <li>State List Entry 17; Union List Entry 56; Article 262; 1956 Acts; Dam Safety Act 2021.</li>
+      <li>Disputes: Kaveri, Krishna, Godavari, Ravi-Beas (SYL), Mahadayi, Narmada.</li>
+      <li>Namami Gange (2014); Ken-Betwa Link; Sardar Sarovar, Tehri, Polavaram, Bhakra, Hirakud.</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h4>Strategic</h4>
+    <ul>
+      <li>IWT 1960: east to India, west to Pakistan; in abeyance since April 2025; legal position disputed.</li>
+      <li>China: Medog scheme, Zangmu, no treaty, data-sharing lapses; India's Siang project.</li>
+      <li>Bangladesh: Ganga treaty (1996) due for renewal in 2026; Teesta unresolved. Nepal: Kosi, Gandak, Mahakali. Bhutan: hydropower.</li>
+      <li>Rivers as obstacles, logistics routes and relief theatres; always tag uncertain figures for re-verification.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer>
+  <p>Compiled from open sources. Study aid only, not an official publication.</p>
+  <p>Source &amp; contributions: <a href="https://github.com/mohitkushwaha0601/matre">github.com/mohitkushwaha0601/matre</a></p>
+</footer>
+
+</body>
+</html>

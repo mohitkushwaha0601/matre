@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bhopal and Ujjain — A Deep Knowledge Handbook</title>
+<meta name="description" content="A 19-section study handbook on Bhopal and Ujjain: geography, history, religion, eminence, defence establishments, strategic location, mass-event security and SSB-style practice material.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1B2A2A;
+  --ink-soft:#4E6362;
+  --paper:#F4F1EA;
+  --surface:#FFFFFF;
+  --surface-2:#E8E4D8;
+  --rule:#D2CDBB;
+  --rule-strong:#A59F88;
+  --red:#B5441F;
+  --blue:#1F6F86;
+  --gold:#A06E0E;
+  --green:#2F6B4F;
+  --hero-bg:#12363A;
+  --hero-ink:#F4F1EA;
+  --hero-dim:#9FB9B8;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ink:#E8EDE6;
+    --ink-soft:#AFC0BC;
+    --paper:#0C1717;
+    --surface:#142424;
+    --surface-2:#1D3333;
+    --rule:#2D4443;
+    --rule-strong:#4A6664;
+    --red:#EE8C66;
+    --blue:#6FC1D8;
+    --gold:#E2B24C;
+    --green:#67C28F;
+    --hero-bg:#081111;
+    --hero-ink:#E8EDE6;
+    --hero-dim:#86A09E;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E8EDE6;
+  --ink-soft:#AFC0BC;
+  --paper:#0C1717;
+  --surface:#142424;
+  --surface-2:#1D3333;
+  --rule:#2D4443;
+  --rule-strong:#4A6664;
+  --red:#EE8C66;
+  --blue:#6FC1D8;
+  --gold:#E2B24C;
+  --green:#67C28F;
+  --hero-bg:#081111;
+  --hero-ink:#E8EDE6;
+  --hero-dim:#86A09E;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1.5rem);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ---------- hero ---------- */
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
+.flagstrip{display:flex;height:12px}
+.flagstrip span{flex:1}
+.f1{background:#FF9933}
+.f2{background:#FFFFFF}
+.f3{background:#138808}
+.f4{background:#12363A}
+.f5{background:#1F6F86}
+.f6{background:#A06E0E}
+.f7{background:#E8C77A}
+.f8{background:#B5441F}
+.hero-inner{max-width:1180px;margin:0 auto;padding:3.2rem 1.5rem 0}
+.kicker{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--hero-dim);margin:0 0 .8rem}
+.motto{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:clamp(1.7rem,5.2vw,2.9rem);line-height:1.2;margin:0;letter-spacing:.005em;max-width:26ch}
+.motto-en{margin:.55rem 0 0;color:var(--hero-dim);font-size:clamp(.95rem,2.4vw,1.1rem);font-style:italic;max-width:62ch}
+.hero h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.5rem,4.3vw,2.35rem);line-height:1.2;margin:2.6rem 0 .5rem;border-top:1px solid rgba(255,255,255,.22);padding-top:1.6rem;max-width:30ch}
+.hero-sub{margin:0;color:var(--hero-dim);max-width:68ch}
+.stamp{margin-top:1.6rem;font-size:.86rem;color:var(--hero-dim);display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+.stamp b{color:var(--hero-ink);font-weight:600}
+
+/* ---------- layout ---------- */
+.shell{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem;display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media (min-width:1000px){
+  .shell{grid-template-columns:255px minmax(0,1fr);gap:3.5rem;padding-top:2.8rem}
+}
+nav.toc{font-size:.9rem}
+@media (min-width:1000px){
+  .toc-mobile{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2rem);align-self:start;max-height:calc(100vh - 5rem);overflow-y:auto}
+}
+nav.toc h2{font-family:"Zilla Slab",Georgia,serif;font-size:.92rem;font-weight:600;margin:0 0 .7rem;padding-bottom:.45rem;border-bottom:2px solid var(--rule-strong)}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc}
+nav.toc li{border-bottom:1px solid var(--rule)}
+nav.toc li:not(.part){counter-increment:toc}
+nav.toc a{display:flex;gap:.6rem;padding:.4rem 0;color:var(--ink-soft);text-decoration:none}
+nav.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--rule-strong);font-variant-numeric:tabular-nums;flex:none}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--red)}
+nav.toc .part{border:0;margin:1.1rem 0 .3rem;font-family:"Zilla Slab",Georgia,serif;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--rule-strong)}
+nav.toc .part::before{content:none}
+.toc-mobile{display:block}
+@media (min-width:1000px){.toc-mobile summary{display:none}}
+.toc-mobile summary{cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:600;padding:.7rem .9rem;background:var(--surface);border:1px solid var(--rule);margin-bottom:1rem}
+@media (max-width:999px){
+  .toc-mobile[open] nav.toc{padding:0 .9rem 1rem}
+  .toc-mobile:not([open]) nav.toc{display:none}
+}
+
+/* ---------- sections ---------- */
+main{min-width:0}
+section{margin:0 0 3.6rem;scroll-margin-top:1.5rem}
+section > h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.45rem,3.6vw,1.95rem);line-height:1.2;margin:0 0 .3rem}
+.part-head{margin:4rem 0 2.2rem;padding:1.1rem 0 .9rem;border-top:4px double var(--rule-strong);border-bottom:1px solid var(--rule)}
+.part-head p{margin:0;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.part-head h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.3rem,3.2vw,1.7rem);margin:.3rem 0 0;color:var(--ink)}
+.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.16rem;margin:2rem 0 .5rem;line-height:1.3}
+h4{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1rem;margin:1.4rem 0 .35rem;color:var(--ink)}
+p{margin:0 0 .95rem;max-width:74ch}
+ul,ol{margin:0 0 1rem;padding-left:1.25rem;max-width:74ch}
+li{margin-bottom:.35rem}
+li::marker{color:var(--rule-strong)}
+strong{font-weight:600}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+/* ---------- components ---------- */
+.lede{font-size:1.06rem;color:var(--ink-soft);max-width:70ch}
+
+.tablewrap{overflow-x:auto;margin:0 0 1.3rem;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.92rem}
+caption{text-align:left;padding:.7rem .85rem .1rem;font-weight:600;color:var(--ink-soft);font-size:.9rem}
+th,td{text-align:left;padding:.55rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{background:var(--surface-2);font-weight:600;border-bottom:2px solid var(--rule-strong);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.num,th.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+.edge{background:var(--surface);border-left:4px solid var(--red);padding:.9rem 1.1rem;margin:1.4rem 0;max-width:74ch}
+.edge p:last-child,.edge ul:last-child,.edge ol:last-child{margin-bottom:0}
+.edge .edge-h{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);display:block;margin-bottom:.25rem;font-size:.95rem}
+.edge.gold{border-left-color:var(--gold)}
+.edge.gold .edge-h{color:var(--gold)}
+.edge.blue{border-left-color:var(--blue)}
+.edge.blue .edge-h{color:var(--blue)}
+.edge.green{border-left-color:var(--green)}
+.edge.green .edge-h{color:var(--green)}
+
+.note{background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;border:1px solid var(--rule);font-size:.95rem}
+.note p:last-child,.note ul:last-child,.note ol:last-child{margin-bottom:0}
+.note h4{margin-top:0}
+
+.panel{background:var(--surface);border:1px solid var(--rule);padding:1rem 1.1rem}
+.panel h4{margin-top:0}
+.panel ul,.panel ol{margin-bottom:0}
+.panel.blue-top{border-top:3px solid var(--blue)}
+.panel.red-top{border-top:3px solid var(--red)}
+.panel.gold-top{border-top:3px solid var(--gold)}
+.panel.green-top{border-top:3px solid var(--green)}
+
+.rungs{max-width:74ch;margin:.3rem 0 0;display:grid;grid-template-columns:9.5rem 1fr;gap:0 1rem}
+.rungs dt{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;color:var(--red);padding-top:.2rem}
+.rungs dd{margin:0 0 .5rem;font-size:.93rem}
+@media (max-width:560px){
+  .rungs{grid-template-columns:1fr;gap:0}
+  .rungs dt{padding-top:.4rem}
+}
+
+.timeline{list-style:none;padding:0;margin:1rem 0 1.4rem;max-width:74ch}
+.timeline li{display:grid;grid-template-columns:8.2rem 1fr;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--rule);margin:0}
+.timeline li:last-child{border-bottom:0}
+.timeline .yr{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);font-variant-numeric:tabular-nums}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:.1rem}}
+
+.qbank{counter-reset:q;list-style:none;padding:0;max-width:74ch}
+.qbank li{counter-increment:q;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.qbank li::before{content:counter(q,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.qbank li:last-child{border-bottom:0}
+
+.dbank{counter-reset:d;list-style:none;padding:0;max-width:74ch}
+.dbank li{counter-increment:d;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.dbank li::before{content:counter(d,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.dbank li:last-child{border-bottom:0}
+
+.grid{display:grid;gap:1rem}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
+
+.card{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--red);padding:1rem 1.1rem}
+.card h4{margin:0 0 .45rem;font-size:1rem}
+.card .name{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.2rem}
+.card .role{font-size:.9rem;color:var(--ink-soft)}
+.card .since{font-size:.78rem;color:var(--green);font-weight:600;margin-top:.45rem}
+
+.term{max-width:74ch;margin:0 0 1.2rem}
+.term dt{font-weight:600;margin-top:.8rem}
+.term dd{margin:.15rem 0 0;color:var(--ink-soft)}
+
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:.1rem .45rem;border:1px solid var(--rule-strong);color:var(--ink-soft);margin-right:.35rem;vertical-align:middle}
+.tag.fact{border-color:var(--green);color:var(--green)}
+.tag.interp{border-color:var(--gold);color:var(--gold)}
+.tag.disputed{border-color:var(--red);color:var(--red)}
+.tag.verify{border-color:var(--blue);color:var(--blue)}
+.spaced{margin-top:.6rem}
+
+footer{border-top:3px double var(--rule-strong);margin-top:2rem;padding-top:1.4rem;color:var(--ink-soft);font-size:.9rem;max-width:74ch}
+footer a{color:var(--blue)}
+
+/* ---------- home button: fixed, links back to the collection homepage ---------- */
+.home-btn{position:fixed;top:16px;left:16px;z-index:60;display:inline-flex;align-items:center;gap:.4rem;background:#14202B;color:#F1F2EC;border:1px solid rgba(241,242,236,.25);padding:.45rem .85rem;border-radius:999px;font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.82rem;font-weight:600;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.3);transition:background .15s ease,transform .15s ease}
+.home-btn:hover,.home-btn:focus-visible{background:#BF2F26;transform:translateY(-1px)}
+.home-btn svg{width:14px;height:14px;flex:none}
+@media print{.home-btn{display:none}}
+
+@media print{
+  .hero{background:none;color:#000;padding-bottom:1rem}
+  .hero-sub,.stamp,.motto-en{color:#333}
+  .flagstrip,.toc-mobile{display:none}
+  .shell{display:block;padding:0}
+  section{page-break-inside:auto;margin-bottom:1.8rem}
+  h2,h3{page-break-after:avoid}
+  .panel,.edge,.note,.tablewrap,figure{page-break-inside:avoid}
+  .part-head{page-break-before:always}
+  body{font-size:10.5pt;background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+
+<a class="home-btn" href="../index.html" aria-label="Back to Handbooks homepage" title="Back to Handbooks homepage">
+  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
+  <span>Home</span>
+</a>
+
+<header class="hero">
+  <div class="flagstrip" aria-hidden="true">
+    <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f5"></span><span class="f6"></span><span class="f7"></span><span class="f8"></span>
+  </div>
+  <div class="hero-inner">
+    <p class="kicker">City profile · Heart of India · Malwa and the Vindhya-Satpura belt · history, religion, defence and strategic geography</p>
+    <h1>Bhopal and Ujjain</h1>
+    <p class="hero-sub">Why a capital of lakes and a city of Mahakal, about 190 km apart in the middle of India, matter together: their geography and history, their sacred and scholarly standing, the defence establishments of the surrounding region, and what a landlocked "heartland" corridor offers India's strategy. Figures that change over time are tagged for re-verification.</p>
+    <p class="stamp">
+      <span>Bhopal <b>state capital, Madhya Pradesh</b></span>
+      <span>Ujjain <b>Mahakaleshwar Jyotirlinga, Simhastha site</b></span>
+      <span>Distance <b>about 190 km</b></span>
+      <span>Sections <b>19</b></span>
+      <span>Reading time <b>2-3 hrs</b></span>
+    </p>
+  </div>
+</header>
+
+<div class="shell">
+
+<details class="toc-mobile" open>
+  <summary>Contents</summary>
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li class="part">How to use this</li>
+      <li><a href="#snapshot">Snapshot and how to read</a></li>
+
+      <li class="part">Part I · Geography and history</li>
+      <li><a href="#geography">Geography: plateau, lakes and river</a></li>
+      <li><a href="#ancient">Ancient and early medieval: Avanti to the Paramaras</a></li>
+      <li><a href="#medieval">Sultans, Mughals, Marathas and the 1737 battle</a></li>
+      <li><a href="#begums">The Begums, the British and merger</a></li>
+
+      <li class="part">Part II · Religion, culture and eminence</li>
+      <li><a href="#ujjain-sacred">Ujjain: sacred geography</a></li>
+      <li><a href="#bhopal-heritage">Bhopal and its region: plural heritage</a></li>
+      <li><a href="#learning">Astronomy, learning and institutions</a></li>
+
+      <li class="part">Part III · Defence and strategic geography</li>
+      <li><a href="#defence">Defence and science establishments of the region</a></li>
+      <li><a href="#strategic">Strategic location: interior lines and nodes</a></li>
+      <li><a href="#security">Mass events, disaster and security</a></li>
+      <li><a href="#development">Economy and current development</a></li>
+
+      <li class="part">Knowledge toolkit</li>
+      <li><a href="#perspectives">Perspectives, controversies and facts</a></li>
+      <li><a href="#scenarios-options">Scenarios and strategic options</a></li>
+      <li><a href="#answer-framework">Answer framework and worked example</a></li>
+      <li><a href="#qbank">Practice bank: questions and motions</a></li>
+      <li><a href="#chronology">Master chronology</a></li>
+      <li><a href="#glossary">Glossary</a></li>
+      <li><a href="#revision">Rapid revision sheet</a></li>
+    </ol>
+  </nav>
+</details>
+
+<main>
+
+<section id="snapshot">
+  <h2>Snapshot and how to read</h2><hr class="sec-rule">
+  <p class="lede">Bhopal is the administrative capital of Madhya Pradesh, a city of lakes shaped by Afghan nawabs and four ruling Begums. Ujjain, an ancient capital of Avanti on the Kshipra, is one of India's seven moksha-giving cities and a Kumbh site. Neither is a frontier garrison town; their strategic value lies in central position, rail and road links, science and sacred geography.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>The two cities at a glance</caption>
+      <thead><tr><th>Item</th><th>Bhopal</th><th>Ujjain</th></tr></thead>
+      <tbody>
+        <tr><td>Role</td><td>State capital; administrative, educational and industrial centre</td><td>Pilgrimage, astronomy and heritage city; district headquarters</td></tr>
+        <tr><td>River / water</td><td>Upper and Lower Lakes (Bhoj Wetland)</td><td>Kshipra river</td></tr>
+        <tr><td>Defining sites</td><td>Taj-ul-Masajid, Bharat Bhavan, Upper Lake, nearby Sanchi and Bhimbetka</td><td>Mahakaleshwar temple, Ram Ghat, Vedhshala observatory, Sandipani Ashram</td></tr>
+        <tr><td>Historic rulers</td><td>Dost Mohammad Khan and the Nawabs and Begums of Bhopal</td><td>Mauryas, Western Kshatrapas, Paramaras, Scindias</td></tr>
+        <tr><td>Population (city)</td><td>About 1.8 million in 2011 <span class="tag verify">Re-verify</span></td><td>About 0.5 million in 2011 <span class="tag verify">Re-verify</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge blue">
+    <span class="edge-h">How to read this handbook</span>
+    <p>This is a city-pair profile in the style of the Prayagraj handbook (no. 27). Facts are stated plainly, contested claims carry tags (<span class="tag fact">Established</span> <span class="tag interp">Interpretation</span> <span class="tag disputed">Disputed</span> <span class="tag verify">Re-verify</span>), and unit-level defence details that cannot be confirmed here are flagged for re-verification.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part I · Geography and history</p><h2>From plateau and lakes to Begum rule and a merged state</h2></div>
+
+<section id="geography">
+  <h2>Geography: plateau, lakes and river</h2><hr class="sec-rule">
+  <p>Both cities lie on the Malwa region of the Deccan-Vindhya borderland. Bhopal sits just north of the Narmada valley on rolling Vindhyan terrain at roughly 500 m, and its Upper and Lower Lakes (the Bhoj Wetland) give it the name "City of Lakes". Ujjain lies on the plain of the Kshipra, on the Malwa plateau, a fertile black-soil region about 55 km from Indore.</p>
+  <p>The Tropic of Cancer passes through Madhya Pradesh close to Ujjain and Sanchi. Ancient Indian astronomers treated the meridian through Ujjain as a reference line, a point that gives the city a lasting place in the history of Indian astronomy. <span class="tag interp">Interpretation: the "prime meridian" label is traditional</span></p>
+  <ul>
+    <li><strong>Hills and forests:</strong> the Vindhya range lies to the north, the Satpura range to the south; Bhimbetka and Pachmarhi sit in the same belt.</li>
+    <li><strong>Rivers:</strong> the Narmada flows south of Bhopal; the Betwa and Kshipra drain the Malwa side.</li>
+    <li><strong>Climate:</strong> a sub-humid monsoon climate with hot summers and a pronounced monsoon from June to September.</li>
+  </ul>
+  <div class="edge green">
+    <span class="edge-h">Why the geography matters</span>
+    <p>The plateau and the river valleys form a natural corridor between north and south India. Whoever held Malwa controlled the routes from the Gangetic plain to the Deccan and to the western ports, which is why Avanti, the Paramaras, the Marathas and the Mughals all fought over it.</p>
+  </div>
+</section>
+
+<section id="ancient">
+  <h2>Ancient and early medieval: Avanti to the Paramaras</h2><hr class="sec-rule">
+  <p>Ujjain (Ujjayini) was the capital of Avanti, one of the sixteen Mahajanapadas of the 6th century BCE, and later an important Mauryan centre; Ashoka is traditionally said to have governed it as a prince. <span class="tag interp">Tradition</span> Under the Western Kshatrapas (notably Rudradaman, 2nd century CE) it was a great trading and political centre, and the Gupta emperor Chandragupta II (Vikramaditya) is linked to its conquest. The Vikram Samvat calendar (57 BCE) is tied to the legendary king Vikramaditya, though its origin is debated. <span class="tag disputed">Disputed</span></p>
+  <p>Near Bhopal, the Buddhist site of Sanchi flourished under the Mauryas and Shungas. Later, the Paramara dynasty ruled Malwa from Dhar and Ujjain, and Raja Bhoj (c. 1010-1055) is remembered as a scholar-king who left architectural and literary works. Bhopal's tradition links his name to the Upper Lake and the name "Bhojpal"; historians treat the exact attribution with caution. <span class="tag interp">Interpretation</span></p>
+  <ul class="timeline">
+    <li><span class="yr">6th c. BCE</span><span>Avanti, with its capital at Ujjain, is one of the sixteen Mahajanapadas.</span></li>
+    <li><span class="yr">3rd c. BCE</span><span>Mauryan rule; the Great Stupa at Sanchi is built under Ashoka.</span></li>
+    <li><span class="yr">2nd c. CE</span><span>Western Kshatrapa ruler Rudradaman at Ujjain.</span></li>
+    <li><span class="yr">c. 4th-5th c.</span><span>Gupta period; Ujjain is a leading centre of learning.</span></li>
+    <li><span class="yr">11th c.</span><span>Paramara king Bhoj; temple at Bhojpur near Bhopal.</span></li>
+  </ul>
+</section>
+
+<section id="medieval">
+  <h2>Sultans, Mughals, Marathas and the 1737 battle</h2><hr class="sec-rule">
+  <p>Malwa passed to the Delhi Sultanate and then to the independent Malwa Sultanate at Mandu before the Mughals absorbed it under Akbar. Ujjain stayed a Mughal provincial centre. In April 1658, near Ujjain at Dharmat, Aurangzeb's army defeated the imperial force sent against him under Maharaja Jaswant Singh in the succession war against Dara Shikoh. <span class="tag fact">Established</span></p>
+  <p>As Mughal power weakened, Dost Mohammad Khan, an Afghan soldier of fortune, built a state at Bhopal in the 1720s and fortified it. Meanwhile, the Marathas under Peshwa Baji Rao I swept into Malwa. At the Battle of Bhopal in December 1737 he surrounded the Nizam-ul-Mulk's army, and the Treaty of Doraha Sarai (January 1738) ceded Malwa to the Marathas. <span class="tag fact">Established</span> Ranoji Scindia was given Ujjain, and the Scindias later made Gwalior their capital.</p>
+  <div class="edge">
+    <span class="edge-h">Why 1737-38 matters</span>
+    <p>It is a textbook case of manoeuvre and logistics: Baji Rao used speed and a siege-like encirclement to force a larger army to negotiate. It also marks the moment Mughal control of central India effectively ended.</p>
+  </div>
+</section>
+
+<section id="begums">
+  <h2>The Begums, the British and merger</h2><hr class="sec-rule">
+  <p>Bhopal signed a treaty of protection with the East India Company in 1818 and became a princely state. From 1819 to 1926 four women ruled in succession: Qudsia Begum, Sikandar Begum, Shah Jahan Begum and Sultan Jahan Begum, an unusual run that shaped the city's schools, public works and mosques, including the Taj-ul-Masajid project begun under Shah Jahan Begum. <span class="tag fact">Established</span> The state backed the British in 1857, a decision that remains contested in local memory. <span class="tag interp">Interpretation</span></p>
+  <p>The last Nawab, Hamidullah Khan (1926-49), also served as Chancellor of the Chamber of Princes. He initially preferred independence, but Bhopal acceded to India and was merged on 1 June 1949. Madhya Pradesh was formed on 1 November 1956 with Bhopal as capital; Ujjain, formerly in Gwalior State, had been in Madhya Bharat since 1948.</p>
+  <ul class="timeline">
+    <li><span class="yr">1818</span><span>Treaty of protection between Bhopal and the East India Company.</span></li>
+    <li><span class="yr">1819-1926</span><span>Four Begums rule Bhopal in succession.</span></li>
+    <li><span class="yr">1948</span><span>Madhya Bharat Union formed, including Ujjain.</span></li>
+    <li><span class="yr">1 Jun 1949</span><span>Bhopal merges with the Indian Union.</span></li>
+    <li><span class="yr">1 Nov 1956</span><span>Madhya Pradesh formed; Bhopal becomes capital.</span></li>
+  </ul>
+</section>
+
+<div class="part-head"><p>Part II · Religion, culture and eminence</p><h2>Sacred geography, plural heritage and learning</h2></div>
+
+<section id="ujjain-sacred">
+  <h2>Ujjain: sacred geography</h2><hr class="sec-rule">
+  <p>Ujjain (Avantika) is one of the seven sacred cities (Sapta Puri) of Hindu tradition: Ayodhya, Mathura, Haridwar, Kashi, Kanchi, Avantika and Dwarka. Its centrepiece is the Mahakaleshwar temple, one of the twelve Jyotirlingas and traditionally the one whose lingam faces south. The pre-dawn Bhasma Aarti is its best-known ritual. <span class="tag fact">Established</span> The Mahakal Lok corridor, a large redevelopment of the temple precinct, was inaugurated in October 2022.</p>
+  <p>Other major sites include the Harsiddhi temple (a Shakti Peeth tradition), the Kal Bhairav temple, the Sandipani Ashram (traditionally the school of Krishna, Balarama and Sudama), the Mangalnath temple and the ghats of the Kshipra. Ujjain is one of four Kumbh sites; its Simhastha is held roughly every twelve years, most recently in 2016. <span class="tag verify">Re-verify the next date (around 2028)</span></p>
+  <div class="grid three">
+    <div class="card"><div class="name">Mahakaleshwar</div><div class="role">Jyotirlinga; Bhasma Aarti; Mahakal Lok corridor</div></div>
+    <div class="card"><div class="name">Simhastha Kumbh</div><div class="role">Held every twelve years at Ujjain, alongside Haridwar, Prayagraj and Nashik</div></div>
+    <div class="card"><div class="name">Sandipani Ashram</div><div class="role">Traditional site of Krishna's schooling</div></div>
+  </div>
+  <p class="spaced">Ujjain's religious life is not only Shaiva: Jain, Buddhist and Islamic traditions have also left a mark on the region, and the city's older history reaches back to the ascetic traditions of ancient Avanti.</p>
+</section>
+
+<section id="bhopal-heritage">
+  <h2>Bhopal and its region: plural heritage</h2><hr class="sec-rule">
+  <p>Bhopal is a layered city. The Taj-ul-Masajid is among the largest mosques in India, and the Jama and Moti Masjids reflect Begum-era patronage. The annual Alami Tablighi Ijtema is a major Muslim gathering. In the city's old quarter, Mughal-era gates, palaces and the Gohar Mahal stand beside a modern state capital.</p>
+  <p>Within about 50 km are two UNESCO World Heritage Sites and other monuments of wide importance:</p>
+  <ul>
+    <li><strong>Sanchi:</strong> the Great Stupa and related Buddhist monuments, a UNESCO World Heritage Site from 1989. <span class="tag fact">Established</span></li>
+    <li><strong>Bhimbetka:</strong> rock shelters with prehistoric paintings, a UNESCO World Heritage Site from 2003. <span class="tag fact">Established</span></li>
+    <li><strong>Bhojpur:</strong> the unfinished Bhojeshwar Shiva temple, associated with Raja Bhoj and sometimes called the "Somnath of the East".</li>
+    <li><strong>Udayagiri Caves (near Vidisha):</strong> Gupta-era rock-cut shrines, including a famous Varaha panel.</li>
+  </ul>
+  <div class="edge gold">
+    <span class="edge-h">Plural by geography</span>
+    <p>The corridor holds Buddhist, Hindu and Islamic sacred sites within a short distance, which is why it is a favourite for essay questions on composite culture. A balanced answer notes that heritage is often contested in modern renaming and restoration debates. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<section id="learning">
+  <h2>Astronomy, learning and institutions</h2><hr class="sec-rule">
+  <p>Ujjain's scholarly reputation rests on astronomy and letters. The poet and dramatist Kalidasa (Meghaduta, Abhijnanashakuntalam) is associated with Ujjain in tradition. Varahamihira (Panchasiddhantika) worked there, and Brahmagupta (628 CE) headed its observatory and wrote the Brahmasphutasiddhanta, which discusses zero and negative numbers. <span class="tag fact">Established</span> The Vedhshala, built by Maharaja Sawai Jai Singh II in 1725, is one of his five observatories and still records the movement of the Sun.</p>
+  <p>Modern Ujjain has Vikram University (1957) and the Kalidas Sanskrit Academy. Bhopal's institutional list is long: IISER Bhopal, AIIMS Bhopal, MANIT, the National Law Institute University, the National Judicial Academy, the Indian Institute of Forest Management and the arts centre Bharat Bhavan (designed by Charles Correa, 1982). <span class="tag verify">Re-verify the current list</span></p>
+  <ul>
+    <li><strong>Industry and science in Bhopal:</strong> BHEL, set up in the 1960s, anchors heavy electrical manufacturing.</li>
+    <li><strong>Space:</strong> ISRO's Master Control Facility at Bhopal monitors and controls geostationary satellites (see the next part).</li>
+  </ul>
+</section>
+
+<div class="part-head"><p>Part III · Defence and strategic geography</p><h2>What the region hosts, and why a central corridor matters</h2></div>
+
+<section id="defence">
+  <h2>Defence and science establishments of the region</h2><hr class="sec-rule">
+  <p>Bhopal and Ujjain are not frontier garrisons and, like Prayagraj, they are better understood as part of a heartland belt. Madhya Pradesh as a whole hosts a number of well-known Army training centres, ordnance factories, an Air Force base and strategic science institutions within a few hours of the two cities. <span class="tag verify">Specific present-day units stationed in Bhopal or Ujjain themselves cannot be confirmed here; check Army, IAF and MoD sources</span></p>
+  <div class="tablewrap">
+    <table>
+      <caption>Notable establishments in or near the Bhopal-Ujjain corridor</caption>
+      <thead><tr><th>Place</th><th>Establishment</th><th>Significance</th></tr></thead>
+      <tbody>
+        <tr><td>Mhow (Dr Ambedkar Nagar), near Indore</td><td>Infantry School, Army War College and the Military College of Telecommunication Engineering <span class="tag verify">Re-verify names</span></td><td>A cradle of Army doctrine and training; about 55 km from Ujjain</td></tr>
+        <tr><td>Pachmarhi</td><td>Army Education Corps Training College and Centre</td><td>Hill cantonment in the Satpura range</td></tr>
+        <tr><td>Sagar</td><td>Mahar Regiment Centre</td><td>Regimental training and records for the Mahar Regiment</td></tr>
+        <tr><td>Jabalpur</td><td>Gun Carriage Factory (1904), Vehicle Factory Jabalpur, Ordnance Factory Khamaria; cantonment</td><td>Core of central India's defence manufacturing; the factories were corporatised in 2021 <span class="tag verify">Re-verify</span></td></tr>
+        <tr><td>Gwalior</td><td>Air Force Station Gwalior (Mirage 2000 base); BSF Academy at Tekanpur</td><td>A major IAF air-defence and strike location in the corridor</td></tr>
+        <tr><td>Indore</td><td>Raja Ramanna Centre for Advanced Technology (Department of Atomic Energy)</td><td>Lasers, accelerators and synchrotron research</td></tr>
+        <tr><td>Bhopal</td><td>ISRO Master Control Facility</td><td>Controls India's geostationary communication satellites</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Heartland, not frontier</span>
+    <p>A garrison deep in the interior serves training, depots, factories and reserves. It is far from the border, so it is less exposed, and it gives India depth. This is the same logic as in the Prayagraj handbook: interior hubs support the forward forces.</p>
+  </div>
+  <p>Historically, the area has also supplied military manpower: the Bhopal Contingent was raised under the 1818 treaty arrangement, and Malwa was a recruiting and staging ground for the Scindia and Holkar armies. <span class="tag interp">Interpretation</span></p>
+</section>
+
+<section id="strategic">
+  <h2>Strategic location: interior lines and nodes</h2><hr class="sec-rule">
+  <p>Interior lines mean that a defender in the centre can move forces to either flank faster than an attacker who must go around. India's central belt offers this advantage in both directions: toward the north-west and toward the east and the Deccan. Rail makes it concrete. Bhopal lies on the Delhi-Chennai trunk, and Itarsi, about 90 km to the south, is one of the country's busiest junctions, linking the Delhi-Chennai and Mumbai-Howrah routes. <span class="tag verify">Re-verify distances and rankings</span></p>
+  <ul>
+    <li><strong>Rail:</strong> Bhopal and Rani Kamlapati stations, Itarsi Junction and Ujjain Junction form a core network for troop and freight movement.</li>
+    <li><strong>Air:</strong> Raja Bhoj Airport (Bhopal) and Devi Ahilya Bai Holkar Airport (Indore) serve the region; Ujjain has no major airport and relies on Indore.</li>
+    <li><strong>Roads:</strong> national highways connect Bhopal to Indore, Nagpur, Jabalpur and Delhi; the Ujjain-Indore link is short.</li>
+    <li><strong>Water and power:</strong> the Narmada projects and the lakes matter for civil resilience; the Bhoj Wetland is a Ramsar site. <span class="tag fact">Established</span></li>
+  </ul>
+  <div class="edge blue">
+    <span class="edge-h">Sacred geography as strategic geography</span>
+    <p>The Narmada corridor with Omkareshwar and Ujjain's Mahakal forms part of a pilgrimage route that governments now promote as a heritage circuit with Sanchi, Bhimbetka and Bhojpur. For planners, a circuit like this is both an economic asset and a security responsibility.</p>
+  </div>
+</section>
+
+<section id="security">
+  <h2>Mass events, disaster and security</h2><hr class="sec-rule">
+  <p>Both cities test civil defence and disaster management. The Simhastha at Ujjain draws very large crowds, and the 2016 edition was reported to attract tens of millions of pilgrims over the festival. <span class="tag verify">Attendance figures are official estimates</span> Success depends on crowd flow, water supply, medical cover and police and paramilitary coordination. The Army and national disaster response forces typically support such events with specialist capabilities, as they do at the Prayagraj Kumbh (handbook 27). <span class="tag interp">Interpretation: exact division of labour varies by event</span></p>
+  <h3>Bhopal, 1984: the industrial disaster</h3>
+  <p>On the night of 2-3 December 1984, a leak of methyl isocyanate from the Union Carbide India pesticide plant killed thousands and injured hundreds of thousands. Government figures for the immediate toll are lower than those of many activist and academic estimates, so the number of deaths is <span class="tag disputed">Disputed</span>. A 1989 settlement of US$470 million was reached, and relief, compensation and clean-up of the site remain contested issues. <span class="tag verify">Re-verify current status</span></p>
+  <div class="note">
+    <h4>Legacy in Indian law and policy</h4>
+    <ul>
+      <li>Environment (Protection) Act, 1986 and later hazardous-substances rules.</li>
+      <li>Public Liability Insurance Act, 1991 for industrial accidents.</li>
+      <li>National Green Tribunal Act, 2010 and the Disaster Management Act, 2005.</li>
+      <li>A continuing case study in corporate accountability, civil defence and public health.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="development">
+  <h2>Economy and current development</h2><hr class="sec-rule">
+  <p>Bhopal's economy rests on government and services, BHEL and the Mandideep industrial belt, education and health institutions, and growing information-technology activity. Ujjain's rests on pilgrimage tourism, agriculture and agro-processing, and a smaller industrial base. Both have been included in the national Smart Cities programme. <span class="tag verify">Re-verify the rounds and projects</span></p>
+  <ul>
+    <li><strong>Transport:</strong> Rani Kamlapati station was rebuilt through a public-private partnership and renamed in 2021 (formerly Habibganj); Bhopal's metro corridor has been opened in stages. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Pilgrim infrastructure:</strong> the Mahakal Lok corridor and Simhastha preparations dominate Ujjain's development.</li>
+    <li><strong>Industry:</strong> the nearby Indore-Pithampur belt is an automotive and manufacturing cluster, and Ujjain is promoting an industrial park nearby. <span class="tag verify">Re-verify</span></li>
+  </ul>
+  <div class="edge gold">
+    <span class="edge-h">The trade-off</span>
+    <p>Rapid pilgrim and urban growth strains water, sanitation and heritage. Both lakes and the Kshipra face pollution and encroachment pressures, so conservation is a recurring policy theme.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Knowledge toolkit</p><h2>Analysis, practice and revision</h2></div>
+
+<section id="perspectives">
+  <h2>Perspectives, controversies and facts</h2><hr class="sec-rule">
+  <p><span class="tag interp">Interpretation</span> <strong>Heritage versus development.</strong> Large corridors such as Mahakal Lok improve access and economy, but critics worry about commercialisation and the character of old precincts. In May 2023 a storm toppled several statues in the corridor and prompted allegations about construction quality; the matter was investigated. <span class="tag disputed">Disputed</span> <span class="tag verify">Re-verify the findings</span></p>
+  <p><span class="tag interp">Interpretation</span> <strong>Renaming.</strong> Habibganj became Rani Kamlapati station (2021), and Hoshangabad was renamed Narmadapuram (2022). Supporters see recovery of local history; critics see divisive symbolism. A balanced answer reports both views.</p>
+  <p><span class="tag interp">Interpretation</span> <strong>Bhopal's relief.</strong> Survivors' groups argue compensation was inadequate, while the official position stresses that substantial relief has been paid. The adequacy of relief, health care and clean-up is still debated.</p>
+  <p><span class="tag interp">Interpretation</span> <strong>Heartland status.</strong> One view holds that interior corridors matter less in an age of long-range missiles and air transport; another holds that depots, factories and training centres in the interior are what sustain forward forces.</p>
+  <h3>Lesser-known facts</h3>
+  <ul>
+    <li><span class="tag fact">Established</span> The 1658 Battle of Dharmat, which helped Aurangzeb win the throne, was fought near Ujjain.</li>
+    <li><span class="tag fact">Established</span> Bhopal was ruled by four Begums in succession for over a century.</li>
+    <li><span class="tag fact">Established</span> Mhow, the home of the Army's Infantry School, is the birthplace of B.R. Ambedkar and is officially named Dr Ambedkar Nagar.</li>
+    <li><span class="tag fact">Established</span> Ujjain's Vedhshala observatory is one of the five built by Jai Singh II (Delhi, Jaipur, Ujjain, Varanasi and Mathura), of which the Mathura one has not survived.</li>
+  </ul>
+</section>
+
+<section id="scenarios-options">
+  <h2>Scenarios and strategic options</h2><hr class="sec-rule">
+  <p>Presented neutrally, without recommending a political position:</p>
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>Steady growth</h4>
+      <p>Bhopal consolidates as an administrative and education hub; Ujjain grows as a pilgrimage and heritage city, with periodic infrastructure bursts around each Simhastha.</p>
+    </div>
+    <div class="panel red-top">
+      <h4>Mass-event stress test</h4>
+      <p>The next Simhastha tests crowd control, water, medical response and security coordination, with Prayagraj's recent experience as a reference.</p>
+    </div>
+    <div class="panel gold-top">
+      <h4>Climate and water pressure</h4>
+      <p>Heat, erratic monsoons and pollution strain the lakes, the Kshipra and urban water systems.</p>
+    </div>
+    <div class="panel green-top">
+      <h4>Heartland logistics and science hub</h4>
+      <p>Central rail and road connectivity, defence manufacturing and the science institutions (ISRO, RRCAT) are developed into a strategic corridor.</p>
+    </div>
+  </div>
+  <div class="tablewrap">
+    <table>
+      <caption>Policy options and trade-offs</caption>
+      <thead><tr><th>Option</th><th>Benefit</th><th>Risk or cost</th></tr></thead>
+      <tbody>
+        <tr><td>Develop a heritage circuit (Ujjain, Omkareshwar, Sanchi, Bhimbetka, Bhojpur)</td><td>Tourism income, cultural awareness</td><td>Crowding, commercialisation, heritage damage</td></tr>
+        <tr><td>Standing mass-event and disaster capacity</td><td>Safer festivals, faster response</td><td>Recurrent cost between events</td></tr>
+        <tr><td>Expand defence manufacturing and logistics in the corridor</td><td>Jobs, depth, interior supply base</td><td>Requires investment and skilled workforce</td></tr>
+        <tr><td>Lake and river conservation</td><td>Water security, ecology</td><td>Land-use conflicts, enforcement difficulty</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="answer-framework">
+  <h2>Answer framework and worked example</h2><hr class="sec-rule">
+  <p>For any "Why does X matter?" question, move through definition, location, evidence, contest, analysis, test, position, concession and close. One compressed example follows.</p>
+  <div class="panel red-top">
+    <h4>Worked example: "Why does a landlocked central city like Bhopal matter to India's defence?"</h4>
+    <dl class="rungs">
+      <dt>Define</dt><dd>A heartland city with no border, but with rail, science and institutional weight.</dd>
+      <dt>Locate</dt><dd>Centre of the country, on the Delhi-Chennai rail trunk, near Itarsi, Mhow, Jabalpur and Gwalior.</dd>
+      <dt>Establish</dt><dd>ISRO's Master Control Facility controls satellites, and the region hosts training centres and ordnance factories.</dd>
+      <dt>Contest</dt><dd>Critics say modern long-range weapons reduce the value of interior geography.</dd>
+      <dt>Analyse</dt><dd>Forward forces still depend on depots, training and industry, and interior lines allow faster redeployment.</dd>
+      <dt>Test</dt><dd>Compare mobility, supply depth and exposure against a border hub.</dd>
+      <dt>Position</dt><dd>Strategically significant as a support and mobility hub, not a frontier.</dd>
+      <dt>Concede</dt><dd>Specific unit locations in Bhopal itself need re-verification. <span class="tag verify">Re-verify</span></dd>
+      <dt>Close</dt><dd>Depth, speed and sustainment make the heartland part of the front line's strength.</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="qbank">
+  <h2>Practice bank: questions and motions</h2><hr class="sec-rule">
+  <p class="lede">Fourteen questions. Answer each aloud, standing, in ninety seconds.</p>
+  <ol class="qbank">
+    <li>Why is Bhopal called the "City of Lakes", and what is the Bhoj Wetland?</li>
+    <li>Who founded the Bhopal state, and which Begums ruled it?</li>
+    <li>When and how did Bhopal merge with India, and when did it become the state capital?</li>
+    <li>Why is Ujjain one of the Sapta Puri and a Kumbh site?</li>
+    <li>What is special about the Mahakaleshwar Jyotirlinga?</li>
+    <li>Explain the astronomical importance of Ujjain, naming two scholars and the Vedhshala.</li>
+    <li>What happened at the Battle of Bhopal in 1737 and the Battle of Dharmat in 1658?</li>
+    <li>Name two UNESCO World Heritage Sites near Bhopal and what they represent.</li>
+    <li>What happened on the night of 2-3 December 1984, and what did it change in Indian law?</li>
+    <li>Why is Mhow important to the Indian Army?</li>
+    <li>What is ISRO's Master Control Facility at Bhopal?</li>
+    <li>Explain "interior lines" with reference to central India's rail network.</li>
+    <li>Compare a heartland garrison region with a frontier garrison.</li>
+    <li>What challenges does a Simhastha pose for administrators and security forces?</li>
+  </ol>
+  <h3>Debate motions</h3>
+  <ol class="dbank">
+    <li>This house believes heritage corridors should be prioritised over conservation of old precincts.</li>
+    <li>This house believes interior hubs matter as much as border garrisons to national defence.</li>
+    <li>This house believes mass religious events need permanent, standing disaster-management forces.</li>
+    <li>This house believes industrial-disaster liability in India remains inadequate four decades after Bhopal.</li>
+    <li>This house believes restoring historical names is a legitimate part of urban policy.</li>
+    <li>This house believes science and space institutions deserve more weight in national security planning.</li>
+    <li>This house believes central India should become a major defence-manufacturing corridor.</li>
+  </ol>
+</section>
+
+<section id="chronology">
+  <h2>Master chronology</h2><hr class="sec-rule">
+  <ul class="timeline">
+    <li><span class="yr">6th c. BCE</span><span>Avanti, with its capital at Ujjain, among the sixteen Mahajanapadas.</span></li>
+    <li><span class="yr">3rd c. BCE</span><span>Great Stupa at Sanchi under Ashoka.</span></li>
+    <li><span class="yr">2nd c. CE</span><span>Western Kshatrapa rule at Ujjain.</span></li>
+    <li><span class="yr">628</span><span>Brahmagupta writes the Brahmasphutasiddhanta at Ujjain.</span></li>
+    <li><span class="yr">11th c.</span><span>Paramara king Bhoj; temple at Bhojpur.</span></li>
+    <li><span class="yr">1658</span><span>Battle of Dharmat near Ujjain.</span></li>
+    <li><span class="yr">1720s</span><span>Dost Mohammad Khan builds the state of Bhopal.</span></li>
+    <li><span class="yr">1725</span><span>Vedhshala observatory built at Ujjain by Jai Singh II.</span></li>
+    <li><span class="yr">1737-38</span><span>Battle of Bhopal; Treaty of Doraha Sarai cedes Malwa to the Marathas.</span></li>
+    <li><span class="yr">1818</span><span>Treaty between Bhopal and the East India Company.</span></li>
+    <li><span class="yr">1819-1926</span><span>Four Begums rule Bhopal.</span></li>
+    <li><span class="yr">1949</span><span>Bhopal merges with India (1 June).</span></li>
+    <li><span class="yr">1956</span><span>Madhya Pradesh formed; Bhopal made capital.</span></li>
+    <li><span class="yr">1984</span><span>Bhopal gas tragedy (2-3 Dec).</span></li>
+    <li><span class="yr">2016</span><span>Ujjain Simhastha. <span class="tag verify">Re-verify the next date</span></span></li>
+    <li><span class="yr">2022</span><span>Mahakal Lok corridor inaugurated.</span></li>
+  </ul>
+</section>
+
+<section id="glossary">
+  <h2>Glossary</h2><hr class="sec-rule">
+  <dl class="term">
+    <dt>Avanti</dt><dd>Ancient Mahajanapada with its capital at Ujjain.</dd>
+    <dt>Bhasma Aarti</dt><dd>The pre-dawn ritual at Mahakaleshwar.</dd>
+    <dt>Bhoj Wetland</dt><dd>The Upper and Lower Lakes of Bhopal, a Ramsar site.</dd>
+    <dt>Interior lines</dt><dd>A position that lets forces move between fronts faster than an opponent going around.</dd>
+    <dt>Jyotirlinga</dt><dd>One of twelve Shaiva shrines regarded as manifestations of light.</dd>
+    <dt>Kshipra</dt><dd>The river on which Ujjain stands.</dd>
+    <dt>MIC</dt><dd>Methyl isocyanate: the gas released in the 1984 Bhopal disaster.</dd>
+    <dt>Malwa</dt><dd>The plateau region of western Madhya Pradesh, including Ujjain and Indore.</dd>
+    <dt>Master Control Facility</dt><dd>ISRO's Bhopal centre for controlling geostationary satellites.</dd>
+    <dt>Sapta Puri</dt><dd>The seven sacred cities: Ayodhya, Mathura, Haridwar, Kashi, Kanchi, Avantika and Dwarka.</dd>
+    <dt>Simhastha</dt><dd>The Kumbh held at Ujjain roughly every twelve years.</dd>
+    <dt>Vedhshala</dt><dd>The astronomical observatory at Ujjain built in 1725.</dd>
+  </dl>
+</section>
+
+<section id="revision">
+  <h2>Rapid revision sheet</h2><hr class="sec-rule">
+  <div class="note">
+    <h4>History and geography</h4>
+    <ul>
+      <li>Bhopal: lakes; Dost Mohammad Khan; four Begums; merged 1 Jun 1949; capital from 1956.</li>
+      <li>Ujjain: Avanti, Kshipra; Sapta Puri; Mahakaleshwar; Simhastha; Vedhshala (1725).</li>
+      <li>1658 Dharmat near Ujjain; 1737-38 Battle of Bhopal and Treaty of Doraha Sarai.</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h4>Religion and eminence</h4>
+    <ul>
+      <li>Mahakaleshwar, Harsiddhi, Kal Bhairav, Sandipani Ashram; Taj-ul-Masajid; Sanchi and Bhimbetka (UNESCO); Bhojpur.</li>
+      <li>Kalidasa, Varahamihira, Brahmagupta; Vikram University; IISER, AIIMS, MANIT, Bharat Bhavan.</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h4>Defence and strategy</h4>
+    <ul>
+      <li>Mhow, Pachmarhi, Sagar, Jabalpur, Gwalior, Indore (RRCAT), Bhopal (ISRO MCF).</li>
+      <li>Interior lines; Itarsi and Bhopal rail axis; heartland versus frontier.</li>
+      <li>Bhopal 1984: law reforms, relief disputes; Simhastha as a mass-event test.</li>
+      <li>Always tag contested figures and unit details for re-verification.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer>
+  <p>Compiled from open sources. Study aid only, not an official publication.</p>
+  <p>Source &amp; contributions: <a href="https://github.com/mohitkushwaha0601/matre">github.com/mohitkushwaha0601/matre</a></p>
+</footer>
+
+</body>
+</html>

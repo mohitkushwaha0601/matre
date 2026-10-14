@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Indian Army — A Deep Knowledge Handbook</title>
+<meta name="description" content="A 20-section study handbook on the Indian Army: origins, civil-military framework, structure, wars and operations, doctrine, equipment, modernisation, people and SSB-style practice material.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1B2314;
+  --ink-soft:#56604A;
+  --paper:#F2F1E8;
+  --surface:#FFFFFF;
+  --surface-2:#E6E6D6;
+  --rule:#CFCFB8;
+  --rule-strong:#A3A388;
+  --red:#A63A1F;
+  --blue:#2C5A74;
+  --gold:#A07416;
+  --green:#4B5E23;
+  --hero-bg:#1E2A14;
+  --hero-ink:#F2F1E8;
+  --hero-dim:#A9B38F;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ink:#E7EAD8;
+    --ink-soft:#AEB99A;
+    --paper:#0E140A;
+    --surface:#172010;
+    --surface-2:#212D17;
+    --rule:#33422A;
+    --rule-strong:#4F6340;
+    --red:#E58762;
+    --blue:#7DB7D6;
+    --gold:#D9B04E;
+    --green:#9CBF5A;
+    --hero-bg:#090E06;
+    --hero-ink:#E7EAD8;
+    --hero-dim:#8E9A78;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E7EAD8;
+  --ink-soft:#AEB99A;
+  --paper:#0E140A;
+  --surface:#172010;
+  --surface-2:#212D17;
+  --rule:#33422A;
+  --rule-strong:#4F6340;
+  --red:#E58762;
+  --blue:#7DB7D6;
+  --gold:#D9B04E;
+  --green:#9CBF5A;
+  --hero-bg:#090E06;
+  --hero-ink:#E7EAD8;
+  --hero-dim:#8E9A78;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1.5rem);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ---------- hero ---------- */
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
+.flagstrip{display:flex;height:12px}
+.flagstrip span{flex:1}
+.f1{background:#FF9933}
+.f2{background:#FFFFFF}
+.f3{background:#138808}
+.f4{background:#4B5320}
+.f5{background:#6B7B3A}
+.f6{background:#8A7F4A}
+.f7{background:#C2B280}
+.f8{background:#2B3A1C}
+.hero-inner{max-width:1180px;margin:0 auto;padding:3.2rem 1.5rem 0}
+.kicker{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--hero-dim);margin:0 0 .8rem}
+.motto{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:clamp(1.7rem,5.2vw,2.9rem);line-height:1.2;margin:0;letter-spacing:.005em;max-width:26ch}
+.motto-en{margin:.55rem 0 0;color:var(--hero-dim);font-size:clamp(.95rem,2.4vw,1.1rem);font-style:italic;max-width:62ch}
+.hero h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.5rem,4.3vw,2.35rem);line-height:1.2;margin:2.6rem 0 .5rem;border-top:1px solid rgba(255,255,255,.22);padding-top:1.6rem;max-width:30ch}
+.hero-sub{margin:0;color:var(--hero-dim);max-width:68ch}
+.stamp{margin-top:1.6rem;font-size:.86rem;color:var(--hero-dim);display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+.stamp b{color:var(--hero-ink);font-weight:600}
+
+/* ---------- layout ---------- */
+.shell{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem;display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media (min-width:1000px){
+  .shell{grid-template-columns:255px minmax(0,1fr);gap:3.5rem;padding-top:2.8rem}
+}
+nav.toc{font-size:.9rem}
+@media (min-width:1000px){
+  .toc-mobile{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2rem);align-self:start;max-height:calc(100vh - 5rem);overflow-y:auto}
+}
+nav.toc h2{font-family:"Zilla Slab",Georgia,serif;font-size:.92rem;font-weight:600;margin:0 0 .7rem;padding-bottom:.45rem;border-bottom:2px solid var(--rule-strong)}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc}
+nav.toc li{border-bottom:1px solid var(--rule)}
+nav.toc li:not(.part){counter-increment:toc}
+nav.toc a{display:flex;gap:.6rem;padding:.4rem 0;color:var(--ink-soft);text-decoration:none}
+nav.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--rule-strong);font-variant-numeric:tabular-nums;flex:none}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--red)}
+nav.toc .part{border:0;margin:1.1rem 0 .3rem;font-family:"Zilla Slab",Georgia,serif;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--rule-strong)}
+nav.toc .part::before{content:none}
+.toc-mobile{display:block}
+@media (min-width:1000px){.toc-mobile summary{display:none}}
+.toc-mobile summary{cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:600;padding:.7rem .9rem;background:var(--surface);border:1px solid var(--rule);margin-bottom:1rem}
+@media (max-width:999px){
+  .toc-mobile[open] nav.toc{padding:0 .9rem 1rem}
+  .toc-mobile:not([open]) nav.toc{display:none}
+}
+
+/* ---------- sections ---------- */
+main{min-width:0}
+section{margin:0 0 3.6rem;scroll-margin-top:1.5rem}
+section > h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.45rem,3.6vw,1.95rem);line-height:1.2;margin:0 0 .3rem}
+.part-head{margin:4rem 0 2.2rem;padding:1.1rem 0 .9rem;border-top:4px double var(--rule-strong);border-bottom:1px solid var(--rule)}
+.part-head p{margin:0;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.part-head h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.3rem,3.2vw,1.7rem);margin:.3rem 0 0;color:var(--ink)}
+.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.16rem;margin:2rem 0 .5rem;line-height:1.3}
+h4{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1rem;margin:1.4rem 0 .35rem;color:var(--ink)}
+p{margin:0 0 .95rem;max-width:74ch}
+ul,ol{margin:0 0 1rem;padding-left:1.25rem;max-width:74ch}
+li{margin-bottom:.35rem}
+li::marker{color:var(--rule-strong)}
+strong{font-weight:600}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+/* ---------- components ---------- */
+.lede{font-size:1.06rem;color:var(--ink-soft);max-width:70ch}
+
+.tablewrap{overflow-x:auto;margin:0 0 1.3rem;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.92rem}
+caption{text-align:left;padding:.7rem .85rem .1rem;font-weight:600;color:var(--ink-soft);font-size:.9rem}
+th,td{text-align:left;padding:.55rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{background:var(--surface-2);font-weight:600;border-bottom:2px solid var(--rule-strong);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.num,th.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+.edge{background:var(--surface);border-left:4px solid var(--red);padding:.9rem 1.1rem;margin:1.4rem 0;max-width:74ch}
+.edge p:last-child,.edge ul:last-child,.edge ol:last-child{margin-bottom:0}
+.edge .edge-h{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);display:block;margin-bottom:.25rem;font-size:.95rem}
+.edge.gold{border-left-color:var(--gold)}
+.edge.gold .edge-h{color:var(--gold)}
+.edge.blue{border-left-color:var(--blue)}
+.edge.blue .edge-h{color:var(--blue)}
+.edge.green{border-left-color:var(--green)}
+.edge.green .edge-h{color:var(--green)}
+
+.note{background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;border:1px solid var(--rule);font-size:.95rem}
+.note p:last-child,.note ul:last-child,.note ol:last-child{margin-bottom:0}
+.note h4{margin-top:0}
+
+.panel{background:var(--surface);border:1px solid var(--rule);padding:1rem 1.1rem}
+.panel h4{margin-top:0}
+.panel ul,.panel ol{margin-bottom:0}
+.panel.blue-top{border-top:3px solid var(--blue)}
+.panel.red-top{border-top:3px solid var(--red)}
+.panel.gold-top{border-top:3px solid var(--gold)}
+.panel.green-top{border-top:3px solid var(--green)}
+
+.rungs{max-width:74ch;margin:.3rem 0 0;display:grid;grid-template-columns:9.5rem 1fr;gap:0 1rem}
+.rungs dt{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;color:var(--red);padding-top:.2rem}
+.rungs dd{margin:0 0 .5rem;font-size:.93rem}
+@media (max-width:560px){
+  .rungs{grid-template-columns:1fr;gap:0}
+  .rungs dt{padding-top:.4rem}
+}
+
+.timeline{list-style:none;padding:0;margin:1rem 0 1.4rem;max-width:74ch}
+.timeline li{display:grid;grid-template-columns:8.2rem 1fr;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--rule);margin:0}
+.timeline li:last-child{border-bottom:0}
+.timeline .yr{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);font-variant-numeric:tabular-nums}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:.1rem}}
+
+.qbank{counter-reset:q;list-style:none;padding:0;max-width:74ch}
+.qbank li{counter-increment:q;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.qbank li::before{content:counter(q,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.qbank li:last-child{border-bottom:0}
+
+.dbank{counter-reset:d;list-style:none;padding:0;max-width:74ch}
+.dbank li{counter-increment:d;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.dbank li::before{content:counter(d,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.dbank li:last-child{border-bottom:0}
+
+.grid{display:grid;gap:1rem}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
+
+.card{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--red);padding:1rem 1.1rem}
+.card h4{margin:0 0 .45rem;font-size:1rem}
+.card .name{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.2rem}
+.card .role{font-size:.9rem;color:var(--ink-soft)}
+.card .since{font-size:.78rem;color:var(--green);font-weight:600;margin-top:.45rem}
+
+.term{max-width:74ch;margin:0 0 1.2rem}
+.term dt{font-weight:600;margin-top:.8rem}
+.term dd{margin:.15rem 0 0;color:var(--ink-soft)}
+
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:.1rem .45rem;border:1px solid var(--rule-strong);color:var(--ink-soft);margin-right:.35rem;vertical-align:middle}
+.tag.fact{border-color:var(--green);color:var(--green)}
+.tag.interp{border-color:var(--gold);color:var(--gold)}
+.tag.disputed{border-color:var(--red);color:var(--red)}
+.tag.verify{border-color:var(--blue);color:var(--blue)}
+.spaced{margin-top:.6rem}
+
+footer{border-top:3px double var(--rule-strong);margin-top:2rem;padding-top:1.4rem;color:var(--ink-soft);font-size:.9rem;max-width:74ch}
+footer a{color:var(--blue)}
+
+/* ---------- home button: fixed, links back to the collection homepage ---------- */
+.home-btn{position:fixed;top:16px;left:16px;z-index:60;display:inline-flex;align-items:center;gap:.4rem;background:#14202B;color:#F1F2EC;border:1px solid rgba(241,242,236,.25);padding:.45rem .85rem;border-radius:999px;font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.82rem;font-weight:600;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.3);transition:background .15s ease,transform .15s ease}
+.home-btn:hover,.home-btn:focus-visible{background:#BF2F26;transform:translateY(-1px)}
+.home-btn svg{width:14px;height:14px;flex:none}
+@media print{.home-btn{display:none}}
+
+@media print{
+  .hero{background:none;color:#000;padding-bottom:1rem}
+  .hero-sub,.stamp,.motto-en{color:#333}
+  .flagstrip,.toc-mobile{display:none}
+  .shell{display:block;padding:0}
+  section{page-break-inside:auto;margin-bottom:1.8rem}
+  h2,h3{page-break-after:avoid}
+  .panel,.edge,.note,.tablewrap,figure{page-break-inside:avoid}
+  .part-head{page-break-before:always}
+  body{font-size:10.5pt;background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+
+<a class="home-btn" href="../index.html" aria-label="Back to Handbooks homepage" title="Back to Handbooks homepage">
+  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
+  <span>Home</span>
+</a>
+
+<header class="hero">
+  <div class="flagstrip" aria-hidden="true">
+    <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f5"></span><span class="f6"></span><span class="f7"></span><span class="f8"></span>
+  </div>
+  <div class="hero-inner">
+    <p class="motto">Service Before Self</p>
+    <p class="motto-en">The Indian Army's motto. This handbook covers the Army as an institution: its history, structure, wars, doctrine, equipment and people.</p>
+    <h1>The Indian Army</h1>
+    <p class="hero-sub">A 20-section study handbook for SSB, CDS and general-awareness preparation. It runs from the colonial inheritance and the 1947 division to Op Sindoor, with doctrine, equipment, modernisation, competing perspectives and practice material. Figures that change over time are tagged for re-verification.</p>
+    <p class="stamp">
+      <span>Army Day <b>15 January</b></span>
+      <span>Operational commands <b>6 + ARTRAC</b></span>
+      <span>Active strength <b>~1.1-1.2 million</b></span>
+      <span>Sections <b>20</b></span>
+      <span>Reading time <b>2-3 hrs</b></span>
+    </p>
+  </div>
+</header>
+
+<div class="shell">
+
+<details class="toc-mobile" open>
+  <summary>Contents</summary>
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li class="part">How to use this</li>
+      <li><a href="#snapshot">Snapshot and how to read</a></li>
+
+      <li class="part">Part I · Foundations and structure</li>
+      <li><a href="#origins">Origins and the 1947 inheritance</a></li>
+      <li><a href="#framework">Civil-military framework and jointness</a></li>
+      <li><a href="#organisation">Organisation: commands to battalions</a></li>
+      <li><a href="#arms">Arms, services, regiments and special forces</a></li>
+
+      <li class="part">Part II · Operations and capability</li>
+      <li><a href="#wars">Wars and major operations</a></li>
+      <li><a href="#counter-insurgency">Counter-insurgency and internal security</a></li>
+      <li><a href="#borders">Borders, terrain and high altitude</a></li>
+      <li><a href="#doctrine">Doctrine and the two-front problem</a></li>
+      <li><a href="#weapons">Weapons and equipment</a></li>
+      <li><a href="#modernisation">Modernisation and Atmanirbharta</a></li>
+
+      <li class="part">Part III · People and roles</li>
+      <li><a href="#people">People, training and sustainment</a></li>
+      <li><a href="#beyond-war">Beyond war: peacekeeping, exercises, relief</a></li>
+
+      <li class="part">Knowledge toolkit</li>
+      <li><a href="#perspectives">Perspectives, controversies and facts</a></li>
+      <li><a href="#scenarios-options">Scenarios and strategic options</a></li>
+      <li><a href="#answer-framework">Answer framework and worked example</a></li>
+      <li><a href="#qbank">Practice bank: questions and motions</a></li>
+      <li><a href="#chronology">Master chronology</a></li>
+      <li><a href="#glossary">Glossary</a></li>
+      <li><a href="#revision">Rapid revision sheet</a></li>
+    </ol>
+  </nav>
+</details>
+
+<main>
+
+<section id="snapshot">
+  <h2>Snapshot and how to read</h2><hr class="sec-rule">
+  <p class="lede">The Indian Army is the land component of India's armed forces and by far its largest service. It guards two live and disputed borders, runs the country's longest-running counter-insurgency commitments, and is a constant presence in disaster relief. It is also being re-shaped by drones, long-range fires and a new personnel model.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>The Army at a glance</caption>
+      <thead><tr><th>Item</th><th>Detail</th></tr></thead>
+      <tbody>
+        <tr><td>Supreme Commander</td><td>The President of India (Article 53); command is exercised through the Government and the Ministry of Defence</td></tr>
+        <tr><td>Chief of the Army Staff</td><td>Gen Upendra Dwivedi since 30 June 2024 <span class="tag verify">Re-verify</span></td></tr>
+        <tr><td>Headquarters</td><td>Army HQ, New Delhi (South Block / Sena Bhawan)</td></tr>
+        <tr><td>Governing law</td><td>Army Act, 1950 and Army Rules, 1954</td></tr>
+        <tr><td>Active strength</td><td>Roughly 1.1-1.2 million <span class="tag verify">Re-verify</span></td></tr>
+        <tr><td>Commemorative days</td><td>Army Day 15 Jan; Infantry Day 27 Oct; Kargil Vijay Diwas 26 Jul; Vijay Diwas 16 Dec</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge blue">
+    <span class="edge-h">How to read this handbook</span>
+    <p>Each section ends in something you can say aloud in ninety seconds. Facts are stated plainly, contested figures carry tags (<span class="tag fact">Established</span> <span class="tag interp">Interpretation</span> <span class="tag disputed">Disputed</span> <span class="tag verify">Re-verify</span>), and the closing toolkit is built for SSB-style discussion, not recall alone.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part I · Foundations and structure</p><h2>Where the Army came from and how it is built</h2></div>
+
+<section id="origins">
+  <h2>Origins and the 1947 inheritance</h2><hr class="sec-rule">
+  <p>The Indian Army descends from the presidency armies of the East India Company (Bengal, Madras, Bombay). After 1857 these were brought under the Crown, and in 1895 they were folded into a single Indian Army under four commands. Two world wars made it a large expeditionary force: over two million Indians served in the Second World War, the largest volunteer army in history. <span class="tag verify">Re-verify the figure</span></p>
+  <p>Partition in 1947 divided the army, its units and its assets between India and Pakistan roughly in a two-to-one ratio. <span class="tag interp">Interpretation</span> Mixed-class regiments were split along religious lines, and the British officer cadre left in stages. The 1947 Tripartite Agreement among India, Nepal and the UK divided the Gorkha regiments: six went to India and four to the British Army. <span class="tag fact">Established</span></p>
+  <ul class="timeline">
+    <li><span class="yr">1895</span><span>Presidency armies unified into the Indian Army with four commands.</span></li>
+    <li><span class="yr">15 Jan 1949</span><span>Lt Gen K.M. Cariappa takes over from Gen Sir Francis Butcher as the first Indian Commander-in-Chief. Army Day commemorates this.</span></li>
+    <li><span class="yr">1955</span><span>The title Commander-in-Chief is replaced by Chief of the Army Staff.</span></li>
+    <li><span class="yr">1973 / 1986</span><span>Manekshaw and Cariappa receive the ceremonial rank of Field Marshal.</span></li>
+  </ul>
+  <div class="edge">
+    <span class="edge-h">The inheritance question</span>
+    <p>Much of the Army's regimental system, mess culture and training pattern is colonial in origin. Debates about recruitment (fixed-class versus all-India mix) and the Agnipath scheme are partly debates about how much of that inheritance to keep.</p>
+  </div>
+</section>
+
+<section id="framework">
+  <h2>Civil-military framework and jointness</h2><hr class="sec-rule">
+  <p>India follows civilian supremacy. The President is Supreme Commander, but authority runs through the Cabinet Committee on Security and the Defence Minister. The Ministry of Defence has four departments: Defence, Defence Production, Defence Research and Development, and Ex-Servicemen Welfare. Parliament oversees the budget and the Army Act.</p>
+  <p>Until 2019 the three Service Chiefs formed the Chiefs of Staff Committee with a rotating chairman. In January 2020 the post of Chief of Defence Staff (CDS) was created, with Gen Bipin Rawat as its first holder. The CDS is also Secretary of the new Department of Military Affairs (DMA) and permanent chairman of the Chiefs of Staff Committee. Gen Anil Chauhan was appointed in September 2022. <span class="tag verify">Re-verify the current CDS</span></p>
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>Existing tri-service commands</h4>
+      <p>The Andaman and Nicobar Command (2001) and the Strategic Forces Command (2003) are the two joint commands. The Integrated Defence Staff supports the CDS.</p>
+    </div>
+    <div class="panel gold-top">
+      <h4>Theatre commands (proposed)</h4>
+      <p>Each theatre would unite Army, Navy and Air Force assets under a single commander. Public reporting speaks of three or four, for example a northern, a western and a maritime theatre. <span class="tag verify">Re-verify</span> The Air Force has long worried about dispersing a small fleet across theatres.</p>
+    </div>
+  </div>
+</section>
+
+<section id="organisation">
+  <h2>Organisation: commands to battalions</h2><hr class="sec-rule">
+  <p>The Army is organised hierarchically: Army HQ, then Commands, Corps, Divisions, Brigades, Battalions (or regiments in armour and artillery), Companies and Platoons. A division has roughly 12,000-15,000 troops, a brigade 3,000-5,000 and an infantry battalion about 800-1,000. <span class="tag interp">Interpretation: approximate</span></p>
+  <div class="tablewrap">
+    <table>
+      <caption>Army commands (headquarters and principal focus)</caption>
+      <thead><tr><th>Command</th><th>HQ</th><th>Principal focus</th></tr></thead>
+      <tbody>
+        <tr><td>Northern</td><td>Udhampur</td><td>J&amp;K, Ladakh; the LoC, Siachen and the western LAC (14, 15 and 16 Corps)</td></tr>
+        <tr><td>Western</td><td>Chandimandir</td><td>Punjab, Haryana, Himachal; the plains border with Pakistan</td></tr>
+        <tr><td>South Western</td><td>Jaipur</td><td>Rajasthan and Gujarat; desert sector (raised 2005)</td></tr>
+        <tr><td>Southern</td><td>Pune</td><td>Peninsular India, with a major training and logistic role</td></tr>
+        <tr><td>Central</td><td>Lucknow</td><td>Heartland (UP, Uttarakhand, Bihar); central Himalayan border sector</td></tr>
+        <tr><td>Eastern</td><td>Kolkata (Fort William)</td><td>The North-East and eastern LAC (3, 4 and 33 Corps; 17 Mountain Strike Corps)</td></tr>
+        <tr><td>ARTRAC</td><td>Shimla</td><td>Training command: doctrine, training institutions and force development</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><strong>Reserve and paramilitary links.</strong> The Territorial Army (1949) is a part-time volunteer reserve. The Assam Rifles is administered by the Ministry of Home Affairs but operationally controlled by the Army, an overlap that periodically draws debate. Rashtriya Rifles (raised 1990) is the Army's dedicated counter-insurgency force in J&amp;K.</p>
+  <div class="edge gold">
+    <span class="edge-h">Reforms under way</span>
+    <p>The Army has been moving from large, division-based formations to leaner, all-arms battle groups. It announced Rudra all-arms brigades, Bhairav light commando battalions, Shaktibaan and Divyastra artillery and drone units, and declared 2025 the "Year of Reforms". <span class="tag verify">Re-verify the names and numbers</span></p>
+  </div>
+</section>
+
+<section id="arms">
+  <h2>Arms, services, regiments and special forces</h2><hr class="sec-rule">
+  <p>The Army separates <em>arms</em> (combat units) from <em>services</em> (support). Arms are Infantry, Mechanised Infantry, Armoured Corps, Artillery, Army Air Defence, Engineers, Signals and Army Aviation Corps. Services include the Army Service Corps, Army Ordnance Corps, Electronics and Mechanical Engineers, Army Medical Corps, the Remount and Veterinary Corps and the Judge Advocate General's branch.</p>
+  <p>The infantry is organised by regiment, each with its own regimental centre, traditions and recruiting areas: the Punjab, Rajputana Rifles, Maratha Light Infantry, Sikh, Dogra, Jat, Garhwal Rifles, Kumaon, Mahar, Grenadiers, the Gorkha Rifles, the Brigade of the Guards and the Parachute Regiment, among others. Armour carries older cavalry names such as the 61st Cavalry, one of the world's last horse-mounted units used chiefly for ceremony.</p>
+  <h3>Special forces and the Agnipath question</h3>
+  <p>The Para (SF) battalions are the Army's special forces, drawing on the Parachute Regiment. Infantry battalions also have "Ghatak" platoons. The Navy's MARCOS and the Air Force's Garud complete the tri-service special-forces set. The fixed-class composition of many units is at the centre of the Agnipath debate (see the people section).</p>
+  <div class="grid three">
+    <div class="card"><div class="name">Arms</div><div class="role">Combat units: Infantry, Armour, Artillery, Air Defence, Engineers, Signals, Aviation</div></div>
+    <div class="card"><div class="name">Services</div><div class="role">Support units: ASC, AOC, EME, Medical, Remount and Veterinary, JAG</div></div>
+    <div class="card"><div class="name">Special forces</div><div class="role">Para (SF), Ghatak platoons; MARCOS and Garud are tri-service counterparts</div></div>
+  </div>
+</section>
+
+<div class="part-head"><p>Part II · Operations and capability</p><h2>What the Army has fought, where, and with what</h2></div>
+
+<section id="wars">
+  <h2>Wars and major operations</h2><hr class="sec-rule">
+  <p>Each major conflict left a lasting institutional lesson. The table is a compressed map; the analytical sentence after it is what examiners usually want.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Major conflicts and operations since 1947</caption>
+      <thead><tr><th>Conflict</th><th>Key points</th><th>Lasting lesson</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1947-48</td><td>Pakistan-backed tribal raid and army intervention in Kashmir; first Indian troops airlifted to Srinagar on 27 Oct 1947 after the Instrument of Accession; Zojila retaken with tanks; ceasefire 1 Jan 1949</td><td>Jointness with the Air Force; terrain and logistics decide outcomes</td></tr>
+        <tr><td class="num">1962</td><td>China attacks in NEFA and Ladakh (20 Oct-21 Nov); Namka Chu collapse, Rezang La last stand; the Henderson Brooks-Bhagat report remains classified</td><td>Policy-force mismatch; need for mountain forces and roads</td></tr>
+        <tr><td class="num">1965</td><td>Op Gibraltar infiltration, Pakistan's Grand Slam, India's attack across the international border; armour battle at Asal Uttar; Tashkent Declaration</td><td>Armour and artillery matter; both sides claim victory <span class="tag disputed">Disputed</span></td></tr>
+        <tr><td class="num">1971</td><td>Liberation of Bangladesh; 3-16 Dec; surrender at Dhaka of about 93,000 personnel under Lt Gen A.A.K. Niazi to Lt Gen J.S. Aurora</td><td>Clear political aim, preparation and speed; decisive conventional victory <span class="tag fact">Established</span></td></tr>
+        <tr><td class="num">1984-88</td><td>Op Meghdoot (Siachen), Op Pawan (Sri Lanka), Op Cactus (Maldives)</td><td>Limits of peacekeeping and out-of-area operations</td></tr>
+        <tr><td class="num">1999</td><td>Kargil / Op Vijay, May-July; Tololing, Tiger Hill, Batalik; four Param Vir Chakras</td><td>Intelligence and surveillance gaps; fighting a limited war under a nuclear shadow</td></tr>
+        <tr><td class="num">2016-19</td><td>Surgical strikes (29 Sep 2016) after Uri; Balakot (IAF, 2019)</td><td>Acceptance of cross-border action as a policy option</td></tr>
+        <tr><td class="num">2020</td><td>Galwan clash on 15 June; 20 Indian soldiers killed; Chinese casualties unclear <span class="tag disputed">Disputed</span></td><td>Long-term deployment on the LAC; hard lessons in surveillance and buffer zones</td></tr>
+        <tr><td class="num">2025</td><td>Op Sindoor, 7-10 May, after the Pahalgam attack (22 Apr). Tri-service; the Army's contribution included LoC fire, air defence and counter-drone grid <span class="tag verify">Re-verify details</span></td><td>Drones, missiles and air defence central to the modern battlefield</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Pattern to remember</span>
+    <p>From 1947 to 1971 the dominant theme was conventional war and civil-military mismatch; from 1984 to 1999 it was high altitude and limited war; since 2016 it has been calibrated retaliation under a nuclear ceiling.</p>
+  </div>
+</section>
+
+<section id="counter-insurgency">
+  <h2>Counter-insurgency and internal security</h2><hr class="sec-rule">
+  <p>The Army has been in counter-insurgency roles almost continuously. In the North-East it began in Nagaland in the 1950s and extended to Mizoram, Manipur and Assam. In Jammu and Kashmir it intensified after 1989; the Rashtriya Rifles (1990) became its principal formation, and Operation All Out (2017) focused on militant leadership. The Army is not deployed against Left-Wing Extremism, which remains a police and central-armed-police task.</p>
+  <h3>The legal framework: AFSPA</h3>
+  <p>The Armed Forces (Special Powers) Act of 1958 gives the armed forces special powers in areas declared "disturbed". It has been reduced or withdrawn in parts of Tripura (2015), Meghalaya (2018) and, from 2022, many districts of Assam, Manipur and Nagaland. <span class="tag verify">Re-verify the current map</span></p>
+  <div class="grid two">
+    <div class="panel red-top">
+      <h4>Case for AFSPA</h4>
+      <p>Soldiers need legal protection when operating against armed groups, and prosecutions without sanction would damage morale and operations.</p>
+    </div>
+    <div class="panel blue-top">
+      <h4>Case against</h4>
+      <p>Allegations of abuse and weak accountability fuel alienation. The 2005 Jeevan Reddy committee recommended repeal, and the Supreme Court in 2016 held that alleged excesses can be examined. <span class="tag interp">Interpretation</span></p>
+    </div>
+  </div>
+  <p><strong>Hearts and minds.</strong> Operation Sadbhavana (from 1998) runs schools, health camps and infrastructure projects in remote areas. Critics note that it supplements, but cannot replace, civil governance.</p>
+</section>
+
+<section id="borders">
+  <h2>Borders, terrain and high altitude</h2><hr class="sec-rule">
+  <p>The Army holds two different kinds of frontier. The Line of Control (about 740 km) with Pakistan is a ceasefire line fixed in 1972 under the Simla Agreement, where a February 2021 understanding revived the 2003 ceasefire. The Line of Actual Control with China is longer, about 3,488 km by the Indian count, and China claims a shorter figure, so the length itself is <span class="tag disputed">Disputed</span>.</p>
+  <ul>
+    <li><strong>Siachen.</strong> The world's highest battlefield, held since Op Meghdoot (13 April 1984). Cold, avalanches and altitude kill more soldiers than fire. Posts sit above 5,000 m. The Actual Ground Position Line (AGPL) is not formally delimited.</li>
+    <li><strong>Eastern Ladakh.</strong> The 2020 standoff ended in staged disengagements; an October 2024 patrolling arrangement covered Depsang and Demchok. <span class="tag verify">Re-verify the current status</span></li>
+    <li><strong>Arunachal and Sikkim.</strong> Dense forest and steep valleys favour defence in depth; Tawang, Doklam (2017) and Yangtse (2022) are recurring flashpoints.</li>
+    <li><strong>Desert and plains.</strong> Mechanised warfare in Rajasthan and Punjab, shaped by canals and the intensive agricultural landscape.</li>
+  </ul>
+  <div class="edge">
+    <span class="edge-h">Infrastructure is strategy</span>
+    <p>The Border Roads Organisation (1960, now under the Defence Ministry) builds roads and tunnels such as Atal Tunnel (2020), Sela Tunnel (2024) and the Darbuk-Shyok-DBO road. After 1962 the lesson was clear: logistics and forward roads determine how fast forces can be reinforced.</p>
+  </div>
+</section>
+
+<section id="doctrine">
+  <h2>Doctrine and the two-front problem</h2><hr class="sec-rule">
+  <p>India's nuclear doctrine (2003) sets no-first-use and credible minimum deterrence. Conventional doctrine therefore asks how the Army can act decisively below the nuclear threshold. After Operation Parakram (2001-02), when mobilisation took weeks, planners developed what is often called <em>Cold Start</em>, a limited and rapid offensive by smaller, ready formations. Officially its name has been neither fully embraced nor fully denied. <span class="tag disputed">Disputed</span></p>
+  <p>The Army Land Warfare Doctrine (2018) and the Joint Doctrine of the Indian Armed Forces (2017) stress jointness, speed and operations across domains. Pakistan's short-range "tactical" nuclear weapons and its stated first-use policy complicate any limited war. <span class="tag fact">Established</span></p>
+  <h3>The two-front problem</h3>
+  <p>A collusive threat from China and Pakistan would force India to deploy against both. The late Gen Bipin Rawat used the phrase "two-and-a-half fronts", adding internal security as the half. Responses are layered: mountain strike corps for China, integrated battle groups for Pakistan, and strategic reserves.</p>
+  <div class="note">
+    <h4>Concepts examiners like</h4>
+    <ul>
+      <li><strong>Integrated Battle Groups (IBGs):</strong> brigade-sized all-arms packages for rapid action.</li>
+      <li><strong>Grey-zone and hybrid war:</strong> coercion short of declared war, including terror proxies, cyber and information operations.</li>
+      <li><strong>"New normal" after Sindoor:</strong> the stated position that a major terror attack may invite a military response and that nuclear threats will not constrain it. <span class="tag interp">Interpretation</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="weapons">
+  <h2>Weapons and equipment</h2><hr class="sec-rule">
+  <p>The Army's inventory mixes Soviet and Russian-origin systems, Western imports and a growing indigenous layer. The table lists representative systems; precise counts change with each induction. <span class="tag verify">Re-verify numbers</span></p>
+  <div class="tablewrap">
+    <table>
+      <caption>Representative equipment</caption>
+      <thead><tr><th>Category</th><th>Systems</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Rifles and small arms</td><td>AK-203 (Korwa, Amethi), SIG 716, INSAS being phased out</td><td>Local production under an Indo-Russian joint venture</td></tr>
+        <tr><td>Armour</td><td>T-90 Bhishma, T-72 Ajeya, Arjun Mk 1A; Zorawar light tank (in development); FRCV future programme</td><td>Light tank aimed at high-altitude use</td></tr>
+        <tr><td>Artillery</td><td>K9 Vajra, M777 ultra-light howitzer, Dhanush, ATAGS, Pinaka multi-barrel rocket launchers, Smerch</td><td>ATAGS and Pinaka are domestic; the Army is standardising on 155 mm</td></tr>
+        <tr><td>Missiles</td><td>BrahMos, Pralay (quasi-ballistic), Nag and imported Javelin and Spike ATGMs</td><td>Long-range precision fires are a priority</td></tr>
+        <tr><td>Air defence</td><td>Akash, Igla-S, legacy L-70 and ZU-23 guns; counter-drone systems</td><td>Drone defence is now a core task</td></tr>
+        <tr><td>Army Aviation</td><td>ALH Dhruv, Rudra, LCH Prachand, Apache AH-64E</td><td>Army Aviation Corps (1986) flies attack and utility helicopters</td></tr>
+        <tr><td>Unmanned</td><td>Heron, loitering munitions, small tactical drones</td><td>Rapidly expanding, many from domestic start-ups</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="modernisation">
+  <h2>Modernisation and Atmanirbharta</h2><hr class="sec-rule">
+  <p>India has been among the world's largest arms importers, with Russia the largest supplier for decades. <span class="tag verify">Re-verify the SIPRI shares</span> Policy since 2020 aims to reverse this through Atmanirbhar Bharat: positive indigenisation lists, a "Buy (Indian-IDDM)" category in the Defence Acquisition Procedure, a defence-export drive and private-sector entry. The iDEX scheme (2018) funds start-ups. Emergency procurement powers were used after Galwan and Sindoor to field drones and ammunition quickly.</p>
+  <ul>
+    <li><strong>F-INSAS:</strong> the Future Infantry Soldier As A System programme, giving each soldier better weapons, protection, communications and night vision.</li>
+    <li><strong>Technology bodies:</strong> the Army Design Bureau, the Army Cyber Group and the Defence Space Agency (2019).</li>
+    <li><strong>Budget shape:</strong> the defence budget for 2025-26 was about ₹6.8 lakh crore. <span class="tag verify">Re-verify</span> Salaries and pensions consume a large share of the Army's own budget, leaving less for capital purchases. <span class="tag interp">Interpretation</span></li>
+  </ul>
+  <div class="edge gold">
+    <span class="edge-h">The structural problem</span>
+    <p>Indigenisation raises supply security, but delays in design, certification and testing mean imports and emergency buys persist. A good answer weighs capability today against self-reliance tomorrow.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part III · People and roles</p><h2>Soldiers, sustainment and the work beyond war</h2></div>
+
+<section id="people">
+  <h2>People, training and sustainment</h2><hr class="sec-rule">
+  <p>The Army is an all-volunteer force with three tiers: commissioned officers, Junior Commissioned Officers (Naib Subedar, Subedar, Subedar Major) and other ranks. Officers are trained at the National Defence Academy (Khadakwasla), the Indian Military Academy (Dehradun, 1932) and the Officers Training Academies (Chennai and Gaya); the National Defence College and the Defence Services Staff College (Wellington) carry on higher education. The Army suffers a persistent officer shortfall. <span class="tag verify">Re-verify the vacancy figure</span></p>
+  <h3>Agnipath (2022)</h3>
+  <p>Under Agnipath, recruits (Agniveers) serve four years, with about a quarter retained in the regular cadre after a selection process and the rest leaving with a Seva Nidhi lump sum. The government's stated aims are a younger force and lower long-term pension liability. Critics point to short tenures, training time, cohesion in regiments and the prospects of those who exit. <span class="tag interp">Interpretation</span></p>
+  <ul>
+    <li><strong>Women in service:</strong> permanent commission across branches after the 2020 Supreme Court ruling; women are in the Military Police and are now admitted to the NDA. Colonel Sofiya Qureshi's briefings during Sindoor were a visible moment.</li>
+    <li><strong>Gallantry awards:</strong> Param Vir Chakra (21 recipients since 1947), Ashoka Chakra, Maha Vir Chakra, Kirti Chakra, Vir Chakra and Shaurya Chakra.</li>
+    <li><strong>Welfare:</strong> One Rank One Pension (2014-15), ECHS for medical care, and the Kendriya Sainik Board for resettlement.</li>
+  </ul>
+  <div class="edge green">
+    <span class="edge-h">Sustainment is a force multiplier</span>
+    <p>The Army Service Corps, Ordnance, EME and Medical Corps keep troops supplied at altitude, using mules, yaks and ponies in places roads do not reach. Ammunition stockpiles (War Wastage Reserves) have been an audit concern for years. <span class="tag verify">Re-verify current levels</span></p>
+  </div>
+</section>
+
+<section id="beyond-war">
+  <h2>Beyond war: peacekeeping, exercises, relief</h2><hr class="sec-rule">
+  <p>India has contributed more than 290,000 personnel to over 50 UN missions since 1950, and has long been among the top troop contributors. <span class="tag verify">Re-verify the figures</span> Current deployments include South Sudan, Lebanon (UNIFIL) and the Golan Heights, and the Army has provided commanders and women peacekeepers.</p>
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>Bilateral and multilateral exercises</h4>
+      <p>Yudh Abhyas (US), Dharma Guardian (Japan), Nomadic Elephant (Mongolia), Ajeya Warrior (UK), Shakti (France), Garuda Shakti (Indonesia), Mitra Shakti (Sri Lanka), Surya Kiran (Nepal), Ekuverin (Maldives) and others. They build interoperability and defence diplomacy.</p>
+    </div>
+    <div class="panel green-top">
+      <h4>Aid to the civil authority</h4>
+      <p>Floods, earthquakes and cyclones: Op Surya Hope (Uttarakhand 2013), Op Madad (Kerala 2018), Bhuj (2001). Engineers build pontoon bridges, and the Army also supports mass events such as the Kumbh. The Army's own medical corps staffed a field hospital in Turkey in 2023 (Op Dost). <span class="tag verify">Re-verify</span></p>
+    </div>
+  </div>
+  <p>The Army also runs training for the National Cadet Corps and operates schools and sports institutions that feed the Olympic movement. It is a lasting part of civic life, which is why public trust in it is high and why debates about its politicisation matter.</p>
+</section>
+
+<div class="part-head"><p>Knowledge toolkit</p><h2>Analysis, practice and revision</h2></div>
+
+<section id="perspectives">
+  <h2>Perspectives, controversies and facts</h2><hr class="sec-rule">
+  <p><span class="tag interp">Interpretation</span> <strong>Manpower versus technology.</strong> One school argues India must cut manpower and spend on drones, long-range fires and networks; the Shekatkar Committee (2016) proposed trimming non-combat posts. The opposing view says a long, mountainous, disputed frontier cannot be held by machines alone and that boots on the ground remain essential.</p>
+  <p><span class="tag interp">Interpretation</span> <strong>Agnipath.</strong> Supporters see a younger, tech-ready force and lower pension costs. Critics see a loss of experience and regimental cohesion. Tenure, retention share and exit pathways remain under periodic review. <span class="tag verify">Re-verify</span></p>
+  <p><span class="tag interp">Interpretation</span> <strong>Theatre commands.</strong> Jointness would improve planning and resource use but raises questions about command authority, the role of the Air Force and the role of the Service Chiefs.</p>
+  <p><span class="tag interp">Interpretation</span> <strong>Civil-military relations.</strong> India's civilian supremacy is strong, yet there is recurring debate over whether the military has enough voice in policy and whether public rhetoric around it has become too political. A professional Army stays apolitical by convention.</p>
+  <h3>Lesser-known facts</h3>
+  <ul>
+    <li><span class="tag fact">Established</span> In 1948 light tanks were disassembled and pulled up to Zojila at about 11,500 ft in secret, surprising the attackers.</li>
+    <li><span class="tag fact">Established</span> Kargil produced four Param Vir Chakras; only two recipients, Yogendra Singh Yadav and Sanjay Kumar, lived to receive theirs.</li>
+    <li><span class="tag fact">Established</span> Six Gorkha regiments came to India under the 1947 Tripartite Agreement; recruitment from Nepal has been in doubt since Agnipath began. <span class="tag verify">Re-verify</span></li>
+    <li><span class="tag fact">Established</span> The Army uses Zanskari ponies, yaks and Bactrian camels in the Ladakh region.</li>
+  </ul>
+</section>
+
+<section id="scenarios-options">
+  <h2>Scenarios and strategic options</h2><hr class="sec-rule">
+  <p>Presented neutrally, without recommending a political position:</p>
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>Managed deterrence</h4>
+      <p>Border arrangements with China hold; the LoC ceasefire mostly holds; modernisation proceeds gradually.</p>
+    </div>
+    <div class="panel red-top">
+      <h4>Limited conflict with Pakistan</h4>
+      <p>A terror attack triggers a short, high-tempo exchange of missiles, drones and artillery, with international pressure to de-escalate.</p>
+    </div>
+    <div class="panel gold-top">
+      <h4>LAC friction</h4>
+      <p>A local clash escalates in the mountains, testing forward logistics and surveillance and possibly opening a second front.</p>
+    </div>
+    <div class="panel green-top">
+      <h4>Technology-led transformation</h4>
+      <p>Drones, counter-drone systems, networks and AI shift the balance, but only if procurement and training keep pace.</p>
+    </div>
+  </div>
+  <div class="tablewrap">
+    <table>
+      <caption>Policy options and trade-offs</caption>
+      <thead><tr><th>Option</th><th>Benefit</th><th>Risk or cost</th></tr></thead>
+      <tbody>
+        <tr><td>Create theatre commands</td><td>Unified planning, better resource use</td><td>Disruption during transition; Service-level friction</td></tr>
+        <tr><td>Reduce manpower, buy technology</td><td>Leaner, more capable force</td><td>Thin cover on long borders; dependence on supply chains</td></tr>
+        <tr><td>Adjust Agnipath</td><td>Higher retention and cohesion</td><td>Higher pension cost; goes against original design</td></tr>
+        <tr><td>Deepen indigenisation</td><td>Supply security, lower import bill</td><td>Time lags; quality and certification risk</td></tr>
+        <tr><td>Expand defence partnerships</td><td>Technology, interoperability, deterrence</td><td>Strategic autonomy trade-offs</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="answer-framework">
+  <h2>Answer framework and worked example</h2><hr class="sec-rule">
+  <p>For any "Is X good for the Army?" question, move through definition, location, evidence, contest, analysis, test, position, concession and close. One compressed example follows.</p>
+  <div class="panel red-top">
+    <h4>Worked example: "Is Agnipath a net positive for the Army?"</h4>
+    <dl class="rungs">
+      <dt>Define</dt><dd>A four-year contractual entry scheme for non-officer ranks, with about 25% retention.</dd>
+      <dt>Locate</dt><dd>Launched June 2022 to reduce average age and pension cost.</dd>
+      <dt>Establish</dt><dd>Younger profile and lower long-term liabilities are real; so are shorter training and rapid turnover.</dd>
+      <dt>Contest</dt><dd>Critics cite cohesion and experience loss; supporters cite technology readiness.</dd>
+      <dt>Analyse</dt><dd>Modern units need trained specialists, which suits longer tenures; but the pool of fit young recruits is large.</dd>
+      <dt>Test</dt><dd>Examine retention rate, operational readiness, and post-exit outcomes.</dd>
+      <dt>Position</dt><dd>Net positive only if retention, training and exit pathways are calibrated.</dd>
+      <dt>Concede</dt><dd>Evidence is still limited because the first cohorts are only now completing tenure. <span class="tag verify">Re-verify</span></dd>
+      <dt>Close</dt><dd>The principle is sound, the design is still being tested.</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="qbank">
+  <h2>Practice bank: questions and motions</h2><hr class="sec-rule">
+  <p class="lede">Fourteen questions. Answer each aloud, standing, in ninety seconds.</p>
+  <ol class="qbank">
+    <li>How did the 1947 Partition affect the structure and regiments of the Indian Army?</li>
+    <li>Why is 15 January celebrated as Army Day?</li>
+    <li>Explain the role of the CDS and the Department of Military Affairs. How does the post differ from a Service Chief?</li>
+    <li>Why is the Assam Rifles' dual control (Home Ministry and Army) debated?</li>
+    <li>What lessons did the 1962 war teach about civil-military coordination and infrastructure?</li>
+    <li>Why is the 1971 war regarded as a model of conventional victory?</li>
+    <li>What did Kargil reveal about intelligence, altitude warfare and limited war under a nuclear shadow?</li>
+    <li>What is AFSPA and why is it controversial? State arguments on both sides.</li>
+    <li>Compare the LoC and the LAC as frontiers.</li>
+    <li>Explain the "two-and-a-half front" challenge and how the Army responds to it.</li>
+    <li>What are Integrated Battle Groups and why were they proposed?</li>
+    <li>How does indigenisation affect the Army's capability in the short and long term?</li>
+    <li>Evaluate the Agnipath scheme in 150 words.</li>
+    <li>What role does the Army play in disaster relief and in international peacekeeping, and why does it matter for national power?</li>
+  </ol>
+  <h3>Debate motions</h3>
+  <ol class="dbank">
+    <li>This house believes theatre commands should be implemented without further delay.</li>
+    <li>This house believes India should reduce Army manpower to fund technology.</li>
+    <li>This house believes Agnipath should be replaced with longer service tenures.</li>
+    <li>This house believes AFSPA should be repealed in all states.</li>
+    <li>This house believes the Assam Rifles should be placed fully under the Army.</li>
+    <li>This house believes India's military should publicly articulate a doctrine of limited war.</li>
+    <li>This house believes defence self-reliance is more important than short-term capability.</li>
+  </ol>
+</section>
+
+<section id="chronology">
+  <h2>Master chronology</h2><hr class="sec-rule">
+  <ul class="timeline">
+    <li><span class="yr">1895</span><span>Presidency armies unified as the Indian Army.</span></li>
+    <li><span class="yr">1947</span><span>Independence and Partition; Tripartite Agreement on Gorkhas; Kashmir operations begin.</span></li>
+    <li><span class="yr">1949</span><span>Cariappa becomes first Indian C-in-C (15 Jan); ceasefire in Kashmir (1 Jan); Territorial Army raised.</span></li>
+    <li><span class="yr">1950</span><span>Army Act enacted.</span></li>
+    <li><span class="yr">1955</span><span>C-in-C title replaced by Chief of the Army Staff.</span></li>
+    <li><span class="yr">1961</span><span>Op Vijay: Goa liberated.</span></li>
+    <li><span class="yr">1962</span><span>War with China.</span></li>
+    <li><span class="yr">1965</span><span>War with Pakistan.</span></li>
+    <li><span class="yr">1971</span><span>Bangladesh war; Dhaka surrender, 16 Dec.</span></li>
+    <li><span class="yr">1984</span><span>Op Meghdoot: Siachen.</span></li>
+    <li><span class="yr">1987-90</span><span>Op Pawan in Sri Lanka; Rashtriya Rifles raised 1990.</span></li>
+    <li><span class="yr">1999</span><span>Kargil War, May-July.</span></li>
+    <li><span class="yr">2001-02</span><span>Op Parakram mobilisation.</span></li>
+    <li><span class="yr">2016</span><span>Surgical strikes (29 Sep).</span></li>
+    <li><span class="yr">2020</span><span>CDS and DMA created; Galwan clash (15 Jun).</span></li>
+    <li><span class="yr">2022</span><span>Agnipath announced (14 Jun).</span></li>
+    <li><span class="yr">2025</span><span>Op Sindoor (7-10 May); Army's Year of Reforms. <span class="tag verify">Re-verify</span></span></li>
+  </ul>
+</section>
+
+<section id="glossary">
+  <h2>Glossary</h2><hr class="sec-rule">
+  <dl class="term">
+    <dt>AFSPA</dt><dd>Armed Forces (Special Powers) Act, 1958: special powers in areas declared disturbed.</dd>
+    <dt>AGPL</dt><dd>Actual Ground Position Line: the unmarked line of control on the Siachen glacier.</dd>
+    <dt>Agniveer</dt><dd>A recruit under the four-year Agnipath scheme.</dd>
+    <dt>ARTRAC</dt><dd>Army Training Command, Shimla.</dd>
+    <dt>CDS</dt><dd>Chief of Defence Staff; head of the Department of Military Affairs.</dd>
+    <dt>Cold Start</dt><dd>Informal label for a rapid, limited offensive concept against Pakistan; officially ambiguous.</dd>
+    <dt>DMA</dt><dd>Department of Military Affairs, created in 2020 within the Ministry of Defence.</dd>
+    <dt>F-INSAS</dt><dd>Future Infantry Soldier As A System, a soldier modernisation programme.</dd>
+    <dt>IBG</dt><dd>Integrated Battle Group: brigade-sized all-arms formation.</dd>
+    <dt>JCO</dt><dd>Junior Commissioned Officer: Naib Subedar, Subedar, Subedar Major.</dd>
+    <dt>LAC / LoC</dt><dd>Line of Actual Control (China) and Line of Control (Pakistan).</dd>
+    <dt>Rashtriya Rifles</dt><dd>Army counter-insurgency force in Jammu and Kashmir, raised in 1990.</dd>
+    <dt>Theatre command</dt><dd>A joint command integrating Army, Navy and Air Force for one geographic area.</dd>
+    <dt>War Wastage Reserve</dt><dd>Ammunition and stores stocked for the initial period of a war.</dd>
+  </dl>
+</section>
+
+<section id="revision">
+  <h2>Rapid revision sheet</h2><hr class="sec-rule">
+  <div class="note">
+    <h4>Structure and framework</h4>
+    <ul>
+      <li>Roots in presidency armies; unified 1895; divided at Partition; Army Day on 15 Jan.</li>
+      <li>President is Supreme Commander; civilians control through the MoD; CDS and DMA since 2020.</li>
+      <li>Six operational commands plus ARTRAC; Rashtriya Rifles for J&amp;K; Assam Rifles under MHA.</li>
+      <li>Arms versus services; regimental system; Para (SF).</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h4>Operations and capability</h4>
+    <ul>
+      <li>1947-48, 1962, 1965, 1971, Siachen 1984, Kargil 1999, Parakram, 2016 strikes, Galwan 2020, Sindoor 2025.</li>
+      <li>LoC about 740 km; LAC about 3,488 km (disputed); Siachen the highest battlefield.</li>
+      <li>Doctrine: no first use; limited war; two-and-a-half fronts; IBGs; multi-domain operations.</li>
+      <li>Equipment: AK-203, T-90, K9 Vajra, M777, ATAGS, Pinaka, BrahMos, Akash, LCH Prachand, Apache.</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h4>People and debates</h4>
+    <ul>
+      <li>Agnipath: four years, about 25% retained; debate on cohesion versus cost.</li>
+      <li>AFSPA: legal cover versus accountability; partial withdrawals since 2015.</li>
+      <li>Theatre commands, manpower versus technology, indigenisation versus imports.</li>
+      <li>Always tag contested figures and weigh both sides.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer>
+  <p>Compiled from open sources. Study aid only, not an official publication.</p>
+  <p>Source &amp; contributions: <a href="https://github.com/mohitkushwaha0601/matre">github.com/mohitkushwaha0601/matre</a></p>
+</footer>
+
+</body>
+</html>

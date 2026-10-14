@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Oceans and India's Role — A Deep Knowledge Handbook</title>
+<meta name="description" content="A 21-section study handbook on the world's oceans and India's role: ocean geography and science, the law of the sea, resources, India's blue economy, institutions and diplomacy, eminent figures and SSB-style practice material.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14213D;
+  --ink-soft:#55607A;
+  --paper:#F5F4EF;
+  --surface:#FFFFFF;
+  --surface-2:#E8E6DC;
+  --rule:#D3D0C2;
+  --rule-strong:#A29E8A;
+  --red:#C2452B;
+  --blue:#1D5C9E;
+  --gold:#9C6F12;
+  --green:#1F7A62;
+  --hero-bg:#14213D;
+  --hero-ink:#F5F4EF;
+  --hero-dim:#A7B1C9;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ink:#E8ECF4;
+    --ink-soft:#AEB8CE;
+    --paper:#0A1020;
+    --surface:#121B30;
+    --surface-2:#1B2744;
+    --rule:#2B3858;
+    --rule-strong:#4B5A82;
+    --red:#F0937A;
+    --blue:#7DB4EE;
+    --gold:#E3B85A;
+    --green:#6FC8A8;
+    --hero-bg:#060B17;
+    --hero-ink:#E8ECF4;
+    --hero-dim:#8391B0;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E8ECF4;
+  --ink-soft:#AEB8CE;
+  --paper:#0A1020;
+  --surface:#121B30;
+  --surface-2:#1B2744;
+  --rule:#2B3858;
+  --rule-strong:#4B5A82;
+  --red:#F0937A;
+  --blue:#7DB4EE;
+  --gold:#E3B85A;
+  --green:#6FC8A8;
+  --hero-bg:#060B17;
+  --hero-ink:#E8ECF4;
+  --hero-dim:#8391B0;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1.5rem);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ---------- hero ---------- */
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
+.flagstrip{display:flex;height:12px}
+.flagstrip span{flex:1}
+.f1{background:#14213D}
+.f2{background:#1D5C9E}
+.f3{background:#4FA3D6}
+.f4{background:#BFE0EE}
+.f5{background:#1F7A62}
+.f6{background:#E3B85A}
+.f7{background:#FF9933}
+.f8{background:#C2452B}
+.hero-inner{max-width:1180px;margin:0 auto;padding:3.2rem 1.5rem 0}
+.kicker{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--hero-dim);margin:0 0 .8rem}
+.motto{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:clamp(1.7rem,5.2vw,2.9rem);line-height:1.2;margin:0;letter-spacing:.005em;max-width:26ch}
+.motto-en{margin:.55rem 0 0;color:var(--hero-dim);font-size:clamp(.95rem,2.4vw,1.1rem);font-style:italic;max-width:62ch}
+.hero h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.5rem,4.3vw,2.35rem);line-height:1.2;margin:2.6rem 0 .5rem;border-top:1px solid rgba(255,255,255,.22);padding-top:1.6rem;max-width:30ch}
+.hero-sub{margin:0;color:var(--hero-dim);max-width:68ch}
+.stamp{margin-top:1.6rem;font-size:.86rem;color:var(--hero-dim);display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+.stamp b{color:var(--hero-ink);font-weight:600}
+
+/* ---------- layout ---------- */
+.shell{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem;display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media (min-width:1000px){
+  .shell{grid-template-columns:255px minmax(0,1fr);gap:3.5rem;padding-top:2.8rem}
+}
+nav.toc{font-size:.9rem}
+@media (min-width:1000px){
+  .toc-mobile{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2rem);align-self:start;max-height:calc(100vh - 5rem);overflow-y:auto}
+}
+nav.toc h2{font-family:"Zilla Slab",Georgia,serif;font-size:.92rem;font-weight:600;margin:0 0 .7rem;padding-bottom:.45rem;border-bottom:2px solid var(--rule-strong)}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc}
+nav.toc li{border-bottom:1px solid var(--rule)}
+nav.toc li:not(.part){counter-increment:toc}
+nav.toc a{display:flex;gap:.6rem;padding:.4rem 0;color:var(--ink-soft);text-decoration:none}
+nav.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--rule-strong);font-variant-numeric:tabular-nums;flex:none}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--red)}
+nav.toc .part{border:0;margin:1.1rem 0 .3rem;font-family:"Zilla Slab",Georgia,serif;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--rule-strong)}
+nav.toc .part::before{content:none}
+.toc-mobile{display:block}
+@media (min-width:1000px){.toc-mobile summary{display:none}}
+.toc-mobile summary{cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:600;padding:.7rem .9rem;background:var(--surface);border:1px solid var(--rule);margin-bottom:1rem}
+@media (max-width:999px){
+  .toc-mobile[open] nav.toc{padding:0 .9rem 1rem}
+  .toc-mobile:not([open]) nav.toc{display:none}
+}
+
+/* ---------- sections ---------- */
+main{min-width:0}
+section{margin:0 0 3.6rem;scroll-margin-top:1.5rem}
+section > h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.45rem,3.6vw,1.95rem);line-height:1.2;margin:0 0 .3rem}
+.part-head{margin:4rem 0 2.2rem;padding:1.1rem 0 .9rem;border-top:4px double var(--rule-strong);border-bottom:1px solid var(--rule)}
+.part-head p{margin:0;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.part-head h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.3rem,3.2vw,1.7rem);margin:.3rem 0 0;color:var(--ink)}
+.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.16rem;margin:2rem 0 .5rem;line-height:1.3}
+h4{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1rem;margin:1.4rem 0 .35rem;color:var(--ink)}
+p{margin:0 0 .95rem;max-width:74ch}
+ul,ol{margin:0 0 1rem;padding-left:1.25rem;max-width:74ch}
+li{margin-bottom:.35rem}
+li::marker{color:var(--rule-strong)}
+strong{font-weight:600}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+/* ---------- components ---------- */
+.lede{font-size:1.06rem;color:var(--ink-soft);max-width:70ch}
+
+.tablewrap{overflow-x:auto;margin:0 0 1.3rem;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.92rem}
+caption{text-align:left;padding:.7rem .85rem .1rem;font-weight:600;color:var(--ink-soft);font-size:.9rem}
+th,td{text-align:left;padding:.55rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{background:var(--surface-2);font-weight:600;border-bottom:2px solid var(--rule-strong);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.num,th.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+.edge{background:var(--surface);border-left:4px solid var(--red);padding:.9rem 1.1rem;margin:1.4rem 0;max-width:74ch}
+.edge p:last-child,.edge ul:last-child,.edge ol:last-child{margin-bottom:0}
+.edge .edge-h{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);display:block;margin-bottom:.25rem;font-size:.95rem}
+.edge.gold{border-left-color:var(--gold)}
+.edge.gold .edge-h{color:var(--gold)}
+.edge.blue{border-left-color:var(--blue)}
+.edge.blue .edge-h{color:var(--blue)}
+.edge.green{border-left-color:var(--green)}
+.edge.green .edge-h{color:var(--green)}
+
+.note{background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;border:1px solid var(--rule);font-size:.95rem}
+.note p:last-child,.note ul:last-child,.note ol:last-child{margin-bottom:0}
+.note h4{margin-top:0}
+
+.panel{background:var(--surface);border:1px solid var(--rule);padding:1rem 1.1rem}
+.panel h4{margin-top:0}
+.panel ul,.panel ol{margin-bottom:0}
+.panel.blue-top{border-top:3px solid var(--blue)}
+.panel.red-top{border-top:3px solid var(--red)}
+.panel.gold-top{border-top:3px solid var(--gold)}
+.panel.green-top{border-top:3px solid var(--green)}
+
+.rungs{max-width:74ch;margin:.3rem 0 0;display:grid;grid-template-columns:9.5rem 1fr;gap:0 1rem}
+.rungs dt{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;color:var(--red);padding-top:.2rem}
+.rungs dd{margin:0 0 .5rem;font-size:.93rem}
+@media (max-width:560px){
+  .rungs{grid-template-columns:1fr;gap:0}
+  .rungs dt{padding-top:.4rem}
+}
+
+.timeline{list-style:none;padding:0;margin:1rem 0 1.4rem;max-width:74ch}
+.timeline li{display:grid;grid-template-columns:8.2rem 1fr;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--rule);margin:0}
+.timeline li:last-child{border-bottom:0}
+.timeline .yr{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);font-variant-numeric:tabular-nums}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:.1rem}}
+
+.qbank{counter-reset:q;list-style:none;padding:0;max-width:74ch}
+.qbank li{counter-increment:q;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.qbank li::before{content:counter(q,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.qbank li:last-child{border-bottom:0}
+
+.dbank{counter-reset:d;list-style:none;padding:0;max-width:74ch}
+.dbank li{counter-increment:d;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.dbank li::before{content:counter(d,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.dbank li:last-child{border-bottom:0}
+
+.grid{display:grid;gap:1rem}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
+
+.card{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--red);padding:1rem 1.1rem}
+.card h4{margin:0 0 .45rem;font-size:1rem}
+.card .name{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.2rem}
+.card .role{font-size:.9rem;color:var(--ink-soft)}
+.card .since{font-size:.78rem;color:var(--green);font-weight:600;margin-top:.45rem}
+
+.term{max-width:74ch;margin:0 0 1.2rem}
+.term dt{font-weight:600;margin-top:.8rem}
+.term dd{margin:.15rem 0 0;color:var(--ink-soft)}
+
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:.1rem .45rem;border:1px solid var(--rule-strong);color:var(--ink-soft);margin-right:.35rem;vertical-align:middle}
+.tag.fact{border-color:var(--green);color:var(--green)}
+.tag.interp{border-color:var(--gold);color:var(--gold)}
+.tag.disputed{border-color:var(--red);color:var(--red)}
+.tag.verify{border-color:var(--blue);color:var(--blue)}
+.spaced{margin-top:.6rem}
+
+footer{border-top:3px double var(--rule-strong);margin-top:2rem;padding-top:1.4rem;color:var(--ink-soft);font-size:.9rem;max-width:74ch}
+footer a{color:var(--blue)}
+
+/* ---------- home button: fixed, links back to the collection homepage ---------- */
+.home-btn{position:fixed;top:16px;left:16px;z-index:60;display:inline-flex;align-items:center;gap:.4rem;background:#14202B;color:#F1F2EC;border:1px solid rgba(241,242,236,.25);padding:.45rem .85rem;border-radius:999px;font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.82rem;font-weight:600;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.3);transition:background .15s ease,transform .15s ease}
+.home-btn:hover,.home-btn:focus-visible{background:#BF2F26;transform:translateY(-1px)}
+.home-btn svg{width:14px;height:14px;flex:none}
+@media print{.home-btn{display:none}}
+
+@media print{
+  .hero{background:none;color:#000;padding-bottom:1rem}
+  .hero-sub,.stamp,.motto-en{color:#333}
+  .flagstrip,.toc-mobile{display:none}
+  .shell{display:block;padding:0}
+  section{page-break-inside:auto;margin-bottom:1.8rem}
+  h2,h3{page-break-after:avoid}
+  .panel,.edge,.note,.tablewrap,figure{page-break-inside:avoid}
+  .part-head{page-break-before:always}
+  body{font-size:10.5pt;background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+
+<a class="home-btn" href="../index.html" aria-label="Back to Handbooks homepage" title="Back to Handbooks homepage">
+  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
+  <span>Home</span>
+</a>
+
+<header class="hero">
+  <div class="flagstrip" aria-hidden="true">
+    <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f5"></span><span class="f6"></span><span class="f7"></span><span class="f8"></span>
+  </div>
+  <div class="hero-inner">
+    <p class="kicker">Oceanography · Law of the sea · Blue economy · Maritime diplomacy · eminent people and institutions</p>
+    <h1>Oceans and India's Role</h1>
+    <p class="hero-sub">What the world's oceans are, how they are governed and used, and what India does with its coastline, islands, science and diplomacy. This handbook complements the naval and Indian Ocean security handbooks (nos. 1, 10, 23 and 24) and points to them instead of repeating them. Figures and project status that change over time are tagged for re-verification.</p>
+    <p class="stamp">
+      <span>Oceans <b>Pacific, Atlantic, Indian, Southern, Arctic</b></span>
+      <span>India's coastline <b>about 11,000 km with islands</b></span>
+      <span>Key frameworks <b>UNCLOS 1982, SAGAR and MAHASAGAR</b></span>
+      <span>Sections <b>21</b></span>
+      <span>Reading time <b>2-3 hrs</b></span>
+    </p>
+  </div>
+</header>
+
+<div class="shell">
+
+<details class="toc-mobile" open>
+  <summary>Contents</summary>
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li class="part">How to use this</li>
+      <li><a href="#snapshot">Snapshot and how to read</a></li>
+
+      <li class="part">Part I · The world's oceans</li>
+      <li><a href="#geography">Ocean geography, currents and chokepoints</a></li>
+      <li><a href="#science">Ocean science: monsoon, cyclones, tsunamis, climate</a></li>
+      <li><a href="#law">The law of the sea: UNCLOS, EEZ, seabed and high seas</a></li>
+      <li><a href="#resources">Ocean resources, trade and undersea cables</a></li>
+
+      <li class="part">Part II · India and the oceans</li>
+      <li><a href="#coast">India's coast, islands and ports</a></li>
+      <li><a href="#heritage">Maritime heritage</a></li>
+      <li><a href="#blue-economy">The blue economy</a></li>
+      <li><a href="#institutions">Ocean science institutions and polar programmes</a></li>
+      <li><a href="#diplomacy">Maritime diplomacy: SAGAR, MAHASAGAR and groupings</a></li>
+      <li><a href="#role">India's international role and positions</a></li>
+
+      <li class="part">Part III · Eminence</li>
+      <li><a href="#eminent-india">Eminent Indians and institutions</a></li>
+      <li><a href="#eminent-global">Global pioneers of ocean science and sea power</a></li>
+      <li><a href="#standing">India's maritime standing</a></li>
+
+      <li class="part">Knowledge toolkit</li>
+      <li><a href="#perspectives">Perspectives, controversies and facts</a></li>
+      <li><a href="#scenarios-options">Scenarios and strategic options</a></li>
+      <li><a href="#answer-framework">Answer framework and worked example</a></li>
+      <li><a href="#qbank">Practice bank: questions and motions</a></li>
+      <li><a href="#chronology">Master chronology</a></li>
+      <li><a href="#glossary">Glossary</a></li>
+      <li><a href="#revision">Rapid revision sheet</a></li>
+    </ol>
+  </nav>
+</details>
+
+<main>
+
+<section id="snapshot">
+  <h2>Snapshot and how to read</h2><hr class="sec-rule">
+  <p class="lede">Oceans cover about seven-tenths of the Earth, regulate climate, carry most of world trade and hold resources that states are only beginning to claim. India has a long coastline, two island territories, a monsoon driven by the Indian Ocean, a growing blue economy and a stated aim of being a "net security provider" in the region. This handbook covers the oceans in general and India's role in particular.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>The five oceans at a glance <span class="tag verify">Re-verify figures</span></caption>
+      <thead><tr><th>Ocean</th><th>Share of ocean area</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Pacific</td><td>About 46%</td><td>Largest and deepest; Mariana Trench and its Challenger Deep, about 10,900 m</td></tr>
+        <tr><td>Atlantic</td><td>About 23%</td><td>Mid-Atlantic Ridge; Gulf Stream; the busiest historic trade lanes</td></tr>
+        <tr><td>Indian</td><td>About 20%</td><td>Only ocean named after a country; reversing monsoon winds and currents</td></tr>
+        <tr><td>Southern</td><td>About 6%</td><td>Surrounds Antarctica; the Antarctic Circumpolar Current</td></tr>
+        <tr><td>Arctic</td><td>About 4%</td><td>Shallowest and smallest; ice loss is opening new routes</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge blue">
+    <span class="edge-h">How to read this handbook</span>
+    <p>Facts are stated plainly. Contested claims carry tags (<span class="tag fact">Established</span> <span class="tag interp">Interpretation</span> <span class="tag disputed">Disputed</span> <span class="tag verify">Re-verify</span>). Programme budgets, treaty status and rankings were written from memory of open sources and must be checked before use. Naval detail is in handbook 1 (Navy), 10 (Indian Ocean maritime security), 23 (naval exercises) and 24 (Coast Guard vs Navy); river issues are in handbook 31.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part I · The world's oceans</p><h2>Geography, science, law and resources</h2></div>
+
+<section id="geography">
+  <h2>Ocean geography, currents and chokepoints</h2><hr class="sec-rule">
+  <p>The oceans hold about 97% of Earth's water, with an average depth near 3,700 m. Seafloor features include continental shelves, mid-ocean ridges, abyssal plains and trenches. A global conveyor of surface and deep currents moves heat: the Gulf Stream and Kuroshio carry warm water poleward, the Humboldt carries cold water along South America, and the Antarctic Circumpolar Current circles the pole.</p>
+  <p>The Indian Ocean is unusual because it is closed to the north by the Asian landmass. Its winds reverse seasonally, blowing from the south-west in summer and the north-east in winter, and its surface currents (such as the Somali Current) reverse with them. This is the basis of the monsoon and of historic sail-powered trade. <span class="tag fact">Established</span></p>
+  <div class="tablewrap">
+    <table>
+      <caption>Key maritime chokepoints <span class="tag verify">Re-verify traffic shares</span></caption>
+      <thead><tr><th>Chokepoint</th><th>Connects</th><th>Why it matters</th></tr></thead>
+      <tbody>
+        <tr><td>Strait of Hormuz</td><td>Persian Gulf and Gulf of Oman</td><td>A large share of world oil and LNG exports</td></tr>
+        <tr><td>Strait of Malacca</td><td>Indian Ocean and South China Sea</td><td>The main route between the Gulf and East Asia</td></tr>
+        <tr><td>Bab-el-Mandeb and Suez</td><td>Red Sea and Mediterranean</td><td>The shortest Asia-Europe sea route; Houthi attacks since 2023 diverted ships</td></tr>
+        <tr><td>Cape of Good Hope</td><td>Atlantic and Indian Oceans</td><td>The alternative when Suez is unsafe</td></tr>
+        <tr><td>Sunda and Lombok straits</td><td>Indian Ocean and Pacific side</td><td>Deep-draft and alternate routes around Malacca</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Most of these chokepoints lie in or at the edge of the Indian Ocean, which is why the region has such weight in India's maritime thinking. See handbook 10.</p>
+</section>
+
+<section id="science">
+  <h2>Ocean science: monsoon, cyclones, tsunamis, climate</h2><hr class="sec-rule">
+  <ul>
+    <li><strong>Monsoon link:</strong> the temperature contrast between land and the Indian Ocean drives the monsoon, which supplies most of India's annual rainfall.</li>
+    <li><strong>El Niño and the Indian Ocean Dipole (IOD):</strong> El Niño (warm Pacific) generally weakens the Indian monsoon; a positive IOD (warm west, cool east Indian Ocean) can offset that effect. Forecasters watch both. <span class="tag interp">Interpretation: the relationship is not perfectly reliable</span></li>
+    <li><strong>Cyclones:</strong> the Bay of Bengal produces more cyclones than the Arabian Sea, and impacts are heavy on the Odisha, Andhra and Bengal coasts. The India Meteorological Department (IMD) is the regional specialised centre for the North Indian Ocean.</li>
+    <li><strong>Tsunami:</strong> the 26 December 2004 Sumatra earthquake generated a tsunami that killed hundreds of thousands across the Indian Ocean. India then built the Indian Tsunami Early Warning Centre at INCOIS Hyderabad. <span class="tag verify">Re-verify toll and dates</span></li>
+    <li><strong>Climate:</strong> the oceans absorb most of the excess heat and a large share of the CO<sub>2</sub> from human activity. The results are sea-level rise, acidification, marine heatwaves and coral bleaching. <span class="tag verify">Re-verify magnitudes</span></li>
+  </ul>
+  <div class="edge gold">
+    <span class="edge-h">Why it matters for India</span>
+    <p>Ocean science is not an academic extra. It feeds monsoon forecasts, cyclone warnings, fishing advisories and coastal planning, and it shapes decisions for low-lying coasts such as the Sundarbans and the Lakshadweep atolls.</p>
+  </div>
+</section>
+
+<section id="law">
+  <h2>The law of the sea: UNCLOS, EEZ, seabed and high seas</h2><hr class="sec-rule">
+  <p>The United Nations Convention on the Law of the Sea (UNCLOS, 1982) came into force in 1994. India ratified it in 1995. It sets out zones measured from baselines:</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Maritime zones under UNCLOS</caption>
+      <thead><tr><th>Zone</th><th>Limit</th><th>Coastal state's rights</th></tr></thead>
+      <tbody>
+        <tr><td>Territorial sea</td><td>12 nautical miles</td><td>Sovereignty, subject to innocent passage</td></tr>
+        <tr><td>Contiguous zone</td><td>24 nautical miles</td><td>Customs, fiscal, immigration and sanitary control</td></tr>
+        <tr><td>Exclusive Economic Zone (EEZ)</td><td>200 nautical miles</td><td>Sovereign rights over resources; freedom of navigation for others</td></tr>
+        <tr><td>Continental shelf</td><td>At least 200, up to about 350 nautical miles</td><td>Rights over seabed and subsoil resources</td></tr>
+        <tr><td>High seas and the Area</td><td>Beyond national jurisdiction</td><td>Open to all; the seabed "Area" is the common heritage of mankind, governed by the International Seabed Authority (ISA)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul>
+    <li><strong>India's law:</strong> the Territorial Waters, Continental Shelf, Exclusive Economic Zone and Other Maritime Zones Act, 1976.</li>
+    <li><strong>Boundary cases:</strong> the 2014 arbitration between Bangladesh and India in the Bay of Bengal settled their maritime boundary, and the 2016 arbitration between the Philippines and China on the South China Sea rejected China's historic-rights claim inside the nine-dash line. China does not accept that ruling. <span class="tag disputed">Disputed</span></li>
+    <li><strong>High seas treaty:</strong> the Agreement on Biodiversity Beyond National Jurisdiction (BBNJ, adopted 2023) provides for marine protected areas on the high seas. <span class="tag verify">Re-verify entry into force and India's status</span></li>
+    <li><strong>India's reading:</strong> India holds that other states should seek its consent for military exercises in its EEZ, which differs from the more permissive reading of some maritime powers. <span class="tag interp">Interpretation</span> <span class="tag verify">Re-verify</span></li>
+  </ul>
+</section>
+
+<section id="resources">
+  <h2>Ocean resources, trade and undersea cables</h2><hr class="sec-rule">
+  <ul>
+    <li><strong>Trade:</strong> about four-fifths of world trade by volume moves by sea. India carries most of its trade by volume and a large share by value on ships. <span class="tag verify">Re-verify shares</span></li>
+    <li><strong>Fisheries:</strong> a major source of protein and jobs, but many stocks are overfished. India is among the largest fish producers and exporters, with strong shrimp exports. <span class="tag verify">Re-verify</span> Subsidy rules for fisheries have been negotiated at the WTO. <span class="tag verify">Re-verify status</span></li>
+    <li><strong>Energy and minerals:</strong> offshore oil and gas (India's Bombay High and Krishna-Godavari basin), offshore wind, and seabed minerals such as polymetallic nodules, sulphides and cobalt-rich crusts. Gas hydrates are a longer-term prospect.</li>
+    <li><strong>Undersea cables:</strong> they carry nearly all intercontinental data. Cable cuts and the security of landing stations have become strategic concerns. <span class="tag verify">Re-verify share</span></li>
+    <li><strong>Pressures:</strong> plastic and chemical pollution, oil spills, illegal and unreported fishing, and ship emissions, which the International Maritime Organization (IMO) regulates through MARPOL.</li>
+  </ul>
+  <div class="edge">
+    <span class="edge-h">Resource rush, rule gap</span>
+    <p>Seabed mining of deep nodules is moving from exploration toward possible exploitation while rules at the ISA are still unsettled and some states press ahead nationally. This tests the "common heritage" principle. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part II · India and the oceans</p><h2>Coast, heritage, economy, science and diplomacy</h2></div>
+
+<section id="coast">
+  <h2>India's coast, islands and ports</h2><hr class="sec-rule">
+  <p>India's coastline is officially about 7,500 km by older measurement and above 11,000 km when islands are included and a finer method is used. <span class="tag verify">Re-verify which figure applies</span> Nine states (Gujarat, Maharashtra, Goa, Karnataka, Kerala, Tamil Nadu, Andhra Pradesh, Odisha and West Bengal) and several Union Territories touch the sea. Gujarat has the longest state coastline. India's EEZ is roughly 2 million square kilometres or more once island territories are counted. <span class="tag verify">Re-verify</span></p>
+  <ul>
+    <li><strong>Andaman and Nicobar Islands:</strong> in the Bay of Bengal, close to the Malacca approaches. Indira Point at Great Nicobar is India's southernmost point. The Ten Degree Channel separates the Andamans from the Nicobars.</li>
+    <li><strong>Lakshadweep and Minicoy:</strong> coral atolls in the Arabian Sea, separated from the Maldives by the Eight Degree Channel (south of Minicoy). <span class="tag verify">Re-verify channel names</span></li>
+    <li><strong>Ports:</strong> a dozen-plus major ports under the Centre (Vadhavan in Maharashtra has been approved as an additional deep-water major port) and many non-major ports under states. <span class="tag verify">Re-verify count</span></li>
+    <li><strong>Transshipment:</strong> a large share of India's container transshipment has historically gone through foreign hubs (Colombo, Singapore, Klang). Vizhinjam in Kerala and a planned port at Galathea Bay in Great Nicobar aim to change that. <span class="tag verify">Re-verify project status</span></li>
+  </ul>
+  <div class="edge green">
+    <span class="edge-h">Geography as leverage</span>
+    <p>The Andaman and Nicobar Islands sit near the western mouth of the Malacca Strait, and the Lakshadweep chain sits on the Arabian Sea sea lanes. For a country whose geography points into the Indian Ocean, the islands give surveillance reach and a basing option beyond the mainland. See handbook 10.</p>
+  </div>
+</section>
+
+<section id="heritage">
+  <h2>Maritime heritage</h2><hr class="sec-rule">
+  <p>India's maritime history is old and varied. The Harappan port at Lothal (Gujarat) had a dockyard, and Mesopotamian records mention contact with Meluhha, usually identified with the Indus region. <span class="tag interp">Interpretation</span> Sangam-era Tamil ports such as Muziris traded with the Roman world, and Roman writers describe the use of the monsoon winds.</p>
+  <ul>
+    <li><strong>Chola reach:</strong> Rajendra I's naval expedition against the Srivijaya empire (c. 1025 CE) is among the best-known Indian overseas campaigns.</li>
+    <li><strong>Kalinga and Bali:</strong> the Bali Jatra festival in Cuttack recalls old trade links between Odisha and Southeast Asia.</li>
+    <li><strong>Medieval sea powers:</strong> the Zamorin's admirals (the Kunjali Marakkars) opposed the Portuguese, and the Maratha admiral Kanhoji Angre (c. 1698-1729) ran a powerful navy on the western coast. Shivaji also built a navy and sea forts such as Sindhudurg.</li>
+    <li><strong>Colonial turn:</strong> from the 16th century, Portuguese, Dutch, French and British naval power shifted control of Indian Ocean trade to Europeans.</li>
+    <li><strong>Strategic writing:</strong> K.M. Panikkar's <em>India and the Indian Ocean</em> (1945) argued that India's security depends on the ocean around it. <span class="tag fact">Established</span></li>
+  </ul>
+  <p>The Indian Navy's own story from independence onward is told in handbook 1.</p>
+</section>
+
+<section id="blue-economy">
+  <h2>The blue economy</h2><hr class="sec-rule">
+  <p>The "blue economy" means sustainable use of ocean resources for growth and jobs. India's official frameworks combine ports, shipping, fisheries, tourism, offshore energy and ocean technology. <span class="tag verify">Re-verify budgets and targets</span></p>
+  <div class="tablewrap">
+    <table>
+      <caption>Main programmes</caption>
+      <thead><tr><th>Programme</th><th>What it does</th></tr></thead>
+      <tbody>
+        <tr><td>Sagarmala (2015)</td><td>Port-led development: modernising ports, connectivity, coastal economic zones</td></tr>
+        <tr><td>Maritime India Vision 2030 and Amrit Kaal Vision 2047</td><td>Long-range plans for ports, shipping, shipbuilding and inland water transport</td></tr>
+        <tr><td>Deep Ocean Mission (2021)</td><td>Deep-sea mining technology, ocean observation, manned submersible, ocean climate services; led by the Ministry of Earth Sciences</td></tr>
+        <tr><td>Samudrayaan / Matsya 6000</td><td>A planned crewed submersible for depths up to 6,000 m, built by NIOT</td></tr>
+        <tr><td>PM Matsya Sampada Yojana (2020)</td><td>Fisheries and aquaculture development, cold chains and fishers' welfare</td></tr>
+        <tr><td>Offshore minerals and offshore wind</td><td>Auction of offshore mineral blocks under the 2023 amendment to the offshore minerals law; early offshore wind planning off Gujarat and Tamil Nadu</td></tr>
+        <tr><td>Coastal Regulation Zone (CRZ) rules</td><td>Control over construction and activity on the coast; revised in 2019</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge gold">
+    <span class="edge-h">Shipbuilding and seafarers</span>
+    <p>India has strong shipyards (Cochin, Mazagon, GRSE, Goa) mostly serving defence and domestic needs, but a small share of global commercial shipbuilding. The government has announced financial support and a maritime development fund to expand this. Indian seafarers are a large share of the global workforce. <span class="tag verify">Re-verify</span></p>
+  </div>
+</section>
+
+<section id="institutions">
+  <h2>Ocean science institutions and polar programmes</h2><hr class="sec-rule">
+  <ul>
+    <li><strong>Ministry of Earth Sciences (MoES, 2006):</strong> the central ministry for ocean, atmosphere and earth sciences.</li>
+    <li><strong>National Institute of Oceanography (NIO), Goa:</strong> a CSIR institute founded in 1966 for basic ocean research.</li>
+    <li><strong>National Institute of Ocean Technology (NIOT), Chennai:</strong> develops deep-sea technology, buoys, desalination and submersibles.</li>
+    <li><strong>INCOIS, Hyderabad:</strong> ocean information, tsunami and storm-surge warnings, and potential fishing zone advisories.</li>
+    <li><strong>NCPOR, Goa:</strong> runs the Antarctic, Arctic and Southern Ocean programmes.</li>
+    <li><strong>Satellites:</strong> the Oceansat series and the India-France SARAL/AltiKa mission support ocean colour, wind and altimetry. <span class="tag verify">Re-verify mission details</span></li>
+  </ul>
+  <h3>Antarctica and the Arctic</h3>
+  <p>India's first Antarctic expedition went in 1981-82 under Dr S.Z. Qasim, and India joined the Antarctic Treaty system in 1983. Its stations were Dakshin Gangotri (1983, later abandoned), Maitri (1989) and Bharati (2012). In the Arctic, the Himadri station at Ny-Ålesund, Svalbard opened in 2008, and India has observer status in the Arctic Council (2013). The Indian Antarctic Act of 2022 set up a domestic legal framework, and India published an Arctic policy in 2022. <span class="tag verify">Re-verify dates and new station plans</span></p>
+</section>
+
+<section id="diplomacy">
+  <h2>Maritime diplomacy: SAGAR, MAHASAGAR and groupings</h2><hr class="sec-rule">
+  <ul>
+    <li><strong>SAGAR (2015):</strong> "Security and Growth for All in the Region", announced in Mauritius; it frames India as a partner and first responder in the Indian Ocean.</li>
+    <li><strong>MAHASAGAR (2025):</strong> a broader vision announced in Mauritius in March 2025 that extends the approach to a wider "Global South" setting. <span class="tag verify">Re-verify the name expansion and content</span></li>
+    <li><strong>IORA:</strong> the Indian Ocean Rim Association, in which India is a founding member, covers trade, fisheries, maritime safety and the blue economy.</li>
+    <li><strong>Colombo Security Conclave:</strong> India, Sri Lanka, the Maldives and Mauritius, later widened, cooperate on maritime security. <span class="tag verify">Re-verify membership</span></li>
+    <li><strong>Information Fusion Centre-IOR:</strong> set up by the Navy in Gurugram (2018) to share maritime-domain information with partners.</li>
+    <li><strong>Quad and IPOI:</strong> the Quad's maritime-awareness initiative (IPMDA) and India's Indo-Pacific Oceans Initiative (2019) cover security, ecology, resources, disaster risk and science.</li>
+    <li><strong>Infrastructure partnerships:</strong> Chabahar (Iran), Sittwe (Myanmar), Duqm (Oman access) and facilities in Mauritius and the Seychelles. Some of these projects have stalled. <span class="tag verify">Re-verify</span></li>
+  </ul>
+  <div class="edge blue">
+    <span class="edge-h">First responder in the region</span>
+    <p>The Navy and Coast Guard routinely provide disaster relief, evacuation, anti-piracy patrols and hydrographic help to neighbours. The idea is that goodwill built on practical help strengthens India's standing relative to larger rivals. See handbooks 23 and 24.</p>
+  </div>
+</section>
+
+<section id="role">
+  <h2>India's international role and positions</h2><hr class="sec-rule">
+  <ul>
+    <li><strong>UNCLOS and ISA:</strong> India was the first "pioneer investor" in seabed mining (1987) and holds ISA contracts for polymetallic nodules in the Central Indian Ocean Basin and for polymetallic sulphides along the Indian Ocean ridge system. More applications have been made since. <span class="tag verify">Re-verify contract list</span></li>
+    <li><strong>Stance on rules:</strong> India supports rules-based freedom of navigation, calls for respect for UNCLOS, and avoids taking a side on sovereignty questions in the South China Sea.</li>
+    <li><strong>Global South voice:</strong> India often links ocean and climate discussions with development, equity and capacity-building for small island and coastal states.</li>
+    <li><strong>Fisheries and livelihoods:</strong> in WTO talks India has argued for protection of small-scale fishers. <span class="tag interp">Interpretation</span></li>
+    <li><strong>UN Ocean Decade:</strong> India takes part in the 2021-2030 Decade of Ocean Science for Sustainable Development.</li>
+  </ul>
+  <div class="edge">
+    <span class="edge-h">A live bilateral irritant: Palk Bay</span>
+    <p>Tamil Nadu and Sri Lankan fishers share the waters of the Palk Strait. Arrests of Indian fishers and the status of Katchatheevu (an islet that India recognised as Sri Lankan in the 1974-76 agreements) recur as political issues. Bottom trawling is also a cause of conflict. <span class="tag disputed">Disputed</span> <span class="tag verify">Re-verify current developments</span></p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part III · Eminence</p><h2>People, pioneers and standing</h2></div>
+
+<section id="eminent-india">
+  <h2>Eminent Indians and institutions</h2><hr class="sec-rule">
+  <div class="grid two">
+    <div class="card">
+      <div class="name">C.V. Raman</div>
+      <div class="role">Physicist</div>
+      <p>Wondering at the sea's colour on a 1921 voyage, he explained it as molecular scattering of light, leading to the Raman effect (1928) and the Nobel Prize (1930). <span class="tag verify">Re-verify</span></p>
+    </div>
+    <div class="card">
+      <div class="name">S.Z. Qasim</div>
+      <div class="role">Marine biologist</div>
+      <p>Led India's first Antarctic expedition (1981-82) and later shaped the country's ocean development and polar programme.</p>
+    </div>
+    <div class="card">
+      <div class="name">K.M. Panikkar</div>
+      <div class="role">Historian and diplomat</div>
+      <p>Author of <em>India and the Indian Ocean</em> (1945), an early statement of India's maritime-strategic thinking.</p>
+    </div>
+    <div class="card">
+      <div class="name">Kanhoji Angre</div>
+      <div class="role">Maratha admiral</div>
+      <p>Commanded the Maratha navy on the western coast in the early 18th century against European fleets.</p>
+    </div>
+    <div class="card">
+      <div class="name">Dilip Donde and Abhilash Tomy</div>
+      <div class="role">Naval sailors</div>
+      <p>Donde was the first Indian to sail solo around the world (2009-10); Tomy was the first to do so non-stop (2012-13). <span class="tag verify">Re-verify</span></p>
+    </div>
+    <div class="card">
+      <div class="name">INSV Tarini crew</div>
+      <div class="role">Navika Sagar Parikrama</div>
+      <p>An all-woman Navy crew that circumnavigated the globe in 2017-18 aboard a sailing vessel. <span class="tag verify">Re-verify</span></p>
+    </div>
+  </div>
+  <p>Institutions add to the roll: NIO, NIOT, INCOIS, NCPOR, the Naval Hydrographic Office (Dehradun), the Survey of India's tide-gauge network and the Marine Products Export Development Authority. The Indian Navy's leaders and wartime record are covered in handbook 1.</p>
+</section>
+
+<section id="eminent-global">
+  <h2>Global pioneers of ocean science and sea power</h2><hr class="sec-rule">
+  <div class="tablewrap">
+    <table>
+      <caption>Names and landmarks to know</caption>
+      <thead><tr><th>Person or event</th><th>Contribution</th></tr></thead>
+      <tbody>
+        <tr><td>Zheng He (early 15th century)</td><td>Large Ming-dynasty fleets that reached Calicut and East Africa</td></tr>
+        <tr><td>Matthew Fontaine Maury</td><td>Wrote <em>The Physical Geography of the Sea</em> (1855); often called the father of modern oceanography</td></tr>
+        <tr><td>HMS Challenger expedition (1872-76)</td><td>First global scientific ocean survey; the Challenger Deep is named after the ship</td></tr>
+        <tr><td>Alfred Thayer Mahan</td><td><em>The Influence of Sea Power upon History</em> (1890): sea control as the basis of national power</td></tr>
+        <tr><td>Julian Corbett</td><td>Maritime strategy that links naval and land power; stressed limits to decisive battle</td></tr>
+        <tr><td>Jacques Cousteau</td><td>Co-developed the Aqua-Lung with Émile Gagnan (1943); popularised ocean exploration</td></tr>
+        <tr><td>Jacques Piccard and Don Walsh</td><td>Reached the Challenger Deep in the bathyscaphe Trieste in 1960</td></tr>
+        <tr><td>Marie Tharp</td><td>Mapped the Mid-Atlantic Ridge's rift valley, supporting plate tectonics</td></tr>
+        <tr><td>Rachel Carson</td><td><em>The Sea Around Us</em> (1951); <em>Silent Spring</em> (1962) started the modern environmental movement</td></tr>
+        <tr><td>Sylvia Earle</td><td>Oceanographer and diver who has campaigned for marine protected areas</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge blue">
+    <span class="edge-h">Why Mahan and Corbett matter for SSB</span>
+    <p>They give two vocabularies for discussing India's own maritime strategy: sea control and fleet power (Mahan), and sea use, denial and joint operations (Corbett). Candidates who can name the idea and apply it to the Indian Ocean often sound more precise than those who speak only in general terms.</p>
+  </div>
+</section>
+
+<section id="standing">
+  <h2>India's maritime standing</h2><hr class="sec-rule">
+  <p>Standing is a mixture of capability, reputation and institutional role. The table sets out the main indicators and the tags show where figures need checking. For the Navy's own strength see handbooks 1 and 23.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Indicators of India's standing <span class="tag verify">Re-verify all rankings</span></caption>
+      <thead><tr><th>Indicator</th><th>Position</th></tr></thead>
+      <tbody>
+        <tr><td>Fish production</td><td>Among the top producers, with a large aquaculture sector</td></tr>
+        <tr><td>Seafarers</td><td>A leading supplier of seafarers to world shipping</td></tr>
+        <tr><td>Seabed mining</td><td>An early ISA pioneer investor with active contracts</td></tr>
+        <tr><td>Polar science</td><td>Antarctic Treaty consultative party, with year-round stations and an Arctic base</td></tr>
+        <tr><td>Maritime security</td><td>A large regional navy and coast guard, an information-fusion centre and a record of relief operations</td></tr>
+        <tr><td>Shipbuilding and ports</td><td>Growing, with modernisation under way, though still small in global commercial shipbuilding</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge gold">
+    <span class="edge-h">Where the gaps are</span>
+    <p>Commercial shipbuilding capacity, container transshipment, deep-sea technology and domestic ownership of shipping tonnage still lag the leaders. A balanced answer notes both the achievements and these gaps. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<div class="part-head"><p>Knowledge toolkit</p><h2>Analysis, practice and revision</h2></div>
+
+<section id="perspectives">
+  <h2>Perspectives, controversies and facts</h2><hr class="sec-rule">
+  <p><span class="tag interp">Interpretation</span> <strong>Net security provider or regional power.</strong> Supporters see India's relief and patrol work as a public good. Critics in the region read it as pursuit of influence, and some neighbours seek balance through other partners.</p>
+  <p><span class="tag interp">Interpretation</span> <strong>Great Nicobar development.</strong> Supporters point to a transshipment port, airport and strategic presence. Critics point to impacts on rainforest, Indigenous communities (Shompen, Nicobarese) and seismic risk. <span class="tag disputed">Disputed</span> <span class="tag verify">Re-verify project status and approvals</span></p>
+  <p><span class="tag interp">Interpretation</span> <strong>Deep-sea mining.</strong> Proponents see critical minerals for batteries and energy transition; scientists warn about unknown ecological damage and slow recovery of deep ecosystems.</p>
+  <p><span class="tag interp">Interpretation</span> <strong>EEZ military activity.</strong> India and several others hold that foreign military exercises in an EEZ need consent; major maritime powers disagree. This difference appears whenever warships operate near India's waters.</p>
+  <h3>Lesser-known facts</h3>
+  <ul>
+    <li><span class="tag fact">Established</span> The Indian Ocean is the only ocean named after a country.</li>
+    <li><span class="tag fact">Established</span> Challenger Deep, the deepest known point, is in the Pacific's Mariana Trench.</li>
+    <li><span class="tag fact">Established</span> The Indian Ocean's monsoon-driven wind reversal let sailors cross it on a regular schedule long before steam.</li>
+    <li><span class="tag fact">Established</span> Indira Point, India's southernmost point, lies in the Nicobar Islands, and was affected by the 2004 tsunami. <span class="tag verify">Re-verify details</span></li>
+  </ul>
+</section>
+
+<section id="scenarios-options">
+  <h2>Scenarios and strategic options</h2><hr class="sec-rule">
+  <p>Presented neutrally, without recommending a political position:</p>
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>Blue economy takes off</h4>
+      <p>Ports, shipbuilding, offshore energy and fisheries grow together, and India's coastal states gain jobs and exports. The risk lies in coastal ecology and weak enforcement.</p>
+    </div>
+    <div class="panel red-top">
+      <h4>Chokepoint or cable disruption</h4>
+      <p>An attack or accident near Hormuz, Bab-el-Mandeb or a major cable cluster would hit energy, trade and data. India would need alternative routes, reserves and partners.</p>
+    </div>
+    <div class="panel gold-top">
+      <h4>Seabed mining rush</h4>
+      <p>If commercial mining begins before global rules are settled, India must decide whether to enter, wait or press for strict environmental standards.</p>
+    </div>
+    <div class="panel green-top">
+      <h4>Climate stress on coasts</h4>
+      <p>More intense cyclones, sea-level rise and erosion strain low-lying coasts and island territories, requiring adaptation and early-warning investment.</p>
+    </div>
+  </div>
+  <div class="tablewrap">
+    <table>
+      <caption>Policy options and trade-offs</caption>
+      <thead><tr><th>Option</th><th>Benefit</th><th>Risk or cost</th></tr></thead>
+      <tbody>
+        <tr><td>Build transshipment hubs (Vizhinjam, Great Nicobar)</td><td>Reduces dependence on foreign hubs; strategic presence</td><td>Cost, ecological concerns, long gestation</td></tr>
+        <tr><td>Expand shipbuilding with state support</td><td>Jobs, self-reliance, defence synergy</td><td>Subsidy cost; competition from established yards</td></tr>
+        <tr><td>Enter seabed mining early</td><td>Mineral security and technology lead</td><td>Environmental and reputational risk</td></tr>
+        <tr><td>Strengthen regional maritime partnerships</td><td>Shared awareness and relief capacity</td><td>Neighbours may fear dominance</td></tr>
+        <tr><td>Invest in coastal resilience and early warning</td><td>Saves lives; protects economy</td><td>Recurring cost; land-use conflicts</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="answer-framework">
+  <h2>Answer framework and worked example</h2><hr class="sec-rule">
+  <p>For any "Why do the oceans matter to India?" question, move through definition, location, evidence, contest, analysis, test, position, concession and close. One compressed example follows.</p>
+  <div class="panel red-top">
+    <h4>Worked example: "Why is the Indian Ocean central to India's future?"</h4>
+    <dl class="rungs">
+      <dt>Define</dt><dd>The third-largest ocean, shaped by monsoon winds and bordered by dozens of states.</dd>
+      <dt>Locate</dt><dd>India projects into its centre; the Andaman and Nicobar Islands sit near Malacca, Lakshadweep on the Arabian Sea lanes.</dd>
+      <dt>Establish</dt><dd>Most Indian trade by volume moves by sea, the monsoon feeds agriculture, and key chokepoints lie at the ocean's edges.</dd>
+      <dt>Contest</dt><dd>Critics say India's land borders absorb most of its security effort, and that the region has other powers with greater reach.</dd>
+      <dt>Analyse</dt><dd>Energy, trade, climate and security all pass through the ocean, so land-border concerns do not replace maritime ones.</dd>
+      <dt>Test</dt><dd>Check what would happen to trade, energy and relief capacity if sea lanes were disrupted.</dd>
+      <dt>Position</dt><dd>The Indian Ocean is a core national interest requiring economic, scientific and security investment together.</dd>
+      <dt>Concede</dt><dd>Programme budgets and rankings change and need checking. <span class="tag verify">Re-verify</span></dd>
+      <dt>Close</dt><dd>Prosperity, security and climate resilience all depend on how India uses and protects its ocean space.</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="qbank">
+  <h2>Practice bank: questions and motions</h2><hr class="sec-rule">
+  <p class="lede">Fourteen questions. Answer each aloud, standing, in ninety seconds.</p>
+  <ol class="qbank">
+    <li>Name the five oceans and state two facts about the Indian Ocean.</li>
+    <li>How do El Niño and the Indian Ocean Dipole affect the Indian monsoon?</li>
+    <li>Explain the maritime zones under UNCLOS with distances.</li>
+    <li>What did the 2016 South China Sea arbitration decide, and why is it contested?</li>
+    <li>What is the International Seabed Authority, and what is India's role in it?</li>
+    <li>Why is a chokepoint such as Hormuz or Malacca important to India?</li>
+    <li>Describe India's coastline, islands and EEZ, and the strategic value of the Andaman and Nicobar Islands.</li>
+    <li>What are Sagarmala, the Deep Ocean Mission and Matsya 6000?</li>
+    <li>What do INCOIS, NIOT, NIO and NCPOR do?</li>
+    <li>Compare SAGAR and MAHASAGAR.</li>
+    <li>What is the Colombo Security Conclave, and what does the Information Fusion Centre-IOR do?</li>
+    <li>What is India's presence in Antarctica and the Arctic?</li>
+    <li>What issues arise from Katchatheevu and Palk Bay fishing?</li>
+    <li>Name two eminent Indians and two global figures linked to the oceans and explain their contribution.</li>
+  </ol>
+  <h3>Debate motions</h3>
+  <ol class="dbank">
+    <li>This house believes India should prioritise its maritime strategy over its land-border posture.</li>
+    <li>This house believes India should begin commercial deep-sea mining as soon as it is technically able.</li>
+    <li>This house believes Great Nicobar development is worth its ecological cost.</li>
+    <li>This house believes India should require consent for foreign military exercises in its EEZ.</li>
+    <li>This house believes India should be a net security provider in the Indian Ocean.</li>
+    <li>This house believes India should build its own commercial shipping fleet before expanding ports.</li>
+    <li>This house believes ocean science should receive the same priority as space science.</li>
+  </ol>
+</section>
+
+<section id="chronology">
+  <h2>Master chronology</h2><hr class="sec-rule">
+  <ul class="timeline">
+    <li><span class="yr">c. 2400 BCE</span><span>Harappan dockyard at Lothal. <span class="tag verify">Re-verify dating</span></span></li>
+    <li><span class="yr">c. 1025 CE</span><span>Rajendra I's expedition against Srivijaya.</span></li>
+    <li><span class="yr">1698-1729</span><span>Kanhoji Angre commands the Maratha navy.</span></li>
+    <li><span class="yr">1872-76</span><span>HMS Challenger global ocean expedition.</span></li>
+    <li><span class="yr">1890</span><span>Mahan publishes <em>The Influence of Sea Power upon History</em>.</span></li>
+    <li><span class="yr">1945</span><span>K.M. Panikkar's <em>India and the Indian Ocean</em>.</span></li>
+    <li><span class="yr">1960</span><span>Trieste reaches the Challenger Deep.</span></li>
+    <li><span class="yr">1966</span><span>National Institute of Oceanography, Goa, founded.</span></li>
+    <li><span class="yr">1974-76</span><span>India-Sri Lanka agreements on Katchatheevu and maritime boundaries.</span></li>
+    <li><span class="yr">1976</span><span>India's law on maritime zones.</span></li>
+    <li><span class="yr">1981-82</span><span>First Indian Antarctic expedition.</span></li>
+    <li><span class="yr">1982</span><span>UNCLOS adopted.</span></li>
+    <li><span class="yr">1987</span><span>India recognised as a seabed-mining pioneer investor.</span></li>
+    <li><span class="yr">1994</span><span>UNCLOS enters into force.</span></li>
+    <li><span class="yr">1995</span><span>India ratifies UNCLOS.</span></li>
+    <li><span class="yr">1997</span><span>Indian Ocean Rim Association formed.</span></li>
+    <li><span class="yr">2004</span><span>Indian Ocean tsunami (26 December).</span></li>
+    <li><span class="yr">2008</span><span>Himadri station opens in the Arctic.</span></li>
+    <li><span class="yr">2014</span><span>Arbitration settles the India-Bangladesh maritime boundary.</span></li>
+    <li><span class="yr">2015</span><span>SAGAR announced; Sagarmala launched.</span></li>
+    <li><span class="yr">2016</span><span>South China Sea arbitration award.</span></li>
+    <li><span class="yr">2021</span><span>Deep Ocean Mission approved.</span></li>
+    <li><span class="yr">2022</span><span>Indian Antarctic Act and India's Arctic policy.</span></li>
+    <li><span class="yr">2025</span><span>MAHASAGAR vision announced in Mauritius.</span></li>
+  </ul>
+</section>
+
+<section id="glossary">
+  <h2>Glossary</h2><hr class="sec-rule">
+  <dl class="term">
+    <dt>Baseline</dt><dd>The line from which maritime zones are measured.</dd>
+    <dt>BBNJ</dt><dd>Biodiversity Beyond National Jurisdiction, the high seas treaty.</dd>
+    <dt>Blue economy</dt><dd>Sustainable economic use of ocean resources.</dd>
+    <dt>Chokepoint</dt><dd>A narrow strait or passage that concentrates shipping traffic.</dd>
+    <dt>EEZ</dt><dd>Exclusive Economic Zone, up to 200 nautical miles.</dd>
+    <dt>INCOIS</dt><dd>Indian National Centre for Ocean Information Services.</dd>
+    <dt>Indian Ocean Dipole</dt><dd>A temperature difference between the western and eastern Indian Ocean that affects rainfall.</dd>
+    <dt>ISA</dt><dd>International Seabed Authority, which regulates seabed mining in the Area.</dd>
+    <dt>Nautical mile</dt><dd>1,852 metres.</dd>
+    <dt>Polymetallic nodules</dt><dd>Mineral-rich lumps on the deep seabed.</dd>
+    <dt>SLOC</dt><dd>Sea lines of communication, the main shipping routes.</dd>
+    <dt>Transshipment</dt><dd>Moving cargo from one ship to another at an intermediate port.</dd>
+    <dt>UNCLOS</dt><dd>United Nations Convention on the Law of the Sea, 1982.</dd>
+  </dl>
+</section>
+
+<section id="revision">
+  <h2>Rapid revision sheet</h2><hr class="sec-rule">
+  <div class="note">
+    <h4>Oceans and law</h4>
+    <ul>
+      <li>Five oceans; Pacific largest; Indian Ocean has reversing monsoon winds; Challenger Deep in the Pacific.</li>
+      <li>El Niño versus IOD; Bay of Bengal cyclones; 2004 tsunami and INCOIS.</li>
+      <li>UNCLOS: 12, 24 and 200 nautical miles; shelf to about 350; ISA manages the Area; BBNJ; 2014 and 2016 arbitrations.</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h4>India</h4>
+    <ul>
+      <li>Coastline about 11,000 km with islands; Andaman and Nicobar near Malacca; Lakshadweep on Arabian Sea lanes.</li>
+      <li>Sagarmala, Deep Ocean Mission, Matsya 6000, Matsya Sampada; Vizhinjam, Great Nicobar.</li>
+      <li>MoES, NIO, NIOT, INCOIS, NCPOR; Maitri, Bharati, Himadri; Antarctic Act 2022.</li>
+      <li>SAGAR (2015), MAHASAGAR (2025), IORA, Colombo Security Conclave, IFC-IOR, Quad, IPOI.</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h4>Eminence and strategy</h4>
+    <ul>
+      <li>Raman, Qasim, Panikkar, Angre, Donde, Tomy, INSV Tarini.</li>
+      <li>Maury, Challenger expedition, Mahan, Corbett, Cousteau, Piccard and Walsh, Tharp, Carson.</li>
+      <li>Katchatheevu and Palk Bay; Great Nicobar and deep-sea mining as live controversies.</li>
+      <li>Always tag uncertain figures and rankings for re-verification.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer>
+  <p>Compiled from open sources. Study aid only, not an official publication.</p>
+  <p>Source &amp; contributions: <a href="https://github.com/mohitkushwaha0601/matre">github.com/mohitkushwaha0601/matre</a></p>
+</footer>
+
+</body>
+</html>

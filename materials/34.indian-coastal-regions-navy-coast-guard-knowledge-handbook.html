@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>India's Coastal Regions, Navy and Coast Guard — A Deep Knowledge Handbook</title>
+<meta name="description" content="A 21-section regional handbook on India's coasts: coast-by-coast Navy and Coast Guard presence, bases, ports and risks from Gujarat to West Bengal and the island territories, the post-26/11 coastal security architecture, disaster response and SSB-style practice material.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14272C;
+  --ink-soft:#4F6368;
+  --paper:#F4F2EA;
+  --surface:#FFFFFF;
+  --surface-2:#E8E6DA;
+  --rule:#D3D3C6;
+  --rule-strong:#98A39C;
+  --red:#B4442F;
+  --blue:#1F6E8C;
+  --gold:#A6740E;
+  --green:#2F7D62;
+  --hero-bg:#0F3A3F;
+  --hero-ink:#F4F2EA;
+  --hero-dim:#A9C4C4;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ink:#E8EFEE;
+    --ink-soft:#AFC2C2;
+    --paper:#0A1719;
+    --surface:#102427;
+    --surface-2:#173037;
+    --rule:#2A4349;
+    --rule-strong:#4F7078;
+    --red:#EE9078;
+    --blue:#7CC0DD;
+    --gold:#E0B450;
+    --green:#6FCBA5;
+    --hero-bg:#061214;
+    --hero-ink:#E8EFEE;
+    --hero-dim:#7FA0A2;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E8EFEE;
+  --ink-soft:#AFC2C2;
+  --paper:#0A1719;
+  --surface:#102427;
+  --surface-2:#173037;
+  --rule:#2A4349;
+  --rule-strong:#4F7078;
+  --red:#EE9078;
+  --blue:#7CC0DD;
+  --gold:#E0B450;
+  --green:#6FCBA5;
+  --hero-bg:#061214;
+  --hero-ink:#E8EFEE;
+  --hero-dim:#7FA0A2;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1.5rem);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ---------- hero ---------- */
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
+.flagstrip{display:flex;height:12px}
+.flagstrip span{flex:1}
+.f1{background:#0F3A3F}
+.f2{background:#1F6E8C}
+.f3{background:#F0E6CC}
+.f4{background:#E58A1F}
+.f5{background:#FFFFFF}
+.f6{background:#2F7D62}
+.f7{background:#6FA8B5}
+.f8{background:#08242A}
+.hero-inner{max-width:1180px;margin:0 auto;padding:3.2rem 1.5rem 0}
+.kicker{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--hero-dim);margin:0 0 .8rem}
+.motto{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:clamp(1.7rem,5.2vw,2.9rem);line-height:1.2;margin:0;letter-spacing:.005em;max-width:26ch}
+.motto-en{margin:.55rem 0 0;color:var(--hero-dim);font-size:clamp(.95rem,2.4vw,1.1rem);font-style:italic;max-width:62ch}
+.hero h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.5rem,4.3vw,2.35rem);line-height:1.2;margin:2.6rem 0 .5rem;border-top:1px solid rgba(255,255,255,.22);padding-top:1.6rem;max-width:30ch}
+.hero-sub{margin:0;color:var(--hero-dim);max-width:68ch}
+.stamp{margin-top:1.6rem;font-size:.86rem;color:var(--hero-dim);display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+.stamp b{color:var(--hero-ink);font-weight:600}
+
+/* ---------- layout ---------- */
+.shell{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem;display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media (min-width:1000px){
+  .shell{grid-template-columns:255px minmax(0,1fr);gap:3.5rem;padding-top:2.8rem}
+}
+nav.toc{font-size:.9rem}
+@media (min-width:1000px){
+  .toc-mobile{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2rem);align-self:start;max-height:calc(100vh - 5rem);overflow-y:auto}
+}
+nav.toc h2{font-family:"Zilla Slab",Georgia,serif;font-size:.92rem;font-weight:600;margin:0 0 .7rem;padding-bottom:.45rem;border-bottom:2px solid var(--rule-strong)}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc}
+nav.toc li{border-bottom:1px solid var(--rule)}
+nav.toc li:not(.part){counter-increment:toc}
+nav.toc a{display:flex;gap:.6rem;padding:.4rem 0;color:var(--ink-soft);text-decoration:none}
+nav.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--rule-strong);font-variant-numeric:tabular-nums;flex:none}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--red)}
+nav.toc .part{border:0;margin:1.1rem 0 .3rem;font-family:"Zilla Slab",Georgia,serif;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--rule-strong)}
+nav.toc .part::before{content:none}
+.toc-mobile{display:block}
+@media (min-width:1000px){.toc-mobile summary{display:none}}
+.toc-mobile summary{cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:600;padding:.7rem .9rem;background:var(--surface);border:1px solid var(--rule);margin-bottom:1rem}
+@media (max-width:999px){
+  .toc-mobile[open] nav.toc{padding:0 .9rem 1rem}
+  .toc-mobile:not([open]) nav.toc{display:none}
+}
+
+/* ---------- sections ---------- */
+main{min-width:0}
+section{margin:0 0 3.6rem;scroll-margin-top:1.5rem}
+section > h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.45rem,3.6vw,1.95rem);line-height:1.2;margin:0 0 .3rem}
+.part-head{margin:4rem 0 2.2rem;padding:1.1rem 0 .9rem;border-top:4px double var(--rule-strong);border-bottom:1px solid var(--rule)}
+.part-head p{margin:0;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.part-head h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.3rem,3.2vw,1.7rem);margin:.3rem 0 0;color:var(--ink)}
+.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.16rem;margin:2rem 0 .5rem;line-height:1.3}
+h4{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1rem;margin:1.4rem 0 .35rem;color:var(--ink)}
+p{margin:0 0 .95rem;max-width:74ch}
+ul,ol{margin:0 0 1rem;padding-left:1.25rem;max-width:74ch}
+li{margin-bottom:.35rem}
+li::marker{color:var(--rule-strong)}
+strong{font-weight:600}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+/* ---------- components ---------- */
+.lede{font-size:1.06rem;color:var(--ink-soft);max-width:70ch}
+
+.tablewrap{overflow-x:auto;margin:0 0 1.3rem;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.92rem}
+caption{text-align:left;padding:.7rem .85rem .1rem;font-weight:600;color:var(--ink-soft);font-size:.9rem}
+th,td{text-align:left;padding:.55rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{background:var(--surface-2);font-weight:600;border-bottom:2px solid var(--rule-strong);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.num,th.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+.edge{background:var(--surface);border-left:4px solid var(--red);padding:.9rem 1.1rem;margin:1.4rem 0;max-width:74ch}
+.edge p:last-child,.edge ul:last-child,.edge ol:last-child{margin-bottom:0}
+.edge .edge-h{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);display:block;margin-bottom:.25rem;font-size:.95rem}
+.edge.gold{border-left-color:var(--gold)}
+.edge.gold .edge-h{color:var(--gold)}
+.edge.blue{border-left-color:var(--blue)}
+.edge.blue .edge-h{color:var(--blue)}
+.edge.green{border-left-color:var(--green)}
+.edge.green .edge-h{color:var(--green)}
+
+.note{background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;border:1px solid var(--rule);font-size:.95rem}
+.note p:last-child,.note ul:last-child,.note ol:last-child{margin-bottom:0}
+.note h4{margin-top:0}
+
+.panel{background:var(--surface);border:1px solid var(--rule);padding:1rem 1.1rem}
+.panel h4{margin-top:0}
+.panel ul,.panel ol{margin-bottom:0}
+.panel.blue-top{border-top:3px solid var(--blue)}
+.panel.red-top{border-top:3px solid var(--red)}
+.panel.gold-top{border-top:3px solid var(--gold)}
+.panel.green-top{border-top:3px solid var(--green)}
+
+.rungs{max-width:74ch;margin:.3rem 0 0;display:grid;grid-template-columns:9.5rem 1fr;gap:0 1rem}
+.rungs dt{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;color:var(--red);padding-top:.2rem}
+.rungs dd{margin:0 0 .5rem;font-size:.93rem}
+@media (max-width:560px){
+  .rungs{grid-template-columns:1fr;gap:0}
+  .rungs dt{padding-top:.4rem}
+}
+
+.timeline{list-style:none;padding:0;margin:1rem 0 1.4rem;max-width:74ch}
+.timeline li{display:grid;grid-template-columns:8.2rem 1fr;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--rule);margin:0}
+.timeline li:last-child{border-bottom:0}
+.timeline .yr{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);font-variant-numeric:tabular-nums}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:.1rem}}
+
+.qbank{counter-reset:q;list-style:none;padding:0;max-width:74ch}
+.qbank li{counter-increment:q;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.qbank li::before{content:counter(q,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.qbank li:last-child{border-bottom:0}
+
+.dbank{counter-reset:d;list-style:none;padding:0;max-width:74ch}
+.dbank li{counter-increment:d;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.dbank li::before{content:counter(d,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.dbank li:last-child{border-bottom:0}
+
+.grid{display:grid;gap:1rem}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
+
+.card{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--red);padding:1rem 1.1rem}
+.card h4{margin:0 0 .45rem;font-size:1rem}
+.card .name{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.2rem}
+.card .role{font-size:.9rem;color:var(--ink-soft)}
+.card .since{font-size:.78rem;color:var(--green);font-weight:600;margin-top:.45rem}
+
+.term{max-width:74ch;margin:0 0 1.2rem}
+.term dt{font-weight:600;margin-top:.8rem}
+.term dd{margin:.15rem 0 0;color:var(--ink-soft)}
+
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:.1rem .45rem;border:1px solid var(--rule-strong);color:var(--ink-soft);margin-right:.35rem;vertical-align:middle}
+.tag.fact{border-color:var(--green);color:var(--green)}
+.tag.interp{border-color:var(--gold);color:var(--gold)}
+.tag.disputed{border-color:var(--red);color:var(--red)}
+.tag.verify{border-color:var(--blue);color:var(--blue)}
+.spaced{margin-top:.6rem}
+
+footer{border-top:3px double var(--rule-strong);margin-top:2rem;padding-top:1.4rem;color:var(--ink-soft);font-size:.9rem;max-width:74ch}
+footer a{color:var(--blue)}
+
+/* ---------- home button: fixed, links back to the collection homepage ---------- */
+.home-btn{position:fixed;top:16px;left:16px;z-index:60;display:inline-flex;align-items:center;gap:.4rem;background:#14202B;color:#F1F2EC;border:1px solid rgba(241,242,236,.25);padding:.45rem .85rem;border-radius:999px;font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.82rem;font-weight:600;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.3);transition:background .15s ease,transform .15s ease}
+.home-btn:hover,.home-btn:focus-visible{background:#BF2F26;transform:translateY(-1px)}
+.home-btn svg{width:14px;height:14px;flex:none}
+@media print{.home-btn{display:none}}
+
+@media print{
+  .hero{background:none;color:#000;padding-bottom:1rem}
+  .hero-sub,.stamp,.motto-en{color:#333}
+  .flagstrip,.toc-mobile{display:none}
+  .shell{display:block;padding:0}
+  section{page-break-inside:auto;margin-bottom:1.8rem}
+  h2,h3{page-break-after:avoid}
+  .panel,.edge,.note,.tablewrap,figure{page-break-inside:avoid}
+  .part-head{page-break-before:always}
+  body{font-size:10.5pt;background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+
+<a class="home-btn" href="../index.html" aria-label="Back to Handbooks homepage" title="Back to Handbooks homepage">
+  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
+  <span>Home</span>
+</a>
+
+<header class="hero">
+  <div class="flagstrip" aria-hidden="true">
+    <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f5"></span><span class="f6"></span><span class="f7"></span><span class="f8"></span>
+  </div>
+  <div class="hero-inner">
+    <p class="kicker">Coast by coast · bases and ports · Navy and Coast Guard · coastal security after 26/11 · island territories · disaster response</p>
+    <h1>India's Coastal Regions, Navy and Coast Guard</h1>
+    <p class="hero-sub">A geographic tour of India's coast from the Kutch creeks to the Sundarbans and the Andaman and Nicobar Islands: what each region holds, which naval and Coast Guard formations guard it, what the risks are, and how the coastal security system fits together. This handbook complements the Indian Navy, Coast Guard-versus-Navy and oceans handbooks (nos. 1, 24 and 32) and points to them instead of repeating their force-structure detail. Locations and project status change, so uncertain items are tagged for re-verification.</p>
+    <p class="stamp">
+      <span>Coastline <b>about 7,516 km (traditional figure)</b></span>
+      <span>Coastal states and UTs <b>13</b></span>
+      <span>Naval commands <b>Western, Eastern, Southern, A&amp;N</b></span>
+      <span>Sections <b>21</b></span>
+      <span>Reading time <b>2-3 hrs</b></span>
+    </p>
+  </div>
+</header>
+
+<div class="shell">
+
+<details class="toc-mobile" open>
+  <summary>Contents</summary>
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li class="part">Part I · Framework</li>
+      <li><a href="#snapshot">Snapshot and how to read</a></li>
+      <li><a href="#landscape">The coastal landscape</a></li>
+      <li><a href="#layers">Who guards the coast</a></li>
+      <li><a href="#commands">Command geography</a></li>
+
+      <li class="part">Part II · Region by region</li>
+      <li><a href="#gujarat">Gujarat and the north-west coast</a></li>
+      <li><a href="#maharashtra">Maharashtra and Goa</a></li>
+      <li><a href="#karnataka-kerala">Karnataka and Kerala</a></li>
+      <li><a href="#tamil-nadu">Tamil Nadu and Puducherry</a></li>
+      <li><a href="#andhra-odisha">Andhra Pradesh and Odisha</a></li>
+      <li><a href="#bengal">West Bengal and the Sundarbans</a></li>
+      <li><a href="#andaman">Andaman and Nicobar Islands</a></li>
+      <li><a href="#lakshadweep">Lakshadweep and small islands</a></li>
+
+      <li class="part">Part III · Security and strategy</li>
+      <li><a href="#architecture">Coastal security architecture after 26/11</a></li>
+      <li><a href="#threats">Threats along the coast</a></li>
+      <li><a href="#assets">Ports and strategic coastal assets</a></li>
+      <li><a href="#disasters">Disaster response and humanitarian operations</a></li>
+
+      <li class="part">Knowledge toolkit</li>
+      <li><a href="#perspectives">Perspectives, controversies and facts</a></li>
+      <li><a href="#scenarios-options">Scenarios and strategic options</a></li>
+      <li><a href="#answer-framework">Answer framework and worked example</a></li>
+      <li><a href="#qbank">Practice bank: questions and motions</a></li>
+      <li><a href="#revision">Chronology, glossary and revision sheet</a></li>
+    </ol>
+  </nav>
+</details>
+
+<main>
+
+<div class="part-head"><p>Part I · Framework</p><h2>The coast, its guardians and its command map</h2></div>
+
+<section id="snapshot">
+  <h2>Snapshot and how to read</h2><hr class="sec-rule">
+  <p class="lede">India's coast is a long, populated and economically busy edge: 13 coastal states and Union Territories, over 1,000 islands, a dozen major ports and many smaller ones, and the sea-lanes that carry the great majority of India's trade by volume. It is also the front line for threats that arrive from the sea, from the 1993 explosive landings to the 26/11 attack of 2008. This handbook follows the coast region by region.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Maritime zones under India's law and UNCLOS</caption>
+      <thead><tr><th>Zone</th><th>Limit from baseline</th><th>What India may do</th></tr></thead>
+      <tbody>
+        <tr><td>Territorial sea</td><td>12 nautical miles</td><td>Full sovereignty, subject to innocent passage</td></tr>
+        <tr><td>Contiguous zone</td><td>24 nautical miles</td><td>Enforce customs, fiscal, immigration and sanitary laws</td></tr>
+        <tr><td>Exclusive Economic Zone</td><td>200 nautical miles</td><td>Sovereign rights over fish, oil, gas and minerals; jurisdiction over artificial islands and marine research</td></tr>
+        <tr><td>Continental shelf</td><td>200 nm, up to 350 nm where the shelf extends</td><td>Seabed and subsoil resources</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge blue">
+    <span class="edge-h">How to read this handbook</span>
+    <p>Facts are stated plainly. Contested claims carry tags (<span class="tag fact">Established</span> <span class="tag interp">Interpretation</span> <span class="tag disputed">Disputed</span> <span class="tag verify">Re-verify</span>). Base names, project status, port rankings and incident details were written from memory of open sources and should be checked against current references. Related handbooks: no. 1 (Indian Navy), 10 (Indian Ocean security), 24 (Coast Guard versus Navy), 32 (Oceans and India's role), 31 (Rivers of India).</p>
+  </div>
+</section>
+
+<section id="landscape">
+  <h2>The coastal landscape</h2><hr class="sec-rule">
+  <p>The traditional figure of about 7,516 km for India's coastline (mainland plus islands) is the one most exam and official texts use. A later remeasurement at a finer scale gives a figure near 11,100 km, which shows how a coastline's length depends on method. <span class="tag verify">Re-verify</span> Gujarat has the longest mainland coastline. The country has about 1,300 islands, mostly in the Andaman and Nicobar group (Bay of Bengal) and Lakshadweep (Arabian Sea). <span class="tag verify">Re-verify counts</span></p>
+  <div class="tablewrap">
+    <table>
+      <caption>Coastal states and Union Territories</caption>
+      <thead><tr><th>Sea</th><th>Coastal states and UTs (north to south or by region)</th></tr></thead>
+      <tbody>
+        <tr><td>Arabian Sea (west)</td><td>Gujarat, Dadra and Nagar Haveli and Daman and Diu, Maharashtra, Goa, Karnataka, Kerala, Lakshadweep (islands); Mahe (Puducherry's enclave on the Kerala coast)</td></tr>
+        <tr><td>Bay of Bengal (east)</td><td>Tamil Nadu, Puducherry (with Karaikal), Andhra Pradesh, Odisha, West Bengal, Andaman and Nicobar Islands</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul>
+    <li><strong>West coast:</strong> a narrow plain below the Western Ghats, with natural harbours such as Mumbai and Kochi, the Konkan and Malabar stretches, backwaters in Kerala, and the Gulfs of Kutch and Khambhat in Gujarat.</li>
+    <li><strong>East coast:</strong> a wider plain called the Coromandel in the south and the Northern Circars in Andhra, with large deltas (Mahanadi, Godavari, Krishna, Kaveri, Ganga-Brahmaputra), lagoons such as Chilika and Pulicat, and fewer natural harbours.</li>
+    <li><strong>Hazards:</strong> most Indian Ocean cyclones affecting India form in the Bay of Bengal and strike the east coast, with surge and flooding; the Arabian Sea has become more active in recent years. Tsunami risk, erosion and rising sea level affect both coasts. <span class="tag interp">Interpretation of trends</span></li>
+    <li><strong>Mangroves:</strong> the Sundarbans is the largest mangrove forest in the world, shared with Bangladesh, and acts as a natural buffer against storm surge.</li>
+  </ul>
+</section>
+
+<section id="layers">
+  <h2>Who guards the coast</h2><hr class="sec-rule">
+  <p>No single agency guards the coast. The system is layered by distance from shore and by type of task, and after 26/11 the Navy was designated the authority responsible for overall maritime security, including coastal and offshore security. <span class="tag verify">Re-verify exact wording of the 2009 arrangement</span></p>
+  <div class="tablewrap">
+    <table>
+      <caption>Layers of coastal and maritime security</caption>
+      <thead><tr><th>Agency</th><th>Main role on the coast</th></tr></thead>
+      <tbody>
+        <tr><td>Indian Navy</td><td>Overall maritime security, the outer layer, surveillance of the EEZ and approaches, and war at sea</td></tr>
+        <tr><td>Indian Coast Guard</td><td>Territorial waters and EEZ law enforcement, search and rescue, pollution response and coordination of coastal security</td></tr>
+        <tr><td>Marine Police (state police)</td><td>Shallow coastal waters near shore, through coastal police stations and patrol boats</td></tr>
+        <tr><td>Customs and Marine Wings</td><td>Anti-smuggling at sea and in ports</td></tr>
+        <tr><td>State fisheries and maritime boards</td><td>Fisher registration, licensing of boats and minor ports</td></tr>
+        <tr><td>Port authorities, CISF and DG Shipping</td><td>Port and ship security, vessel certification, merchant shipping rules</td></tr>
+        <tr><td>BSF Water Wing</td><td>Creeks and riverine borders (Sir Creek, Sundarbans)</td></tr>
+        <tr><td>Fishing communities</td><td>Eyes and ears on the water, formally linked through registration and reporting</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The detailed structure, ranks and ships of the Navy and Coast Guard are in handbooks 1 and 24. The important regional point is overlap: a suspicious boat seen by a fisher may be handled by the Marine Police at 3 nm, the Coast Guard at 20 nm and the Navy beyond.</p>
+  <div class="edge gold">
+    <span class="edge-h">Why layers exist</span>
+    <p>The 26/11 attackers crossed a coast that several agencies each thought another was watching. Post-2008 reforms tried to remove such gaps through joint operations centres, shared tracking and clearer responsibility rather than by adding one new agency.</p>
+  </div>
+</section>
+
+<section id="commands">
+  <h2>Command geography</h2><hr class="sec-rule">
+  <div class="tablewrap">
+    <table>
+      <caption>Naval and Coast Guard formations by region</caption>
+      <thead><tr><th>Formation</th><th>Headquarters</th><th>Region of responsibility</th></tr></thead>
+      <tbody>
+        <tr><td>Western Naval Command</td><td>Mumbai</td><td>Arabian Sea and the west coast; principal operational base for the Western Fleet</td></tr>
+        <tr><td>Eastern Naval Command</td><td>Visakhapatnam</td><td>Bay of Bengal and the east coast; Eastern Fleet and the submarine arm</td></tr>
+        <tr><td>Southern Naval Command</td><td>Kochi</td><td>Training command, with responsibility for Kerala and the south-west approaches</td></tr>
+        <tr><td>Andaman and Nicobar Command</td><td>Port Blair</td><td>India's first tri-service command (2001), covering the islands and Malacca approaches</td></tr>
+        <tr><td>Coast Guard Region (West)</td><td>Mumbai</td><td>Maharashtra, Goa, Karnataka, Kerala and Lakshadweep</td></tr>
+        <tr><td>Coast Guard Region (North West)</td><td>Gandhinagar</td><td>Gujarat, Daman and Diu</td></tr>
+        <tr><td>Coast Guard Region (East)</td><td>Chennai</td><td>Tamil Nadu, Puducherry and Andhra Pradesh</td></tr>
+        <tr><td>Coast Guard Region (North East)</td><td>Kolkata</td><td>Odisha and West Bengal</td></tr>
+        <tr><td>Coast Guard Region (A&amp;N)</td><td>Port Blair</td><td>Andaman and Nicobar Islands</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Coast Guard headquarters is in New Delhi under the Director General. Regions are divided into districts and stations that map onto individual coastal states. <span class="tag verify">Re-verify boundaries, since regions and districts are reorganised from time to time</span></p>
+  <div class="note">
+    <h4>Theatre commands</h4>
+    <p>A proposed maritime theatre command would place the Navy, Air Force and Army maritime assets under one commander. Reports have discussed it for years without a final public decision. <span class="tag verify">Re-verify</span></p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part II · Region by region</p><h2>From the Kutch creeks to the Sundarbans, and the islands</h2></div>
+
+<section id="gujarat">
+  <h2>Gujarat and the north-west coast</h2><hr class="sec-rule">
+  <p>Gujarat has the longest mainland coastline of any state and the country's busiest cluster of ports. It faces Pakistan across the Kutch creeks and the northern Arabian Sea, with Karachi relatively close to the Kutch and Saurashtra coast, so coastal security here has a strong border-and-intelligence character. The Coast Guard's North West Region is headquartered at Gandhinagar.</p>
+  <ul>
+    <li><strong>Ports:</strong> Kandla (Deendayal Port, a major port), Mundra (large private port with the biggest cargo volumes among Indian ports), Pipavav, Dahej, Hazira, Okha, Porbandar and Dwarka. The Jamnagar refining complex is among the largest in the world, and the Alang yard near Bhavnagar is a major ship-breaking site. <span class="tag verify">Re-verify rankings</span></li>
+    <li><strong>Navy and Coast Guard:</strong> INS Valsura at Jamnagar (technical training), naval and Coast Guard presence at Okha and Porbandar, and Coast Guard stations and air enclaves along the coast. <span class="tag verify">Re-verify unit locations</span></li>
+    <li><strong>Sir Creek:</strong> a roughly 96 km tidal estuary in the Rann of Kutch between Gujarat and Pakistan's Sindh. India and Pakistan disagree on where the boundary runs along or through the creek, which affects maritime limits beyond its mouth. The issue has never been settled. <span class="tag disputed">Disputed</span></li>
+  </ul>
+  <div class="edge">
+    <span class="edge-h">Risks</span>
+    <p>Narcotics and arms smuggling from the Makran coast, boat intrusions and fishermen detained across the line (both sides hold fishermen), chemical and oil terminals concentrated near the coast, and cyclones such as Biparjoy in 2023. The 26/11 attackers hijacked the Indian fishing boat <em>Kuber</em> off Porbandar before heading to Mumbai.</p>
+  </div>
+</section>
+
+<section id="maharashtra">
+  <h2>Maharashtra and Goa</h2><hr class="sec-rule">
+  <p>Mumbai is the centre of gravity of India's west coast: the headquarters of the Western Naval Command, the Naval Dockyard, the Coast Guard's Western Region, the country's financial capital and its largest container port complex. It is also the city hit by the 1993 serial blasts, for which explosives were landed on the Raigad coast, and by the 26/11 sea-borne attack. <span class="tag fact">Established</span></p>
+  <ul>
+    <li><strong>Shipbuilding:</strong> Mazagon Dock Shipbuilders builds the Project 15B destroyers, Project 17A frigates and Scorpène-class (Kalvari) submarines, while Goa Shipyard at Vasco builds patrol vessels and other warships for the Navy and Coast Guard. <span class="tag verify">Re-verify delivery status</span></li>
+    <li><strong>Ports:</strong> Mumbai Port, JNPT at Nhava Sheva (India's largest container port by traffic) and Mormugao in Goa. A new deep-water port at Vadhavan in Palghar district was approved in 2024. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Goa:</strong> INS Hansa near Dabolim is a major naval air station and shares its airfield with the civil airport; Goa was liberated from Portuguese rule in December 1961 through Operation Vijay, in which the Navy took part.</li>
+    <li><strong>Offshore:</strong> the Mumbai High oil and gas fields lie off the coast and need protection from the sea.</li>
+    <li><strong>Maritime heritage:</strong> Shivaji's navy and Kanhoji Angre's fleet used the Konkan forts, including Sindhudurg; this heritage is cited in the Navy's current symbols.</li>
+  </ul>
+  <div class="note">
+    <h4>Why Mumbai matters to the exam answer</h4>
+    <p>It combines three layers in one place: a major naval command, a dense commercial port and a proven target. That combination is one reason the post-2008 reforms placed a joint operations centre here.</p>
+  </div>
+</section>
+
+<section id="karnataka-kerala">
+  <h2>Karnataka and Kerala</h2><hr class="sec-rule">
+  <h3>Karnataka</h3>
+  <p><strong>Karwar</strong> hosts INS Kadamba, the base built under Project Seabird. It was designed to relieve congestion at Mumbai and to give the Western Fleet a deep, sheltered base with room for large ships such as aircraft carriers; later phases of expansion have been planned. <span class="tag verify">Re-verify phase status</span> <strong>Mangaluru</strong> (New Mangalore Port, a major port, and the MRPL refinery) and the Coast Guard's district presence complete the picture. The Kali, Sharavati and other west-flowing rivers meet the sea here, and the Kaiga nuclear plant is inland on the Kali.</p>
+  <h3>Kerala</h3>
+  <p><strong>Kochi</strong> is the headquarters of the Southern Naval Command, with the Navy's flying school at INS Garuda and the shipyard that built INS Vikrant, India's first indigenous aircraft carrier, commissioned in September 2022. <strong>Vizhinjam</strong>, near Thiruvananthapuram, is a deep-water international transhipment port that began operations in 2024 and was formally commissioned in 2025. It aims to capture container transhipment that now goes through Colombo. <span class="tag verify">Re-verify dates and capacity</span></p>
+  <ul>
+    <li><strong>Enrica Lexie (2012):</strong> two Italian marines on a tanker shot dead two Indian fishermen off Kerala. An international tribunal in 2020 held that Italy's marines had immunity, while India was entitled to compensation. <span class="tag fact">Established</span> The case is a standard example of coastal jurisdiction and the EEZ.</li>
+    <li><strong>Vulnerabilities:</strong> coastal erosion, floods, a large fishing population and the dense shipping lane just offshore. <span class="tag interp">Interpretation</span></li>
+  </ul>
+</section>
+
+<section id="tamil-nadu">
+  <h2>Tamil Nadu and Puducherry</h2><hr class="sec-rule">
+  <p>Tamil Nadu has a long coast on the Bay of Bengal and the Gulf of Mannar and meets the Arabian Sea and the Indian Ocean at Kanniyakumari, the southern tip of the mainland. It faces Sri Lanka across the narrow Palk Strait. Chennai is the headquarters of the Coast Guard's Eastern Region and a major port.</p>
+  <ul>
+    <li><strong>Ports and yards:</strong> Chennai, Kamarajar (Ennore) and V. O. Chidambaranar (Tuticorin) are major ports; L&amp;T's Kattupalli yard near Chennai builds Coast Guard and other vessels. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Naval air presence:</strong> INS Rajali at Arakkonam, a major naval air station, and INS Parundu near Uchipuli, with coastal Coast Guard air and surface stations at Mandapam and elsewhere. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Fisher issue and Katchatheevu:</strong> Tamil Nadu's fishermen routinely cross the maritime boundary in the Palk Bay, where fishing grounds are small, and are arrested by the Sri Lankan Navy. India ceded the islet of Katchatheevu to Sri Lanka by the 1974 and 1976 agreements, which remains politically contested in Tamil Nadu. Bottom trawling by Indian boats is also a point of friction. <span class="tag disputed">Disputed</span></li>
+    <li><strong>Adam's Bridge and Sethusamudram:</strong> the shoals between Rameswaram and Mannar are the site of the long-debated Sethusamudram ship-canal project, now stalled over environmental and cultural objections.</li>
+    <li><strong>Nuclear sites:</strong> Kalpakkam and Kudankulam on the coast need maritime protection and are exposed to tsunami risk, a lesson of 2004.</li>
+  </ul>
+  <p><strong>Puducherry</strong>'s Karaikal enclave is on the Tamil Nadu coast, and Mahe is on the Kerala coast, which is why the Union Territory has coasts on both seas.</p>
+</section>
+
+<section id="andhra-odisha">
+  <h2>Andhra Pradesh and Odisha</h2><hr class="sec-rule">
+  <p>This stretch holds the east coast's naval heart and the country's most cyclone-exposed shoreline. <strong>Visakhapatnam</strong> is the headquarters of the Eastern Naval Command and home to the Eastern Fleet, the Naval Dockyard, INS Dega air station and the submarine arm, including the training school INS Satavahana. It is also where India's nuclear ballistic-missile submarines are built at the Ship Building Centre, and a dedicated naval base, Project Varsha, has been developed near Rambilli to the south. <span class="tag verify">Re-verify</span></p>
+  <ul>
+    <li><strong>Submarines:</strong> INS Arihant (the first SSBN, commissioned 2016, publicly confirmed on its first deterrence patrol in 2018) and INS Arighaat (commissioned in 2024) are associated with Visakhapatnam. Detail on India's deterrent is not public. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Ports:</strong> Visakhapatnam (major), Gangavaram, Kakinada and Krishnapatnam in Andhra; Paradip (major), Dhamra and Gopalpur in Odisha. Coast Guard stations at Visakhapatnam, Kakinada, Krishnapatnam, Paradip and Gopalpur form the local layer.</li>
+    <li><strong>Missile testing:</strong> DRDO's range at Dr. APJ Abdul Kalam Island (formerly Wheeler Island) off Odisha and the Chandipur test range host many missile trials, which is why the sea and airspace there are regularly restricted.</li>
+    <li><strong>Cyclones:</strong> the 1999 Odisha super cyclone killed about ten thousand people; Hudhud (2014) hit Visakhapatnam hard; Fani (2019) saw about 1.2 million people moved to shelters with low loss of life, widely cited as a success of early warning. <span class="tag verify">Re-verify figures</span></li>
+    <li><strong>Ecology:</strong> Gahirmatha has one of the world's largest olive ridley turtle nesting sites, and Bhitarkanika has mangroves, both sensitive to port and test-range activity.</li>
+  </ul>
+</section>
+
+<section id="bengal">
+  <h2>West Bengal and the Sundarbans</h2><hr class="sec-rule">
+  <p>West Bengal's coast is short and low, built from the Ganga-Brahmaputra delta. Kolkata (Syama Prasad Mookerjee Port) and Haldia lie upstream on the Hooghly, so the ports depend on continuous dredging and pilotage. Garden Reach Shipbuilders and Engineers at Kolkata builds frigates, corvettes and survey ships for the Navy, and the Coast Guard's North East Region is headquartered at Kolkata.</p>
+  <ul>
+    <li><strong>Sundarbans:</strong> the largest mangrove forest in the world, shared with Bangladesh, home to the Royal Bengal tiger and protected as a UNESCO site. It is a wetland border where the BSF Water Wing, the Coast Guard and state police operate on small creeks and rivers.</li>
+    <li><strong>Boundary with Bangladesh:</strong> in 2014 an arbitral tribunal under UNCLOS settled the India-Bangladesh maritime boundary in the Bay of Bengal, awarding most of the disputed area to Bangladesh. India accepted the result, which removed an irritant and was followed by the 2015 land boundary agreement. <span class="tag fact">Established</span> <span class="tag verify">Re-verify area figures</span></li>
+    <li><strong>Risks:</strong> cyclones (Bulbul 2019, Amphan 2020), storm surge and rising salinity in the delta, human trafficking and smuggling across creeks, and illegal trawling.</li>
+    <li><strong>Ports plan:</strong> deep-water port proposals such as Tajpur have repeatedly stalled, so Kolkata and Haldia remain the main gateways. <span class="tag verify">Re-verify</span></li>
+  </ul>
+</section>
+
+<section id="andaman">
+  <h2>Andaman and Nicobar Islands</h2><hr class="sec-rule">
+  <p>The islands lie more than 1,000 km from the mainland and close to Myanmar, Thailand and Indonesia. Indira Point at the southern end of Great Nicobar is only about 150 km from Sumatra, and the chain sits near the western approach to the Strait of Malacca, through which a large share of Chinese energy imports passes. This geography explains much of their strategic value. The islands contribute roughly a third of India's EEZ. <span class="tag verify">Re-verify</span></p>
+  <ul>
+    <li><strong>Command:</strong> the Andaman and Nicobar Command at Port Blair (2001) is India's only fully tri-service theatre-style command; its commander-in-chief rotates among the services. Naval bases include INS Utkrosh and INS Baaz (Campbell Bay, Great Nicobar), with airfields at Port Blair, Car Nicobar and elsewhere. <span class="tag verify">Re-verify base names</span></li>
+    <li><strong>Great Nicobar project:</strong> a large package of a transhipment port at Galathea Bay, airport, township and power plant, with a headline cost around ₹72,000 crore. Supporters stress strategic and economic value. Critics point to the Shompen and Nicobarese communities, forest loss, earthquake and tsunami risk and effects on leatherback turtles. <span class="tag disputed">Disputed</span></li>
+    <li><strong>Protected peoples:</strong> the Sentinelese, Jarawa, Shompen and others are protected, and access to many areas is restricted by law.</li>
+    <li><strong>Hazards:</strong> the 2004 earthquake and tsunami struck the islands hard, with damage to the Car Nicobar air base and the submergence of parts of Indira Point.</li>
+    <li><strong>Diplomacy:</strong> the MILAN exercise was long hosted around Port Blair and later moved to Visakhapatnam.</li>
+  </ul>
+</section>
+
+<section id="lakshadweep">
+  <h2>Lakshadweep and small islands</h2><hr class="sec-rule">
+  <p>Lakshadweep is a Union Territory of about 36 coral islands, atolls and reefs off Kerala, of which around ten are inhabited, with Kavaratti as its capital. Land area is tiny, but its waters enlarge India's EEZ and lie beside some of the busiest east-west shipping lanes in the world. The Eight Degree Channel between Minicoy and the Maldives and the Nine Degree Channel between Minicoy and the northern group are the key passages. <span class="tag verify">Re-verify island counts</span></p>
+  <ul>
+    <li><strong>Naval presence:</strong> INS Dweeprakshak at Kavaratti (commissioned 2012) and INS Jatayu at Minicoy (commissioned 6 March 2024) give the Navy forward points close to those channels, alongside Coast Guard stations on the islands. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Connectivity:</strong> a submarine optical-fibre cable from Kochi to the islands was developed to improve internet and governance reach. <span class="tag verify">Re-verify commissioning</span></li>
+    <li><strong>Politics:</strong> the islands drew attention in January 2024 after online exchanges with the Maldives over tourism, and earlier controversy over land and development regulations for the islands. <span class="tag interp">Interpretation</span></li>
+    <li><strong>Fragility:</strong> coral bleaching, erosion and sea-level rise threaten livelihoods; tuna fishing and coconut are the economic base.</li>
+  </ul>
+  <div class="edge green">
+    <span class="edge-h">Other small islands</span>
+    <p>Bet Dwarka (Gujarat), Sagar Island (West Bengal), Pamban/Rameswaram (Tamil Nadu) and the Odisha test islands each show how a small coastal patch can carry religious, military or ecological importance.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part III · Security and strategy</p><h2>How the coast is protected and what threatens it</h2></div>
+
+<section id="architecture">
+  <h2>Coastal security architecture after 26/11</h2><hr class="sec-rule">
+  <p>On 26 November 2008, ten men trained and launched from Pakistan travelled by sea, hijacked the Indian fishing boat <em>Kuber</em> and landed at Mumbai in rubber boats, attacking several sites in the city over about three days. The lesson drawn was that coastal watch, intelligence and response had too many gaps. <span class="tag fact">Established</span> The reforms that followed are the core of this section.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>The three-tier model and its supporting systems</caption>
+      <thead><tr><th>Element</th><th>What it does</th></tr></thead>
+      <tbody>
+        <tr><td>Tier 1: Navy</td><td>Outer layer, offshore waters and overall maritime security</td></tr>
+        <tr><td>Tier 2: Coast Guard</td><td>Territorial waters, including areas that Marine Police also patrol, and coordination of coastal security</td></tr>
+        <tr><td>Tier 3: Marine Police</td><td>Shallow coastal waters through coastal police stations and boats under the Coastal Security Scheme (phases from 2005 and 2011)</td></tr>
+        <tr><td>Joint Operations Centres</td><td>Mumbai, Visakhapatnam, Kochi and Port Blair, where Navy, Coast Guard, police and other agencies share one picture</td></tr>
+        <tr><td>Coastal radar chain and AIS</td><td>Shore radar stations and automatic identification system tracking of larger vessels</td></tr>
+        <tr><td>NC3I network, IMAC and IFC-IOR</td><td>Network linking sensors, a fusion centre at Gurugram and a regional information-sharing centre opened in 2018</td></tr>
+        <tr><td>Fisher and boat registration</td><td>Biometric ID cards for fishers, registration and tracking devices for boats</td></tr>
+        <tr><td>Exercises: Sagar Kavach and Sea Vigil</td><td>Periodic coastal security drills at state and national levels to test response</td></tr>
+        <tr><td>NCSMCS</td><td>A national committee, chaired by the Cabinet Secretary, that coordinates maritime and coastal security across ministries</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The Maritime Anti-Piracy Act, 2022 gave India a domestic law to prosecute piracy on the high seas, closing a gap exposed by anti-piracy operations in the Gulf of Aden. <span class="tag verify">Re-verify numbers of stations and sanctioned boats</span></p>
+  <div class="edge blue">
+    <span class="edge-h">Where the system is still tested</span>
+    <p>Tracking small wooden fishing boats is hard. Marine Police capacity, trained crews and maintenance differ widely between states, and shared data only helps if agencies act on it quickly. These are the points an examiner will want you to raise. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<section id="threats">
+  <h2>Threats along the coast</h2><hr class="sec-rule">
+  <div class="tablewrap">
+    <table>
+      <caption>Principal threats, examples and the usual first responders</caption>
+      <thead><tr><th>Threat</th><th>Examples</th><th>Main response</th></tr></thead>
+      <tbody>
+        <tr><td>Terrorism from the sea</td><td>1993 explosives landing on the Raigad coast; 26/11 in 2008</td><td>Three-tier model, JOCs, intelligence sharing</td></tr>
+        <tr><td>Narcotics, gold and arms smuggling</td><td>Large drug seizures at sea and in ports, off Gujarat and the Andaman and Nicobar Islands</td><td>Coast Guard, Navy, Customs and NCB working together <span class="tag verify">Re-verify cases</span></td></tr>
+        <tr><td>Illegal fishing and boundary crossings</td><td>Foreign trawlers in the EEZ; Indian fishermen arrested by Pakistan and Sri Lanka</td><td>Coast Guard patrols; diplomatic channels</td></tr>
+        <tr><td>Piracy and armed robbery</td><td>Arabian Sea and Gulf of Aden incidents; the 2024 boarding of the hijacked MV Ruen</td><td>Navy anti-piracy patrols; the 2022 Act</td></tr>
+        <tr><td>Infiltration and trafficking</td><td>Boats from Myanmar and Bangladesh; Sundarbans creeks</td><td>BSF Water Wing, Coast Guard, state police</td></tr>
+        <tr><td>Pollution and shipping accidents</td><td>Ennore tanker collision (2017); container-ship sinkings off Kerala in 2025</td><td>Coast Guard, which coordinates marine oil-spill response <span class="tag verify">Re-verify 2025 incidents</span></td></tr>
+        <tr><td>Cyber and port disruption</td><td>The 2017 malware attack that disrupted a terminal at JNPT</td><td>Port and national cyber agencies <span class="tag verify">Re-verify</span></td></tr>
+        <tr><td>Foreign survey and research ships</td><td>Chinese vessels in the Indian Ocean and visits to Sri Lankan and Maldivian ports</td><td>Navy surveillance, diplomacy <span class="tag interp">Interpretation of intent</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Many of these are matters for law enforcement rather than for the Navy, which is why the layered system matters. A response that treats every fishing boat as a threat damages livelihoods, while one that ignores a small boat can miss the next 26/11. Other detail on the Navy's role in anti-piracy and the Red Sea is in handbooks 1, 23 and 32.</p>
+</section>
+
+<section id="assets">
+  <h2>Ports and strategic coastal assets</h2><hr class="sec-rule">
+  <p>Around 95% of India's trade by volume, and a large share by value, moves by sea. <span class="tag verify">Re-verify</span> The government's Sagarmala programme (2015) and later maritime vision documents aim at port-led development, better hinterland links and more shipbuilding. A coast that matters this much economically has to be protected.</p>
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>Ports</h4>
+      <p>Twelve major ports have long been counted (Kandla/Deendayal, Mumbai, JNPT, Mormugao, New Mangalore, Cochin, Chennai, Kamarajar, V. O. Chidambaranar, Visakhapatnam, Paradip and Kolkata including Haldia), with Vadhavan planned as the next. Private ports such as Mundra and Pipavav handle large volumes. <span class="tag verify">Re-verify</span></p>
+    </div>
+    <div class="panel red-top">
+      <h4>Shipyards</h4>
+      <p>Defence yards include Mazagon Dock (Mumbai), Cochin Shipyard, Goa Shipyard, Garden Reach (Kolkata) and Hindustan Shipyard (Visakhapatnam), with private yards such as L&amp;T Kattupalli. Shipbuilding is a strategic as well as an industrial asset.</p>
+    </div>
+    <div class="panel gold-top">
+      <h4>Energy</h4>
+      <p>Offshore fields (Mumbai High and east-coast basins), coastal refineries (Jamnagar, Mangaluru, Kochi, Paradip and Visakhapatnam), crude import terminals and LNG terminals (Dahej, Hazira, Kochi and others) sit on or near the shore.</p>
+    </div>
+    <div class="panel green-top">
+      <h4>Nuclear and data</h4>
+      <p>Coastal nuclear plants (Tarapur, Kalpakkam, Kudankulam, with others planned) and the submarine cables that land at Mumbai, Chennai, Kochi and elsewhere make the coast a digital as well as a physical gateway. <span class="tag interp">Interpretation of risk</span></p>
+    </div>
+  </div>
+  <div class="edge">
+    <span class="edge-h">A recurring exam point</span>
+    <p>Ports are also chokepoints in India's own economy. A short disruption at Mumbai-JNPT, Mundra or Chennai would affect supply chains across the country, which is why port security and cyber resilience belong in any coastal security answer.</p>
+  </div>
+</section>
+
+<section id="disasters">
+  <h2>Disaster response and humanitarian operations</h2><hr class="sec-rule">
+  <p>The Navy and Coast Guard are first responders to coastal disasters as well as security forces. They provide ships, helicopters, divers and medical teams, while the National Disaster Response Force and state agencies run land operations. The Coast Guard also runs the national search and rescue system, with a main rescue coordination centre at Mumbai and sub-centres at other ports. <span class="tag verify">Re-verify structure</span></p>
+  <div class="tablewrap">
+    <table>
+      <caption>Selected operations</caption>
+      <thead><tr><th>Year</th><th>Event</th><th>Response</th></tr></thead>
+      <tbody>
+        <tr><td class="num">2004</td><td>Indian Ocean tsunami</td><td>Navy relief on the Tamil Nadu coast and the islands, with assistance to Sri Lanka, Maldives and Indonesia <span class="tag verify">Re-verify operation names</span></td></tr>
+        <tr><td class="num">2018</td><td>Kerala floods</td><td>Operation Madad, with naval boats, helicopters and divers</td></tr>
+        <tr><td class="num">2019</td><td>Cyclone Fani</td><td>Early warning and mass evacuation in Odisha, with Navy and NDRF on standby</td></tr>
+        <tr><td class="num">2020</td><td>COVID-19</td><td>Operation Samudra Setu brought Indians home by ship from the Gulf, Maldives and Sri Lanka</td></tr>
+        <tr><td class="num">2021</td><td>Cyclone Tauktae</td><td>Navy rescue of crew from barges off Mumbai after the loss of barge P305, with heavy loss of life <span class="tag verify">Re-verify figures</span></td></tr>
+        <tr><td class="num">2023</td><td>Cyclone Biparjoy</td><td>Evacuations in Gujarat and Coast Guard readiness at Kutch</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Soft power at sea</span>
+    <p>India's humanitarian work (HADR) at sea, in the Indian Ocean and beyond, is often described as a source of goodwill and a reason neighbours see India as a first responder. Critics note that it does not substitute for hard capability. <span class="tag interp">Interpretation</span> The wider "first responder" policy is in handbook 32.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Knowledge toolkit</p><h2>Analysis, practice and revision</h2></div>
+
+<section id="perspectives">
+  <h2>Perspectives, controversies and facts</h2><hr class="sec-rule">
+  <p><span class="tag interp">Interpretation</span> <strong>Is the coast safer than in 2008?</strong> One view points to radar chains, joint operations centres, registration and more boats and stations, with no repeat of 26/11. Another points to uneven state capacity, ageing patrol boats and the difficulty of tracking small craft. Both contain truth. <span class="tag disputed">Disputed</span></p>
+  <p><span class="tag interp">Interpretation</span> <strong>Security versus livelihood.</strong> Tracking devices, registration and patrol rules help security but cost fishermen money and time. Palk Bay shows how a security boundary can collide with a living: the fishing ground and the line are the same place.</p>
+  <p><span class="tag interp">Interpretation</span> <strong>Development versus ecology.</strong> Ports, the Great Nicobar project and coastal roads bring economic and strategic gains but threaten mangroves, turtle nesting sites, tribal communities and fragile islands. Coastal Regulation Zone rules attempt to balance the two, and each revision is contested.</p>
+  <p><span class="tag interp">Interpretation</span> <strong>Unified maritime command.</strong> Supporters argue it would remove coordination gaps. Critics fear it could dilute service roles or tie assets to one region. No final design is public. <span class="tag verify">Re-verify</span></p>
+  <h3>Lesser-known facts</h3>
+  <ul>
+    <li><span class="tag fact">Established</span> Kanniyakumari is where the Arabian Sea, the Bay of Bengal and the Indian Ocean meet.</li>
+    <li><span class="tag fact">Established</span> Puducherry has enclaves on both coasts: Karaikal on the east and Mahe on the west.</li>
+    <li><span class="tag fact">Established</span> Kolkata is a river port, roughly 100 km or more from the sea along the Hooghly. <span class="tag verify">Re-verify distance</span></li>
+    <li><span class="tag fact">Established</span> The Andaman and Nicobar Command (2001) was India's first tri-service command.</li>
+    <li><span class="tag fact">Established</span> India's 2014 arbitration with Bangladesh was settled by an UNCLOS tribunal, and the result was accepted by both countries.</li>
+    <li><span class="tag fact">Established</span> Sir Creek remains the only unresolved maritime-boundary segment with Pakistan on the western coast. <span class="tag verify">Re-verify framing</span></li>
+  </ul>
+</section>
+
+<section id="scenarios-options">
+  <h2>Scenarios and strategic options</h2><hr class="sec-rule">
+  <p>Presented neutrally, without recommending a political position:</p>
+  <div class="grid two">
+    <div class="panel red-top">
+      <h4>Boat-borne attack on a port city</h4>
+      <p>A small group lands from the sea near a dense city. Detection at 20-50 nm, rapid hand-off between Navy, Coast Guard and police, and local intelligence decide the outcome.</p>
+    </div>
+    <div class="panel blue-top">
+      <h4>Cyclone near a port and a test range</h4>
+      <p>A strong storm threatens Visakhapatnam or Odisha, with ships and missile ranges at risk, large evacuations and relief needs, and supply chains for the east coast disrupted.</p>
+    </div>
+    <div class="panel gold-top">
+      <h4>Tension at the Kutch creeks</h4>
+      <p>Boat incidents and boundary claims at Sir Creek test restraint, surveillance and the line between law enforcement and military action.</p>
+    </div>
+    <div class="panel green-top">
+      <h4>Disruption in the Eight Degree Channel</h4>
+      <p>An incident on busy sea-lanes near Minicoy would affect shipping and energy flows and test forward bases and partner coordination.</p>
+    </div>
+  </div>
+  <div class="tablewrap">
+    <table>
+      <caption>Options and trade-offs</caption>
+      <thead><tr><th>Option</th><th>Benefit</th><th>Risk or cost</th></tr></thead>
+      <tbody>
+        <tr><td>Strengthen Marine Police and equip every state alike</td><td>Closes the inner-layer gap</td><td>Recurring costs, training and state-level variation</td></tr>
+        <tr><td>Mandate and subsidise tracking for all boats</td><td>Better awareness of small craft</td><td>Cost to fishers; data overload</td></tr>
+        <tr><td>Expand forward bases (Andaman and Nicobar, Lakshadweep)</td><td>Surveillance of chokepoints</td><td>Ecological and local-community concerns</td></tr>
+        <tr><td>Grow the Coast Guard fleet and aviation</td><td>More persistent presence</td><td>Manpower, maintenance, shipyard capacity</td></tr>
+        <tr><td>Deepen regional information sharing (IFC-IOR)</td><td>Wider picture, partners as sensors</td><td>Intelligence-sharing limits</td></tr>
+        <tr><td>Stronger disaster preparedness on coasts</td><td>Saves lives and protects assets</td><td>Costly shelters and resettlement</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="answer-framework">
+  <h2>Answer framework and worked example</h2><hr class="sec-rule">
+  <p>For any regional or coastal security question, move through definition, location, evidence, contest, analysis, test, position, concession and close. One compressed example follows.</p>
+  <div class="panel red-top">
+    <h4>Worked example: "How well is India's coast protected against another 26/11?"</h4>
+    <dl class="rungs">
+      <dt>Define</dt><dd>Protection means detecting, identifying and stopping a hostile boat before and as it reaches the coast, and responding if it lands.</dd>
+      <dt>Locate</dt><dd>A multi-layer system running from the Navy offshore to the Coast Guard in territorial waters and the Marine Police close to shore, with joint operations centres at four sites.</dd>
+      <dt>Establish</dt><dd>Reforms since 2008 include coastal police stations, radar and AIS networks, fisher registration, the NC3I network and IFC-IOR, plus regular Sagar Kavach and Sea Vigil drills.</dd>
+      <dt>Contest</dt><dd>Small wooden boats remain hard to track, state capacity differs, and coastlines such as the creeks of Kutch and the Sundarbans are difficult to watch.</dd>
+      <dt>Analyse</dt><dd>The system is much stronger than in 2008, but it depends on intelligence, quick hand-offs and fisher cooperation as much as on hardware.</dd>
+      <dt>Test</dt><dd>Compare response times and detection records in exercises with real incidents, and compare states.</dd>
+      <dt>Position</dt><dd>Substantially improved but not complete; the weak points are small craft, uneven state capacity and coordination across agencies.</dd>
+      <dt>Concede</dt><dd>Public data on performance is limited, and some details are classified. <span class="tag verify">Re-verify numbers</span></dd>
+      <dt>Close</dt><dd>The priority is to level up the inner layer and keep local communities as partners, not suspects.</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="qbank">
+  <h2>Practice bank: questions and motions</h2><hr class="sec-rule">
+  <p class="lede">Fourteen questions. Answer each aloud, standing, in ninety seconds.</p>
+  <ol class="qbank">
+    <li>Describe India's maritime zones and what each allows.</li>
+    <li>Compare the characteristics of India's east and west coasts.</li>
+    <li>Why does the Andaman and Nicobar Command matter strategically?</li>
+    <li>Explain the Sir Creek dispute.</li>
+    <li>Why is Visakhapatnam important to the Navy?</li>
+    <li>What was the 26/11 attack and how did coastal security change after it?</li>
+    <li>Explain the three-tier coastal security model.</li>
+    <li>What roles do the JOCs, NC3I and IFC-IOR play?</li>
+    <li>What are the main threats along India's coast?</li>
+    <li>What is the Palk Bay fisher issue and why is it hard to solve?</li>
+    <li>What is Vizhinjam and why does it matter?</li>
+    <li>What are the objections to the Great Nicobar project?</li>
+    <li>What role do the Navy and Coast Guard play in disasters?</li>
+    <li>How would you rank India's coastal regions by strategic importance, and why?</li>
+  </ol>
+  <h3>Debate motions</h3>
+  <ol class="dbank">
+    <li>This house believes India's coastline is better protected now than before 2008.</li>
+    <li>This house believes the Marine Police should be merged into the Coast Guard.</li>
+    <li>This house believes Great Nicobar should be developed as a strategic port despite its ecological cost.</li>
+    <li>This house believes the Katchatheevu agreement should be revisited.</li>
+    <li>This house believes mandatory tracking devices on all fishing boats are justified.</li>
+    <li>This house believes India needs a single maritime theatre command.</li>
+    <li>This house believes ports should come before coastal ecology in development plans.</li>
+  </ol>
+</section>
+
+<section id="revision">
+  <h2>Chronology, glossary and revision sheet</h2><hr class="sec-rule">
+  <h3>Master chronology</h3>
+  <ul class="timeline">
+    <li><span class="yr">1961</span><span>Goa liberated (Operation Vijay), with naval participation.</span></li>
+    <li><span class="yr">1971</span><span>Naval strikes on Karachi during the war with Pakistan.</span></li>
+    <li><span class="yr">1978</span><span>Indian Coast Guard formally established.</span></li>
+    <li><span class="yr">1993</span><span>Explosives landed on the Raigad coast before the Mumbai blasts.</span></li>
+    <li><span class="yr">1999</span><span>Odisha super cyclone.</span></li>
+    <li><span class="yr">2001</span><span>Andaman and Nicobar Command created.</span></li>
+    <li><span class="yr">2004</span><span>Indian Ocean tsunami.</span></li>
+    <li><span class="yr">2005</span><span>Coastal Security Scheme begins. <span class="tag verify">Re-verify</span></span></li>
+    <li><span class="yr">2008</span><span>26/11 sea-borne attack on Mumbai.</span></li>
+    <li><span class="yr">2009</span><span>Navy designated responsible for overall maritime security.</span></li>
+    <li><span class="yr">2012</span><span>Enrica Lexie incident off Kerala; INS Dweeprakshak commissioned.</span></li>
+    <li><span class="yr">2014</span><span>Arbitral award on the India-Bangladesh maritime boundary.</span></li>
+    <li><span class="yr">2015</span><span>Sagarmala programme launched.</span></li>
+    <li><span class="yr">2018</span><span>IFC-IOR opens at Gurugram; Kerala floods and Operation Madad.</span></li>
+    <li><span class="yr">2019</span><span>Cyclone Fani evacuations in Odisha.</span></li>
+    <li><span class="yr">2022</span><span>INS Vikrant commissioned at Kochi; Maritime Anti-Piracy Act.</span></li>
+    <li><span class="yr">2024</span><span>INS Jatayu commissioned at Minicoy; Vadhavan port approved. <span class="tag verify">Re-verify</span></span></li>
+    <li><span class="yr">2025</span><span>Vizhinjam port formally commissioned. <span class="tag verify">Re-verify</span></span></li>
+  </ul>
+  <h3>Glossary</h3>
+  <dl class="term">
+    <dt>AIS</dt><dd>Automatic Identification System, a transponder that broadcasts a ship's identity and position.</dd>
+    <dt>Baseline</dt><dd>The line from which maritime zones are measured.</dd>
+    <dt>CRZ</dt><dd>Coastal Regulation Zone, rules that limit construction near the shoreline.</dd>
+    <dt>EEZ</dt><dd>Exclusive Economic Zone, up to 200 nautical miles from the baseline.</dd>
+    <dt>HADR</dt><dd>Humanitarian assistance and disaster relief.</dd>
+    <dt>IMBL</dt><dd>International Maritime Boundary Line.</dd>
+    <dt>IFC-IOR</dt><dd>Information Fusion Centre for the Indian Ocean Region, at Gurugram.</dd>
+    <dt>IUU fishing</dt><dd>Illegal, unreported and unregulated fishing.</dd>
+    <dt>JOC</dt><dd>Joint Operations Centre where agencies share a coastal picture.</dd>
+    <dt>Marine Police</dt><dd>State coastal police that patrol shallow waters.</dd>
+    <dt>MRCC</dt><dd>Maritime Rescue Coordination Centre.</dd>
+    <dt>NC3I</dt><dd>National Command, Control, Communication and Intelligence network.</dd>
+    <dt>Sagarmala</dt><dd>Programme for port-led development and coastal connectivity.</dd>
+    <dt>Territorial sea</dt><dd>Waters up to 12 nautical miles over which the state has sovereignty.</dd>
+  </dl>
+  <h3>Rapid revision sheet</h3>
+  <div class="note">
+    <h4>Framework</h4>
+    <ul>
+      <li>Coast about 7,516 km (traditional); 13 states and UTs; zones: 12 / 24 / 200 nm.</li>
+      <li>Layers: Navy (outer), Coast Guard (territorial waters), Marine Police (shallow waters).</li>
+      <li>Commands: Western (Mumbai), Eastern (Visakhapatnam), Southern (Kochi), A&amp;N (Port Blair).</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h4>Regions</h4>
+    <ul>
+      <li>Gujarat: Kandla, Mundra, Sir Creek, Jamnagar, Coast Guard HQ NW at Gandhinagar.</li>
+      <li>Maharashtra and Goa: Mumbai, Mazagon Dock, JNPT, INS Hansa, Vadhavan.</li>
+      <li>Karnataka and Kerala: Karwar (Seabird), Kochi (Vikrant, Southern Command), Vizhinjam.</li>
+      <li>Tamil Nadu: Chennai, Tuticorin, Katchatheevu, Palk Bay, Kudankulam.</li>
+      <li>Andhra and Odisha: Visakhapatnam, SSBN base, Kalam Island, cyclones.</li>
+      <li>West Bengal: Kolkata, Haldia, GRSE, Sundarbans, 2014 award.</li>
+      <li>Islands: Andaman and Nicobar (Great Nicobar, Indira Point); Lakshadweep (INS Jatayu, Eight Degree Channel).</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h4>Security and strategy</h4>
+    <ul>
+      <li>26/11 (2008), 1993 landings; JOCs at Mumbai, Visakhapatnam, Kochi, Port Blair; NC3I, IFC-IOR; Sagar Kavach, Sea Vigil.</li>
+      <li>Threats: terror, smuggling, illegal fishing, piracy, pollution, cyber, foreign survey ships.</li>
+      <li>Disasters: 2004 tsunami, Kerala floods, Fani, Tauktae; Coast Guard coordinates oil-spill response.</li>
+      <li>Always tag uncertain facts for re-verification.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer>
+  <p>Compiled from open sources. Study aid only, not an official publication.</p>
+  <p>Source &amp; contributions: <a href="https://github.com/mohitkushwaha0601/matre">github.com/mohitkushwaha0601/matre</a></p>
+</footer>
+
+</body>
+</html>

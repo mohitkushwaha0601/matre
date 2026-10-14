@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Indian Air Force — A Deep Knowledge Handbook</title>
+<meta name="description" content="A 20-section study handbook on the Indian Air Force: origins, command structure, wars and operations, fighter fleet and squadron strength, air defence, doctrine, modernisation, people and SSB-style practice material.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0F1E2E;
+  --ink-soft:#4A5E72;
+  --paper:#EEF2F6;
+  --surface:#FFFFFF;
+  --surface-2:#DDE6EE;
+  --rule:#C3D0DC;
+  --rule-strong:#94A7B9;
+  --red:#B3322A;
+  --blue:#1F5C9E;
+  --gold:#A07416;
+  --green:#1E6B4E;
+  --hero-bg:#0B2545;
+  --hero-ink:#EEF2F6;
+  --hero-dim:#9DB4CC;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ink:#E3EAF2;
+    --ink-soft:#A5B6C8;
+    --paper:#07101A;
+    --surface:#0F1C2B;
+    --surface-2:#172A3E;
+    --rule:#26394D;
+    --rule-strong:#40576F;
+    --red:#EE8077;
+    --blue:#7FB5EE;
+    --gold:#D9B04E;
+    --green:#59C295;
+    --hero-bg:#050C14;
+    --hero-ink:#E3EAF2;
+    --hero-dim:#8397AB;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E3EAF2;
+  --ink-soft:#A5B6C8;
+  --paper:#07101A;
+  --surface:#0F1C2B;
+  --surface-2:#172A3E;
+  --rule:#26394D;
+  --rule-strong:#40576F;
+  --red:#EE8077;
+  --blue:#7FB5EE;
+  --gold:#D9B04E;
+  --green:#59C295;
+  --hero-bg:#050C14;
+  --hero-ink:#E3EAF2;
+  --hero-dim:#8397AB;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1.5rem);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ---------- hero ---------- */
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
+.flagstrip{display:flex;height:12px}
+.flagstrip span{flex:1}
+.f1{background:#FF9933}
+.f2{background:#FFFFFF}
+.f3{background:#138808}
+.f4{background:#0B2545}
+.f5{background:#1F5C9E}
+.f6{background:#5B9BD5}
+.f7{background:#A9CCE8}
+.f8{background:#B3322A}
+.hero-inner{max-width:1180px;margin:0 auto;padding:3.2rem 1.5rem 0}
+.kicker{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--hero-dim);margin:0 0 .8rem}
+.motto{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:clamp(1.7rem,5.2vw,2.9rem);line-height:1.2;margin:0;letter-spacing:.005em;max-width:26ch}
+.motto-en{margin:.55rem 0 0;color:var(--hero-dim);font-size:clamp(.95rem,2.4vw,1.1rem);font-style:italic;max-width:62ch}
+.hero h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.5rem,4.3vw,2.35rem);line-height:1.2;margin:2.6rem 0 .5rem;border-top:1px solid rgba(255,255,255,.22);padding-top:1.6rem;max-width:30ch}
+.hero-sub{margin:0;color:var(--hero-dim);max-width:68ch}
+.stamp{margin-top:1.6rem;font-size:.86rem;color:var(--hero-dim);display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+.stamp b{color:var(--hero-ink);font-weight:600}
+
+/* ---------- layout ---------- */
+.shell{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem;display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media (min-width:1000px){
+  .shell{grid-template-columns:255px minmax(0,1fr);gap:3.5rem;padding-top:2.8rem}
+}
+nav.toc{font-size:.9rem}
+@media (min-width:1000px){
+  .toc-mobile{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2rem);align-self:start;max-height:calc(100vh - 5rem);overflow-y:auto}
+}
+nav.toc h2{font-family:"Zilla Slab",Georgia,serif;font-size:.92rem;font-weight:600;margin:0 0 .7rem;padding-bottom:.45rem;border-bottom:2px solid var(--rule-strong)}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc}
+nav.toc li{border-bottom:1px solid var(--rule)}
+nav.toc li:not(.part){counter-increment:toc}
+nav.toc a{display:flex;gap:.6rem;padding:.4rem 0;color:var(--ink-soft);text-decoration:none}
+nav.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--rule-strong);font-variant-numeric:tabular-nums;flex:none}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--red)}
+nav.toc .part{border:0;margin:1.1rem 0 .3rem;font-family:"Zilla Slab",Georgia,serif;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--rule-strong)}
+nav.toc .part::before{content:none}
+.toc-mobile{display:block}
+@media (min-width:1000px){.toc-mobile summary{display:none}}
+.toc-mobile summary{cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:600;padding:.7rem .9rem;background:var(--surface);border:1px solid var(--rule);margin-bottom:1rem}
+@media (max-width:999px){
+  .toc-mobile[open] nav.toc{padding:0 .9rem 1rem}
+  .toc-mobile:not([open]) nav.toc{display:none}
+}
+
+/* ---------- sections ---------- */
+main{min-width:0}
+section{margin:0 0 3.6rem;scroll-margin-top:1.5rem}
+section > h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.45rem,3.6vw,1.95rem);line-height:1.2;margin:0 0 .3rem}
+.part-head{margin:4rem 0 2.2rem;padding:1.1rem 0 .9rem;border-top:4px double var(--rule-strong);border-bottom:1px solid var(--rule)}
+.part-head p{margin:0;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.part-head h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.3rem,3.2vw,1.7rem);margin:.3rem 0 0;color:var(--ink)}
+.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.16rem;margin:2rem 0 .5rem;line-height:1.3}
+h4{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1rem;margin:1.4rem 0 .35rem;color:var(--ink)}
+p{margin:0 0 .95rem;max-width:74ch}
+ul,ol{margin:0 0 1rem;padding-left:1.25rem;max-width:74ch}
+li{margin-bottom:.35rem}
+li::marker{color:var(--rule-strong)}
+strong{font-weight:600}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+/* ---------- components ---------- */
+.lede{font-size:1.06rem;color:var(--ink-soft);max-width:70ch}
+
+.tablewrap{overflow-x:auto;margin:0 0 1.3rem;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.92rem}
+caption{text-align:left;padding:.7rem .85rem .1rem;font-weight:600;color:var(--ink-soft);font-size:.9rem}
+th,td{text-align:left;padding:.55rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{background:var(--surface-2);font-weight:600;border-bottom:2px solid var(--rule-strong);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.num,th.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+.edge{background:var(--surface);border-left:4px solid var(--red);padding:.9rem 1.1rem;margin:1.4rem 0;max-width:74ch}
+.edge p:last-child,.edge ul:last-child,.edge ol:last-child{margin-bottom:0}
+.edge .edge-h{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);display:block;margin-bottom:.25rem;font-size:.95rem}
+.edge.gold{border-left-color:var(--gold)}
+.edge.gold .edge-h{color:var(--gold)}
+.edge.blue{border-left-color:var(--blue)}
+.edge.blue .edge-h{color:var(--blue)}
+.edge.green{border-left-color:var(--green)}
+.edge.green .edge-h{color:var(--green)}
+
+.note{background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;border:1px solid var(--rule);font-size:.95rem}
+.note p:last-child,.note ul:last-child,.note ol:last-child{margin-bottom:0}
+.note h4{margin-top:0}
+
+.panel{background:var(--surface);border:1px solid var(--rule);padding:1rem 1.1rem}
+.panel h4{margin-top:0}
+.panel ul,.panel ol{margin-bottom:0}
+.panel.blue-top{border-top:3px solid var(--blue)}
+.panel.red-top{border-top:3px solid var(--red)}
+.panel.gold-top{border-top:3px solid var(--gold)}
+.panel.green-top{border-top:3px solid var(--green)}
+
+.rungs{max-width:74ch;margin:.3rem 0 0;display:grid;grid-template-columns:9.5rem 1fr;gap:0 1rem}
+.rungs dt{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;color:var(--red);padding-top:.2rem}
+.rungs dd{margin:0 0 .5rem;font-size:.93rem}
+@media (max-width:560px){
+  .rungs{grid-template-columns:1fr;gap:0}
+  .rungs dt{padding-top:.4rem}
+}
+
+.timeline{list-style:none;padding:0;margin:1rem 0 1.4rem;max-width:74ch}
+.timeline li{display:grid;grid-template-columns:8.2rem 1fr;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--rule);margin:0}
+.timeline li:last-child{border-bottom:0}
+.timeline .yr{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);font-variant-numeric:tabular-nums}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:.1rem}}
+
+.qbank{counter-reset:q;list-style:none;padding:0;max-width:74ch}
+.qbank li{counter-increment:q;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.qbank li::before{content:counter(q,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.qbank li:last-child{border-bottom:0}
+
+.dbank{counter-reset:d;list-style:none;padding:0;max-width:74ch}
+.dbank li{counter-increment:d;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.dbank li::before{content:counter(d,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.dbank li:last-child{border-bottom:0}
+
+.grid{display:grid;gap:1rem}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
+
+.card{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--red);padding:1rem 1.1rem}
+.card h4{margin:0 0 .45rem;font-size:1rem}
+.card .name{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.2rem}
+.card .role{font-size:.9rem;color:var(--ink-soft)}
+.card .since{font-size:.78rem;color:var(--green);font-weight:600;margin-top:.45rem}
+
+.term{max-width:74ch;margin:0 0 1.2rem}
+.term dt{font-weight:600;margin-top:.8rem}
+.term dd{margin:.15rem 0 0;color:var(--ink-soft)}
+
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:.1rem .45rem;border:1px solid var(--rule-strong);color:var(--ink-soft);margin-right:.35rem;vertical-align:middle}
+.tag.fact{border-color:var(--green);color:var(--green)}
+.tag.interp{border-color:var(--gold);color:var(--gold)}
+.tag.disputed{border-color:var(--red);color:var(--red)}
+.tag.verify{border-color:var(--blue);color:var(--blue)}
+.spaced{margin-top:.6rem}
+
+footer{border-top:3px double var(--rule-strong);margin-top:2rem;padding-top:1.4rem;color:var(--ink-soft);font-size:.9rem;max-width:74ch}
+footer a{color:var(--blue)}
+
+/* ---------- home button: fixed, links back to the collection homepage ---------- */
+.home-btn{position:fixed;top:16px;left:16px;z-index:60;display:inline-flex;align-items:center;gap:.4rem;background:#14202B;color:#F1F2EC;border:1px solid rgba(241,242,236,.25);padding:.45rem .85rem;border-radius:999px;font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.82rem;font-weight:600;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.3);transition:background .15s ease,transform .15s ease}
+.home-btn:hover,.home-btn:focus-visible{background:#BF2F26;transform:translateY(-1px)}
+.home-btn svg{width:14px;height:14px;flex:none}
+@media print{.home-btn{display:none}}
+
+@media print{
+  .hero{background:none;color:#000;padding-bottom:1rem}
+  .hero-sub,.stamp,.motto-en{color:#333}
+  .flagstrip,.toc-mobile{display:none}
+  .shell{display:block;padding:0}
+  section{page-break-inside:auto;margin-bottom:1.8rem}
+  h2,h3{page-break-after:avoid}
+  .panel,.edge,.note,.tablewrap,figure{page-break-inside:avoid}
+  .part-head{page-break-before:always}
+  body{font-size:10.5pt;background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+
+<a class="home-btn" href="../index.html" aria-label="Back to Handbooks homepage" title="Back to Handbooks homepage">
+  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
+  <span>Home</span>
+</a>
+
+<header class="hero">
+  <div class="flagstrip" aria-hidden="true">
+    <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f5"></span><span class="f6"></span><span class="f7"></span><span class="f8"></span>
+  </div>
+  <div class="hero-inner">
+    <p class="motto">नभः स्पृशं दीप्तम्</p>
+    <p class="motto-en">"Touch the Sky with Glory": the Indian Air Force's motto, from the Bhagavad Gita (11.24). This handbook covers the IAF as an institution: its history, structure, wars, aircraft, doctrine and people.</p>
+    <h1>The Indian Air Force</h1>
+    <p class="hero-sub">A 20-section study handbook for SSB, CDS and general-awareness preparation. It runs from the 1932 raising to Op Sindoor, with the fighter fleet and squadron-strength debate, air defence, doctrine, modernisation, competing perspectives and practice material. Figures that change over time are tagged for re-verification.</p>
+    <p class="stamp">
+      <span>Air Force Day <b>8 October</b></span>
+      <span>Air commands <b>7</b></span>
+      <span>Sanctioned fighter squadrons <b>42</b></span>
+      <span>Sections <b>20</b></span>
+      <span>Reading time <b>2-3 hrs</b></span>
+    </p>
+  </div>
+</header>
+
+<div class="shell">
+
+<details class="toc-mobile" open>
+  <summary>Contents</summary>
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li class="part">How to use this</li>
+      <li><a href="#snapshot">Snapshot and how to read</a></li>
+
+      <li class="part">Part I · Foundations and structure</li>
+      <li><a href="#origins">Origins and growth</a></li>
+      <li><a href="#framework">Civil-military framework and jointness</a></li>
+      <li><a href="#organisation">Organisation: commands to squadrons</a></li>
+      <li><a href="#branches">Branches, ranks and special units</a></li>
+
+      <li class="part">Part II · Operations and capability</li>
+      <li><a href="#wars">Wars and major operations</a></li>
+      <li><a href="#fighters">Fighter fleet and squadron strength</a></li>
+      <li><a href="#support">Airlift, helicopters and force multipliers</a></li>
+      <li><a href="#air-defence">Air defence and missiles</a></li>
+      <li><a href="#doctrine">Doctrine and the two-front problem</a></li>
+      <li><a href="#modernisation">Modernisation and Atmanirbharta</a></li>
+
+      <li class="part">Part III · People and roles</li>
+      <li><a href="#people">People, training and sustainment</a></li>
+      <li><a href="#beyond-war">Beyond war: relief, evacuation, exercises</a></li>
+
+      <li class="part">Knowledge toolkit</li>
+      <li><a href="#perspectives">Perspectives, controversies and facts</a></li>
+      <li><a href="#scenarios-options">Scenarios and strategic options</a></li>
+      <li><a href="#answer-framework">Answer framework and worked example</a></li>
+      <li><a href="#qbank">Practice bank: questions and motions</a></li>
+      <li><a href="#chronology">Master chronology</a></li>
+      <li><a href="#glossary">Glossary</a></li>
+      <li><a href="#revision">Rapid revision sheet</a></li>
+    </ol>
+  </nav>
+</details>
+
+<main>
+
+<section id="snapshot">
+  <h2>Snapshot and how to read</h2><hr class="sec-rule">
+  <p class="lede">The Indian Air Force (IAF) is the air arm of India's armed forces. It provides air defence, strike, reconnaissance, airlift and helicopter support for the Army and Navy, and it carries the air-delivered part of India's deterrence. Its central public debate is whether it has enough fighter squadrons to face two adversaries at once.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>The IAF at a glance</caption>
+      <thead><tr><th>Item</th><th>Detail</th></tr></thead>
+      <tbody>
+        <tr><td>Supreme Commander</td><td>The President of India; authority runs through the Government and the Ministry of Defence</td></tr>
+        <tr><td>Chief of the Air Staff</td><td>Air Chief Marshal A.P. Singh since 30 September 2024 <span class="tag verify">Re-verify</span></td></tr>
+        <tr><td>Headquarters</td><td>Air HQ (Vayu Bhawan), New Delhi</td></tr>
+        <tr><td>Governing law</td><td>Air Force Act, 1950 and Air Force Rules, 1969</td></tr>
+        <tr><td>Personnel</td><td>Roughly 1.4-1.5 lakh <span class="tag verify">Re-verify</span></td></tr>
+        <tr><td>Motto and day</td><td>"Touch the Sky with Glory"; Air Force Day on 8 October</td></tr>
+        <tr><td>Fighter squadrons</td><td>42 sanctioned; the serving number has been about 29-31 in recent years <span class="tag verify">Re-verify</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge blue">
+    <span class="edge-h">How to read this handbook</span>
+    <p>Each section ends in something you can say aloud in ninety seconds. Facts are stated plainly, contested claims carry tags (<span class="tag fact">Established</span> <span class="tag interp">Interpretation</span> <span class="tag disputed">Disputed</span> <span class="tag verify">Re-verify</span>), and the closing toolkit is built for SSB-style discussion, not recall alone. Exercise Tarang Shakti has its own handbook (no. 22), so exercises appear here only in summary.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part I · Foundations and structure</p><h2>Where the IAF came from and how it is built</h2></div>
+
+<section id="origins">
+  <h2>Origins and growth</h2><hr class="sec-rule">
+  <p>The Indian Air Force was established on 8 October 1932 by the Indian Air Force Act. Its first flight was formed on 1 April 1933 at Drigh Road, Karachi, with Westland Wapiti biplanes, six Indian officers and 19 Indian airmen ("Hawai Sepoys"). <span class="tag fact">Established</span> In the Second World War the service fought in the Burma campaign. It received the "Royal" prefix in 1945 and dropped it when India became a republic in 1950.</p>
+  <p>At Partition in 1947 the assets of the Royal Indian Air Force were divided with Pakistan. The IAF was first used within weeks: on 27 October 1947 it airlifted troops to Srinagar after Kashmir's accession. Its first Indian chief was Air Marshal Subroto Mukerjee (1954). <span class="tag fact">Established</span></p>
+  <ul class="timeline">
+    <li><span class="yr">8 Oct 1932</span><span>The IAF is established; this date is Air Force Day.</span></li>
+    <li><span class="yr">1 Apr 1933</span><span>First flight raised at Drigh Road, Karachi.</span></li>
+    <li><span class="yr">1950</span><span>"Royal" prefix dropped as India becomes a republic.</span></li>
+    <li><span class="yr">1954</span><span>Subroto Mukerjee becomes the first Indian Air Chief.</span></li>
+    <li><span class="yr">2002</span><span>Arjan Singh is made Marshal of the Indian Air Force, the only holder of this five-star rank.</span></li>
+  </ul>
+  <div class="edge">
+    <span class="edge-h">From British designs to a mixed fleet</span>
+    <p>Early fleets were British (Vampire, Hunter, Canberra) and later Soviet-origin (MiG-21 from 1963, Su-30MKI from 2002). The IAF has since added French and American aircraft, which is why its fleet and its spares chain are among the most diverse in the world.</p>
+  </div>
+</section>
+
+<section id="framework">
+  <h2>Civil-military framework and jointness</h2><hr class="sec-rule">
+  <p>As with the Army, India follows civilian supremacy. The Air Chief reports to the Defence Minister, and the Ministry of Defence's four departments (Defence, Defence Production, Defence Research and Development, and Ex-Servicemen Welfare) control policy and money. The Chief of Defence Staff (CDS), created in 2020, is Permanent Chairman of the Chiefs of Staff Committee and heads the Department of Military Affairs.</p>
+  <p>Two joint commands exist: Andaman and Nicobar Command (2001) and Strategic Forces Command (2003). Proposed theatre commands would place Army, Navy and Air Force assets under one commander for each geographic theatre. <span class="tag verify">Re-verify the current status</span></p>
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>The IAF's concern</h4>
+      <p>Air power is flexible and scarce. Splitting it among theatres could reduce the number of aircraft available for any single decisive effort, and a theatre commander who is not an airman might use it for close support rather than strategic effect. <span class="tag interp">Interpretation</span></p>
+    </div>
+    <div class="panel gold-top">
+      <h4>The case for theatres</h4>
+      <p>Unified planning and command would remove duplication, speed up decisions and make joint operations routine. Supporters argue that air assets can still be pooled through an air-defence command.</p>
+    </div>
+  </div>
+</section>
+
+<section id="organisation">
+  <h2>Organisation: commands to squadrons</h2><hr class="sec-rule">
+  <p>Air HQ directs seven commands: five operational (geographic) commands and two functional commands for training and maintenance. Below the commands are wings, stations (airbases) and squadrons; a fighter squadron typically holds about 18 aircraft. <span class="tag interp">Approximate</span></p>
+  <div class="tablewrap">
+    <table>
+      <caption>IAF commands (headquarters and principal focus)</caption>
+      <thead><tr><th>Command</th><th>HQ</th><th>Principal focus</th></tr></thead>
+      <tbody>
+        <tr><td>Western</td><td>New Delhi</td><td>Northern and western sectors: J&amp;K, Punjab, Haryana; Pakistan front and the western LAC</td></tr>
+        <tr><td>South Western</td><td>Gandhinagar</td><td>Rajasthan and Gujarat; desert and Arabian Sea approaches</td></tr>
+        <tr><td>Central</td><td>Prayagraj (Bamrauli)</td><td>Central heartland; the central Himalayan border and depth areas (see handbook 27)</td></tr>
+        <tr><td>Eastern</td><td>Shillong</td><td>North-East, Eastern Himalaya and the eastern LAC</td></tr>
+        <tr><td>Southern</td><td>Thiruvananthapuram</td><td>Peninsula and Indian Ocean; maritime air cooperation</td></tr>
+        <tr><td>Training</td><td>Bengaluru</td><td>Flying and ground training institutions</td></tr>
+        <tr><td>Maintenance</td><td>Nagpur</td><td>Repair depots, spares and logistics</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge gold">
+    <span class="edge-h">Bases that recur in exam answers</span>
+    <p>Rafale squadrons sit at Ambala (17 Squadron "Golden Arrows") and Hasimara (101 Squadron "Falcons"); Tejas Mk1 at Sulur; Su-30MKI at several eastern and western bases including Tezpur, Chabua, Halwara and Bareilly. <span class="tag verify">Re-verify basing</span></p>
+  </div>
+</section>
+
+<section id="branches">
+  <h2>Branches, ranks and special units</h2><hr class="sec-rule">
+  <p>Officers belong to the Flying, Technical or Ground Duties branches. Flying includes fighter, transport and helicopter streams. Ground Duties covers administration, logistics, accounts, education, meteorology and the air-traffic and fighter-control trades.</p>
+  <p>Officer ranks run from Pilot Officer, Flying Officer, Flight Lieutenant, Squadron Leader, Wing Commander, Group Captain and Air Commodore to Air Vice Marshal, Air Marshal and Air Chief Marshal, with Marshal of the IAF as the ceremonial five-star rank. Airmen ranks include Aircraftman, Leading Aircraftman, Corporal, Sergeant, Junior Warrant Officer, Warrant Officer and Master Warrant Officer.</p>
+  <div class="grid three">
+    <div class="card"><div class="name">Garud</div><div class="role">The IAF's special forces: airbase protection, combat search and rescue, and air-support tasks (raised 2004)</div></div>
+    <div class="card"><div class="name">Air Defence</div><div class="role">Fighter controllers, radar and surface-to-air missile units, with the Integrated Air Command and Control System</div></div>
+    <div class="card"><div class="name">Test pilots</div><div class="role">Aircraft and Systems Testing Establishment (ASTE), Bengaluru, evaluates new aircraft</div></div>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">One Param Vir Chakra</span>
+    <p>Flying Officer Nirmal Jit Singh Sekhon, who flew a Gnat in defence of Srinagar airfield in December 1971, is the only IAF recipient of the Param Vir Chakra, awarded posthumously.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part II · Operations and capability</p><h2>What the IAF has done, which aircraft it flies, and how it plans</h2></div>
+
+<section id="wars">
+  <h2>Wars and major operations</h2><hr class="sec-rule">
+  <p>Each conflict taught the IAF a specific lesson. The table is a compressed map; the lesson column is what examiners usually want.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Major conflicts and operations</caption>
+      <thead><tr><th>Conflict</th><th>Key points</th><th>Lasting lesson</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1947-48</td><td>Airlift to Srinagar (27 Oct 1947); aircraft supported troops in Kashmir and kept Leh supplied</td><td>Airlift and terrain-aware flying decide logistics</td></tr>
+        <tr><td class="num">1961</td><td>Goa: Canberras strike Dabolim airfield</td><td>Limited air operations in support of ground action</td></tr>
+        <tr><td class="num">1962</td><td>China war: the IAF was not used in an offensive role</td><td>Debated since: whether air power could have changed the outcome <span class="tag interp">Interpretation</span></td></tr>
+        <tr><td class="num">1965</td><td>Air war with Pakistan; Gnat dubbed "Sabre Slayer"; attacks on forward and rear airfields</td><td>Counter-air campaigns and the cost of attrition; claims differ <span class="tag disputed">Disputed</span></td></tr>
+        <tr><td class="num">1971</td><td>Air superiority over East Pakistan within days; Tangail paradrop; the 14 December attack on Dhaka's Governor's House; Longewala (4-5 Dec), where Hunters destroyed an armoured column</td><td>Air-land coordination and tight political aims <span class="tag fact">Established</span></td></tr>
+        <tr><td class="num">1984-88</td><td>Op Meghdoot helicopter lift to Siachen; Op Poomalai airdrop in Jaffna (1987); Op Cactus airlift to the Maldives (1988)</td><td>Rotary-wing and strategic airlift at altitude and range</td></tr>
+        <tr><td class="num">1999</td><td>Op Safed Sagar at Kargil; laser-guided bombs from Mirage 2000 on Tiger Hill; losses of a MiG-21, a MiG-27 and a Mi-17</td><td>Targeting precision and rules that kept the fight on the Indian side of the LoC</td></tr>
+        <tr><td class="num">2019</td><td>Balakot strike (26 Feb) by Mirage 2000; air combat the next day in which Wg Cdr Abhinandan Varthaman was captured and returned on 1 March</td><td>Cross-border strike as a policy option; claims of the engagement differ <span class="tag disputed">Disputed</span></td></tr>
+        <tr><td class="num">2025</td><td>Op Sindoor (7-10 May): stand-off strikes, air defence and counter-drone work; claims of aircraft losses by both sides differ <span class="tag disputed">Disputed</span> <span class="tag verify">Re-verify</span></td><td>Stand-off weapons, air defence and electronic warfare dominate</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge">
+    <span class="edge-h">Pattern to remember</span>
+    <p>From 1947 to 1971 the IAF's role grew from airlift to decisive support; from 1999 it became a tool of calibrated, politically limited force; since 2019 its cross-border strikes have been openly acknowledged.</p>
+  </div>
+</section>
+
+<section id="fighters">
+  <h2>Fighter fleet and squadron strength</h2><hr class="sec-rule">
+  <p>The IAF's sanctioned strength is 42 fighter squadrons. Retirements of older aircraft, including the final MiG-21 squadrons in 2025, have taken the serving figure to roughly 29-31. <span class="tag verify">Re-verify</span> The shortfall is the main public worry about the service.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Principal combat aircraft (indicative)</caption>
+      <thead><tr><th>Aircraft</th><th>Role and notes</th></tr></thead>
+      <tbody>
+        <tr><td>Su-30MKI</td><td>Backbone air-dominance fighter, built under licence by HAL; around 260 delivered; an upgrade programme has been approved <span class="tag verify">Re-verify</span></td></tr>
+        <tr><td>Rafale</td><td>36 aircraft in two squadrons; Meteor missile and SCALP stand-off cruise missile</td></tr>
+        <tr><td>Mirage 2000</td><td>Multirole; the Balakot strike aircraft; being upgraded</td></tr>
+        <tr><td>MiG-29</td><td>Air-superiority fighter; upgraded to UPG standard</td></tr>
+        <tr><td>Jaguar</td><td>Deep-strike aircraft, nearing retirement</td></tr>
+        <tr><td>Tejas Mk1 and Mk1A</td><td>Indigenous light fighter; 83 Mk1A ordered in 2021 and 97 more cleared in 2025; deliveries have been delayed <span class="tag verify">Re-verify</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The MiG-21 served from 1963 and was long criticised for its accident record, sometimes called a "flying coffin", though its role in 1971 and in the 2019 air combat was also significant. Its retirement closed a sixty-year chapter.</p>
+  <div class="edge gold">
+    <span class="edge-h">Quantity versus quality</span>
+    <p>Counting squadrons alone is misleading: a squadron with AEW&amp;C cover, mid-air refuelling, long-range missiles and electronic warfare can do more than a larger force without them. Examiners reward answers that mention both numbers and force multipliers.</p>
+  </div>
+</section>
+
+<section id="support">
+  <h2>Airlift, helicopters and force multipliers</h2><hr class="sec-rule">
+  <ul>
+    <li><strong>Strategic and tactical airlift:</strong> C-17 Globemaster III (11 aircraft), C-130J Super Hercules (12), IL-76 and An-32. The Tata-Airbus C-295 (56 ordered, 40 to be built in India) is replacing the Avro fleet.</li>
+    <li><strong>Helicopters:</strong> Mi-17 V5 (the workhorse), CH-47F Chinook for heavy lift, AH-64E Apache and the indigenous LCH Prachand for attack, ALH Dhruv for utility.</li>
+    <li><strong>Airborne early warning:</strong> Netra AEW&amp;C (Embraer-based) and the A-50 Phalcon; more AEW&amp;C aircraft are planned.</li>
+    <li><strong>Mid-air refuelling:</strong> IL-78 tankers; the small tanker fleet limits range and endurance.</li>
+    <li><strong>Unmanned and training:</strong> Heron UAVs; 31 MQ-9B drones were contracted in 2024 for the three services; training uses the Hawk, PC-7 Mk II and the indigenous HTT-40. <span class="tag verify">Re-verify numbers</span></li>
+  </ul>
+  <div class="edge blue">
+    <span class="edge-h">Why force multipliers matter</span>
+    <p>A fighter's radar sees little; an AEW&amp;C aircraft sees a theatre. A tanker extends reach and loiter time. Both multiply the effect of every fighter, which is why shortages in these fleets matter as much as shortages in squadrons.</p>
+  </div>
+</section>
+
+<section id="air-defence">
+  <h2>Air defence and missiles</h2><hr class="sec-rule">
+  <p>Air defence is a layered system: fighters at long range, long- and medium-range surface-to-air missiles (SAMs) in the middle, and short-range missiles and guns close to targets. The IAF operates the S-400 Triumf (contracted from Russia in 2018 for five squadrons, with delivery delays for the later units), the Akash, SPYDER and MRSAM/Barak-8 systems. The Army also operates SAMs and gun systems, so the two services must be tied by a common air picture, the Integrated Air Command and Control System. <span class="tag verify">Re-verify the S-400 delivery status</span></p>
+  <p>Air-launched weapons include BrahMos-A on the Su-30MKI, the indigenous Astra beyond-visual-range missile, Meteor and SCALP on the Rafale, and the Rudram anti-radiation missile in development. In August 2025 the Prime Minister announced Mission Sudarshan Chakra, a national air-defence shield planned for around 2035. <span class="tag verify">Re-verify the scope</span></p>
+  <div class="note">
+    <h4>Concepts examiners like</h4>
+    <ul>
+      <li><strong>Layered defence:</strong> no single system is enough; overlap is the point.</li>
+      <li><strong>Counter-drone:</strong> cheap drones force expensive interceptors; sensors, guns and electronic jamming are being added.</li>
+      <li><strong>Stand-off weapons:</strong> striking from outside enemy air defences lowers pilot risk but raises cost per sortie.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="doctrine">
+  <h2>Doctrine and the two-front problem</h2><hr class="sec-rule">
+  <p>The IAF's basic doctrine describes roles: counter-air (including suppression of enemy air defences), strategic air operations, battlefield air interdiction, close air support, reconnaissance and airlift. It stresses that air power is indivisible and should be commanded centrally. The doctrine sits below India's declared policy of no first use of nuclear weapons.</p>
+  <p>India plans for a collusive threat from China and Pakistan. At 42 sanctioned squadrons the IAF's own planners have long argued that it could fight a two-front war only with some risk, and current strength is lower still. <span class="tag interp">Interpretation</span> Part of the answer is to rotate aircraft between fronts quickly, using bases in depth and mid-air refuelling; part is to rely on stand-off weapons and air defence.</p>
+  <div class="edge">
+    <span class="edge-h">Air power in a limited war</span>
+    <p>Since 2016 the political leadership has accepted limited cross-border strikes as an option. The IAF's task is to deliver such strikes without triggering unmanageable escalation, which requires accurate weapons, electronic warfare and a credible air-defence umbrella over Indian cities and bases.</p>
+  </div>
+</section>
+
+<section id="modernisation">
+  <h2>Modernisation and Atmanirbharta</h2><hr class="sec-rule">
+  <p>Modernisation has four threads. <strong>First</strong>, the Tejas Mk1A, built by HAL with a General Electric F404 engine; a combined order of about 180 aircraft is meant to replace the MiG-21 and other older types. <strong>Second</strong>, the Advanced Medium Combat Aircraft (AMCA), a planned fifth-generation stealth fighter, with induction hoped for in the 2030s. <span class="tag verify">Re-verify timelines</span> <strong>Third</strong>, a larger imported or jointly built fighter purchase, widely reported as around 114 Medium Multi-Role Fighter Aircraft, with the Rafale discussed as a leading option. <span class="tag verify">Re-verify the status</span> <strong>Fourth</strong>, engines: the GE F414 co-production deal with HAL and the long-delayed Kaveri programme.</p>
+  <ul>
+    <li><strong>Unmanned systems:</strong> "loyal wingman" concepts (HAL's CATS Warrior), swarming drones and high-altitude long-endurance UAVs.</li>
+    <li><strong>Space and cyber:</strong> the Defence Space Agency (2019) and the Defence Cyber Agency (2019); the IAF has argued for an aerospace role.</li>
+    <li><strong>Policy tools:</strong> positive indigenisation lists, the Buy (Indian-IDDM) category, iDEX start-ups and emergency procurement.</li>
+  </ul>
+  <div class="edge gold">
+    <span class="edge-h">The structural problem</span>
+    <p>Indigenous programmes are essential for long-term self-reliance, but their delays mean the IAF must also buy foreign aircraft now. A good answer weighs capability today against self-reliance tomorrow, and notes that engines and avionics are the hardest links in the chain.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part III · People and roles</p><h2>Airmen, sustainment and the work beyond war</h2></div>
+
+<section id="people">
+  <h2>People, training and sustainment</h2><hr class="sec-rule">
+  <p>Officers enter through the National Defence Academy (Khadakwasla), the Air Force Common Admission Test (AFCAT) or the Combined Defence Services exam, and train at the Air Force Academy, Dundigal (Hyderabad). Flying training moves from basic trainers to the Hawk advanced jet trainer before pilots are posted to an operational type. Airmen are recruited for technical and non-technical trades and, since 2022, through the Agniveervayu route for four-year terms. <span class="tag interp">Interpretation: the Agnipath debate applies here too, especially for technical trades that need long training</span></p>
+  <ul>
+    <li><strong>Women in the IAF:</strong> women were admitted to the fighter stream from 2016, when Avani Chaturvedi, Mohana Singh and Bhawana Kanth were commissioned as the first three fighter pilots; women also fly transport aircraft and helicopters and serve in operational command roles.</li>
+    <li><strong>Welfare and honours:</strong> One Rank One Pension, the ECHS medical scheme, and gallantry awards from Vayu Sena Medal to Param Vir Chakra.</li>
+    <li><strong>Pilots' working life:</strong> fighter flying demands strict medical and age standards; the service has dealt with pilot and spares shortages and trainer-aircraft ageing. <span class="tag verify">Re-verify</span></li>
+  </ul>
+  <div class="edge green">
+    <span class="edge-h">Sustainment decides readiness</span>
+    <p>Serviceability is not the same as the number of aircraft owned. Maintenance Command, base repair depots, HAL and spares from several countries keep the fleet flying. Diverse fleets and import dependence make this chain long and fragile, and sanctions or supply disruptions can ground aircraft.</p>
+  </div>
+</section>
+
+<section id="beyond-war">
+  <h2>Beyond war: relief, evacuation, exercises</h2><hr class="sec-rule">
+  <p>The IAF is the first responder in many disasters. In Uttarakhand in 2013 it ran Operation Rahat, a very large helicopter rescue in which an IAF Mi-17 crashed with 20 aboard. <span class="tag verify">Re-verify the casualty count</span> It lifts relief supplies after floods and earthquakes, and its Chinooks and Mi-17s fight forest fires and move disaster forces.</p>
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>Evacuations and aid flights</h4>
+      <p>Op Devi Shakti (Afghanistan, 2021), Op Ganga (Ukraine, 2022), Op Kaveri (Sudan, 2023) and Op Dost (earthquake relief for Turkey and Syria, 2023). Large transports such as the C-17 and C-130J are the backbone.</p>
+    </div>
+    <div class="panel green-top">
+      <h4>Exercises and engagement</h4>
+      <p>Tarang Shakti (India-hosted multinational), Red Flag Alaska (US), Garuda (France), Pitch Black (Australia), Eastern Bridge (Oman) and Cope India. They build interoperability and expose pilots to different tactics.</p>
+    </div>
+  </div>
+  <p>In Siachen and Ladakh, helicopters and transports resupply forward posts, and advanced landing grounds such as Daulat Beg Oldi and Nyoma extend reach. IAF aircraft also support civil authorities for VIP and election duties and take part in the annual Air Force Day flypast.</p>
+</section>
+
+<div class="part-head"><p>Knowledge toolkit</p><h2>Analysis, practice and revision</h2></div>
+
+<section id="perspectives">
+  <h2>Perspectives, controversies and facts</h2><hr class="sec-rule">
+  <p><span class="tag interp">Interpretation</span> <strong>Squadron numbers.</strong> One view says the IAF must reach 42 squadrons to be credible against two adversaries. A second view says missiles, drones, AEW&amp;C and air defence can substitute for some fighters, so the target should be capability, not a number set decades ago.</p>
+  <p><span class="tag interp">Interpretation</span> <strong>Import or indigenise.</strong> Supporters of buying foreign fighters stress speed. Supporters of the Tejas and AMCA stress self-reliance and the cost of foreign dependence. The reality is a mix, with a long period of overlap.</p>
+  <p><span class="tag interp">Interpretation</span> <strong>Manned versus unmanned.</strong> Drones and loyal wingmen are cheaper and expendable, but need robust communications and cannot yet replace the judgement of a pilot in a contested airspace.</p>
+  <p><span class="tag interp">Interpretation</span> <strong>Theatre commands and air power.</strong> The IAF has voiced concern about splitting scarce assets, while supporters of reform point to the benefits of integrated planning.</p>
+  <p><span class="tag disputed">Disputed</span> <strong>Combat claims.</strong> Claims on both sides about aircraft downed in 2019 and 2025 differ. A careful answer states what each side claims and notes that independent confirmation is limited.</p>
+  <h3>Lesser-known facts</h3>
+  <ul>
+    <li><span class="tag fact">Established</span> The IAF's first operational flight in 1933 had just six Indian officers and 19 airmen.</li>
+    <li><span class="tag fact">Established</span> Marshal of the IAF Arjan Singh led the service in the 1965 war while still in his mid-40s.</li>
+    <li><span class="tag fact">Established</span> Only one Param Vir Chakra has gone to an IAF airman: Flying Officer Nirmal Jit Singh Sekhon (1971).</li>
+    <li><span class="tag fact">Established</span> The Central Air Command is headquartered at Prayagraj, linking this handbook to the city profile (handbook 27).</li>
+  </ul>
+</section>
+
+<section id="scenarios-options">
+  <h2>Scenarios and strategic options</h2><hr class="sec-rule">
+  <p>Presented neutrally, without recommending a political position:</p>
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>Managed deterrence</h4>
+      <p>Border arrangements with China hold, the LoC ceasefire mostly holds, and deliveries of Tejas Mk1A and new missiles gradually narrow the gap.</p>
+    </div>
+    <div class="panel red-top">
+      <h4>Limited air-missile exchange</h4>
+      <p>A terror attack triggers a short, intense exchange of drones, missiles and strikes, with outside pressure to de-escalate. Air defence and stand-off weapons matter most.</p>
+    </div>
+    <div class="panel gold-top">
+      <h4>Two-front stretch</h4>
+      <p>A crisis on the LAC coincides with tension on the western front. Squadron numbers, basing in depth and tankers are tested.</p>
+    </div>
+    <div class="panel green-top">
+      <h4>Technology-led transformation</h4>
+      <p>Loyal wingmen, AI-assisted command, space-based sensing and drone swarms reshape the force, but only if procurement, engines and training keep pace.</p>
+    </div>
+  </div>
+  <div class="tablewrap">
+    <table>
+      <caption>Policy options and trade-offs</caption>
+      <thead><tr><th>Option</th><th>Benefit</th><th>Risk or cost</th></tr></thead>
+      <tbody>
+        <tr><td>Buy a large imported fighter batch (MRFA)</td><td>Faster squadron recovery</td><td>High cost; foreign dependence; mixed fleet</td></tr>
+        <tr><td>Accelerate Tejas and AMCA</td><td>Self-reliance; local jobs and skills</td><td>Delays; engine dependence</td></tr>
+        <tr><td>Invest in AEW&amp;C, tankers and stand-off missiles</td><td>Multiplies each fighter's effect</td><td>Not visible as "squadrons"; large budget lines</td></tr>
+        <tr><td>Theatre commands</td><td>Integrated planning</td><td>Dilution of central air control</td></tr>
+        <tr><td>More drones and loyal wingmen</td><td>Lower cost and risk per sortie</td><td>Communications vulnerability; doctrine still evolving</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="answer-framework">
+  <h2>Answer framework and worked example</h2><hr class="sec-rule">
+  <p>For any "Is X the right measure or policy?" question, move through definition, location, evidence, contest, analysis, test, position, concession and close. One compressed example follows.</p>
+  <div class="panel red-top">
+    <h4>Worked example: "Is 42 squadrons the right measure of IAF strength?"</h4>
+    <dl class="rungs">
+      <dt>Define</dt><dd>The sanctioned number of fighter squadrons, a planning benchmark set to cover a two-front war.</dd>
+      <dt>Locate</dt><dd>Serving strength has been about 29-31, falling as older aircraft retire. <span class="tag verify">Re-verify</span></dd>
+      <dt>Establish</dt><dd>Fewer aircraft mean less flexibility, especially across two fronts.</dd>
+      <dt>Contest</dt><dd>Critics say the number ignores AEW&amp;C, tankers, missiles and electronic warfare.</dd>
+      <dt>Analyse</dt><dd>Force multipliers raise each squadron's effect, but cannot be in two places at once.</dd>
+      <dt>Test</dt><dd>Compare serviceability, stand-off weapon stocks and basing depth, not squadrons alone.</dd>
+      <dt>Position</dt><dd>The number is a useful warning light but not a complete measure.</dd>
+      <dt>Concede</dt><dd>Without more fighters, even strong multipliers leave a coverage gap.</dd>
+      <dt>Close</dt><dd>Use both measures: squadrons for mass, multipliers for effect.</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="qbank">
+  <h2>Practice bank: questions and motions</h2><hr class="sec-rule">
+  <p class="lede">Fourteen questions. Answer each aloud, standing, in ninety seconds.</p>
+  <ol class="qbank">
+    <li>When and why was the IAF established, and what does Air Force Day commemorate?</li>
+    <li>Describe the IAF's role in the 1947-48 Kashmir operations.</li>
+    <li>Why was the IAF not used offensively in 1962, and what has been argued since?</li>
+    <li>Explain the importance of the 1971 war for air power, including Longewala.</li>
+    <li>What did Op Safed Sagar show about air power in a limited war?</li>
+    <li>What happened at Balakot in 2019, and why do claims about the following day differ?</li>
+    <li>Why is 42 squadrons the benchmark, and why is it not enough on its own?</li>
+    <li>Compare the Su-30MKI, Rafale and Tejas Mk1A in role and origin.</li>
+    <li>What are force multipliers, and why do AEW&amp;C and tankers matter?</li>
+    <li>Explain the layered air-defence concept and the role of the S-400.</li>
+    <li>What is the AMCA and why is engine independence important?</li>
+    <li>State the IAF's concern about theatre commands, and the counter-argument.</li>
+    <li>How does the IAF help in disaster relief and evacuation?</li>
+    <li>Evaluate the case for and against drones and loyal wingmen in India's air force.</li>
+  </ol>
+  <h3>Debate motions</h3>
+  <ol class="dbank">
+    <li>This house believes India should buy a large batch of imported fighters now rather than wait for indigenous aircraft.</li>
+    <li>This house believes air-defence and stand-off weapons should be funded ahead of more fighter squadrons.</li>
+    <li>This house believes theatre commands will weaken India's air power.</li>
+    <li>This house believes unmanned systems will replace most fighter pilots within twenty years.</li>
+    <li>This house believes the Agniveer scheme is unsuitable for highly technical IAF trades.</li>
+    <li>This house believes India should embrace an "aerospace force" identity.</li>
+    <li>This house believes self-reliance in jet engines should be the top priority for Indian defence manufacturing.</li>
+  </ol>
+</section>
+
+<section id="chronology">
+  <h2>Master chronology</h2><hr class="sec-rule">
+  <ul class="timeline">
+    <li><span class="yr">1932</span><span>IAF established (8 Oct).</span></li>
+    <li><span class="yr">1933</span><span>First flight raised at Drigh Road, Karachi.</span></li>
+    <li><span class="yr">1945-50</span><span>"Royal" prefix granted in 1945, dropped in 1950.</span></li>
+    <li><span class="yr">1947</span><span>Srinagar airlift (27 Oct); first Kashmir operations.</span></li>
+    <li><span class="yr">1954</span><span>Subroto Mukerjee becomes the first Indian Air Chief.</span></li>
+    <li><span class="yr">1962</span><span>China war; IAF not used offensively.</span></li>
+    <li><span class="yr">1965</span><span>Air war with Pakistan.</span></li>
+    <li><span class="yr">1971</span><span>Bangladesh war; Longewala; Dhaka attack (14 Dec).</span></li>
+    <li><span class="yr">1984</span><span>Op Meghdoot: Siachen lift.</span></li>
+    <li><span class="yr">1999</span><span>Op Safed Sagar at Kargil.</span></li>
+    <li><span class="yr">2002</span><span>Su-30MKI inducted; Arjan Singh made Marshal of the IAF.</span></li>
+    <li><span class="yr">2016</span><span>Rafale deal signed; first women fighter pilots commissioned.</span></li>
+    <li><span class="yr">2019</span><span>Balakot (26 Feb) and air combat on 27 Feb.</span></li>
+    <li><span class="yr">2020</span><span>First Rafales arrive at Ambala; CDS and DMA created.</span></li>
+    <li><span class="yr">2021</span><span>83 Tejas Mk1A ordered.</span></li>
+    <li><span class="yr">2025</span><span>Op Sindoor (7-10 May); MiG-21 retired; further 97 Tejas Mk1A cleared. <span class="tag verify">Re-verify</span></span></li>
+  </ul>
+</section>
+
+<section id="glossary">
+  <h2>Glossary</h2><hr class="sec-rule">
+  <dl class="term">
+    <dt>AEW&amp;C</dt><dd>Airborne Early Warning and Control: a radar aircraft that detects threats and directs fighters.</dd>
+    <dt>AMCA</dt><dd>Advanced Medium Combat Aircraft: India's planned fifth-generation stealth fighter.</dd>
+    <dt>AFCAT</dt><dd>Air Force Common Admission Test, an entry route for officers.</dd>
+    <dt>Agniveervayu</dt><dd>A four-year airman entrant under the Agnipath scheme.</dd>
+    <dt>BVR</dt><dd>Beyond visual range: missiles that engage targets far outside sight.</dd>
+    <dt>CAP / CAS</dt><dd>Combat Air Patrol and Close Air Support.</dd>
+    <dt>Garud</dt><dd>The IAF's special forces unit.</dd>
+    <dt>IACCS</dt><dd>Integrated Air Command and Control System: the network joining radars and air-defence units.</dd>
+    <dt>Loyal wingman</dt><dd>An unmanned aircraft that flies alongside a crewed fighter.</dd>
+    <dt>MRFA</dt><dd>Medium Multi-Role Fighter Aircraft: the proposed 114-aircraft buy.</dd>
+    <dt>SAM</dt><dd>Surface-to-air missile.</dd>
+    <dt>SEAD</dt><dd>Suppression of enemy air defences.</dd>
+    <dt>Stand-off weapon</dt><dd>A missile launched from outside the range of enemy defences.</dd>
+    <dt>Squadron strength</dt><dd>The number of fighter squadrons; 42 is sanctioned.</dd>
+  </dl>
+</section>
+
+<section id="revision">
+  <h2>Rapid revision sheet</h2><hr class="sec-rule">
+  <div class="note">
+    <h4>Structure and framework</h4>
+    <ul>
+      <li>Established 8 Oct 1932; first flight 1 Apr 1933; Air Force Day on 8 Oct; motto "Touch the Sky with Glory".</li>
+      <li>Seven commands: Western, South Western, Central, Eastern, Southern, Training, Maintenance.</li>
+      <li>President is Supreme Commander; civilian control through the MoD; CDS and DMA since 2020; theatre commands proposed.</li>
+      <li>Garud is the special-forces unit; one Param Vir Chakra (Sekhon, 1971).</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h4>Operations and capability</h4>
+    <ul>
+      <li>1947 airlift, 1961 Goa, 1965, 1971, Siachen 1984, Kargil 1999, Balakot 2019, Sindoor 2025.</li>
+      <li>42 sanctioned squadrons versus about 29-31 serving.</li>
+      <li>Fleet: Su-30MKI, Rafale, Mirage 2000, MiG-29, Jaguar, Tejas; C-17, C-130J, Chinook, Apache, Netra AEW&amp;C.</li>
+      <li>Air defence: S-400, Akash, SPYDER, MRSAM; weapons: BrahMos-A, Astra, Meteor, SCALP.</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h4>Modernisation and debates</h4>
+    <ul>
+      <li>Tejas Mk1A (about 180 ordered), AMCA, MRFA (about 114), engines (F404, F414, Kaveri).</li>
+      <li>Squadrons versus force multipliers; import versus indigenise; manned versus unmanned.</li>
+      <li>Theatre commands versus unity of air power.</li>
+      <li>Always tag contested claims and weigh both sides.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer>
+  <p>Compiled from open sources. Study aid only, not an official publication.</p>
+  <p>Source &amp; contributions: <a href="https://github.com/mohitkushwaha0601/matre">github.com/mohitkushwaha0601/matre</a></p>
+</footer>
+
+</body>
+</html>
