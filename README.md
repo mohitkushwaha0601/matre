@@ -41,8 +41,9 @@ Defence, current affairs, geopolitics and strategic studies.
 | [Global Navies](materials/33.global-navies-knowledge-handbook.html) | HTML | naval strategy and theory, ship types and technology, US, Chinese, Russian and other major navies, alliances, maritime flashpoints and lessons for India (21 sections, 2-3 hrs) |
 | [India's Coastal Regions, Navy and Coast Guard](materials/34.indian-coastal-regions-navy-coast-guard-knowledge-handbook.html) | HTML | coast-by-coast regions, bases and ports, Navy and Coast Guard presence, post-26/11 coastal security, threats, disaster response (21 sections, 2-3 hrs) |
 | [Indian Navy's Humanitarian Efforts](materials/35.indian-navy-humanitarian-efforts-knowledge-handbook.html) | HTML | HADR and NEO concepts, 2004 tsunami, evacuations, floods and cyclones, neighbourhood and distant relief, rescue at sea, soft power and limits (21 sections, 2-3 hrs) |
+| [Political Status of India's States and UTs](materials/36.political-status-states-uts-india-knowledge-handbook.html) | HTML | Union of States, UTs, Articles 370 and 371, Fifth and Sixth Schedules, Northeast, centre-state powers, statehood, delimitation, language politics (21 sections, 2-3 hrs) |
 
-**Total:** 35 study pages
+**Total:** 36 study pages
 
 ---
 

@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Political Status of India's States and Union Territories — A Deep Knowledge Handbook</title>
+<meta name="description" content="A 21-section handbook on the constitutional and political status of India's states and Union Territories: the Union of States, how units are made and changed, special provisions, Jammu and Kashmir, tribal areas, the Northeast, Centre-state relations, statehood demands, delimitation and SSB-style practice material.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#2A1620;
+  --ink-soft:#6A5560;
+  --paper:#F6F1E7;
+  --surface:#FFFFFF;
+  --surface-2:#EBE4D6;
+  --rule:#D9D0C0;
+  --rule-strong:#A89B88;
+  --red:#A3322C;
+  --blue:#2B5C8A;
+  --gold:#A06E0C;
+  --green:#2F7A4F;
+  --hero-bg:#3B1D2A;
+  --hero-ink:#F6F1E7;
+  --hero-dim:#CDB5BE;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ink:#F1E9EC;
+    --ink-soft:#C3B3BA;
+    --paper:#160D12;
+    --surface:#21141B;
+    --surface-2:#2C1B25;
+    --rule:#43293A;
+    --rule-strong:#6E4D5F;
+    --red:#EE8E86;
+    --blue:#8DB8E6;
+    --gold:#E3B65A;
+    --green:#77C99A;
+    --hero-bg:#0D0609;
+    --hero-ink:#F1E9EC;
+    --hero-dim:#9C8590;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#F1E9EC;
+  --ink-soft:#C3B3BA;
+  --paper:#160D12;
+  --surface:#21141B;
+  --surface-2:#2C1B25;
+  --rule:#43293A;
+  --rule-strong:#6E4D5F;
+  --red:#EE8E86;
+  --blue:#8DB8E6;
+  --gold:#E3B65A;
+  --green:#77C99A;
+  --hero-bg:#0D0609;
+  --hero-ink:#F1E9EC;
+  --hero-dim:#9C8590;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1.5rem);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ---------- hero ---------- */
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
+.flagstrip{display:flex;height:12px}
+.flagstrip span{flex:1}
+.f1{background:#3B1D2A}
+.f2{background:#E58A1F}
+.f3{background:#FFFFFF}
+.f4{background:#2F7A4F}
+.f5{background:#1B2F7A}
+.f6{background:#A3322C}
+.f7{background:#D9B65A}
+.f8{background:#22101A}
+.hero-inner{max-width:1180px;margin:0 auto;padding:3.2rem 1.5rem 0}
+.kicker{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--hero-dim);margin:0 0 .8rem}
+.motto{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:clamp(1.7rem,5.2vw,2.9rem);line-height:1.2;margin:0;letter-spacing:.005em;max-width:26ch}
+.motto-en{margin:.55rem 0 0;color:var(--hero-dim);font-size:clamp(.95rem,2.4vw,1.1rem);font-style:italic;max-width:62ch}
+.hero h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.5rem,4.3vw,2.35rem);line-height:1.2;margin:2.6rem 0 .5rem;border-top:1px solid rgba(255,255,255,.22);padding-top:1.6rem;max-width:30ch}
+.hero-sub{margin:0;color:var(--hero-dim);max-width:68ch}
+.stamp{margin-top:1.6rem;font-size:.86rem;color:var(--hero-dim);display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+.stamp b{color:var(--hero-ink);font-weight:600}
+
+/* ---------- layout ---------- */
+.shell{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem;display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media (min-width:1000px){
+  .shell{grid-template-columns:255px minmax(0,1fr);gap:3.5rem;padding-top:2.8rem}
+}
+nav.toc{font-size:.9rem}
+@media (min-width:1000px){
+  .toc-mobile{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2rem);align-self:start;max-height:calc(100vh - 5rem);overflow-y:auto}
+}
+nav.toc h2{font-family:"Zilla Slab",Georgia,serif;font-size:.92rem;font-weight:600;margin:0 0 .7rem;padding-bottom:.45rem;border-bottom:2px solid var(--rule-strong)}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc}
+nav.toc li{border-bottom:1px solid var(--rule)}
+nav.toc li:not(.part){counter-increment:toc}
+nav.toc a{display:flex;gap:.6rem;padding:.4rem 0;color:var(--ink-soft);text-decoration:none}
+nav.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--rule-strong);font-variant-numeric:tabular-nums;flex:none}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--red)}
+nav.toc .part{border:0;margin:1.1rem 0 .3rem;font-family:"Zilla Slab",Georgia,serif;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--rule-strong)}
+nav.toc .part::before{content:none}
+.toc-mobile{display:block}
+@media (min-width:1000px){.toc-mobile summary{display:none}}
+.toc-mobile summary{cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:600;padding:.7rem .9rem;background:var(--surface);border:1px solid var(--rule);margin-bottom:1rem}
+@media (max-width:999px){
+  .toc-mobile[open] nav.toc{padding:0 .9rem 1rem}
+  .toc-mobile:not([open]) nav.toc{display:none}
+}
+
+/* ---------- sections ---------- */
+main{min-width:0}
+section{margin:0 0 3.6rem;scroll-margin-top:1.5rem}
+section > h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.45rem,3.6vw,1.95rem);line-height:1.2;margin:0 0 .3rem}
+.part-head{margin:4rem 0 2.2rem;padding:1.1rem 0 .9rem;border-top:4px double var(--rule-strong);border-bottom:1px solid var(--rule)}
+.part-head p{margin:0;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.part-head h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.3rem,3.2vw,1.7rem);margin:.3rem 0 0;color:var(--ink)}
+.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.16rem;margin:2rem 0 .5rem;line-height:1.3}
+h4{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1rem;margin:1.4rem 0 .35rem;color:var(--ink)}
+p{margin:0 0 .95rem;max-width:74ch}
+ul,ol{margin:0 0 1rem;padding-left:1.25rem;max-width:74ch}
+li{margin-bottom:.35rem}
+li::marker{color:var(--rule-strong)}
+strong{font-weight:600}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+/* ---------- components ---------- */
+.lede{font-size:1.06rem;color:var(--ink-soft);max-width:70ch}
+
+.tablewrap{overflow-x:auto;margin:0 0 1.3rem;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.92rem}
+caption{text-align:left;padding:.7rem .85rem .1rem;font-weight:600;color:var(--ink-soft);font-size:.9rem}
+th,td{text-align:left;padding:.55rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{background:var(--surface-2);font-weight:600;border-bottom:2px solid var(--rule-strong);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.num,th.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+.edge{background:var(--surface);border-left:4px solid var(--red);padding:.9rem 1.1rem;margin:1.4rem 0;max-width:74ch}
+.edge p:last-child,.edge ul:last-child,.edge ol:last-child{margin-bottom:0}
+.edge .edge-h{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);display:block;margin-bottom:.25rem;font-size:.95rem}
+.edge.gold{border-left-color:var(--gold)}
+.edge.gold .edge-h{color:var(--gold)}
+.edge.blue{border-left-color:var(--blue)}
+.edge.blue .edge-h{color:var(--blue)}
+.edge.green{border-left-color:var(--green)}
+.edge.green .edge-h{color:var(--green)}
+
+.note{background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;border:1px solid var(--rule);font-size:.95rem}
+.note p:last-child,.note ul:last-child,.note ol:last-child{margin-bottom:0}
+.note h4{margin-top:0}
+
+.panel{background:var(--surface);border:1px solid var(--rule);padding:1rem 1.1rem}
+.panel h4{margin-top:0}
+.panel ul,.panel ol{margin-bottom:0}
+.panel.blue-top{border-top:3px solid var(--blue)}
+.panel.red-top{border-top:3px solid var(--red)}
+.panel.gold-top{border-top:3px solid var(--gold)}
+.panel.green-top{border-top:3px solid var(--green)}
+
+.rungs{max-width:74ch;margin:.3rem 0 0;display:grid;grid-template-columns:9.5rem 1fr;gap:0 1rem}
+.rungs dt{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;color:var(--red);padding-top:.2rem}
+.rungs dd{margin:0 0 .5rem;font-size:.93rem}
+@media (max-width:560px){
+  .rungs{grid-template-columns:1fr;gap:0}
+  .rungs dt{padding-top:.4rem}
+}
+
+.timeline{list-style:none;padding:0;margin:1rem 0 1.4rem;max-width:74ch}
+.timeline li{display:grid;grid-template-columns:8.2rem 1fr;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--rule);margin:0}
+.timeline li:last-child{border-bottom:0}
+.timeline .yr{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);font-variant-numeric:tabular-nums}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:.1rem}}
+
+.qbank{counter-reset:q;list-style:none;padding:0;max-width:74ch}
+.qbank li{counter-increment:q;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.qbank li::before{content:counter(q,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.qbank li:last-child{border-bottom:0}
+
+.dbank{counter-reset:d;list-style:none;padding:0;max-width:74ch}
+.dbank li{counter-increment:d;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.dbank li::before{content:counter(d,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.dbank li:last-child{border-bottom:0}
+
+.grid{display:grid;gap:1rem}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
+
+.card{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--red);padding:1rem 1.1rem}
+.card h4{margin:0 0 .45rem;font-size:1rem}
+.card .name{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.2rem}
+.card .role{font-size:.9rem;color:var(--ink-soft)}
+.card .since{font-size:.78rem;color:var(--green);font-weight:600;margin-top:.45rem}
+
+.term{max-width:74ch;margin:0 0 1.2rem}
+.term dt{font-weight:600;margin-top:.8rem}
+.term dd{margin:.15rem 0 0;color:var(--ink-soft)}
+
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:.1rem .45rem;border:1px solid var(--rule-strong);color:var(--ink-soft);margin-right:.35rem;vertical-align:middle}
+.tag.fact{border-color:var(--green);color:var(--green)}
+.tag.interp{border-color:var(--gold);color:var(--gold)}
+.tag.disputed{border-color:var(--red);color:var(--red)}
+.tag.verify{border-color:var(--blue);color:var(--blue)}
+.spaced{margin-top:.6rem}
+
+footer{border-top:3px double var(--rule-strong);margin-top:2rem;padding-top:1.4rem;color:var(--ink-soft);font-size:.9rem;max-width:74ch}
+footer a{color:var(--blue)}
+
+/* ---------- home button: fixed, links back to the collection homepage ---------- */
+.home-btn{position:fixed;top:16px;left:16px;z-index:60;display:inline-flex;align-items:center;gap:.4rem;background:#14202B;color:#F1F2EC;border:1px solid rgba(241,242,236,.25);padding:.45rem .85rem;border-radius:999px;font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.82rem;font-weight:600;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.3);transition:background .15s ease,transform .15s ease}
+.home-btn:hover,.home-btn:focus-visible{background:#BF2F26;transform:translateY(-1px)}
+.home-btn svg{width:14px;height:14px;flex:none}
+@media print{.home-btn{display:none}}
+
+@media print{
+  .hero{background:none;color:#000;padding-bottom:1rem}
+  .hero-sub,.stamp,.motto-en{color:#333}
+  .flagstrip,.toc-mobile{display:none}
+  .shell{display:block;padding:0}
+  section{page-break-inside:auto;margin-bottom:1.8rem}
+  h2,h3{page-break-after:avoid}
+  .panel,.edge,.note,.tablewrap,figure{page-break-inside:avoid}
+  .part-head{page-break-before:always}
+  body{font-size:10.5pt;background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+
+<a class="home-btn" href="../index.html" aria-label="Back to Handbooks homepage" title="Back to Handbooks homepage">
+  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
+  <span>Home</span>
+</a>
+
+<header class="hero">
+  <div class="flagstrip" aria-hidden="true">
+    <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f5"></span><span class="f6"></span><span class="f7"></span><span class="f8"></span>
+  </div>
+  <div class="hero-inner">
+    <p class="kicker">Union of States · how units are made · Union Territories · special provisions · Centre-state relations · statehood demands</p>
+    <h1>Political Status of India's States and Union Territories</h1>
+    <p class="hero-sub">What the Union of India is in law, what a state is, what a Union Territory is, how their status has changed since 1947, and which questions remain open, from Jammu and Kashmir and Ladakh to Delhi, the Northeast and delimitation. This handbook concentrates on constitutional and political status. It does not give a current state-by-state political map, which changes with every election. Counts and recent developments were written from memory and are tagged for re-verification.</p>
+    <p class="stamp">
+      <span>Units <b>28 states, 8 Union Territories</b></span>
+      <span>Key articles <b>1-4, 239-241, 244, 370, 371</b></span>
+      <span>Landmark case <b>S. R. Bommai (1994)</b></span>
+      <span>Sections <b>21</b></span>
+      <span>Reading time <b>2-3 hrs</b></span>
+    </p>
+  </div>
+</header>
+
+<div class="shell">
+
+<details class="toc-mobile" open>
+  <summary>Contents</summary>
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li class="part">Part I · The constitutional framework</li>
+      <li><a href="#snapshot">Snapshot and how to read</a></li>
+      <li><a href="#union">A Union of States</a></li>
+      <li><a href="#making">How states are made and changed</a></li>
+      <li><a href="#uts">Union Territories: why and how</a></li>
+
+      <li class="part">Part II · Status by category</li>
+      <li><a href="#states">The 28 states and their place in the Union</a></li>
+      <li><a href="#ut-profiles">The eight Union Territories</a></li>
+      <li><a href="#article-371">Special provisions: Article 371</a></li>
+      <li><a href="#jk">Jammu and Kashmir: Article 370 and after</a></li>
+      <li><a href="#tribal">Tribal and autonomous areas</a></li>
+      <li><a href="#northeast">The Northeast</a></li>
+      <li><a href="#powers">Division of powers and finance</a></li>
+      <li><a href="#centre-state">Centre-state relations in practice</a></li>
+
+      <li class="part">Part III · Changing status and live issues</li>
+      <li><a href="#statehood">Statehood demands: states and UTs</a></li>
+      <li><a href="#delimitation">Delimitation and representation</a></li>
+      <li><a href="#onoe">One Nation One Election</a></li>
+      <li><a href="#language">Language, identity and unity</a></li>
+
+      <li class="part">Knowledge toolkit</li>
+      <li><a href="#perspectives">Perspectives, controversies and facts</a></li>
+      <li><a href="#scenarios-options">Scenarios and strategic options</a></li>
+      <li><a href="#answer-framework">Answer framework and worked example</a></li>
+      <li><a href="#qbank">Practice bank: questions and motions</a></li>
+      <li><a href="#revision">Chronology, glossary and revision sheet</a></li>
+    </ol>
+  </nav>
+</details>
+
+<main>
+
+<div class="part-head"><p>Part I · The constitutional framework</p><h2>A Union of States, and the Territories beside them</h2></div>
+
+<section id="snapshot">
+  <h2>Snapshot and how to read</h2><hr class="sec-rule">
+  <p class="lede">India is described by Article 1 as a "Union of States". In 2026 it has 28 states and 8 Union Territories (UTs). States have their own elected governments and a constitutionally protected share of powers. UTs are administered by the Centre through an administrator, with a few having elected assemblies. The line between the two has moved many times since 1947, and several disputes of today, from Jammu and Kashmir to Delhi and Ladakh, are about where that line should run.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>The units of the Union (after the 2019-20 reorganisations)</caption>
+      <thead><tr><th>Category</th><th>Count</th><th>Governed by</th><th>Examples</th></tr></thead>
+      <tbody>
+        <tr><td>States</td><td class="num">28</td><td>Elected legislature and government; Governor as the Union's representative</td><td>Uttar Pradesh, Kerala, Nagaland</td></tr>
+        <tr><td>UTs with legislature</td><td class="num">3</td><td>Elected assembly and council of ministers, with an administrator (Lieutenant Governor) and Union powers</td><td>Delhi, Puducherry, Jammu and Kashmir</td></tr>
+        <tr><td>UTs without legislature</td><td class="num">5</td><td>Administrator appointed by the President, directly under the Union</td><td>Ladakh, Chandigarh, Andaman and Nicobar, Lakshadweep, Dadra and Nagar Haveli and Daman and Diu</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge blue">
+    <span class="edge-h">How to read this handbook</span>
+    <p>Facts are stated plainly. Contested claims carry tags (<span class="tag fact">Established</span> <span class="tag interp">Interpretation</span> <span class="tag disputed">Disputed</span> <span class="tag verify">Re-verify</span>). Constitutional provisions and long-settled history are stable. Anything dated 2024 onward, such as the Jammu and Kashmir statehood question, the census and delimitation timetable, and recent Supreme Court rulings, should be checked against current sources. Related handbooks: no. 5 (freedom struggle), 7 (Kashmir and terrorism), 8 (governance), 12 (dynastic succession), 25 (domestic issues).</p>
+  </div>
+</section>
+
+<section id="union">
+  <h2>A Union of States</h2><hr class="sec-rule">
+  <p>Article 1 says: "India, that is Bharat, shall be a Union of States." The word "Union" was chosen deliberately. Dr B. R. Ambedkar explained in the Constituent Assembly that the Indian federation is not the result of an agreement between states, and so no state has the right to secede from it. The Union is indestructible, while states are not: Parliament may change their areas, boundaries and names. <span class="tag fact">Established</span></p>
+  <div class="tablewrap">
+    <table>
+      <caption>Federal and unitary features of the Constitution</caption>
+      <thead><tr><th>Federal features</th><th>Unitary features</th></tr></thead>
+      <tbody>
+        <tr><td>Two levels of government with a written constitution</td><td>Parliament can reshape states by ordinary law (Articles 2-4)</td></tr>
+        <tr><td>Seventh Schedule: Union, State and Concurrent Lists</td><td>Residuary powers rest with the Centre; Parliament may legislate on State subjects in specified cases</td></tr>
+        <tr><td>Independent judiciary that settles Centre-state disputes</td><td>Single, integrated judiciary and single citizenship</td></tr>
+        <tr><td>States are represented in the Rajya Sabha</td><td>Governors are appointed by the President; emergency powers; All India Services</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Scholars have called this a "quasi-federal" system, a federation with a strong centre. The Supreme Court in <em>S. R. Bommai v Union of India</em> (1994) held that federalism is part of the Constitution's basic structure, which means it cannot be amended away. <span class="tag fact">Established</span> In practice the Union and states are expected to cooperate, and the balance has shifted between periods of strong central dominance and strong regional parties.</p>
+  <div class="edge gold">
+    <span class="edge-h">Exam wording</span>
+    <p>"Union of States" is not the same as "federation of states". The first stresses that the Union is permanent and states cannot leave; the second might suggest a compact between sovereigns. If asked why the framers chose the word, use Ambedkar's reasoning.</p>
+  </div>
+</section>
+
+<section id="making">
+  <h2>How states are made and changed</h2><hr class="sec-rule">
+  <p>Articles 2-4 let Parliament admit or establish new states, form new states by separating territory, merge or divide states, and change names and boundaries. Under Article 4 these laws are not constitutional amendments, so a simple majority is enough. The President must refer the bill to the affected state legislature for its views, which Parliament need not accept. <span class="tag fact">Established</span> By contrast, ceding Indian territory to another country needs a constitutional amendment (the <em>Berubari</em> reference, 1960).</p>
+  <ul class="timeline">
+    <li><span class="yr">1947-50</span><span>Integration of princely states. At the 1950 Constitution, the units were grouped as Part A, B, C and D states.</span></li>
+    <li><span class="yr">1953</span><span>Andhra State carved from Madras after Potti Sriramulu's death in a fast for a Telugu-speaking state.</span></li>
+    <li><span class="yr">1956</span><span>States Reorganisation Act, following the Fazl Ali commission, creates 14 states and 6 UTs on largely linguistic lines.</span></li>
+    <li><span class="yr">1960</span><span>Bombay split into Maharashtra and Gujarat.</span></li>
+    <li><span class="yr">1963-66</span><span>Nagaland (1963); Haryana carved from Punjab (1966).</span></li>
+    <li><span class="yr">1971-75</span><span>Himachal Pradesh (1971); Manipur, Tripura and Meghalaya (1972); Sikkim joins (1975).</span></li>
+    <li><span class="yr">1987</span><span>Mizoram, Arunachal Pradesh and Goa become states.</span></li>
+    <li><span class="yr">2000</span><span>Chhattisgarh, Uttarakhand and Jharkhand created.</span></li>
+    <li><span class="yr">2014</span><span>Telangana separated from Andhra Pradesh (the 29th state at that time).</span></li>
+    <li><span class="yr">2019</span><span>Jammu and Kashmir state becomes two UTs.</span></li>
+  </ul>
+  <p>Names have also changed: Madras to Tamil Nadu (1969), Mysore to Karnataka (1973), Uttaranchal to Uttarakhand (2007), Orissa to Odisha (2011). <span class="tag verify">Re-verify state counts and ordinals</span></p>
+</section>
+
+<section id="uts">
+  <h2>Union Territories: why and how</h2><hr class="sec-rule">
+  <p>Union Territories are governed directly by the Union under Articles 239-241. The President acts through an administrator, called a Lieutenant Governor in Delhi, Puducherry, Jammu and Kashmir, and the Andaman and Nicobar Islands, and an Administrator elsewhere. Article 240 lets the President make regulations for several UTs, and Article 241 lets Parliament set up a High Court for a UT or attach it to an existing one.</p>
+  <ul>
+    <li><strong>Strategic or border location:</strong> Ladakh, the Andaman and Nicobar Islands and Lakshadweep.</li>
+    <li><strong>Distinct cultural history:</strong> Puducherry, a former French colony transferred to India in 1954 and formally in 1962. <span class="tag verify">Re-verify dates</span></li>
+    <li><strong>Capital function:</strong> Delhi and Chandigarh, the shared capital of Punjab and Haryana.</li>
+    <li><strong>Small size or special needs:</strong> Dadra and Nagar Haveli and Daman and Diu, which were merged into one UT in 2020.</li>
+  </ul>
+  <div class="tablewrap">
+    <table>
+      <caption>Three ways of governing a UT</caption>
+      <thead><tr><th>Model</th><th>Provision</th><th>Units</th></tr></thead>
+      <tbody>
+        <tr><td>Administrator only</td><td>Articles 239 and 240</td><td>Ladakh, Chandigarh, Andaman and Nicobar, Lakshadweep, Dadra and Nagar Haveli and Daman and Diu</td></tr>
+        <tr><td>Elected assembly, limited powers</td><td>Article 239A</td><td>Puducherry; Jammu and Kashmir (2019 Act)</td></tr>
+        <tr><td>Special arrangement as National Capital Territory</td><td>Article 239AA (69th Amendment, 1991)</td><td>Delhi</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>A UT can become a state: Himachal Pradesh, Manipur, Tripura, Goa, Arunachal Pradesh and Mizoram were all UTs first. This path is what Delhi, Puducherry and Ladakh campaigners cite when they ask for statehood.</p>
+</section>
+
+<div class="part-head"><p>Part II · Status by category</p><h2>States, Union Territories and special arrangements</h2></div>
+
+<section id="states">
+  <h2>The 28 states and their place in the Union</h2><hr class="sec-rule">
+  <div class="tablewrap">
+    <table>
+      <caption>The 28 states by region</caption>
+      <thead><tr><th>Region</th><th>States</th></tr></thead>
+      <tbody>
+        <tr><td>North</td><td>Haryana, Himachal Pradesh, Punjab, Rajasthan, Uttar Pradesh, Uttarakhand</td></tr>
+        <tr><td>Central</td><td>Chhattisgarh, Madhya Pradesh</td></tr>
+        <tr><td>East</td><td>Bihar, Jharkhand, Odisha, West Bengal</td></tr>
+        <tr><td>West</td><td>Goa, Gujarat, Maharashtra</td></tr>
+        <tr><td>South</td><td>Andhra Pradesh, Karnataka, Kerala, Tamil Nadu, Telangana</td></tr>
+        <tr><td>Northeast</td><td>Arunachal Pradesh, Assam, Manipur, Meghalaya, Mizoram, Nagaland, Sikkim, Tripura</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Every state has a Governor appointed by the President, a Chief Minister heading a council of ministers responsible to the legislative assembly, and a High Court (some High Courts serve more than one state). Six states also have a second chamber, a Legislative Council: Andhra Pradesh, Bihar, Karnataka, Maharashtra, Telangana and Uttar Pradesh. <span class="tag verify">Re-verify</span> Assembly strength must be between 60 and 500 members, with exceptions for small units such as Goa, Mizoram and Sikkim.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Representation of states in Parliament is by population, not equal</caption>
+      <thead><tr><th>State</th><th>Lok Sabha seats</th><th>Rajya Sabha seats</th></tr></thead>
+      <tbody>
+        <tr><td>Uttar Pradesh</td><td class="num">80</td><td class="num">31</td></tr>
+        <tr><td>Maharashtra</td><td class="num">48</td><td class="num">19</td></tr>
+        <tr><td>West Bengal</td><td class="num">42</td><td class="num">16</td></tr>
+        <tr><td>Bihar</td><td class="num">40</td><td class="num">16</td></tr>
+        <tr><td>Tamil Nadu</td><td class="num">39</td><td class="num">18</td></tr>
+        <tr><td>Mizoram, Nagaland, Sikkim</td><td class="num">1 each</td><td class="num">1 each</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Unlike the US Senate, the Rajya Sabha gives states unequal numbers of seats, so the "Council of States" does not protect small states by equal weight. <span class="tag verify">Re-verify seat numbers</span> Total Lok Sabha strength is 543 elected seats, and these totals have been frozen since the 1970s allocation (see section 14).</p>
+</section>
+
+<section id="ut-profiles">
+  <h2>The eight Union Territories</h2><hr class="sec-rule">
+  <div class="tablewrap">
+    <table>
+      <caption>Union Territories at a glance</caption>
+      <thead><tr><th>UT</th><th>Capital</th><th>Head</th><th>Legislature</th><th>High Court</th></tr></thead>
+      <tbody>
+        <tr><td>Delhi (NCT)</td><td>New Delhi</td><td>Lieutenant Governor</td><td>Yes (70 seats)</td><td>Delhi</td></tr>
+        <tr><td>Puducherry</td><td>Puducherry</td><td>Lieutenant Governor</td><td>Yes (30 elected seats plus nominated)</td><td>Madras</td></tr>
+        <tr><td>Jammu and Kashmir</td><td>Srinagar and Jammu</td><td>Lieutenant Governor</td><td>Yes (90 elected seats)</td><td>Jammu and Kashmir and Ladakh</td></tr>
+        <tr><td>Ladakh</td><td>Leh</td><td>Lieutenant Governor</td><td>No; hill councils at Leh and Kargil</td><td>Jammu and Kashmir and Ladakh</td></tr>
+        <tr><td>Chandigarh</td><td>Chandigarh</td><td>Administrator</td><td>No</td><td>Punjab and Haryana</td></tr>
+        <tr><td>Andaman and Nicobar</td><td>Sri Vijaya Puram (formerly Port Blair)</td><td>Lieutenant Governor</td><td>No</td><td>Calcutta</td></tr>
+        <tr><td>Lakshadweep</td><td>Kavaratti</td><td>Administrator</td><td>No</td><td>Kerala</td></tr>
+        <tr><td>Dadra and Nagar Haveli and Daman and Diu</td><td>Daman</td><td>Administrator</td><td>No</td><td>Bombay</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><span class="tag verify">Re-verify details such as nominated seats, who currently holds charge of Chandigarh, and High Court links</span></p>
+  <h3>Delhi: a special case</h3>
+  <p>Delhi is a UT with an elected government under Article 239AA, but police, public order and land remain with the Centre. The Lieutenant Governor and the elected government have clashed repeatedly. In 2018 a Constitution Bench held that the Lieutenant Governor must generally act on the advice of the council of ministers, and in 2023 another bench held that the elected government controls "services" apart from police, public order and land. Parliament then passed a 2023 law that restored central control over services through an authority, which has been challenged. <span class="tag verify">Re-verify the status of the challenge</span></p>
+  <div class="edge">
+    <span class="edge-h">Why Chandigarh is awkward</span>
+    <p>Chandigarh is the capital of both Punjab and Haryana and a UT. Punjab claims it, and Haryana wants a separate capital. The long-pending 1985 transfer promise has never been executed, so any change to its administration becomes a political issue. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<section id="article-371">
+  <h2>Special provisions: Article 371</h2><hr class="sec-rule">
+  <p>The Constitution gives certain states special arrangements under Articles 371 to 371J, usually to protect tribal customs, address regional imbalance or reflect a political settlement. They are often confused with Article 370, which applied only to Jammu and Kashmir and has been abrogated.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Special provisions for states</caption>
+      <thead><tr><th>Article</th><th>State</th><th>Main provision</th></tr></thead>
+      <tbody>
+        <tr><td>371</td><td>Maharashtra, Gujarat</td><td>Governor's special responsibility for development boards (Vidarbha, Marathwada, Saurashtra, Kutch)</td></tr>
+        <tr><td>371A</td><td>Nagaland</td><td>Parliamentary laws on Naga customary law, land and resources apply only if the Assembly agrees</td></tr>
+        <tr><td>371B</td><td>Assam</td><td>Committee of tribal-area legislators</td></tr>
+        <tr><td>371C</td><td>Manipur</td><td>Committee for the hill areas</td></tr>
+        <tr><td>371D, 371E</td><td>Andhra Pradesh, Telangana</td><td>Equitable opportunity in education and public jobs; Central University</td></tr>
+        <tr><td>371F</td><td>Sikkim</td><td>Protects pre-merger laws after the 1975 merger</td></tr>
+        <tr><td>371G</td><td>Mizoram</td><td>Like Nagaland, for Mizo customary law and land</td></tr>
+        <tr><td>371H</td><td>Arunachal Pradesh</td><td>Governor's special responsibility for law and order</td></tr>
+        <tr><td>371I</td><td>Goa</td><td>Assembly of at least 30 members</td></tr>
+        <tr><td>371J</td><td>Karnataka</td><td>Special status for the Hyderabad-Karnataka (Kalyana Karnataka) region (2012)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">
+    <h4>370 versus 371</h4>
+    <p>Article 370 was a temporary provision giving Jammu and Kashmir its own constitution and wide autonomy. Article 371 and its sub-articles are permanent, narrower and targeted. The abrogation of 370 in 2019 did not affect 371.</p>
+  </div>
+</section>
+
+<section id="jk">
+  <h2>Jammu and Kashmir: Article 370 and after</h2><hr class="sec-rule">
+  <p>Jammu and Kashmir acceded to India in October 1947. Article 370 gave the state its own constitution, a flag and a limited list of Union subjects, and Article 35A (1954) reserved rights for "permanent residents". On 5 August 2019 the President issued an order under Article 370 itself that applied the whole Constitution to the state, and Parliament passed the Jammu and Kashmir Reorganisation Act 2019, which from 31 October 2019 created two UTs: Jammu and Kashmir (with a legislature) and Ladakh (without). <span class="tag fact">Established</span> The security background is in handbook 7.</p>
+  <ul>
+    <li><strong>Supreme Court, December 2023:</strong> a five-judge Constitution Bench upheld the abrogation. It held that Article 370 was a temporary provision, that Jammu and Kashmir had no internal sovereignty after accession, and directed that statehood be restored "as soon as possible" and elections be held. <span class="tag verify">Re-verify details of the ruling</span></li>
+    <li><strong>Elections in 2024:</strong> the first assembly election since 2014 was held in 2024, and a National Conference-led government took office. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Present arrangement:</strong> as a UT, the Lieutenant Governor retains control over police, public order and certain services, and the elected government's powers are narrower than those of a state. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Statehood:</strong> the Union government has said statehood will be restored at an appropriate time, but no date has been set as of my latest information. <span class="tag disputed">Disputed</span></li>
+  </ul>
+  <div class="edge blue">
+    <span class="edge-h">Two readings</span>
+    <p>Supporters say the change ended a temporary arrangement, integrated the region and improved security and development. Critics say it downgraded a state to a UT without the assembly's consent and that autonomy was a basis of accession. The Court's answer on legality does not settle the political debate. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<section id="tribal">
+  <h2>Tribal and autonomous areas</h2><hr class="sec-rule">
+  <p>Article 244 sets up two special systems for areas with large tribal populations. They add a layer of self-rule within a state without changing the state's own status.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Fifth and Sixth Schedule areas compared</caption>
+      <thead><tr><th>Feature</th><th>Fifth Schedule</th><th>Sixth Schedule</th></tr></thead>
+      <tbody>
+        <tr><td>Article</td><td>244(1)</td><td>244(2) and 275(1)</td></tr>
+        <tr><td>Where</td><td>Scheduled Areas in ten states, including Andhra Pradesh, Telangana, Chhattisgarh, Jharkhand, Madhya Pradesh, Odisha, Rajasthan, Gujarat, Maharashtra and Himachal Pradesh <span class="tag verify">Re-verify list</span></td><td>Tribal areas of Assam, Meghalaya, Tripura and Mizoram</td></tr>
+        <tr><td>Main body</td><td>Governor and Tribes Advisory Council</td><td>Autonomous District and Regional Councils</td></tr>
+        <tr><td>Powers</td><td>Governor can restrict land transfers and adapt laws; PESA Act 1996 extends village self-rule</td><td>Councils make laws on land, forests, customs and marriage and have some judicial and tax powers</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>There are ten autonomous district councils under the Sixth Schedule, including the Bodoland Territorial Council, Karbi Anglong and Dima Hasao in Assam, three in Meghalaya, one in Tripura and three in Mizoram. <span class="tag verify">Re-verify</span> Article 244A also allows an autonomous state within Assam, a provision that Karbi leaders have invoked.</p>
+  <div class="edge green">
+    <span class="edge-h">Ladakh's demand</span>
+    <p>Leaders in Leh and Kargil have asked for Sixth Schedule protection for Ladakh, arguing that its mostly tribal population needs safeguards for land and jobs after 2019 and that its existing hill councils are not enough. The Centre has held talks but has not granted it. Protests in 2024-25 drew national attention. <span class="tag verify">Re-verify recent events</span></p>
+  </div>
+</section>
+
+<section id="northeast">
+  <h2>The Northeast</h2><hr class="sec-rule">
+  <p>The eight Northeast states (Arunachal Pradesh, Assam, Manipur, Meghalaya, Mizoram, Nagaland, Sikkim and Tripura) share a narrow land link to the rest of India and borders with China, Myanmar, Bangladesh, Bhutan and Nepal. Their political status is shaped by tribal identity, history of insurgency and a series of agreements that gave some of them special constitutional arrangements.</p>
+  <ul>
+    <li><strong>Inner Line Permit (ILP):</strong> a travel document under a colonial-era regulation that restricts entry of outsiders, now in force in Arunachal Pradesh, Mizoram, Nagaland and Manipur. <span class="tag verify">Re-verify the list</span></li>
+    <li><strong>AFSPA:</strong> the Armed Forces (Special Powers) Act has been withdrawn from some states, such as Tripura and Meghalaya, and reduced in parts of Assam, Manipur and Nagaland. It remains a point of dispute. <span class="tag verify">Re-verify current coverage</span></li>
+    <li><strong>Nagaland:</strong> a ceasefire with the NSCN (IM) dates from 1997, and a Framework Agreement was signed in 2015, but a final settlement has not been reached. Article 371A protects Naga customary law.</li>
+    <li><strong>Mizoram:</strong> the 1986 Mizo Accord ended an insurgency and led to statehood in 1987, and is often cited as a model.</li>
+    <li><strong>Manipur:</strong> ethnic violence between Meitei and Kuki-Zo communities from May 2023 led to a long crisis and, in 2025, President's Rule. <span class="tag verify">Re-verify current status</span></li>
+    <li><strong>Boundary disputes</strong> between Assam and its neighbours (Meghalaya, Mizoram, Arunachal Pradesh, Nagaland) have caused clashes and attempts at settlement.</li>
+    <li><strong>Institutions:</strong> the North Eastern Council (1971) and a dedicated Ministry for the Development of the North Eastern Region coordinate development.</li>
+  </ul>
+  <div class="edge">
+    <span class="edge-h">For SSB answers</span>
+    <p>The region combines geography (the Siliguri Corridor), identity politics and border security. Explain both the security and the political-settlement parts rather than treating the Northeast as only a security problem. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<section id="powers">
+  <h2>Division of powers and finance</h2><hr class="sec-rule">
+  <div class="tablewrap">
+    <table>
+      <caption>The Seventh Schedule lists</caption>
+      <thead><tr><th>List</th><th>Who legislates</th><th>Examples</th></tr></thead>
+      <tbody>
+        <tr><td>Union List (about 100 entries)</td><td>Parliament only</td><td>Defence, foreign affairs, currency, railways</td></tr>
+        <tr><td>State List (about 60 entries)</td><td>State legislatures, with limited exceptions</td><td>Police, public order, public health, agriculture, land</td></tr>
+        <tr><td>Concurrent List (about 50 entries)</td><td>Both; Union law prevails in conflict (Article 254)</td><td>Education, forests, criminal law, marriage</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Residuary powers rest with Parliament (Article 248). Parliament may legislate on a State List subject in the national interest if the Rajya Sabha passes a resolution by a two-thirds majority (Article 249), during an emergency (Article 250), by agreement of states (Article 252) or to implement a treaty (Article 253). <span class="tag fact">Established</span> Education was moved from the State to the Concurrent List by the 42nd Amendment in 1976.</p>
+  <ul>
+    <li><strong>Finance:</strong> the Finance Commission (Article 280), set up every five years, recommends how central taxes are shared. The 15th Commission recommended a 41% share for states, and a 16th Commission, chaired by Arvind Panagariya, covers the period from 2026-27. <span class="tag verify">Re-verify its recommendations</span></li>
+    <li><strong>GST Council (Article 279A):</strong> a joint body where the Centre holds one-third of the weight and states two-thirds, and decisions need a three-fourths majority, so neither side can act alone. <span class="tag fact">Established</span></li>
+    <li><strong>Other forums:</strong> the Inter-State Council (Article 263), zonal councils and NITI Aayog, which replaced the Planning Commission in 2015.</li>
+    <li><strong>Grievances:</strong> some states argue that cesses and surcharges outside the shared pool and conditional schemes reduce their share, while others note that richer states contribute more than they receive. <span class="tag disputed">Disputed</span></li>
+  </ul>
+</section>
+
+<section id="centre-state">
+  <h2>Centre-state relations in practice</h2><hr class="sec-rule">
+  <p>Law sets the framework, but practice depends on who governs where and on how Governors and central agencies behave.</p>
+  <ul>
+    <li><strong>The Governor:</strong> appointed by the President on the Centre's advice, the Governor is a constitutional head who acts mostly on ministers' advice, but has discretion in limited cases, such as inviting a leader to form a government in a hung assembly. Disputes between opposition-ruled states and Governors, for instance in Tamil Nadu, Kerala, Punjab and West Bengal, have been frequent.</li>
+    <li><strong>Assent to Bills (Articles 200-201):</strong> in 2025 the Supreme Court in a Tamil Nadu case laid down time limits for Governors and the President to act on state Bills, and the President then sought the Court's opinion on the issue. The Court's later opinion is understood to have taken a more cautious line on timelines. <span class="tag verify">Re-verify the exact holdings</span></li>
+    <li><strong>President's Rule (Article 356):</strong> used many times in the first decades, often for political reasons. <em>S. R. Bommai</em> (1994) made proclamations subject to judicial review and required a floor test, which sharply reduced misuse. <span class="tag fact">Established</span></li>
+    <li><strong>Commissions:</strong> the Sarkaria Commission (1983-88) and the Punchhi Commission (2007-10) reviewed Centre-state relations and urged consultation and restraint.</li>
+    <li><strong>Agencies and funds:</strong> disputes also arise over central investigating agencies, disaster relief, GST compensation and centrally sponsored schemes.</li>
+  </ul>
+  <div class="edge gold">
+    <span class="edge-h">Competitive and cooperative federalism</span>
+    <p>"Cooperative federalism" describes joint forums such as the GST Council and NITI Aayog. "Competitive federalism" means states competing for investment and ranking. Critics say that when one party dominates both levels, the Centre tends to lead, and when opposition parties govern states, tension rises. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part III · Changing status and live issues</p><h2>Statehood, delimitation, simultaneous elections and language</h2></div>
+
+<section id="statehood">
+  <h2>Statehood demands and how status changes</h2><hr class="sec-rule">
+  <p>Under Articles 2 to 4, Parliament can admit or establish new states, form new states out of existing ones, alter boundaries or change the name of a state by ordinary law. The affected state's legislature is only consulted, and its views are not binding. This is why India is described as an "indestructible union of destructible states". <span class="tag fact">Established</span> Telangana became the 29th state in 2014 under the Andhra Pradesh Reorganisation Act, with Hyderabad as a shared capital for a transition period. Later, Jammu and Kashmir showed that a state can also be turned into UTs. <span class="tag verify">Re-verify the transition end date</span></p>
+  <div class="tablewrap">
+    <table>
+      <caption>Selected statehood and status demands</caption>
+      <thead><tr><th>Demand</th><th>Area</th><th>Position</th></tr></thead>
+      <tbody>
+        <tr><td>Gorkhaland</td><td>Darjeeling hills, West Bengal</td><td>Gorkhaland Territorial Administration formed in 2012; demand continues</td></tr>
+        <tr><td>Vidarbha</td><td>Eastern Maharashtra</td><td>Long-standing, mainly regional development argument</td></tr>
+        <tr><td>Bundelkhand, Harit Pradesh, Purvanchal</td><td>Uttar Pradesh and Madhya Pradesh</td><td>Periodic demands, no central action</td></tr>
+        <tr><td>Tipraland</td><td>Tripura tribal areas</td><td>Raised by tribal parties</td></tr>
+        <tr><td>Statehood for Delhi, Puducherry, Ladakh</td><td>UTs</td><td>Raised by local parties; Delhi's case is the best known</td></tr>
+        <tr><td>Restoration of statehood</td><td>Jammu and Kashmir</td><td>Promised in principle, pending (section 8)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The Centre's criteria are not codified, and a second States Reorganisation Commission has been demanded but not set up. Governments weigh administrative viability, political agreement and security.</p>
+</section>
+
+<section id="delimitation">
+  <h2>Census, delimitation and the seat freeze</h2><hr class="sec-rule">
+  <p>Article 82 requires readjustment of seats after each census. The 42nd Amendment (1976) froze the allocation of seats among states to the 1971 census, and the 84th Amendment (2001) extended that until the first census after 2026. This was done so that states that reduced population growth would not lose seats. <span class="tag fact">Established</span></p>
+  <ul>
+    <li><strong>The next census:</strong> a census with 1 March 2027 as the reference date was announced, and it is to include caste enumeration, the first such count since 1931 for all castes. <span class="tag verify">Re-verify dates and phases</span></li>
+    <li><strong>Women's reservation:</strong> the Constitution (106th Amendment) Act, 2023, the Nari Shakti Vandan Adhiniyam, reserves one-third of Lok Sabha and assembly seats for women, but only after the next census and delimitation. <span class="tag fact">Established</span></li>
+    <li><strong>The southern concern:</strong> if seats are redistributed on current population, southern states with lower fertility could lose their share compared to northern states. Several southern leaders have demanded safeguards, and Tamil Nadu convened a meeting of parties on the subject in 2025. <span class="tag verify">Re-verify</span></li>
+    <li><strong>Capacity:</strong> the new Parliament building (2023) has seating for 888 members in the Lok Sabha and 384 in the Rajya Sabha, so a larger house is feasible. <span class="tag verify">Re-verify</span></li>
+  </ul>
+  <div class="edge blue">
+    <span class="edge-h">The core tension</span>
+    <p>Equal representation of citizens ("one person, one vote") conflicts with fairness to states that succeeded in population control. Options discussed include a proportional increase for all states, weighting, or a freeze for a further period. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<section id="onoe">
+  <h2>One Nation, One Election</h2><hr class="sec-rule">
+  <p>The proposal is to hold Lok Sabha and state assembly elections together. A high-level committee chaired by former President Ram Nath Kovind (formed 2023) reported in March 2024 and recommended synchronised elections in stages, with local body elections following within 100 days. In December 2024 the Union government introduced the Constitution (129th Amendment) Bill and a connected Union Territories Laws Bill, which were referred to a Joint Parliamentary Committee. <span class="tag verify">Re-verify the present status</span></p>
+  <div class="grid two">
+    <div class="panel green-top">
+      <h3>Arguments in favour</h3>
+      <ul>
+        <li>Lower cost and fewer Model Code of Conduct periods.</li>
+        <li>Less disruption to governance and security deployments.</li>
+        <li>Policy continuity.</li>
+      </ul>
+    </div>
+    <div class="panel red-top">
+      <h3>Concerns</h3>
+      <ul>
+        <li>Shortening the terms of state assemblies could weaken federal autonomy.</li>
+        <li>Handling of mid-term collapses of governments.</li>
+        <li>National issues may overshadow state issues.</li>
+        <li>Large logistics and constitutional changes may need state ratification, which is disputed.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="language">
+  <h2>Language and federal politics</h2><hr class="sec-rule">
+  <p>India has no single "national language" in the Constitution. Article 343 makes Hindi in Devanagari script the official language of the Union, with English continuing as an associate official language under the Official Languages Act 1963. The Eighth Schedule lists 22 languages. States choose their own official languages, and some have used the status of a "classical language" (now given to a number of languages such as Tamil, Sanskrit, Telugu, Kannada, Malayalam, Odia, Marathi, Pali, Prakrit, Assamese and Bengali) as a cultural mark. <span class="tag verify">Re-verify the classical list</span></p>
+  <ul>
+    <li><strong>History:</strong> anti-Hindi agitations in Madras in 1937-40 and 1965 shaped Tamil Nadu politics and the continued use of English.</li>
+    <li><strong>Three-language formula:</strong> proposed in the 1960s and again in the National Education Policy 2020, it asks for the mother tongue or regional language, Hindi or another language, and English. Tamil Nadu follows a two-language policy and has opposed the formula.</li>
+    <li><strong>Funding link:</strong> in 2025 the Centre and Tamil Nadu disputed release of education funds tied to adopting the policy. <span class="tag verify">Re-verify the present state</span></li>
+    <li><strong>States' reorganisation:</strong> after 1956, states were largely formed on linguistic lines, so language and state identity are closely linked.</li>
+  </ul>
+</section>
+
+<div class="part-head"><p>Knowledge toolkit</p><h2>Analysis, practice and revision</h2></div>
+
+<section id="perspectives">
+  <h2>Perspectives, controversies and facts</h2><hr class="sec-rule">
+  <p><span class="tag interp">Interpretation</span> <strong>Is India federal?</strong> Scholars call India "quasi-federal" because the Centre can create or reshape states, appoints Governors and holds residuary powers. Others point out that states have real power over many subjects, their own elected governments and a say in the GST Council, so the system is federal in practice. <span class="tag disputed">Disputed</span></p>
+  <p><span class="tag interp">Interpretation</span> <strong>UT or state?</strong> A UT gives the Centre direct control, which suits strategic or small territories. Critics say that elected governments in Delhi, Puducherry and Jammu and Kashmir are denied full powers.</p>
+  <p><span class="tag interp">Interpretation</span> <strong>Asymmetric federalism.</strong> Special arrangements in Articles 371 to 371J and the Sixth Schedule show that India accommodates diversity differently across regions, though some argue the pattern is inconsistent.</p>
+  <p><span class="tag interp">Interpretation</span> <strong>Governors.</strong> Defenders see them as a constitutional link to the Centre, and critics see them as a tool of central politics.</p>
+  <h3>Lesser-known facts</h3>
+  <ul>
+    <li><span class="tag fact">Established</span> Sikkim became a state in 1975 through the 36th Amendment after a referendum and assembly vote.</li>
+    <li><span class="tag fact">Established</span> Goa, Arunachal Pradesh and Mizoram were UTs before becoming states, Mizoram and Arunachal in 1987.</li>
+    <li><span class="tag fact">Established</span> Puducherry has a legislature and a Rajya Sabha seat, while Chandigarh and Lakshadweep have neither.</li>
+    <li><span class="tag fact">Established</span> The Rajya Sabha has 12 members nominated by the President for expertise in art, literature, science and social service.</li>
+    <li><span class="tag fact">Established</span> A UT's chief executive may be called Lieutenant Governor or Administrator depending on the UT.</li>
+    <li><span class="tag fact">Established</span> The name Port Blair was changed to Sri Vijaya Puram in 2024. <span class="tag verify">Re-verify</span></li>
+  </ul>
+</section>
+
+<section id="scenarios-options">
+  <h2>Scenarios and strategic options</h2><hr class="sec-rule">
+  <p>Presented neutrally, without recommending a political position:</p>
+  <div class="grid two">
+    <div class="panel red-top">
+      <h4>Jammu and Kashmir regains statehood</h4>
+      <p>Policing, public order and local control return to an elected government. Supporters see restored trust, while others worry about security coordination.</p>
+    </div>
+    <div class="panel blue-top">
+      <h4>Delimitation on present population</h4>
+      <p>Seats move toward more populous northern states. Southern states raise fears of reduced voice and resist.</p>
+    </div>
+    <div class="panel gold-top">
+      <h4>Delhi's elected government versus the Centre</h4>
+      <p>Disputes over services and the Lieutenant Governor recur when the two sides are in different parties' hands. Court rulings and Acts of Parliament pull in different directions.</p>
+    </div>
+    <div class="panel green-top">
+      <h4>A Governor holds back a state Bill</h4>
+      <p>An opposition-ruled state faces long delay in assent. Courts, timelines and political pressure decide the outcome.</p>
+    </div>
+  </div>
+  <div class="tablewrap">
+    <table>
+      <caption>Options and trade-offs</caption>
+      <thead><tr><th>Option</th><th>Benefit</th><th>Risk or cost</th></tr></thead>
+      <tbody>
+        <tr><td>Grant statehood to larger UTs</td><td>Fuller self-rule and clearer accountability</td><td>National capital and security concerns; precedent</td></tr>
+        <tr><td>Freeze seats for another period</td><td>Reassures states that controlled population growth</td><td>Growing gap in citizens per seat</td></tr>
+        <tr><td>Increase total seats proportionately</td><td>No state loses seats in absolute terms</td><td>Larger house; cost; still shifts relative shares</td></tr>
+        <tr><td>Set timelines for Governors by law or convention</td><td>Predictability for legislatures</td><td>Constitutional questions about discretion</td></tr>
+        <tr><td>Revive the Inter-State Council</td><td>Structured negotiation</td><td>Depends on political will</td></tr>
+        <tr><td>Create a second States Reorganisation Commission</td><td>Orderly, principled handling of demands</td><td>Could raise expectations and unrest</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="answer-framework">
+  <h2>Answer framework and worked example</h2><hr class="sec-rule">
+  <p>For any question on political status, move through definition, location, evidence, contest, analysis, test, position, concession and close. One compressed example follows.</p>
+  <div class="panel red-top">
+    <h4>Worked example: "Is India truly a federal country?"</h4>
+    <dl class="rungs">
+      <dt>Define</dt><dd>A federation divides powers between levels of government, each with its own sphere, under a written constitution and independent courts.</dd>
+      <dt>Locate</dt><dd>Articles 1-4 (Union), the Seventh Schedule (division of powers), Articles 245-263 (relations) and Articles 268-293 (finance).</dd>
+      <dt>Establish</dt><dd>States have their own elected governments and exclusive subjects, courts police the boundary (<em>Bommai</em>, 1994), and the GST Council is shared by design.</dd>
+      <dt>Contest</dt><dd>The Centre can alter state boundaries and names by ordinary law, appoints Governors, can impose President's Rule, and holds residuary powers.</dd>
+      <dt>Analyse</dt><dd>The text is centralised to keep a diverse nation together after Partition, but practice has become more federal since the 1990s because of coalitions, regional parties and the courts.</dd>
+      <dt>Test</dt><dd>Look at how often Article 356 is used, how disputes over Governors and finances are resolved, and whether the GST Council works by consensus.</dd>
+      <dt>Position</dt><dd>India is a federation with a strong Centre, best described as "federal with unitary features", and recent trends show both strain and adaptation.</dd>
+      <dt>Concede</dt><dd>Judgements on practice depend on which party governs where, and recent court rulings are still being worked out. <span class="tag verify">Re-verify</span></dd>
+      <dt>Close</dt><dd>Federalism in India is a negotiated balance, and its health shows in how disputes are settled, not only in the text.</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="qbank">
+  <h2>Practice bank: questions and motions</h2><hr class="sec-rule">
+  <p class="lede">Fourteen questions. Answer each aloud, standing, in ninety seconds.</p>
+  <ol class="qbank">
+    <li>What does Article 1 say about India, and why is "Union of States" used?</li>
+    <li>How can Parliament create or change a state under Articles 2 to 4?</li>
+    <li>How many states and UTs does India have?</li>
+    <li>Why do some UTs have legislatures and others do not?</li>
+    <li>What is special about Delhi's status under Article 239AA?</li>
+    <li>What changed in Jammu and Kashmir in 2019, and what did the Supreme Court hold in 2023?</li>
+    <li>What is the difference between Article 370 and Article 371?</li>
+    <li>Compare the Fifth and Sixth Schedules.</li>
+    <li>What did <em>S. R. Bommai</em> decide?</li>
+    <li>What is the role of the Governor, and why is it contested?</li>
+    <li>Explain how the GST Council shares power between the Centre and states.</li>
+    <li>Why were seats frozen at the 1971 census, and why does delimitation worry southern states?</li>
+    <li>What are the arguments for and against One Nation, One Election?</li>
+    <li>Why is the language issue a federal issue?</li>
+  </ol>
+  <h3>Debate motions</h3>
+  <ol class="dbank">
+    <li>This house believes India is better described as quasi-federal than federal.</li>
+    <li>This house believes Delhi should be a full state.</li>
+    <li>This house believes statehood should be restored to Jammu and Kashmir without delay.</li>
+    <li>This house believes the office of Governor should be abolished or reformed.</li>
+    <li>This house believes Lok Sabha seats should remain frozen after the next census.</li>
+    <li>This house believes One Nation, One Election strengthens Indian democracy.</li>
+    <li>This house believes a three-language formula should be mandatory across states.</li>
+  </ol>
+</section>
+
+<section id="revision">
+  <h2>Chronology, glossary and revision sheet</h2><hr class="sec-rule">
+  <h3>Master chronology</h3>
+  <ul class="timeline">
+    <li><span class="yr">1950</span><span>Constitution in force; Parts A, B, C and D states.</span></li>
+    <li><span class="yr">1953</span><span>Andhra State created from Madras.</span></li>
+    <li><span class="yr">1956</span><span>States Reorganisation Act: linguistic reorganisation, 14 states and 6 UTs.</span></li>
+    <li><span class="yr">1960</span><span>Maharashtra and Gujarat formed from Bombay State.</span></li>
+    <li><span class="yr">1962</span><span>Puducherry formally becomes a UT.</span></li>
+    <li><span class="yr">1963</span><span>Nagaland becomes a state, with Article 371A.</span></li>
+    <li><span class="yr">1966</span><span>Punjab split; Haryana created; Chandigarh made a UT.</span></li>
+    <li><span class="yr">1971-72</span><span>Himachal Pradesh, Meghalaya, Manipur and Tripura become states.</span></li>
+    <li><span class="yr">1975</span><span>Sikkim becomes the 22nd state.</span></li>
+    <li><span class="yr">1976</span><span>42nd Amendment freezes seat allocation; education moves to the Concurrent List.</span></li>
+    <li><span class="yr">1987</span><span>Mizoram, Arunachal Pradesh and Goa become states.</span></li>
+    <li><span class="yr">1991-92</span><span>69th Amendment gives Delhi the status of NCT with an Assembly.</span></li>
+    <li><span class="yr">1994</span><span><em>S. R. Bommai</em> judgment on Article 356.</span></li>
+    <li><span class="yr">2000</span><span>Chhattisgarh, Uttarakhand and Jharkhand created.</span></li>
+    <li><span class="yr">2014</span><span>Telangana becomes the 29th state (the count fell to 28 in 2019 when Jammu and Kashmir became a UT).</span></li>
+    <li><span class="yr">2019</span><span>J&amp;K Reorganisation Act: J&amp;K and Ladakh become UTs (effective 31 October).</span></li>
+    <li><span class="yr">2020</span><span>Dadra and Nagar Haveli and Daman and Diu merged into one UT.</span></li>
+    <li><span class="yr">2023</span><span>Supreme Court rulings on Delhi services and on Article 370; Delhi Services Act; Women's Reservation Act.</span></li>
+    <li><span class="yr">2024</span><span>Kovind committee report; J&amp;K assembly elections; 129th Amendment Bill introduced. <span class="tag verify">Re-verify</span></span></li>
+    <li><span class="yr">2025</span><span>Supreme Court on Governors' assent; President's Rule in Manipur. <span class="tag verify">Re-verify</span></span></li>
+  </ul>
+  <h3>Glossary</h3>
+  <dl class="term">
+    <dt>Administrator</dt><dd>The head of a UT without a Lieutenant Governor title.</dd>
+    <dt>Asymmetric federalism</dt><dd>Different states or regions having different constitutional arrangements.</dd>
+    <dt>Autonomous District Council</dt><dd>A body in a Sixth Schedule area with powers over local matters.</dd>
+    <dt>Concurrent List</dt><dd>Subjects on which both Parliament and states can legislate.</dd>
+    <dt>Delimitation</dt><dd>Redrawing constituencies and reallocating seats.</dd>
+    <dt>Divisible pool</dt><dd>Central tax revenue that is shared with states.</dd>
+    <dt>Governor</dt><dd>The constitutional head of a state, appointed by the President.</dd>
+    <dt>Inner Line Permit</dt><dd>A permit for outsiders to enter certain Northeast states.</dd>
+    <dt>Lieutenant Governor</dt><dd>The head of some UTs, appointed by the President.</dd>
+    <dt>PESA</dt><dd>Panchayats (Extension to Scheduled Areas) Act, 1996.</dd>
+    <dt>President's Rule</dt><dd>Central takeover of a state under Article 356.</dd>
+    <dt>Residuary power</dt><dd>Power over subjects not listed anywhere, held by Parliament.</dd>
+    <dt>Scheduled Area</dt><dd>A tribal area under the Fifth Schedule.</dd>
+    <dt>Special category status</dt><dd>A planning-era classification giving some states extra central aid; not constitutional.</dd>
+    <dt>Union Territory</dt><dd>A unit administered by the Union under Articles 239-241.</dd>
+  </dl>
+  <h3>Rapid revision sheet</h3>
+  <div class="note">
+    <h4>Framework</h4>
+    <ul>
+      <li>Union of States: Articles 1-4; Parliament can change states by ordinary law.</li>
+      <li>28 states and 8 UTs; UTs under Articles 239-241; Delhi under 239AA.</li>
+      <li>Special: 370 (gone), 371-371J (live), Fifth and Sixth Schedules.</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h4>Powers and relations</h4>
+    <ul>
+      <li>Seventh Schedule: Union, State, Concurrent; residuary with Parliament.</li>
+      <li>Articles 249, 250, 252, 253, 254; 279A (GST Council); 280 (Finance Commission).</li>
+      <li>Governor and Article 356; <em>Bommai</em> (1994); Sarkaria and Punchhi commissions.</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h4>Live issues</h4>
+    <ul>
+      <li>J&amp;K statehood; Delhi services; Ladakh Sixth Schedule; Manipur.</li>
+      <li>Delimitation after the next census; women's reservation; One Nation, One Election.</li>
+      <li>Language politics and the three-language formula.</li>
+      <li>Always tag uncertain recent developments for re-verification.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer>
+  <p>Compiled from open sources. Study aid only, not an official publication.</p>
+  <p>Source &amp; contributions: <a href="https://github.com/mohitkushwaha0601/matre">github.com/mohitkushwaha0601/matre</a></p>
+</footer>
+
+</body>
+</html>
