@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>World War I (1914-1918) — A Deep Knowledge Handbook</title>
+<meta name="description" content="A 22-section handbook on the First World War: the world of 1914, long-term causes and the historians' quarrel, the July Crisis and war plans, the Western and global fronts, war at sea and in the air, technology and tactics, total war at home, 1917-18 turning points, India's contribution, the Paris settlement, costs and legacies, with SSB-style practice material.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#241C14;
+  --ink-soft:#5C5042;
+  --paper:#F4F0E6;
+  --surface:#FFFDF7;
+  --surface-2:#E8E1D1;
+  --rule:#D4CAB6;
+  --rule-strong:#A2967C;
+  --red:#8C2F22;
+  --blue:#2B4C6F;
+  --gold:#8A6A13;
+  --green:#4A5A2B;
+  --hero-bg:#2A2A24;
+  --hero-ink:#F4F0E6;
+  --hero-dim:#B3A992;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ink:#EDE6D6;
+    --ink-soft:#B6A98F;
+    --paper:#14120E;
+    --surface:#1E1B15;
+    --surface-2:#2A261D;
+    --rule:#3B352A;
+    --rule-strong:#5F5747;
+    --red:#E58A78;
+    --blue:#86B0D6;
+    --gold:#D9B45A;
+    --green:#A0B86C;
+    --hero-bg:#0C0B08;
+    --hero-ink:#EDE6D6;
+    --hero-dim:#9A9078;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#EDE6D6;
+  --ink-soft:#B6A98F;
+  --paper:#14120E;
+  --surface:#1E1B15;
+  --surface-2:#2A261D;
+  --rule:#3B352A;
+  --rule-strong:#5F5747;
+  --red:#E58A78;
+  --blue:#86B0D6;
+  --gold:#D9B45A;
+  --green:#A0B86C;
+  --hero-bg:#0C0B08;
+  --hero-ink:#EDE6D6;
+  --hero-dim:#9A9078;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1.5rem);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ---------- hero ---------- */
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
+.flagstrip{display:flex;height:12px}
+.flagstrip span{flex:1}
+.f1{background:#012169}
+.f2{background:linear-gradient(90deg,#002395 33%,#FFFFFF 33%,#FFFFFF 66%,#ED2939 66%)}
+.f3{background:linear-gradient(90deg,#FFFFFF 33%,#0039A6 33%,#0039A6 66%,#D52B1E 66%)}
+.f4{background:linear-gradient(90deg,#000000 33%,#DD0000 33%,#DD0000 66%,#FFCE00 66%)}
+.f5{background:linear-gradient(90deg,#ED2939 33%,#FFFFFF 33%,#FFFFFF 66%,#ED2939 66%)}
+.f6{background:#E30A17}
+.f7{background:#3C3B6E}
+.f8{background:#4A5A2B}
+.hero-inner{max-width:1180px;margin:0 auto;padding:3.2rem 1.5rem 0}
+.kicker{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--hero-dim);margin:0 0 .8rem}
+.motto{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:clamp(1.7rem,5.2vw,2.9rem);line-height:1.2;margin:0;letter-spacing:.005em;max-width:26ch}
+.motto-en{margin:.55rem 0 0;color:var(--hero-dim);font-size:clamp(.95rem,2.4vw,1.1rem);font-style:italic;max-width:62ch}
+.hero h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.5rem,4.3vw,2.35rem);line-height:1.2;margin:2.6rem 0 .5rem;border-top:1px solid rgba(255,255,255,.22);padding-top:1.6rem;max-width:30ch}
+.hero-sub{margin:0;color:var(--hero-dim);max-width:68ch}
+.stamp{margin-top:1.6rem;font-size:.86rem;color:var(--hero-dim);display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+.stamp b{color:var(--hero-ink);font-weight:600}
+
+/* ---------- layout ---------- */
+.shell{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem;display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media (min-width:1000px){
+  .shell{grid-template-columns:255px minmax(0,1fr);gap:3.5rem;padding-top:2.8rem}
+}
+nav.toc{font-size:.9rem}
+@media (min-width:1000px){
+  .toc-mobile{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2rem);align-self:start;max-height:calc(100vh - 5rem);overflow-y:auto}
+}
+nav.toc h2{font-family:"Zilla Slab",Georgia,serif;font-size:.92rem;font-weight:600;margin:0 0 .7rem;padding-bottom:.45rem;border-bottom:2px solid var(--rule-strong)}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc}
+nav.toc li{border-bottom:1px solid var(--rule)}
+nav.toc li:not(.part){counter-increment:toc}
+nav.toc a{display:flex;gap:.6rem;padding:.4rem 0;color:var(--ink-soft);text-decoration:none}
+nav.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--rule-strong);font-variant-numeric:tabular-nums;flex:none}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--red)}
+nav.toc .part{border:0;margin:1.1rem 0 .3rem;font-family:"Zilla Slab",Georgia,serif;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--rule-strong)}
+nav.toc .part::before{content:none}
+.toc-mobile{display:block}
+@media (min-width:1000px){.toc-mobile summary{display:none}}
+.toc-mobile summary{cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:600;padding:.7rem .9rem;background:var(--surface);border:1px solid var(--rule);margin-bottom:1rem}
+@media (max-width:999px){
+  .toc-mobile[open] nav.toc{padding:0 .9rem 1rem}
+  .toc-mobile:not([open]) nav.toc{display:none}
+}
+
+/* ---------- sections ---------- */
+main{min-width:0}
+section{margin:0 0 3.6rem;scroll-margin-top:1.5rem}
+section > h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.45rem,3.6vw,1.95rem);line-height:1.2;margin:0 0 .3rem}
+.part-head{margin:4rem 0 2.2rem;padding:1.1rem 0 .9rem;border-top:4px double var(--rule-strong);border-bottom:1px solid var(--rule)}
+.part-head p{margin:0;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.part-head h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.3rem,3.2vw,1.7rem);margin:.3rem 0 0;color:var(--ink)}
+.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.16rem;margin:2rem 0 .5rem;line-height:1.3}
+h4{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1rem;margin:1.4rem 0 .35rem;color:var(--ink)}
+p{margin:0 0 .95rem;max-width:74ch}
+ul,ol{margin:0 0 1rem;padding-left:1.25rem;max-width:74ch}
+li{margin-bottom:.35rem}
+li::marker{color:var(--rule-strong)}
+strong{font-weight:600}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+/* ---------- components ---------- */
+.lede{font-size:1.06rem;color:var(--ink-soft);max-width:70ch}
+
+.tablewrap{overflow-x:auto;margin:0 0 1.3rem;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.92rem}
+caption{text-align:left;padding:.7rem .85rem .1rem;font-weight:600;color:var(--ink-soft);font-size:.9rem}
+th,td{text-align:left;padding:.55rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{background:var(--surface-2);font-weight:600;border-bottom:2px solid var(--rule-strong);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.num,th.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+.edge{background:var(--surface);border-left:4px solid var(--red);padding:.9rem 1.1rem;margin:1.4rem 0;max-width:74ch}
+.edge p:last-child,.edge ul:last-child,.edge ol:last-child{margin-bottom:0}
+.edge .edge-h{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);display:block;margin-bottom:.25rem;font-size:.95rem}
+.edge.gold{border-left-color:var(--gold)}
+.edge.gold .edge-h{color:var(--gold)}
+.edge.blue{border-left-color:var(--blue)}
+.edge.blue .edge-h{color:var(--blue)}
+.edge.green{border-left-color:var(--green)}
+.edge.green .edge-h{color:var(--green)}
+
+.note{background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;border:1px solid var(--rule);font-size:.95rem}
+.note p:last-child,.note ul:last-child,.note ol:last-child{margin-bottom:0}
+.note h4{margin-top:0}
+
+.panel{background:var(--surface);border:1px solid var(--rule);padding:1rem 1.1rem}
+.panel h4{margin-top:0}
+.panel ul,.panel ol{margin-bottom:0}
+.panel.blue-top{border-top:3px solid var(--blue)}
+.panel.red-top{border-top:3px solid var(--red)}
+.panel.gold-top{border-top:3px solid var(--gold)}
+.panel.green-top{border-top:3px solid var(--green)}
+
+.rungs{max-width:74ch;margin:.3rem 0 0;display:grid;grid-template-columns:9.5rem 1fr;gap:0 1rem}
+.rungs dt{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;color:var(--red);padding-top:.2rem}
+.rungs dd{margin:0 0 .5rem;font-size:.93rem}
+@media (max-width:560px){
+  .rungs{grid-template-columns:1fr;gap:0}
+  .rungs dt{padding-top:.4rem}
+}
+
+.timeline{list-style:none;padding:0;margin:1rem 0 1.4rem;max-width:74ch}
+.timeline li{display:grid;grid-template-columns:8.2rem 1fr;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--rule);margin:0}
+.timeline li:last-child{border-bottom:0}
+.timeline .yr{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);font-variant-numeric:tabular-nums}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:.1rem}}
+
+.qbank{counter-reset:q;list-style:none;padding:0;max-width:74ch}
+.qbank li{counter-increment:q;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.qbank li::before{content:counter(q,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.qbank li:last-child{border-bottom:0}
+
+.dbank{counter-reset:d;list-style:none;padding:0;max-width:74ch}
+.dbank li{counter-increment:d;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.dbank li::before{content:counter(d,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.dbank li:last-child{border-bottom:0}
+
+.ladder{counter-reset:s;list-style:none;padding:0;margin:1.3rem 0 1.5rem;max-width:74ch}
+.ladder li{counter-increment:s;position:relative;margin:0;padding:.1rem 0 1.05rem 2.9rem;border-left:2px solid var(--rule)}
+.ladder li::before{content:counter(s);position:absolute;left:-1.05rem;top:0;width:2rem;height:2rem;display:grid;place-items:center;border-radius:50%;background:var(--surface);border:2px solid var(--rule-strong);font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.85rem;color:var(--red)}
+.ladder li:last-child{border-left-color:transparent;padding-bottom:0}
+.ladder .rung{display:block;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.05rem;color:var(--ink);line-height:2rem}
+.ladder p{margin:.15rem 0 .4rem;font-size:.95rem}
+.ladder p:last-child{margin-bottom:0}
+.ladder .say{color:var(--ink-soft)}
+
+.grid{display:grid;gap:1rem}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
+
+.card{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--red);padding:1rem 1.1rem}
+.card h4{margin:0 0 .45rem;font-size:1rem}
+.card .name{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.2rem}
+.card .role{font-size:.9rem;color:var(--ink-soft)}
+.card .since{font-size:.78rem;color:var(--green);font-weight:600;margin-top:.45rem}
+
+.term{max-width:74ch;margin:0 0 1.2rem}
+.term dt{font-weight:600;margin-top:.8rem}
+.term dd{margin:.15rem 0 0;color:var(--ink-soft)}
+
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:.1rem .45rem;border:1px solid var(--rule-strong);color:var(--ink-soft);margin-right:.35rem;vertical-align:middle}
+.tag.fact{border-color:var(--green);color:var(--green)}
+.tag.interp{border-color:var(--gold);color:var(--gold)}
+.tag.disputed{border-color:var(--red);color:var(--red)}
+.tag.verify{border-color:var(--blue);color:var(--blue)}
+.spaced{margin-top:.6rem}
+
+footer{border-top:3px double var(--rule-strong);margin-top:2rem;padding-top:1.4rem;color:var(--ink-soft);font-size:.9rem;max-width:74ch}
+footer a{color:var(--blue)}
+
+/* ---------- home button: fixed, links back to the collection homepage ---------- */
+.home-btn{position:fixed;top:16px;left:16px;z-index:60;display:inline-flex;align-items:center;gap:.4rem;background:#14202B;color:#F1F2EC;border:1px solid rgba(241,242,236,.25);padding:.45rem .85rem;border-radius:999px;font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.82rem;font-weight:600;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.3);transition:background .15s ease,transform .15s ease}
+.home-btn:hover,.home-btn:focus-visible{background:#BF2F26;transform:translateY(-1px)}
+.home-btn svg{width:14px;height:14px;flex:none}
+@media print{.home-btn{display:none}}
+
+@media print{
+  .hero{background:none;color:#000;padding-bottom:1rem}
+  .hero-sub,.stamp,.motto-en{color:#333}
+  .flagstrip,.toc-mobile{display:none}
+  .shell{display:block;padding:0}
+  section{page-break-inside:auto;margin-bottom:1.8rem}
+  h2,h3{page-break-after:avoid}
+  .panel,.edge,.note,.tablewrap,figure{page-break-inside:avoid}
+  .part-head{page-break-before:always}
+  body{font-size:10.5pt;background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+
+<a class="home-btn" href="../index.html" aria-label="Back to Handbooks homepage" title="Back to Handbooks homepage">
+  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
+  <span>Home</span>
+</a>
+
+<header class="hero">
+  <div class="flagstrip" aria-hidden="true">
+    <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f5"></span><span class="f6"></span><span class="f7"></span><span class="f8"></span>
+  </div>
+  <div class="hero-inner">
+    <p class="motto">The lamps are going out all over Europe.</p>
+    <p class="motto-en">Attributed to Sir Edward Grey, British Foreign Secretary, on the evening of 3 August 1914. The quotation is recorded in his own later memoir rather than by a witness at the time.</p>
+    <h1>World War I, 1914-1918</h1>
+    <p class="hero-sub">Why the war came, how it was fought, why it lasted four years, why the Central Powers lost, and what the settlement did to the twentieth century. This handbook is organised around causation, strategic decision and consequence rather than around battle trivia. Dates and treaty terms are stable history; casualty totals and contested interpretations are tagged so you can argue them honestly rather than quoting one figure as though it were settled.</p>
+    <p class="stamp">
+      <span>Duration <b>28 Jul 1914 - 11 Nov 1918</b></span>
+      <span>Belligerents <b>30+ states</b></span>
+      <span>Military dead <b>c. 9-10 million (est.)</b></span>
+      <span>Indians who served <b>c. 1.3-1.5 million</b></span>
+      <span>Sections <b>22</b></span>
+      <span>Reading time <b>2-3 hrs</b></span>
+    </p>
+  </div>
+</header>
+
+<div class="shell">
+
+<details class="toc-mobile" open>
+  <summary>Contents</summary>
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li class="part">Part I · Origins and the road to war</li>
+      <li><a href="#snapshot">Snapshot and how to read this</a></li>
+      <li><a href="#world-1914">The world in 1914</a></li>
+      <li><a href="#causes">Long-term causes and the historians' quarrel</a></li>
+      <li><a href="#july-crisis">Sarajevo, the July Crisis and the war plans</a></li>
+
+      <li class="part">Part II · Fighting the war</li>
+      <li><a href="#opening">1914: the war of movement and its failure</a></li>
+      <li><a href="#western-front">The Western Front and the logic of attrition</a></li>
+      <li><a href="#other-fronts">Eastern, southern and global fronts</a></li>
+      <li><a href="#sea-air">War at sea and in the air</a></li>
+      <li><a href="#technology">Technology, tactics and the learning curve</a></li>
+      <li><a href="#home-front">Total war and the home fronts</a></li>
+
+      <li class="part">Part III · Turning points and the end</li>
+      <li><a href="#y1917">1917: revolution, mutiny and American entry</a></li>
+      <li><a href="#y1918">1918: the last offensives and the collapse</a></li>
+      <li><a href="#why-won">Why the Entente won</a></li>
+      <li><a href="#india">India and the First World War</a></li>
+
+      <li class="part">Part IV · Settlement and consequences</li>
+      <li><a href="#versailles">Paris 1919 and the peace treaties</a></li>
+      <li><a href="#new-map">Four empires fall: the new map</a></li>
+      <li><a href="#legacy">Costs, memory and the road to 1939</a></li>
+
+      <li class="part">Knowledge toolkit</li>
+      <li><a href="#perspectives">Perspectives, controversies and facts</a></li>
+      <li><a href="#scenarios-options">Counterfactuals, scenarios and lessons</a></li>
+      <li><a href="#answer-framework">Answer framework and worked example</a></li>
+      <li><a href="#qbank">Practice bank: questions and motions</a></li>
+      <li><a href="#revision">Chronology, glossary and revision sheet</a></li>
+    </ol>
+  </nav>
+</details>
+
+<main>
+
+<div class="part-head"><p>Part I · Origins and the road to war</p><h2>How a Balkan murder became a world war</h2></div>
+
+<section id="snapshot">
+  <h2>Snapshot and how to read this</h2><hr class="sec-rule">
+  <p class="lede">The First World War was a four-year industrial war between two coalitions, fought on several continents, which killed somewhere near nine to ten million soldiers, destroyed four empires, and produced the political conditions for the Second World War, the Soviet Union, the modern Middle East and the eventual end of European colonial rule. Understanding it means holding three questions apart: why war broke out in 1914, why it did not end quickly, and why it ended the way it did.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>The two coalitions</caption>
+      <thead><tr><th>Side</th><th>Core members</th><th>Joined later</th><th>Outcome</th></tr></thead>
+      <tbody>
+        <tr><td>Entente / Allied Powers</td><td>France, Russian Empire, British Empire, Serbia, Belgium, Montenegro, Japan</td><td>Italy (1915), Portugal and Romania (1916), United States, Greece, Siam, China (1917), plus several Latin American states</td><td>Victorious; Russia exits in 1917-18</td></tr>
+        <tr><td>Central Powers</td><td>Germany, Austria-Hungary</td><td>Ottoman Empire (Oct-Nov 1914), Bulgaria (Oct 1915)</td><td>Defeated; all four states lose their ruling dynasties or territory</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge blue">
+    <span class="edge-h">How to read this handbook</span>
+    <p>Dates, treaty clauses and orders of battle are stable and stated plainly. Contested claims carry tags (<span class="tag fact">Established</span> <span class="tag interp">Interpretation</span> <span class="tag disputed">Disputed</span> <span class="tag verify">Re-verify</span>). Casualty figures for this war are genuinely uncertain: different governments counted differently, the Russian and Ottoman records are incomplete, and the 1918-20 influenza pandemic blurs the line between war dead and epidemic dead. Treat every round number here as an estimate with a range, and say so in an interview. Related handbooks in this collection: no. 2 (Russia-Ukraine), 5 (Indian independence), 37 (international institutions).</p>
+  </div>
+  <div class="note">
+    <h4>Three questions that organise everything</h4>
+    <ul>
+      <li><strong>Why 1914?</strong> A structural answer (alliances, arms race, nationalism, imperial rivalry) plus a decision-making answer (what specific men chose in July 1914).</li>
+      <li><strong>Why four years?</strong> Because firepower outran mobility, and because industrial states could replace losses faster than armies could exploit a breakthrough.</li>
+      <li><strong>Why that ending?</strong> Because attrition, blockade and coalition resources told at the same moment that German manpower ran out, in the autumn of 1918.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="world-1914">
+  <h2>The world in 1914</h2><hr class="sec-rule">
+  <p>Europe in 1914 was the centre of the world economy and of world power. Five great powers plus Italy dominated the continent, and between them they ruled, directly or indirectly, most of Africa and much of Asia. Trade, capital and migration were more globalised than they would be again until the 1980s, which is precisely why the claim that economic interdependence prevents war is so dangerous a lesson to draw casually.</p>
+  <p>Three facts shaped every calculation. First, Germany had become the strongest industrial and military power on the continent after unification in 1871, which unsettled everyone around it. Second, Austria-Hungary was a multinational empire whose survival was threatened by the same nationalism that had created Germany and Italy. Third, the Ottoman Empire was contracting, and each contraction created a scramble in the Balkans between Russia, Austria-Hungary and the new Balkan states.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Great powers on the eve of war (indicative relative weights)</caption>
+      <thead><tr><th>Power</th><th>Approximate population</th><th>Strategic character</th><th>Core anxiety</th></tr></thead>
+      <tbody>
+        <tr><td>German Empire</td><td class="num">c. 67 m</td><td>Strongest army in Europe; rapidly growing industry and navy</td><td>Encirclement by France and Russia; Russia's growth rate</td></tr>
+        <tr><td>Austria-Hungary</td><td class="num">c. 51 m</td><td>Dual monarchy, eleven major nationalities, uneven army</td><td>Serb-backed nationalism dissolving the empire</td></tr>
+        <tr><td>Russian Empire</td><td class="num">c. 170 m</td><td>Vast manpower, rapid but incomplete industrialisation</td><td>Humiliation after 1905; loss of Balkan and Straits influence</td></tr>
+        <tr><td>France</td><td class="num">c. 40 m</td><td>Large conscript army, strong capital markets, Russian alliance</td><td>Smaller population than Germany; memory of 1870-71</td></tr>
+        <tr><td>British Empire</td><td class="num">c. 46 m (home islands)</td><td>Dominant navy, global empire, small regular army</td><td>Naval challenge; a single power dominating the Channel coast</td></tr>
+        <tr><td>Ottoman Empire</td><td class="num">c. 21 m</td><td>Shrinking, modernising under the Young Turks</td><td>Partition by the great powers</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><span class="tag verify">Re-verify</span> Population and output figures for 1914 vary by source and by how colonial populations are counted; use them as orders of magnitude, not as quotable precision.</p>
+</section>
+
+<section id="causes">
+  <h2>Long-term causes and the historians' quarrel</h2><hr class="sec-rule">
+  <p>The classroom acronym MAIN (militarism, alliances, imperialism, nationalism) is a useful checklist and a poor explanation, because it lists conditions without showing a mechanism. The better formulation is that these four conditions made a great-power war <em>possible and survivable to contemplate</em>, while specific decisions in July 1914 made it <em>actual</em>.</p>
+  <div class="grid two">
+    <div class="panel red-top">
+      <h4>Alliances and their inversion</h4>
+      <p>Bismarck's system was designed to keep France isolated. After 1890 it inverted: the Franco-Russian Alliance (1894), the Anglo-French Entente Cordiale (1904) and the Anglo-Russian Convention (1907) left Germany tied principally to a fragile Austria-Hungary. Alliances did not automatically cause war; they determined who would be dragged in once it started.</p>
+    </div>
+    <div class="panel blue-top">
+      <h4>Militarism and the cult of the offensive</h4>
+      <p>General staffs believed a short, decisive offensive war was both possible and necessary. This belief rewarded striking first, shortened the time available for diplomacy, and made mobilisation timetables into de facto political decisions.</p>
+    </div>
+    <div class="panel gold-top">
+      <h4>Imperial and naval rivalry</h4>
+      <p>The Anglo-German naval race (Tirpitz's fleet laws, the 1906 <em>Dreadnought</em>) and the Moroccan crises of 1905 and 1911 hardened British alignment with France. Colonial rivalry rarely brought powers to war directly, but it poisoned trust.</p>
+    </div>
+    <div class="panel green-top">
+      <h4>Nationalism, especially Balkan</h4>
+      <p>The Bosnian annexation crisis (1908) and the two Balkan Wars (1912-13) doubled Serbia's size and convinced Vienna that Serbia was an existential problem to be solved by force rather than diplomacy.</p>
+    </div>
+  </div>
+  <h3>The historians' quarrel, in one page</h3>
+  <ul>
+    <li><span class="tag interp">Interpretation</span> <strong>German responsibility.</strong> Fritz Fischer (1961) argued from German archives that Berlin deliberately pursued a bid for world power and welcomed war in 1914. This broke the post-1945 consensus of shared blame and still anchors the debate.</li>
+    <li><span class="tag interp">Interpretation</span> <strong>Shared drift.</strong> Christopher Clark's <em>The Sleepwalkers</em> (2012) emphasises multiple capitals making locally rational, collectively catastrophic choices, and restores Serbian and Russian agency.</li>
+    <li><span class="tag interp">Interpretation</span> <strong>Technical determinism.</strong> A. J. P. Taylor's argument that railway mobilisation timetables stripped statesmen of choice. Most historians now treat this as an exaggeration: timetables constrained, they did not decide.</li>
+    <li><span class="tag interp">Interpretation</span> <strong>Domestic politics.</strong> The "flight forward" thesis: elites in Vienna, Berlin and St Petersburg hoped external success would quiet internal crisis.</li>
+  </ul>
+  <div class="edge gold">
+    <span class="edge-h">The examiner's point</span>
+    <p>You are not expected to settle the blame question. You are expected to distinguish <em>preconditions</em> from <em>precipitants</em>, name at least two competing schools, and show why the answer matters: Article 231 of the Treaty of Versailles turned a historical judgement into a legal and financial obligation.</p>
+  </div>
+</section>
+
+<section id="july-crisis">
+  <h2>Sarajevo, the July Crisis and the war plans</h2><hr class="sec-rule">
+  <p>On 28 June 1914 Archduke Franz Ferdinand, heir to the Austro-Hungarian throne, and his wife Sophie were shot dead in Sarajevo by Gavrilo Princip, a Bosnian Serb of the Young Bosnia group, armed and assisted by officers linked to the Serbian secret society popularly called the Black Hand. Whether the Serbian government knew is still argued; that elements of its military intelligence were involved is widely accepted. <span class="tag disputed">Disputed</span></p>
+  <p>What followed was five weeks of escalation, not an automatic chain reaction. Vienna chose to treat the murder as an opportunity to crush Serbia; Berlin issued the so-called "blank cheque" of unconditional support on 5-6 July; Vienna delivered a deliberately unacceptable ultimatum on 23 July; Serbia's reply on 25 July accepted most of it but not the clause on Austrian participation in the investigation. Austria-Hungary declared war on 28 July. Russia's decision for general mobilisation on 30 July converted a Balkan war into a continental one, because German planning treated Russian mobilisation as the trigger for its own.</p>
+  <ul class="timeline">
+    <li><span class="yr">28 Jun</span><span>Franz Ferdinand assassinated in Sarajevo.</span></li>
+    <li><span class="yr">5-6 Jul</span><span>Germany gives Austria-Hungary the "blank cheque".</span></li>
+    <li><span class="yr">23 Jul</span><span>Austro-Hungarian ultimatum to Serbia, 48-hour deadline.</span></li>
+    <li><span class="yr">25 Jul</span><span>Serbian reply; Austria-Hungary breaks relations.</span></li>
+    <li><span class="yr">28 Jul</span><span>Austria-Hungary declares war on Serbia; Belgrade shelled.</span></li>
+    <li><span class="yr">30 Jul</span><span>Russia orders general mobilisation.</span></li>
+    <li><span class="yr">1 Aug</span><span>Germany declares war on Russia; France mobilises.</span></li>
+    <li><span class="yr">3 Aug</span><span>Germany declares war on France; demands passage through Belgium.</span></li>
+    <li><span class="yr">4 Aug</span><span>German troops enter Belgium; Britain declares war on Germany.</span></li>
+    <li><span class="yr">6 Aug</span><span>Austria-Hungary declares war on Russia.</span></li>
+  </ul>
+  <h3>The plans that framed the choices</h3>
+  <div class="tablewrap">
+    <table>
+      <caption>Pre-war operational plans and their assumptions</caption>
+      <thead><tr><th>Plan</th><th>State</th><th>Design</th><th>Fatal assumption</th></tr></thead>
+      <tbody>
+        <tr><td>Schlieffen Plan (1905 memorandum, modified by Moltke the Younger)</td><td>Germany</td><td>Mass the right wing through Belgium, envelop Paris, defeat France in weeks, then turn east against slow-mobilising Russia</td><td>That a two-front war could be made sequential; that Belgian neutrality could be violated without decisive British entry; that supply could keep pace with the march</td></tr>
+        <tr><td>Plan XVII</td><td>France</td><td>Immediate offensive into Alsace-Lorraine, driven by doctrine of <em>offensive à outrance</em></td><td>That élan would compensate for German firepower; it produced the catastrophic Battle of the Frontiers</td></tr>
+        <tr><td>Plan 19 (variant A)</td><td>Russia</td><td>Advance into East Prussia and Austrian Galicia earlier than Germany expected, to relieve France</td><td>That partially mobilised armies could sustain simultaneous offensives on two axes</td></tr>
+        <tr><td>Plan B / Plan R</td><td>Austria-Hungary</td><td>Deployment options against Serbia alone or Serbia plus Russia</td><td>Conrad's attempt to do both at once split scarce forces and failed against both</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge">
+    <span class="edge-h">The structural lesson, still live</span>
+    <p>Rigid plans with short decision windows convert a political crisis into a military one. Mobilisation was reversible in theory and treated as irreversible in practice. Any modern system in which alert postures, pre-delegated authority or automated responses compress deliberation time reproduces the same hazard.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part II · Fighting the war</p><h2>Why firepower produced stalemate, and how armies escaped it</h2></div>
+
+<section id="opening">
+  <h2>1914: the war of movement and its failure</h2><hr class="sec-rule">
+  <p>The opening campaign decided the shape of the next four years. In the west, German armies swept through Belgium, pushed the French back in the Battle of the Frontiers in August, and drove on towards Paris. Moltke weakened the decisive right wing to reinforce Lorraine and the east, supply lines outran the railheads, and the advance swung east of Paris, exposing its flank. The French counter-attack on the Marne from 5 to 12 September forced a German withdrawal to the Aisne. The Schlieffen concept had failed; with it failed the possibility of a short war.</p>
+  <p>Both sides then tried to outflank each other northwards in the so-called Race to the Sea, which ended at the Channel in the First Battle of Ypres in October and November. By Christmas a continuous entrenched line ran roughly 700 kilometres from the North Sea to the Swiss frontier, with no open flank left to turn.</p>
+  <p>In the east the pattern was the opposite. Russia invaded East Prussia early and was destroyed at Tannenberg (26-30 August) and the Masurian Lakes (September) by a German force under Hindenburg and Ludendorff, with Max Hoffmann's staff work and intercepted Russian radio traffic doing much of the real work. Against Austria-Hungary, however, Russia did well in Galicia, taking Lemberg and crippling the Habsburg officer corps in the first months. Serbia, meanwhile, threw back three Austro-Hungarian invasions in 1914.</p>
+  <div class="edge blue">
+    <span class="edge-h">The core asymmetry of the war</span>
+    <p>In the west, high force-to-space ratios plus entrenchment produced deadlock. In the east, the front was more than twice as long with fewer troops per kilometre, so movement, encirclement and deep retreat remained possible throughout. Most generalisations about "the trenches" are generalisations about the Western Front only.</p>
+  </div>
+</section>
+
+<section id="western-front">
+  <h2>The Western Front and the logic of attrition</h2><hr class="sec-rule">
+  <p>The trench system was not a ditch but a defensive zone: a forward line of outposts, a main fire trench, support and reserve lines connected by communication trenches, with belts of barbed wire, concrete machine-gun posts and, by 1917, deep dugouts and a defence in depth designed to absorb and then counter-attack. Attacking it required destroying wire and strongpoints by artillery, crossing a fire-swept zone on foot, and then pushing reserves and guns forward across ground the bombardment had just ruined. The third step was the one that always failed, which is why breakthroughs became breaches and not ruptures.</p>
+  <p>Attrition was therefore less a failure of imagination than a deliberate, grim calculation: if a decisive manoeuvre is impossible, destroy the enemy's manpower and materiel faster than he destroys yours. Falkenhayn's stated intention at Verdun was to "bleed France white"; the British at the Somme sought both to relieve Verdun and to wear down the German army. Both battles cost their authors as much as their targets.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Major Western Front battles and what each was for</caption>
+      <thead><tr><th>Battle</th><th>Dates</th><th>Purpose</th><th>Result</th></tr></thead>
+      <tbody>
+        <tr><td>Second Ypres</td><td>Apr-May 1915</td><td>German limited attack, first large-scale use of chlorine gas</td><td>Salient reduced; no breakthrough; gas becomes standard</td></tr>
+        <tr><td>Verdun</td><td>Feb-Dec 1916</td><td>German attritional offensive on a fortress of symbolic value</td><td>Roughly 700,000-900,000 casualties on both sides combined (estimates vary widely); French line holds <span class="tag disputed">Disputed</span></td></tr>
+        <tr><td>Somme</td><td>Jul-Nov 1916</td><td>Anglo-French offensive; relief of Verdun; attrition</td><td>British suffered about 57,000 casualties on the first day alone; roughly 10 km gained over four and a half months; tanks debut 15 Sept</td></tr>
+        <tr><td>Nivelle Offensive / Chemin des Dames</td><td>Apr-May 1917</td><td>Promised decisive French breakthrough in 48 hours</td><td>Failure; widespread French army mutinies; Pétain replaces Nivelle</td></tr>
+        <tr><td>Third Ypres (Passchendaele)</td><td>Jul-Nov 1917</td><td>British attempt to reach the Belgian coast and U-boat bases</td><td>Severe casualties in mud; limited ground; enduring symbol of futility debate</td></tr>
+        <tr><td>Cambrai</td><td>Nov-Dec 1917</td><td>Massed tanks with predicted artillery fire, no preliminary bombardment</td><td>Deep initial gain, mostly lost to German counter-attack; proves the method</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">
+    <h4>Traps to avoid</h4>
+    <ul>
+      <li>Do not describe the whole war as static. The Western Front was static for about three of its four and a half years; 1914 and 1918 were wars of movement.</li>
+      <li>Do not quote a single casualty figure for Verdun or the Somme as fact. Ranges differ by whether "casualty" means dead, or dead plus wounded plus missing plus sick.</li>
+      <li>"Lions led by donkeys" is a slogan from the 1960s, not a verdict of the historiography. See the perspectives section.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="other-fronts">
+  <h2>Eastern, southern and global fronts</h2><hr class="sec-rule">
+  <p>Calling this a world war is not rhetoric. Fighting took place in Poland and Galicia, the Alps, the Balkans, Mesopotamia, Palestine, the Caucasus, East and West Africa, the Pacific and China, and at sea across three oceans. Troops from India, Canada, Australia, New Zealand, South Africa, Senegal, Indochina, the Caribbean and China's labour corps served far from home.</p>
+  <div class="grid two">
+    <div class="panel red-top">
+      <h4>Eastern Front</h4>
+      <p>The Gorlice-Tarnów offensive of May 1915 broke the Russian line and produced the Great Retreat, costing Russia Poland, Lithuania and much of its army. The Brusilov Offensive of June-September 1916 was arguably the most operationally sophisticated attack of the war, shattering Austro-Hungarian forces, but it exhausted Russia's reserves and accelerated the slide towards revolution.</p>
+    </div>
+    <div class="panel blue-top">
+      <h4>Italian Front</h4>
+      <p>Italy left the Triple Alliance and entered on the Entente side in May 1915 after the secret Treaty of London promised territorial gains. Eleven battles of the Isonzo achieved little. Caporetto in October 1917 nearly collapsed the Italian army before the line was stabilised on the Piave.</p>
+    </div>
+    <div class="panel gold-top">
+      <h4>Balkans and Gallipoli</h4>
+      <p>Bulgaria joined the Central Powers in October 1915 and Serbia was overrun; its army retreated through Albania at terrible cost. The Allied attempt to force the Dardanelles and knock out the Ottomans failed: naval attack in March 1915, landings from April, evacuation completed by January 1916. The Salonika front, long derided as inactive, delivered the breakthrough that knocked Bulgaria out in September 1918.</p>
+    </div>
+    <div class="panel green-top">
+      <h4>Middle East and Africa</h4>
+      <p>Mesopotamia saw the British-Indian advance, the surrender at Kut in April 1916, and the capture of Baghdad in March 1917. In Palestine, Allenby took Jerusalem in December 1917 and broke the Ottoman front at Megiddo in September 1918, supported by the Arab Revolt from 1916. In East Africa, Lettow-Vorbeck's small force tied down large Allied resources until after the armistice.</p>
+    </div>
+  </div>
+  <p><span class="tag disputed">Disputed</span> The deportations and mass killings of Ottoman Armenians from 1915, widely described by historians and by many states as a genocide with death estimates commonly placed between 600,000 and 1.5 million, are officially contested by the Republic of Turkey, which rejects the genocide characterisation. State the fact of mass death, state the range, and state that the legal characterisation is politically contested.</p>
+</section>
+
+<section id="sea-air">
+  <h2>War at sea and in the air</h2><hr class="sec-rule">
+  <p>The naval war decided the war's economics. Britain did not need a second Trafalgar; it needed to keep its own sea lanes open and close Germany's. The distant blockade, enforced from the Channel and the Scotland-Norway gap, did exactly that. The German High Seas Fleet, the object of two decades of expenditure, fought one full fleet action at Jutland on 31 May-1 June 1916, inflicted heavier losses than it suffered, and returned to port, leaving the strategic blockade untouched. <span class="tag fact">Established</span></p>
+  <p>Germany's answer was the submarine. Unrestricted submarine warfare was declared in 1915, suspended after the sinking of the <em>Lusitania</em> in May 1915 and the <em>Sussex</em> pledge of 1916, and resumed on 1 February 1917 as a calculated gamble that Britain could be starved out before American strength arrived. Allied shipping losses peaked in April 1917. The adoption of the convoy system from May 1917, combined with hydrophones, depth charges and minefields, broke the campaign. The gamble failed on both counts: Britain was not starved, and the United States entered the war.</p>
+  <p>Air power began as reconnaissance and artillery spotting, which was its most militarily decisive role throughout. From it grew fighters to deny that reconnaissance, ground attack, naval patrol, and strategic bombing of cities by Zeppelins and later Gotha bombers. The material effect of bombing was small; the political effect, in creating the interwar fear of the bomber and independent air forces such as the Royal Air Force formed on 1 April 1918, was large.</p>
+  <div class="edge green">
+    <span class="edge-h">The blockade as a weapon</span>
+    <p>The Allied blockade is now generally judged among the most effective strategic instruments of the war, contributing to severe malnutrition in Central Europe. German post-war estimates of civilian deaths attributable to the blockade are commonly cited in the range of 400,000 to 760,000, and the figure is contested both in size and in attribution. <span class="tag disputed">Disputed</span></p>
+  </div>
+</section>
+
+<section id="technology">
+  <h2>Technology, tactics and the learning curve</h2><hr class="sec-rule">
+  <p>The defining imbalance of 1914 was that firepower had been revolutionised while battlefield mobility and communications had not. Quick-firing artillery, magazine rifles and machine guns gave defence enormous advantage; movement still depended on marching men and horses, and once troops left their telephone wire behind, commanders lost contact with them. The entire tactical history of the war is the story of closing that gap.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>From 1914 methods to 1918 methods</caption>
+      <thead><tr><th>Problem</th><th>1914-15 answer</th><th>1917-18 answer</th></tr></thead>
+      <tbody>
+        <tr><td>Cutting wire, suppressing defenders</td><td>Long bombardment, which destroyed surprise and churned the ground</td><td>Predicted fire using survey, meteorology, sound ranging and flash spotting; short hurricane barrage; the creeping barrage</td></tr>
+        <tr><td>Crossing no man's land</td><td>Massed infantry waves</td><td>Small platoons combining rifle, grenade, rifle-grenade and light machine gun; German infiltration (stormtroop) tactics</td></tr>
+        <tr><td>Breaking through strongpoints</td><td>Weight of numbers</td><td>Tanks from Sept 1916, massed at Cambrai 1917 and Amiens 1918</td></tr>
+        <tr><td>Command beyond the front line</td><td>Runners and field telephone</td><td>Contact aircraft, wireless sets, flares, pigeons and, above all, limited objectives within communications range</td></tr>
+        <tr><td>Chemical warfare</td><td>Chlorine released from cylinders, 1915</td><td>Shell-delivered phosgene and mustard gas; gas as an area-denial and harassment weapon rather than a war-winner</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Artillery, not the machine gun, caused the majority of casualties on the Western Front, commonly estimated at around sixty per cent. <span class="tag verify">Re-verify</span> Gas caused perhaps 1.3 million casualties but a far smaller share of deaths; its main effect was to degrade performance, force men into masks, and add moral horror. By 1918 the Allies were practising what is recognisably modern combined-arms warfare: surveyed artillery, tanks, aircraft, and infantry attacking to limited, repeatable depths. This is the evidence base for the "learning curve" school of historians who reject the view that commanders simply repeated failure for four years. <span class="tag interp">Interpretation</span></p>
+</section>
+
+<section id="home-front">
+  <h2>Total war and the home fronts</h2><hr class="sec-rule">
+  <p>The war's second revolution was in the relationship between state, economy and society. Shell shortages in 1915 forced governments to direct industry: Britain created a Ministry of Munitions under Lloyd George; Germany built the Hindenburg Programme and the War Raw Materials Department under Walther Rathenau; France mobilised private industry under state contract. Rationing, price control, direction of labour, state control of railways and shipping, and censorship became normal. Governments financed the war mainly by borrowing and by printing money, storing up the inflations of the 1920s.</p>
+  <p>Labour shortage pulled women into munitions factories, transport, agriculture and clerical work on an unprecedented scale. Whether the war caused women's suffrage is disputed: Britain's Representation of the People Act of 1918 enfranchised women over thirty with property qualifications, and campaigns long predated 1914, but the war plainly accelerated and legitimised the claim. <span class="tag interp">Interpretation</span></p>
+  <p>Consent had to be manufactured and policed. Propaganda, atrocity stories about Belgium, and legislation such as Britain's Defence of the Realm Act (1914) and the United States' Espionage and Sedition Acts (1917-18) extended state power over speech. By 1917 the strain showed everywhere: strikes in Germany and Britain, bread riots, French army mutinies, the Russian revolutions, and the first serious peace movements and socialist internationalism.</p>
+  <div class="note">
+    <h4>Four durable features of total war</h4>
+    <ul>
+      <li>Economic mobilisation: the state as the largest customer and allocator in the economy.</li>
+      <li>Manpower mobilisation: conscription, exemption schemes, and the import of colonial and foreign labour.</li>
+      <li>Information mobilisation: propaganda, censorship, and the criminalisation of dissent.</li>
+      <li>Social reordering: women in paid work, organised labour at the bargaining table, and a post-war expectation that the state owed its citizens something in return.</li>
+    </ul>
+  </div>
+</section>
+
+<div class="part-head"><p>Part III · Turning points and the end</p><h2>1917-18: the war is decided</h2></div>
+
+<section id="y1917">
+  <h2>1917: revolution, mutiny and American entry</h2><hr class="sec-rule">
+  <p class="lede">1917 is the hinge. Two of the war's four strategic decisions were taken in it: Germany's choice to resume unrestricted submarine warfare, and America's choice to belligerency. A third, Russia's exit, was made for it by revolution.</p>
+  <h3>Russia leaves</h3>
+  <p>Military failure, transport breakdown, food shortage and the discredit of the monarchy produced the February Revolution; Tsar Nicholas II abdicated in March 1917. The Provisional Government's decision to stay in the war and launch the Kerensky Offensive in July destroyed its remaining authority. The Bolsheviks seized power in November on a platform of peace, land and bread, agreed an armistice in December, and signed the Treaty of Brest-Litovsk on 3 March 1918, surrendering Poland, the Baltic provinces, Finland, Ukraine and the Caucasus districts. Germany gained a free hand in the east and, briefly, the prospect of victory in the west.</p>
+  <h3>America enters</h3>
+  <p>Germany resumed unrestricted submarine warfare on 1 February 1917, accepting American entry as a price worth paying if Britain could be starved out within months. The Zimmermann Telegram, proposing a German-Mexican alliance and intercepted and released by British intelligence, removed the last American hesitations. Congress declared war on 6 April 1917. The immediate military effect was small, since the American Expeditionary Force under Pershing took a year to arrive in strength; the financial, naval and psychological effects were immediate, and by mid-1918 American divisions were arriving at a rate Germany could not match.</p>
+  <h3>Crisis in the Allied camp</h3>
+  <p>The Nivelle Offensive's failure in April produced mutinies across large parts of the French army, better described as a collective refusal to attack than a refusal to defend. Pétain restored discipline through a mixture of punishment, improved rations and leave, and a commitment to wait for tanks and Americans. Italy was nearly knocked out at Caporetto in October. Britain fought Passchendaele to exhaustion. At the end of 1917 the Central Powers were, on a map, winning.</p>
+  <div class="edge">
+    <span class="edge-h">Why the German gamble was rational and still wrong</span>
+    <p>Berlin's calculation was explicitly actuarial: sink enough tonnage per month and Britain capitulates before American troops land. The arithmetic of sinkings was roughly right for a few months. What it omitted was adaptation, namely convoy, and the elasticity of a global maritime economy. Strategic gambles fail less often on the arithmetic than on the assumption that the enemy will not change his method.</p>
+  </div>
+</section>
+
+<section id="y1918">
+  <h2>1918: the last offensives and the collapse</h2><hr class="sec-rule">
+  <p>Freed from the Eastern Front, Ludendorff launched a series of offensives from 21 March 1918, beginning with Operation Michael against the British Fifth Army. Using infiltration tactics and a short, precisely targeted bombardment, the Germans achieved the deepest advances in the west since 1914 and came within artillery range of Paris. They achieved no strategic object. The attacks bulged the line rather than breaking the coalition, outran their own supply, killed irreplaceable assault troops, and left the Germans holding longer, unfortified frontage. The crisis did produce unified Allied command under Foch from April.</p>
+  <p>The counter-stroke began with the Second Battle of the Marne in July and became decisive at Amiens on 8 August 1918, which Ludendorff called "the black day of the German Army". The Hundred Days that followed were a sustained, mechanised, combined-arms advance by British Empire, French, American and Belgian forces that broke the Hindenburg Line in late September and never allowed the Germans to re-form.</p>
+  <p>The coalition disintegrated from the periphery inwards. Bulgaria signed an armistice on 29 September. The Ottoman Empire signed at Mudros on 30 October. Austria-Hungary signed at Villa Giusti on 3 November as its nationalities declared independence. In Germany, the naval mutiny at Kiel spread into revolution; Wilhelm II abdicated and a republic was declared on 9 November. The armistice was signed in Foch's railway carriage at Compiègne and took effect at 11:00 on 11 November 1918.</p>
+  <div class="note">
+    <h4>Germany in November 1918: defeated, not invaded</h4>
+    <ul>
+      <li>German armies were still on French and Belgian soil when the fighting stopped. No Allied soldier had fought on German territory. <span class="tag fact">Established</span></li>
+      <li>The armistice was sought by the German high command, which in late September told the Kaiser the war was lost and handed power to a civilian government to make peace.</li>
+      <li>That sequence made the <em>Dolchstoßlegende</em>, the stab-in-the-back myth, politically available. It was false, and it was decisive for interwar German politics. <span class="tag fact">Established</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="why-won">
+  <h2>Why the Entente won</h2><hr class="sec-rule">
+  <p>No single cause suffices; the honest answer is cumulative advantage converted into collapse at a single moment. Four factors are usually ranked highest.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Decisive advantages, weighed</caption>
+      <thead><tr><th>Factor</th><th>Mechanism</th><th>Weight</th></tr></thead>
+      <tbody>
+        <tr><td>Resources and sea control</td><td>Allied access to world markets, American credit and materials, imperial manpower, while Germany was blockaded and Austria-Hungary starved</td><td>High; this is the structural precondition for everything else</td></tr>
+        <tr><td>Attrition of German manpower</td><td>Verdun, the Somme and above all the 1918 offensives consumed Germany's best troops; by August 1918 divisions could not be rebuilt</td><td>High; the proximate cause of collapse</td></tr>
+        <tr><td>Allied tactical and technical learning</td><td>Combined-arms method by 1918 let the Allies attack repeatedly without pausing, denying Germany recovery time</td><td>Medium-high; it converted material superiority into operational effect</td></tr>
+        <tr><td>Coalition management</td><td>Unified command under Foch, shared shipping and finance, and a coalition that held together while the Central Powers' periphery broke off</td><td>Medium; the Central Powers' asymmetry (Germany carrying weak allies) was a lasting liability</td></tr>
+        <tr><td>American entry</td><td>Money and shipping immediately; by mid-1918 a manpower reservoir Germany could not match, which destroyed German hope as much as German strength</td><td>Medium-high, chiefly as a decider of the endgame rather than of the whole war <span class="tag interp">Interpretation</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge gold">
+    <span class="edge-h">The one-sentence answer</span>
+    <p>Germany could win campaigns but not a long war of coalitions and blockade, and after March 1918 it had spent the only army capable of winning a short one.</p>
+  </div>
+</section>
+
+<section id="india">
+  <h2>India and the First World War</h2><hr class="sec-rule">
+  <p class="lede">Undivided India was one of the largest contributors of manpower to the Allied effort and one of the places most politically transformed by the war's aftermath. For an Indian candidate this section is the one most likely to be examined.</p>
+  <p>Roughly 1.3 to 1.5 million Indians were recruited during the war, of whom well over a million served overseas as combatants and non-combatants. Indian deaths are commonly placed around 74,000 on Commonwealth war-graves records; wounded numbers are higher and less reliably recorded. <span class="tag verify">Re-verify</span> India also supplied enormous quantities of grain, jute, timber, animals and money, including a contribution of £100 million voted in 1917, which strained Indian finances and contributed to wartime inflation. <span class="tag interp">Interpretation</span></p>
+  <div class="grid two">
+    <div class="panel red-top">
+      <h4>Where Indians fought</h4>
+      <ul>
+        <li><strong>France and Flanders:</strong> the Indian Corps held part of the line through the winter of 1914-15, fighting at Ypres, Neuve Chapelle and Loos.</li>
+        <li><strong>Mesopotamia:</strong> the largest Indian commitment; the siege and surrender of Kut in April 1916, then Baghdad in March 1917.</li>
+        <li><strong>Egypt and Palestine:</strong> including the Indian cavalry action at Haifa in September 1918.</li>
+        <li><strong>Gallipoli, East Africa, Aden, Persia and the North-West Frontier.</strong></li>
+      </ul>
+    </div>
+    <div class="panel blue-top">
+      <h4>Recognition and its limits</h4>
+      <ul>
+        <li>Sepoy Khudadad Khan of the 129th Baluchis became the first Indian-born recipient of the Victoria Cross, at Hollebeke on 31 October 1914.</li>
+        <li>Indian officers could not hold King's Commissions on equal terms before the war; limited commissioning and the founding of the Indian Military Academy at Dehradun in 1932 came later and partly in consequence.</li>
+        <li>The India Gate in New Delhi commemorates Indian dead of this war and of the North-West Frontier.</li>
+      </ul>
+    </div>
+  </div>
+  <h3>The political consequence</h3>
+  <p>Indian leaders, including moderates and the Congress, supported the war effort in the expectation of self-government in return. The Montagu Declaration of August 1917 promised "responsible government" by stages, and the Government of India Act 1919 delivered dyarchy in the provinces, which most nationalists judged inadequate. Simultaneously the Rowlatt Act of 1919 extended wartime emergency powers into peacetime, and the Jallianwala Bagh massacre of 13 April 1919 destroyed the remaining reservoir of trust. The combination of unmet promises, wartime economic hardship, influenza deaths, the Khilafat question raised by the dismemberment of the Ottoman Caliphate, and the massacre produced the Non-Cooperation Movement of 1920-22 and the arrival of mass politics under Gandhi.</p>
+  <div class="edge green">
+    <span class="edge-h">The analytical point</span>
+    <p>India's war is the clearest case of the general proposition that total war mortgages the political future. Empires that spend colonial lives and colonial money must either repay them in political rights or face the organised demand for them. The British Empire chose a partial repayment in 1919, and the gap between the promise of 1917 and the delivery of 1919 is the measure of what followed.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part IV · Settlement and consequences</p><h2>The peace that organised the next war</h2></div>
+
+<section id="versailles">
+  <h2>Paris 1919 and the peace treaties</h2><hr class="sec-rule">
+  <p>The Paris Peace Conference opened in January 1919 with delegations from over thirty states but with decisions taken effectively by the Council of Four: Wilson for the United States, Lloyd George for Britain, Clemenceau for France and Orlando for Italy. Germany and the other defeated states were not negotiating parties; they were presented with terms, which is why Germans called Versailles a <em>Diktat</em>. Russia, in civil war and excluded, was absent.</p>
+  <p>Wilson's Fourteen Points of January 1918, with their emphasis on open diplomacy, self-determination, freedom of the seas and a league of nations, had shaped German expectations of the armistice. The treaty that emerged was a compromise between Wilsonian principle, French demands for permanent security and British concern not to destroy a trading partner or leave a vacuum in Central Europe. It satisfied none of those aims fully.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Treaty of Versailles (signed 28 June 1919, in force 10 January 1920): principal terms</caption>
+      <thead><tr><th>Category</th><th>Terms</th></tr></thead>
+      <tbody>
+        <tr><td>Responsibility</td><td>Article 231 assigned responsibility for loss and damage to Germany and her allies; popularly the "war guilt clause", and the legal basis for reparations</td></tr>
+        <tr><td>Territory in the west</td><td>Alsace-Lorraine returned to France; Eupen-Malmedy to Belgium; Saar coalfield under League administration for fifteen years, with a plebiscite to follow; North Schleswig to Denmark after plebiscite</td></tr>
+        <tr><td>Territory in the east</td><td>Posen and West Prussia to the new Poland, creating the Polish Corridor; Danzig a Free City under the League; Memel detached; plebiscite in Upper Silesia</td></tr>
+        <tr><td>Military</td><td>Army limited to 100,000 men with no conscription; no tanks, military aircraft or submarines; navy capped; Rhineland permanently demilitarised and occupied for up to fifteen years; General Staff abolished</td></tr>
+        <tr><td>Economic</td><td>Reparations sum deferred; fixed by the London Schedule of Payments in 1921 at 132 billion gold marks nominally, with the realistically enforceable portion far smaller <span class="tag verify">Re-verify</span></td></tr>
+        <tr><td>Empire</td><td>All German colonies transferred as League of Nations mandates; union with Austria (<em>Anschluss</em>) forbidden</td></tr>
+        <tr><td>Institution</td><td>The Covenant of the League of Nations formed Part I of the treaty</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tablewrap">
+    <table>
+      <caption>The other treaties of the settlement</caption>
+      <thead><tr><th>Treaty</th><th>Date</th><th>With</th><th>Core effect</th></tr></thead>
+      <tbody>
+        <tr><td>Saint-Germain-en-Laye</td><td>Sept 1919</td><td>Austria</td><td>Dissolution of the Habsburg empire confirmed; Austria reduced to a small German-speaking republic; union with Germany barred</td></tr>
+        <tr><td>Neuilly-sur-Seine</td><td>Nov 1919</td><td>Bulgaria</td><td>Territorial losses including access to the Aegean</td></tr>
+        <tr><td>Trianon</td><td>June 1920</td><td>Hungary</td><td>Hungary loses roughly two-thirds of its pre-war territory and large Magyar minorities are left outside its borders; a permanent grievance</td></tr>
+        <tr><td>Sèvres</td><td>Aug 1920</td><td>Ottoman Empire</td><td>Partition of Anatolia and the Arab provinces; rejected by the Turkish national movement</td></tr>
+        <tr><td>Lausanne</td><td>July 1923</td><td>Republic of Turkey</td><td>Replaces Sèvres after the Turkish War of Independence; recognises modern Turkish borders; provides for a compulsory Greek-Turkish population exchange</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge">
+    <span class="edge-h">The standard verdict, and the standard correction</span>
+    <p><span class="tag interp">Interpretation</span> The familiar judgement, owed partly to Keynes's <em>The Economic Consequences of the Peace</em> (1919), is that Versailles was too harsh to conciliate and too soft to cripple. The correction offered by later historians is that the treaty was not uniquely severe by the standards of the age (compare Brest-Litovsk, which Germany had imposed on Russia a year earlier), that reparations actually paid were a modest share of German national income, and that the decisive failures were in enforcement and in the absence of the United States, not in the text itself.</p>
+  </div>
+</section>
+
+<section id="new-map">
+  <h2>Four empires fall: the new map</h2><hr class="sec-rule">
+  <p>The war destroyed the German, Austro-Hungarian, Russian and Ottoman empires. Three of the four were replaced by states claiming to rest on national self-determination; the fourth, the Russian, was reassembled by force as the Soviet Union in 1922. Self-determination was applied consistently in Europe and almost not at all outside it, where German and Ottoman territories became League mandates administered by Britain, France, Japan, Australia and South Africa.</p>
+  <div class="grid two">
+    <div class="panel red-top">
+      <h4>Central and Eastern Europe</h4>
+      <p>Poland restored after more than a century of partition; Czechoslovakia and the Kingdom of Serbs, Croats and Slovenes (Yugoslavia from 1929) created; Hungary and Austria reduced to small states; Finland, Estonia, Latvia and Lithuania independent. Every new state contained large national minorities, so the minorities problem was redistributed rather than solved.</p>
+    </div>
+    <div class="panel blue-top">
+      <h4>The Middle East</h4>
+      <p>The Sykes-Picot understanding of 1916, the Hussein-McMahon correspondence of 1915-16 and the Balfour Declaration of November 1917 made overlapping commitments. The outcome was British mandates in Palestine, Transjordan and Iraq and French mandates in Syria and Lebanon, borders drawn around administrative convenience, and unresolved promises that remain central to the region's politics. <span class="tag disputed">Disputed</span></p>
+    </div>
+    <div class="panel gold-top">
+      <h4>Russia and the Soviet Union</h4>
+      <p>Civil war from 1918 to 1922, Allied intervention, war with Poland in 1920, and the formation of the USSR in December 1922. The world's first avowedly revolutionary great power was a direct product of the war.</p>
+    </div>
+    <div class="panel green-top">
+      <h4>Beyond Europe</h4>
+      <p>Japan gained German Pacific islands and a dominant position in Shandong, which triggered China's May Fourth Movement of 1919. The British Dominions signed the treaties separately and joined the League in their own right, a step towards full sovereignty. Colonial soldiers returned home with new expectations.</p>
+    </div>
+  </div>
+  <p>The League of Nations, founded in 1920, embodied collective security, arbitration, mandates and the first permanent international civil service. Its structural weaknesses were visible at birth: the United States never joined after the Senate rejected the treaty, Germany and the Soviet Union joined only later, decisions required unanimity, and the League had no armed force of its own. Its institutional offspring, including the Permanent Court of International Justice and the International Labour Organization, outlived it and shaped the United Nations system after 1945.</p>
+</section>
+
+<section id="legacy">
+  <h2>Costs, memory and the road to 1939</h2><hr class="sec-rule">
+  <p>Estimates of the human cost vary with definition and source. Military deaths are commonly placed at about nine to ten million, civilian deaths at roughly five to seven million from military action, famine, disease and massacre, and wounded at over twenty million. The 1918-20 influenza pandemic, spread partly by troop movements and demobilisation, killed on the order of fifty million people worldwide, with Indian deaths often estimated between twelve and eighteen million, the heaviest national toll anywhere. <span class="tag disputed">Disputed</span></p>
+  <div class="tablewrap">
+    <table>
+      <caption>Indicative military deaths by state (estimates; ranges differ by source)</caption>
+      <thead><tr><th>State</th><th class="num">Military dead (approx.)</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>Germany</td><td class="num">c. 2.0 million</td><td>Highest absolute total among the Central Powers</td></tr>
+        <tr><td>Russian Empire</td><td class="num">c. 1.8 million</td><td>Records incomplete; civil war deaths counted separately</td></tr>
+        <tr><td>France</td><td class="num">c. 1.4 million</td><td>Highest proportionate loss among the major Western powers</td></tr>
+        <tr><td>Austria-Hungary</td><td class="num">c. 1.1-1.2 million</td><td>Successor-state records fragment the data</td></tr>
+        <tr><td>British Empire</td><td class="num">c. 0.9-1.0 million</td><td>Includes about 74,000 from undivided India</td></tr>
+        <tr><td>Ottoman Empire</td><td class="num">c. 0.7-0.8 million</td><td>Disease deaths a very large share</td></tr>
+        <tr><td>Italy</td><td class="num">c. 0.65 million</td><td></td></tr>
+        <tr><td>United States</td><td class="num">c. 116,000</td><td>Roughly half from disease, chiefly influenza</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <h3>How the war shaped what followed</h3>
+  <ul>
+    <li><strong>Ideological.</strong> Communism acquired a state; fascism acquired its founding cadre of veterans, its myth of betrayal and its aesthetic of trench comradeship. Mussolini took power in 1922; Hitler's movement grew out of Munich's post-war politics.</li>
+    <li><strong>Economic.</strong> War debt, reparations and inflation destabilised the 1920s; the United States shifted from debtor to creditor and became the hinge of the world financial system, which is why the 1929 crash transmitted globally.</li>
+    <li><strong>Strategic.</strong> Versailles without enforcement, a League without teeth, an absent America and an alienated Soviet Union left revisionist powers with opportunity. The 1939 war is not a mechanical consequence of 1919, but the grievances it exploited were manufactured there. <span class="tag interp">Interpretation</span></li>
+    <li><strong>Imperial.</strong> Colonial contributions, wartime promises and the rhetoric of self-determination gave anti-colonial movements in India, Egypt, Vietnam, Korea and Africa a vocabulary and a precedent.</li>
+    <li><strong>Cultural.</strong> Remembrance institutions (the two-minute silence, war graves commissions, cenotaphs, the poppy), the literature of disillusion from Owen, Sassoon and Remarque, and the recognition of psychological injury, then called shell shock, now understood within post-traumatic stress.</li>
+  </ul>
+</section>
+
+<!-- ============ KNOWLEDGE TOOLKIT ============ -->
+<div class="part-head"><p>Knowledge toolkit</p><h2>Analysis, practice and revision</h2></div>
+
+<section id="perspectives">
+  <h2>Perspectives, controversies and facts</h2><hr class="sec-rule">
+  <p><span class="tag interp">Interpretation</span> <strong>Who caused the war?</strong> The Fischer school places primary responsibility on Germany's leadership; the "shared responsibility" school distributes it across Vienna, Berlin, St Petersburg, Paris and Belgrade; a third line emphasises Austria-Hungary as the state that actually began the shooting. A careful answer separates the question "who wanted a war" from "who took the decisions that made it unavoidable". <span class="tag disputed">Disputed</span></p>
+  <p><span class="tag interp">Interpretation</span> <strong>Were the generals incompetent?</strong> The "lions led by donkeys" view, popularised in the 1960s, holds that callous commanders repeated futile frontal attacks. The learning-curve school replies that armies which had never fought an industrial siege war on this scale improved rapidly, and that the 1918 Hundred Days were among the most successful campaigns in British military history. Both accept that the cost of learning was paid in lives.</p>
+  <p><span class="tag interp">Interpretation</span> <strong>Was Versailles too harsh?</strong> Keynes argued it was economically ruinous and morally indefensible; revisionists argue it was moderate compared with what Germany imposed at Brest-Litovsk and that the real failure was non-enforcement. A third position holds that any treaty leaving Germany intact, undefeated on its own soil and surrounded by weak new states was bound to be revised eventually.</p>
+  <p><span class="tag interp">Interpretation</span> <strong>Was the war futile?</strong> The literary and popular memory says yes. Those who defend Allied participation argue that a German victory in 1914 would have produced a Europe dominated by an authoritarian military monarchy, pointing to the terms of Brest-Litovsk as evidence of what German war aims actually looked like. <span class="tag disputed">Disputed</span></p>
+  <h3>Lesser-known facts</h3>
+  <ul>
+    <li><span class="tag fact">Established</span> Japan was an Allied belligerent from August 1914, seizing German possessions in China and the Pacific and escorting convoys in the Mediterranean.</li>
+    <li><span class="tag fact">Established</span> The Christmas truce of 1914 was local and unofficial, occurred mainly on parts of the British-German front, and was suppressed in later years by orders on both sides.</li>
+    <li><span class="tag fact">Established</span> The Chinese Labour Corps sent roughly 140,000 workers to France and Belgium, and China declared war in 1917 partly to secure a seat at the peace conference. Its treatment at Paris triggered the May Fourth Movement.</li>
+    <li><span class="tag fact">Established</span> More Ottoman soldiers died of disease than of enemy action.</li>
+    <li><span class="tag fact">Established</span> The Royal Air Force, formed on 1 April 1918, was the world's first independent air force.</li>
+    <li><span class="tag fact">Established</span> The war formally ended for Germany only with the ratification of Versailles in January 1920; the United States made a separate peace in 1921 after the Senate rejected the treaty.</li>
+    <li><span class="tag fact">Established</span> Germany's final payment relating to First World War debt and interest was made in October 2010.</li>
+  </ul>
+</section>
+
+<section id="scenarios-options">
+  <h2>Counterfactuals, scenarios and lessons</h2><hr class="sec-rule">
+  <p>Counterfactuals are not idle speculation; they are the standard test of whether a stated cause was actually necessary. Handle them neutrally, and use them to isolate variables.</p>
+  <div class="grid two">
+    <div class="panel red-top">
+      <h4>If Britain had stayed neutral in August 1914</h4>
+      <p>Germany might have won in the west faster, but the blockade and imperial manpower disappear from the Allied column while a hostile Royal Navy no longer constrains Germany. Argued both ways: it tests how much of Allied strength was specifically British and maritime.</p>
+    </div>
+    <div class="panel blue-top">
+      <h4>If Germany had not resumed unrestricted U-boat warfare</h4>
+      <p>American entry is delayed or avoided; Britain is squeezed less; Russia still collapses. This isolates how much the Allied victory depended on American belligerency rather than American supply.</p>
+    </div>
+    <div class="panel gold-top">
+      <h4>If the Dardanelles had succeeded in 1915</h4>
+      <p>A supply route to Russia opens and the Ottoman Empire may exit early. Tests whether the "peripheral strategy" argument against Western Front attrition was ever operationally realistic given the shipping, troops and amphibious doctrine available.</p>
+    </div>
+    <div class="panel green-top">
+      <h4>If the 1919 settlement had been enforced</h4>
+      <p>Either consistent enforcement with American participation, or a genuinely conciliatory peace, might have broken the grievance-revision cycle. Tests the proposition that the treaty's text, rather than its enforcement, caused the 1930s.</p>
+    </div>
+  </div>
+  <h3>Enduring strategic lessons</h3>
+  <div class="tablewrap">
+    <table>
+      <caption>What 1914-18 teaches, and the cost of ignoring it</caption>
+      <thead><tr><th>Lesson</th><th>Evidence from the war</th><th>Contemporary relevance</th></tr></thead>
+      <tbody>
+        <tr><td>Crisis escalation is a political choice, not an automatic process</td><td>Five weeks of July 1914 decisions, each defensible locally</td><td>Value of hotlines, confidence-building measures, and keeping decision timelines longer than alert timelines</td></tr>
+        <tr><td>Short-war assumptions are the most expensive assumption in strategy</td><td>Every general staff planned for weeks and got four years</td><td>Force structure, war reserves and industrial depth must be sized for the war you did not plan</td></tr>
+        <tr><td>Economic interdependence does not prevent war</td><td>1914 Europe was deeply integrated and went to war anyway</td><td>Trade links reduce incentives but do not override perceived existential interests</td></tr>
+        <tr><td>Logistics and industrial mobilisation decide long wars</td><td>Shell crisis of 1915; blockade; American materiel</td><td>Supply chains, critical minerals, munitions production capacity and defence-industrial self-reliance</td></tr>
+        <tr><td>Technology without doctrine achieves little</td><td>Tanks in 1916 scattered; tanks in 1918 massed with artillery and aircraft</td><td>Integration of drones, cyber and precision fires matters more than acquiring them</td></tr>
+        <tr><td>Coalitions win long wars; weak allies are strategic liabilities</td><td>Unified command under Foch versus Germany carrying Austria-Hungary and the Ottomans</td><td>Alliance management, interoperability and burden-sharing</td></tr>
+        <tr><td>How a war ends determines whether it stays ended</td><td>An armistice without occupation, plus a <em>Diktat</em> peace, produced the stab-in-the-back myth</td><td>War termination and post-conflict settlement are part of strategy, not an afterthought</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge blue">
+    <span class="edge-h">If asked what India should take from this war</span>
+    <p>Presented neutrally: the war argues for industrial and logistical depth rather than only platform counts; for institutional memory of how wars are terminated, not just won; for recognising that coalitions and partnerships carry obligations as well as benefits; and for candour about the costs borne by soldiers whose political claims follow their service. None of this points to a particular party or policy, and an interview answer should resist being pushed to one.</p>
+  </div>
+</section>
+
+<section id="answer-framework">
+  <h2>Answer framework and worked example</h2><hr class="sec-rule">
+  <p>For any historical-causation question, move through definition, location, evidence, contest, analysis, test, position, concession and close. One compressed example follows; use the same ladder for "Was Versailles a mistake?" or "Why did the war last four years?".</p>
+  <div class="panel red-top">
+    <h4>Worked example: "Was Germany responsible for the First World War?"</h4>
+    <dl class="rungs">
+      <dt>Define</dt><dd>Separate moral blame, legal responsibility, and causal responsibility. Article 231 is a legal and financial clause, not a historical finding.</dd>
+      <dt>Locate</dt><dd>The July Crisis of 1914, inside a structure of alliances, arms racing, Balkan nationalism and offensive military doctrine built up since 1871.</dd>
+      <dt>Establish</dt><dd>Germany gave Austria-Hungary unconditional backing on 5-6 July, declared war on Russia and France, and invaded neutral Belgium. Fischer's archival work shows expansive German war aims.</dd>
+      <dt>Contest</dt><dd>Austria-Hungary chose to attack Serbia; Russia's general mobilisation on 30 July escalated a regional war; Serbian officials were implicated in the assassination; French and British decisions mattered too.</dd>
+      <dt>Analyse</dt><dd>Germany's decisions were the most consequential because its plan required a continental war and the violation of Belgium, but "most responsible" is not "solely responsible".</dd>
+      <dt>Test</dt><dd>Ask the counterfactual: remove German backing on 6 July, and does Vienna still attack? Most historians say it probably does not, which is why that decision carries weight.</dd>
+      <dt>Position</dt><dd>Germany bears the largest single share of causal responsibility, within a system in which several powers accepted the risk of war; a blanket sole-guilt verdict is not sustainable.</dd>
+      <dt>Concede</dt><dd>The archives are incomplete, the Fischer debate is unresolved, and national historiographies still differ. <span class="tag disputed">Disputed</span></dd>
+      <dt>Close</dt><dd>The question matters because converting a contested historical judgement into a treaty obligation in 1919 gave German nationalism a grievance it used for twenty years.</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="qbank">
+  <h2>Practice bank: questions and motions</h2><hr class="sec-rule">
+  <p class="lede">Fifteen questions. Answer each aloud, standing, in ninety seconds, naming a date, a mechanism and a counter-argument.</p>
+  <ol class="qbank">
+    <li>Distinguish the long-term causes of the war from its immediate trigger.</li>
+    <li>Walk through the July Crisis from 28 June to 4 August 1914, naming the key decisions and who took them.</li>
+    <li>What was the Schlieffen Plan, and why did it fail?</li>
+    <li>Why did the Western Front become static while the Eastern Front stayed mobile?</li>
+    <li>Explain the logic of attrition using Verdun or the Somme.</li>
+    <li>How did tactics and technology change between 1914 and 1918?</li>
+    <li>Assess the importance of the naval blockade and of unrestricted submarine warfare.</li>
+    <li>Why did the United States enter the war in April 1917, and how much did it matter?</li>
+    <li>Explain how the Russian revolutions of 1917 changed the war, and what Brest-Litovsk conceded.</li>
+    <li>Why did Germany's spring offensives of 1918 fail despite tactical success?</li>
+    <li>Give three reasons why the Entente won, ranked.</li>
+    <li>Describe India's military and economic contribution and its political consequences.</li>
+    <li>Summarise the main terms of the Treaty of Versailles and the arguments for and against calling it harsh.</li>
+    <li>Why did the League of Nations fail to prevent the next war?</li>
+    <li>In what specific ways did the First World War cause the Second?</li>
+  </ol>
+  <h3>Debate motions</h3>
+  <ol class="dbank">
+    <li>This house believes Germany bore primary responsibility for the outbreak of the First World War.</li>
+    <li>This house believes the First World War was avoidable as late as 30 July 1914.</li>
+    <li>This house believes the Treaty of Versailles made the Second World War inevitable.</li>
+    <li>This house believes the generals of the Western Front have been unfairly condemned.</li>
+    <li>This house believes economic blockade, not battlefield victory, defeated the Central Powers.</li>
+    <li>This house believes the principle of self-determination was applied hypocritically in 1919.</li>
+    <li>This house believes India's contribution to the First World War is inadequately remembered.</li>
+    <li>This house believes the lessons of 1914 remain the most relevant guide to managing great-power crises today.</li>
+  </ol>
+</section>
+
+<section id="revision">
+  <h2>Chronology, glossary and revision sheet</h2><hr class="sec-rule">
+  <h3>Master chronology</h3>
+  <ul class="timeline">
+    <li><span class="yr">1871</span><span>German unification; France loses Alsace-Lorraine.</span></li>
+    <li><span class="yr">1894-1907</span><span>Franco-Russian Alliance, Entente Cordiale, Anglo-Russian Convention: the alliance system inverts.</span></li>
+    <li><span class="yr">1908-13</span><span>Bosnian annexation crisis; Balkan Wars; Serbia doubles in size.</span></li>
+    <li><span class="yr">Jun-Aug 1914</span><span>Sarajevo; July Crisis; invasion of Belgium; Britain enters.</span></li>
+    <li><span class="yr">Aug-Sep 1914</span><span>Battle of the Frontiers; Tannenberg; First Marne halts the German advance.</span></li>
+    <li><span class="yr">Oct-Dec 1914</span><span>Race to the Sea; First Ypres; Ottoman entry; trench line complete.</span></li>
+    <li><span class="yr">1915</span><span>Gallipoli; gas at Second Ypres; <em>Lusitania</em>; Gorlice-Tarnów and the Great Retreat; Italy enters; Bulgaria joins; Serbia overrun.</span></li>
+    <li><span class="yr">1916</span><span>Verdun; Jutland; Brusilov Offensive; Somme and the first tanks; Kut surrenders; Romania enters and is overrun.</span></li>
+    <li><span class="yr">1917</span><span>Unrestricted U-boat warfare; February Revolution; US entry (6 Apr); Nivelle failure and French mutinies; convoy introduced; Passchendaele; Caporetto; Cambrai; October Revolution; Balfour Declaration; Jerusalem taken.</span></li>
+    <li><span class="yr">1918</span><span>Fourteen Points (Jan); Brest-Litovsk (3 Mar); Ludendorff offensives from 21 Mar; Foch unified command; Amiens (8 Aug); Hundred Days; Bulgaria (29 Sep), Ottomans (30 Oct), Austria-Hungary (3 Nov) quit; Kaiser abdicates (9 Nov); Armistice 11 Nov.</span></li>
+    <li><span class="yr">1919</span><span>Paris Peace Conference; Versailles signed 28 Jun; Saint-Germain; Rowlatt Act and Jallianwala Bagh in India; Government of India Act.</span></li>
+    <li><span class="yr">1920</span><span>League of Nations begins; Trianon; Sèvres; US Senate rejects the treaty.</span></li>
+    <li><span class="yr">1922-23</span><span>USSR formed; Lausanne replaces Sèvres; Republic of Turkey proclaimed.</span></li>
+  </ul>
+  <h3>Glossary</h3>
+  <dl class="term">
+    <dt>Attrition</dt><dd>A strategy of wearing down the enemy's manpower and materiel rather than seeking a decisive manoeuvre.</dd>
+    <dt>Blank cheque</dt><dd>Germany's unconditional pledge of support to Austria-Hungary, 5-6 July 1914.</dd>
+    <dt>Brest-Litovsk</dt><dd>The March 1918 treaty by which Soviet Russia left the war, ceding vast western territories.</dd>
+    <dt>Convoy</dt><dd>Grouping merchant ships under naval escort; adopted from May 1917 and decisive against the U-boats.</dd>
+    <dt>Creeping barrage</dt><dd>An artillery curtain advancing just ahead of attacking infantry on a timetable.</dd>
+    <dt>Dolchstoßlegende</dt><dd>The false "stab-in-the-back" claim that Germany's army was undefeated and betrayed by politicians at home.</dd>
+    <dt>Entente</dt><dd>The understanding linking France, Russia and Britain; the Allied side in the war.</dd>
+    <dt>Fourteen Points</dt><dd>Wilson's January 1918 statement of war aims, including self-determination and a league of nations.</dd>
+    <dt>Infiltration tactics</dt><dd>German stormtroop method of bypassing strongpoints to attack depth positions; used in the 1918 offensives.</dd>
+    <dt>Mandate</dt><dd>A League of Nations arrangement placing former German and Ottoman territories under the administration of a victor power.</dd>
+    <dt>No man's land</dt><dd>The contested ground between opposing front-line trenches.</dd>
+    <dt>Reparations</dt><dd>Payments imposed on the defeated states for war damage, fixed for Germany in 1921.</dd>
+    <dt>Schlieffen Plan</dt><dd>The German concept of defeating France rapidly via Belgium before turning on Russia.</dd>
+    <dt>Self-determination</dt><dd>The principle that peoples should choose their own sovereignty; applied in Europe in 1919, largely withheld outside it.</dd>
+    <dt>Total war</dt><dd>A conflict in which the whole economy, population and information space are mobilised for the war effort.</dd>
+    <dt>Unrestricted submarine warfare</dt><dd>Sinking merchant shipping without warning; resumed by Germany on 1 February 1917.</dd>
+    <dt>War guilt clause</dt><dd>Popular name for Article 231 of the Treaty of Versailles.</dd>
+  </dl>
+  <h3>Rapid revision sheet</h3>
+  <div class="note">
+    <h4>Causes and outbreak</h4>
+    <ul>
+      <li>MAIN lists conditions; the July Crisis supplies the mechanism. Preconditions versus precipitants.</li>
+      <li>Six dates: 28 Jun, 5-6 Jul, 23 Jul, 28 Jul, 30 Jul, 4 Aug 1914.</li>
+      <li>Schlieffen Plan, Plan XVII, Plan 19: short-war assumptions, all wrong.</li>
+      <li>Historiography: Fischer (German responsibility), Clark (shared drift), Taylor (timetables).</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h4>Fighting</h4>
+    <ul>
+      <li>1914 mobile, 1915-17 static in the west, 1918 mobile again. East always mobile.</li>
+      <li>Verdun and the Somme 1916; Nivelle and Passchendaele 1917; Cambrai proves the method.</li>
+      <li>Sea: distant blockade, Jutland 1916, U-boats 1917, convoy. Air: reconnaissance first, bombing last.</li>
+      <li>1918 Allied method = surveyed artillery plus tanks plus aircraft plus limited-objective infantry.</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h4>Turning points and the end</h4>
+    <ul>
+      <li>1917: U-boat decision, US entry (6 Apr), two Russian revolutions, French mutinies.</li>
+      <li>1918: Brest-Litovsk, Ludendorff offensives, Amiens (8 Aug), Hundred Days, 11 Nov armistice.</li>
+      <li>Germany defeated but un-invaded: the root of the stab-in-the-back myth.</li>
+      <li>Why the Entente won: resources and blockade, German manpower exhaustion, Allied method, coalition unity, American weight.</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h4>Settlement, India and legacy</h4>
+    <ul>
+      <li>Versailles 28 Jun 1919: Article 231, territory, 100,000-man army, demilitarised Rhineland, reparations, mandates, League.</li>
+      <li>Saint-Germain, Neuilly, Trianon, Sèvres then Lausanne 1923.</li>
+      <li>India: c. 1.3-1.5 million served, c. 74,000 dead; Montagu Declaration 1917; Act of 1919; Rowlatt and Jallianwala Bagh; Khilafat and Non-Cooperation.</li>
+      <li>Legacy: USSR, fascism, Middle East borders, decolonisation, the League and its successor institutions.</li>
+      <li>Always give casualty figures as ranges and tag contested claims.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer>
+  <p>Compiled from open sources. Study aid only, not an official publication.</p>
+  <p>Source &amp; contributions: <a href="https://github.com/mohitkushwaha0601/matre">github.com/mohitkushwaha0601/matre</a></p>
+</footer>
+
+</body>
+</html>

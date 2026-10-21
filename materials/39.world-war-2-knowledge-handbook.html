@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>World War II (1937/1939-1945) — A Deep Knowledge Handbook</title>
+<meta name="description" content="A 22-section handbook on the Second World War: the collapse of the interwar order, ideologies and the road to war, the European and Pacific campaigns, the Eastern Front, Atlantic and air war, intelligence and industrial mobilisation, occupation and the Holocaust, India's war, the endgames in Europe and Japan, why the Allies won, the post-war settlement and its legacies, with SSB-style practice material.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#12191F;
+  --ink-soft:#4A5A66;
+  --paper:#EFF1F2;
+  --surface:#FFFFFF;
+  --surface-2:#E0E4E7;
+  --rule:#C7CDD2;
+  --rule-strong:#93A0A9;
+  --red:#A3221F;
+  --blue:#1C4E8A;
+  --gold:#9A7A0B;
+  --green:#2C6B45;
+  --hero-bg:#1A232B;
+  --hero-ink:#EFF1F2;
+  --hero-dim:#9FAEB8;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ink:#E6EBEE;
+    --ink-soft:#A6B4BE;
+    --paper:#0A0F13;
+    --surface:#111A20;
+    --surface-2:#18242C;
+    --rule:#27353E;
+    --rule-strong:#475A67;
+    --red:#EE7C73;
+    --blue:#76B2EC;
+    --gold:#DDB24F;
+    --green:#63C48C;
+    --hero-bg:#05090C;
+    --hero-ink:#E6EBEE;
+    --hero-dim:#8A99A4;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E6EBEE;
+  --ink-soft:#A6B4BE;
+  --paper:#0A0F13;
+  --surface:#111A20;
+  --surface-2:#18242C;
+  --rule:#27353E;
+  --rule-strong:#475A67;
+  --red:#EE7C73;
+  --blue:#76B2EC;
+  --gold:#DDB24F;
+  --green:#63C48C;
+  --hero-bg:#05090C;
+  --hero-ink:#E6EBEE;
+  --hero-dim:#8A99A4;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1.5rem);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ---------- hero ---------- */
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
+.flagstrip{display:flex;height:12px}
+.flagstrip span{flex:1}
+.f1{background:#012169}
+.f2{background:linear-gradient(90deg,#B22234 33%,#FFFFFF 33%,#FFFFFF 66%,#3C3B6E 66%)}
+.f3{background:linear-gradient(90deg,#CC0000 70%,#FFD700 70%)}
+.f4{background:linear-gradient(90deg,#000000 33%,#FFFFFF 33%,#FFFFFF 66%,#CE1126 66%)}
+.f5{background:linear-gradient(90deg,#FFFFFF 35%,#BC002D 35%,#BC002D 65%,#FFFFFF 65%)}
+.f6{background:linear-gradient(90deg,#008C45 33%,#F4F5F0 33%,#F4F5F0 66%,#CD212A 66%)}
+.f7{background:linear-gradient(90deg,#002FA7 40%,#EE1C25 40%)}
+.f8{background:#1A232B}
+.hero-inner{max-width:1180px;margin:0 auto;padding:3.2rem 1.5rem 0}
+.kicker{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--hero-dim);margin:0 0 .8rem}
+.motto{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:clamp(1.7rem,5.2vw,2.9rem);line-height:1.2;margin:0;letter-spacing:.005em;max-width:26ch}
+.motto-en{margin:.55rem 0 0;color:var(--hero-dim);font-size:clamp(.95rem,2.4vw,1.1rem);font-style:italic;max-width:62ch}
+.hero h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.5rem,4.3vw,2.35rem);line-height:1.2;margin:2.6rem 0 .5rem;border-top:1px solid rgba(255,255,255,.22);padding-top:1.6rem;max-width:30ch}
+.hero-sub{margin:0;color:var(--hero-dim);max-width:68ch}
+.stamp{margin-top:1.6rem;font-size:.86rem;color:var(--hero-dim);display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+.stamp b{color:var(--hero-ink);font-weight:600}
+
+/* ---------- layout ---------- */
+.shell{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem;display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media (min-width:1000px){
+  .shell{grid-template-columns:255px minmax(0,1fr);gap:3.5rem;padding-top:2.8rem}
+}
+nav.toc{font-size:.9rem}
+@media (min-width:1000px){
+  .toc-mobile{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2rem);align-self:start;max-height:calc(100vh - 5rem);overflow-y:auto}
+}
+nav.toc h2{font-family:"Zilla Slab",Georgia,serif;font-size:.92rem;font-weight:600;margin:0 0 .7rem;padding-bottom:.45rem;border-bottom:2px solid var(--rule-strong)}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc}
+nav.toc li{border-bottom:1px solid var(--rule)}
+nav.toc li:not(.part){counter-increment:toc}
+nav.toc a{display:flex;gap:.6rem;padding:.4rem 0;color:var(--ink-soft);text-decoration:none}
+nav.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--rule-strong);font-variant-numeric:tabular-nums;flex:none}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--red)}
+nav.toc .part{border:0;margin:1.1rem 0 .3rem;font-family:"Zilla Slab",Georgia,serif;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--rule-strong)}
+nav.toc .part::before{content:none}
+.toc-mobile{display:block}
+@media (min-width:1000px){.toc-mobile summary{display:none}}
+.toc-mobile summary{cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:600;padding:.7rem .9rem;background:var(--surface);border:1px solid var(--rule);margin-bottom:1rem}
+@media (max-width:999px){
+  .toc-mobile[open] nav.toc{padding:0 .9rem 1rem}
+  .toc-mobile:not([open]) nav.toc{display:none}
+}
+
+/* ---------- sections ---------- */
+main{min-width:0}
+section{margin:0 0 3.6rem;scroll-margin-top:1.5rem}
+section > h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.45rem,3.6vw,1.95rem);line-height:1.2;margin:0 0 .3rem}
+.part-head{margin:4rem 0 2.2rem;padding:1.1rem 0 .9rem;border-top:4px double var(--rule-strong);border-bottom:1px solid var(--rule)}
+.part-head p{margin:0;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.part-head h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.3rem,3.2vw,1.7rem);margin:.3rem 0 0;color:var(--ink)}
+.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.16rem;margin:2rem 0 .5rem;line-height:1.3}
+h4{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1rem;margin:1.4rem 0 .35rem;color:var(--ink)}
+p{margin:0 0 .95rem;max-width:74ch}
+ul,ol{margin:0 0 1rem;padding-left:1.25rem;max-width:74ch}
+li{margin-bottom:.35rem}
+li::marker{color:var(--rule-strong)}
+strong{font-weight:600}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+/* ---------- components ---------- */
+.lede{font-size:1.06rem;color:var(--ink-soft);max-width:70ch}
+
+.tablewrap{overflow-x:auto;margin:0 0 1.3rem;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.92rem}
+caption{text-align:left;padding:.7rem .85rem .1rem;font-weight:600;color:var(--ink-soft);font-size:.9rem}
+th,td{text-align:left;padding:.55rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{background:var(--surface-2);font-weight:600;border-bottom:2px solid var(--rule-strong);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.num,th.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+.edge{background:var(--surface);border-left:4px solid var(--red);padding:.9rem 1.1rem;margin:1.4rem 0;max-width:74ch}
+.edge p:last-child,.edge ul:last-child,.edge ol:last-child{margin-bottom:0}
+.edge .edge-h{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);display:block;margin-bottom:.25rem;font-size:.95rem}
+.edge.gold{border-left-color:var(--gold)}
+.edge.gold .edge-h{color:var(--gold)}
+.edge.blue{border-left-color:var(--blue)}
+.edge.blue .edge-h{color:var(--blue)}
+.edge.green{border-left-color:var(--green)}
+.edge.green .edge-h{color:var(--green)}
+
+.note{background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;border:1px solid var(--rule);font-size:.95rem}
+.note p:last-child,.note ul:last-child,.note ol:last-child{margin-bottom:0}
+.note h4{margin-top:0}
+
+.panel{background:var(--surface);border:1px solid var(--rule);padding:1rem 1.1rem}
+.panel h4{margin-top:0}
+.panel ul,.panel ol{margin-bottom:0}
+.panel.blue-top{border-top:3px solid var(--blue)}
+.panel.red-top{border-top:3px solid var(--red)}
+.panel.gold-top{border-top:3px solid var(--gold)}
+.panel.green-top{border-top:3px solid var(--green)}
+
+.rungs{max-width:74ch;margin:.3rem 0 0;display:grid;grid-template-columns:9.5rem 1fr;gap:0 1rem}
+.rungs dt{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;color:var(--red);padding-top:.2rem}
+.rungs dd{margin:0 0 .5rem;font-size:.93rem}
+@media (max-width:560px){
+  .rungs{grid-template-columns:1fr;gap:0}
+  .rungs dt{padding-top:.4rem}
+}
+
+.timeline{list-style:none;padding:0;margin:1rem 0 1.4rem;max-width:74ch}
+.timeline li{display:grid;grid-template-columns:8.2rem 1fr;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--rule);margin:0}
+.timeline li:last-child{border-bottom:0}
+.timeline .yr{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);font-variant-numeric:tabular-nums}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:.1rem}}
+
+.qbank{counter-reset:q;list-style:none;padding:0;max-width:74ch}
+.qbank li{counter-increment:q;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.qbank li::before{content:counter(q,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.qbank li:last-child{border-bottom:0}
+
+.dbank{counter-reset:d;list-style:none;padding:0;max-width:74ch}
+.dbank li{counter-increment:d;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.dbank li::before{content:counter(d,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.dbank li:last-child{border-bottom:0}
+
+.ladder{counter-reset:s;list-style:none;padding:0;margin:1.3rem 0 1.5rem;max-width:74ch}
+.ladder li{counter-increment:s;position:relative;margin:0;padding:.1rem 0 1.05rem 2.9rem;border-left:2px solid var(--rule)}
+.ladder li::before{content:counter(s);position:absolute;left:-1.05rem;top:0;width:2rem;height:2rem;display:grid;place-items:center;border-radius:50%;background:var(--surface);border:2px solid var(--rule-strong);font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.85rem;color:var(--red)}
+.ladder li:last-child{border-left-color:transparent;padding-bottom:0}
+.ladder .rung{display:block;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.05rem;color:var(--ink);line-height:2rem}
+.ladder p{margin:.15rem 0 .4rem;font-size:.95rem}
+.ladder p:last-child{margin-bottom:0}
+.ladder .say{color:var(--ink-soft)}
+
+.grid{display:grid;gap:1rem}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
+
+.card{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--red);padding:1rem 1.1rem}
+.card h4{margin:0 0 .45rem;font-size:1rem}
+.card .name{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.2rem}
+.card .role{font-size:.9rem;color:var(--ink-soft)}
+.card .since{font-size:.78rem;color:var(--green);font-weight:600;margin-top:.45rem}
+
+.term{max-width:74ch;margin:0 0 1.2rem}
+.term dt{font-weight:600;margin-top:.8rem}
+.term dd{margin:.15rem 0 0;color:var(--ink-soft)}
+
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:.1rem .45rem;border:1px solid var(--rule-strong);color:var(--ink-soft);margin-right:.35rem;vertical-align:middle}
+.tag.fact{border-color:var(--green);color:var(--green)}
+.tag.interp{border-color:var(--gold);color:var(--gold)}
+.tag.disputed{border-color:var(--red);color:var(--red)}
+.tag.verify{border-color:var(--blue);color:var(--blue)}
+.spaced{margin-top:.6rem}
+
+footer{border-top:3px double var(--rule-strong);margin-top:2rem;padding-top:1.4rem;color:var(--ink-soft);font-size:.9rem;max-width:74ch}
+footer a{color:var(--blue)}
+
+/* ---------- home button: fixed, links back to the collection homepage ---------- */
+.home-btn{position:fixed;top:16px;left:16px;z-index:60;display:inline-flex;align-items:center;gap:.4rem;background:#14202B;color:#F1F2EC;border:1px solid rgba(241,242,236,.25);padding:.45rem .85rem;border-radius:999px;font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.82rem;font-weight:600;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.3);transition:background .15s ease,transform .15s ease}
+.home-btn:hover,.home-btn:focus-visible{background:#BF2F26;transform:translateY(-1px)}
+.home-btn svg{width:14px;height:14px;flex:none}
+@media print{.home-btn{display:none}}
+
+@media print{
+  .hero{background:none;color:#000;padding-bottom:1rem}
+  .hero-sub,.stamp,.motto-en{color:#333}
+  .flagstrip,.toc-mobile{display:none}
+  .shell{display:block;padding:0}
+  section{page-break-inside:auto;margin-bottom:1.8rem}
+  h2,h3{page-break-after:avoid}
+  .panel,.edge,.note,.tablewrap,figure{page-break-inside:avoid}
+  .part-head{page-break-before:always}
+  body{font-size:10.5pt;background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+
+<a class="home-btn" href="../index.html" aria-label="Back to Handbooks homepage" title="Back to Handbooks homepage">
+  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
+  <span>Home</span>
+</a>
+
+<header class="hero">
+  <div class="flagstrip" aria-hidden="true">
+    <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f5"></span><span class="f6"></span><span class="f7"></span><span class="f8"></span>
+  </div>
+  <div class="hero-inner">
+    <p class="kicker">Causes · ideology · campaigns · industry and intelligence · occupation and genocide · India's war · endgame · the post-war order</p>
+    <h1>World War II, 1937/1939-1945</h1>
+    <p class="hero-sub">The deadliest conflict in history, treated as a problem in causation and strategy rather than a catalogue of battles. Why the interwar order collapsed, why the Axis won early and lost decisively, what industrial and intelligence advantage actually did, how occupation turned into genocide, what India's two and a half million volunteers bought and cost, and why the settlement of 1945 built both the United Nations and the Cold War. Contested figures and interpretations are tagged rather than asserted.</p>
+    <p class="stamp">
+      <span>Europe <b>1 Sep 1939 - 8 May 1945</b></span>
+      <span>Asia <b>7 Jul 1937 - 2 Sep 1945</b></span>
+      <span>Belligerents <b>60+ states</b></span>
+      <span>Total deaths <b>c. 70-85 million (est.)</b></span>
+      <span>Indian volunteers <b>c. 2.5 million</b></span>
+      <span>Sections <b>22</b></span>
+      <span>Reading time <b>2-3 hrs</b></span>
+    </p>
+  </div>
+</header>
+
+<div class="shell">
+
+<details class="toc-mobile" open>
+  <summary>Contents</summary>
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li class="part">Part I · Why the war came</li>
+      <li><a href="#snapshot">Snapshot and how to read this</a></li>
+      <li><a href="#interwar">The interwar order and its collapse</a></li>
+      <li><a href="#ideologies">Ideologies, regimes and war aims</a></li>
+      <li><a href="#road-to-war">The road to war, 1931-1939</a></li>
+
+      <li class="part">Part II · The war fought</li>
+      <li><a href="#axis-ascendancy">1939-41: Axis ascendancy in Europe</a></li>
+      <li><a href="#eastern-front">Barbarossa and the Eastern Front</a></li>
+      <li><a href="#pacific">Japan's war in Asia and the Pacific</a></li>
+      <li><a href="#sea-air">The Mediterranean, the Atlantic and the air war</a></li>
+      <li><a href="#industry">Industry, intelligence and the science of war</a></li>
+
+      <li class="part">Part III · Societies, crimes and endgame</li>
+      <li><a href="#home-fronts">Home fronts, occupation and resistance</a></li>
+      <li><a href="#holocaust">The Holocaust and mass atrocity</a></li>
+      <li><a href="#india">India and the Second World War</a></li>
+      <li><a href="#europe-endgame">Defeat of Germany, 1943-1945</a></li>
+      <li><a href="#japan-endgame">Defeat of Japan and the atomic decision</a></li>
+
+      <li class="part">Part IV · Verdict and settlement</li>
+      <li><a href="#why-won">Why the Allies won</a></li>
+      <li><a href="#settlement">Wartime diplomacy and the post-war settlement</a></li>
+      <li><a href="#legacy">Costs, justice and legacies</a></li>
+
+      <li class="part">Knowledge toolkit</li>
+      <li><a href="#perspectives">Perspectives, controversies and facts</a></li>
+      <li><a href="#scenarios-options">Counterfactuals, scenarios and lessons</a></li>
+      <li><a href="#answer-framework">Answer framework and worked example</a></li>
+      <li><a href="#qbank">Practice bank: questions and motions</a></li>
+      <li><a href="#revision">Chronology, glossary and revision sheet</a></li>
+    </ol>
+  </nav>
+</details>
+
+<main>
+
+<div class="part-head"><p>Part I · Why the war came</p><h2>From a flawed peace to a global war</h2></div>
+
+<section id="snapshot">
+  <h2>Snapshot and how to read this</h2><hr class="sec-rule">
+  <p class="lede">The Second World War was two linked wars: a war for mastery of Europe begun by Germany in 1939, and a war for mastery of East Asia begun by Japan against China in 1937, fused into one conflict between December 1941 and 1945. It killed more people than any other event in human history, destroyed the European colonial empires it was partly fought to defend, and produced both the United Nations and the Cold War. The analytic task is to explain why aggression succeeded for three years and then failed completely.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>The coalitions</caption>
+      <thead><tr><th>Side</th><th>Principal powers</th><th>Others</th><th>Outcome</th></tr></thead>
+      <tbody>
+        <tr><td>Axis</td><td>Germany, Italy (to 1943), Japan</td><td>Hungary, Romania, Bulgaria, Slovakia, Croatia, Finland (co-belligerent against the USSR), Thailand; collaborationist regimes such as Vichy France and Wang Jingwei's China</td><td>Total defeat; unconditional surrender in Europe, near-unconditional in Japan; occupation of all three main powers</td></tr>
+        <tr><td>Allies / United Nations</td><td>British Empire and Commonwealth, Soviet Union (from June 1941), United States (from Dec 1941), China</td><td>France and Free France, Poland, Yugoslav and Greek forces, the Dominions, Brazil, Mexico and many others; 50 states signed the UN Charter in 1945</td><td>Victory, but with the Soviet Union and the United States emerging as the only powers of the first rank</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge blue">
+    <span class="edge-h">How to read this handbook</span>
+    <p>Dates, operations and treaty terms are stated plainly. Contested claims carry tags (<span class="tag fact">Established</span> <span class="tag interp">Interpretation</span> <span class="tag disputed">Disputed</span> <span class="tag verify">Re-verify</span>). Death tolls for this war are estimates with wide ranges, especially for the Soviet Union, China and famine deaths in Bengal and Vietnam; quote ranges, never single figures. Read handbook no. 38 on the First World War first if you can, because most of 1939 is unintelligible without 1919. Related: no. 5 (Indian independence), 37 (international institutions).</p>
+  </div>
+  <div class="note">
+    <h4>Three questions that organise everything</h4>
+    <ul>
+      <li><strong>Why did it start?</strong> Because three revisionist states concluded that force was cheap, and the status-quo powers took five years to disagree.</li>
+      <li><strong>Why did the Axis win early?</strong> Operational excellence, surprise, and opponents who were unready, divided or over-extended, against limited objectives.</li>
+      <li><strong>Why did the Axis lose?</strong> Because they picked wars they could not finish, against a coalition with roughly four to five times their war-making capacity, and never built a joint strategy to use what they had.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="interwar">
+  <h2>The interwar order and its collapse</h2><hr class="sec-rule">
+  <p>The 1919 settlement created a world of new states, unenforced obligations and an absent United States. Through the 1920s it looked survivable: Locarno (1925) normalised Germany's western borders, Germany joined the League in 1926, and the Kellogg-Briand Pact (1928) renounced war as an instrument of policy. What destroyed this was economics. The Wall Street crash of 1929 and the Depression collapsed world trade, drove states to tariffs, currency blocs and autarky, discredited liberal governments, and gave radical movements their mass base. Germany's unemployment passed six million; Japan's silk exports collapsed; both concluded that security meant controlling resources directly.</p>
+  <p>The League then failed its three tests in sequence. It condemned Japan over Manchuria (1931-33) and Japan left. It imposed partial, leaky sanctions on Italy over Abyssinia (1935-36) and Italy conquered it anyway, then left. It did nothing effective about the German remilitarisation of the Rhineland (1936) or the Spanish Civil War (1936-39). Each failure taught the same lesson: collective security without enforcement is an invitation.</p>
+  <div class="edge gold">
+    <span class="edge-h">Why appeasement made sense to the people who did it</span>
+    <p>British and French policy until 1939 reflected real constraints: memory of 1914-18 casualties, fear of bombing, economic weakness, imperial commitments in Asia and the Mediterranean, Dominion reluctance, distrust of the Soviet Union, and a widespread belief that some German grievances over Versailles were genuine. The post-war <em>Guilty Men</em> verdict that appeasers were cowards is too simple; the serious charge is that they misread Hitler's aims as negotiable and bought rearmament time that Germany used better. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<section id="ideologies">
+  <h2>Ideologies, regimes and war aims</h2><hr class="sec-rule">
+  <p>This was an ideological war in a way the First World War was not. The aggressors' war aims were not adjustments of frontiers but reorderings of populations and hierarchies, which is why the fighting was so merciless where ideology was most at stake, on the Eastern Front and in China, and comparatively less so in Western Europe.</p>
+  <div class="grid two">
+    <div class="panel red-top">
+      <h4>Nazi Germany</h4>
+      <p>Racial hierarchy, <em>Lebensraum</em> in the east, destruction of the Versailles order, antisemitism as a governing principle, and the <em>Führerprinzip</em> concentrating decision in one man. War aims were open-ended: a racially reordered continental empire, with Slav populations displaced, enslaved or killed.</p>
+    </div>
+    <div class="panel blue-top">
+      <h4>Fascist Italy</h4>
+      <p>Mussolini's corporate state, cult of the leader, and a programme of Mediterranean empire (<em>mare nostrum</em>) pursued through Abyssinia, Albania, Greece and North Africa. Capability consistently fell short of ambition, making Italy a strategic burden on Germany after 1940.</p>
+    </div>
+    <div class="panel gold-top">
+      <h4>Imperial Japan</h4>
+      <p>Army-dominated politics, the emperor as sanction for state authority, the "Greater East Asia Co-Prosperity Sphere" presented as Asian liberation from Western empire while functioning as Japanese imperial control. Driven above all by the search for oil, rubber, iron and rice after resource embargoes.</p>
+    </div>
+    <div class="panel green-top">
+      <h4>The Soviet Union and the democracies</h4>
+      <p>Stalin's USSR was a revolutionary dictatorship that had purged its own officer corps in 1937-38, signed a pact with Hitler in 1939, and became the Allies' largest land force after June 1941. Britain, the United States and the Dominions fought as parliamentary states but also as empires, a tension the Atlantic Charter exposed and never resolved. <span class="tag interp">Interpretation</span></p>
+    </div>
+  </div>
+  <div class="note">
+    <h4>The historiographical trap</h4>
+    <ul>
+      <li>Do not reduce the war to "democracy versus dictatorship": the Soviet Union, a dictatorship, did most of the killing and dying on the winning side.</li>
+      <li>Do not reduce it to "great-power rivalry" either: the Holocaust, the Generalplan Ost design for the east, and Japan's conduct in China cannot be explained by interest alone.</li>
+      <li>A. J. P. Taylor's argument (1961) that Hitler was an ordinary opportunist statesman is the classic contrarian position; most historians reject it while conceding his point that Hitler exploited situations he did not always create. <span class="tag disputed">Disputed</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="road-to-war">
+  <h2>The road to war, 1931-1939</h2><hr class="sec-rule">
+  <p>The slide to general war was a series of successful gambles, each cheaper than deterrence would have been. Hitler's method was to present a limited demand with a plausible grievance, accept a negotiated gain, and return with a larger demand before the previous one had been digested. Japan's method was incremental conquest by field commanders which Tokyo then ratified.</p>
+  <ul class="timeline">
+    <li><span class="yr">1931</span><span>Japan seizes Manchuria after the Mukden incident; puppet state of Manchukuo follows.</span></li>
+    <li><span class="yr">1933</span><span>Hitler becomes Chancellor (30 Jan); Germany leaves the League and the disarmament conference.</span></li>
+    <li><span class="yr">1935</span><span>German rearmament announced openly; conscription restored; Anglo-German Naval Agreement; Italy invades Abyssinia.</span></li>
+    <li><span class="yr">1936</span><span>Rhineland remilitarised (Mar); Spanish Civil War begins; Rome-Berlin Axis and Anti-Comintern Pact.</span></li>
+    <li><span class="yr">1937</span><span>Marco Polo Bridge incident (7 Jul): full-scale war in China; Shanghai; the Nanjing massacre (Dec).</span></li>
+    <li><span class="yr">1938</span><span><em>Anschluss</em> with Austria (Mar); Munich Agreement cedes the Sudetenland (Sept); <em>Kristallnacht</em> (Nov).</span></li>
+    <li><span class="yr">Mar 1939</span><span>Germany occupies the rest of Czechoslovakia, destroying the Munich rationale; Britain and France guarantee Poland.</span></li>
+    <li><span class="yr">Aug 1939</span><span>Nazi-Soviet (Molotov-Ribbentrop) Pact with a secret protocol partitioning Eastern Europe.</span></li>
+    <li><span class="yr">1 Sep 1939</span><span>Germany invades Poland; Britain and France declare war on 3 September.</span></li>
+  </ul>
+  <div class="edge">
+    <span class="edge-h">The two decisive enabling moves</span>
+    <p><strong>Munich, September 1938.</strong> Czechoslovakia had strong frontier defences, a capable army and a Soviet and French treaty connection. Ceding the Sudetenland removed the defences; the occupation of the rest in March 1939 handed Germany the Skoda works and equipment for several divisions. <strong>The Nazi-Soviet Pact, August 1939.</strong> It guaranteed Germany no serious second front, supplied oil and grain, and partitioned Poland. Without it, the invasion of Poland is a far riskier proposition. Both moves show that war came not from an inexorable process but from specific, reversible choices.</p>
+  </div>
+  <div class="note">
+    <h4>When did the war begin?</h4>
+    <ul>
+      <li>Conventional European dating: 1 September 1939. <span class="tag fact">Established</span></li>
+      <li>Chinese and much Asian historiography: 7 July 1937, or even September 1931. <span class="tag interp">Interpretation</span></li>
+      <li>Saying "1939 in Europe, 1937 in Asia, globalised in December 1941" is the precise formulation and signals that you know the debate exists.</li>
+    </ul>
+  </div>
+</section>
+
+<div class="part-head"><p>Part II · The war fought</p><h2>Three years of Axis victory, and the limits it ran into</h2></div>
+
+<section id="axis-ascendancy">
+  <h2>1939-41: Axis ascendancy in Europe</h2><hr class="sec-rule">
+  <p>Poland was overrun in five weeks by concentrated armour, tactical air power and radio-coordinated manoeuvre, with the Soviet Union invading from the east on 17 September. There followed the Phoney War, then in April 1940 the seizure of Denmark and Norway, which secured Swedish iron ore and Atlantic bases.</p>
+  <p>The campaign in the west, from 10 May 1940, is the single most instructive operation of the war. The Allies had comparable numbers of troops and more tanks than Germany; they lost in six weeks. The German plan, associated with Manstein, sent the main armoured thrust through the Ardennes, which Allied planners had judged unsuitable for armour, cut behind the best Allied armies that had advanced into Belgium, and reached the Channel. The cause of defeat was not material inferiority but doctrine, communications and command tempo: German divisions concentrated armour, used radio and air support as a system, and acted faster than the Allied command cycle could respond. Around 338,000 troops were evacuated from Dunkirk between 26 May and 4 June; France signed an armistice on 22 June 1940.</p>
+  <p>Britain then survived the first campaign Germany lost. In the Battle of Britain (July-October 1940) the Royal Air Force was defended by the Dowding system, an integrated network of radar, observers, filter rooms and ground control that allowed outnumbered fighters to be concentrated where needed. The Luftwaffe's switch from airfields to cities in September relieved Fighter Command; the Blitz that followed killed roughly 40,000 British civilians without breaking war production or morale. <span class="tag verify">Re-verify</span> In 1941 Germany was drawn into the Balkans to rescue Italy's failed invasion of Greece, taking Yugoslavia, Greece and Crete, and into North Africa for the same reason.</p>
+  <div class="edge blue">
+    <span class="edge-h">"Blitzkrieg" is a label, not a doctrine</span>
+    <p>The Germans did not use the word as a formal doctrine, and much of their army marched on foot with horse-drawn transport throughout the war. What worked in 1939-41 was the concentration of a mechanised minority, radio in every tank, aircraft used as flying artillery, and mission command that let subordinates exploit opportunity. It worked brilliantly against shallow theatres and brittle command systems, and failed against depth, reserves and industrial resilience. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<section id="eastern-front">
+  <h2>Barbarossa and the Eastern Front</h2><hr class="sec-rule">
+  <p class="lede">The Eastern Front was the main theatre of the European war. Most German divisions were committed there, most German casualties occurred there, and the majority of European deaths in the war happened in the lands between Berlin and Moscow. Any account that treats it as a sideshow to Normandy is wrong by an order of magnitude.</p>
+  <p>Operation Barbarossa began on 22 June 1941 with roughly three million Axis troops on a front of some 2,900 kilometres. It was simultaneously a bid for resources and living space and a self-described war of annihilation: the Commissar Order and the treatment of prisoners made criminality official policy from the first day. Soviet losses in 1941 were catastrophic, with huge encirclements at Minsk, Smolensk, Kiev and Vyazma, but the Soviet state did not collapse. Industry was evacuated eastward on a vast scale, reserves from the Far East arrived once Soviet intelligence judged Japan would strike south, and the German advance stalled before Moscow in December 1941.</p>
+  <ul class="timeline">
+    <li><span class="yr">Jun-Dec 1941</span><span>Barbarossa; Leningrad encircled (siege lasts 872 days, roughly a million civilian deaths); Soviet counter-offensive before Moscow.</span></li>
+    <li><span class="yr">1942</span><span>Case Blue drives for the Caucasus oil and the Volga; the front splits between two objectives.</span></li>
+    <li><span class="yr">Nov 1942-Feb 1943</span><span>Stalingrad: Operation Uranus encircles the German Sixth Army, which surrenders on 2 February with roughly 91,000 prisoners taken.</span></li>
+    <li><span class="yr">Jul-Aug 1943</span><span>Kursk: the last German strategic offensive in the east fails against prepared defence in depth; initiative passes permanently to the Red Army.</span></li>
+    <li><span class="yr">Jun-Aug 1944</span><span>Operation Bagration destroys Army Group Centre, a greater disaster for Germany than Stalingrad, timed to coincide with Normandy.</span></li>
+    <li><span class="yr">1944-45</span><span>Soviet advance through Poland, the Balkans and Hungary to Berlin.</span></li>
+  </ul>
+  <div class="note">
+    <h4>Why Germany lost in the east</h4>
+    <ul>
+      <li><strong>Space and logistics.</strong> Railways had to be regauged, roads were poor, and the force thinned as it advanced. German planning assumed victory in weeks because it could not sustain a campaign of months.</li>
+      <li><strong>Soviet mobilisation.</strong> Industrial relocation beyond the Urals, mass production of a few good designs such as the T-34, and manpower reserves Germany had underestimated.</li>
+      <li><strong>Ideology defeating interest.</strong> Brutal occupation turned populations that had initially welcomed the Germans in parts of Ukraine and the Baltics into resisters, and the murder of Soviet prisoners removed any incentive to surrender.</li>
+      <li><strong>Allied support.</strong> Lend-Lease supplied trucks, locomotives, radios, aviation fuel and food which multiplied Soviet operational mobility, even though Soviet factories supplied most of the weapons. <span class="tag interp">Interpretation</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="pacific">
+  <h2>Japan's war in Asia and the Pacific</h2><hr class="sec-rule">
+  <p>Japan had been at war in China since 1937, a conflict that consumed the bulk of its army throughout and that it could never conclude. American and Allied responses to Japan's move into Indochina in 1940-41, culminating in an oil embargo and asset freeze, presented Tokyo with a choice between withdrawal and seizing the resources of Southeast Asia. It chose the latter, and attacked the US Pacific Fleet at Pearl Harbor on 7 December 1941 to buy time for a defensive perimeter. Germany's declaration of war on the United States on 11 December turned two regional wars into one world war.</p>
+  <p>The first six months were a near-unbroken run of Japanese success: the Philippines, Malaya, the sinking of <em>Prince of Wales</em> and <em>Repulse</em>, the fall of Singapore on 15 February 1942 with some 80,000 troops captured in Britain's largest ever capitulation, the Dutch East Indies, and Burma up to the Indian frontier. The strategic flaw was structural. Japan's plan assumed a negotiated peace after a defensive campaign; it had no theory of victory against a power with roughly ten times its industrial capacity and no interest in negotiating.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Turning the Pacific war</caption>
+      <thead><tr><th>Event</th><th>Date</th><th>Why it mattered</th></tr></thead>
+      <tbody>
+        <tr><td>Coral Sea</td><td>May 1942</td><td>First carrier battle fought beyond visual range; Port Moresby invasion halted</td></tr>
+        <tr><td>Midway</td><td>4-7 June 1942</td><td>Four Japanese fleet carriers sunk, partly through American signals intelligence; the offensive initiative passes to the United States</td></tr>
+        <tr><td>Guadalcanal</td><td>Aug 1942 - Feb 1943</td><td>Six months of attrition in air, sea and jungle that Japan could not replace; the real end of Japanese expansion</td></tr>
+        <tr><td>Island-hopping campaigns</td><td>1943-44</td><td>Bypassing strong garrisons to seize airfields; submarine campaign strangles Japanese shipping</td></tr>
+        <tr><td>Philippine Sea and Leyte Gulf</td><td>Jun and Oct 1944</td><td>Japanese naval air power destroyed; Leyte Gulf is the largest naval battle in history; <em>kamikaze</em> attacks begin</td></tr>
+        <tr><td>Iwo Jima and Okinawa</td><td>Feb-Jun 1945</td><td>Extreme casualties on both sides shape American estimates of what invading Japan would cost</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The least-remembered and most lethal theatre was China, where Japanese operations, occupation policy and the resulting famines are commonly estimated to have caused in the region of fifteen to twenty million Chinese deaths. <span class="tag disputed">Disputed</span> Japan's conduct, including the Nanjing massacre of 1937-38, the use of biological and chemical weapons by Unit 731, and the system of coerced sexual slavery known by the euphemism "comfort women", remains a live diplomatic issue in East Asia today.</p>
+</section>
+
+<section id="sea-air">
+  <h2>The Mediterranean, the Atlantic and the air war</h2><hr class="sec-rule">
+  <h3>The Atlantic</h3>
+  <p>Churchill later wrote that the U-boat peril was the only thing that really frightened him. Britain needed roughly a million tons of imports a week; Germany needed to sink merchant ships faster than they could be built. The crisis peaked in early 1943, and the Allies broke it in a few months by combining several measures at once: convoys with continuous escort, escort carriers and very-long-range aircraft to close the mid-Atlantic air gap, centimetric radar, high-frequency direction finding, improved weapons, and the decryption of German naval Enigma traffic. By "Black May" 1943 U-boat losses were unsustainable. <span class="tag fact">Established</span></p>
+  <h3>The Mediterranean and Italy</h3>
+  <p>North Africa mattered because of the Suez Canal, Middle Eastern oil and the shortest route to India. The desert war swung back and forth until Montgomery's Eighth Army won at El Alamein in October-November 1942 and the Anglo-American Torch landings took French North Africa in November; Axis forces in Tunisia surrendered in May 1943. The invasion of Sicily in July 1943 brought down Mussolini; Italy signed an armistice on 8 September 1943, after which Germany occupied the north, and the Allied advance up the peninsula past Monte Cassino and Anzio became a slow, costly campaign reaching Rome only in June 1944. Whether the Mediterranean was a decisive "soft underbelly" or a diversion from northwest Europe was argued between the British and American staffs at the time and is argued still. <span class="tag disputed">Disputed</span></p>
+  <h3>The bomber offensive</h3>
+  <p>Strategic bombing consumed a large share of the Western Allied war effort. RAF Bomber Command attacked by night using area bombing of cities; the United States Army Air Forces attacked by day aiming at specific target systems, becoming effective only once long-range escort fighters arrived in 1944. The campaign did not break morale, and German armaments output actually rose into 1944, but it destroyed the Luftwaffe in defensive battle, forced the diversion of huge numbers of guns and men to home defence, and from mid-1944 the attacks on synthetic oil and transport were decisive in paralysing German mobility. Hamburg in 1943 and Dresden in February 1945 remain the focal points of the moral debate about the deliberate bombing of cities. <span class="tag disputed">Disputed</span></p>
+</section>
+
+<section id="industry">
+  <h2>Industry, intelligence and the science of war</h2><hr class="sec-rule">
+  <p class="lede">This was the first war decided as much in laboratories, shipyards and cipher rooms as on battlefields. If you remember one structural fact, remember the production gap: by 1943 the Allies were out-producing the Axis in most major categories by a factor of roughly three or more, and the gap widened every year.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>The material balance (indicative orders of magnitude, 1939-45 totals)</caption>
+      <thead><tr><th>Category</th><th>Allied</th><th>Axis</th><th>Comment</th></tr></thead>
+      <tbody>
+        <tr><td>Aircraft produced</td><td class="num">c. 640,000</td><td class="num">c. 220,000</td><td>US output alone exceeded all Axis output combined <span class="tag verify">Re-verify</span></td></tr>
+        <tr><td>Tanks and self-propelled guns</td><td class="num">c. 230,000</td><td class="num">c. 55,000</td><td>Soviet and American mass production of standardised designs</td></tr>
+        <tr><td>Merchant shipping</td><td>Liberty and Victory ship programmes building faster than U-boats could sink</td><td>Negligible replacement capacity</td><td>Shipping, not tanks, was the real currency of coalition war</td></tr>
+        <tr><td>Oil</td><td>Secure American, Caribbean and Middle Eastern supply</td><td>Romanian fields plus synthetic plants, both bombed from 1944</td><td>Fuel shortage grounded the Luftwaffe and immobilised panzer divisions</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>Signals intelligence</h4>
+      <p>British work at Bletchley Park, building on Polish cryptanalysis of Enigma before the war, produced the intelligence stream codenamed Ultra; American breaking of Japanese diplomatic and naval codes produced Magic and the intelligence behind Midway. Its effect was greatest where it could be acted on without revealing the source: convoy routing, the Mediterranean, deception operations and the Normandy build-up. It shortened the war; it did not by itself win it. <span class="tag interp">Interpretation</span></p>
+    </div>
+    <div class="panel gold-top">
+      <h4>Deception and special operations</h4>
+      <p>Operation Fortitude convinced Germany that Normandy was a feint and held reserves at the Pas de Calais for weeks. Resistance movements, SOE and partisan warfare tied down occupation forces, though their military value relative to their human cost is argued.</p>
+    </div>
+    <div class="panel green-top">
+      <h4>Science and engineering</h4>
+      <p>Radar, sonar, the proximity fuze, penicillin, operational research applied to convoy size and bomb aiming, jet and rocket propulsion, and the first programmable electronic computing used against ciphers. Germany led in rocketry (V-2) and jets but fielded them too late and at too high a cost.</p>
+    </div>
+    <div class="panel red-top">
+      <h4>The Manhattan Project</h4>
+      <p>Begun in 1942 on the fear that Germany would build an atomic bomb first, it employed well over a hundred thousand people and succeeded with the Trinity test on 16 July 1945, after Germany's surrender. It changed the character of great-power conflict permanently.</p>
+    </div>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Mobilisation is a political achievement, not an automatic one</span>
+    <p>The Allies converted economic potential into output; the Axis did so late and badly. Germany did not fully mobilise women or move to a total war economy until 1943 under Speer, and its armaments effort was fragmented by competing agencies. Japan never solved the shipping problem that its own strategy had created. Capacity is a precondition; conversion is the achievement.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part III · Societies, crimes and endgame</p><h2>What the war did to peoples, and how it ended</h2></div>
+
+<section id="home-fronts">
+  <h2>Home fronts, occupation and resistance</h2><hr class="sec-rule">
+  <p>Total war went further in 1939-45 than in 1914-18. Britain conscripted women into war work and the auxiliary services, rationed food and clothing, directed labour and requisitioned industry. The United States converted its civilian economy wholesale, drew millions of women into factories, and ran the war on deficit finance and war bonds while its territory remained untouched. The Soviet Union subordinated everything to the front, moving entire factories east and sustaining civilian consumption at near-starvation levels. Germany relied instead on plunder and on some twelve million foreign and forced labourers, a dependence that was itself a form of occupation policy. <span class="tag verify">Re-verify</span></p>
+  <p>Occupation varied enormously by the occupier's racial and political hierarchy. Denmark was governed lightly, France exploited through a collaborationist regime at Vichy, Poland and the occupied Soviet territories subjected to deliberate destruction of elites, starvation policy and settlement planning. Japanese occupation in Southeast Asia initially recruited anti-colonial sentiment, then alienated it through forced labour, requisition and famine, including the Vietnamese famine of 1944-45.</p>
+  <p>Resistance ranged from intelligence gathering and escape lines to the large partisan armies of Yugoslavia, the Soviet rear areas, Greece, Italy and the Philippines. Its military contribution is debated and its political consequences were enormous: resistance movements shaped post-war politics in France, Italy, Yugoslavia and China. Reprisals were deliberate and severe, as at Lidice and Oradour-sur-Glane, and the Warsaw Rising of 1944 ended in the destruction of the city.</p>
+  <div class="note">
+    <h4>Dark areas inside the Allied record</h4>
+    <ul>
+      <li><span class="tag fact">Established</span> Internment of Japanese Americans and Japanese Canadians; racial segregation in the US armed forces.</li>
+      <li><span class="tag fact">Established</span> Soviet mass deportations of Chechens, Crimean Tatars, Volga Germans and others; the Katyn massacre of Polish officers in 1940, denied by Moscow until 1990.</li>
+      <li><span class="tag disputed">Disputed</span> The morality and necessity of area bombing of cities, and of the expulsion of some twelve million ethnic Germans from Eastern Europe in 1945-47.</li>
+      <li>Acknowledging these is not false equivalence. The Axis programmes were of a different order in intent and scale, and saying so explicitly is the mark of a serious answer.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="holocaust">
+  <h2>The Holocaust and mass atrocity</h2><hr class="sec-rule">
+  <p class="lede">The Holocaust was the systematic, state-organised murder of approximately six million European Jews by Nazi Germany and its collaborators. It is not a by-product of the war; it was a war aim, pursued with resources that had military alternatives, and it is the central moral fact of the twentieth century. <span class="tag fact">Established</span></p>
+  <p>The process escalated in identifiable stages: legal exclusion and expropriation in Germany from 1933, the Nuremberg Laws of 1935, the violence of <em>Kristallnacht</em> in November 1938, ghettoisation in occupied Poland from 1939, mass shootings by the <em>Einsatzgruppen</em> behind the Eastern Front from June 1941 which killed well over a million people, and from late 1941 industrialised killing in extermination camps. The Wannsee Conference of 20 January 1942 did not initiate the policy but coordinated the bureaucracy for a continent-wide "final solution". The main killing centres were Auschwitz-Birkenau, Treblinka, Belzec, Sobibor, Chelmno and Majdanek.</p>
+  <p>Other groups were targeted within the same racial-eugenic project: Roma and Sinti, with estimates commonly in the range of 200,000 to 500,000 killed; disabled people murdered under the Aktion T4 programme; Soviet prisoners of war, of whom roughly 3.3 million died in German captivity; Polish elites; homosexuals; Jehovah's Witnesses; and political prisoners.</p>
+  <div class="grid two">
+    <div class="panel red-top">
+      <h4>The historians' debate</h4>
+      <p><span class="tag interp">Interpretation</span> <strong>Intentionalists</strong> stress a long-held plan flowing from Hitler's ideology. <strong>Functionalists</strong> stress cumulative radicalisation, in which competing agencies, the failure of deportation schemes and the conditions of the eastern war drove escalation to mass murder. Most historians now hold a synthesis: ideological intent supplied the direction, institutional dynamics supplied the timing and method. The debate concerns mechanism, never whether it happened.</p>
+    </div>
+    <div class="panel blue-top">
+      <h4>Knowledge, bystanders and rescue</h4>
+      <p>Allied governments had credible information from 1942 and issued a joint declaration in December 1942. Whether more could have been done, including bombing the rail lines to Auschwitz, is argued on grounds of technical feasibility and priorities. <span class="tag disputed">Disputed</span> Rescue happened anyway, from Danish fishermen and Raoul Wallenberg to Chiune Sugihara, whose transit visas helped Jewish refugees escape through the Soviet Union.</p>
+    </div>
+  </div>
+  <div class="edge">
+    <span class="edge-h">Why this matters institutionally</span>
+    <p>The Holocaust produced modern international criminal law. "Crimes against humanity" and "genocide" entered legal vocabulary through the Nuremberg Charter and Raphael Lemkin's work, and were codified in the Genocide Convention of 1948, the Universal Declaration of Human Rights of 1948, and the Geneva Conventions of 1949. Holocaust denial is not a historical position; it is a falsification, and it is a criminal offence in several states.</p>
+  </div>
+</section>
+
+<section id="india">
+  <h2>India and the Second World War</h2><hr class="sec-rule">
+  <p class="lede">Undivided India raised roughly 2.5 million volunteers, the largest volunteer army in history, fought in every major theatre outside the Pacific islands, became the base for the defeat of Japan in Burma, and emerged from the war politically transformed and economically damaged. For an Indian candidate this is the single most examinable section here.</p>
+  <p>The Viceroy, Lord Linlithgow, declared India a belligerent in September 1939 without consulting Indian political leaders, prompting the Congress provincial ministries to resign. The Cripps Mission of March 1942 offered Dominion status after the war with the right of provinces to opt out, and was rejected. The Quit India Movement launched in August 1942 was suppressed within weeks with mass arrests of the Congress leadership, who spent most of the war in prison. The Muslim League, which continued to cooperate, strengthened its position considerably over the same period, a development with obvious consequences for 1947. <span class="tag interp">Interpretation</span></p>
+  <div class="grid two">
+    <div class="panel green-top">
+      <h4>Where Indian forces fought</h4>
+      <ul>
+        <li><strong>North and East Africa:</strong> 4th and 5th Indian Divisions in the Western Desert, Eritrea and Abyssinia.</li>
+        <li><strong>Italy:</strong> including Monte Cassino.</li>
+        <li><strong>Malaya, Singapore and Hong Kong:</strong> heavy losses and large numbers taken prisoner in 1941-42.</li>
+        <li><strong>Burma:</strong> the Fourteenth Army under Slim, the Chindit operations, and the decisive battles of Imphal and Kohima from March to July 1944, which broke the Japanese invasion of India.</li>
+        <li>About 87,000 Indian service personnel died; roughly thirty Victoria Crosses were awarded to Indian and Gurkha soldiers. <span class="tag verify">Re-verify</span></li>
+      </ul>
+    </div>
+    <div class="panel gold-top">
+      <h4>The Indian National Army</h4>
+      <ul>
+        <li>Formed from Indian prisoners of war in Southeast Asia, initially under Mohan Singh, and from 1943 led by Subhas Chandra Bose with the Azad Hind provisional government.</li>
+        <li>Fought alongside Japanese forces at Imphal and Kohima; militarily unsuccessful, politically explosive.</li>
+        <li>The INA trials at the Red Fort in 1945-46 produced extraordinary public sympathy across communities and contributed, with the Royal Indian Navy mutiny of February 1946, to British doubts about the reliability of the Indian armed forces. <span class="tag interp">Interpretation</span></li>
+      </ul>
+    </div>
+  </div>
+  <h3>The cost at home</h3>
+  <p>India financed a large part of its own war effort and accumulated sterling balances in London. War demand, inflation, the loss of Burmese rice imports, cyclone damage, provincial trade restrictions, denial policies in coastal Bengal and failures of relief priority produced the Bengal famine of 1943, in which estimates of deaths commonly range from two to three million. Responsibility is heavily contested between Indian provincial administration, the Government of India and the War Cabinet in London, and the debate is both historical and political. <span class="tag disputed">Disputed</span></p>
+  <div class="edge blue">
+    <span class="edge-h">The analytical point</span>
+    <p>The war both strengthened and destroyed British power in India. It expanded the Indian Army and industry and demonstrated Indian military capability; it also exhausted Britain financially, turned India into a creditor, radicalised Indian opinion, strengthened communal mobilisation, and removed the manpower and money needed to hold the subcontinent. Independence in 1947 is not explicable without 1939-45.</p>
+  </div>
+</section>
+
+<section id="europe-endgame">
+  <h2>Defeat of Germany, 1943-1945</h2><hr class="sec-rule">
+  <p>From 1943 Germany was fighting a three-front war it had no means of winning: the Red Army in the east, an Anglo-American ground campaign in the Mediterranean and then in France, and a bomber offensive over its own territory. The Casablanca Conference of January 1943 announced the demand for unconditional surrender, which simplified coalition politics and removed any Axis hope of a negotiated exit.</p>
+  <p>Operation Overlord landed on five Normandy beaches on 6 June 1944, supported by airborne landings, artificial Mulberry harbours, undersea fuel pipelines and an elaborate deception plan. After an attritional struggle in the bocage, the breakout in August destroyed German forces in the Falaise pocket; Paris was liberated on 25 August. The attempt to bounce the Rhine at Arnhem in September failed, and the surprise Ardennes offensive of December 1944 delayed but could not alter the outcome, while consuming Germany's last armoured reserve. Allied armies crossed the Rhine in March 1945 as the Red Army, having destroyed Army Group Centre in Bagration and driven through Poland, closed on Berlin.</p>
+  <ul class="timeline">
+    <li><span class="yr">Jan 1943</span><span>Casablanca: unconditional surrender declared as Allied policy.</span></li>
+    <li><span class="yr">6 Jun 1944</span><span>D-Day landings in Normandy.</span></li>
+    <li><span class="yr">20 Jul 1944</span><span>German officers' bomb plot against Hitler fails; mass reprisals follow.</span></li>
+    <li><span class="yr">Dec 1944-Jan 1945</span><span>Battle of the Bulge: the last German offensive in the west.</span></li>
+    <li><span class="yr">Apr 1945</span><span>Soviet assault on Berlin; Allied and Soviet troops meet on the Elbe; Hitler takes his own life on 30 April.</span></li>
+    <li><span class="yr">7-8 May 1945</span><span>Unconditional surrender signed at Reims and ratified in Berlin; VE Day.</span></li>
+  </ul>
+  <div class="note">
+    <h4>Hitler's decisive strategic errors, in the order they mattered</h4>
+    <ul>
+      <li>Invading the Soviet Union while Britain was undefeated, creating the two-front war German planning had always said must be avoided.</li>
+      <li>Declaring war on the United States on 11 December 1941 when no treaty obliged him to.</li>
+      <li>Splitting the 1942 offensive between the Caucasus oil and Stalingrad, then forbidding withdrawal.</li>
+      <li>Treating occupied Soviet populations as subhuman, destroying the one political weapon that might have broken Stalin's state.</li>
+      <li>Insisting on no retreat as a general principle, converting recoverable defeats into destroyed armies. <span class="tag interp">Interpretation</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="japan-endgame">
+  <h2>Defeat of Japan and the atomic decision</h2><hr class="sec-rule">
+  <p>By mid-1945 Japan was strategically beaten: its merchant fleet destroyed largely by American submarines, its cities burning under incendiary attack, its navy and naval air arm gone, and its army still undefeated in China. It had not surrendered. The Japanese government was divided, the army faction insisted on a decisive home-islands battle to extract better terms, and the sticking point was the status of the emperor, which the Potsdam Declaration of 26 July 1945 did not explicitly guarantee.</p>
+  <ul class="timeline">
+    <li><span class="yr">9-10 Mar 1945</span><span>Firebombing of Tokyo kills roughly 100,000 people in a single night, more than either atomic bomb killed immediately.</span></li>
+    <li><span class="yr">16 Jul 1945</span><span>Trinity test in New Mexico.</span></li>
+    <li><span class="yr">26 Jul 1945</span><span>Potsdam Declaration demands unconditional surrender of the armed forces.</span></li>
+    <li><span class="yr">6 Aug 1945</span><span>Atomic bomb on Hiroshima.</span></li>
+    <li><span class="yr">8-9 Aug 1945</span><span>Soviet Union declares war and invades Manchuria, destroying the Kwantung Army.</span></li>
+    <li><span class="yr">9 Aug 1945</span><span>Atomic bomb on Nagasaki.</span></li>
+    <li><span class="yr">15 Aug 1945</span><span>Emperor Hirohito's broadcast announcing surrender; formal signature on USS <em>Missouri</em> on 2 September.</span></li>
+  </ul>
+  <p>Immediate and end-of-1945 deaths from the two bombs are usually estimated at roughly 110,000 to 210,000 combined, with large uncertainty and continuing deaths from radiation illness for decades. <span class="tag disputed">Disputed</span></p>
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>The case made for the bombs</h4>
+      <p>That Japan had not surrendered after months of conventional destruction; that an invasion of Kyushu and Honshu would have cost enormous Allied and far greater Japanese casualties, with Okinawa as the model; that it would have prolonged the deaths of civilians and prisoners across occupied Asia; and that Japan's leadership needed a shock sufficient to let the emperor overrule the army.</p>
+    </div>
+    <div class="panel red-top">
+      <h4>The case made against</h4>
+      <p>That Japan was already seeking mediation through Moscow; that a guarantee on the emperor, which was granted in practice anyway, might have sufficed; that a demonstration could have been tried; that the Soviet declaration of war was the greater shock to Tokyo; and the "atomic diplomacy" argument that the bombs were aimed partly at the Soviet Union. <span class="tag disputed">Disputed</span></p>
+    </div>
+  </div>
+  <div class="edge gold">
+    <span class="edge-h">How to handle this question</span>
+    <p>Do not perform certainty. Set out what was known to decision-makers in July 1945 rather than what is known now, state both cases, note that the Soviet entry and the bombs happened within seventy-two hours of each other so their effects cannot be cleanly separated, and then give your position with its weakest point conceded. That structure is worth more marks than any verdict.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part IV · Verdict and settlement</p><h2>Why it ended as it did, and what it built</h2></div>
+
+<section id="why-won">
+  <h2>Why the Allies won</h2><hr class="sec-rule">
+  <p>Material superiority is the necessary condition and not the whole answer, since the Axis had chances to win before that superiority could be applied. The honest formulation is that the Axis lost the war they could have won in 1940-42 through strategic incoherence, and were then crushed by a coalition they had themselves united.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Decisive factors, weighed</caption>
+      <thead><tr><th>Factor</th><th>Mechanism</th><th>Weight</th></tr></thead>
+      <tbody>
+        <tr><td>Economic and demographic imbalance</td><td>Allied war potential roughly three to five times Axis once the USSR and USA were engaged, with secure oil and shipping</td><td>High; the structural ceiling on Axis prospects</td></tr>
+        <tr><td>Soviet manpower and endurance</td><td>The Eastern Front absorbed the majority of German divisions and casualties from 1941 to 1945</td><td>High; the single largest contribution to Germany's defeat</td></tr>
+        <tr><td>Axis strategic incoherence</td><td>No combined Axis war plan; Germany and Japan never coordinated against the USSR or in the Indian Ocean; Italy drew Germany into unplanned theatres</td><td>High; this is what turned a possible Axis victory into certain defeat <span class="tag interp">Interpretation</span></td></tr>
+        <tr><td>Allied coalition management</td><td>Combined Chiefs of Staff, Lend-Lease, shared basing, agreed "Germany first" priority, conference diplomacy</td><td>Medium-high; held together despite deep mutual suspicion</td></tr>
+        <tr><td>Intelligence and technology</td><td>Ultra and Magic, radar, operational research, air-sea integration, and ultimately nuclear weapons</td><td>Medium; a force multiplier rather than an independent cause</td></tr>
+        <tr><td>Ideology as self-sabotage</td><td>Racial policy destroyed potential allies in the occupied east and diverted resources to genocide; Japan's conduct wasted anti-colonial goodwill in Asia</td><td>Medium; a cause of defeat as well as a crime</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge">
+    <span class="edge-h">The one-sentence answer</span>
+    <p>The Axis fought separate wars against a coalition that fought one, and the coalition could replace what it lost.</p>
+  </div>
+</section>
+
+<section id="settlement">
+  <h2>Wartime diplomacy and the post-war settlement</h2><hr class="sec-rule">
+  <p>Unlike 1919, the post-war order was negotiated during the war rather than after it, which is why it was built around the victors' power rather than around a general peace conference. There was never a single comprehensive treaty with Germany; its division hardened instead into two states by 1949.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>The conferences that made the post-war world</caption>
+      <thead><tr><th>Meeting</th><th>Date</th><th>Principal outcome</th></tr></thead>
+      <tbody>
+        <tr><td>Atlantic Charter</td><td>Aug 1941</td><td>Roosevelt and Churchill state war aims: no territorial aggrandisement, self-determination, free trade, a wider system of security. Churchill insisted it did not apply to the British Empire; Indian and African nationalists insisted it did. <span class="tag disputed">Disputed</span></td></tr>
+        <tr><td>Casablanca</td><td>Jan 1943</td><td>Unconditional surrender; Mediterranean priority before a cross-Channel invasion</td></tr>
+        <tr><td>Tehran</td><td>Nov-Dec 1943</td><td>First Big Three meeting; commitment to Overlord in 1944; Soviet pledge to enter the war against Japan; outline of Poland's westward shift</td></tr>
+        <tr><td>Bretton Woods</td><td>Jul 1944</td><td>Fixed exchange rates against the dollar; creation of the IMF and the World Bank</td></tr>
+        <tr><td>Dumbarton Oaks</td><td>Aug-Oct 1944</td><td>Blueprint for the United Nations, including a Security Council with permanent members</td></tr>
+        <tr><td>Yalta</td><td>Feb 1945</td><td>Occupation zones in Germany, Soviet entry against Japan, the Declaration on Liberated Europe, and the veto formula. Denounced later as a "sell-out" of Eastern Europe; the counter-argument is that the Red Army was already there. <span class="tag disputed">Disputed</span></td></tr>
+        <tr><td>San Francisco</td><td>Apr-Jun 1945</td><td>UN Charter signed by 50 states on 26 June 1945; in force 24 October 1945</td></tr>
+        <tr><td>Potsdam</td><td>Jul-Aug 1945</td><td>Occupation policy for Germany (demilitarisation, denazification, decartelisation, democratisation), reparations by zone, the Oder-Neisse line in practice, and the ultimatum to Japan</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The institutional architecture built in these years is still the one we live in: the United Nations with its Security Council and veto, the IMF and World Bank, the General Agreement on Tariffs and Trade in 1947 leading eventually to the WTO, and a human-rights and humanitarian-law regime codified in 1948-49. Its defining compromise was to give the five principal victors permanent seats and a veto, buying their participation at the price of paralysis whenever they disagree, which is the core of today's Security Council reform debate.</p>
+</section>
+
+<section id="legacy">
+  <h2>Costs, justice and legacies</h2><hr class="sec-rule">
+  <p>Total deaths are usually estimated at between seventy and eighty-five million, about three per cent of the world population of 1940, of whom a clear majority were civilians. Ranges rather than point figures are the only honest form. <span class="tag disputed">Disputed</span></p>
+  <div class="tablewrap">
+    <table>
+      <caption>Indicative total deaths, military and civilian (estimates, wide ranges)</caption>
+      <thead><tr><th>Country</th><th class="num">Approximate total deaths</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>Soviet Union</td><td class="num">c. 24-27 million</td><td>Roughly two-thirds civilian; the heaviest absolute loss</td></tr>
+        <tr><td>China</td><td class="num">c. 15-20 million</td><td>Combat, massacre, famine and displacement from 1937</td></tr>
+        <tr><td>Germany</td><td class="num">c. 6.6-8.8 million</td><td>Includes military dead, bombing and expulsion deaths</td></tr>
+        <tr><td>Poland</td><td class="num">c. 5.6-6 million</td><td>Includes roughly 3 million Polish Jews; the highest proportionate loss of any country</td></tr>
+        <tr><td>Japan</td><td class="num">c. 2.5-3.1 million</td><td>Includes bombing and starvation</td></tr>
+        <tr><td>India (undivided)</td><td class="num">c. 2-3 million</td><td>Overwhelmingly the Bengal famine of 1943, plus about 87,000 service deaths <span class="tag disputed">Disputed</span></td></tr>
+        <tr><td>United Kingdom</td><td class="num">c. 450,000</td><td>Including about 67,000 civilians</td></tr>
+        <tr><td>United States</td><td class="num">c. 418,000</td><td>Almost entirely military; no mainland civilian bombing</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <h3>Justice and reconstruction</h3>
+  <p>The International Military Tribunal at Nuremberg tried twenty-two major defendants between November 1945 and October 1946, convicting nineteen and sentencing twelve to death; the Tokyo tribunal sat from 1946 to 1948. The tribunals established that individuals can be held criminally liable for state policy, that "superior orders" is not a defence, and that aggressive war and crimes against humanity are justiciable. They were also criticised as victors' justice applying retrospective law, and for omissions including the bombing of cities, Soviet conduct, and the immunity granted to the Japanese emperor and to Unit 731 personnel. <span class="tag disputed">Disputed</span> Reconstruction followed a different model from 1919: the Marshall Plan from 1948, currency reform, democratisation and the rapid rehabilitation of West Germany and Japan as allies.</p>
+  <h3>Five legacies</h3>
+  <ul>
+    <li><strong>Bipolarity and the Cold War.</strong> Europe divided, Germany partitioned, NATO in 1949 and the Warsaw Pact in 1955, and a nuclear arms race that began with Soviet acquisition of the bomb in 1949.</li>
+    <li><strong>Decolonisation.</strong> European prestige and finances broken, colonial soldiers returned with claims, and Japan had shown that European rule could be ended by force. India and Pakistan in 1947, Indonesia in 1949, and the African wave of the late 1950s and 1960s followed.</li>
+    <li><strong>Human rights and international law.</strong> Genocide Convention and Universal Declaration in 1948, Geneva Conventions in 1949, the refugee regime in 1951, and eventually the International Criminal Court.</li>
+    <li><strong>European integration.</strong> The Schuman Plan and the Coal and Steel Community of 1951 were explicitly designed to make another Franco-German war materially impossible.</li>
+    <li><strong>Memory and politics.</strong> Holocaust remembrance, the "Munich analogy" invoked in every subsequent crisis, Japanese textbook and apology disputes with China and Korea, and the Russian official memory of the Great Patriotic War as a continuing instrument of politics. <span class="tag interp">Interpretation</span></li>
+  </ul>
+</section>
+
+<!-- ============ KNOWLEDGE TOOLKIT ============ -->
+<div class="part-head"><p>Knowledge toolkit</p><h2>Analysis, practice and revision</h2></div>
+
+<section id="perspectives">
+  <h2>Perspectives, controversies and facts</h2><hr class="sec-rule">
+  <p><span class="tag interp">Interpretation</span> <strong>Was appeasement indefensible?</strong> The orthodox verdict is that it fed aggression and wasted the chance to stop Hitler cheaply in 1936 or 1938. The revisionist reply points to British rearmament needs, imperial over-stretch, Dominion opinion and the absence of allies, and argues 1939 was a better moment to fight than 1938. Both agree the policy failed; they disagree on whether a better alternative was politically available.</p>
+  <p><span class="tag interp">Interpretation</span> <strong>Who defeated Germany?</strong> Soviet historiography and much current scholarship stress the Eastern Front, where the great majority of German losses occurred. Western accounts stress sea control, bombing, Lend-Lease and the second front. The defensible synthesis is that the Red Army did the bulk of the destroying while Anglo-American resources, shipping and air power made that destruction sustainable and the victory global. <span class="tag disputed">Disputed</span></p>
+  <p><span class="tag interp">Interpretation</span> <strong>Were the atomic bombings justified?</strong> See the endgame section. Note that the debate has shifted over time with the release of Japanese and Soviet documents, and that it is a question about decisions under uncertainty, not about hindsight.</p>
+  <p><span class="tag interp">Interpretation</span> <strong>Was area bombing effective or ethical?</strong> The United States Strategic Bombing Survey found morale effects limited and production resilient until the oil and transport campaigns. Defenders cite the destruction of the Luftwaffe and the diversion of German resources. Critics argue the deliberate targeting of civilians crossed a line the Allies had themselves condemned in 1939. <span class="tag disputed">Disputed</span></p>
+  <p><span class="tag interp">Interpretation</span> <strong>Was Subhas Chandra Bose's alliance with the Axis justified?</strong> Supporters argue he used Britain's enemies instrumentally for Indian independence and never endorsed Axis ideology. Critics argue it meant association with regimes whose conduct in Asia and Europe was atrocious. The question is routinely asked in interviews; answer it with the facts, both arguments, and respect for the sincerity of those who held either view. <span class="tag disputed">Disputed</span></p>
+  <h3>Lesser-known facts</h3>
+  <ul>
+    <li><span class="tag fact">Established</span> The Soviet Union and Japan signed a neutrality pact in April 1941 and observed it until August 1945; the two had already fought an undeclared war at Khalkhin Gol in 1939, which influenced Japan's decision to expand south rather than north.</li>
+    <li><span class="tag fact">Established</span> Over a million Indian and African troops served in the British imperial forces; the Fourteenth Army in Burma was one of the most multinational armies ever fielded.</li>
+    <li><span class="tag fact">Established</span> Brazil sent an expeditionary force to Italy; Mexico flew a fighter squadron in the Philippines.</li>
+    <li><span class="tag fact">Established</span> Germany never had a serious strategic bomber force, and its jet and rocket programmes consumed resources disproportionate to their effect.</li>
+    <li><span class="tag fact">Established</span> The Soviet Union received roughly 400,000 trucks and jeeps under Lend-Lease, transforming Red Army operational mobility in 1944-45.</li>
+    <li><span class="tag fact">Established</span> Switzerland, Sweden, Spain, Portugal, Turkey and Ireland remained formally neutral; Turkey declared war only in February 1945 to qualify for UN membership.</li>
+    <li><span class="tag fact">Established</span> The last Japanese holdout soldier formally surrendered in 1974.</li>
+  </ul>
+</section>
+
+<section id="scenarios-options">
+  <h2>Counterfactuals, scenarios and lessons</h2><hr class="sec-rule">
+  <p>Counterfactuals are the standard test of whether a stated cause was necessary. Keep them disciplined: change one variable, hold the rest, and state what it reveals.</p>
+  <div class="grid two">
+    <div class="panel red-top">
+      <h4>If France had resisted the Rhineland remilitarisation in 1936</h4>
+      <p>German forces were small and under orders to withdraw if opposed. Tests whether early, cheap deterrence was genuinely available, and whether French domestic politics and the absence of British support made it impossible anyway.</p>
+    </div>
+    <div class="panel blue-top">
+      <h4>If Germany had not invaded the Soviet Union in 1941</h4>
+      <p>Britain alone could not have liberated the continent; the United States might never have fought in Europe at all. Isolates how far Germany's defeat depended on an enemy it chose to create.</p>
+    </div>
+    <div class="panel gold-top">
+      <h4>If Japan had struck north against the USSR instead of south</h4>
+      <p>A two-front war for Stalin in 1941 with the Siberian divisions unavailable at Moscow. Tests the claim that Axis coordination, not Axis capability, was the missing ingredient.</p>
+    </div>
+    <div class="panel green-top">
+      <h4>If the Normandy landings had failed in 1944</h4>
+      <p>A delay to 1945, a Soviet army advancing further west, and an atomic bomb available before any second landing. Tests how much the shape of post-war Europe was decided by the timing of the second front rather than by Yalta.</p>
+    </div>
+  </div>
+  <h3>Enduring strategic lessons</h3>
+  <div class="tablewrap">
+    <table>
+      <caption>What 1939-45 teaches, and why it still applies</caption>
+      <thead><tr><th>Lesson</th><th>Evidence from the war</th><th>Contemporary relevance</th></tr></thead>
+      <tbody>
+        <tr><td>Deterrence is cheapest early</td><td>The Rhineland in 1936 and Munich in 1938 cost less to resist than 1939-45 cost to reverse</td><td>Credible early signalling in territorial disputes; the risk of salami-slicing going unanswered</td></tr>
+        <tr><td>Industrial and logistic depth decides long wars</td><td>Allied production ratios; shipping; fuel; Lend-Lease trucks</td><td>Defence-industrial base, ammunition stockpiles, critical minerals, shipbuilding capacity</td></tr>
+        <tr><td>Technology must be matched to doctrine and sustainment</td><td>German jets and V-weapons fielded too late; Allied radar and operational research integrated early</td><td>Drones, cyber, AI-enabled systems: integration and sustainment matter more than novelty</td></tr>
+        <tr><td>Intelligence is decisive only when it can be acted on securely</td><td>Ultra and Magic shaped convoy routing, Midway and Normandy</td><td>Protecting sources while using them; the cost of acting on intelligence too visibly</td></tr>
+        <tr><td>Coalitions beat alliances of convenience</td><td>Combined Chiefs of Staff and "Germany first" versus the complete absence of Axis joint planning</td><td>Interoperability, agreed priorities and burden-sharing in modern partnerships</td></tr>
+        <tr><td>Occupation policy is a weapon that fires both ways</td><td>German brutality created partisans in the east; Japanese conduct wasted anti-colonial sympathy</td><td>Legitimacy, civil-military relations and the conduct of forces among civilian populations</td></tr>
+        <tr><td>Plan the peace while fighting the war</td><td>Atlantic Charter, Bretton Woods, Dumbarton Oaks and the UN all predate victory</td><td>War termination, post-conflict order and institution design as part of strategy</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge blue">
+    <span class="edge-h">If asked what India should take from this war</span>
+    <p>Presented neutrally: the value of industrial and logistical depth over headline platform numbers; the importance of institutional memory about how wars end and what order replaces them; the need to convert military contribution into political voice, which India's 1939-45 experience shows can be denied if the claim is not pressed; and the permanent relevance of the Security Council's 1945 design to India's case for reform today. None of this implies support for any party or policy, and an answer should decline to be pushed into one.</p>
+  </div>
+</section>
+
+<section id="answer-framework">
+  <h2>Answer framework and worked example</h2><hr class="sec-rule">
+  <p>For any causation or judgement question, move through definition, location, evidence, contest, analysis, test, position, concession and close. One compressed example follows; use the same ladder for "Were the atomic bombings justified?" or "Who really defeated Germany?".</p>
+  <div class="panel red-top">
+    <h4>Worked example: "Was the Second World War the inevitable result of the First?"</h4>
+    <dl class="rungs">
+      <dt>Define</dt><dd>"Inevitable" means no reachable alternative path, not merely "connected to" or "made more likely by".</dd>
+      <dt>Locate</dt><dd>Versailles 1919 and its enforcement, the Depression of 1929-33, the League's failures of 1931-36, and the decisions of 1936-39.</dd>
+      <dt>Establish</dt><dd>Real continuities: the war-guilt grievance and reparations, the stab-in-the-back myth, unresolved minority borders, an absent United States, and a League without enforcement.</dd>
+      <dt>Contest</dt><dd>Two decades separate them, Locarno and the 1920s showed a workable path, the Depression was not caused by the treaty, and Japan's war in Asia had largely independent origins.</dd>
+      <dt>Analyse</dt><dd>1919 supplied the grievances and the weak institutions; 1929 supplied the crisis; specific leaders and specific choices between 1936 and 1939 supplied the war. Causation is cumulative, not mechanical.</dd>
+      <dt>Test</dt><dd>Ask whether a different response at the Rhineland in 1936, or at Munich in 1938, or a Western alliance with the USSR in 1939, would have changed the outcome. If any plausibly would, inevitability fails.</dd>
+      <dt>Position</dt><dd>The second war was made far more likely by the first and its settlement, but it was not inevitable; the decisions of the 1930s were the proximate and avoidable causes.</dd>
+      <dt>Concede</dt><dd>Counterfactual confidence is limited, and historians including Taylor read Hitler's intentions very differently from the orthodox view. <span class="tag disputed">Disputed</span></dd>
+      <dt>Close</dt><dd>The practical lesson is about enforcement and institutions: a settlement that nobody is willing to police is a postponement, not a peace.</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="qbank">
+  <h2>Practice bank: questions and motions</h2><hr class="sec-rule">
+  <p class="lede">Fifteen questions. Answer each aloud, standing, in ninety seconds, naming a date, a mechanism and a counter-argument.</p>
+  <ol class="qbank">
+    <li>When did the Second World War begin, and why is the answer contested?</li>
+    <li>Explain how the Depression contributed to the collapse of the interwar order.</li>
+    <li>Was appeasement a reasonable policy on the information available in 1938?</li>
+    <li>Why did the Nazi-Soviet Pact matter, and what did each side get from it?</li>
+    <li>Why did France fall in six weeks despite comparable forces?</li>
+    <li>What did the Battle of Britain actually decide?</li>
+    <li>Why did Operation Barbarossa fail, and when did it fail?</li>
+    <li>Explain Japan's strategic logic in attacking Pearl Harbor and why it was flawed.</li>
+    <li>How was the Battle of the Atlantic won?</li>
+    <li>Assess the contribution of intelligence, naming specific operations.</li>
+    <li>Describe India's military, economic and political experience of the war.</li>
+    <li>What were the causes of the Bengal famine of 1943, and where does responsibility lie?</li>
+    <li>Set out both sides of the debate on the atomic bombings of Hiroshima and Nagasaki.</li>
+    <li>Give three reasons the Allies won, ranked, with justification for the ranking.</li>
+    <li>In what specific ways does the 1945 settlement still shape international politics today?</li>
+  </ol>
+  <h3>Debate motions</h3>
+  <ol class="dbank">
+    <li>This house believes appeasement was defensible in 1938 but indefensible in 1939.</li>
+    <li>This house believes the Soviet Union, not the Western Allies, defeated Nazi Germany.</li>
+    <li>This house believes the atomic bombings of Japan were militarily unnecessary.</li>
+    <li>This house believes the area bombing of cities was a war crime.</li>
+    <li>This house believes the Second World War, not the freedom struggle alone, made Indian independence inevitable.</li>
+    <li>This house believes the United Nations was designed to entrench the victors of 1945 rather than to prevent war.</li>
+    <li>This house believes the Indian National Army deserves the same place in national memory as the Indian Army.</li>
+    <li>This house believes the lessons of 1938 are routinely misapplied to modern crises.</li>
+  </ol>
+</section>
+
+<section id="revision">
+  <h2>Chronology, glossary and revision sheet</h2><hr class="sec-rule">
+  <h3>Master chronology</h3>
+  <ul class="timeline">
+    <li><span class="yr">1931-36</span><span>Manchuria; Hitler in power; rearmament; Abyssinia; Rhineland; Spanish Civil War; Axis formed.</span></li>
+    <li><span class="yr">1937-38</span><span>Full-scale war in China; Nanjing; <em>Anschluss</em>; Munich; <em>Kristallnacht</em>.</span></li>
+    <li><span class="yr">1939</span><span>Occupation of Czechoslovakia (Mar); Nazi-Soviet Pact (23 Aug); invasion of Poland (1 Sep); Britain and France declare war (3 Sep); Soviet entry into Poland (17 Sep); Winter War begins (Nov).</span></li>
+    <li><span class="yr">1940</span><span>Denmark and Norway (Apr); invasion of the west (10 May); Dunkirk; French armistice (22 Jun); Battle of Britain and the Blitz; Tripartite Pact (Sep); Italy invades Greece (Oct).</span></li>
+    <li><span class="yr">1941</span><span>Balkans and Crete; Barbarossa (22 Jun); Atlantic Charter (Aug); Moscow halted (Dec); Pearl Harbor (7 Dec); Germany declares war on the USA (11 Dec).</span></li>
+    <li><span class="yr">1942</span><span>Fall of Singapore (15 Feb); Cripps Mission and Quit India in India; Midway (Jun); Case Blue; El Alamein and Torch (Oct-Nov); Stalingrad encircled (Nov).</span></li>
+    <li><span class="yr">1943</span><span>Casablanca and unconditional surrender (Jan); Stalingrad surrender (2 Feb); Tunisia (May); "Black May" in the Atlantic; Kursk (Jul); Sicily and Mussolini's fall; Italian armistice (Sep); Bengal famine; Tehran (Nov-Dec).</span></li>
+    <li><span class="yr">1944</span><span>Imphal and Kohima (Mar-Jul); D-Day (6 Jun); Bagration (Jun-Aug); Bretton Woods (Jul); July plot; Paris liberated (Aug); Warsaw Rising; Leyte Gulf (Oct); Ardennes offensive (Dec).</span></li>
+    <li><span class="yr">1945</span><span>Yalta (Feb); Tokyo firebombing (Mar); Rhine crossed; Hitler dies (30 Apr); VE Day (8 May); San Francisco and the UN Charter (Jun); Trinity (16 Jul); Potsdam (Jul-Aug); Hiroshima (6 Aug); Soviet entry and Nagasaki (8-9 Aug); surrender announced (15 Aug) and signed (2 Sep); Nuremberg opens (Nov).</span></li>
+    <li><span class="yr">1946-49</span><span>INA trials and RIN mutiny in India; Nuremberg and Tokyo verdicts; Marshall Plan (1948); Genocide Convention and UDHR (1948); Indian independence (1947); NATO and two German states (1949).</span></li>
+  </ul>
+  <h3>Glossary</h3>
+  <dl class="term">
+    <dt>Appeasement</dt><dd>The policy of conceding to a revisionist power's demands in the hope of satisfying it and avoiding war.</dd>
+    <dt>Axis</dt><dd>The alliance of Germany, Italy and Japan, formalised by the Tripartite Pact of September 1940.</dd>
+    <dt>Barbarossa</dt><dd>The German invasion of the Soviet Union launched on 22 June 1941.</dd>
+    <dt>Blitzkrieg</dt><dd>Popular label for concentrated armoured and air operations aimed at rapid operational collapse; not a formal German doctrine.</dd>
+    <dt>Collaboration</dt><dd>Cooperation by individuals or regimes with an occupying power, as at Vichy or under Wang Jingwei.</dd>
+    <dt>Einsatzgruppen</dt><dd>SS mobile killing units that carried out mass shootings behind the Eastern Front from 1941.</dd>
+    <dt>Final Solution</dt><dd>The Nazi euphemism for the planned extermination of Europe's Jews.</dd>
+    <dt>Genocide</dt><dd>The deliberate destruction of a national, ethnic, racial or religious group; term coined by Lemkin and codified in 1948.</dd>
+    <dt>Germany first</dt><dd>The agreed Allied priority of defeating Germany before concentrating on Japan.</dd>
+    <dt>INA</dt><dd>Indian National Army; force raised from Indian prisoners of war, led from 1943 by Subhas Chandra Bose.</dd>
+    <dt>Lebensraum</dt><dd>"Living space"; the Nazi doctrine of territorial expansion and settlement in Eastern Europe.</dd>
+    <dt>Lend-Lease</dt><dd>The American programme supplying material to Allied states without immediate payment, from March 1941.</dd>
+    <dt>Operation Overlord</dt><dd>The Allied invasion of Normandy beginning on 6 June 1944.</dd>
+    <dt>Partisan</dt><dd>Irregular fighter operating against an occupying force in its rear areas.</dd>
+    <dt>Ultra</dt><dd>British codename for intelligence derived from decrypted German Enigma and Lorenz traffic.</dd>
+    <dt>Unconditional surrender</dt><dd>The Allied policy announced at Casablanca in January 1943 of accepting no negotiated terms from the Axis.</dd>
+    <dt>Total war</dt><dd>War in which the whole economy, population and information space are mobilised and civilians become targets.</dd>
+  </dl>
+  <h3>Rapid revision sheet</h3>
+  <div class="note">
+    <h4>Causes</h4>
+    <ul>
+      <li>1919 grievances plus 1929 Depression plus League failure plus 1936-39 decisions. Cumulative, not inevitable.</li>
+      <li>Milestones: Manchuria 1931, Abyssinia 1935, Rhineland 1936, China 1937, Munich 1938, Pact Aug 1939, Poland 1 Sep 1939.</li>
+      <li>Ideology: Lebensraum and racial hierarchy; fascist empire; Japanese resource-driven expansion.</li>
+      <li>Dating: Europe 1939, Asia 1937, global Dec 1941.</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h4>Campaigns</h4>
+    <ul>
+      <li>Axis high tide: France Jun 1940, Barbarossa Jun 1941, Japanese conquests to mid-1942.</li>
+      <li>Turning points: Midway Jun 1942, El Alamein Oct 1942, Stalingrad Feb 1943, Kursk Jul 1943, Black May 1943.</li>
+      <li>Endgame: D-Day 6 Jun 1944, Bagration Jun 1944, Imphal-Kohima 1944, VE Day 8 May 1945, VJ 15 Aug / 2 Sep 1945.</li>
+      <li>Eastern Front = majority of German losses; Atlantic = the Allied lifeline; bombing = Luftwaffe destroyed plus oil and transport.</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h4>India</h4>
+    <ul>
+      <li>c. 2.5 million volunteers, c. 87,000 dead; Africa, Italy, Malaya, Burma.</li>
+      <li>Politics: 1939 declaration without consultation; Cripps Mar 1942; Quit India Aug 1942; Muslim League strengthened.</li>
+      <li>INA and Azad Hind; Imphal and Kohima 1944; INA trials 1945-46; RIN mutiny Feb 1946.</li>
+      <li>Bengal famine 1943, roughly 2-3 million deaths, responsibility contested.</li>
+      <li>Net effect: Britain exhausted, India a creditor, independence 1947.</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h4>Consequences</h4>
+    <ul>
+      <li>Deaths c. 70-85 million, majority civilian; USSR and China worst hit; Poland proportionately worst.</li>
+      <li>Holocaust: c. 6 million Jews murdered; Nuremberg and Tokyo trials; Genocide Convention and UDHR 1948.</li>
+      <li>Institutions: UN Charter 1945, Bretton Woods 1944, GATT 1947, Geneva Conventions 1949.</li>
+      <li>Order: Cold War, decolonisation, European integration, nuclear age.</li>
+      <li>Always give casualty figures as ranges and tag contested claims.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer>
+  <p>Compiled from open sources. Study aid only, not an official publication.</p>
+  <p>Source &amp; contributions: <a href="https://github.com/mohitkushwaha0601/matre">github.com/mohitkushwaha0601/matre</a></p>
+</footer>
+
+</body>
+</html>
