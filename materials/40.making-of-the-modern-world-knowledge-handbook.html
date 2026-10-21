@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Making of the Modern World, 1500-2025 — A Deep Knowledge Handbook</title>
+<meta name="description" content="A 22-section handbook on how the modern world was formed over five centuries: the first global age and oceanic trade, slavery and abolition, revolutions and nationalism, the Industrial Revolution and the great divergence, capitalism and communism, high imperialism and the fall of the land empires, the 1914-45 crisis, the post-1945 institutions, decolonisation, the Cold War, globalisation, the rise of China and India, and the present order, with SSB-style practice material.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1B1A2E;
+  --ink-soft:#56557A;
+  --paper:#F2EFE9;
+  --surface:#FFFFFF;
+  --surface-2:#E6E1D7;
+  --rule:#CFC8BA;
+  --rule-strong:#9C9281;
+  --red:#9E3022;
+  --blue:#26457A;
+  --gold:#96711A;
+  --green:#2F6A4F;
+  --hero-bg:#16213B;
+  --hero-ink:#F2EFE9;
+  --hero-dim:#9AA6C0;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ink:#E9E6DE;
+    --ink-soft:#A9A6BC;
+    --paper:#0D0F18;
+    --surface:#151824;
+    --surface-2:#1E2230;
+    --rule:#2C3142;
+    --rule-strong:#4E5570;
+    --red:#E9887A;
+    --blue:#86A9E8;
+    --gold:#D9B455;
+    --green:#6BC79B;
+    --hero-bg:#070A12;
+    --hero-ink:#E9E6DE;
+    --hero-dim:#8D96AE;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E9E6DE;
+  --ink-soft:#A9A6BC;
+  --paper:#0D0F18;
+  --surface:#151824;
+  --surface-2:#1E2230;
+  --rule:#2C3142;
+  --rule-strong:#4E5570;
+  --red:#E9887A;
+  --blue:#86A9E8;
+  --gold:#D9B455;
+  --green:#6BC79B;
+  --hero-bg:#070A12;
+  --hero-ink:#E9E6DE;
+  --hero-dim:#8D96AE;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1.5rem);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ---------- hero ---------- */
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
+.flagstrip{display:flex;height:12px}
+.flagstrip span{flex:1}
+.f1{background:linear-gradient(90deg,#AA151B 50%,#F1BF00 50%)}
+.f2{background:#012169}
+.f3{background:linear-gradient(90deg,#002395 33%,#FFFFFF 33%,#FFFFFF 66%,#ED2939 66%)}
+.f4{background:linear-gradient(90deg,#B22234 33%,#FFFFFF 33%,#FFFFFF 66%,#3C3B6E 66%)}
+.f5{background:linear-gradient(90deg,#CC0000 70%,#FFD700 70%)}
+.f6{background:linear-gradient(90deg,#EE1C25 70%,#FFDE00 70%)}
+.f7{background:linear-gradient(90deg,#FF9933 33%,#FFFFFF 33%,#FFFFFF 66%,#138808 66%)}
+.f8{background:#16213B}
+.hero-inner{max-width:1180px;margin:0 auto;padding:3.2rem 1.5rem 0}
+.kicker{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--hero-dim);margin:0 0 .8rem}
+.motto{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:clamp(1.7rem,5.2vw,2.9rem);line-height:1.2;margin:0;letter-spacing:.005em;max-width:26ch}
+.motto-en{margin:.55rem 0 0;color:var(--hero-dim);font-size:clamp(.95rem,2.4vw,1.1rem);font-style:italic;max-width:62ch}
+.hero h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.5rem,4.3vw,2.35rem);line-height:1.2;margin:2.6rem 0 .5rem;border-top:1px solid rgba(255,255,255,.22);padding-top:1.6rem;max-width:30ch}
+.hero-sub{margin:0;color:var(--hero-dim);max-width:68ch}
+.stamp{margin-top:1.6rem;font-size:.86rem;color:var(--hero-dim);display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+.stamp b{color:var(--hero-ink);font-weight:600}
+
+/* ---------- layout ---------- */
+.shell{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem;display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media (min-width:1000px){
+  .shell{grid-template-columns:255px minmax(0,1fr);gap:3.5rem;padding-top:2.8rem}
+}
+nav.toc{font-size:.9rem}
+@media (min-width:1000px){
+  .toc-mobile{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2rem);align-self:start;max-height:calc(100vh - 5rem);overflow-y:auto}
+}
+nav.toc h2{font-family:"Zilla Slab",Georgia,serif;font-size:.92rem;font-weight:600;margin:0 0 .7rem;padding-bottom:.45rem;border-bottom:2px solid var(--rule-strong)}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc}
+nav.toc li{border-bottom:1px solid var(--rule)}
+nav.toc li:not(.part){counter-increment:toc}
+nav.toc a{display:flex;gap:.6rem;padding:.4rem 0;color:var(--ink-soft);text-decoration:none}
+nav.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--rule-strong);font-variant-numeric:tabular-nums;flex:none}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--red)}
+nav.toc .part{border:0;margin:1.1rem 0 .3rem;font-family:"Zilla Slab",Georgia,serif;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--rule-strong)}
+nav.toc .part::before{content:none}
+.toc-mobile{display:block}
+@media (min-width:1000px){.toc-mobile summary{display:none}}
+.toc-mobile summary{cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:600;padding:.7rem .9rem;background:var(--surface);border:1px solid var(--rule);margin-bottom:1rem}
+@media (max-width:999px){
+  .toc-mobile[open] nav.toc{padding:0 .9rem 1rem}
+  .toc-mobile:not([open]) nav.toc{display:none}
+}
+
+/* ---------- sections ---------- */
+main{min-width:0}
+section{margin:0 0 3.6rem;scroll-margin-top:1.5rem}
+section > h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.45rem,3.6vw,1.95rem);line-height:1.2;margin:0 0 .3rem}
+.part-head{margin:4rem 0 2.2rem;padding:1.1rem 0 .9rem;border-top:4px double var(--rule-strong);border-bottom:1px solid var(--rule)}
+.part-head p{margin:0;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.part-head h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.3rem,3.2vw,1.7rem);margin:.3rem 0 0;color:var(--ink)}
+.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.16rem;margin:2rem 0 .5rem;line-height:1.3}
+h4{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1rem;margin:1.4rem 0 .35rem;color:var(--ink)}
+p{margin:0 0 .95rem;max-width:74ch}
+ul,ol{margin:0 0 1rem;padding-left:1.25rem;max-width:74ch}
+li{margin-bottom:.35rem}
+li::marker{color:var(--rule-strong)}
+strong{font-weight:600}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+/* ---------- components ---------- */
+.lede{font-size:1.06rem;color:var(--ink-soft);max-width:70ch}
+
+.tablewrap{overflow-x:auto;margin:0 0 1.3rem;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.92rem}
+caption{text-align:left;padding:.7rem .85rem .1rem;font-weight:600;color:var(--ink-soft);font-size:.9rem}
+th,td{text-align:left;padding:.55rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{background:var(--surface-2);font-weight:600;border-bottom:2px solid var(--rule-strong);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.num,th.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+.edge{background:var(--surface);border-left:4px solid var(--red);padding:.9rem 1.1rem;margin:1.4rem 0;max-width:74ch}
+.edge p:last-child,.edge ul:last-child,.edge ol:last-child{margin-bottom:0}
+.edge .edge-h{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);display:block;margin-bottom:.25rem;font-size:.95rem}
+.edge.gold{border-left-color:var(--gold)}
+.edge.gold .edge-h{color:var(--gold)}
+.edge.blue{border-left-color:var(--blue)}
+.edge.blue .edge-h{color:var(--blue)}
+.edge.green{border-left-color:var(--green)}
+.edge.green .edge-h{color:var(--green)}
+
+.note{background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;border:1px solid var(--rule);font-size:.95rem}
+.note p:last-child,.note ul:last-child,.note ol:last-child{margin-bottom:0}
+.note h4{margin-top:0}
+
+.panel{background:var(--surface);border:1px solid var(--rule);padding:1rem 1.1rem}
+.panel h4{margin-top:0}
+.panel ul,.panel ol{margin-bottom:0}
+.panel.blue-top{border-top:3px solid var(--blue)}
+.panel.red-top{border-top:3px solid var(--red)}
+.panel.gold-top{border-top:3px solid var(--gold)}
+.panel.green-top{border-top:3px solid var(--green)}
+
+.rungs{max-width:74ch;margin:.3rem 0 0;display:grid;grid-template-columns:9.5rem 1fr;gap:0 1rem}
+.rungs dt{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;color:var(--red);padding-top:.2rem}
+.rungs dd{margin:0 0 .5rem;font-size:.93rem}
+@media (max-width:560px){
+  .rungs{grid-template-columns:1fr;gap:0}
+  .rungs dt{padding-top:.4rem}
+}
+
+.timeline{list-style:none;padding:0;margin:1rem 0 1.4rem;max-width:74ch}
+.timeline li{display:grid;grid-template-columns:8.2rem 1fr;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--rule);margin:0}
+.timeline li:last-child{border-bottom:0}
+.timeline .yr{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);font-variant-numeric:tabular-nums}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:.1rem}}
+
+.qbank{counter-reset:q;list-style:none;padding:0;max-width:74ch}
+.qbank li{counter-increment:q;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.qbank li::before{content:counter(q,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.qbank li:last-child{border-bottom:0}
+
+.dbank{counter-reset:d;list-style:none;padding:0;max-width:74ch}
+.dbank li{counter-increment:d;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.dbank li::before{content:counter(d,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.dbank li:last-child{border-bottom:0}
+
+.ladder{counter-reset:s;list-style:none;padding:0;margin:1.3rem 0 1.5rem;max-width:74ch}
+.ladder li{counter-increment:s;position:relative;margin:0;padding:.1rem 0 1.05rem 2.9rem;border-left:2px solid var(--rule)}
+.ladder li::before{content:counter(s);position:absolute;left:-1.05rem;top:0;width:2rem;height:2rem;display:grid;place-items:center;border-radius:50%;background:var(--surface);border:2px solid var(--rule-strong);font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.85rem;color:var(--red)}
+.ladder li:last-child{border-left-color:transparent;padding-bottom:0}
+.ladder .rung{display:block;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.05rem;color:var(--ink);line-height:2rem}
+.ladder p{margin:.15rem 0 .4rem;font-size:.95rem}
+.ladder p:last-child{margin-bottom:0}
+.ladder .say{color:var(--ink-soft)}
+
+.grid{display:grid;gap:1rem}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
+
+.card{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--red);padding:1rem 1.1rem}
+.card h4{margin:0 0 .45rem;font-size:1rem}
+.card .name{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.2rem}
+.card .role{font-size:.9rem;color:var(--ink-soft)}
+.card .since{font-size:.78rem;color:var(--green);font-weight:600;margin-top:.45rem}
+
+.term{max-width:74ch;margin:0 0 1.2rem}
+.term dt{font-weight:600;margin-top:.8rem}
+.term dd{margin:.15rem 0 0;color:var(--ink-soft)}
+
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:.1rem .45rem;border:1px solid var(--rule-strong);color:var(--ink-soft);margin-right:.35rem;vertical-align:middle}
+.tag.fact{border-color:var(--green);color:var(--green)}
+.tag.interp{border-color:var(--gold);color:var(--gold)}
+.tag.disputed{border-color:var(--red);color:var(--red)}
+.tag.verify{border-color:var(--blue);color:var(--blue)}
+.spaced{margin-top:.6rem}
+
+footer{border-top:3px double var(--rule-strong);margin-top:2rem;padding-top:1.4rem;color:var(--ink-soft);font-size:.9rem;max-width:74ch}
+footer a{color:var(--blue)}
+
+/* ---------- home button: fixed, links back to the collection homepage ---------- */
+.home-btn{position:fixed;top:16px;left:16px;z-index:60;display:inline-flex;align-items:center;gap:.4rem;background:#14202B;color:#F1F2EC;border:1px solid rgba(241,242,236,.25);padding:.45rem .85rem;border-radius:999px;font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.82rem;font-weight:600;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.3);transition:background .15s ease,transform .15s ease}
+.home-btn:hover,.home-btn:focus-visible{background:#BF2F26;transform:translateY(-1px)}
+.home-btn svg{width:14px;height:14px;flex:none}
+@media print{.home-btn{display:none}}
+
+@media print{
+  .hero{background:none;color:#000;padding-bottom:1rem}
+  .hero-sub,.stamp,.motto-en{color:#333}
+  .flagstrip,.toc-mobile{display:none}
+  .shell{display:block;padding:0}
+  section{page-break-inside:auto;margin-bottom:1.8rem}
+  h2,h3{page-break-after:avoid}
+  .panel,.edge,.note,.tablewrap,figure{page-break-inside:avoid}
+  .part-head{page-break-before:always}
+  body{font-size:10.5pt;background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+
+<a class="home-btn" href="../index.html" aria-label="Back to Handbooks homepage" title="Back to Handbooks homepage">
+  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
+  <span>Home</span>
+</a>
+
+<header class="hero">
+  <div class="flagstrip" aria-hidden="true">
+    <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f5"></span><span class="f6"></span><span class="f7"></span><span class="f8"></span>
+  </div>
+  <div class="hero-inner">
+    <p class="kicker">Empires · trade · industry · slavery · nationalism · world wars · independence · Cold War · globalisation · the order today</p>
+    <h1>The Making of the Modern World, 1500-2025</h1>
+    <p class="hero-sub">Five centuries compressed into the developments that actually shaped the present: how oceanic trade linked the continents, how industry and the nation-state gave a small part of Europe two centuries of advantage, how that advantage was lost between 1914 and 1960, how the 1945 institutions and the Cold War organised the world that followed, and how economic weight has moved back towards Asia since 1978. Structure and causation first; contested figures and interpretations are tagged rather than asserted.</p>
+    <p class="stamp">
+      <span>Span <b>c. 1500 - 2025</b></span>
+      <span>Eras <b>5</b></span>
+      <span>Hinge years <b>1492 · 1789 · 1870 · 1945 · 1991</b></span>
+      <span>Sections <b>22</b></span>
+      <span>Reading time <b>2-3 hrs</b></span>
+    </p>
+  </div>
+</header>
+
+<div class="shell">
+
+<details class="toc-mobile" open>
+  <summary>Contents</summary>
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li class="part">Part I · The first global age, 1500-1800</li>
+      <li><a href="#snapshot">Snapshot: five centuries in outline</a></li>
+      <li><a href="#world-1500">The world in 1500</a></li>
+      <li><a href="#oceans-trade">Oceans, empires and the first global economy</a></li>
+      <li><a href="#slavery">Slavery, plantations and abolition</a></li>
+
+      <li class="part">Part II · Revolution, industry and empire, 1750-1914</li>
+      <li><a href="#revolutions">Revolutions, nationalism and the nation-state</a></li>
+      <li><a href="#industrial">The Industrial Revolution and the great divergence</a></li>
+      <li><a href="#isms">Capitalism, socialism and the communist idea</a></li>
+      <li><a href="#imperialism">High imperialism and the fall of the land empires</a></li>
+
+      <li class="part">Part III · Collapse and reconstruction, 1914-1991</li>
+      <li><a href="#wars">The thirty-one years' crisis, 1914-1945</a></li>
+      <li><a href="#institutions">Building the post-1945 order</a></li>
+      <li><a href="#decolonisation">Decolonisation and the new states</a></li>
+      <li><a href="#coldwar">The Cold War, 1947-1991</a></li>
+      <li><a href="#communism">Communism in practice, and why it collapsed</a></li>
+      <li><a href="#capitalism-modern">Post-war capitalism: boom, crisis and the market turn</a></li>
+
+      <li class="part">Part IV · The world we have, 1991-2025</li>
+      <li><a href="#globalisation">Globalisation and the American moment</a></li>
+      <li><a href="#asia-rise">The return of Asia: China and India</a></li>
+      <li><a href="#order-today">The present order and its stresses</a></li>
+
+      <li class="part">Knowledge toolkit</li>
+      <li><a href="#perspectives">Perspectives, controversies and facts</a></li>
+      <li><a href="#scenarios-options">Counterfactuals, lessons and India's options</a></li>
+      <li><a href="#answer-framework">Answer framework and worked example</a></li>
+      <li><a href="#qbank">Practice bank: questions and motions</a></li>
+      <li><a href="#revision">Chronology, glossary and revision sheet</a></li>
+    </ol>
+  </nav>
+</details>
+
+<main>
+
+<div class="part-head"><p>Part I · The first global age, 1500-1800</p><h2>How the continents were joined into one economy</h2></div>
+
+<section id="snapshot">
+  <h2>Snapshot: five centuries in outline</h2><hr class="sec-rule">
+  <p class="lede">The modern world was made by four linked processes: the joining of the continents into a single economy after 1500, the industrialisation of a small part of Europe after 1750, the spread of the nation-state as the only legitimate political unit, and the organised ideological contest over how economies should be owned. European dominance was the result of these processes, not their cause; it peaked around 1914 and was effectively over by 1960.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Five eras at a glance</caption>
+      <thead><tr><th>Era</th><th>Dates</th><th>What organised it</th><th>Who led</th></tr></thead>
+      <tbody>
+        <tr><td>First global age</td><td>c. 1500-1750</td><td>Ocean routes, silver, spices, enslaved labour; land empires still the largest states</td><td>Spain and Portugal, then the Dutch and British; Ming/Qing China, Mughal India, Ottoman Turkey</td></tr>
+        <tr><td>Revolution and industry</td><td>1750-1870</td><td>Steam, factories, popular sovereignty, abolition, nation-building</td><td>Britain, then France and the United States</td></tr>
+        <tr><td>High imperialism</td><td>1870-1914</td><td>Industrial empire, global markets and finance, mass nationalism</td><td>Britain, France, Germany, United States, Japan</td></tr>
+        <tr><td>Crisis and reconstruction</td><td>1914-1991</td><td>Two world wars, depression, decolonisation, the Cold War, new global institutions</td><td>United States and Soviet Union</td></tr>
+        <tr><td>Globalisation and after</td><td>1991-2025</td><td>Market integration, then its partial reversal; technology competition</td><td>United States, with China closing and India rising</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge blue">
+    <span class="edge-h">How to read this handbook</span>
+    <p>This is a map, not an encyclopaedia: dates and names are kept to those that change the story. Contested claims carry tags (<span class="tag fact">Established</span> <span class="tag interp">Interpretation</span> <span class="tag disputed">Disputed</span> <span class="tag verify">Re-verify</span>). Long-run economic figures before the twentieth century are reconstructions with wide error bars; use them for orders of magnitude only. Related handbooks: no. 38 (First World War), 39 (Second World War), 5 (Indian independence), 37 (international institutions).</p>
+  </div>
+  <div class="note">
+    <h4>Four questions that organise everything</h4>
+    <ul>
+      <li><strong>Why did Europe, not Asia, dominate after 1750?</strong> Not because it was richer in 1500, but because industrialisation, state competition and access to colonial resources compounded a small lead into a large one.</li>
+      <li><strong>Why did that dominance end so fast?</strong> Because two European civil wars, 1914-18 and 1939-45, destroyed the capital, manpower and legitimacy that empire required.</li>
+      <li><strong>What replaced it?</strong> A rules-and-institutions order designed by the United States in 1944-49, run inside a bipolar military confrontation until 1991.</li>
+      <li><strong>Where is it going?</strong> Towards a world where economic weight is distributed roughly as it was in 1750, but inside institutions written in 1945. That mismatch is the core of today's politics.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="world-1500">
+  <h2>The world in 1500</h2><hr class="sec-rule">
+  <p>In 1500 Europe was a peninsula on the edge of a world whose centres of wealth and population lay in Asia. China under the Ming and India under the emerging Mughals together produced perhaps half of world output; the Ottoman Empire sat astride the land routes between them and the Mediterranean. Europe's advantages were not size or wealth but ocean-going ships, cheap cannon, competitive state-building and, crucially, a motive: the Ottoman and Venetian hold on the eastern trade made an Atlantic route attractive.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>The principal powers around 1500</caption>
+      <thead><tr><th>Power</th><th>Core</th><th>Basis of strength</th></tr></thead>
+      <tbody>
+        <tr><td>Ming China</td><td>East Asia</td><td>Largest economy and bureaucracy; withdrew from state-sponsored ocean voyaging after 1433</td></tr>
+        <tr><td>Mughal India (from 1526)</td><td>North India</td><td>Agrarian wealth, textile manufacturing, revenue administration</td></tr>
+        <tr><td>Ottoman Empire</td><td>Anatolia, Balkans, Arab lands</td><td>Constantinople taken 1453; control of land trade and the eastern Mediterranean</td></tr>
+        <tr><td>Safavid Persia</td><td>Iran</td><td>Silk trade; a Shia state between two Sunni empires</td></tr>
+        <tr><td>Spain and Portugal</td><td>Iberia</td><td>Navigation, gunpowder ships, crusading-era expansion outward</td></tr>
+        <tr><td>Aztec and Inca states</td><td>Mesoamerica, Andes</td><td>Dense tributary empires; destroyed within a generation of contact</td></tr>
+        <tr><td>Songhai</td><td>West Africa</td><td>Trans-Saharan gold and salt trade</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge gold">
+    <span class="edge-h">The point that matters</span>
+    <p>Nothing about 1500 predicted European dominance. The question historians argue over is not why Europe was ahead — it was not — but why a modest lead in shipping, guns and state competition turned into an overwhelming one three centuries later. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<section id="oceans-trade">
+  <h2>Oceans, empires and the first global economy</h2><hr class="sec-rule">
+  <p>Between 1492 and 1571 the world's trading systems were stitched into one. Columbus reached the Caribbean in 1492, Vasco da Gama reached Calicut in 1498, and Magellan's expedition circumnavigated the globe in 1519-22. The decisive year is arguably 1571, when the Manila galleon began carrying American silver directly to China in exchange for silk and porcelain, closing the loop. For the first time a harvest failure or a currency change on one continent could move prices on another.</p>
+  <ul class="timeline">
+    <li><span class="yr">1492</span><span>Columbus reaches the Caribbean; Spain begins conquest of the Americas.</span></li>
+    <li><span class="yr">1498</span><span>Da Gama reaches India; Portuguese armed trading posts from Goa to Malacca.</span></li>
+    <li><span class="yr">1519-22</span><span>Magellan-Elcano circumnavigation proves a single connected ocean.</span></li>
+    <li><span class="yr">1571</span><span>Manila galleon links American silver to Chinese manufactures.</span></li>
+    <li><span class="yr">1600 / 1602</span><span>English East India Company and Dutch VOC chartered: private companies with the power to wage war.</span></li>
+    <li><span class="yr">1757</span><span>Plassey: the EIC becomes a territorial power in Bengal, turning trade into rule.</span></li>
+  </ul>
+  <div class="grid two">
+    <div class="panel green-top">
+      <h4>The Columbian exchange</h4>
+      <ul>
+        <li><strong>To the Old World:</strong> potato, maize, cassava, tomato, chilli, tobacco, rubber, quinine. Potato and maize raised European and Chinese population ceilings substantially.</li>
+        <li><strong>To the Americas:</strong> wheat, rice, sugar cane, horses, cattle — and smallpox, measles and influenza.</li>
+        <li><strong>Demographic catastrophe:</strong> indigenous American populations fell by an estimated 50-90 per cent within a century, overwhelmingly from disease. <span class="tag disputed">Disputed</span></li>
+      </ul>
+    </div>
+    <div class="panel blue-top">
+      <h4>Mercantilism and the chartered company</h4>
+      <ul>
+        <li>States treated trade as zero-sum: maximise exports, hoard bullion, monopolise colonial commerce.</li>
+        <li>Chartered companies — the VOC, the EIC — held monopolies plus the right to raise armies, coin money and make treaties.</li>
+        <li>This blurred the line between commerce and conquest, and explains how a trading company ended up governing India. <span class="tag interp">Interpretation</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="edge">
+    <span class="edge-h">The silver loop</span>
+    <p>Roughly 150,000 tonnes of silver were mined in Spanish America, above all at Potosí, and a large share of it ended in China, where silver was the fiscal base. European traders had little else Asia wanted: for three centuries the Atlantic economy bought Asian goods with American metal. That dependency, not European manufacturing superiority, defined early modern trade. <span class="tag verify">Re-verify</span></p>
+  </div>
+</section>
+
+<section id="slavery">
+  <h2>Slavery, plantations and abolition</h2><hr class="sec-rule">
+  <p class="lede">The plantation complex of the Atlantic was the first mass-production system of the modern age, and it ran on forced labour. Roughly 12.5 million Africans were embarked on slave ships between the sixteenth century and the 1860s; about 10.7 million survived the crossing. <span class="tag fact">Established</span></p>
+  <div class="tablewrap">
+    <table>
+      <caption>The Atlantic slave trade in outline</caption>
+      <thead><tr><th>Dimension</th><th>Detail</th></tr></thead>
+      <tbody>
+        <tr><td>Scale and period</td><td>c. 12.5 million embarked, c. 10.7 million landed, roughly 1500-1866; peak in the eighteenth century</td></tr>
+        <tr><td>Destinations</td><td>Brazil c. 45 per cent, the Caribbean c. 40 per cent, Spanish mainland America c. 10 per cent, British North America c. 4 per cent <span class="tag verify">Re-verify</span></td></tr>
+        <tr><td>Commodities</td><td>Sugar first, then tobacco, coffee and — after mechanised spinning — raw cotton for Lancashire</td></tr>
+        <tr><td>The "triangle"</td><td>Manufactures to West Africa, captives to the Americas, plantation produce to Europe; a simplification, but it captures the circuit</td></tr>
+        <tr><td>Distinctive feature</td><td>Slavery existed in most pre-modern societies; the Atlantic system was unusual in being hereditary, racially defined, and tied to industrial-scale export production</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <h3>Abolition, and what replaced it</h3>
+  <ul class="timeline">
+    <li><span class="yr">1791-1804</span><span>Haitian Revolution: the only successful large-scale slave revolt, producing the second republic in the Americas.</span></li>
+    <li><span class="yr">1807 / 1833</span><span>Britain abolishes the slave trade, then slavery in most of its empire; the Royal Navy's West Africa Squadron enforces suppression.</span></li>
+    <li><span class="yr">1848</span><span>France abolishes slavery in its colonies for the second and final time.</span></li>
+    <li><span class="yr">1861-65</span><span>American Civil War; the Thirteenth Amendment ends slavery in the United States.</span></li>
+    <li><span class="yr">1888</span><span>Brazil's Lei Áurea: the last major abolition in the Americas.</span></li>
+    <li><span class="yr">1834-1917</span><span>Indian indentured emigration — roughly 1.3 million people to Mauritius, the Caribbean, Natal, Fiji and Malaya — supplies plantation labour after abolition.</span></li>
+  </ul>
+  <div class="note">
+    <h4>The argument about slavery and industry</h4>
+    <ul>
+      <li>Eric Williams (1944) argued that slave-trade and plantation profits financed British industrialisation, and that abolition came when slavery ceased to be economically central. <span class="tag disputed">Disputed</span></li>
+      <li>Critics reply that the quantitative contribution to British capital formation was modest, and that abolition was driven substantially by religious and popular campaigning against economic interest.</li>
+      <li>A defensible middle position: the Atlantic system was not the sole cause of industrialisation, but it supplied cheap raw cotton, protected markets and commercial institutions that mattered at the margin. <span class="tag interp">Interpretation</span></li>
+    </ul>
+  </div>
+</section>
+
+<div class="part-head"><p>Part II · Revolution, industry and empire, 1750-1914</p><h2>Where the modern state and the modern economy came from</h2></div>
+
+<section id="revolutions">
+  <h2>Revolutions, nationalism and the nation-state</h2><hr class="sec-rule">
+  <p>Between 1776 and 1871 the basic political unit of the world changed from the dynastic realm, where people were subjects of a ruler, to the nation-state, where legitimacy came from a people. The Enlightenment supplied the argument — sovereignty rests with the governed — and a chain of revolutions turned it into institutions: written constitutions, citizenship, conscript armies, national education and national markets.</p>
+  <ul class="timeline">
+    <li><span class="yr">1776-83</span><span>American Revolution: the first colonial state to break away and write a republican constitution.</span></li>
+    <li><span class="yr">1789-99</span><span>French Revolution: the Declaration of the Rights of Man, the end of legal privilege, the levée en masse, and the Terror.</span></li>
+    <li><span class="yr">1804-15</span><span>Napoleon spreads the Civil Code and the administrative state across Europe by conquest; the Congress of Vienna (1815) restores monarchy but not the old order.</span></li>
+    <li><span class="yr">1810-25</span><span>Latin American independence under Bolívar and San Martín dissolves the Spanish American empire.</span></li>
+    <li><span class="yr">1848</span><span>Revolutions across Europe: liberal and national demands defeated almost everywhere, but their programme becomes the agenda of the next generation.</span></li>
+    <li><span class="yr">1861-71</span><span>Italian and German unification; the United States settles its own union question by civil war; Japan's Meiji Restoration (1868) begins defensive modernisation.</span></li>
+  </ul>
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>Two kinds of nationalism</h4>
+      <p><strong>Civic:</strong> the nation as everyone who accepts a common constitution and citizenship — the French and American template. <strong>Ethnic:</strong> the nation as a people defined by language, descent or religion — the template that drove German and Italian unification, and then the break-up of the Habsburg and Ottoman empires. Most real nationalisms mix the two, and which element dominates largely determines how a state treats its minorities. <span class="tag interp">Interpretation</span></p>
+    </div>
+    <div class="panel red-top">
+      <h4>Why it matters for the rest of the story</h4>
+      <p>Nationalism built states in Europe, pulled empires apart in the Balkans, supplied the mobilising energy of 1914, and was then taken up by colonised peoples who used the coloniser's own principle — self-determination — against him. Anti-colonial nationalism from Dublin to Delhi is the same idea turned around.</p>
+    </div>
+  </div>
+</section>
+
+<section id="industrial">
+  <h2>The Industrial Revolution and the great divergence</h2><hr class="sec-rule">
+  <p class="lede">Industrialisation is the single largest break in human economic history: for the first time output per person grew faster than population, continuously, for generations. It began in Britain around 1760-80 and it is the proximate reason a handful of European states could dominate the rest of the world by 1900.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Phases of industrialisation</caption>
+      <thead><tr><th>Phase</th><th>Dates</th><th>Core technologies</th><th>Leaders</th></tr></thead>
+      <tbody>
+        <tr><td>First</td><td>c. 1760-1840</td><td>Cotton textiles, steam engine, coke iron, canals and then railways</td><td>Britain</td></tr>
+        <tr><td>Second</td><td>c. 1870-1914</td><td>Steel, chemicals, electricity, internal combustion, telegraph, mass production</td><td>Germany and the United States overtake Britain</td></tr>
+        <tr><td>Third</td><td>c. 1950-2000</td><td>Electronics, computing, containerisation, automation</td><td>United States, Japan, Western Europe</td></tr>
+        <tr><td>Fourth (claimed)</td><td>2000-</td><td>Digital networks, renewables, biotechnology, artificial intelligence</td><td>United States and China <span class="tag interp">Interpretation</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <h3>Why Britain first</h3>
+  <ul>
+    <li><strong>Cheap coal beside water transport</strong>, which made steam power economic earlier than anywhere else.</li>
+    <li><strong>High wages and cheap energy</strong>, which made labour-saving machinery worth inventing.</li>
+    <li><strong>Agricultural productivity</strong> that released labour to towns.</li>
+    <li><strong>Institutions:</strong> secure property, patents, a national market without internal tariffs, and a state that could borrow cheaply.</li>
+    <li><strong>Empire and the Atlantic economy:</strong> raw cotton, captive markets and commercial finance. Weight contested. <span class="tag disputed">Disputed</span></li>
+  </ul>
+  <h3>The great divergence</h3>
+  <p>The consequence was a gap between industrial and non-industrial economies that had not existed before. On Bairoch's and Maddison's widely used reconstructions, India and China together accounted for roughly half of world manufacturing output in 1750 and for a small fraction of it by 1900, while Britain's share rose steeply. India's position reflected both the collapse of its handloom export trade in the face of machine-made cloth and the tariff and revenue policy of colonial rule. Both the figures and the weight given to each cause are argued over. <span class="tag disputed">Disputed</span></p>
+  <div class="edge">
+    <span class="edge-h">What industrialisation changed besides output</span>
+    <p>Urbanisation and a working class; the factory clock and wage labour; mass literacy because industry needed it; the modern army, since railways and steel decided wars; and a permanent connection between economic capacity and military power that still determines which states matter.</p>
+  </div>
+</section>
+
+<section id="isms">
+  <h2>Capitalism, socialism and the communist idea</h2><hr class="sec-rule">
+  <p>Industrial society produced both a new economic system and an organised argument against it. Capitalism — private ownership of productive assets, wage labour, competitive markets, profit reinvested as capital — was described and defended by Adam Smith in <em>The Wealth of Nations</em> (1776). Within two generations its costs in the industrial towns had produced socialism, and by 1848 Marx and Engels had turned that into a theory of history in which class conflict drives change and capitalism ends in revolution.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>The competing systems, compared</caption>
+      <thead><tr><th>System</th><th>Who owns production</th><th>Political form claimed</th><th>Where tried</th></tr></thead>
+      <tbody>
+        <tr><td>Liberal capitalism</td><td>Private individuals and firms</td><td>Constitutional, usually electoral</td><td>Britain, United States, Western Europe, Japan</td></tr>
+        <tr><td>Social democracy</td><td>Mostly private, heavily taxed and regulated; public services and insurance</td><td>Electoral democracy</td><td>Scandinavia, post-war Western Europe; Bismarck's Germany pioneered social insurance in the 1880s</td></tr>
+        <tr><td>Communism (Marxist-Leninist)</td><td>The state, on behalf of the working class</td><td>Single-party rule, described as a transitional dictatorship</td><td>USSR from 1917, China from 1949, Eastern Europe, Cuba, Vietnam, North Korea</td></tr>
+        <tr><td>Fascism</td><td>Private, but subordinated to the state and the nation</td><td>One-party dictatorship, leader principle</td><td>Italy from 1922, Germany from 1933</td></tr>
+        <tr><td>Mixed / developmental state</td><td>Mixed; state directs investment and credit</td><td>Varies</td><td>Japan and South Korea after 1950, India 1950-91, China after 1978</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">
+    <h4>Three distinctions worth keeping straight</h4>
+    <ul>
+      <li><strong>Socialism</strong> is a family of positions about social ownership and equality; <strong>communism</strong> in practice means the Marxist-Leninist one-party state; <strong>social democracy</strong> accepts markets and seeks to redistribute their output through democratic politics.</li>
+      <li>Marx predicted revolution in the most industrialised countries. It happened in agrarian Russia and China instead — the central empirical problem for his theory. <span class="tag interp">Interpretation</span></li>
+      <li>Fascism defined itself against both liberalism and communism, which is why "left" and "right" labels explain less about the 1930s than questions about who owns what and who may rule.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="imperialism">
+  <h2>High imperialism and the fall of the land empires</h2><hr class="sec-rule">
+  <p>Between 1870 and 1914 industrial states partitioned most of the world that was not already claimed. The Berlin Conference of 1884-85 set the rules for the scramble for Africa; by 1914 only Ethiopia and Liberia remained independent on the continent. At the same time the great land empires that had dominated Asia for centuries — Mughal, Ottoman, Qing — either fell or were reduced to dependence.</p>
+  <ul class="timeline">
+    <li><span class="yr">1839-42, 1856-60</span><span>Opium Wars force China open; the beginning of what Chinese historiography calls the century of humiliation.</span></li>
+    <li><span class="yr">1857-58</span><span>The Indian uprising ends Company rule and the Mughal title; India passes to the British Crown.</span></li>
+    <li><span class="yr">1869</span><span>Suez Canal opens, shortening Europe's route to Asia and making Egypt strategically decisive.</span></li>
+    <li><span class="yr">1884-85</span><span>Berlin Conference regulates the partition of Africa among European powers.</span></li>
+    <li><span class="yr">1895 / 1905</span><span>Japan defeats China, then Russia — the first modern defeat of a European power by an Asian state.</span></li>
+    <li><span class="yr">1898</span><span>Spanish-American War: Spain's remaining empire passes largely to the United States.</span></li>
+    <li><span class="yr">1911-12 / 1922</span><span>The Qing dynasty falls; a decade later the Ottoman sultanate is abolished and Turkey becomes a republic.</span></li>
+  </ul>
+  <div class="grid two">
+    <div class="panel gold-top">
+      <h4>Why they did it</h4>
+      <ul>
+        <li><strong>Economic:</strong> raw materials, protected markets and outlets for investment — the Hobson-Lenin explanation.</li>
+        <li><strong>Strategic:</strong> coaling stations, canals and buffer zones; much of Africa was taken to deny it to a rival rather than for its own value. <span class="tag interp">Interpretation</span></li>
+        <li><strong>Technological:</strong> steamships, quinine, the telegraph and the machine gun made conquest cheap.</li>
+        <li><strong>Ideological:</strong> the "civilising mission" and racial theory supplied the justification.</li>
+      </ul>
+    </div>
+    <div class="panel red-top">
+      <h4>What it did to the colonised</h4>
+      <ul>
+        <li>Economies reoriented to export single commodities, with manufacturing displaced by imports.</li>
+        <li>Borders drawn for administrative convenience, which later states inherited.</li>
+        <li>Recurrent famines under export-oriented and revenue-first policy, in India and elsewhere.</li>
+        <li>The "drain of wealth" argument advanced by Dadabhai Naoroji and R. C. Dutt, against claims that railways, law and administration were compensating gains. Both the accounting and the counterfactual are contested. <span class="tag disputed">Disputed</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="part-head"><p>Part III · Collapse and reconstruction, 1914-1991</p><h2>How Europe lost the world and two superpowers divided it</h2></div>
+
+<section id="wars">
+  <h2>The thirty-one years' crisis, 1914-1945</h2><hr class="sec-rule">
+  <p class="lede">The two world wars and the Depression between them are best read as one connected crisis: the first war destroyed the political and economic order of the nineteenth century, the settlement failed to replace it, and the second war finished what the first had begun. Handbooks 38 and 39 cover each war in detail; what follows is only what the five-century story requires.</p>
+  <ul class="timeline">
+    <li><span class="yr">1914-18</span><span>First World War: four empires — German, Austro-Hungarian, Russian and Ottoman — cease to exist.</span></li>
+    <li><span class="yr">1917</span><span>Russian Revolution brings the first communist state to power, creating a permanent ideological division in world politics.</span></li>
+    <li><span class="yr">1919-20</span><span>Versailles and the League of Nations: a settlement without American participation or enforcement power.</span></li>
+    <li><span class="yr">1929-33</span><span>The Great Depression collapses world trade, discredits liberal governments and gives radical movements a mass base.</span></li>
+    <li><span class="yr">1931-39</span><span>Japan in Manchuria, Italy in Abyssinia, Germany in the Rhineland, Austria and Czechoslovakia: aggression goes unpunished.</span></li>
+    <li><span class="yr">1939-45</span><span>Second World War; roughly 70-85 million dead, a majority of them civilians. <span class="tag disputed">Disputed</span></span></li>
+    <li><span class="yr">1945</span><span>Nuclear weapons used; the United Nations founded; Europe ceases to be the centre of world politics.</span></li>
+  </ul>
+  <div class="edge">
+    <span class="edge-h">What the crisis settled</span>
+    <p>Three things, permanently. European empires lost the money, manpower and moral claim needed to hold their colonies. The United States abandoned isolation and chose to build and underwrite an international order. And the Soviet Union emerged with an army in the centre of Europe and a competing model of modernity — which is the Cold War in one sentence.</p>
+  </div>
+</section>
+
+<section id="institutions">
+  <h2>Building the post-1945 order</h2><hr class="sec-rule">
+  <p>The institutions of 1944-49 were designed as explicit corrections of the failures of 1919-39. The League had lacked enforcement, so the United Nations gave the five principal victors permanent seats and a veto. The 1930s had been ruined by competitive devaluation and tariff walls, so Bretton Woods created fixed exchange rates, the IMF and the World Bank. The Holocaust and total war produced a body of codified law on genocide, human rights and the conduct of hostilities.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>The architecture, and what each piece was for</caption>
+      <thead><tr><th>Institution</th><th>Year</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Bretton Woods: IMF and World Bank</td><td>1944</td><td>Exchange-rate stability and reconstruction finance, to prevent a repeat of the 1930s</td></tr>
+        <tr><td>United Nations</td><td>1945</td><td>Collective security with enforcement vested in a Security Council of the victors</td></tr>
+        <tr><td>GATT, later the WTO</td><td>1947 / 1995</td><td>Progressive tariff reduction and binding trade rules</td></tr>
+        <tr><td>Universal Declaration of Human Rights; Genocide Convention</td><td>1948</td><td>Individual rights and criminal liability placed above state sovereignty in principle</td></tr>
+        <tr><td>Geneva Conventions</td><td>1949</td><td>Protection of civilians, prisoners and the wounded in war</td></tr>
+        <tr><td>NATO; Warsaw Pact</td><td>1949 / 1955</td><td>The two military blocs of the Cold War</td></tr>
+        <tr><td>European Coal and Steel Community, then the EEC and EU</td><td>1951 / 1957 / 1993</td><td>To make another Franco-German war materially impossible, then to integrate a continent</td></tr>
+        <tr><td>Non-Aligned Movement</td><td>1961</td><td>A third position for newly independent states, co-founded by India, Egypt, Yugoslavia, Indonesia and Ghana</td></tr>
+        <tr><td>G7, G20, BRICS</td><td>1975 / 1999 / 2009</td><td>Successive attempts to widen economic coordination beyond the original victors</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge blue">
+    <span class="edge-h">The 1945 bargain, and why it is contested</span>
+    <p>Permanent seats and vetoes bought the great powers' participation at the price of paralysis whenever they disagree. The membership reflects the distribution of power in 1945, not 2025: no permanent seat for India, Africa, Latin America or Japan. Reform proposals have been debated since the 1990s without agreement, because enlarging the council requires the consent of those whose relative weight it would reduce. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<section id="decolonisation">
+  <h2>Decolonisation and the new states</h2><hr class="sec-rule">
+  <p class="lede">In 1945 roughly a third of the world's people lived in territories governed by others. By 1975 almost all of them lived in sovereign states. The UN had 51 members at its founding and 193 today; most of that growth is decolonisation.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>The waves</caption>
+      <thead><tr><th>Wave</th><th>Dates</th><th>Principal events</th></tr></thead>
+      <tbody>
+        <tr><td>Asia</td><td>1945-54</td><td>Indonesia proclaims independence 1945 (recognised 1949); Philippines 1946; India and Pakistan 1947; Burma and Ceylon 1948; French defeat at Dien Bien Phu 1954</td></tr>
+        <tr><td>West Asia and North Africa</td><td>1946-62</td><td>Mandates end; Israel founded 1948 and the Arab-Israeli conflict begins; Suez crisis 1956; Algerian war 1954-62</td></tr>
+        <tr><td>Sub-Saharan Africa</td><td>1957-68</td><td>Ghana 1957 under Nkrumah; the "Year of Africa" 1960 with seventeen new states; Kenya 1963</td></tr>
+        <tr><td>Late and contested cases</td><td>1974-94</td><td>Portuguese Africa 1974-75 after the Carnation Revolution; Zimbabwe 1980; Namibia 1990; the end of apartheid in South Africa 1994</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="grid two">
+    <div class="panel green-top">
+      <h4>Why it happened when it did</h4>
+      <ul>
+        <li>Europe was bankrupt and exhausted after 1945; holding colonies had become unaffordable.</li>
+        <li>Mass nationalist parties with organised leaderships had been built in the interwar decades.</li>
+        <li>Japan's victories in 1942 had destroyed the assumption that European rule was permanent.</li>
+        <li>Both superpowers opposed old-style colonialism, for different reasons; the Atlantic Charter's language of self-determination was used against its authors.</li>
+      </ul>
+    </div>
+    <div class="panel gold-top">
+      <h4>What the new states inherited</h4>
+      <ul>
+        <li>Borders drawn by outsiders, cutting across ethnic and linguistic lines.</li>
+        <li>Economies specialised in one or two export commodities.</li>
+        <li>Partition violence and refugee movements in India, Palestine, Cyprus and elsewhere.</li>
+        <li>Weak institutions, which in many states produced one-party rule or military government within a decade. <span class="tag interp">Interpretation</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="tablewrap">
+    <table>
+      <caption>Leaders who defined the transition</caption>
+      <thead><tr><th>Leader</th><th>Country</th><th>Significance</th></tr></thead>
+      <tbody>
+        <tr><td>M. K. Gandhi</td><td>India</td><td>Mass non-violent civil disobedience as a method other movements adopted</td></tr>
+        <tr><td>Jawaharlal Nehru</td><td>India</td><td>First prime minister; planned development, non-alignment, parliamentary continuity</td></tr>
+        <tr><td>Muhammad Ali Jinnah</td><td>Pakistan</td><td>Led the demand that produced partition and a separate state in 1947</td></tr>
+        <tr><td>Sukarno</td><td>Indonesia</td><td>Independence leader; host of the Bandung Conference, 1955</td></tr>
+        <tr><td>Ho Chi Minh</td><td>Vietnam</td><td>Anti-colonial and communist leadership against France, then the United States</td></tr>
+        <tr><td>Gamal Abdel Nasser</td><td>Egypt</td><td>Nationalised the Suez Canal in 1956; Arab nationalism and non-alignment</td></tr>
+        <tr><td>Kwame Nkrumah</td><td>Ghana</td><td>First sub-Saharan leader to independence; pan-Africanism</td></tr>
+        <tr><td>Nelson Mandela</td><td>South Africa</td><td>Ended apartheid by negotiated transition rather than civil war, 1990-94</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="coldwar">
+  <h2>The Cold War, 1947-1991</h2><hr class="sec-rule">
+  <p>A global confrontation between the United States and the Soviet Union that never became direct war between them, because nuclear weapons made that unaffordable. It was fought instead through alliances, proxy wars in the decolonising world, economic blocs, intelligence services, ideological competition and a technology race. Its structure — two armed camps and a large non-aligned remainder — organised almost every regional conflict for forty years.</p>
+  <ul class="timeline">
+    <li><span class="yr">1947-49</span><span>Truman Doctrine and Marshall Plan; Berlin blockade and airlift; NATO founded; the Soviet bomb; the Chinese Communist victory.</span></li>
+    <li><span class="yr">1950-53</span><span>Korean War: the first hot proxy conflict, ending in a stalemate still unresolved.</span></li>
+    <li><span class="yr">1955-62</span><span>Warsaw Pact; Hungary and Suez in 1956; Sputnik 1957; Berlin Wall 1961; the Cuban missile crisis of 1962 brings the closest approach to nuclear war.</span></li>
+    <li><span class="yr">1963-79</span><span>Détente: the Partial Test Ban 1963, the NPT 1968, SALT I 1972, Nixon's opening to China 1972, the Helsinki Accords 1975 — alongside Vietnam, which the United States left in 1973-75.</span></li>
+    <li><span class="yr">1979-85</span><span>Second Cold War: the Soviet invasion of Afghanistan, the Iranian revolution, Euromissiles, and a sharp American military build-up.</span></li>
+    <li><span class="yr">1985-91</span><span>Gorbachev's glasnost and perestroika; the revolutions of 1989 and the fall of the Berlin Wall; German reunification 1990; the Soviet Union dissolves in December 1991.</span></li>
+  </ul>
+  <div class="note">
+    <h4>How it actually worked</h4>
+    <ul>
+      <li><strong>Nuclear deterrence.</strong> Mutually assured destruction made general war irrational and pushed competition into the periphery.</li>
+      <li><strong>Proxy wars.</strong> Korea, Vietnam, Angola, the Horn of Africa, Central America and Afghanistan were local conflicts fought with superpower money and weapons.</li>
+      <li><strong>Blocs and economics.</strong> NATO and the Marshall Plan against the Warsaw Pact and Comecon; two separate trading systems.</li>
+      <li><strong>The non-aligned.</strong> Bandung 1955 and the Non-Aligned Movement from 1961 gave new states room to bargain with both sides rather than join either.</li>
+    </ul>
+  </div>
+  <div class="edge gold">
+    <span class="edge-h">Why it ended — four explanations in contention</span>
+    <p>Soviet economic failure and the cost of matching American military spending; Western pressure and the arms build-up of the early 1980s; Gorbachev's own decisions, above all the refusal to use force in Eastern Europe in 1989; and societal pressure from within the bloc, from Solidarity in Poland to the Helsinki human-rights networks. Most accounts combine them; the disagreement is over which was decisive. <span class="tag disputed">Disputed</span></p>
+  </div>
+</section>
+
+<section id="communism">
+  <h2>Communism in practice, and why it collapsed</h2><hr class="sec-rule">
+  <p>Communist states shared a model: a single party holding a monopoly of political power, state ownership of industry, collectivised or state-directed agriculture, and central planning of output targets. It delivered rapid heavy industrialisation and large gains in literacy and basic health from a low base, at the cost of political freedom, consumer welfare and, in several cases, mass death from forced collectivisation and famine.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>The two central cases</caption>
+      <thead><tr><th>Phase</th><th>Soviet Union, 1917-91</th><th>China, 1949-</th></tr></thead>
+      <tbody>
+        <tr><td>Seizure of power</td><td>Lenin and the Bolsheviks, October 1917; civil war to 1922</td><td>Mao's victory over the Nationalists, 1949; Chiang Kai-shek's government withdraws to Taiwan</td></tr>
+        <tr><td>Forced transformation</td><td>Stalin's five-year plans and collectivisation from 1928; famine in Ukraine and Kazakhstan; the purges of 1936-38</td><td>Great Leap Forward 1958-62, with a famine whose death toll is estimated in a wide range; Cultural Revolution 1966-76 <span class="tag disputed">Disputed</span></td></tr>
+        <tr><td>Peak and stagnation</td><td>Victory in 1945, Sputnik in 1957, then slowing growth and technological lag from the 1970s</td><td>Mao's death in 1976 leaves a poor, isolated economy</td></tr>
+        <tr><td>The turn</td><td>Gorbachev reforms politics first (glasnost); the system loses control and dissolves in 1991</td><td>Deng Xiaoping reforms the economy first from 1978 while keeping party control intact</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge">
+    <span class="edge-h">The comparison that explains the outcome</span>
+    <p>The Soviet Union liberalised politics while leaving a planned economy in place, and lost both. China liberalised the economy while leaving the political monopoly in place, and kept both. Whether the Chinese sequence is a general lesson or a product of specific conditions — a rural surplus population, overseas Chinese capital, and access to American markets — is one of the live arguments in political economy. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<section id="capitalism-modern">
+  <h2>Post-war capitalism: boom, crisis and the market turn</h2><hr class="sec-rule">
+  <p>Western capitalism after 1945 was not the capitalism of 1900. Fixed exchange rates, capital controls, strong trade unions, high taxation and expanded welfare states produced roughly three decades of historically exceptional growth — the "golden age" of 1945-73, which included the West German and Japanese recoveries. It broke down in the 1970s, and what replaced it set the terms of the next forty years.</p>
+  <ul class="timeline">
+    <li><span class="yr">1944-71</span><span>Bretton Woods system of fixed rates anchored to a dollar convertible into gold.</span></li>
+    <li><span class="yr">1971</span><span>Nixon suspends dollar-gold convertibility; currencies float, and global finance expands.</span></li>
+    <li><span class="yr">1973, 1979</span><span>Oil shocks following the Arab-Israeli war and the Iranian revolution; stagflation discredits the post-war policy consensus.</span></li>
+    <li><span class="yr">1978-91</span><span>The market turn: Deng's reforms in China 1978, Thatcher in Britain 1979, Reagan in the United States 1981, and India's liberalisation in 1991.</span></li>
+    <li><span class="yr">1995-2001</span><span>WTO founded; China's accession in 2001 brings several hundred million workers into the world trading system.</span></li>
+    <li><span class="yr">2008</span><span>Global financial crisis ends the period's confidence and begins the return of industrial policy and state intervention.</span></li>
+  </ul>
+  <div class="note">
+    <h4>Two trends that are often confused</h4>
+    <ul>
+      <li><strong>Between countries,</strong> inequality fell sharply after 1990, driven almost entirely by growth in China and later India; extreme poverty worldwide fell faster than in any previous period.</li>
+      <li><strong>Within countries,</strong> inequality rose in most rich economies and in China, concentrating gains at the top and stagnating middle incomes in parts of the West.</li>
+      <li>That combination — global convergence with domestic divergence — is the economic root of the political backlash against globalisation after 2008. <span class="tag interp">Interpretation</span></li>
+    </ul>
+  </div>
+</section>
+
+<div class="part-head"><p>Part IV · The world we have, 1991-2025</p><h2>One pole, then several</h2></div>
+
+<section id="globalisation">
+  <h2>Globalisation and the American moment</h2><hr class="sec-rule">
+  <p class="lede">For roughly two decades after 1991 the United States had no military or ideological peer, and the integration of markets, supply chains and information moved faster than at any time since before 1914. The period produced the largest reduction in absolute poverty in history and, simultaneously, the conditions for its own political reversal.</p>
+  <ul class="timeline">
+    <li><span class="yr">1991</span><span>The Soviet Union dissolves; the Gulf War is fought by a broad UN-authorised coalition; India begins liberalisation.</span></li>
+    <li><span class="yr">1992-99</span><span>Yugoslav wars and the Rwandan genocide expose the limits of collective action; NATO enlarges eastwards.</span></li>
+    <li><span class="yr">1995-2001</span><span>WTO established; the internet becomes commercial; China joins the WTO in 2001.</span></li>
+    <li><span class="yr">2001</span><span>The 11 September attacks turn American strategy towards counter-terrorism; wars in Afghanistan from 2001 and Iraq from 2003.</span></li>
+    <li><span class="yr">2008</span><span>Financial crisis in the United States and Europe; China's relative standing rises sharply; the G20 becomes the crisis forum.</span></li>
+  </ul>
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>What drove integration</h4>
+      <ul>
+        <li>Containerisation and cheap shipping; just-in-time manufacturing split production across borders.</li>
+        <li>Capital account liberalisation and floating currencies.</li>
+        <li>The internet, which cut the cost of coordinating work across time zones to near zero.</li>
+        <li>A single set of trade rules that most of the world had joined by 2001.</li>
+      </ul>
+    </div>
+    <div class="panel red-top">
+      <h4>What it cost, and where</h4>
+      <ul>
+        <li>Manufacturing employment fell in parts of the United States and Europe faster than new work appeared.</li>
+        <li>The 1997 Asian financial crisis showed how quickly capital flows could reverse on developing economies.</li>
+        <li>Supply chains optimised for cost proved fragile under shock, as 2020-22 demonstrated.</li>
+        <li>The assumption that economic integration would produce political convergence was not borne out. <span class="tag interp">Interpretation</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="asia-rise">
+  <h2>The return of Asia: China and India</h2><hr class="sec-rule">
+  <p>The most consequential development of the last half-century is the recovery of Asia's share of world output towards something like its pre-industrial level. Two states account for most of it, by different routes: China through state-directed export manufacturing, India through a later and more services-led opening.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Two trajectories</caption>
+      <thead><tr><th>Dimension</th><th>China</th><th>India</th></tr></thead>
+      <tbody>
+        <tr><td>Turning point</td><td>Deng Xiaoping's reforms from 1978; special economic zones; WTO accession 2001</td><td>Balance-of-payments crisis and liberalisation in 1991</td></tr>
+        <tr><td>Engine of growth</td><td>Manufacturing for export, very high investment rates, infrastructure</td><td>Services and software, domestic demand, a later manufacturing push</td></tr>
+        <tr><td>Political system</td><td>Single-party state; leadership under Xi Jinping since 2012</td><td>Federal parliamentary democracy with regular alternation of governments</td></tr>
+        <tr><td>External strategy</td><td>Belt and Road Initiative from 2013; naval expansion; institution-building such as the AIIB</td><td>Multi-alignment: partnerships with the United States, Russia, Europe, the Gulf and the Indo-Pacific, without a formal alliance</td></tr>
+        <tr><td>Principal constraints</td><td>Ageing population, debt in property and local government, export dependence meeting external restrictions</td><td>Manufacturing scale, employment generation, infrastructure and human-capital gaps</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Japan industrialised first in Asia and was the world's second-largest economy from 1968 to 2010; South Korea, Taiwan and Singapore followed with state-guided export models; ASEAN is now a major manufacturing region in its own right. India became the world's most populous country in 2023. Whether this amounts to an "Asian century" or to a more ordinary redistribution of economic weight is argued both ways, and depends heavily on assumptions about productivity, demography and conflict. <span class="tag interp">Interpretation</span></p>
+</section>
+
+<section id="order-today">
+  <h2>The present order and its stresses</h2><hr class="sec-rule">
+  <p class="lede">The world of 2025 has multipolar economics, a sharply bipolar technology competition, and institutions designed for 1945. None of those three is adjusting quickly to the others, which is why the period feels unsettled without being a return to the Cold War.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Six stresses, and what each tests</caption>
+      <thead><tr><th>Stress</th><th>What is happening</th><th>What it tests</th></tr></thead>
+      <tbody>
+        <tr><td>Great-power competition</td><td>US-China rivalry across trade, semiconductors, standards and the western Pacific</td><td>Whether competition can be managed without a systemic war, as it was not in 1914</td></tr>
+        <tr><td>War's return to Europe and West Asia</td><td>The invasion of Ukraine in 2022; conflict and escalation risk across West Asia</td><td>Whether territorial conquest can still be reversed or deterred by collective response</td></tr>
+        <tr><td>Institutional paralysis</td><td>Security Council deadlock; the WTO's dispute settlement system non-functional since 2019</td><td>Whether rules survive when the states that wrote them disagree</td></tr>
+        <tr><td>Fragmenting economics</td><td>Tariffs, export controls, friend-shoring, industrial subsidies, sanctions as routine policy</td><td>Whether efficiency or security will set the shape of supply chains</td></tr>
+        <tr><td>Technology as the new terrain</td><td>Semiconductors, artificial intelligence, space, undersea cables, cyber operations</td><td>Whether advantage concentrates in a few states, as industrial advantage did after 1800</td></tr>
+        <tr><td>Climate and demography</td><td>The Paris Agreement of 2015; energy transition; ageing in East Asia and Europe against young populations in Africa and South Asia</td><td>Whether collective problems can be solved by a system built for competitive states</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge blue">
+    <span class="edge-h">The structural summary</span>
+    <p>Economic weight is returning to roughly its distribution of 1750, but inside a political and institutional structure written in 1945 by the winners of a European war. Every major dispute of the present — Security Council reform, trade rules, climate finance, technology standards — is a version of the same mismatch. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<!-- ============ KNOWLEDGE TOOLKIT ============ -->
+<div class="part-head"><p>Knowledge toolkit</p><h2>Analysis, practice and revision</h2></div>
+
+<section id="perspectives">
+  <h2>Perspectives, controversies and facts</h2><hr class="sec-rule">
+  <p><span class="tag interp">Interpretation</span> <strong>Why did the West rise?</strong> One school credits institutions — property rights, representative government, competitive states, scientific method. A second credits geography and contingency: coal in the right place and the resources of the Americas, which Kenneth Pomeranz called the "ghost acreage" that let Britain escape a land constraint China could not. A third argues that the question itself is badly posed, since the divergence was late, narrow and reversible — as the last fifty years suggest. <span class="tag disputed">Disputed</span></p>
+  <p><span class="tag interp">Interpretation</span> <strong>Was colonial rule economically net negative?</strong> The drain and de-industrialisation case points to transferred revenue, destroyed handloom exports, famines and tariff policy written for the metropole. The opposing case cites railways, irrigation, legal and administrative systems and integration into world markets. The honest answer separates what was built from who paid for it and who decided, and notes that the counterfactual — what India's own trajectory would have been — cannot be observed. <span class="tag disputed">Disputed</span></p>
+  <p><span class="tag interp">Interpretation</span> <strong>Was the Cold War avoidable?</strong> The orthodox view blames Soviet expansion; the revisionist view blames American economic and nuclear assertiveness; the post-revisionist synthesis emphasises mutual misperception between two states with incompatible models and armies facing each other in central Europe. <span class="tag disputed">Disputed</span></p>
+  <p><span class="tag interp">Interpretation</span> <strong>Did liberal democracy win in 1991?</strong> Francis Fukuyama's "end of history" argument held that no rival model remained. Thirty years later, competitive authoritarian states have delivered growth, democratic backsliding has occurred in established democracies, and the claim looks at best premature. Its defenders reply that no coherent universal alternative has yet been articulated either. <span class="tag disputed">Disputed</span></p>
+  <h3>Facts worth holding</h3>
+  <ul>
+    <li><span class="tag fact">Established</span> Chinese fleets under Zheng He reached East Africa in 1405-33, decades before Portuguese voyages; the Ming court then ended state voyaging as a matter of policy.</li>
+    <li><span class="tag fact">Established</span> Haiti, founded in 1804 by a successful slave revolt, was required to pay France an indemnity for the loss of its "property", and finished servicing the resulting debt only in the twentieth century.</li>
+    <li><span class="tag fact">Established</span> The United Nations had 51 members in 1945 and has 193 today; the growth is almost entirely decolonisation.</li>
+    <li><span class="tag fact">Established</span> Seventeen African states became independent in 1960 alone.</li>
+    <li><span class="tag fact">Established</span> The Bretton Woods system was negotiated in July 1944, while the war was still being fought — the post-war economic order predates the victory.</li>
+    <li><span class="tag fact">Established</span> Japan was the world's second-largest economy from 1968 until China overtook it in 2010.</li>
+  </ul>
+</section>
+
+<section id="scenarios-options">
+  <h2>Counterfactuals, lessons and India's options</h2><hr class="sec-rule">
+  <p>Counterfactuals test whether a stated cause was necessary. Change one variable, hold the rest, and state what it reveals.</p>
+  <div class="grid two">
+    <div class="panel red-top">
+      <h4>If the Americas had never been colonised</h4>
+      <p>No silver to pay for Asian goods, no plantation cotton, no land relief for European population pressure. Tests Pomeranz's claim that colonial resources, not European institutions alone, made the industrial escape possible.</p>
+    </div>
+    <div class="panel blue-top">
+      <h4>If the Ming had continued ocean voyaging after 1433</h4>
+      <p>Chinese fleets were larger and earlier than Portuguese ones. Tests whether European expansion reflected unique capability or simply the absence of competition, and how much state policy choices shape long-run outcomes.</p>
+    </div>
+    <div class="panel gold-top">
+      <h4>If the United States had joined the League of Nations in 1920</h4>
+      <p>Enforcement might have existed where it did not. Tests whether the interwar collapse was caused by the terms of the 1919 settlement or by the absence of a power willing to uphold it.</p>
+    </div>
+    <div class="panel green-top">
+      <h4>If the USSR had reformed its economy before its politics</h4>
+      <p>The Chinese sequence applied in Moscow. Tests whether the Soviet collapse was structurally inevitable or a consequence of the order in which reforms were attempted.</p>
+    </div>
+  </div>
+  <h3>Enduring lessons</h3>
+  <div class="tablewrap">
+    <table>
+      <caption>What five centuries suggest, and why it still applies</caption>
+      <thead><tr><th>Lesson</th><th>Evidence</th><th>Contemporary relevance</th></tr></thead>
+      <tbody>
+        <tr><td>Technological and industrial lead converts into political power within a generation or two</td><td>Britain after 1800; the United States after 1900; East Asia after 1960</td><td>Semiconductors, energy, artificial intelligence and manufacturing capacity as strategic assets</td></tr>
+        <tr><td>Openness to trade raises aggregate wealth and concentrates its losses</td><td>Nineteenth-century free trade; post-1990 globalisation</td><td>Adjustment policy decides whether open economies stay politically sustainable</td></tr>
+        <tr><td>Institutions outlive the power that created them, then strain</td><td>The League without the United States; the Security Council of 1945 in 2025</td><td>Reform happens only when incumbents judge the cost of paralysis higher than the cost of sharing</td></tr>
+        <tr><td>Nationalism is the most portable political technology of the modern age</td><td>1789 to 1848 to anti-colonial movements to the present</td><td>It still supplies both state-building energy and the logic of secession and conflict</td></tr>
+        <tr><td>Economic dominance is not permanent</td><td>Asia's share of world output fell from roughly half to a small fraction and is now recovering</td><td>Projections of indefinite primacy, in any direction, have a poor historical record</td></tr>
+        <tr><td>How a conflict ends determines whether it stays ended</td><td>1919 produced 1939; 1945 produced seventy-five years without great-power war</td><td>War termination and post-conflict order are parts of strategy, not afterthoughts</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge blue">
+    <span class="edge-h">What India takes from this history</span>
+    <p>Presented neutrally: manufacturing and energy capacity, not only diplomacy, determine a state's weight; technological dependence in one era becomes political dependence in the next; multi-alignment is a recognisable descendant of the non-aligned position of 1961, adapted to a world with more poles; and the case for institutional reform rests on the same mismatch between 1945 structures and present capability that the rest of the Global South also invokes.</p>
+  </div>
+</section>
+
+<section id="answer-framework">
+  <h2>Answer framework and worked example</h2><hr class="sec-rule">
+  <p>For any long-run causation question, move through definition, location, evidence, contest, analysis, test, position, concession and close. One compressed example follows; use the same ladder for "Was colonialism's economic impact negative?" or "Why did the Cold War end peacefully?".</p>
+  <div class="panel red-top">
+    <h4>Worked example: Why did Europe industrialise first?</h4>
+    <dl class="rungs">
+      <dt>Define</dt><dd>Industrialisation means sustained growth in output per person driven by mechanised production and fossil energy, beginning in Britain around 1760-80.</dd>
+      <dt>Locate</dt><dd>Britain first, then Belgium, France, Germany and the United States; Japan from the 1870s; most of Asia and Africa only after 1950.</dd>
+      <dt>Establish</dt><dd>In 1750 China and India were comparable to Western Europe in living standards and ahead in total manufacturing output. The divergence is therefore late and requires explanation, not assumption. <span class="tag disputed">Disputed</span></dd>
+      <dt>Contest</dt><dd>Institutionalists stress property rights, patents, competitive states and scientific culture. Resource-and-contingency accounts stress accessible coal and colonial land and raw materials. A third view emphasises high British wages making machines worth building.</dd>
+      <dt>Analyse</dt><dd>These are complements, not rivals: cheap coal made steam economic, high wages made mechanisation profitable, colonies supplied cotton and markets, and institutions let capital be raised and invention rewarded. Remove any one and the escape is slower.</dd>
+      <dt>Test</dt><dd>If institutions alone sufficed, the Dutch Republic should have industrialised first; it had the institutions and the finance but lacked coal. If colonies alone sufficed, Spain and Portugal should have led. Neither did.</dd>
+      <dt>Position</dt><dd>Britain industrialised first because a specific combination — coal next to water transport, expensive labour, Atlantic raw materials and markets, and institutions that financed and protected invention — existed in one place at one time.</dd>
+      <dt>Concede</dt><dd>The relative weight of colonial resources against domestic institutions is genuinely unresolved, and the quantitative estimates behind both cases carry wide error bars.</dd>
+      <dt>Close</dt><dd>The useful conclusion is that the divergence was contingent rather than civilisational, which is why it has proved reversible.</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="qbank">
+  <h2>Practice bank: questions and motions</h2><hr class="sec-rule">
+  <h3>Fifteen questions</h3>
+  <ol class="qbank">
+    <li>Why was Europe not the dominant region of the world in 1500, and what changed?</li>
+    <li>What was the Columbian exchange, and which of its effects mattered most?</li>
+    <li>Explain the role of American silver in creating the first global economy.</li>
+    <li>How did chartered companies such as the EIC and VOC blur trade and sovereignty?</li>
+    <li>Assess Eric Williams's argument that slavery financed British industrialisation.</li>
+    <li>What is the difference between civic and ethnic nationalism, and why does it matter?</li>
+    <li>Why did Britain industrialise before France, the Netherlands or China?</li>
+    <li>What is meant by the "great divergence", and when did it occur?</li>
+    <li>Distinguish socialism, communism and social democracy.</li>
+    <li>Why did the great land empires — Mughal, Ottoman, Qing — fall within a century of each other?</li>
+    <li>Why are 1914-18 and 1939-45 often treated as a single crisis?</li>
+    <li>How were the institutions of 1944-49 designed as corrections of the failures of 1919-39?</li>
+    <li>What explains the speed of decolonisation after 1945?</li>
+    <li>Why did the Soviet Union collapse while the Chinese Communist Party survived?</li>
+    <li>In what specific ways does the distribution of power in 2025 differ from that of 1991?</li>
+  </ol>
+  <h3>Eight debate motions</h3>
+  <ol class="dbank">
+    <li>European dominance after 1750 was the result of contingency rather than superiority.</li>
+    <li>The economic record of colonial rule was unambiguously negative for the colonised.</li>
+    <li>The Industrial Revolution did more to shape the modern world than any war.</li>
+    <li>Nationalism has done more harm than good since 1789.</li>
+    <li>The Cold War was made inevitable by the outcome of the Second World War.</li>
+    <li>Globalisation after 1991 benefited the world's poor more than it harmed the West's workers.</li>
+    <li>The United Nations Security Council in its present form does more harm than good.</li>
+    <li>The twenty-first century will be shaped more by technology than by territory.</li>
+  </ol>
+</section>
+
+<section id="revision">
+  <h2>Chronology, glossary and revision sheet</h2><hr class="sec-rule">
+  <h3>Master chronology</h3>
+  <ul class="timeline">
+    <li><span class="yr">1492-1522</span><span>Atlantic crossing, the sea route to India, and the first circumnavigation.</span></li>
+    <li><span class="yr">1571</span><span>Manila galleon closes the first global trade circuit.</span></li>
+    <li><span class="yr">1600-1602</span><span>English East India Company and Dutch VOC chartered.</span></li>
+    <li><span class="yr">1757</span><span>Plassey: a trading company becomes a territorial power in India.</span></li>
+    <li><span class="yr">1776</span><span>American independence declared; Smith's <em>Wealth of Nations</em> published.</span></li>
+    <li><span class="yr">1789</span><span>French Revolution.</span></li>
+    <li><span class="yr">1804</span><span>Haitian independence after the only successful large-scale slave revolt.</span></li>
+    <li><span class="yr">1833-88</span><span>Abolition of slavery across the British Empire, France, the United States and Brazil.</span></li>
+    <li><span class="yr">1848</span><span>Revolutions across Europe; the <em>Communist Manifesto</em>.</span></li>
+    <li><span class="yr">1857-58</span><span>Indian uprising; Crown rule replaces Company rule.</span></li>
+    <li><span class="yr">1869</span><span>Suez Canal opens.</span></li>
+    <li><span class="yr">1871</span><span>German unification completes the remaking of the European state system.</span></li>
+    <li><span class="yr">1884-85</span><span>Berlin Conference and the scramble for Africa.</span></li>
+    <li><span class="yr">1905</span><span>Japan defeats Russia; the first Asian victory over a European power in the modern era.</span></li>
+    <li><span class="yr">1914-18</span><span>First World War; four empires end.</span></li>
+    <li><span class="yr">1917</span><span>Russian Revolution.</span></li>
+    <li><span class="yr">1929</span><span>Wall Street crash and the Great Depression.</span></li>
+    <li><span class="yr">1939-45</span><span>Second World War; nuclear weapons used in 1945.</span></li>
+    <li><span class="yr">1944-49</span><span>Bretton Woods, the United Nations, GATT, the UDHR, the Geneva Conventions and NATO.</span></li>
+    <li><span class="yr">1947-60</span><span>Indian and Pakistani independence; the Asian and African waves of decolonisation.</span></li>
+    <li><span class="yr">1962 / 1972 / 1979</span><span>Cuban missile crisis; the American opening to China; the Soviet invasion of Afghanistan.</span></li>
+    <li><span class="yr">1978-91</span><span>Deng's reforms, Thatcher and Reagan, and India's liberalisation in 1991.</span></li>
+    <li><span class="yr">1989-91</span><span>Revolutions in Eastern Europe; German reunification; the Soviet Union dissolves.</span></li>
+    <li><span class="yr">2001 / 2008</span><span>China joins the WTO and the 11 September attacks reorient American strategy; the financial crisis ends the unipolar confidence.</span></li>
+    <li><span class="yr">2013-2025</span><span>Belt and Road; the Paris Agreement of 2015; the invasion of Ukraine in 2022; technology competition and supply-chain restructuring.</span></li>
+  </ul>
+  <h3>Glossary</h3>
+  <dl class="term">
+    <dt>Mercantilism</dt><dd>Early modern doctrine treating trade as zero-sum, to be managed for bullion and national advantage.</dd>
+    <dt>Columbian exchange</dt><dd>The transfer of crops, animals, people and diseases between the hemispheres after 1492.</dd>
+    <dt>Chartered company</dt><dd>A private trading company granted monopoly rights and sovereign powers, such as the EIC and the VOC.</dd>
+    <dt>Triangular trade</dt><dd>The Atlantic circuit of manufactures to Africa, enslaved people to the Americas, and plantation produce to Europe.</dd>
+    <dt>Indenture</dt><dd>Contract labour migration, used extensively from India after abolition, 1834-1917.</dd>
+    <dt>Great divergence</dt><dd>The gap in income and industrial output that opened between Western Europe and Asia after about 1800.</dd>
+    <dt>Nation-state</dt><dd>A sovereign state whose legitimacy rests on representing a people rather than a dynasty.</dd>
+    <dt>Self-determination</dt><dd>The principle that peoples choose their own sovereignty; stated in 1918 and 1941, and used against empires thereafter.</dd>
+    <dt>Capitalism</dt><dd>An economic system based on private ownership of capital, wage labour and competitive markets.</dd>
+    <dt>Communism (Marxist-Leninist)</dt><dd>State ownership and central planning under a single-party monopoly of political power.</dd>
+    <dt>Social democracy</dt><dd>Market economy with high taxation, regulation and universal public services, pursued through electoral politics.</dd>
+    <dt>Imperialism</dt><dd>Control, formal or informal, by one state over the political and economic life of another.</dd>
+    <dt>Drain of wealth</dt><dd>Naoroji's argument that colonial India transferred resources to Britain without return.</dd>
+    <dt>Bretton Woods</dt><dd>The 1944 agreement creating fixed exchange rates, the IMF and the World Bank.</dd>
+    <dt>Cold War</dt><dd>The US-Soviet confrontation of 1947-91, conducted through blocs, proxies and deterrence rather than direct war.</dd>
+    <dt>Non-alignment</dt><dd>The refusal of newly independent states to join either Cold War bloc; formalised in 1961.</dd>
+    <dt>Globalisation</dt><dd>The integration of markets, production and information across borders, most intense between 1990 and 2008.</dd>
+    <dt>Multipolarity</dt><dd>A system with several centres of comparable power rather than one or two.</dd>
+    <dt>De-risking / friend-shoring</dt><dd>Reorganising supply chains towards politically aligned states, accepting higher cost for lower exposure.</dd>
+  </dl>
+  <h3>Rapid revision sheet</h3>
+  <div class="note">
+    <h4>Eras and hinges</h4>
+    <ul>
+      <li>1500-1750 first global age · 1750-1870 revolution and industry · 1870-1914 high imperialism · 1914-1991 crisis and Cold War · 1991-2025 globalisation and after.</li>
+      <li>Hinge years: 1492, 1571, 1757, 1789, 1870, 1914, 1945, 1978, 1991, 2008.</li>
+      <li>In 1500 Asia led; by 1900 Europe led; since 1978 weight has moved back towards Asia.</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h4>Economy and ideology</h4>
+    <ul>
+      <li>Industrialisation: Britain c. 1760 → Germany and the US by 1900 → Japan 1870s → East Asia after 1950 → China after 1978.</li>
+      <li>Capitalism (Smith 1776) · socialism and communism (Marx 1848, 1867) · fascism (1922, 1933) · social democracy · developmental state.</li>
+      <li>Post-war: golden age 1945-73 → 1971 end of gold convertibility → 1973 and 1979 oil shocks → market turn 1978-91 → 2008 crisis.</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h4>Empire and independence</h4>
+    <ul>
+      <li>Atlantic slave trade: c. 12.5 million embarked; abolition 1807-1888; Indian indenture 1834-1917.</li>
+      <li>Land empires end: Mughal 1857, Qing 1911, Ottoman 1922.</li>
+      <li>Decolonisation: India and Pakistan 1947, Indonesia 1949, Ghana 1957, seventeen African states in 1960, Algeria 1962, Portuguese Africa 1975, Namibia 1990, South Africa 1994.</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h4>Order today</h4>
+    <ul>
+      <li>Institutions: UN 1945, IMF and World Bank 1944, GATT 1947 and WTO 1995, UDHR 1948, Geneva Conventions 1949, NAM 1961, G20 1999.</li>
+      <li>Cold War phases: formation 1947-49 · crises 1950-62 · détente 1963-79 · second Cold War 1979-85 · end 1985-91.</li>
+      <li>Present stresses: US-China competition, war in Europe and West Asia, institutional paralysis, economic fragmentation, technology, climate and demography.</li>
+      <li>Give long-run economic figures as ranges, and keep interpretation separate from established fact.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer>
+  <p>Compiled from open sources. Study aid only, not an official publication.</p>
+  <p>Source &amp; contributions: <a href="https://github.com/mohitkushwaha0601/matre">github.com/mohitkushwaha0601/matre</a></p>
+</footer>
+
+</body>
+</html>
