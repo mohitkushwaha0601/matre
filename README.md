@@ -43,8 +43,10 @@ Defence, current affairs, geopolitics and strategic studies.
 | [Indian Navy's Humanitarian Efforts](materials/35.indian-navy-humanitarian-efforts-knowledge-handbook.html) | HTML | HADR and NEO concepts, 2004 tsunami, evacuations, floods and cyclones, neighbourhood and distant relief, rescue at sea, soft power and limits (21 sections, 2-3 hrs) |
 | [Political Status of India's States and UTs](materials/36.political-status-states-uts-india-knowledge-handbook.html) | HTML | Union of States, UTs, Articles 370 and 371, Fifth and Sixth Schedules, Northeast, centre-state powers, statehood, delimitation, language politics (21 sections, 2-3 hrs) |
 | [International Alliances, Groups and Institutions](materials/37.international-alliances-groups-institutions-knowledge-handbook.html) | HTML | UN system and Security Council, NATO, US alliances, Quad, SCO, arms-control regimes, G20, BRICS, regional bodies, IMF/WTO, ICJ/ICC, India's multi-alignment (21 sections, 2-3 hrs) |
+| [World War I, 1914-1918](materials/38.world-war-1-knowledge-handbook.html) | HTML | the world of 1914, causes and the Fischer debate, July Crisis and war plans, Western and global fronts, blockade and U-boats, technology, total war, 1917-18 turning points, India's role, Versailles and legacies (22 sections, 2-3 hrs) |
+| [World War II, 1937/1939-1945](materials/39.world-war-2-knowledge-handbook.html) | HTML | interwar collapse, ideologies and the road to war, Axis ascendancy, Eastern Front, Pacific and Asian war, Atlantic and air war, industry and intelligence, occupation and the Holocaust, India's war and Bengal famine, endgames and the atomic decision, Yalta to the UN (22 sections, 2-3 hrs) |
 
-**Total:** 37 study pages
+**Total:** 39 study pages
 
 ---
 
@@ -59,4 +61,4 @@ This project is designed for a lightweight static HTML workflow. The documents a
 
 ---
 
-**Updated:** 15 October 2026 | **Format:** static HTML study library
+**Updated:** 21 October 2026 | **Format:** static HTML study library
