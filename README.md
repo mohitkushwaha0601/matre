@@ -47,8 +47,9 @@ Defence, current affairs, geopolitics and strategic studies.
 | [World War II, 1937/1939-1945](materials/39.world-war-2-knowledge-handbook.html) | HTML | interwar collapse, ideologies and the road to war, Axis ascendancy, Eastern Front, Pacific and Asian war, Atlantic and air war, industry and intelligence, occupation and the Holocaust, India's war and Bengal famine, endgames and the atomic decision, Yalta to the UN (22 sections, 2-3 hrs) |
 | [The Making of the Modern World, 1500-2025](materials/40.making-of-the-modern-world-knowledge-handbook.html) | HTML | the world in 1500, oceanic trade and the Columbian exchange, slavery and abolition, revolutions and nationalism, the Industrial Revolution and the great divergence, capitalism and communism, high imperialism, 1914-45, the post-1945 institutions, decolonisation, the Cold War, globalisation, the rise of China and India, the present order (22 sections, 2-3 hrs) |
 | [SSB Psychological Tests: PPDT, TAT, WAT, SRT and SDT](materials/41.ssb-psychological-tests-knowledge-handbook.html) | HTML | 15 OLQs, strategies and expert tips for each test, PPDT and TAT themes and story seeds, WAT word approaches, SRT situations with multiple ideal responses, building your own SDT persona (21 sections, 2-3 hrs) |
+| [A Sailor's Life at Sea](materials/42.sailor-life-at-sea-knowledge-handbook.html) | HTML | entry and branches, the ship as a workplace, day routine, watches and bells, night at sea, compass, ship's log and echo sounder, radar and sonar, engine room and fresh water, seamanship, seawater, weather, tides and charts, drills and life aboard (21 sections, 2-3 hrs) |
 
-**Total:** 41 study pages
+**Total:** 42 study pages
 
 ---
 
