@@ -52,8 +52,9 @@ Defence, current affairs, geopolitics and strategic studies.
 | [Hampi and the Vijayanagara Empire](materials/44.hampi-vijayanagara-knowledge-handbook.html) | HTML | 1336 foundation, dynasties and Krishnadevaraya, administration and army, Talikota and the sack of 1565, travellers' accounts, royal and sacred centres, Vittala and the stone chariot, water engineering, rediscovery and UNESCO conservation (21 sections, 2-3 hrs) |
 | [US Defence and Geography](materials/45.us-defence-geography-knowledge-handbook.html) | HTML | the US moat and map, expansion and alliances, command structure and budget, six regional commands, homeland and Arctic, Europe, Indo-Pacific island chains, Middle East, Africa and Western Hemisphere, sea power and chokepoints, air, space and nuclear forces, and the India link (22 sections, 2-3 hrs) |
 | [Netravati Peak and Chikmagalur](materials/46.netravati-peak-chikmagalur-knowledge-handbook.html) | HTML | key points on the Kudremukh-Chikmagalur Ghats: geology, ecology, Netravati and Tungabhadra rivers, mining and conservation, heritage and coffee, trek safety, terrain reading and OLQs (12 sections, about 1 hr) |
+| [NavIC and the Indian Navy](materials/47.navic-indian-navy-knowledge-handbook.html) | HTML | GNSS basics, global systems, why India built NavIC, constellation and ISRO record, naval use on ships, weapons and fishing boats, GAGAN, GSAT-7 and space, jamming and ASAT threats, sovereign navigation and the Indian Ocean picture (20 sections, 2-3 hrs) |
 
-**Total:** 46 study pages
+**Total:** 47 study pages
 
 ---
 
@@ -68,4 +69,4 @@ This project is designed for a lightweight static HTML workflow. The documents a
 
 ---
 
-**Updated:** 24 October 2026 | **Format:** static HTML study library
+**Updated:** 25 October 2026 | **Format:** static HTML study library
