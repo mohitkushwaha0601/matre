@@ -48,8 +48,12 @@ Defence, current affairs, geopolitics and strategic studies.
 | [The Making of the Modern World, 1500-2025](materials/40.making-of-the-modern-world-knowledge-handbook.html) | HTML | the world in 1500, oceanic trade and the Columbian exchange, slavery and abolition, revolutions and nationalism, the Industrial Revolution and the great divergence, capitalism and communism, high imperialism, 1914-45, the post-1945 institutions, decolonisation, the Cold War, globalisation, the rise of China and India, the present order (22 sections, 2-3 hrs) |
 | [SSB Psychological Tests: PPDT, TAT, WAT, SRT and SDT](materials/41.ssb-psychological-tests-knowledge-handbook.html) | HTML | 15 OLQs, strategies and expert tips for each test, PPDT and TAT themes and story seeds, WAT word approaches, SRT situations with multiple ideal responses, building your own SDT persona (21 sections, 2-3 hrs) |
 | [A Sailor's Life at Sea](materials/42.sailor-life-at-sea-knowledge-handbook.html) | HTML | entry and branches, the ship as a workplace, day routine, watches and bells, night at sea, compass, ship's log and echo sounder, radar and sonar, engine room and fresh water, seamanship, seawater, weather, tides and charts, drills and life aboard (21 sections, 2-3 hrs) |
+| [Srinivasa Ramanujan: The Man Who Knew Infinity](materials/43.srinivasa-ramanujan-knowledge-handbook.html) | HTML | Kumbakonam and Madras, the 1913 letter to Hardy, Cambridge and the Royal Society, illness and death, partitions, pi series, tau function, 1729, mock theta functions and the Lost Notebook, faith, legacy, disputed questions (21 sections, 2-3 hrs) |
+| [Hampi and the Vijayanagara Empire](materials/44.hampi-vijayanagara-knowledge-handbook.html) | HTML | 1336 foundation, dynasties and Krishnadevaraya, administration and army, Talikota and the sack of 1565, travellers' accounts, royal and sacred centres, Vittala and the stone chariot, water engineering, rediscovery and UNESCO conservation (21 sections, 2-3 hrs) |
+| [US Defence and Geography](materials/45.us-defence-geography-knowledge-handbook.html) | HTML | the US moat and map, expansion and alliances, command structure and budget, six regional commands, homeland and Arctic, Europe, Indo-Pacific island chains, Middle East, Africa and Western Hemisphere, sea power and chokepoints, air, space and nuclear forces, and the India link (22 sections, 2-3 hrs) |
+| [Netravati Peak and Chikmagalur](materials/46.netravati-peak-chikmagalur-knowledge-handbook.html) | HTML | key points on the Kudremukh-Chikmagalur Ghats: geology, ecology, Netravati and Tungabhadra rivers, mining and conservation, heritage and coffee, trek safety, terrain reading and OLQs (12 sections, about 1 hr) |
 
-**Total:** 42 study pages
+**Total:** 46 study pages
 
 ---
 
@@ -64,4 +68,4 @@ This project is designed for a lightweight static HTML workflow. The documents a
 
 ---
 
-**Updated:** 22 October 2026 | **Format:** static HTML study library
+**Updated:** 24 October 2026 | **Format:** static HTML study library
