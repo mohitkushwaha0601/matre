@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Srinivasa Ramanujan — A Deep Knowledge Handbook</title>
+<meta name="description" content="The life, mathematics, Cambridge years, death and legacy of Srinivasa Ramanujan, with perspectives, scenarios and SSB-style practice material.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#2A1812;
+  --ink-soft:#6A5248;
+  --paper:#F7F1E6;
+  --surface:#FFFDF8;
+  --surface-2:#EFE4D0;
+  --rule:#DCCDB3;
+  --rule-strong:#B39F7F;
+  --red:#8E2A1B;
+  --blue:#1F4E79;
+  --gold:#A1700F;
+  --green:#2F6B3D;
+  --hero-bg:#2B1410;
+  --hero-ink:#F7F1E6;
+  --hero-dim:#C9B29F;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ink:#F0E4D8;
+    --ink-soft:#BDA999;
+    --paper:#1A0E0B;
+    --surface:#26150F;
+    --surface-2:#33201A;
+    --rule:#4A3229;
+    --rule-strong:#6F5143;
+    --red:#EE8A74;
+    --blue:#7DB4E6;
+    --gold:#E0B45A;
+    --green:#6CC585;
+    --hero-bg:#110908;
+    --hero-ink:#F0E4D8;
+    --hero-dim:#A89080;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#F0E4D8;
+  --ink-soft:#BDA999;
+  --paper:#1A0E0B;
+  --surface:#26150F;
+  --surface-2:#33201A;
+  --rule:#4A3229;
+  --rule-strong:#6F5143;
+  --red:#EE8A74;
+  --blue:#7DB4E6;
+  --gold:#E0B45A;
+  --green:#6CC585;
+  --hero-bg:#110908;
+  --hero-ink:#F0E4D8;
+  --hero-dim:#A89080;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1.5rem);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
+.flagstrip{display:flex;height:12px}
+.flagstrip span{flex:1}
+.f1{background:#FF9933}
+.f2{background:#FFFFFF}
+.f3{background:#138808}
+.f4{background:#8E2A1B}
+.f5{background:#A3C1AD}
+.f6{background:#002147}
+.f7{background:#C8102E}
+.f8{background:#D9A441}
+.hero-inner{max-width:1180px;margin:0 auto;padding:3.2rem 1.5rem 0}
+.kicker{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--hero-dim);margin:0 0 .8rem}
+.motto{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:clamp(1.7rem,5.2vw,2.9rem);line-height:1.2;margin:0;letter-spacing:.005em;max-width:26ch}
+.motto-en{margin:.55rem 0 0;color:var(--hero-dim);font-size:clamp(.95rem,2.4vw,1.1rem);font-style:italic;max-width:62ch}
+.hero h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.5rem,4.3vw,2.35rem);line-height:1.2;margin:2.6rem 0 .5rem;border-top:1px solid rgba(255,255,255,.22);padding-top:1.6rem;max-width:30ch}
+.hero-sub{margin:0;color:var(--hero-dim);max-width:68ch}
+.stamp{margin-top:1.6rem;font-size:.86rem;color:var(--hero-dim);display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+.stamp b{color:var(--hero-ink);font-weight:600}
+
+.shell{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem;display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media (min-width:1000px){
+  .shell{grid-template-columns:255px minmax(0,1fr);gap:3.5rem;padding-top:2.8rem}
+}
+nav.toc{font-size:.9rem}
+@media (min-width:1000px){
+  .toc-mobile{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2rem);align-self:start;max-height:calc(100vh - 5rem);overflow-y:auto}
+}
+nav.toc h2{font-family:"Zilla Slab",Georgia,serif;font-size:.92rem;font-weight:600;margin:0 0 .7rem;padding-bottom:.45rem;border-bottom:2px solid var(--rule-strong)}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc}
+nav.toc li{border-bottom:1px solid var(--rule)}
+nav.toc li:not(.part){counter-increment:toc}
+nav.toc a{display:flex;gap:.6rem;padding:.4rem 0;color:var(--ink-soft);text-decoration:none}
+nav.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--rule-strong);font-variant-numeric:tabular-nums;flex:none}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--red)}
+nav.toc .part{border:0;margin:1.1rem 0 .3rem;font-family:"Zilla Slab",Georgia,serif;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--rule-strong)}
+nav.toc .part::before{content:none}
+.toc-mobile{display:block}
+@media (min-width:1000px){.toc-mobile summary{display:none}}
+.toc-mobile summary{cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:600;padding:.7rem .9rem;background:var(--surface);border:1px solid var(--rule);margin-bottom:1rem}
+@media (max-width:999px){
+  .toc-mobile[open] nav.toc{padding:0 .9rem 1rem}
+  .toc-mobile:not([open]) nav.toc{display:none}
+}
+
+main{min-width:0}
+section{margin:0 0 3.6rem;scroll-margin-top:1.5rem}
+section > h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.45rem,3.6vw,1.95rem);line-height:1.2;margin:0 0 .3rem}
+.part-head{margin:4rem 0 2.2rem;padding:1.1rem 0 .9rem;border-top:4px double var(--rule-strong);border-bottom:1px solid var(--rule)}
+.part-head p{margin:0;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.part-head h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.3rem,3.2vw,1.7rem);margin:.3rem 0 0;color:var(--ink)}
+.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.16rem;margin:2rem 0 .5rem;line-height:1.3}
+h4{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1rem;margin:1.4rem 0 .35rem;color:var(--ink)}
+p{margin:0 0 .95rem;max-width:74ch}
+ul,ol{margin:0 0 1rem;padding-left:1.25rem;max-width:74ch}
+li{margin-bottom:.35rem}
+li::marker{color:var(--rule-strong)}
+strong{font-weight:600}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+.lede{font-size:1.06rem;color:var(--ink-soft);max-width:70ch}
+
+.tablewrap{overflow-x:auto;margin:0 0 1.3rem;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.92rem}
+caption{text-align:left;padding:.7rem .85rem .1rem;font-weight:600;color:var(--ink-soft);font-size:.9rem}
+th,td{text-align:left;padding:.55rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{background:var(--surface-2);font-weight:600;border-bottom:2px solid var(--rule-strong);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.num,th.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+.edge{background:var(--surface);border-left:4px solid var(--red);padding:.9rem 1.1rem;margin:1.4rem 0;max-width:74ch}
+.edge p:last-child,.edge ul:last-child,.edge ol:last-child{margin-bottom:0}
+.edge .edge-h{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);display:block;margin-bottom:.25rem;font-size:.95rem}
+.edge.gold{border-left-color:var(--gold)}
+.edge.gold .edge-h{color:var(--gold)}
+.edge.blue{border-left-color:var(--blue)}
+.edge.blue .edge-h{color:var(--blue)}
+.edge.green{border-left-color:var(--green)}
+.edge.green .edge-h{color:var(--green)}
+
+.note{background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;border:1px solid var(--rule);font-size:.95rem}
+.note p:last-child,.note ul:last-child,.note ol:last-child{margin-bottom:0}
+.note h4{margin-top:0}
+
+.panel{background:var(--surface);border:1px solid var(--rule);padding:1rem 1.1rem}
+.panel h4{margin-top:0}
+.panel ul,.panel ol{margin-bottom:0}
+.panel p:last-child{margin-bottom:0}
+.panel.blue-top{border-top:3px solid var(--blue)}
+.panel.red-top{border-top:3px solid var(--red)}
+.panel.gold-top{border-top:3px solid var(--gold)}
+.panel.green-top{border-top:3px solid var(--green)}
+
+.rungs{max-width:74ch;margin:.3rem 0 0;display:grid;grid-template-columns:9.5rem 1fr;gap:0 1rem}
+.rungs dt{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;color:var(--red);padding-top:.2rem}
+.rungs dd{margin:0 0 .5rem;font-size:.93rem}
+@media (max-width:560px){
+  .rungs{grid-template-columns:1fr;gap:0}
+  .rungs dt{padding-top:.4rem}
+}
+
+.timeline{list-style:none;padding:0;margin:1rem 0 1.4rem;max-width:74ch}
+.timeline li{display:grid;grid-template-columns:8.2rem 1fr;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--rule);margin:0}
+.timeline li:last-child{border-bottom:0}
+.timeline .yr{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);font-variant-numeric:tabular-nums}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:.1rem}}
+
+.qbank{counter-reset:q;list-style:none;padding:0;max-width:74ch}
+.qbank li{counter-increment:q;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.qbank li::before{content:counter(q,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.qbank li:last-child{border-bottom:0}
+
+.dbank{counter-reset:d;list-style:none;padding:0;max-width:74ch}
+.dbank li{counter-increment:d;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.dbank li::before{content:counter(d,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.dbank li:last-child{border-bottom:0}
+
+.grid{display:grid;gap:1rem;margin-bottom:1.2rem}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
+
+.card{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--red);padding:1rem 1.1rem}
+.card h4{margin:0 0 .45rem;font-size:1rem}
+.card .name{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.2rem}
+.card .role{font-size:.9rem;color:var(--ink-soft)}
+.card .since{font-size:.78rem;color:var(--green);font-weight:600;margin-top:.45rem}
+.card p:last-child{margin-bottom:0}
+
+.term{max-width:74ch;margin:0 0 1.2rem}
+.term dt{font-weight:600;margin-top:.8rem}
+.term dd{margin:.15rem 0 0;color:var(--ink-soft)}
+
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:.1rem .45rem;border:1px solid var(--rule-strong);color:var(--ink-soft);margin-right:.35rem;vertical-align:middle}
+.tag.fact{border-color:var(--green);color:var(--green)}
+.tag.interp{border-color:var(--gold);color:var(--gold)}
+.tag.disputed{border-color:var(--red);color:var(--red)}
+.tag.verify{border-color:var(--blue);color:var(--blue)}
+.spaced{margin-top:.6rem}
+
+footer{border-top:3px double var(--rule-strong);margin-top:2rem;padding-top:1.4rem;color:var(--ink-soft);font-size:.9rem;max-width:74ch}
+footer a{color:var(--blue)}
+
+.home-btn{position:fixed;top:16px;left:16px;z-index:60;display:inline-flex;align-items:center;gap:.4rem;background:#14202B;color:#F1F2EC;border:1px solid rgba(241,242,236,.25);padding:.45rem .85rem;border-radius:999px;font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.82rem;font-weight:600;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.3);transition:background .15s ease,transform .15s ease}
+.home-btn:hover,.home-btn:focus-visible{background:#BF2F26;transform:translateY(-1px)}
+.home-btn svg{width:14px;height:14px;flex:none}
+@media print{.home-btn{display:none}}
+
+@media print{
+  .hero{background:none;color:#000;padding-bottom:1rem}
+  .hero-sub,.stamp,.motto-en{color:#333}
+  .flagstrip,.toc-mobile{display:none}
+  .shell{display:block;padding:0}
+  section{page-break-inside:auto;margin-bottom:1.8rem}
+  h2,h3{page-break-after:avoid}
+  .panel,.edge,.note,.tablewrap,figure{page-break-inside:avoid}
+  .part-head{page-break-before:always}
+  body{font-size:10.5pt;background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+
+<a class="home-btn" href="../index.html" aria-label="Back to Handbooks homepage" title="Back to Handbooks homepage">
+  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
+  <span>Home</span>
+</a>
+
+<header class="hero">
+  <div class="flagstrip" aria-hidden="true">
+    <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f5"></span><span class="f6"></span><span class="f7"></span><span class="f8"></span>
+  </div>
+  <div class="hero-inner">
+    <p class="kicker">Mathematics · biography · India and Britain · 1887-1920</p>
+    <h1>Srinivasa Ramanujan: The Man Who Knew Infinity</h1>
+    <p class="hero-sub">A self-taught clerk from Kumbakonam who wrote to G. H. Hardy in 1913, reached Cambridge, was elected a Fellow of the Royal Society, and died at 32 leaving results that mathematicians are still proving. This handbook covers his life, his mathematics at a non-specialist level, the disputes about his death and method, his legacy, and SSB-style practice material.</p>
+    <p class="stamp">
+      <span>Sections <b>21</b></span>
+      <span>Lifespan <b>1887-1920 (32 years)</b></span>
+      <span>Notebooks <b>3 + the "Lost Notebook"</b></span>
+      <span>Reading time <b>2-3 hrs</b></span>
+    </p>
+  </div>
+</header>
+
+<div class="shell">
+
+<details class="toc-mobile" open>
+  <summary>Contents</summary>
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li class="part">How to use this</li>
+      <li><a href="#howto">Using this handbook</a></li>
+
+      <li class="part">Part I · Life in India</li>
+      <li><a href="#world">Erode, Kumbakonam and a family of modest means</a></li>
+      <li><a href="#childhood">The schoolboy and Carr's Synopsis</a></li>
+      <li><a href="#notebooks">Madras: notebooks, clerkship and patrons</a></li>
+
+      <li class="part">Part II · Cambridge and death</li>
+      <li><a href="#letter">The letter to Hardy, 1913</a></li>
+      <li><a href="#cambridge">Cambridge, 1914-1919</a></li>
+      <li><a href="#death">Illness, return and death</a></li>
+
+      <li class="part">Part III · The mathematics</li>
+      <li><a href="#method">How he worked</a></li>
+      <li><a href="#partitions">Partitions and the circle method</a></li>
+      <li><a href="#pi">Pi, series and modular equations</a></li>
+      <li><a href="#numbers">Number theory: tau, highly composite numbers, 1729</a></li>
+      <li><a href="#mock">Mock theta functions and the Lost Notebook</a></li>
+
+      <li class="part">Part IV · Person and legacy</li>
+      <li><a href="#faith">Faith, family and personal life</a></li>
+      <li><a href="#legacy">Recognition and legacy</a></li>
+
+      <li class="part">Knowledge toolkit</li>
+      <li><a href="#perspectives">Perspectives and controversies</a></li>
+      <li><a href="#scenarios">Scenarios and options</a></li>
+      <li><a href="#qbank">Practice bank: questions</a></li>
+      <li><a href="#debates">Debate motions</a></li>
+      <li><a href="#chronology">Master chronology</a></li>
+      <li><a href="#glossary">Glossary</a></li>
+      <li><a href="#revision">Rapid revision sheet</a></li>
+    </ol>
+  </nav>
+</details>
+
+<main>
+
+<section id="howto">
+  <h2>Using this handbook</h2><hr class="sec-rule">
+  <p class="lede">You do not need advanced mathematics. Each technical section explains what the idea is, why it mattered, and where it shows up today, in plain language. Treat the mathematics as evidence for a larger question: how does talent get discovered, trained and sustained?</p>
+  <p>Biographical details come from Hardy's writings, the Ramanujan papers and Robert Kanigel's biography <em>The Man Who Knew Infinity</em> (1991). Where accounts differ, such as the cause of death, tags mark what is established, what is interpretation and what is disputed.</p>
+
+  <div class="edge blue">
+    <span class="edge-h">Key habit</span>
+    <p>For every episode, ask three things: what did he do, who enabled or obstructed him, and what does it show about an institution (school, colonial system, university, state)? That turns a biography into an SSB-ready argument.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part I · Life in India</p><h2>From Kumbakonam to the Madras Port Trust</h2></div>
+
+<section id="world">
+  <h2>Erode, Kumbakonam and a family of modest means</h2><hr class="sec-rule">
+  <p>Srinivasa Ramanujan was born on <strong>22 December 1887</strong> in Erode, at his maternal grandfather's home, and raised in Kumbakonam, a temple town in the Kaveri delta of the Madras Presidency. His father, K. Srinivasa Iyengar, was a clerk in a cloth shop; his mother, Komalatammal, was devoted to the goddess Namagiri of Namakkal and shaped the family's religious life.</p>
+  <p>The household was Tamil Brahmin and orthodox but not wealthy. Money was tight, and schooling, books and scholarships mattered enormously. British India in the 1880s offered a ladder through English-medium education, but few rungs for the poor and none for the unconventional.</p>
+  <div class="grid two">
+    <div class="panel red-top">
+      <h4>Place</h4>
+      <p>Kumbakonam, sometimes called the "Cambridge of South India" for its colleges, gave him a mathematical culture of teachers and libraries within walking distance.</p>
+    </div>
+    <div class="panel blue-top">
+      <h4>Constraint</h4>
+      <p>Orthodox dietary and caste norms later complicated travel overseas, and the family's consent to his 1914 voyage was itself a negotiation.</p>
+    </div>
+  </div>
+  <p><span class="tag fact">Established</span> Birth date, birthplace and parents are well documented. His birthday, 22 December, is now India's National Mathematics Day.</p>
+</section>
+
+<section id="childhood">
+  <h2>The schoolboy and Carr's Synopsis</h2><hr class="sec-rule">
+  <p>At Town High School, Kumbakonam, he topped his classes and won prizes and scholarships. Around the age of 15 he came across G. S. Carr's <em>A Synopsis of Elementary Results in Pure and Applied Mathematics</em>, a compressed list of thousands of formulas with sketchy proofs. Accounts agree that this book set the direction of his work, and that its terse style may have encouraged him to prove things in his own way.</p>
+  <p>He won a scholarship to Government College, Kumbakonam in 1904, but lost it because he neglected every subject other than mathematics. He moved to Pachaiyappa's College in Madras and again failed the Fellow of Arts examination because of English, physiology and other subjects. He left without a degree.</p>
+  <div class="edge">
+    <span class="edge-h">The institutional lesson</span>
+    <p>The exam system measured breadth and conformity; his gift was depth and originality. The same system that rejected him on paper later had to be bypassed, through patrons, to recognise him. That tension is a standard SSB discussion theme.</p>
+  </div>
+  <ul class="timeline">
+    <li><span class="yr">c. 1903</span><span>Encounters Carr's Synopsis</span></li>
+    <li><span class="yr">1904</span><span>Scholarship at Government College, Kumbakonam; later lost</span></li>
+    <li><span class="yr">1909</span><span>Marries Janaki, a girl of about ten, in the custom of the time</span></li>
+  </ul>
+</section>
+
+<section id="notebooks">
+  <h2>Madras: notebooks, clerkship and patrons</h2><hr class="sec-rule">
+  <p>Between 1904 and 1913 he filled notebooks with theorems, mostly without proofs, while living in poverty and sometimes ill. In 1910 he approached V. Ramaswamy Aiyar, a deputy collector and founder of the Indian Mathematical Society, who recognised his ability. In 1911 his first paper, on Bernoulli numbers, appeared in the Society's journal.</p>
+  <p>Patrons found him a job as a clerk in the <strong>Madras Port Trust</strong> in 1912. His manager, S. Narayana Iyer, himself a mathematics enthusiast, and the chairman, Sir Francis Spring, supported his correspondence abroad. The Port Trust gave him a salary and some free time; it did not give him mathematical company.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>People who made the Madras years possible</caption>
+      <thead><tr><th>Person</th><th>Role</th></tr></thead>
+      <tbody>
+        <tr><td>V. Ramaswamy Aiyar</td><td>Founder, Indian Mathematical Society; first serious reader</td></tr>
+        <tr><td>S. Narayana Iyer</td><td>Port Trust manager; supported his work and letters</td></tr>
+        <tr><td>Sir Francis Spring</td><td>Port Trust chairman; backed his move abroad</td></tr>
+        <tr><td>E. H. Neville</td><td>Cambridge mathematician who visited Madras and urged Cambridge</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div class="part-head"><p>Part II · Cambridge and death</p><h2>One letter, five years, one illness</h2></div>
+
+<section id="letter">
+  <h2>The letter to Hardy, 1913</h2><hr class="sec-rule">
+  <p>Ramanujan had written to other British mathematicians who ignored him. On <strong>31 January 1913</strong> he wrote to G. H. Hardy of Trinity College, Cambridge, enclosing around 120 theorems on infinite series, integrals, continued fractions and divergent series. Hardy's account is that some results were already known, some seemed absurd, and some "defeated me completely"; he and J. E. Littlewood concluded that they had to be true because nobody could have invented them.</p>
+  <p>Hardy replied encouragingly and arranged support. Ramanujan received a research scholarship from the University of Madras. Neville's visit to Madras at the end of 1913 helped overcome the family's hesitation, and by popular accounts his mother, after a dream of Namagiri, withdrew her objection to his crossing the sea.</p>
+  <div class="edge gold">
+    <span class="edge-h">Why the letter worked</span>
+    <p>Hardy was a first-rate analyst who knew a real result from a fake. The correct reader mattered as much as the correct result: the same theorems in other envelopes had been ignored.</p>
+  </div>
+</section>
+
+<section id="cambridge">
+  <h2>Cambridge, 1914-1919</h2><hr class="sec-rule">
+  <p>Ramanujan sailed in March 1914 and spent about five years at Trinity College, working with Hardy and Littlewood during the First World War. Hardy tried to supply what Ramanujan lacked: rigour and proof, without crushing his instinct. The collaboration produced several joint papers, the best known on partitions and on highly composite numbers.</p>
+  <ul class="timeline">
+    <li><span class="yr">1914</span><span>Arrives at Trinity; begins collaboration with Hardy</span></li>
+    <li><span class="yr">1916</span><span>Awarded a B.A. by research (for his work on highly composite numbers)</span></li>
+    <li><span class="yr">1918</span><span>Elected Fellow of the Royal Society (February), second Indian so honoured and among the youngest ever</span></li>
+    <li><span class="yr">1918</span><span>Elected Fellow of Trinity College (October), first Indian</span></li>
+  </ul>
+  <div class="grid two">
+    <div class="card">
+      <h4>What Hardy supplied</h4>
+      <p>Training in modern proof, a sense of what was already known, publication in the right journals and institutional recognition.</p>
+    </div>
+    <div class="card">
+      <h4>What Ramanujan supplied</h4>
+      <p>Formulas that came with no obvious route, a feel for numbers and identities, and a sense of what might be true.</p>
+    </div>
+  </div>
+  <p><span class="tag interp">Interpretation</span> Hardy later said that his single greatest contribution to mathematics was the discovery of Ramanujan, and reportedly rated natural ability on a 0-100 scale: himself 25, Littlewood 30, Hilbert 80, Ramanujan 100. The scale is anecdotal and should be quoted as Hardy's own playful judgement.</p>
+</section>
+
+<section id="death">
+  <h2>Illness, return and death</h2><hr class="sec-rule">
+  <p>From 1917 Ramanujan was seriously ill and spent long periods in nursing homes and sanatoria. War shortages, his strict vegetarian diet and the English climate did not help. He returned to India in early 1919, and died at Chetpet, Madras, on <strong>26 April 1920</strong>, aged 32.</p>
+  <p>His final months were extraordinarily productive. In a letter to Hardy in January 1920 he described a new class of functions, the mock theta functions, in the last of his work, discussed later.</p>
+  <div class="note">
+    <h4>Cause of death</h4>
+    <p><span class="tag disputed">Disputed</span> Tuberculosis was the contemporary diagnosis. In 1994 the physician D. A. B. Young re-examined the records and argued for hepatic amoebiasis, a treatable infection, contracted in India. The question remains open because no definitive evidence exists.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part III · The mathematics</p><h2>What he actually did</h2></div>
+
+<section id="method">
+  <h2>How he worked</h2><hr class="sec-rule">
+  <p>Ramanujan worked largely by induction and numerical experiment, spotting patterns and writing down results. He often presented formulas without proofs, and some of his early claims were wrong, for example in his early work on counting primes. Hardy described his knowledge as strangely patchy: deep in some areas, unaware of whole fields such as the theory of functions of a complex variable.</p>
+  <p>His three notebooks contain several thousand claims, and Bruce Berndt spent decades proving them in a multi-volume edition published between 1985 and 2005. Ramanujan himself said that the goddess Namagiri revealed equations to him in dreams.</p>
+  <div class="panel gold-top">
+    <h4>Method versus proof</h4>
+    <dl class="rungs">
+      <dt>Conjecture</dt><dd>He saw a pattern in numerical cases.</dd>
+      <dt>Assertion</dt><dd>He wrote it down with minimal justification.</dd>
+      <dt>Proof</dt><dd>Hardy, and later others, supplied rigorous arguments.</dd>
+      <dt>Verdict</dt><dd>Almost all his claims survived; the field of research they opened is still active.</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="partitions">
+  <h2>Partitions and the circle method</h2><hr class="sec-rule">
+  <p>A <strong>partition</strong> of a number is a way of writing it as a sum of positive whole numbers, ignoring order. The number 4 has five: 4, 3+1, 2+2, 2+1+1, 1+1+1+1. The count p(n) grows enormously: p(100) is above 190 million. Hardy and Ramanujan (1918) derived an asymptotic formula for p(n) using what became known as the <strong>circle method</strong>, a technique later central to analytic number theory. Hans Rademacher refined it into an exact formula in 1937.</p>
+  <p>Ramanujan also noticed striking congruences: p(5n+4) is always divisible by 5, p(7n+5) by 7 and p(11n+6) by 11. Explaining why led to decades of work, including Freeman Dyson's "rank" and later the "crank", and Ken Ono's 2000 result showing similar congruences exist for infinitely many primes.</p>
+  <div class="edge green">
+    <span class="edge-h">Why it matters</span>
+    <p>The circle method became one of the main tools of twentieth-century number theory; the congruences opened the connection between partitions and modular forms.</p>
+  </div>
+</section>
+
+<section id="pi">
+  <h2>Pi, series and modular equations</h2><hr class="sec-rule">
+  <p>In his 1914 paper "Modular equations and approximations to π" he gave rapidly converging series for 1/π. One of them adds roughly <strong>eight correct digits per term</strong>. The Chudnovsky brothers' 1987 variant, which builds on his approach, underlies many modern record computations of π.</p>
+  <p>His related work included integrals, continued fractions, the Rogers-Ramanujan identities (found independently of Leonard Rogers's earlier discovery, and later used in statistical mechanics), and "Ramanujan summation" for divergent series.</p>
+  <div class="note">
+    <h4>A worked example: 1 + 2 + 3 + ... = -1/12</h4>
+    <p>This does not say the ordinary sum equals -1/12; the ordinary sum diverges. It refers to a regularised value, the Riemann zeta function at -1, assigned by analytic continuation. Ramanujan wrote this in his 1913 letter; the same value appears in physics, in calculations of the Casimir effect and in string theory. Always state the qualifier.</p>
+  </div>
+</section>
+
+<section id="numbers">
+  <h2>Number theory: tau, highly composite numbers, 1729</h2><hr class="sec-rule">
+  <div class="grid three">
+    <div class="card">
+      <h4>Highly composite numbers</h4>
+      <p>Numbers with more divisors than any smaller number (12, 24, 36, 60...). His 1915 paper gave a systematic theory and earned his Cambridge degree.</p>
+    </div>
+    <div class="card">
+      <h4>The tau function</h4>
+      <p>Coefficients of a modular form of weight 12. His 1916 conjectures were proved: multiplicativity by Mordell in 1917, and the size bound by Pierre Deligne in 1974, a result that contributed to Deligne's Fields Medal (1978).</p>
+    </div>
+    <div class="card">
+      <h4>Ramanujan primes</h4>
+      <p>In 1919 he gave a short proof of Bertrand's postulate, introducing a sequence of primes now named after him.</p>
+    </div>
+  </div>
+  <div class="edge">
+    <span class="edge-h">1729, the taxi-cab number</span>
+    <p>When Hardy visited him in hospital he mentioned that he arrived in taxi 1729, "a rather dull number". Ramanujan replied that it is the smallest number expressible as a sum of two cubes in two ways: 1&sup3; + 12&sup3; = 9&sup3; + 10&sup3;. The story is well attested in Hardy's own account, and 1729 is now called the Hardy-Ramanujan number.</p>
+  </div>
+</section>
+
+<section id="mock">
+  <h2>Mock theta functions and the Lost Notebook</h2><hr class="sec-rule">
+  <p>In his last letter to Hardy (January 1920) Ramanujan listed 17 "mock theta functions" and claimed they behaved like theta functions without quite being so. For eight decades nobody could say precisely what they were. In 2002 Sander Zwegers showed, in his doctoral work, that they are the holomorphic parts of harmonic Maass forms, which led to the field of mock modular forms.</p>
+  <p>The "Lost Notebook" was discovered by George Andrews in 1976 in the papers of G. N. Watson at Trinity College's Wren Library, containing around 600 formulas from his last year. It has since been edited by Andrews and Berndt.</p>
+  <div class="edge blue">
+    <span class="edge-h">An unexpected application</span>
+    <p>Mock modular forms appear in the counting of quantum states of certain black holes (Dabholkar, Murthy and Zagier, 2012), a century after he wrote them down with no physical motivation.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part IV · Person and legacy</p><h2>Faith, memory and institutions</h2></div>
+
+<section id="faith">
+  <h2>Faith, family and personal life</h2><hr class="sec-rule">
+  <p>Ramanujan was a devout Hindu and a vegetarian who prepared his own food in England. He is quoted as saying an equation meant nothing to him unless it expressed a thought of God; Hardy, an atheist, reported this with respect but did not share it. <span class="tag interp">Interpretation</span> The remark is best read as an expression of how he experienced inspiration, not as a claim about mathematics.</p>
+  <p>His wife Janaki lived on until 1994 and kept his memory alive, while the family did not enjoy the fortunes that his fame might suggest. His marriage, absence and illness left their own tensions: an anxious mother, a young wife in Madras, a son far away.</p>
+  <p>Hardy's later description of him, as gentle, modest and without a trace of ambition beyond mathematics, appears in many accounts. Kanigel's biography adds the loneliness of a young man in wartime England.</p>
+</section>
+
+<section id="legacy">
+  <h2>Recognition and legacy</h2><hr class="sec-rule">
+  <div class="grid two">
+    <div class="panel green-top">
+      <h4>In India</h4>
+      <ul>
+        <li>India issued a postage stamp on his 75th birth anniversary (1962).</li>
+        <li>2012, his 125th anniversary, was declared National Mathematics Year, and <strong>22 December</strong> is National Mathematics Day.</li>
+        <li>The DST-SERB Ramanujan Fellowship supports early-career researchers returning to India.</li>
+      </ul>
+    </div>
+    <div class="panel blue-top">
+      <h4>Worldwide</h4>
+      <ul>
+        <li>The SASTRA Ramanujan Prize (since 2005) honours mathematicians aged 32 or younger, the age at which he died.</li>
+        <li>The ICTP Ramanujan Prize rewards researchers from developing countries.</li>
+        <li>The Ramanujan Journal publishes work in his fields.</li>
+      </ul>
+    </div>
+  </div>
+  <p>His mathematics has outlived his notoriety. <strong>Ramanujan graphs</strong> (Lubotzky, Phillips and Sarnak, 1988) are used in network design and coding theory; his pi series are used in computation; the Rogers-Ramanujan identities appear in physics; and a 2019 Technion project, the "Ramanujan Machine", generates conjectures in his style by algorithm.</p>
+  <p>Popular culture includes Kanigel's 1991 biography and the 2015 film <em>The Man Who Knew Infinity</em> with Dev Patel and Jeremy Irons.</p>
+</section>
+
+<!-- ============ KNOWLEDGE TOOLKIT ============ -->
+<div class="part-head"><p>Knowledge toolkit</p><h2>Analysis, practice and revision</h2></div>
+
+<section id="perspectives">
+  <h2>Perspectives and controversies</h2><hr class="sec-rule">
+  <div class="tablewrap">
+    <table>
+      <caption>Contested questions about Ramanujan</caption>
+      <thead><tr><th>Question</th><th>Positions</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Cause of death</td><td>Tuberculosis (contemporary) versus hepatic amoebiasis (Young, 1994)</td><td><span class="tag disputed">Disputed</span></td></tr>
+        <tr><td>Was he "untrained"?</td><td>No degree and little formal study, but he had read Carr and worked in an active mathematical community; "self-taught genius" simplifies</td><td><span class="tag interp">Interpretation</span></td></tr>
+        <tr><td>Role of Hardy</td><td>Rescuer and rigour-giver, or an interpreter who shaped Ramanujan's work toward Hardy's own fields</td><td><span class="tag interp">Interpretation</span></td></tr>
+        <tr><td>Colonial angle</td><td>The Empire's institutions neglected him, yet British individuals rescued him; both are true</td><td><span class="tag interp">Interpretation</span></td></tr>
+        <tr><td>Divine inspiration</td><td>Literal belief, versus a metaphor for subconscious pattern-finding</td><td><span class="tag interp">Interpretation</span></td></tr>
+        <tr><td>Hardy's 0-100 scale</td><td>Widely quoted, but anecdotal</td><td><span class="tag verify">Re-verify</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><span class="tag fact">Established</span> The Wren Library discovery of the Lost Notebook, the 1913 letter, the election to the Royal Society and the 1729 story are documented.</p>
+</section>
+
+<section id="scenarios">
+  <h2>Scenarios and options</h2><hr class="sec-rule">
+  <p class="lede">Ramanujan's story is also a policy question: how should a state and its institutions find and keep exceptional talent without crushing it?</p>
+  <div class="grid two">
+    <div class="panel red-top">
+      <h4>Scenario A: The talent is missed</h4>
+      <p>A gifted student in a small town fails a standardised exam and drops out. No patron reads their work. This was the likely end of the story had Aiyar and Hardy not read the letter.</p>
+    </div>
+    <div class="panel green-top">
+      <h4>Scenario B: The talent is found but loses its freedom</h4>
+      <p>Institutions pull the person into the standard degree-and-job route, favouring conformity over the original line of work.</p>
+    </div>
+  </div>
+  <h3>Options for a modern system</h3>
+  <ul>
+    <li><strong>Open channels:</strong> a standing route by which unconventional work can be sent to specialists, with trade-offs in volume and review quality.</li>
+    <li><strong>Flexible entry:</strong> allow assessed exceptions to formal requirements, balanced against fairness and consistency.</li>
+    <li><strong>Mentorship and rigour:</strong> pair originality with a trained collaborator, as in the Hardy model, at the risk of over-shaping the work.</li>
+    <li><strong>Welfare and health:</strong> money, diet and medical care were as decisive as mathematics in 1917-19.</li>
+  </ul>
+  <div class="panel gold-top">
+    <h4>One worked example: answering "What can an officer learn from Ramanujan?"</h4>
+    <dl class="rungs">
+      <dt>Define</dt><dd>Talent plus support plus discipline.</dd>
+      <dt>Evidence</dt><dd>Carr's Synopsis, the Port Trust, the 1913 letter, Cambridge.</dd>
+      <dt>Link to OLQs</dt><dd>Perseverance, initiative, reasoning ability, humility.</dd>
+      <dt>Counter-view</dt><dd>His example is exceptional and cannot be a recipe.</dd>
+      <dt>Close</dt><dd>Recognise and enable talent in your team; do not wait for it to arrive in a perfect form.</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="qbank">
+  <h2>Practice bank: questions</h2><hr class="sec-rule">
+  <p class="lede">Answer each aloud, standing, in ninety seconds.</p>
+  <ol class="qbank">
+    <li>Who was Ramanujan, and why is 22 December observed as National Mathematics Day?</li>
+    <li>What was Carr's Synopsis, and what role did it play in his development?</li>
+    <li>Why did he fail to complete a degree in India?</li>
+    <li>Who helped him in Madras, and what did each person contribute?</li>
+    <li>What was in his letter to Hardy, and why did Hardy take it seriously?</li>
+    <li>What did Hardy contribute to his work, and what did Ramanujan contribute to Hardy's?</li>
+    <li>Explain the idea of a partition, with an example.</li>
+    <li>What is the story of 1729?</li>
+    <li>What does "1 + 2 + 3 + ... = -1/12" actually mean?</li>
+    <li>What are mock theta functions, and why did they matter after his death?</li>
+    <li>What happened to the Lost Notebook?</li>
+    <li>What are the two explanations of his illness?</li>
+    <li>Name three awards or institutions that carry his name.</li>
+    <li>What can a military leader learn from Ramanujan's story about talent and institutions?</li>
+  </ol>
+</section>
+
+<section id="debates">
+  <h2>Debate motions</h2><hr class="sec-rule">
+  <ol class="dbank">
+    <li>This house believes that formal degrees are a poor measure of ability.</li>
+    <li>This house believes that Ramanujan's story is more about institutions than about genius.</li>
+    <li>This house believes mathematical results without proof have real value.</li>
+    <li>This house believes that colonial India's neglect of talent was the system, not an accident.</li>
+    <li>This house believes that talent needs a patron to survive.</li>
+    <li>This house believes that India should invest more in theoretical science.</li>
+    <li>This house believes that religious inspiration and rational inquiry can coexist.</li>
+  </ol>
+</section>
+
+<section id="chronology">
+  <h2>Master chronology</h2><hr class="sec-rule">
+  <ul class="timeline">
+    <li><span class="yr">1887</span><span>Born 22 December, Erode</span></li>
+    <li><span class="yr">c. 1903</span><span>Reads Carr's Synopsis</span></li>
+    <li><span class="yr">1904</span><span>Scholarship at Government College, Kumbakonam</span></li>
+    <li><span class="yr">1909</span><span>Marries Janaki</span></li>
+    <li><span class="yr">1910</span><span>Meets V. Ramaswamy Aiyar</span></li>
+    <li><span class="yr">1911</span><span>First paper published (Journal of the Indian Mathematical Society)</span></li>
+    <li><span class="yr">1912</span><span>Clerk, Madras Port Trust</span></li>
+    <li><span class="yr">1913</span><span>31 January: letter to Hardy; Madras University scholarship</span></li>
+    <li><span class="yr">1914</span><span>Sails for England; "Modular equations and approximations to pi"</span></li>
+    <li><span class="yr">1915</span><span>Paper on highly composite numbers</span></li>
+    <li><span class="yr">1916</span><span>B.A. by research, Cambridge</span></li>
+    <li><span class="yr">1917</span><span>Falls seriously ill</span></li>
+    <li><span class="yr">1918</span><span>Hardy-Ramanujan partition formula; FRS; Fellow of Trinity</span></li>
+    <li><span class="yr">1919</span><span>Returns to India</span></li>
+    <li><span class="yr">1920</span><span>Last letter on mock theta functions; dies 26 April</span></li>
+    <li><span class="yr">1937</span><span>Rademacher's exact partition formula</span></li>
+    <li><span class="yr">1962</span><span>Indian postage stamp</span></li>
+    <li><span class="yr">1974</span><span>Deligne proves the Ramanujan conjecture on tau</span></li>
+    <li><span class="yr">1976</span><span>Andrews finds the Lost Notebook</span></li>
+    <li><span class="yr">1991</span><span>Kanigel's biography</span></li>
+    <li><span class="yr">2002</span><span>Zwegers explains mock theta functions</span></li>
+    <li><span class="yr">2012</span><span>National Mathematics Year; 22 December named National Mathematics Day</span></li>
+    <li><span class="yr">2015</span><span>Film <em>The Man Who Knew Infinity</em></span></li>
+  </ul>
+</section>
+
+<section id="glossary">
+  <h2>Glossary</h2><hr class="sec-rule">
+  <dl class="term">
+    <dt>Partition</dt><dd>A way of writing a whole number as a sum of positive whole numbers, order ignored.</dd>
+    <dt>Circle method</dt><dd>Analytic technique, developed by Hardy, Ramanujan and Littlewood, for counting solutions to arithmetic problems.</dd>
+    <dt>Asymptotic formula</dt><dd>A formula that becomes accurate in relative terms as the input grows.</dd>
+    <dt>Congruence</dt><dd>Equality of remainders on division: 14 and 4 are congruent modulo 5.</dd>
+    <dt>Highly composite number</dt><dd>A number with more divisors than any smaller positive number.</dd>
+    <dt>Tau function</dt><dd>Sequence of coefficients of a weight-12 modular form studied by Ramanujan.</dd>
+    <dt>Modular form</dt><dd>A highly symmetric complex function with deep links to number theory.</dd>
+    <dt>Mock theta function</dt><dd>One of Ramanujan's last functions; later understood as the holomorphic part of a harmonic Maass form.</dd>
+    <dt>Divergent series</dt><dd>An infinite sum that does not settle to a finite value in the ordinary sense.</dd>
+    <dt>Zeta regularisation</dt><dd>Assigning a finite value to a divergent sum by analytic continuation.</dd>
+    <dt>Taxi-cab number</dt><dd>The smallest number expressible as a sum of two cubes in n ways; 1729 for n = 2.</dd>
+    <dt>Ramanujan graph</dt><dd>A highly connected sparse graph, defined by spectral properties, used in networks and coding.</dd>
+    <dt>Fellow of the Royal Society (FRS)</dt><dd>Election to Britain's national academy of sciences.</dd>
+    <dt>Lost Notebook</dt><dd>Loose sheets of Ramanujan's last year, found in 1976.</dd>
+  </dl>
+</section>
+
+<section id="revision">
+  <h2>Rapid revision sheet</h2><hr class="sec-rule">
+  <div class="note">
+    <h4>One-page summary</h4>
+    <ul>
+      <li>Born 22 December 1887 (Erode), raised in Kumbakonam; died 26 April 1920 (Madras), aged 32.</li>
+      <li>Carr's Synopsis shaped his early work; he left college without a degree.</li>
+      <li>Patrons: Ramaswamy Aiyar, Narayana Iyer, Francis Spring; job at Madras Port Trust.</li>
+      <li>31 January 1913 letter to Hardy; at Trinity 1914-1919; B.A. by research 1916; FRS and Trinity Fellow 1918.</li>
+      <li>Partitions (Hardy-Ramanujan formula, circle method, congruences mod 5, 7, 11).</li>
+      <li>Pi series (about 8 digits per term); highly composite numbers; tau conjecture proved by Deligne (1974).</li>
+      <li>1729 = 1&sup3; + 12&sup3; = 9&sup3; + 10&sup3;.</li>
+      <li>Mock theta functions (1920) explained by Zwegers (2002); Lost Notebook found 1976 (Andrews).</li>
+      <li>Cause of death disputed: tuberculosis or hepatic amoebiasis.</li>
+      <li>Legacy: National Mathematics Day (22 December), SASTRA and ICTP prizes, Ramanujan graphs, Kanigel's book, 2015 film.</li>
+      <li>SSB takeaways: perseverance, patrons and institutions, rigour with originality, humility.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer>
+  <p>Compiled from open sources. Study aid only, not an official publication. Verify specific dates and figures against primary sources before quoting them formally.</p>
+  <p>Source &amp; contributions: <a href="https://github.com/mohitkushwaha0601/matre">github.com/mohitkushwaha0601/matre</a></p>
+</footer>
+
+</body>
+</html>
