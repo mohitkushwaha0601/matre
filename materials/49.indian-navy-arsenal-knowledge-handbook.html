@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Indian Navy's Arsenal — A Deep Knowledge Handbook</title>
+<meta name="description" content="A 22-section handbook on the Indian Navy's arsenal: carriers, destroyers, frigates, submarines, naval aviation, missiles, torpedoes, sensors, shipbuilding, gaps and SSB practice material.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0B1B2E;
+  --ink-soft:#4A5E75;
+  --paper:#F1F3F6;
+  --surface:#FFFFFF;
+  --surface-2:#E3E8EF;
+  --rule:#C5CED9;
+  --rule-strong:#96A4B6;
+  --red:#B8481A;
+  --blue:#1D5A9A;
+  --gold:#9C7412;
+  --green:#1F6B4F;
+  --hero-bg:#0A1A2F;
+  --hero-ink:#F1F3F6;
+  --hero-dim:#9FB1C6;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ink:#E4E9F0;
+    --ink-soft:#A3B2C4;
+    --paper:#09131F;
+    --surface:#101E30;
+    --surface-2:#182A40;
+    --rule:#2A3D55;
+    --rule-strong:#46607F;
+    --red:#F0894F;
+    --blue:#78B2EC;
+    --gold:#DDB257;
+    --green:#5BC297;
+    --hero-bg:#060E18;
+    --hero-ink:#E4E9F0;
+    --hero-dim:#8A9BB0;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E4E9F0;
+  --ink-soft:#A3B2C4;
+  --paper:#09131F;
+  --surface:#101E30;
+  --surface-2:#182A40;
+  --rule:#2A3D55;
+  --rule-strong:#46607F;
+  --red:#F0894F;
+  --blue:#78B2EC;
+  --gold:#DDB257;
+  --green:#5BC297;
+  --hero-bg:#060E18;
+  --hero-ink:#E4E9F0;
+  --hero-dim:#8A9BB0;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1.5rem);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
+.flagstrip{display:flex;height:12px}
+.flagstrip span{flex:1}
+.f1{background:#FF9933}
+.f2{background:#FFFFFF}
+.f3{background:#138808}
+.f4{background:#000080}
+.f5{background:#0A1A2F;box-shadow:inset 0 0 0 1px rgba(255,255,255,.22)}
+.f6{background:linear-gradient(90deg,#FF9933 33%,#FFFFFF 33%,#FFFFFF 66%,#138808 66%)}
+.f7{background:linear-gradient(90deg,#000080 50%,#E3B23C 50%)}
+.hero-inner{max-width:1180px;margin:0 auto;padding:3.2rem 1.5rem 0}
+.kicker{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--hero-dim);margin:0 0 .8rem}
+.hero h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.8rem,5vw,2.9rem);line-height:1.15;margin:0 0 .6rem;max-width:26ch}
+.hero-sub{margin:0;color:var(--hero-dim);max-width:68ch}
+.stamp{margin-top:1.6rem;font-size:.86rem;color:var(--hero-dim);display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+.stamp b{color:var(--hero-ink);font-weight:600}
+
+.shell{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem;display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media (min-width:1000px){
+  .shell{grid-template-columns:255px minmax(0,1fr);gap:3.5rem;padding-top:2.8rem}
+}
+nav.toc{font-size:.9rem}
+@media (min-width:1000px){
+  .toc-mobile{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2rem);align-self:start;max-height:calc(100vh - 5rem);overflow-y:auto}
+}
+nav.toc h2{font-family:"Zilla Slab",Georgia,serif;font-size:.92rem;font-weight:600;margin:0 0 .7rem;padding-bottom:.45rem;border-bottom:2px solid var(--rule-strong)}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc}
+nav.toc li{border-bottom:1px solid var(--rule)}
+nav.toc li:not(.part){counter-increment:toc}
+nav.toc a{display:flex;gap:.6rem;padding:.4rem 0;color:var(--ink-soft);text-decoration:none}
+nav.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--rule-strong);font-variant-numeric:tabular-nums;flex:none}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--red)}
+nav.toc .part{border:0;margin:1.1rem 0 .3rem;font-family:"Zilla Slab",Georgia,serif;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--rule-strong)}
+nav.toc .part::before{content:none}
+.toc-mobile{display:block}
+@media (min-width:1000px){.toc-mobile summary{display:none}}
+.toc-mobile summary{cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:600;padding:.7rem .9rem;background:var(--surface);border:1px solid var(--rule);margin-bottom:1rem}
+@media (max-width:999px){
+  .toc-mobile[open] nav.toc{padding:0 .9rem 1rem}
+  .toc-mobile:not([open]) nav.toc{display:none}
+}
+
+main{min-width:0}
+section{margin:0 0 3.6rem;scroll-margin-top:1.5rem}
+section > h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.45rem,3.6vw,1.95rem);line-height:1.2;margin:0 0 .3rem}
+.part-head{margin:4rem 0 2.2rem;padding:1.1rem 0 .9rem;border-top:4px double var(--rule-strong);border-bottom:1px solid var(--rule)}
+.part-head p{margin:0;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.part-head h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.3rem,3.2vw,1.7rem);margin:.3rem 0 0;color:var(--ink)}
+.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.16rem;margin:2rem 0 .5rem;line-height:1.3}
+h4{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1rem;margin:1.4rem 0 .35rem;color:var(--ink)}
+p{margin:0 0 .95rem;max-width:74ch}
+ul,ol{margin:0 0 1rem;padding-left:1.25rem;max-width:74ch}
+li{margin-bottom:.35rem}
+li::marker{color:var(--rule-strong)}
+strong{font-weight:600}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+.lede{font-size:1.06rem;color:var(--ink-soft);max-width:70ch}
+
+.tablewrap{overflow-x:auto;margin:0 0 1.3rem;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.92rem}
+caption{text-align:left;padding:.7rem .85rem .1rem;font-weight:600;color:var(--ink-soft);font-size:.9rem}
+th,td{text-align:left;padding:.55rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{background:var(--surface-2);font-weight:600;border-bottom:2px solid var(--rule-strong);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+
+.edge{background:var(--surface);border-left:4px solid var(--red);padding:.9rem 1.1rem;margin:1.4rem 0;max-width:74ch}
+.edge p:last-child,.edge ul:last-child,.edge ol:last-child{margin-bottom:0}
+.edge .edge-h{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);display:block;margin-bottom:.25rem;font-size:.95rem}
+.edge.gold{border-left-color:var(--gold)}
+.edge.gold .edge-h{color:var(--gold)}
+.edge.blue{border-left-color:var(--blue)}
+.edge.blue .edge-h{color:var(--blue)}
+.edge.green{border-left-color:var(--green)}
+.edge.green .edge-h{color:var(--green)}
+
+.note{background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;border:1px solid var(--rule);font-size:.95rem}
+.note p:last-child,.note ul:last-child,.note ol:last-child{margin-bottom:0}
+.note h4{margin-top:0}
+
+.panel{background:var(--surface);border:1px solid var(--rule);padding:1rem 1.1rem}
+.panel h4{margin-top:0}
+.panel ul,.panel ol{margin-bottom:0}
+.panel p:last-child{margin-bottom:0}
+.panel.blue-top{border-top:3px solid var(--blue)}
+.panel.red-top{border-top:3px solid var(--red)}
+.panel.gold-top{border-top:3px solid var(--gold)}
+.panel.green-top{border-top:3px solid var(--green)}
+
+.timeline{list-style:none;padding:0;margin:1rem 0 1.4rem;max-width:74ch}
+.timeline li{display:grid;grid-template-columns:8.2rem 1fr;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--rule);margin:0}
+.timeline li:last-child{border-bottom:0}
+.timeline .yr{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);font-variant-numeric:tabular-nums}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:.1rem}}
+
+.qbank{counter-reset:q;list-style:none;padding:0;max-width:74ch}
+.qbank li{counter-increment:q;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.qbank li::before{content:counter(q,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.qbank li:last-child{border-bottom:0}
+
+.dbank{counter-reset:d;list-style:none;padding:0;max-width:74ch}
+.dbank li{counter-increment:d;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.dbank li::before{content:counter(d,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.dbank li:last-child{border-bottom:0}
+
+.grid{display:grid;gap:1rem}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
+
+.card{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--red);padding:1rem 1.1rem}
+.card h4{margin:0 0 .45rem;font-size:1rem}
+.card p:last-child{margin-bottom:0}
+
+.term{max-width:74ch;margin:0 0 1.2rem}
+.term dt{font-weight:600;margin-top:.8rem}
+.term dd{margin:.15rem 0 0;color:var(--ink-soft)}
+
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:.1rem .45rem;border:1px solid var(--rule-strong);color:var(--ink-soft);margin-right:.35rem;vertical-align:middle}
+.tag.fact{border-color:var(--green);color:var(--green)}
+.tag.interp{border-color:var(--gold);color:var(--gold)}
+.tag.disputed{border-color:var(--red);color:var(--red)}
+.tag.verify{border-color:var(--blue);color:var(--blue)}
+.spaced{margin-top:.6rem}
+
+footer{border-top:3px double var(--rule-strong);margin-top:2rem;padding-top:1.4rem;color:var(--ink-soft);font-size:.9rem;max-width:74ch}
+footer a{color:var(--blue)}
+
+.home-btn{position:fixed;top:16px;left:16px;z-index:60;display:inline-flex;align-items:center;gap:.4rem;background:#14202B;color:#F1F2EC;border:1px solid rgba(241,242,236,.25);padding:.45rem .85rem;border-radius:999px;font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.82rem;font-weight:600;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.3);transition:background .15s ease,transform .15s ease}
+.home-btn:hover,.home-btn:focus-visible{background:#BF2F26;transform:translateY(-1px)}
+.home-btn svg{width:14px;height:14px;flex:none}
+@media print{.home-btn{display:none}}
+
+@media print{
+  .hero{background:none;color:#000;padding-bottom:1rem}
+  .hero-sub,.stamp{color:#333}
+  .flagstrip,.toc-mobile{display:none}
+  .shell{display:block;padding:0}
+  section{page-break-inside:auto;margin-bottom:1.8rem}
+  h2,h3{page-break-after:avoid}
+  .panel,.edge,.note,.tablewrap{page-break-inside:avoid}
+  .part-head{page-break-before:always}
+  body{font-size:10.5pt;background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+
+<a class="home-btn" href="../index.html" aria-label="Back to Handbooks homepage" title="Back to Handbooks homepage">
+  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
+  <span>Home</span>
+</a>
+
+<header class="hero">
+  <div class="flagstrip" aria-hidden="true">
+    <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f5"></span><span class="f6"></span><span class="f7"></span>
+  </div>
+  <div class="hero-inner">
+    <p class="kicker">Warships &bull; submarines &bull; naval aviation &bull; weapons &bull; SSB preparation</p>
+    <h1>The Indian Navy's Arsenal</h1>
+    <p class="hero-sub">What the Navy actually fields: carriers, destroyers, frigates, corvettes, conventional and nuclear submarines, aircraft, missiles, torpedoes and sensors, with the shipbuilding base behind them, the gaps and the strategic debates. Written from memory: class counts, commissioning dates, ranges and order numbers change often and are marked Verify; check them against the Indian Navy website and Ministry of Defence releases.</p>
+    <p class="stamp">
+      <span>Sections <b>22</b></span>
+      <span>Carriers <b>2 (Vikramaditya, Vikrant)</b></span>
+      <span>Submarine arms <b>SSK, SSN lease, SSBN</b></span>
+      <span>Key missile <b>BrahMos</b></span>
+      <span>Read time <b>2-3 hrs</b></span>
+    </p>
+  </div>
+</header>
+
+<div class="shell">
+
+<details class="toc-mobile" open>
+  <summary>Contents</summary>
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li class="part">Part I &middot; Foundations</li>
+      <li><a href="#concept">What an arsenal is</a></li>
+      <li><a href="#structure">Fleet structure and numbers</a></li>
+      <li><a href="#history">From inheritance to indigenous build</a></li>
+
+      <li class="part">Part II &middot; Surface fleet</li>
+      <li><a href="#carriers">Aircraft carriers</a></li>
+      <li><a href="#destroyers">Destroyers</a></li>
+      <li><a href="#frigates">Frigates</a></li>
+      <li><a href="#corvettes">Corvettes, OPVs and small craft</a></li>
+      <li><a href="#amphib">Amphibious and support ships</a></li>
+
+      <li class="part">Part III &middot; Under the sea</li>
+      <li><a href="#ssk">Conventional submarines</a></li>
+      <li><a href="#nuclear">Nuclear submarines</a></li>
+
+      <li class="part">Part IV &middot; Air, weapons and sensors</li>
+      <li><a href="#aviation">Naval aviation</a></li>
+      <li><a href="#missiles">Missiles</a></li>
+      <li><a href="#guns">Torpedoes, guns, mines and defence</a></li>
+      <li><a href="#sensors">Sensors, command and special forces</a></li>
+
+      <li class="part">Part V &middot; Recent inductions</li>
+      <li><a href="#recent">Inductions since 2024</a></li>
+      <li><a href="#pipeline">The pipeline and what comes next</a></li>
+
+      <li class="part">Part VI &middot; Industry and strategy</li>
+      <li><a href="#industry">Shipbuilding and indigenisation</a></li>
+      <li><a href="#gaps">Gaps and debates</a></li>
+      <li><a href="#compare">Comparison with China and Pakistan</a></li>
+
+      <li class="part">Knowledge toolkit</li>
+      <li><a href="#perspectives">Perspectives and facts</a></li>
+      <li><a href="#qbank">Questions and motions</a></li>
+      <li><a href="#chronology">Chronology, glossary and revision</a></li>
+    </ol>
+  </nav>
+</details>
+
+<main>
+
+<div class="part-head"><p>Part I &middot; Foundations</p><h2>What the Navy has, and why it has it</h2></div>
+
+<section id="concept">
+  <h2>What an arsenal is</h2><hr class="sec-rule">
+  <p class="lede">An arsenal is not a list of ships. It is the set of platforms, weapons, sensors and people that together let a navy do four jobs: deny, control, project and deter.</p>
+  <ul>
+    <li><strong>Platforms</strong> carry things: ships, submarines, aircraft, unmanned vehicles.</li>
+    <li><strong>Weapons</strong> hurt things: missiles, torpedoes, guns, mines, depth charges.</li>
+    <li><strong>Sensors</strong> find things: radar, sonar, electronic-warfare suites, satellites.</li>
+    <li><strong>Command and communications</strong> connect all three, so a fleet acts as one.</li>
+  </ul>
+  <div class="edge blue">
+    <span class="edge-h">The core idea</span>
+    <p>A ship is only as good as its weapons and sensors, and a weapon is only as good as the sensor that cues it. Always describe a platform by its <strong>role</strong>, its <strong>main weapons</strong> and its <strong>sensors</strong>, not by tonnage alone.</p>
+  </div>
+  <h4>The four naval roles in one line each</h4>
+  <dl class="term">
+    <dt>Sea denial</dt><dd>Stop an adversary using an area. Submarines and anti-ship missiles are the classic tools.</dd>
+    <dt>Sea control</dt><dd>Use an area yourself and protect shipping in it. Needs surface ships, air cover and anti-submarine capability.</dd>
+    <dt>Power projection</dt><dd>Reach land from the sea: carrier aircraft, land-attack missiles, amphibious forces.</dd>
+    <dt>Deterrence</dt><dd>Nuclear and conventional forces that make an adversary expect a cost. The nuclear-armed submarine is the sea leg of the triad.</dd>
+  </dl>
+</section>
+
+<section id="structure">
+  <h2>Fleet structure and numbers</h2><hr class="sec-rule">
+  <p>The Navy is organised into three operational commands and several supporting ones.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Principal commands <span class="tag verify">Verify</span></caption>
+      <thead><tr><th>Command</th><th>Headquarters</th><th>Area and main role</th></tr></thead>
+      <tbody>
+        <tr><td>Western Naval Command</td><td>Mumbai</td><td>Arabian Sea; the Western Fleet; main carrier and destroyer base</td></tr>
+        <tr><td>Eastern Naval Command</td><td>Visakhapatnam</td><td>Bay of Bengal; the Eastern Fleet; main submarine and nuclear-submarine base</td></tr>
+        <tr><td>Southern Naval Command</td><td>Kochi</td><td>Training, and the bulk of Navy schools; maritime surveillance</td></tr>
+        <tr><td>Andaman and Nicobar Command</td><td>Port Blair</td><td>Tri-service command watching the Malacca approaches</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>On numbers: the Navy is usually described as having <strong>roughly 130 to 150 ships and submarines</strong> and a few hundred aircraft, with an aspiration, repeatedly stated by Navy leadership, of reaching about <strong>175 or more</strong> ships in the early 2030s. <span class="tag verify">Verify current figures</span> Counts differ between sources because small patrol craft, auxiliaries and ships awaiting retirement are counted differently.</p>
+  <div class="edge gold">
+    <span class="edge-h">Check before quoting</span>
+    <p>Never quote a single fleet number without saying "about" and naming a source and year. Dozens of ships are under construction at any time, and delivery dates slip.</p>
+  </div>
+</section>
+
+<section id="history">
+  <h2>From inheritance to indigenous build</h2><hr class="sec-rule">
+  <ul class="timeline">
+    <li><span class="yr">1947</span><span>A small Royal Indian Navy of sloops and minesweepers, mostly British designs.</span></li>
+    <li><span class="yr">1957</span><span>INS Vikrant (the first, ex-HMS Hercules) acquired; India becomes a carrier navy.</span></li>
+    <li><span class="yr">1960s</span><span>Soviet supply begins: Petya frigates, Foxtrot submarines, Osa missile boats.</span></li>
+    <li><span class="yr">1971</span><span>Osa missile boats and Operation Trident, then Python, strike Karachi. Missile boats become a lasting doctrine.</span></li>
+    <li><span class="yr">1980s</span><span>Indigenous design begins: Godavari-class frigates (Project 16); Delhi class follows. First leased nuclear submarine (Chakra) in 1988.</span></li>
+    <li><span class="yr">1999-2000s</span><span>Shivalik frigates, Talwar-class frigates, Scorpene deal (2005), Vikramaditya contracted (2004).</span></li>
+    <li><span class="yr">2009</span><span>INS Arihant launched, the first indigenous nuclear-powered submarine.</span></li>
+    <li><span class="yr">2013-22</span><span>Vikramaditya (2013) and Vikrant (2022) commissioned.</span></li>
+    <li><span class="yr">2020s</span><span>Nilgiri and Visakhapatnam classes, the Kalvari class completes, and nearly all current orders are placed with Indian yards.</span></li>
+  </ul>
+  <p>The pattern is steady: <strong>buy, license-build, then design</strong>. The Navy has been the most successful service in indigenous warship design, because ships can be designed and built in India even when many weapons and engines still come from abroad.</p>
+</section>
+
+<div class="part-head"><p>Part II &middot; Surface fleet</p><h2>Carriers, destroyers, frigates and the rest</h2></div>
+
+<section id="carriers">
+  <h2>Aircraft carriers</h2><hr class="sec-rule">
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>INS Vikramaditya</h4>
+      <ul>
+        <li>Former Soviet <em>Admiral Gorshkov</em>, a Kiev-class heavy aviation cruiser, rebuilt in Russia.</li>
+        <li>Commissioned in <strong>2013</strong> after years of delay and cost increases.</li>
+        <li>About 45,000 tonnes; STOBAR (short take-off but arrested recovery) with a ski-jump.</li>
+        <li>Carries MiG-29K fighters and helicopters.</li>
+      </ul>
+    </div>
+    <div class="panel red-top">
+      <h4>INS Vikrant (IAC-1)</h4>
+      <ul>
+        <li>India's first indigenous carrier, built at <strong>Cochin Shipyard</strong>.</li>
+        <li>Commissioned on <strong>2 September 2022</strong>.</li>
+        <li>About 40,000 to 45,000 tonnes; also STOBAR. <span class="tag verify">Verify figures</span></li>
+        <li>Air wing: MiG-29K, Kamov and MH-60R helicopters, with Rafale M and other aircraft planned.</li>
+      </ul>
+    </div>
+  </div>
+  <p class="spaced"><strong>Why carriers matter:</strong> they put air power at sea, provide fleet air defence, and give reach over the Indian Ocean without relying on foreign bases. <strong>Why they are debated:</strong> they are expensive, they need a large escort group, and they are vulnerable to submarines and long-range anti-ship missiles. A third carrier, sometimes called IAC-2 or a larger catapult-launched design, has been discussed for years without a firm decision. <span class="tag verify">Verify</span></p>
+  <div class="edge">
+    <span class="edge-h">Exam point</span>
+    <p>STOBAR versus CATOBAR: STOBAR (ski-jump) is simpler and cheaper but limits aircraft weight and sortie rate. CATOBAR (catapult) launches heavier aircraft and larger sensors but needs more power and complexity. India's current carriers are STOBAR, and the debate on the next one is largely about this choice.</p>
+  </div>
+  <p>INS Viraat, the former HMS Hermes, served until 2017 and was India's only carrier for a time after Vikrant (the first) retired in 1997.</p>
+</section>
+
+<section id="destroyers">
+  <h2>Destroyers</h2><hr class="sec-rule">
+  <p>Destroyers are the fleet's main air-defence and strike escorts, usually armed with long-range surface-to-air missiles, anti-ship missiles and anti-submarine systems.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Indian destroyer classes <span class="tag verify">Verify counts and status</span></caption>
+      <thead><tr><th>Class (project)</th><th>Ships</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Visakhapatnam class (P-15B)</td><td>Visakhapatnam, Mormugao, Imphal, Surat</td><td>Stealth-shaped, about 7,400 t; BrahMos, Barak-8 (MRSAM), vertical launch; the most advanced class; built at Mazagon Dock</td></tr>
+        <tr><td>Kolkata class (P-15A)</td><td>Kolkata, Kochi, Chennai</td><td>About 7,000+ t; BrahMos and Barak-8; entered service 2014-16</td></tr>
+        <tr><td>Delhi class (P-15)</td><td>Delhi, Mumbai, Mysore</td><td>Older; BrahMos upgrades fitted to some; first major Indian-designed destroyers</td></tr>
+        <tr><td>Rajput class (Kashin)</td><td>Remaining ships</td><td>Soviet-built; being retired. <span class="tag verify">Verify</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The <strong>Kolkata and Visakhapatnam</strong> classes are the high end of the Indian build. They share the Barak-8 missile, developed jointly with Israel, and the BrahMos, developed with Russia. The ships also use a mix of imported and Indian sensors, including Israeli multi-function radar and Indian radar and sonar. <span class="tag interp">Interpretation</span></p>
+</section>
+
+<section id="frigates">
+  <h2>Frigates</h2><hr class="sec-rule">
+  <div class="tablewrap">
+    <table>
+      <caption>Indian frigate classes <span class="tag verify">Verify counts and status</span></caption>
+      <thead><tr><th>Class (project)</th><th>Ships</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Nilgiri class (P-17A)</td><td>Seven ships: Nilgiri, Himgiri, Udaygiri, Taragiri, Dunagiri, Mahendragiri, Vindhyagiri</td><td>Stealth follow-on to Shivalik; built at Mazagon Dock and GRSE; commissioning from 2025</td></tr>
+        <tr><td>Shivalik class (P-17)</td><td>Shivalik, Satpura, Sahyadri</td><td>First Indian stealth frigates; BrahMos fitted</td></tr>
+        <tr><td>Talwar and Teg class (Krivak III)</td><td>Six Russian-built: Talwar, Trishul, Tabar, Teg, Tarkash, Trikand</td><td>Fitted with Klub or Kalibr-family missiles and BrahMos; follow-on ships Tushil and Tamal built in Russia and Goa. <span class="tag verify">Verify</span></td></tr>
+        <tr><td>Brahmaputra class (P-16A)</td><td>Brahmaputra, Betwa, Beas</td><td>Improved Godavari; ageing</td></tr>
+        <tr><td>Godavari class (P-16)</td><td>Remaining ships</td><td>First Indian frigates of 1980s design; being retired</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>A <strong>frigate</strong> is smaller and cheaper than a destroyer and often specialises in anti-submarine work and escort. In practice, Indian frigates and destroyers overlap, and the names reflect project history as much as role.</p>
+</section>
+
+<section id="corvettes">
+  <h2>Corvettes, OPVs and small craft</h2><hr class="sec-rule">
+  <ul>
+    <li><strong>Kamorta class (P-28):</strong> four anti-submarine corvettes built in India (Kamorta, Kadmatt, Kiltan, Kavaratti), with high indigenous content in steel and sensors.</li>
+    <li><strong>Kora, Khukri, Veer classes:</strong> missile corvettes and missile craft of Soviet lineage; ageing.</li>
+    <li><strong>Next Generation Corvettes and Missile Vessels:</strong> replacements planned or ordered; the programme has had delays. <span class="tag verify">Verify</span></li>
+    <li><strong>Anti-Submarine Warfare Shallow Water Craft (ASW SWC):</strong> a series of 16 small, quiet ships for coastal sub-hunting, starting with INS Arnala in 2025. <span class="tag verify">Verify</span></li>
+    <li><strong>Offshore patrol vessels:</strong> Saryu class and others, used for EEZ patrol and anti-piracy.</li>
+    <li><strong>Mine-countermeasure vessels:</strong> an acknowledged gap; the old Pondicherry class are retired or old and the replacement programme has stalled.</li>
+    <li><strong>Survey vessels:</strong> Sandhayak class and Nistar-class divers' support ships, which also serve submarine rescue.</li>
+  </ul>
+  <p>These small ships are the <strong>workhorses</strong> of a navy: they patrol, escort and guard ports, far more than the headline ships do.</p>
+</section>
+
+<section id="amphib">
+  <h2>Amphibious and support ships</h2><hr class="sec-rule">
+  <ul>
+    <li><strong>Landing Platform Dock:</strong> INS Jalashwa, the former USS <em>Trenton</em>, bought from the US in 2007; its purchase and use gave India amphibious experience. New LPDs have been proposed. <span class="tag verify">Verify</span></li>
+    <li><strong>Landing Ship Tank (Large):</strong> the Magar and Shardul classes, plus smaller landing craft.</li>
+    <li><strong>Fleet tankers and support ships:</strong> Deepak class and newer Fleet Support Ships (built by Hindustan Shipyard); these let the fleet remain at sea far from base. <span class="tag verify">Verify</span></li>
+    <li><strong>Submarine rescue and diving support:</strong> DSRV (deep submergence rescue vehicles) and divers' ships.</li>
+    <li><strong>Hospital and training ships:</strong> sail training ships INS Tarangini and Sudarshini; the Navy has no dedicated hospital ship of the Indian Ocean type, which has been mentioned as a HADR gap.</li>
+  </ul>
+  <div class="edge green">
+    <span class="edge-h">Why support ships decide range</span>
+    <p>Warships carry fuel and food for weeks, not months. Tankers and stores ships determine how long and how far a task force can operate, which is why logistics, not guns, set the real reach of a navy.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part III &middot; Under the sea</p><h2>Submarines</h2></div>
+
+<section id="ssk">
+  <h2>Conventional submarines</h2><hr class="sec-rule">
+  <div class="tablewrap">
+    <table>
+      <caption>Diesel-electric submarines <span class="tag verify">Verify counts and status</span></caption>
+      <thead><tr><th>Class</th><th>Origin</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Kalvari class (Scorpene, P-75)</td><td>French design, built at Mazagon Dock</td><td>Six boats: Kalvari, Khanderi, Karanj, Vela, Vagir, Vagsheer (2025). Quiet, with anti-ship missiles and heavyweight torpedoes. The programme was years late.</td></tr>
+        <tr><td>Sindhughosh class (Kilo)</td><td>Russian</td><td>Backbone since the 1980s; fewer than ten remain in service; ageing but refitted with Klub missiles</td></tr>
+        <tr><td>Shishumar class (Type 209)</td><td>German, partly built in India</td><td>Four boats; old, refitted</td></tr>
+        <tr><td>Project 75 India (P-75I)</td><td>Planned, with a foreign partner</td><td>Six larger boats with air-independent propulsion (AIP); a German-Indian proposal has been the front-runner. <span class="tag verify">Verify status</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><strong>Why submarines are the Navy's most urgent shortfall:</strong> a diesel boat must surface or snorkel regularly to recharge, which makes it detectable. <strong>AIP</strong> lets it stay submerged for weeks, so it is quieter for longer. India's conventional fleet has been shrinking as old boats retire faster than new ones arrive, and an old planning document called for 24 boats. <span class="tag verify">Verify</span></p>
+  <div class="edge">
+    <span class="edge-h">Exam point</span>
+    <p>Submarines are valued for being hidden. Quietness, endurance and the ability to fire without being found are what count, not tonnage. This is also why anti-submarine warfare (ASW) is the largest hidden cost in naval planning.</p>
+  </div>
+</section>
+
+<section id="nuclear">
+  <h2>Nuclear submarines</h2><hr class="sec-rule">
+  <h3>The two kinds</h3>
+  <ul>
+    <li><strong>SSBN</strong> carries ballistic missiles with nuclear warheads: the sea-based deterrent.</li>
+    <li><strong>SSN</strong> is nuclear-powered but conventionally armed: a fast, long-endurance hunter of ships and submarines.</li>
+  </ul>
+  <div class="tablewrap">
+    <table>
+      <caption>India's nuclear submarines <span class="tag verify">Verify</span></caption>
+      <thead><tr><th>Boat</th><th>Type</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>INS Arihant</td><td>SSBN</td><td>Launched 2009, commissioned about 2016; announced a completed deterrence patrol in 2018, completing the triad. Carries K-15 (about 750 km).</td></tr>
+        <tr><td>INS Arighaat</td><td>SSBN</td><td>Commissioned 2024; carries more and longer-range missiles</td></tr>
+        <tr><td>S4* and later (INS Aridhaman)</td><td>SSBN</td><td>Larger boats, carrying K-4 (about 3,500 km) missiles; reported near commissioning</td></tr>
+        <tr><td>Chakra (leased Akula-class)</td><td>SSN</td><td>Leased from Russia: Chakra I in 1988, Chakra II (2012 to 2021), and a further lease reported</td></tr>
+        <tr><td>Project 77 / SSN programme</td><td>SSN</td><td>Indigenous nuclear attack submarines, reportedly approved in recent years. <span class="tag verify">Verify</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><strong>The strategic logic.</strong> India's nuclear doctrine is No First Use with credible minimum deterrence. A submarine at sea is the most survivable weapon, so it makes an adversary's first strike pointless: retaliation is assured. The weakness is that Indian SSBNs are comparatively noisy and their missiles have shorter range than those of the large powers, which means they must patrol closer to a target. <span class="tag interp">Interpretation</span></p>
+  <p>The programme is run under the <strong>Advanced Technology Vessel (ATV)</strong> project, kept largely secret, with the reactor developed at the Bhabha Atomic Research Centre and construction at Visakhapatnam. Russian help in the early stages is widely reported. <span class="tag disputed">Details disputed</span></p>
+</section>
+
+<div class="part-head"><p>Part IV &middot; Air, weapons and sensors</p><h2>What flies, what fires, what sees</h2></div>
+
+<section id="aviation">
+  <h2>Naval aviation</h2><hr class="sec-rule">
+  <div class="tablewrap">
+    <table>
+      <caption>Main naval aircraft <span class="tag verify">Verify counts</span></caption>
+      <thead><tr><th>Type</th><th>Role</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>MiG-29K / KUB</td><td>Carrier fighter</td><td>Russian; in service since 2009-10; availability and serviceability have been criticised</td></tr>
+        <tr><td>Rafale M</td><td>Carrier fighter</td><td>A contract for 26 aircraft was signed in 2025 after trials; deliveries expected later this decade</td></tr>
+        <tr><td>Naval Tejas / TEDBF</td><td>Fighter development</td><td>The naval Tejas prototype landed on a carrier in 2020; it was found too heavy for the intended role and a twin-engine design (TEDBF) is being developed. <span class="tag verify">Verify</span></td></tr>
+        <tr><td>P-8I Neptune</td><td>Long-range maritime patrol and ASW</td><td>Boeing; 12 in service with more being discussed</td></tr>
+        <tr><td>MH-60R Seahawk</td><td>Anti-submarine and anti-surface helicopter</td><td>24 ordered from the US; arriving since 2024</td></tr>
+        <tr><td>Ka-28, Ka-31, Sea King</td><td>ASW and airborne early warning</td><td>Ageing fleets being replaced</td></tr>
+        <tr><td>Dornier 228, HAL Dhruv, Chetak</td><td>Surveillance, utility, rescue</td><td>Indian-built types</td></tr>
+        <tr><td>MQ-9B Sea Guardian and others</td><td>Long-endurance unmanned surveillance</td><td>A large purchase approved in 2024, shared between services; Navy has leased MQ-9Bs. <span class="tag verify">Verify</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Naval aviation covers three jobs: <strong>strike</strong> (carrier fighters), <strong>sub-hunting</strong> (P-8I, helicopters) and <strong>eyes</strong> (early-warning and unmanned aircraft that extend the fleet's radar horizon). Without aircraft, a ship sees only about 30 to 40 km to the horizon.</p>
+</section>
+
+<section id="missiles">
+  <h2>Missiles</h2><hr class="sec-rule">
+  <div class="tablewrap">
+    <table>
+      <caption>Principal naval missiles <span class="tag verify">Ranges and variants are open-source estimates</span></caption>
+      <thead><tr><th>Missile</th><th>Type</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>BrahMos</td><td>Supersonic cruise (anti-ship and land-attack)</td><td>Indo-Russian; about Mach 2.8; fitted on destroyers, frigates and being tested from submarines; extended-range variants reported beyond the original range</td></tr>
+        <tr><td>Klub (3M-54) / Kalibr family</td><td>Anti-ship and land-attack cruise</td><td>Russian; on Kilo submarines and Talwar-class frigates</td></tr>
+        <tr><td>Barak-8 / MRSAM</td><td>Medium-range surface-to-air</td><td>Developed with Israel; fleet air defence out to about 70 to 100 km</td></tr>
+        <tr><td>Barak-1, Shtil</td><td>Short and medium surface-to-air</td><td>Older ships</td></tr>
+        <tr><td>VL-SRSAM</td><td>Short-range vertical-launch air defence</td><td>DRDO indigenous system; tested in 2025. <span class="tag verify">Verify</span></td></tr>
+        <tr><td>Harpoon, Exocet, Sea Eagle</td><td>Anti-ship, mostly air- or sub-launched</td><td>Western imports fitted to some aircraft and submarines</td></tr>
+        <tr><td>NASM-SR, NASM-MR</td><td>Indigenous naval anti-ship missiles</td><td>In development or trial, including helicopter launch. <span class="tag verify">Verify</span></td></tr>
+        <tr><td>K-15 Sagarika, K-4</td><td>Submarine-launched ballistic</td><td>About 750 km and about 3,500 km range; carried by SSBNs</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge blue">
+    <span class="edge-h">The BrahMos story</span>
+    <p>BrahMos is the Navy's signature weapon: fast enough that a ship has little time to react, and one of the few supersonic anti-ship missiles in service. It is also India's best-known arms export, with Philippines as the first foreign buyer. <span class="tag verify">Verify</span> The joint venture takes its name from the Brahmaputra and Moskva rivers.</p>
+  </div>
+</section>
+
+<section id="guns">
+  <h2>Torpedoes, guns, mines and defence</h2><hr class="sec-rule">
+  <ul>
+    <li><strong>Heavyweight torpedoes:</strong> Varunastra (indigenous), Black Shark (Italian, for Scorpenes), older Russian types.</li>
+    <li><strong>Lightweight torpedoes:</strong> Shyena (indigenous) and imported MK 54 for helicopters and aircraft.</li>
+    <li><strong>Main guns:</strong> 76 mm and 100 mm naval guns on most ships; Indian-built 76 mm guns have been supplied by BHEL. <span class="tag verify">Verify</span></li>
+    <li><strong>Close-in defence:</strong> AK-630 and Kashtan rapid-fire systems; last-ditch protection against missiles and boats.</li>
+    <li><strong>Anti-submarine rockets:</strong> RBU-6000 and indigenous launchers.</li>
+    <li><strong>Decoys and countermeasures:</strong> chaff, flares, and the Maareech torpedo-defence decoy system.</li>
+    <li><strong>Mines:</strong> a modest stock; an area where the Navy is thin compared with the threat from adversary mining. <span class="tag interp">Interpretation</span></li>
+  </ul>
+  <p>The principle is <strong>layered defence</strong>: long-range missile, then medium, then short, then gun, then decoys. No single layer is relied upon.</p>
+</section>
+
+<section id="sensors">
+  <h2>Sensors, command and special forces</h2><hr class="sec-rule">
+  <ul>
+    <li><strong>Radar:</strong> air-search, surface-search and fire-control radars, with Israeli, Russian, Dutch and Indian sets in use.</li>
+    <li><strong>Sonar:</strong> hull-mounted, towed-array and dunking sonars. Indian sonars include the HUMSA and Abhay families, developed by DRDO's naval laboratories. <span class="tag verify">Verify</span></li>
+    <li><strong>Electronic warfare:</strong> radar warners and jammers such as the Indian Shakti system.</li>
+    <li><strong>Command and control:</strong> the Navy's combat-management systems and data links tie ships and aircraft together; GSAT-7 gives secure satellite links. See the NavIC and Navy handbook for the space and navigation layer.</li>
+    <li><strong>MARCOS:</strong> the Navy's special force, trained for maritime raiding, counter-terrorism and hostage rescue.</li>
+    <li><strong>Marine and amphibious capability:</strong> the Navy has no separate marine corps; Army units and MARCOS take amphibious tasks. <span class="tag interp">Debated</span></li>
+  </ul>
+</section>
+
+<div class="part-head"><p>Part V &middot; Recent inductions</p><h2>What has joined the fleet lately</h2></div>
+
+<section id="recent">
+  <h2>Inductions since 2024</h2><hr class="sec-rule">
+  <p class="lede">The Navy has said it is adding about one new ship or submarine every 40 days, and nearly all of them are now built in India. The list below covers the main arrivals from 2024 to October 2026. <span class="tag verify">Verify each date</span></p>
+  <div class="tablewrap">
+    <table>
+      <caption>Notable inductions and deliveries <span class="tag verify">Check against PIB and Navy releases</span></caption>
+      <thead><tr><th>When</th><th>Induction</th><th>Why it matters</th></tr></thead>
+      <tbody>
+        <tr><td>Aug 2024</td><td>INS Arighaat (SSBN) commissioned</td><td>Second Arihant-class nuclear submarine; builds the sea-based deterrent</td></tr>
+        <tr><td>Dec 2024</td><td>INS Tushil (Krivak-type frigate), commissioned in Russia <span class="tag verify">Verify</span></td><td>First of two follow-on Talwar-class ships</td></tr>
+        <tr><td>15 Jan 2025</td><td>INS Nilgiri (P-17A frigate), INS Surat (P-15B destroyer) and INS Vagsheer (Scorpene submarine) commissioned together</td><td>Three front-line platforms on one day: lead stealth frigate, fourth Visakhapatnam-class destroyer and sixth and last Kalvari-class submarine</td></tr>
+        <tr><td>Apr 2025</td><td>Contract for 26 Rafale M signed, about Rs 63,000 crore</td><td>Replaces the MiG-29K as the main carrier fighter; deliveries are scheduled to run to about 2030</td></tr>
+        <tr><td>May 2025</td><td>INSV Kaundinya, a traditionally stitched ship, inducted</td><td>Heritage sailing vessel built by traditional methods; a cultural and training asset, not a warship</td></tr>
+        <tr><td>18 Jun 2025</td><td>INS Arnala commissioned</td><td>First of 16 anti-submarine shallow-water craft; a quiet coastal sub-hunter</td></tr>
+        <tr><td>1 Jul 2025</td><td>INS Tamal commissioned in Russia</td><td>Described as the last warship India will import from a foreign yard; every later ship is planned to be built in India</td></tr>
+        <tr><td>Jul 2025</td><td>INS Nistar delivered by Hindustan Shipyard</td><td>Diving support vessel, also serving submarine rescue</td></tr>
+        <tr><td>2025</td><td>Further Nilgiri-class frigates (such as Himgiri and Udaygiri) delivered or commissioned <span class="tag verify">Verify</span></td><td>Builds the seven-ship P-17A class at Mazagon Dock and GRSE</td></tr>
+        <tr><td>Dec 2025</td><td>First of five diving support craft (DSC A20) commissioned at Kochi</td><td>Underwater work, salvage and diver support</td></tr>
+        <tr><td>Dec 2025</td><td>Fourth SSBN reported to have begun sea trials <span class="tag verify">Reported</span></td><td>Adds to the nuclear deterrent; details are classified</td></tr>
+        <tr><td>2026</td><td>MH-60R Seahawk helicopters keep arriving; reports of further deliveries in July 2026</td><td>Anti-submarine and anti-surface helicopter for ships</td></tr>
+        <tr><td>Feb 2026</td><td>First cadet training ship, Krishna, launched at L&amp;T Kattupalli</td><td>Replaces ageing training ships; one of three ordered</td></tr>
+        <tr><td>13 Oct 2026</td><td>INS Mangrol commissioned</td><td>Another anti-submarine shallow-water craft with indigenous sonar and torpedoes</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>The pattern</h4>
+      <ul>
+        <li><strong>Hulls and numbers:</strong> deliveries of destroyers, frigates and small ASW ships are now steady.</li>
+        <li><strong>Silent hunters:</strong> new SSBNs and the final Scorpene; the shallow-water craft counter submarines near the coast.</li>
+        <li><strong>Air:</strong> Rafale M and MH-60R fill gaps in carrier and ship-borne aviation.</li>
+        <li><strong>Last imports:</strong> Tushil and Tamal close the era of buying finished warships from abroad.</li>
+      </ul>
+    </div>
+    <div class="panel gold-top">
+      <h4>Caveats</h4>
+      <ul>
+        <li>Launch, delivery and commissioning are three different dates; news reports often mix them.</li>
+        <li>A ship may be commissioned before every weapon and sensor is fully fitted or proven.</li>
+        <li>Some figures here come from news reports, not official summaries.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="pipeline">
+  <h2>The pipeline and what comes next</h2><hr class="sec-rule">
+  <ul>
+    <li><strong>Fleet size:</strong> open sources put the fleet at about 130 surface combatants and about 20 submarines in October 2026. Navy statements give a target of 150 to 160 ships by about 2030 and over 200 by 2035. About 45 warships were reported under construction in May 2026, and approvals in principle were reported for roughly 195 more vessels. <span class="tag verify">Verify</span></li>
+    <li><strong>Submarines:</strong> the Project 75I deal for six AIP boats with a German partner was reported close to signature through 2026. Two indigenous nuclear attack submarines were cleared in 2024. <span class="tag verify">Verify status</span></li>
+    <li><strong>Surface ships:</strong> a request for proposals for seven Project 17B stealth frigates was reported in September 2026, with competitive bidding among yards. New corvettes, next-generation offshore patrol vessels and missile vessels are under construction or planned.</li>
+    <li><strong>Amphibious:</strong> a request for proposals for four landing platform docks was reported in October 2026, with a UK partnership on electric propulsion discussed. <span class="tag verify">Verify</span></li>
+    <li><strong>Support ships:</strong> INS Surya, the first indigenous fleet support ship, was launched at Hindustan Shipyard in October 2026, with five planned.</li>
+    <li><strong>Air and unmanned:</strong> 31 MQ-9B drones (shared among the services) ordered in 2024; more medium-altitude drones, armed unmanned boats and underwater vehicles under development.</li>
+    <li><strong>Weapons:</strong> a goal reported in 2025 to fit BrahMos across the destroyer and frigate fleet by 2030; work on land-attack missiles for conventional submarines.</li>
+    <li><strong>Longer term:</strong> a 2025 technology roadmap mentions nuclear-propelled surface ships and a future carrier, reported as INS Vishal. <span class="tag interp">Aspiration, not a programme</span></li>
+  </ul>
+  <div class="edge gold">
+    <span class="edge-h">Check before quoting</span>
+    <p>This section moves fastest of all. Dates, contract values and approvals shift between announcement and signature. Quote the month and the source, and say "reported" for anything not in a PIB release.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part VI &middot; Industry and strategy</p><h2>Who builds it, and what is missing</h2></div>
+
+<section id="industry">
+  <h2>Shipbuilding and indigenisation</h2><hr class="sec-rule">
+  <ul>
+    <li><strong>Mazagon Dock (Mumbai):</strong> destroyers, frigates, Scorpene submarines.</li>
+    <li><strong>Garden Reach Shipbuilders and Engineers (Kolkata):</strong> frigates, corvettes, ASW craft.</li>
+    <li><strong>Cochin Shipyard:</strong> the carrier Vikrant and support ships.</li>
+    <li><strong>Goa Shipyard, Hindustan Shipyard, L&amp;T and private yards:</strong> offshore vessels, fleet support and small craft.</li>
+    <li><strong>Design:</strong> the Directorate of Naval Design, a long-standing in-house design organisation, produces most Indian warship designs.</li>
+  </ul>
+  <p>Navy leadership has said that nearly all new ships and submarines on order are being built in Indian yards, and has quoted indigenous content figures that reach into the high double digits for hulls. <span class="tag verify">Verify figures</span></p>
+  <div class="edge gold">
+    <span class="edge-h">The honest caveat</span>
+    <p>"Built in India" is not the same as "made in India". Gas turbines, diesel engines, many radars, missiles, sonars and some weapon systems still come from abroad. Indigenous <strong>hull</strong> is far ahead of indigenous <strong>heart</strong> (propulsion and weapons).</p>
+  </div>
+</section>
+
+<section id="gaps">
+  <h2>Gaps and debates</h2><hr class="sec-rule">
+  <div class="grid two">
+    <div class="panel red-top">
+      <h4>Capability gaps</h4>
+      <ul>
+        <li>Submarine numbers and AIP.</li>
+        <li>Mine-countermeasure vessels.</li>
+        <li>Fleet-wide shortage of modern helicopters and carrier fighters.</li>
+        <li>Long-range, wide-area anti-submarine capability.</li>
+        <li>Engines: dependence on foreign gas turbines and diesel engines.</li>
+        <li>Ageing Russian-origin ships needing spares.</li>
+      </ul>
+    </div>
+    <div class="panel green-top">
+      <h4>Structural debates</h4>
+      <ul>
+        <li>Carriers versus submarines as the priority.</li>
+        <li>Fewer large ships versus more small ones.</li>
+        <li>Nuclear attack submarines versus more conventional boats.</li>
+        <li>The defence budget share: the Navy's share has been about 15 to 20 per cent of capital spending. <span class="tag verify">Verify</span></li>
+        <li>Jointness: theatre commands, with a maritime theatre command often proposed. <span class="tag interp">Interpretation</span></li>
+      </ul>
+    </div>
+  </div>
+  <p class="spaced">A balanced answer is that India needs <strong>both</strong> sea control and sea denial. Submarines deny the Indian Ocean to an adversary; surface ships and aircraft let India use it. The question is the mix, not either-or.</p>
+</section>
+
+<section id="compare">
+  <h2>Comparison with China and Pakistan</h2><hr class="sec-rule">
+  <div class="tablewrap">
+    <table>
+      <caption>Rough comparison <span class="tag verify">Open-source estimates, re-verify</span></caption>
+      <thead><tr><th>Feature</th><th>India</th><th>China (PLA Navy)</th><th>Pakistan</th></tr></thead>
+      <tbody>
+        <tr><td>Fleet size</td><td>About 130-150 ships and submarines</td><td>Larger than any other navy, over 350 ships in some counts</td><td>A small fleet, being modernised with Chinese help</td></tr>
+        <tr><td>Carriers</td><td>2</td><td>3 (Liaoning, Shandong, Fujian)</td><td>None</td></tr>
+        <tr><td>Submarines</td><td>Conventional plus SSBN and leased SSN</td><td>Many more, including nuclear classes</td><td>Hangor-class (Chinese Type 039B export) boats being built or delivered</td></tr>
+        <tr><td>Shipbuilding speed</td><td>Slow and steady</td><td>Extremely fast</td><td>Depends on foreign yards</td></tr>
+        <tr><td>Advantage</td><td>Geography, Indian Ocean position, experience</td><td>Scale and industry</td><td>Closeness to key sea lanes</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>India's real edge is not size but <strong>position</strong>: it sits astride the sea lanes that carry Chinese oil, so a Chinese navy far from home faces the Indian Ocean as a distant theatre. This is why the Navy's strategy is built on sea denial in the choke points and on a persistent presence in the region. <span class="tag interp">Interpretation</span></p>
+</section>
+
+<div class="part-head"><p>Knowledge toolkit</p><h2>Analysis, practice and revision</h2></div>
+
+<section id="perspectives">
+  <h2>Perspectives and facts</h2><hr class="sec-rule">
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>The optimist's view</h4>
+      <p>The Navy is the most indigenised and best-planned service. It has two carriers, a nuclear deterrent at sea, a modern destroyer and frigate line, and nearly all new ships come from Indian yards. Time and steady budgets would close the gaps.</p>
+    </div>
+    <div class="panel red-top">
+      <h4>The sceptic's view</h4>
+      <p>The fleet is too small for the task, the submarine arm is shrinking, the carriers lack enough modern fighters, and the Indian-built hulls still run on imported engines and weapons. Delays have outpaced the growth of the Chinese Navy in the Indian Ocean.</p>
+    </div>
+  </div>
+  <h4>Lesser-known facts</h4>
+  <ul>
+    <li>A submerged submarine cannot use satellite navigation or GPS, and relies on inertial systems.</li>
+    <li>In 1971 Soviet-built Osa-class missile boats sank the Pakistani destroyer PNS Khaibar and other ships off Karachi. <span class="tag fact">Established</span></li>
+    <li>India's earlier carriers: the first Vikrant (1961) and Viraat (1987) were both British-built.</li>
+  </ul>
+</section>
+
+<section id="qbank">
+  <h2>Questions and motions</h2><hr class="sec-rule">
+  <p class="lede">Answer each aloud, standing, in about ninety seconds.</p>
+  <h4>Practice questions</h4>
+  <ol class="qbank">
+    <li>Name India's two carriers and state one difference between them.</li>
+    <li>What is STOBAR and why does it limit aircraft weight?</li>
+    <li>Why are submarines called the hidden arm of a navy?</li>
+    <li>Explain the difference between an SSBN and an SSN.</li>
+    <li>Why does a nuclear-armed submarine strengthen a No First Use policy?</li>
+    <li>What is AIP and why does it matter for conventional submarines?</li>
+    <li>Why was the Scorpene programme delayed, and what does it teach about defence production?</li>
+    <li>What roles do the Kolkata and Visakhapatnam classes share?</li>
+    <li>Why is BrahMos called the Navy's signature weapon?</li>
+    <li>What is layered air defence at sea?</li>
+    <li>Why is the P-8I important in anti-submarine warfare?</li>
+    <li>Which is the larger gap: carriers, submarines or mine countermeasures, and why?</li>
+    <li>"Built in India" versus "made in India": explain with an example.</li>
+    <li>Why is geography India's main edge over China in the Indian Ocean?</li>
+    <li>Why is INS Tamal described as the last imported warship, and what does that signal?</li>
+    <li>Why is logistics, rather than firepower, the limit of a fleet's range?</li>
+  </ol>
+  <h4>Debate motions</h4>
+  <ol class="dbank">
+    <li>This house believes that India should build a third aircraft carrier.</li>
+    <li>This house believes that submarines are a better investment than carriers for India.</li>
+    <li>This house believes that India should lease or buy more nuclear attack submarines.</li>
+    <li>This house believes that indigenous hulls without indigenous engines are a hollow success.</li>
+    <li>This house believes that a Maritime Theatre Command would improve naval effectiveness.</li>
+    <li>This house believes that India should export more naval weapons, such as BrahMos.</li>
+    <li>This house believes that quantity matters more than quality in a regional naval balance.</li>
+  </ol>
+</section>
+
+<section id="chronology">
+  <h2>Chronology, glossary and revision</h2><hr class="sec-rule">
+  <ul class="timeline">
+    <li><span class="yr">1961</span><span>INS Vikrant (first) commissioned</span></li>
+    <li><span class="yr">1971</span><span>Missile boat strikes on Karachi</span></li>
+    <li><span class="yr">1988</span><span>First leased nuclear submarine</span></li>
+    <li><span class="yr">2009</span><span>Arihant launched</span></li>
+    <li><span class="yr">2013</span><span>INS Vikramaditya commissioned</span></li>
+    <li><span class="yr">2014-16</span><span>Kolkata-class destroyers enter service <span class="tag verify">Verify</span></span></li>
+    <li><span class="yr">2016-18</span><span>Arihant commissioned and completes deterrence patrol <span class="tag verify">Verify</span></span></li>
+    <li><span class="yr">2022</span><span>INS Vikrant commissioned</span></li>
+    <li><span class="yr">2024</span><span>Arighaat commissioned; MH-60R helicopters arrive <span class="tag verify">Verify</span></span></li>
+    <li><span class="yr">2025</span><span>Nilgiri, Surat and Vagsheer commissioned (Jan); Rafale M contract (Apr); Arnala (Jun); Tamal (Jul) <span class="tag verify">Verify</span></span></li>
+    <li><span class="yr">2026</span><span>Further ASW craft such as Mangrol (Oct); Project 17B and LPD requests for proposals <span class="tag verify">Verify</span></span></li>
+  </ul>
+  <dl class="term">
+    <dt>SSK, SSN, SSBN</dt><dd>Conventional attack submarine; nuclear-powered attack submarine; nuclear-powered ballistic-missile submarine.</dd>
+    <dt>AIP</dt><dd>Air-independent propulsion, letting a conventional submarine stay submerged for weeks.</dd>
+    <dt>STOBAR and CATOBAR</dt><dd>Carrier launch with a ski-jump versus with catapults.</dd>
+    <dt>VLS</dt><dd>Vertical launching system, a missile cell built into the deck.</dd>
+    <dt>MRSAM</dt><dd>Medium-range surface-to-air missile (Barak-8).</dd>
+    <dt>CIWS</dt><dd>Close-in weapon system: the last gun-based defence layer.</dd>
+    <dt>ASW</dt><dd>Anti-submarine warfare.</dd>
+    <dt>Blue-water navy</dt><dd>A navy able to operate far from home waters for long periods.</dd>
+  </dl>
+  <div class="note">
+    <h4>The Navy's arsenal in one page</h4>
+    <ul>
+      <li><strong>Carriers:</strong> Vikramaditya (2013, bought) and Vikrant (2022, built at Cochin); both STOBAR.</li>
+      <li><strong>Escorts:</strong> Kolkata and Visakhapatnam destroyers; Shivalik and Nilgiri frigates; Talwar-class; Kamorta corvettes; ASW shallow-water craft.</li>
+      <li><strong>Submarines:</strong> Kalvari (Scorpene) six boats, Kilo and Type 209 ageing, P-75I planned; SSBN Arihant, Arighaat and follow-ons; leased SSN.</li>
+      <li><strong>Air:</strong> MiG-29K, Rafale M coming; P-8I, MH-60R, unmanned aircraft.</li>
+      <li><strong>Weapons:</strong> BrahMos, Klub, Barak-8, Varunastra, Black Shark, K-15 and K-4.</li>
+      <li><strong>Industry:</strong> Mazagon Dock, GRSE, Cochin, Goa, plus private yards; hulls ahead of engines and weapons.</li>
+      <li><strong>Recent:</strong> Arighaat (2024); Nilgiri, Surat and Vagsheer together (Jan 2025); Arnala, Tamal (2025, the last imported warship); Rafale M deal (Apr 2025); Mangrol (Oct 2026). A ship or submarine about every 40 days.</li>
+      <li><strong>Gaps:</strong> submarine numbers, mine countermeasures, engines, carrier air wing.</li>
+      <li><strong>Position to take:</strong> India needs both sea denial and sea control; its edge is geography, and its challenge is delivery speed.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer>
+  <p>Compiled from open sources and memory. Study aid only, not an official publication. Re-verify items tagged Verify against the Indian Navy website and Ministry of Defence releases.</p>
+  <p>Source &amp; contributions: <a href="https://github.com/mohitkushwaha0601/matre">github.com/mohitkushwaha0601/matre</a></p>
+</footer>
+
+</body>
+</html>

@@ -54,8 +54,9 @@ Defence, current affairs, geopolitics and strategic studies.
 | [NavIC and the Indian Navy](materials/46.navic-indian-navy-knowledge-handbook.html) | HTML | GNSS basics, global systems, why India built NavIC, constellation and ISRO record, naval use on ships, weapons and fishing boats, GAGAN, GSAT-7 and space, jamming and ASAT threats, sovereign navigation and the Indian Ocean picture (20 sections, 2-3 hrs) |
 | [Photography Basics: Technique, Jargon and Craft](materials/47.photography-basics-knowledge-handbook.html) | HTML | light, camera anatomy, the exposure triangle, metering, lenses and focal length, focus and depth of field, sensors and RAW, white balance, composition, flash and filters, editing workflow, with jargon explained (22 sections, 2-3 hrs) |
 | [Information Technology in Defence: Security, Innovation and AI](materials/48.it-in-defence-ai-future-knowledge-handbook.html) | HTML | role of IT in defence, India's defence IT architecture, cyber threats, C4ISR and space, Army and Air Force, a three-section Navy focus (networks, sensors and AI, shore and industry), AI, emerging technologies, innovation and indigenisation, global lessons, the future and ethics (22 sections, 2-3 hrs) |
+| [The Indian Navy's Arsenal](materials/49.indian-navy-arsenal-knowledge-handbook.html) | HTML | fleet structure, carriers, destroyers, frigates, corvettes, conventional and nuclear submarines, naval aviation, missiles, torpedoes and sensors, shipbuilding and indigenisation, recent inductions and the pipeline, gaps, comparison with China and Pakistan (22 sections, 2-3 hrs) |
 
-**Total:** 48 study pages
+**Total:** 49 study pages
 
 ## 🎯 SSB test guides
 
