@@ -53,8 +53,9 @@ Defence, current affairs, geopolitics and strategic studies.
 | [Netravati Peak and Chikmagalur](materials/45.netravati-peak-chikmagalur-knowledge-handbook.html) | HTML | key points on the Kudremukh-Chikmagalur Ghats: geology, ecology, Netravati and Tungabhadra rivers, mining and conservation, heritage and coffee, trek safety, terrain reading and OLQs (12 sections, about 1 hr) |
 | [NavIC and the Indian Navy](materials/46.navic-indian-navy-knowledge-handbook.html) | HTML | GNSS basics, global systems, why India built NavIC, constellation and ISRO record, naval use on ships, weapons and fishing boats, GAGAN, GSAT-7 and space, jamming and ASAT threats, sovereign navigation and the Indian Ocean picture (20 sections, 2-3 hrs) |
 | [Photography Basics: Technique, Jargon and Craft](materials/47.photography-basics-knowledge-handbook.html) | HTML | light, camera anatomy, the exposure triangle, metering, lenses and focal length, focus and depth of field, sensors and RAW, white balance, composition, flash and filters, editing workflow, with jargon explained (22 sections, 2-3 hrs) |
+| [Information Technology in Defence: Security, Innovation and AI](materials/48.it-in-defence-ai-future-knowledge-handbook.html) | HTML | role of IT in defence, India's defence IT architecture, cyber threats, C4ISR and space, Army and Air Force, a three-section Navy focus (networks, sensors and AI, shore and industry), AI, emerging technologies, innovation and indigenisation, global lessons, the future and ethics (22 sections, 2-3 hrs) |
 
-**Total:** 47 study pages
+**Total:** 48 study pages
 
 ## 🎯 SSB test guides
 
