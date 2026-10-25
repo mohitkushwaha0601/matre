@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>SSB Test Guides — Preparation Handbooks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Zilla+Slab:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #0e2430;
+            --ink-soft: #45606e;
+            --paper: #eff1ee;
+            --surface: #ffffff;
+            --surface-2: #e5eae7;
+            --rule: #c4cecb;
+            --rule-strong: #9eaba8;
+            --red: #bf2f26;
+            --blue: #0b4f8a;
+            --gold: #d9a441;
+            --hero-bg: #0e2430;
+            --hero-ink: #eff1ee;
+            --hero-dim: #94a8b2;
+            --hero-grad: linear-gradient(135deg, #0d1f2d 0%, #102f47 56%, #153f64 100%);
+            --tag-bg: rgba(11,79,138,.08);
+            --shadow: 0 10px 24px rgba(14,36,48,.04);
+            --shadow-hover: 0 16px 28px rgba(14,36,48,.08);
+            --wrap: 1100px;
+            color-scheme: light dark;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --ink: #e6e8e4;
+                --ink-soft: #a3afbc;
+                --paper: #0b1017;
+                --surface: #141c26;
+                --surface-2: #1c2733;
+                --rule: #2c3a48;
+                --rule-strong: #42556a;
+                --red: #e5796a;
+                --blue: #6faeea;
+                --gold: #ddb051;
+                --hero-bg: #070b10;
+                --hero-ink: #e6e8e4;
+                --hero-dim: #8394a4;
+                --hero-grad: linear-gradient(135deg, #070b10 0%, #0a1621 56%, #0d2236 100%);
+                --tag-bg: rgba(111,174,234,.14);
+                --shadow: 0 10px 24px rgba(0,0,0,.35);
+                --shadow-hover: 0 16px 28px rgba(0,0,0,.5);
+            }
+        }
+
+        * { box-sizing: border-box; }
+        html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+            font-size: 16px;
+            line-height: 1.62;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { color: var(--blue); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        :focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+
+        .hero {
+            background: var(--hero-grad);
+            color: var(--hero-ink);
+            padding-bottom: 2.5rem;
+            box-shadow: inset 0 -1px 0 rgba(255,255,255,0.08);
+        }
+
+        .flagstrip { display: flex; height: 12px; }
+        .flagstrip span { flex: 1; }
+        .f1 { background: #bf2f26; }
+        .f2 { background: #eff1ee; }
+        .f3 { background: #0b4f8a; }
+        .f4 { background: #e3b23c; }
+        .f5 { background: #0e2430; box-shadow: inset 0 0 0 1px rgba(255,255,255,.22); }
+        .f6 { background: linear-gradient(90deg, #bf2f26 50%, #eff1ee 50%); }
+        .f7 { background: linear-gradient(90deg, #0b4f8a 50%, #e3b23c 50%); }
+
+        .hero-inner {
+            max-width: var(--wrap);
+            margin: 0 auto;
+            padding: 3rem max(1.5rem, env(safe-area-inset-right)) 0 max(1.5rem, env(safe-area-inset-left));
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 1.2rem;
+            font-size: .82rem;
+            font-weight: 600;
+            color: var(--hero-ink);
+            border: 1px solid rgba(255,255,255,.25);
+            border-radius: 999px;
+            padding: .35rem .8rem;
+        }
+        .back:hover { background: rgba(255,255,255,.1); text-decoration: none; }
+
+        .kicker {
+            margin: 0 0 .8rem;
+            font-size: .8rem;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: var(--hero-dim);
+            font-weight: 600;
+        }
+
+        .hero h1 {
+            font-family: "Zilla Slab", Georgia, serif;
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            line-height: 1.08;
+            margin: 0 0 .7rem;
+        }
+
+        .hero-sub { margin: 0; color: rgba(255,255,255,.86); max-width: 60ch; font-size: 1.08rem; }
+
+        .stamp {
+            margin-top: 1.6rem;
+            padding-top: 1.3rem;
+            border-top: 1px solid rgba(255,255,255,.16);
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem 1.5rem;
+            font-size: .86rem;
+            color: var(--hero-dim);
+        }
+        .stamp b { color: var(--hero-ink); }
+
+        main {
+            max-width: var(--wrap);
+            margin: 0 auto;
+            padding: 2.2rem max(1.5rem, env(safe-area-inset-right)) 4rem max(1.5rem, env(safe-area-inset-left));
+        }
+
+        section { margin: 0 0 2.5rem; }
+
+        h2 {
+            font-family: "Zilla Slab", Georgia, serif;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.2;
+            margin: 0 0 .35rem;
+        }
+
+        .sec-rule { border: 0; border-top: 3px double var(--rule-strong); margin: 0 0 1.2rem; }
+
+        .layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+            gap: 1rem;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--rule);
+            border-left: 4px solid var(--red);
+            border-radius: 16px;
+            padding: 1.1rem 1.1rem 1rem;
+            box-shadow: var(--shadow);
+            transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+            overflow-wrap: anywhere;
+        }
+
+        @media (hover: hover) {
+            .card:hover {
+                transform: translateY(-2px);
+                box-shadow: var(--shadow-hover);
+                border-left-color: var(--blue);
+                text-decoration: none;
+            }
+        }
+
+        .card:focus-visible { border-left-color: var(--blue); }
+
+        .card-top { display: flex; align-items: center; justify-content: space-between; gap: .8rem; margin-bottom: .7rem; }
+
+        .no { font-family: "Zilla Slab", Georgia, serif; font-size: 1.5rem; color: var(--rule-strong); font-weight: 700; }
+
+        .tag {
+            display: inline-block;
+            font-size: .7rem;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            background: var(--tag-bg);
+            color: var(--blue);
+            border-radius: 999px;
+            padding: .38rem .6rem;
+            font-weight: 700;
+        }
+
+        .card h3 { margin: 0 0 .35rem; font-family: "Zilla Slab", Georgia, serif; font-size: 1.2rem; line-height: 1.3; color: var(--ink); }
+        .card p { margin: 0 0 .7rem; color: var(--ink-soft); font-size: .94rem; }
+
+        .cta { display: inline-block; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 700; color: var(--blue); }
+
+        .foot { border-top: 1px solid var(--rule); padding-top: 1rem; color: var(--ink-soft); font-size: .86rem; }
+
+        @media (min-width: 900px) and (max-width: 1599px) { .layout { grid-template-columns: repeat(3, 1fr); } }
+        @media (min-width: 600px) and (max-width: 899px) { .layout { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1600px) { :root { --wrap: 1400px; } body { font-size: 17px; } .layout { grid-template-columns: repeat(4, 1fr); } }
+
+        @media (max-width: 599px) {
+            .hero-inner { padding-top: 2rem; padding-left: max(1rem, env(safe-area-inset-left)); padding-right: max(1rem, env(safe-area-inset-right)); }
+            main { padding-top: 1.5rem; padding-bottom: 2.5rem; padding-left: max(1rem, env(safe-area-inset-left)); padding-right: max(1rem, env(safe-area-inset-right)); }
+            .hero { padding-bottom: 1.8rem; }
+            .stamp { flex-direction: column; gap: .3rem; margin-top: 1.2rem; padding-top: 1rem; }
+            .layout { grid-template-columns: 1fr; }
+            .card { padding: 1rem; border-radius: 14px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) { .card { transition: none; } }
+    </style>
+</head>
+
+<body>
+    <header class="hero">
+        <div class="flagstrip">
+            <span class="f1"></span>
+            <span class="f2"></span>
+            <span class="f3"></span>
+            <span class="f4"></span>
+            <span class="f5"></span>
+            <span class="f6"></span>
+            <span class="f7"></span>
+        </div>
+        <div class="hero-inner">
+            <a class="back" href="index.html">&larr; All handbooks</a>
+            <p class="kicker">SSB psychology day • group testing • OLQ-based answers</p>
+            <h1>SSB Test Guides</h1>
+            <p class="hero-sub">Guides to the SSB psychology tests and the Group Planning Exercise: how each test reads you, the strategy for answering, and worked examples with three versions each and the reasoning behind them.</p>
+            <div class="stamp">
+                <span><b>Set:</b> 5 test guides</span>
+                <span><b>Format:</b> HTML + CSS</span>
+                <span><b>Access:</b> local browser / GitHub Pages</span>
+                <span><b>Updated:</b> 25 Oct 2026</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Test guides</h2>
+            <hr class="sec-rule" />
+            <div class="layout">
+                <a class="card" href="psych-materials/1.ssb-psychological-tests-overview-knowledge-handbook.html">
+                    <div class="card-top"><span class="no">01</span><span class="tag">Overview</span></div>
+                    <h3>SSB Psychological Tests: PPDT, TAT, WAT, SRT and SDT</h3>
+                    <p>The 15 OLQs and the psychology day: a brief and expert strategies for each test, PPDT and TAT themes and story seeds, WAT word approaches, SRT situations with multiple ideal responses, and a method for writing your own SDT persona, with SSB-style practice material.</p>
+                    <span class="cta">Read handbook</span>
+                </a>
+
+                <a class="card" href="psych-materials/2.ssb-tat-thematic-apperception-knowledge-handbook.html">
+                    <div class="card-top"><span class="no">02</span><span class="tag">TAT</span></div>
+                    <h3>SSB Thematic Apperception Test (TAT)</h3>
+                    <p>The format and the 15 OLQs, the psychology of projection, the four-part story (past, present, struggle, result), picture reading and traps, plus 105 picture themes with three story seeds each and the reasoning behind them, with SSB-style practice material.</p>
+                    <span class="cta">Read handbook</span>
+                </a>
+
+                <a class="card" href="psych-materials/3.ssb-wat-word-association-knowledge-handbook.html">
+                    <div class="card-top"><span class="no">03</span><span class="tag">WAT</span></div>
+                    <h3>SSB Word Association Test (WAT)</h3>
+                    <p>The format and the 15 OLQs, the psychology of a 15-second answer, a sentence strategy and the three Cs for negative words, plus 120 words with three model sentences each and the reasoning behind them, with SSB-style practice material.</p>
+                    <span class="cta">Read handbook</span>
+                </a>
+
+                <a class="card" href="psych-materials/4.ssb-srt-situation-reaction-knowledge-handbook.html">
+                    <div class="card-top"><span class="no">04</span><span class="tag">SRT</span></div>
+                    <h3>SSB Situation Reaction Test (SRT)</h3>
+                    <p>The format and the 15 OLQs, the psychology of a 30-second decision, the four-step response method (assess, act, assist, afterwards), situation types and traps, plus 120 situations with three model reactions each and the reasoning behind them, with SSB-style practice material.</p>
+                    <span class="cta">Read handbook</span>
+                </a>
+
+                <a class="card" href="psych-materials/5.ssb-gpe-group-planning-exercise-knowledge-handbook.html">
+                    <div class="card-top"><span class="no">05</span><span class="tag">GPE</span></div>
+                    <h3>SSB Group Planning Exercise (GPE)</h3>
+                    <p>The format and the 15 OLQs, the psychology of planning under pressure, a five-step priority framework, reading the model, the written plan, group discussion and narration tactics, plus 24 exercises with three model plans each and the reasoning behind them, with SSB-style practice material.</p>
+                    <span class="cta">Read handbook</span>
+                </a>
+            </div>
+        </section>
+
+        <section>
+            <h2>How to use these guides</h2>
+            <hr class="sec-rule" />
+            <p><strong>Suggested order:</strong> start with the overview, then work through the TAT, WAT and SRT in the order they appear on the psychology day, and finish with the Group Planning Exercise.</p>
+            <div class="foot">Current inventory: 5 SSB test guides • browser-friendly • GitHub Pages compatible • <a href="index.html">back to all handbooks</a>.</div>
+        </section>
+    </main>
+</body>
+
+</html>

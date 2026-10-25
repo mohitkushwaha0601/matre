@@ -234,6 +234,31 @@
             color: var(--blue);
         }
 
+        .catalogues {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .8rem;
+            margin-bottom: 1.6rem;
+        }
+
+        .cat-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            background: var(--surface);
+            color: var(--ink);
+            border: 1px solid var(--rule-strong);
+            border-left: 4px solid var(--red);
+            border-radius: 999px;
+            padding: .55rem 1.1rem;
+            font-weight: 600;
+            font-size: .92rem;
+            box-shadow: var(--shadow);
+        }
+
+        .cat-btn:hover { border-left-color: var(--blue); text-decoration: none; }
+        .cat-btn span { color: var(--ink-soft); font-weight: 500; font-size: .8rem; }
+
         .foot {
             border-top: 1px solid var(--rule);
             padding-top: 1rem;
@@ -299,7 +324,7 @@
             <h1>Preparation Handbooks</h1>
             <p class="hero-sub">A curated library of static HTML study pages covering defence, governance, geopolitics, political concepts, strategy and global security for SSB / UPSC-style preparation.</p>
             <div class="stamp">
-                <span><b>Set:</b> 47 study pages</span>
+                <span><b>Set:</b> 47 study pages + 5 SSB test guides</span>
                 <span><b>Format:</b> HTML + CSS + JS</span>
                 <span><b>Access:</b> local browser / GitHub Pages</span>
                 <span><b>Updated:</b> 25 Oct 2026</span>
@@ -308,6 +333,14 @@
     </header>
 
     <main>
+        <section>
+            <h2>Catalogues</h2>
+            <hr class="sec-rule" />
+            <div class="catalogues">
+                <a class="cat-btn" href="index-psych.html">SSB test guides <span>TAT, WAT, SRT, GPE and more (5)</span></a>
+            </div>
+        </section>
+
         <section>
             <h2>Study library</h2>
             <hr class="sec-rule" />
@@ -591,52 +624,52 @@
                     <span class="cta">Read handbook</span>
                 </a>
 
-                <a class="card" href="materials/41.ssb-psychological-tests-knowledge-handbook.html">
-                    <div class="card-top"><span class="no">41</span><span class="tag">SSB</span></div>
-                    <h3>SSB Psychological Tests: PPDT, TAT, WAT, SRT and SDT</h3>
-                    <p>The 15 OLQs and the psychology day: a brief and expert strategies for each test, PPDT and TAT themes and story seeds, WAT word approaches, SRT situations with multiple ideal responses, and a method for writing your own SDT persona, with SSB-style practice material.</p>
-                    <span class="cta">Read handbook</span>
-                </a>
-
-                <a class="card" href="materials/42.sailor-life-at-sea-knowledge-handbook.html">
-                    <div class="card-top"><span class="no">42</span><span class="tag">Defence</span></div>
+                <a class="card" href="materials/41.sailor-life-at-sea-knowledge-handbook.html">
+                    <div class="card-top"><span class="no">41</span><span class="tag">Defence</span></div>
                     <h3>A Sailor's Life at Sea</h3>
                     <p>A sailor's day and night: entry and branches, the ship as a workplace, watches and bells, the compass, ship's log and echo sounder, radar, sonar and engine room, seamanship, seawater, weather, tides and charts, drills and life aboard, with SSB-style practice material.</p>
                     <span class="cta">Read handbook</span>
                 </a>
 
-                <a class="card" href="materials/43.srinivasa-ramanujan-knowledge-handbook.html">
-                    <div class="card-top"><span class="no">43</span><span class="tag">Biography</span></div>
+                <a class="card" href="materials/42.srinivasa-ramanujan-knowledge-handbook.html">
+                    <div class="card-top"><span class="no">42</span><span class="tag">Biography</span></div>
                     <h3>Srinivasa Ramanujan: The Man Who Knew Infinity</h3>
                     <p>Kumbakonam and Madras, the 1913 letter to Hardy, Cambridge and the Royal Society, illness and death, partitions, pi series, the tau function, 1729, mock theta functions and the Lost Notebook, faith, legacy and the disputed questions, with SSB-style practice material.</p>
                     <span class="cta">Read handbook</span>
                 </a>
 
-                <a class="card" href="materials/44.hampi-vijayanagara-knowledge-handbook.html">
-                    <div class="card-top"><span class="no">44</span><span class="tag">History</span></div>
+                <a class="card" href="materials/43.hampi-vijayanagara-knowledge-handbook.html">
+                    <div class="card-top"><span class="no">43</span><span class="tag">History</span></div>
                     <h3>Hampi and the Vijayanagara Empire</h3>
                     <p>The 1336 foundation, dynasties and Krishnadevaraya, administration and the army, Talikota and the sack of 1565, travellers' accounts, the royal and sacred centres, Vittala and the stone chariot, water engineering, and UNESCO conservation, with SSB-style practice material.</p>
                     <span class="cta">Read handbook</span>
                 </a>
 
-                <a class="card" href="materials/45.us-defence-geography-knowledge-handbook.html">
-                    <div class="card-top"><span class="no">45</span><span class="tag">Defence</span></div>
+                <a class="card" href="materials/44.us-defence-geography-knowledge-handbook.html">
+                    <div class="card-top"><span class="no">44</span><span class="tag">Defence</span></div>
                     <h3>US Defence and Geography</h3>
                     <p>How the US moat, island chains and chokepoints shape its commands, bases, sea, air and nuclear forces, alliances and the India link, with SSB-style practice material.</p>
                     <span class="cta">Read handbook</span>
                 </a>
 
-                <a class="card" href="materials/46.netravati-peak-chikmagalur-knowledge-handbook.html">
-                    <div class="card-top"><span class="no">46</span><span class="tag">Geography</span></div>
+                <a class="card" href="materials/45.netravati-peak-chikmagalur-knowledge-handbook.html">
+                    <div class="card-top"><span class="no">45</span><span class="tag">Geography</span></div>
                     <h3>Netravati Peak and Chikmagalur</h3>
                     <p>Key points on the Kudremukh-Chikmagalur Ghats: geology, ecology, the Netravati and Tungabhadra rivers, mining and conservation, heritage and coffee, trek safety, terrain reading and OLQs.</p>
                     <span class="cta">Read handbook</span>
                 </a>
 
-                <a class="card" href="materials/47.navic-indian-navy-knowledge-handbook.html">
-                    <div class="card-top"><span class="no">47</span><span class="tag">Defence</span></div>
+                <a class="card" href="materials/46.navic-indian-navy-knowledge-handbook.html">
+                    <div class="card-top"><span class="no">46</span><span class="tag">Defence</span></div>
                     <h3>NavIC and the Indian Navy</h3>
                     <p>How GNSS works, why India built NavIC after Kargil, the constellation and ISRO record, naval use on ships, weapons and fishing boats, GAGAN, GSAT-7 and space, jamming and ASAT threats, and sovereign navigation, with SSB-style practice material.</p>
+                    <span class="cta">Read handbook</span>
+                </a>
+
+                <a class="card" href="materials/47.photography-basics-knowledge-handbook.html">
+                    <div class="card-top"><span class="no">47</span><span class="tag">Craft</span></div>
+                    <h3>Photography Basics</h3>
+                    <p>Light, the camera and the exposure triangle, lenses, focus, sensors, white balance, composition and editing, with the jargon of photography explained and practice material.</p>
                     <span class="cta">Read handbook</span>
                 </a>
             </div>
@@ -647,7 +680,7 @@
             <hr class="sec-rule" />
             <p>These materials are built as self-contained HTML pages so they work directly in the browser, in VS Code preview, and on GitHub Pages without a build step. That keeps the workflow lightweight and consistent with the static study-set approach used in this project.</p>
             <p><strong>Recommended sequence:</strong> start with the national security handbooks, then move to geopolitics and political concepts, and finish with the map and ideology guides for pattern recognition and recall.</p>
-            <div class="foot">Current library inventory: 47 HTML study pages • browser-friendly • GitHub Pages compatible • static-format workflow.</div>
+            <div class="foot">Current library inventory: 47 HTML study pages (plus 5 SSB test guides in the psych catalogue) • browser-friendly • GitHub Pages compatible • static-format workflow.</div>
         </section>
     </main>
 </body>
