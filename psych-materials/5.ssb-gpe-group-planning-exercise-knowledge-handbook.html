@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SSB Group Planning Exercise (GPE): Psychology, Strategy and 24 Worked Exercises — A Deep Knowledge Handbook</title>
+<meta name="description" content="How to frame a strong, practical, OLQ-based plan in the SSB Group Planning Exercise: the psychology behind it, a priority framework, group discussion and narration tactics, and 24 exercises with three model plans each and the reasoning behind them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#2A1F17;
+  --ink-soft:#6A5A4A;
+  --paper:#F6F0E8;
+  --surface:#FFFFFF;
+  --surface-2:#EDE3D5;
+  --rule:#D9CCBB;
+  --rule-strong:#A89580;
+  --red:#A33A2A;
+  --blue:#2B5F7A;
+  --gold:#8A6212;
+  --green:#3B6B40;
+  --hero-bg:#2B1C12;
+  --hero-ink:#F6F0E8;
+  --hero-dim:#C2AF98;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#EDE5DA;
+    --ink-soft:#B8A894;
+    --paper:#14100C;
+    --surface:#1E1812;
+    --surface-2:#2A221A;
+    --rule:#3A3025;
+    --rule-strong:#6B5A47;
+    --red:#F0937F;
+    --blue:#86BEDD;
+    --gold:#DDB552;
+    --green:#86CB8E;
+    --hero-bg:#0E0A07;
+    --hero-ink:#EDE5DA;
+    --hero-dim:#A89580;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#EDE5DA;
+  --ink-soft:#B8A894;
+  --paper:#14100C;
+  --surface:#1E1812;
+  --surface-2:#2A221A;
+  --rule:#3A3025;
+  --rule-strong:#6B5A47;
+  --red:#F0937F;
+  --blue:#86BEDD;
+  --gold:#DDB552;
+  --green:#86CB8E;
+  --hero-bg:#0E0A07;
+  --hero-ink:#EDE5DA;
+  --hero-dim:#A89580;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1.5rem);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
+.flagstrip{display:flex;height:12px}
+.flagstrip span{flex:1}
+.f1{background:#7A3E1D}
+.f2{background:#A33A2A}
+.f3{background:#E3B23C}
+.f4{background:#FF9933}
+.f5{background:#FFFFFF}
+.f6{background:#138808}
+.f7{background:linear-gradient(90deg,#FF9933 33%,#FFFFFF 33%,#FFFFFF 66%,#138808 66%)}
+.f8{background:#3B6B40}
+.hero-inner{max-width:1180px;margin:0 auto;padding:3.2rem 1.5rem 0}
+.kicker{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--hero-dim);margin:0 0 .8rem}
+.hero h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.8rem,5vw,2.9rem);line-height:1.15;margin:0 0 .6rem;max-width:26ch}
+.hero-sub{margin:0;color:var(--hero-dim);max-width:68ch}
+.stamp{margin-top:1.6rem;font-size:.86rem;color:var(--hero-dim);display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+.stamp b{color:var(--hero-ink);font-weight:600}
+
+.shell{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem;display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media (min-width:1000px){
+  .shell{grid-template-columns:255px minmax(0,1fr);gap:3.5rem;padding-top:2.8rem}
+}
+nav.toc{font-size:.9rem}
+@media (min-width:1000px){
+  .toc-mobile{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2rem);align-self:start;max-height:calc(100vh - 5rem);overflow-y:auto}
+}
+nav.toc h2{font-family:"Zilla Slab",Georgia,serif;font-size:.92rem;font-weight:600;margin:0 0 .7rem;padding-bottom:.45rem;border-bottom:2px solid var(--rule-strong)}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc}
+nav.toc li{border-bottom:1px solid var(--rule)}
+nav.toc li:not(.part){counter-increment:toc}
+nav.toc a{display:flex;gap:.6rem;padding:.4rem 0;color:var(--ink-soft);text-decoration:none}
+nav.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--rule-strong);font-variant-numeric:tabular-nums;flex:none}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--red)}
+nav.toc .part{border:0;margin:1.1rem 0 .3rem;font-family:"Zilla Slab",Georgia,serif;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--rule-strong)}
+nav.toc .part::before{content:none}
+.toc-mobile{display:block}
+@media (min-width:1000px){.toc-mobile summary{display:none}}
+.toc-mobile summary{cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:600;padding:.7rem .9rem;background:var(--surface);border:1px solid var(--rule);margin-bottom:1rem}
+@media (max-width:999px){
+  .toc-mobile[open] nav.toc{padding:0 .9rem 1rem}
+  .toc-mobile:not([open]) nav.toc{display:none}
+}
+
+main{min-width:0}
+section{margin:0 0 3.6rem;scroll-margin-top:1.5rem}
+section > h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.45rem,3.6vw,1.95rem);line-height:1.2;margin:0 0 .3rem}
+.part-head{margin:4rem 0 2.2rem;padding:1.1rem 0 .9rem;border-top:4px double var(--rule-strong);border-bottom:1px solid var(--rule)}
+.part-head p{margin:0;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.part-head h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.3rem,3.2vw,1.7rem);margin:.3rem 0 0;color:var(--ink)}
+.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.16rem;margin:2rem 0 .5rem;line-height:1.3}
+h4{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1rem;margin:1.4rem 0 .35rem;color:var(--ink)}
+p{margin:0 0 .95rem;max-width:74ch}
+ul,ol{margin:0 0 1rem;padding-left:1.25rem;max-width:74ch}
+li{margin-bottom:.35rem}
+li::marker{color:var(--rule-strong)}
+strong{font-weight:600}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+.lede{font-size:1.06rem;color:var(--ink-soft);max-width:70ch}
+
+.tablewrap{overflow-x:auto;margin:0 0 1.3rem;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.92rem}
+.tablewrap.wide table{min-width:1180px;font-size:.88rem}
+caption{text-align:left;padding:.7rem .85rem .1rem;font-weight:600;color:var(--ink-soft);font-size:.9rem}
+th,td{text-align:left;padding:.55rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{background:var(--surface-2);font-weight:600;border-bottom:2px solid var(--rule-strong);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.num,th.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+.edge{background:var(--surface);border-left:4px solid var(--red);padding:.9rem 1.1rem;margin:1.4rem 0;max-width:74ch}
+.edge p:last-child,.edge ul:last-child,.edge ol:last-child{margin-bottom:0}
+.edge .edge-h{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);display:block;margin-bottom:.25rem;font-size:.95rem}
+.edge.gold{border-left-color:var(--gold)}
+.edge.gold .edge-h{color:var(--gold)}
+.edge.blue{border-left-color:var(--blue)}
+.edge.blue .edge-h{color:var(--blue)}
+.edge.green{border-left-color:var(--green)}
+.edge.green .edge-h{color:var(--green)}
+
+.note{background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;border:1px solid var(--rule);font-size:.95rem}
+.note p:last-child,.note ul:last-child,.note ol:last-child{margin-bottom:0}
+.note h4{margin-top:0}
+
+.panel{background:var(--surface);border:1px solid var(--rule);padding:1rem 1.1rem}
+.panel h4{margin-top:0}
+.panel ul,.panel ol{margin-bottom:0}
+.panel p:last-child{margin-bottom:0}
+.panel.blue-top{border-top:3px solid var(--blue)}
+.panel.red-top{border-top:3px solid var(--red)}
+.panel.gold-top{border-top:3px solid var(--gold)}
+.panel.green-top{border-top:3px solid var(--green)}
+
+.rungs{max-width:74ch;margin:.3rem 0 0;display:grid;grid-template-columns:9.5rem 1fr;gap:0 1rem}
+.rungs dt{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;color:var(--red);padding-top:.2rem}
+.rungs dd{margin:0 0 .5rem;font-size:.93rem}
+@media (max-width:560px){
+  .rungs{grid-template-columns:1fr;gap:0}
+  .rungs dt{padding-top:.4rem}
+}
+
+.timeline{list-style:none;padding:0;margin:1rem 0 1.4rem;max-width:74ch}
+.timeline li{display:grid;grid-template-columns:8.2rem 1fr;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--rule);margin:0}
+.timeline li:last-child{border-bottom:0}
+.timeline .yr{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);font-variant-numeric:tabular-nums}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:.1rem}}
+
+.qbank{counter-reset:q;list-style:none;padding:0;max-width:74ch}
+.qbank li{counter-increment:q;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.qbank li::before{content:counter(q,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.qbank li:last-child{border-bottom:0}
+
+.dbank{counter-reset:d;list-style:none;padding:0;max-width:74ch}
+.dbank li{counter-increment:d;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.dbank li::before{content:counter(d,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.dbank li:last-child{border-bottom:0}
+
+.grid{display:grid;gap:1rem}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
+
+.card{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--red);padding:1rem 1.1rem}
+.card h4{margin:0 0 .45rem;font-size:1rem}
+.card p:last-child{margin-bottom:0}
+
+.term{max-width:74ch;margin:0 0 1.2rem}
+.term dt{font-weight:600;margin-top:.8rem}
+.term dd{margin:.15rem 0 0;color:var(--ink-soft)}
+
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:.1rem .45rem;border:1px solid var(--rule-strong);color:var(--ink-soft);margin-right:.35rem;vertical-align:middle}
+.tag.fact{border-color:var(--green);color:var(--green)}
+.tag.interp{border-color:var(--gold);color:var(--gold)}
+.tag.disputed{border-color:var(--red);color:var(--red)}
+.tag.verify{border-color:var(--blue);color:var(--blue)}
+.spaced{margin-top:.6rem}
+
+footer{border-top:3px double var(--rule-strong);margin:2rem auto 0;padding:1.4rem 1.5rem 2.5rem;color:var(--ink-soft);font-size:.9rem;max-width:74ch}
+footer a{color:var(--blue)}
+
+.home-btn{position:fixed;top:16px;left:16px;z-index:60;display:inline-flex;align-items:center;gap:.4rem;background:#14202B;color:#F1F2EC;border:1px solid rgba(241,242,236,.25);padding:.45rem .85rem;border-radius:999px;font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.82rem;font-weight:600;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.3);transition:background .15s ease,transform .15s ease}
+.home-btn:hover,.home-btn:focus-visible{background:#BF2F26;transform:translateY(-1px)}
+.home-btn svg{width:14px;height:14px;flex:none}
+@media print{.home-btn{display:none}}
+
+@media print{
+  .hero{background:none;color:#000;padding-bottom:1rem}
+  .hero-sub,.stamp{color:#333}
+  .flagstrip,.toc-mobile{display:none}
+  .shell{display:block;padding:0}
+  section{page-break-inside:auto;margin-bottom:1.8rem}
+  h2,h3{page-break-after:avoid}
+  .panel,.edge,.note,.tablewrap{page-break-inside:avoid}
+  .part-head{page-break-before:always}
+  body{font-size:10.5pt;background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+
+<a class="home-btn" href="../index.html" aria-label="Back to Handbooks homepage" title="Back to Handbooks homepage">
+  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
+  <span>Home</span>
+</a>
+
+<header class="hero">
+  <div class="flagstrip" aria-hidden="true">
+    <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f5"></span><span class="f6"></span><span class="f7"></span><span class="f8"></span>
+  </div>
+  <div class="hero-inner">
+    <p class="kicker">SSB group testing • Group Planning Exercise</p>
+    <h1>The SSB Group Planning Exercise: Psychology, Strategy and 24 Worked Exercises</h1>
+    <p class="hero-sub">How to turn a model, a narration and a set of urgent problems into a sound, practical plan: what the Group Testing Officer reads in your planning, how to prioritise, argue in the group and present, and 24 exercises with three model plans each, with the reasoning shown.</p>
+    <p class="stamp">
+      <span>Sections <b>21</b></span>
+      <span>Worked exercises <b>24 × 3 versions</b></span>
+      <span>Test stages <b>individual plan, group discussion, narration</b></span>
+      <span>Read time <b>2-3 hrs</b></span>
+    </p>
+  </div>
+</header>
+
+<div class="shell">
+
+<details class="toc-mobile" open>
+  <summary>Contents</summary>
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li class="part">How to use this</li>
+      <li><a href="#howto">Using this handbook</a></li>
+
+      <li class="part">Part I · Understanding the test</li>
+      <li><a href="#format">Format and purpose</a></li>
+      <li><a href="#olqs">The OLQs a plan can show</a></li>
+      <li><a href="#psychology">The psychology of planning under pressure</a></li>
+
+      <li class="part">Part II · Strategy</li>
+      <li><a href="#approach">The priority framework</a></li>
+      <li><a href="#reading">Reading the model and narration</a></li>
+      <li><a href="#plan">Writing the individual plan</a></li>
+      <li><a href="#discussion">The group discussion</a></li>
+      <li><a href="#narration">Presenting the plan</a></li>
+      <li><a href="#traps">Common traps</a></li>
+      <li><a href="#method">Method and a worked example</a></li>
+
+      <li class="part">Part III · The exercise bank (24)</li>
+      <li><a href="#bank-village">Village, farm and flood</a></li>
+      <li><a href="#bank-wild">Hills, forest, river and desert</a></li>
+      <li><a href="#bank-town">Town, road and rail</a></li>
+      <li><a href="#bank-camp">School, camp and events</a></li>
+
+      <li class="part">Knowledge toolkit</li>
+      <li><a href="#perspectives">Myths and debates</a></li>
+      <li><a href="#scenarios">Scenarios and trade-offs</a></li>
+      <li><a href="#qbank">Practice bank: questions and motions</a></li>
+      <li><a href="#chronology">Preparation timeline</a></li>
+      <li><a href="#glossary">Glossary</a></li>
+      <li><a href="#revision">Rapid revision sheet</a></li>
+    </ol>
+  </nav>
+</details>
+
+<main>
+<section id="howto">
+  <h2>Using this handbook</h2><hr class="sec-rule">
+  <p class="lede">The Group Planning Exercise (GPE) hands a group a map or model, a short story and four or so urgent problems, with too few people, vehicles and hours to do everything. It is not a puzzle with one right answer. It shows how you sort, decide, argue and present when resources run short, and that is exactly what an officer does.</p>
+  <p>Part I explains the format and what the Group Testing Officer (GTO) reads. Part II gives a priority framework, a way to read the model, a layout for the written plan, rules for the group discussion and the narration, and a worked example. Part III is the exercise bank: 24 exercises, each with <strong>three model plans</strong> and the OLQs they show. The toolkit closes with debates, scenarios, practice questions and a revision sheet. Related guides: <a href="1.ssb-psychological-tests-overview-knowledge-handbook.html">overview</a> for the psychology tests, and <a href="3.ssb-wat-word-association-knowledge-handbook.html">WAT</a>, <a href="4.ssb-srt-situation-reaction-knowledge-handbook.html">SRT</a> and <a href="2.ssb-tat-thematic-apperception-knowledge-handbook.html">TAT</a> for the WAT, SRT and TAT.</p>
+  <div class="edge blue">
+    <span class="edge-h">How the three versions work</span>
+    <p>Every exercise is set for a group of eight on cycles unless stated. <strong>Version 1</strong> keeps <strong>one team</strong> and tackles problems in strict priority order. <strong>Version 2</strong> <strong>splits into parallel teams</strong>, each with a leader and a meeting point. <strong>Version 3</strong> <strong>alerts the right authority first</strong>, hands over what the group cannot do and keeps a reserve. All three are sound. Which fits best depends on the map, so learn to choose.</p>
+  </div>
+  <div class="edge gold">
+    <span class="edge-h">Plans, not scripts</span>
+    <p>Each cell is a compressed plan. A real plan lists assumptions, times and a contingency, and uses the figures in your own narration. The exercises here are invented practice material, not past test content. Use them to learn how a plan is built, and do not memorise.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part I · Understanding the test</p><h2>What the exercise is and what it reads</h2></div>
+
+<section id="format">
+  <h2>Format and purpose</h2><hr class="sec-rule">
+  <p>The GPE is one of the outdoor and indoor tasks conducted by the Group Testing Officer on the group testing days of the SSB, along with the group discussion, progressive and half group tasks, the lecturette, the individual obstacles, the command task and the final group task. Candidates sit in a group of about eight to ten around a model or large sketch of an area. The GTO describes who the group is (often young people on a cycling trip or a camp), the area, the <strong>problems</strong> at different points, the <strong>resources</strong> and the <strong>rules and time limit</strong>.</p>
+  <p>The test then runs in stages: a short period to study the model and take notes, a written <strong>individual plan</strong>, a <strong>group discussion</strong> to agree a common plan, and finally a <strong>narration</strong> of that plan to the GTO by one member. The GTO watches throughout, and the written sheet, the discussion and the narration are read together.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>The stages, at a glance</caption>
+      <thead><tr><th>Stage</th><th>Typical time</th><th>What you do</th><th>What it shows</th></tr></thead>
+      <tbody>
+        <tr><td>Narration and model</td><td>A few minutes</td><td>Listen, note problems, places, resources, rules.</td><td>Attention, accuracy, effective intelligence.</td></tr>
+        <tr><td>Individual plan</td><td>About 10 minutes</td><td>Write your own plan on the sheet.</td><td>Reasoning, organising ability, expression.</td></tr>
+        <tr><td>Group discussion</td><td>About 15 to 20 minutes</td><td>Agree one common plan with the group.</td><td>Influence, cooperation, initiative, self-confidence.</td></tr>
+        <tr><td>Narration of the plan</td><td>About 3 to 5 minutes</td><td>One member presents to the GTO.</td><td>Power of expression, clarity, composure.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><span class="tag verify">Re-verify</span>Group size, timings, the number of problems and who narrates are as commonly described and may differ by centre; follow the instructions of your Group Testing Officer.</p>
+</section>
+
+<section id="olqs">
+  <h2>The OLQs a plan can show</h2><hr class="sec-rule">
+  <p>SSB assesses 15 Officer Like Qualities (OLQs) in four factors. The GPE is unusually broad: the written plan mainly shows Factor I, the discussion Factors II and III, and the effort through a long exercise Factor IV.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>OLQs by factor, and where the GPE shows them</caption>
+      <thead><tr><th>Factor</th><th>OLQs</th><th>Where it shows</th></tr></thead>
+      <tbody>
+        <tr><td>I · Planning and organising</td><td>Effective intelligence, reasoning ability, organising ability, power of expression</td><td>The written plan, the priorities, the time check, the narration.</td></tr>
+        <tr><td>II · Social adjustment</td><td>Social adaptability, cooperation, sense of responsibility</td><td>How you listen, build on others' ideas and own a part of the plan.</td></tr>
+        <tr><td>III · Social effectiveness</td><td>Initiative, self-confidence, speed of decision, ability to influence the group, liveliness</td><td>Starting the discussion, proposing a structure, bringing the group to one plan.</td></tr>
+        <tr><td>IV · Dynamic</td><td>Determination, courage, stamina</td><td>Holding a sound idea under pressure; staying fresh through the final minutes.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning</span>
+    <p>"We will rescue everyone" shows only goodwill. "Life first: the drowning child, then the burning hut, then the road; two teams of three, one of two to alert the fire brigade; meet at the school at 4:30" shows <strong>reasoning ability</strong>, <strong>organising ability</strong>, <strong>sense of responsibility</strong> and <strong>speed of decision</strong> through the structure alone.</p>
+  </div>
+</section>
+
+<section id="psychology">
+  <h2>The psychology of planning under pressure</h2><hr class="sec-rule">
+  <p>The GPE is built on <strong>scarcity</strong>. The group has fewer people, vehicles and minutes than it needs, so every plan is a set of trade-offs. How you trade, and whether you can explain the trade, is what is being read.</p>
+  <ul>
+    <li><strong>Prioritising.</strong> Under pressure, weak planners treat all problems as equal or take them in the order given. Strong planners rank them by danger to life, urgency and distance.</li>
+    <li><strong>Working with others.</strong> A plan has to be agreed, not imposed. The discussion shows whether you can propose firmly, listen and give way on details without dropping the aim.</li>
+    <li><strong>Realism.</strong> The plan must fit the resources and the clock. An elegant plan that needs ten cycles when there are eight is a failed plan.</li>
+    <li><strong>Humility about risk.</strong> Officers do not take needless risks with others' lives. A group that sends one weak swimmer into a flood has not understood the job.</li>
+  </ul>
+  <div class="note">
+    <h4>No single right answer</h4>
+    <p>Most centres' narrations allow several workable plans, and the GTO is mainly interested in <em>how</em> you think, including whether you can spot and defend a sensible priority. <span class="tag interp">Interpretation</span> Accept a good plan that is not yours; adopting a better idea shows maturity, not weakness.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part II · Strategy</p><h2>Building and defending the plan</h2></div>
+
+<section id="approach">
+  <h2>The priority framework</h2><hr class="sec-rule">
+  <p>A five-step loop works for almost any exercise. Run it first in your head while the narration is read, then on paper.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Five steps from narration to plan</caption>
+      <thead><tr><th>Step</th><th>Question</th><th>Output</th></tr></thead>
+      <tbody>
+        <tr><td>1 · Aim and assumptions</td><td>What must the group achieve, and what is fixed?</td><td>One-line aim; assumptions stated openly.</td></tr>
+        <tr><td>2 · Sort the problems</td><td>Which threaten life, which property, which only convenience? Which are urgent, and how far is each?</td><td>A ranked list.</td></tr>
+        <tr><td>3 · Match resources</td><td>How many people, vehicles and tools; what can each do?</td><td>Teams and kit allocation.</td></tr>
+        <tr><td>4 · Sequence or split</td><td>One team in order, or parallel teams? Does the time fit?</td><td>A route and a time table.</td></tr>
+        <tr><td>5 · Contingency and report</td><td>What if a vehicle fails or a task overruns? Who informs whom, and where do we meet?</td><td>A back-up and a rendezvous.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="grid two">
+    <div class="panel green-top">
+      <h4>The priority rules</h4>
+      <ul>
+        <li><strong>Life before property</strong>, property before convenience.</li>
+        <li><strong>Urgent before important</strong> within the same class: drowning before a broken arm.</li>
+        <li>When equal, <strong>nearer first</strong> and tasks on the same route together.</li>
+        <li><strong>Alert authorities early</strong>: fire brigade, police, hospital, as the resources allow.</li>
+        <li>Never send one person alone; keep teams of at least two.</li>
+      </ul>
+    </div>
+    <div class="panel blue-top">
+      <h4>Planning speeds</h4>
+      <ul>
+        <li>Walking: about 4 to 5 km/h.</li>
+        <li>Cycling: about 10 to 12 km/h on rural roads.</li>
+        <li>Motor vehicle on a rough road: about 25 to 30 km/h.</li>
+        <li>Allow time to load, treat and hand over, not only to travel.</li>
+        <li>If the narration gives speeds, use those and no others.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="reading">
+  <h2>Reading the model and narration</h2><hr class="sec-rule">
+  <p>The narration is short and is usually given once, so the first minutes are about <strong>capturing facts</strong>. Make a quick table as you listen, then check it against the model.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>A quick capture table</caption>
+      <thead><tr><th>Problem</th><th>Where and how far</th><th>Danger</th><th>What it needs</th></tr></thead>
+      <tbody>
+        <tr><td>A. Child in a well</td><td>North, 2 km</td><td>Life, urgent</td><td>Rope, 3 people</td></tr>
+        <tr><td>B. Hut fire</td><td>East, 3 km</td><td>Property, may threaten life</td><td>Buckets, 3 people, fire brigade</td></tr>
+        <tr><td>C. Broken bridge</td><td>On the road to the hospital</td><td>Convenience, delays other tasks</td><td>Warning signs, authority</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul>
+    <li>Note <strong>the rules</strong>: the group stays in the area, nobody goes alone, outside help is or is not available.</li>
+    <li>Note the <strong>clock</strong>: the start time, the finish time, and any sunset or tide.</li>
+    <li>Note the <strong>resources and their limits</strong>: eight cycles, one rope, one phone, a boat for two.</li>
+    <li>Ask the GTO if a detail is unclear, if the rules permit. A reasonable <strong>assumption</strong> is allowed when the narration is silent; state it in the plan.</li>
+  </ul>
+  <div class="edge">
+    <span class="edge-h">Use the model</span>
+    <p>Candidates often write a plan that ignores the sketch. A route that crosses a river with no bridge, or a distance guessed instead of read from the scale, shows poor attention. Point to the model when you speak: it proves you used it.</p>
+  </div>
+</section>
+
+<section id="plan">
+  <h2>Writing the individual plan</h2><hr class="sec-rule">
+  <p>The written plan is short and structured, so that the GTO can read it in a minute and see your thinking. A layout that works:</p>
+  <div class="panel blue-top">
+    <h4>A plan layout</h4>
+    <dl class="rungs">
+      <dt>Aim</dt><dd>Save life, protect property and restore the road before 5:00 pm.</dd>
+      <dt>Assumptions</dt><dd>The phone works; the boat holds two; a doctor is at the dispensary.</dd>
+      <dt>Priorities</dt><dd>1. Child in the well. 2. Hut fire. 3. Injured cyclist. 4. Broken bridge.</dd>
+      <dt>Teams</dt><dd>A (3): well. B (3): fire. C (2): phone and warning.</dd>
+      <dt>Timing</dt><dd>2:00 start; A reaches 2:15; B reaches 2:20; C calls 2:10.</dd>
+      <dt>Contingency</dt><dd>If A is delayed, B sends one to help; C stays as reserve.</dd>
+      <dt>Meet and report</dt><dd>School at 4:30 pm; leader reports to the village head.</dd>
+    </dl>
+  </div>
+  <div class="grid two">
+    <div class="panel green-top">
+      <h4>Do</h4>
+      <ul>
+        <li>Write short lines, not paragraphs.</li>
+        <li>Give <strong>times and numbers</strong>: who, how many, when.</li>
+        <li>Show the <strong>reason</strong> for each priority in a few words.</li>
+        <li>Include a <strong>contingency</strong> and a <strong>meeting point</strong>.</li>
+        <li>Leave room to change when the group agrees a better idea.</li>
+      </ul>
+    </div>
+    <div class="panel red-top">
+      <h4>Avoid</h4>
+      <ul>
+        <li>Plans that need more people or cycles than exist.</li>
+        <li>Hero acts: one person doing everything.</li>
+        <li>Ignoring the time limit.</li>
+        <li>Leaving the injured alone or unsupervised.</li>
+        <li>Blaming the narration for a gap; fill it with a stated assumption.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="discussion">
+  <h2>The group discussion</h2><hr class="sec-rule">
+  <p>Here the OLQs of Factors II and III are most visible. You are not trying to <em>win</em>; you are trying to help the group reach <strong>one good plan inside the time</strong>. The best contribution is often <strong>structure</strong>: "Let us list the problems, rank them, then decide teams."</p>
+  <ul>
+    <li><strong>Start early, but not loudly.</strong> A short, structured opening beats a long monologue. Waiting for ten minutes and then speaking is too late.</li>
+    <li><strong>Listen and build.</strong> "I agree with Rohit on the well first; may I add that Team B needs the rope as well?"</li>
+    <li><strong>Keep time.</strong> Remind the group of the clock gently and propose when to decide.</li>
+    <li><strong>Close.</strong> Summarise the agreed plan so that the narrator has it clearly.</li>
+  </ul>
+  <div class="tablewrap">
+    <table>
+      <caption>Moments in a discussion, and moves</caption>
+      <thead><tr><th>Situation</th><th>Strong move</th><th>Weak move</th></tr></thead>
+      <tbody>
+        <tr><td>A member dominates</td><td>Acknowledge, then redirect: "Good point; let us hear from Amit too."</td><td>Interrupt or argue loudly.</td></tr>
+        <tr><td>Two plans conflict</td><td>Compare against the rules: life first, time fit, resources.</td><td>Insist that yours is better.</td></tr>
+        <tr><td>A quiet member</td><td>Invite: "Karan, what do you think about the route?"</td><td>Ignore him.</td></tr>
+        <tr><td>A wrong idea is proposed</td><td>Ask a question that shows the gap: "Will eight cycles cover both routes by 4?"</td><td>Dismiss it.</td></tr>
+        <tr><td>Time is running out</td><td>Propose a decision and a vote of hands.</td><td>Keep debating details.</td></tr>
+        <tr><td>Your idea is dropped</td><td>Accept and support the group plan.</td><td>Sulk or reopen the matter.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning</span>
+    <p>The GTO cannot credit what you do not say, but volume is not influence. A candidate who speaks four times, each time moving the group forward (a structure, a correction, a summary), shows <strong>ability to influence the group</strong>, <strong>cooperation</strong> and <strong>self-confidence</strong>. A candidate who speaks twenty times to repeat a point shows the reverse.</p>
+  </div>
+</section>
+
+<section id="narration">
+  <h2>Presenting the plan</h2><hr class="sec-rule">
+  <p>One member narrates the group's plan to the GTO. If you are chosen, the aim is <strong>clear, complete and calm</strong>. If you are not, you are still assessed in the discussion, so there is no penalty for not narrating.</p>
+  <ol>
+    <li><strong>Opening:</strong> "Sir, our group of eight will deal with four problems before 5 pm."</li>
+    <li><strong>Aim and assumptions:</strong> one line each.</li>
+    <li><strong>Priorities:</strong> in order, with a few words on why.</li>
+    <li><strong>Teams and timings:</strong> who goes where and when, pointing to the model.</li>
+    <li><strong>Contingency:</strong> one or two lines.</li>
+    <li><strong>Close:</strong> "That is our plan, sir."</li>
+  </ol>
+  <div class="panel blue-top">
+    <h4>Sample narration (about 120 words)</h4>
+    <p>"Sir, our aim is to save life and protect property in the village before dark. We assume the post-office phone works. Our priorities are: first, the child in the well, as it threatens life; second, the hut fire; third, the injured cyclist; fourth, the broken bridge, which we will warn about. We will split into three teams. Team A of three, with the rope, goes north and reaches the well by 2:15. Team B of three goes east with buckets and reaches the hut by 2:20. Team C of two phones the fire brigade and the hospital, then puts warning signs at the bridge. If Team A is delayed, one member of Team C joins it. We meet at the school at 4:30. That is our plan, sir."</p>
+  </div>
+  <p>Speak slowly, face the GTO, use "we" for the group plan, and avoid fillers. If you lose the thread, pause and glance at the sheet; a pause reads as control, and rushing reads as panic.</p>
+</section>
+
+<section id="traps">
+  <h2>Common traps</h2><hr class="sec-rule">
+  <ul>
+    <li><span class="tag disputed">Trap</span><strong>Order of narration.</strong> Solving the problems in the order they were told, not by priority.</li>
+    <li><span class="tag disputed">Trap</span><strong>Unrealistic plans.</strong> Using vehicles, people or phones that do not exist; ignoring the time limit.</li>
+    <li><span class="tag disputed">Trap</span><strong>Hero acts.</strong> One member to fight a fire alone or swim a flooded river.</li>
+    <li><span class="tag disputed">Trap</span><strong>No contingency.</strong> A plan that fails if one thing goes wrong.</li>
+    <li><span class="tag disputed">Trap</span><strong>Dominating the group.</strong> Imposing your plan, or talking over others.</li>
+    <li><span class="tag disputed">Trap</span><strong>Silence.</strong> Saying nothing in the discussion, then agreeing with everything.</li>
+    <li><span class="tag disputed">Trap</span><strong>Wasted minutes.</strong> Arguing minor details such as who will lead each team while major tasks are unplanned.</li>
+    <li><span class="tag disputed">Trap</span><strong>Ignoring the injured.</strong> Leaving a victim without care or without a plan to reach a doctor.</li>
+    <li><span class="tag disputed">Trap</span><strong>Reading from the sheet.</strong> A narration that sounds copied, with no eye contact.</li>
+  </ul>
+</section>
+
+<section id="method">
+  <h2>Method and a worked example</h2><hr class="sec-rule">
+  <p>Practise the loop slowly, then at test speed. Below is one exercise worked end to end.</p>
+  <div class="panel blue-top">
+    <h4>Worked example: the hill hamlet</h4>
+    <p>A group of eight on cycles, at the school (point S) at 2:00 pm, must finish by 5:00 pm. Problems: (1) a boy has fallen into a dry well, 2 km north; (2) a hut is on fire, 3 km east; (3) a cyclist has a broken leg, 4 km south; (4) the bridge on the road to the hospital, 5 km west, is washed away. Resources: eight cycles, one rope, buckets in the school, a first-aid box, a phone at the post office beside the school. No outside help unless the phone is used.</p>
+    <dl class="rungs">
+      <dt>Aim</dt><dd>Save lives first, then property, and inform authorities, within three hours.</dd>
+      <dt>Sort</dt><dd>Life: well, broken leg, hut (may hold people). Property: hut. Convenience: bridge.</dd>
+      <dt>Resources</dt><dd>One rope: used at the well. One first-aid box: with the leg. Phone: 5 minutes, two people.</dd>
+      <dt>Teams</dt><dd>A (3): well with the rope. B (3): hut with buckets. C (2): phone, then leg with first aid and a hand-cart.</dd>
+      <dt>Timing</dt><dd>C calls fire brigade, hospital and the panchayat by 2:10; A at the well 2:15; B at the hut 2:20; C at the leg 2:35.</dd>
+      <dt>Contingency</dt><dd>When A finishes, it joins C; B stays until the brigade arrives. The bridge is left to the panchayat, with warning signs put by A on return.</dd>
+      <dt>Meet</dt><dd>School at 4:30 pm; leader reports to the village head.</dd>
+    </dl>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning</span>
+    <p>The bridge is the <em>largest</em> problem on the map but the <em>least</em> urgent, so the plan hands it over instead of chasing it. That is the central skill: ranking by danger, not by size. The plan shows <strong>reasoning ability</strong> (ranking), <strong>organising ability</strong> (teams, timings), <strong>sense of responsibility</strong> (informing authority) and <strong>cooperation</strong> (A joins C when free). A weaker plan sends all eight to the bridge because it looks hardest.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part III · The exercise bank</p><h2>24 exercises, three plans each</h2></div>
+
+<section id="bank-village">
+  <h2>Village, farm and flood</h2><hr class="sec-rule">
+  <p>Village exercises pack many small problems into a short distance, with a phone or a panchayat as the only authority. Life, water and fire come first; livestock and roads come later. Group of eight on cycles unless stated.</p>
+  <div class="tablewrap wide">
+    <table>
+      <caption>Exercises 1-6</caption>
+      <thead><tr><th>Exercise and resources</th><th>Version 1 · one team, priority order</th><th>Version 2 · parallel teams</th><th>Version 3 · alert, hand over, reserve</th><th>OLQ</th></tr></thead>
+      <tbody>
+        <tr><td><strong>1.</strong> <b>Flooded village.</b> A family is on a roof 3 km east; a bridge is washed out; cattle are trapped in a shed; an elder is ill at the temple. Eight cycles, a rope, a two-seat boat, a post-office phone. Three hours before dark.</td><td>Phone for rescue and a doctor first (5 min). All go east with rope and boat; bring the family out in boat trips. Take the elder to the dispensary; leave cattle and bridge to the panchayat.</td><td>A (4) rescues the family with rope and boat. B (2) takes the elder to the dispensary by cycle-cart. C (2) phones, then warns people at the washed bridge. Meet at the school by 5.</td><td>Phone the district control room first and ask for a boat. A guides the rescue boat; B keeps people off the weak bank. Bridge and cattle go to the panchayat. Two people stay in reserve at the school.</td><td>Speed of decision, organising ability</td></tr>
+        <tr><td><strong>2.</strong> <b>Granary fire.</b> The grain store is burning 2 km away; a boy is missing in the fields; a power line is down on the road; a tractor is stuck in mud. Eight cycles, six buckets, a well, a phone.</td><td>Phone the fire brigade and the electricity office. Search for the boy first, in a line across the fields. Then the bucket chain at the granary; keep everyone away from the line.</td><td>A (3) searches the fields in line. B (3) forms a bucket chain from the well. C (2) phones, then marks the live line with branches and warns passers-by.</td><td>C phones fire brigade and electricity office first and meets them at the road. A and B split as in a search and bucket chain; the tractor is left. One member stays at the junction as a guide and reserve.</td><td>Sense of responsibility, reasoning</td></tr>
+        <tr><td><strong>3.</strong> <b>Dry well.</b> A child has fallen into a 15 m dry well; a tanker is stuck near the village; an elder has heat-stroke; smoke from burning stubble drifts over the school. Six cycles, a rope, a ladder, a first-aid box, a weak-signal phone.</td><td>All go to the well. Lower the rope with a knot loop, then a ladder; talk to the child. Move the heat-stroke case into shade and cool him; warn the school after.</td><td>A (3) works the rope and ladder. B (2) cools the elder and gives water. C (1 with a runner) goes to a high point for signal, phones for an ambulance and tells the school to close windows.</td><td>Phone the ambulance and the rescue service from the high point first. Meanwhile A starts the rope work. B treats the elder. Tanker and smoke are reported to the panchayat.</td><td>Presence of mind, courage</td></tr>
+        <tr><td><strong>4.</strong> <b>Village fair.</b> Injuries from a crowd crush; a child is lost; a stall is on fire; a pickpocket has been caught. Eight cyclists, a loudspeaker, a police post 1 km away, a first-aid tent.</td><td>Move the injured to the first-aid tent; stop the crowd from pressing. Put out the stall fire with sand. Announce the lost child by loudspeaker; hand the pickpocket to police.</td><td>A (3) clears a path and helps the injured. B (2) uses sand and water on the fire. C (2) works the loudspeaker for the lost child. One goes to the police post with the pickpocket.</td><td>Send a runner to the police post and the fire service first. A and B work as in version 2. Police take over crowd control; the group keeps a reserve pair at the entry gate.</td><td>Leadership, cooperation</td></tr>
+        <tr><td><strong>5.</strong> <b>Cyclone warning.</b> A coastal village: fisherfolk must be moved; a boat is adrift; the school roof (a shelter) is damaged; an elder is bedridden. Eight cycles, a six-seat jeep and driver, a megaphone, a radio.</td><td>Warn the village by megaphone and move people to the shelter in jeep trips, starting with the elder. Then reinforce the school roof; leave the boat. Listen to the radio hourly.</td><td>A (3) moves the elder and the old by jeep. B (3) warns families and moves them. C (2) repairs the school roof with ropes and boards.</td><td>Report to the district and coast guard that a boat is adrift. A and B evacuate as above. C reinforces the shelter; two keep the radio and act as reserve.</td><td>Sense of responsibility, organising ability</td></tr>
+        <tr><td><strong>6.</strong> <b>Harvest evening.</b> A farmer is snake-bitten; a hut has collapsed with a woman trapped; a cart blocks the road; a child is missing. Eight cycles, a bullock cart, lanterns, a first-aid kit. Hospital 12 km. Dusk in two hours.</td><td>Take the farmer to the hospital by cart, keeping the limb still, with two escorts. The rest dig out the woman, then search for the child in a line. Cart on the road is last.</td><td>A (3) takes the farmer by cart to the hospital. B (3) digs out the woman. C (2) organises the village to search for the child with lanterns.</td><td>Phone ahead to warn the hospital and send a message to the panchayat for the search. A takes the farmer; B rescues the woman; C joins the search. The cart is cleared last.</td><td>Speed of decision, stamina</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning: "the washed-out bridge"</span>
+    <p>A washed-out bridge is dramatic and, in all six village exercises, an obvious distraction. The strong plan <strong>hands it over</strong> to the panchayat with a warning sign and spends the group on people. That choice shows <strong>reasoning ability</strong> and <strong>sense of responsibility</strong>: the group is judged on lives protected, not on obstacles removed.</p>
+  </div>
+</section>
+
+<section id="bank-wild">
+  <h2>Hills, forest, river and desert</h2><hr class="sec-rule">
+  <p>Wild-area exercises add distance, weather and poor communication. The strong plans keep the group together, plan for failure and protect themselves first, since a rescuer who becomes a casualty is a second problem.</p>
+  <div class="tablewrap wide">
+    <table>
+      <caption>Exercises 7-12</caption>
+      <thead><tr><th>Exercise and resources</th><th>Version 1 · one team, priority order</th><th>Version 2 · parallel teams</th><th>Version 3 · alert, hand over, reserve</th><th>OLQ</th></tr></thead>
+      <tbody>
+        <tr><td><strong>7.</strong> <b>Hill trek.</b> A trekker has a fractured leg; a storm threatens the camp; a child is lost; a landslide blocks the path. Eight members, a rope, a tarpaulin, a radio with 5 km range, a first-aid kit. Dusk in three hours.</td><td>Splint the leg and make a stretcher from the tarpaulin. Radio for help. Carry the casualty to a safe, sheltered spot. Search for the child in pairs; leave the landslide.</td><td>A (3) splints and carries. B (3) searches for the child in pairs. C (2) moves the camp to safe ground and radios for help. Meet at the shelter at dusk.</td><td>Radio the forest or rescue authority first with the location and cases. A and B work as in version 2. C holds the shelter and acts as reserve; the landslide is reported.</td><td>Courage, organising ability</td></tr>
+        <tr><td><strong>8.</strong> <b>Forest fire.</b> A fire is near a hamlet; a forest guard is injured; an elephant herd is moving toward the village; a tree blocks the road. Eight cycles, beaters, a phone at the guard post, a jeep with driver.</td><td>Phone the forest and fire departments. Evacuate the hamlet by jeep, starting with children. Treat the guard. Use beaters on the fire line only if safe; leave the tree.</td><td>A (3) moves families out by jeep. B (3) treats the guard and takes him to the hospital. C (2) phones and warns villagers of the herd.</td><td>Phone first and ask the forest department to handle the herd and fire. A and B evacuate and treat. C stays at the guard post to guide the arriving teams.</td><td>Presence of mind, sense of responsibility</td></tr>
+        <tr><td><strong>9.</strong> <b>River crossing.</b> A rope bridge is broken; a boy has been washed downstream; the only boat has a leak; a member is sick. Eight members, a rope, a boat for three, planks, a first-aid kit.</td><td>Send the boat with three downstream along the bank after the boy, bailing as they go. The rest follow on foot with the rope and first aid. Treat the sick member at the base.</td><td>A (3) rescues the boy in the boat. B (3) follows along the bank with rope. C (2) looks after the sick member and mends the boat with planks.</td><td>Alert the nearest village downstream by runner to watch for the boy. A and B search as in version 2. C stays with the sick member as a reserve; the bridge is left.</td><td>Speed of decision, courage</td></tr>
+        <tr><td><strong>10.</strong> <b>Mountain pass.</b> A bus with 20 passengers is stuck in snow; a woman is in labour; a dhaba has a gas leak; the phone line is broken. Eight members, a 4WD jeep with driver, two shovels, blankets.</td><td>Make the gas leak safe first: shut the valve, clear people. Move the woman by jeep to the nearest hospital with an escort. Warm the passengers; dig the bus out last.</td><td>A (2) deals with the gas leak. B (3) takes the woman by jeep. C (3) distributes blankets and starts the bus dig-out.</td><td>Send the jeep to the nearest post for rescue and a medical team, with the woman as first passenger. A and C secure the leak, warm the passengers and keep the road line clear.</td><td>Reasoning, determination</td></tr>
+        <tr><td><strong>11.</strong> <b>Desert crossing.</b> A camel-cart has overturned with injuries; the well has dried; a member has heat-stroke; a sandstorm is approaching. Eight members, two camels, water for one day, a phone with intermittent signal.</td><td>Shelter all behind the cart and cover faces as the storm hits. Treat the injured and the heat-stroke case. After the storm, move to the next well with the camels carrying the injured.</td><td>A (3) treats the injured. B (3) shelters and cools the heat-stroke case. C (2) goes with a camel to the next well to check water, returning by 4.</td><td>Phone for rescue as soon as there is signal, with the position. Shelter all together; conserve water; wait for rescue rather than move in a sandstorm. Two keep watch as reserve.</td><td>Stamina, reasoning</td></tr>
+        <tr><td><strong>12.</strong> <b>Lake ferry.</b> A boat is stuck on a sandbar with 15 passengers; a child has fallen overboard; a net is on fire on the shore; a storm is approaching. Two motor boats, ropes, life jackets, a shore phone.</td><td>Both boats go for the child first, then the passengers. Move passengers to the shore in turns, children first, with life jackets. Put out the net fire last.</td><td>Boat 1 (3) searches for the child. Boat 2 (3) ferries passengers. C (2) on shore phones and stops the net fire spreading.</td><td>Phone the water police and port authority first. Boats work as in version 2. C keeps people back from the fire and receives the passengers; the storm is reported.</td><td>Presence of mind, cooperation</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning: "stay or go in a sandstorm"</span>
+    <p>It can feel braver to push on. The strong plan <strong>sits out the storm together</strong> and moves afterwards. That shows <strong>reasoning ability</strong> and <strong>sense of responsibility</strong>: an officer does not risk the group to look decisive, but takes action when the situation allows.</p>
+  </div>
+</section>
+
+<section id="bank-town">
+  <h2>Town, road and rail</h2><hr class="sec-rule">
+  <p>Town exercises have more authorities nearby: police, ambulance, fire brigade. The skill here is to <strong>alert fast, secure the scene and help</strong>, not to replace the professionals. Group of eight on cycles unless stated.</p>
+  <div class="tablewrap wide">
+    <table>
+      <caption>Exercises 13-18</caption>
+      <thead><tr><th>Exercise and resources</th><th>Version 1 · one team, priority order</th><th>Version 2 · parallel teams</th><th>Version 3 · alert, hand over, reserve</th><th>OLQ</th></tr></thead>
+      <tbody>
+        <tr><td><strong>13.</strong> <b>Highway collision.</b> A bus and truck have collided; diesel is spilling; a jam blocks the ambulance; a crowd is gathering. Eight cycles, a phone, a first-aid kit, reflective jackets.</td><td>Call ambulance, police and fire at once. Switch off engines, keep people away from the diesel. Give first aid to the injured and clear a lane for the ambulance.</td><td>A (2) phones and then guides the ambulance. B (3) gives first aid and moves the injured. C (3) controls the crowd and clears a lane.</td><td>Phone first, then hand over command to police and ambulance staff on arrival. The group assists with first aid and crowd control, and keeps a reserve at the junction.</td><td>Speed of decision, responsibility</td></tr>
+        <tr><td><strong>14.</strong> <b>Rail derailment.</b> A goods train has derailed near a village; passengers are trapped in a coach; a tanker is leaking; a passenger train is due in 40 minutes. Eight cycles, a red flag, torches, a cabin phone 1 km away.</td><td>Stop the oncoming train first: send two with the flag and torches 1 km up the line and ring the cabin. Then free the trapped passengers; keep all away from the tanker.</td><td>A (2) flags the train and phones the cabin. B (3) helps passengers out. C (3) keeps people away from the leaking tanker.</td><td>Phone the cabin and railway control first for a stop signal and a relief train. B and C work as in version 2. A guides railway staff and ambulances on arrival; one stays in reserve.</td><td>Alertness, sense of responsibility</td></tr>
+        <tr><td><strong>15.</strong> <b>Factory fire.</b> A chemical store is on fire; workers are trapped; a guard is hurt; a crowd presses at the gate. Eight cyclists, four extinguishers, a hydrant, a phone.</td><td>Call the fire brigade. Clear the crowd from the gate and free the trapped by the nearest exit. Treat the guard. Use extinguishers only on small fires; keep away from chemicals.</td><td>A (3) helps the trapped out. B (2) treats the guard. C (3) controls the crowd and keeps the gate clear for the brigade.</td><td>Phone the brigade, police and ambulance first. The group clears the gate for them and helps the workers and guard. All stay away from chemical smoke; two form the reserve.</td><td>Presence of mind, responsibility</td></tr>
+        <tr><td><strong>16.</strong> <b>Market snatching.</b> A bag was snatched and the thief has fled; a woman is injured; a shop is on fire; a mob is forming. Eight cycles, a first-aid kit, a police post 500 m away, a phone.</td><td>Treat the woman first and send for police. Put out the small fire with sand and water. Calm the mob; share the thief's description with the police.</td><td>A (2) treats the woman. B (3) fights the fire. C (3) calms the crowd and takes details to the police post.</td><td>Alert the police and fire service first. The group helps the woman and holds the fire in check. It leaves the chase to the police and stops the mob from taking the law into its hands.</td><td>Reasoning, self-control</td></tr>
+        <tr><td><strong>17.</strong> <b>Hospital power cut.</b> The hospital generator has failed; a patient is on a ventilator; a pole is down on the road; relatives are crowding. Eight cycles, a van, a small generator 4 km away, cable.</td><td>Tell the hospital staff and the electricity office. Send the van for the generator. Hand-pump the ventilator while it comes. Clear relatives from the ward.</td><td>A (3) takes the van for the generator. B (2) assists the doctor with the patient. C (3) clears the ward and warns of the pole on the road.</td><td>Phone the electricity office for a priority repair and ask the hospital to move the patient to a nearby ward if it has power. A fetches the generator; B and C support the doctor.</td><td>Initiative, responsibility</td></tr>
+        <tr><td><strong>18.</strong> <b>Building collapse.</b> After an earthquake a tenement has partly collapsed; residents are trapped; a gas cylinder is leaking; the road is blocked. Ten cyclists, a crowbar, two ropes, a rickshaw, a megaphone.</td><td>Shut off the gas and keep flames away. Call rescue and ambulance. Listen for voices, then free trapped people from the lightest debris first. Keep the crowd back.</td><td>A (3) handles gas and crowd. B (4) searches for and frees survivors. C (3) moves the injured by rickshaw and clears a path.</td><td>Phone the disaster response first and mark where voices were heard. B digs carefully; A and C support. On arrival of the response team the group hands over the map and acts as helpers.</td><td>Sense of responsibility, courage</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning: "tell the professionals first"</span>
+    <p>It is tempting to treat a town scene as a group heroics task. The strong plan <strong>raises the alarm first</strong>, secures the scene, helps where it is trained, and hands over. That shows <strong>sense of responsibility</strong> and <strong>reasoning ability</strong>: the group is useful, not a second emergency.</p>
+  </div>
+</section>
+
+<section id="bank-camp">
+  <h2>School, camp and events</h2><hr class="sec-rule">
+  <p>Here the group often carries a duty of care: children, cadets, a crowd. The plan must protect the many while treating the few, and keep a headcount. Group of eight unless stated.</p>
+  <div class="tablewrap wide">
+    <table>
+      <caption>Exercises 19-24</caption>
+      <thead><tr><th>Exercise and resources</th><th>Version 1 · one team, priority order</th><th>Version 2 · parallel teams</th><th>Version 3 · alert, hand over, reserve</th><th>OLQ</th></tr></thead>
+      <tbody>
+        <tr><td><strong>19.</strong> <b>School excursion.</b> A bus has broken down on a hill road with 40 children; a teacher has fainted; a child is missing at a viewpoint; rain is starting. Eight escorts, a phone with poor signal, a first-aid kit, tarpaulins.</td><td>Take a headcount and keep the children together under the tarpaulins. Treat the teacher. Search for the missing child with two escorts, in sight of the group. Then call for a replacement bus.</td><td>A (4) keeps and counts the children. B (2) treats the teacher. C (2) searches the viewpoint and the trail.</td><td>Climb to the signal point and phone the school, the police and the bus company. A and B work as in version 2. C searches and returns by a set time. Two stay in reserve with the children.</td><td>Sense of responsibility, composure</td></tr>
+        <tr><td><strong>20.</strong> <b>NCC camp.</b> A tent has caught fire; a cadet has a sprained ankle; a stray dog has bitten a cadet; a cadet is missing at night. Eight seniors, extinguishers, a first-aid kit, torches, a camp phone.</td><td>Get everyone out and put out the tent fire. Treat the bite first (wash, medical), then the sprain. Take a headcount, then search for the missing cadet in pairs with torches.</td><td>A (3) fights the fire. B (2) treats the bite and sprain. C (3) takes a headcount and searches in pairs.</td><td>Report to the camp commandant at once and phone for the medical officer. A and B act as in version 2. C searches and returns in 30 minutes; the commandant takes the lead after arrival.</td><td>Discipline, speed of decision</td></tr>
+        <tr><td><strong>21.</strong> <b>Sports meet.</b> A player has a head injury; a spectator stand is cracking; a runner has heat-stroke; a purse has been stolen. Eight volunteers, a first-aid tent, a stretcher, a loudspeaker.</td><td>Clear the weak stand first. Move the head-injury case on a stretcher with the neck supported. Cool the heat-stroke case. Leave the theft to the officials.</td><td>A (3) clears the stand. B (3) takes the head injury to the tent. C (2) cools the heat-stroke case and asks for an ambulance.</td><td>Alert the organisers, the doctor and the ambulance. The volunteers clear the stand and support the doctor. The theft is reported to the organisers; two stay in reserve at the gate.</td><td>Alertness, responsibility</td></tr>
+        <tr><td><strong>22.</strong> <b>Marathon day.</b> A runner has collapsed; a water point is empty; a barrier has broken; a child is lost. Eight volunteers on cycles, a medical post, a loudspeaker, water drums.</td><td>Take the runner to the medical post with a first-aid check. Refill the water point from the drums. Fix the barrier with rope. Announce the lost child.</td><td>A (2) with the runner. B (2) refills water. C (2) fixes the barrier. D (2) makes the announcement and meets the child's parents.</td><td>Alert the race director and the medical post first. Runner and water as in version 2. The barrier is secured by marshals; two volunteers stay in reserve on cycles along the route.</td><td>Organising ability, initiative</td></tr>
+        <tr><td><strong>23.</strong> <b>Night in the campus.</b> A hostel room is on fire; a stranger has entered the grounds; the power is out; a student has an asthma attack. Eight senior students, extinguishers, a phone, torches.</td><td>Wake and move the hostel out, starting with the fire floor. Treat the asthma attack. Call the fire brigade and the security. Watch the stranger from a distance.</td><td>A (3) evacuates and counts. B (2) helps the asthma case. C (3) fights the small fire and keeps the stranger in view.</td><td>Phone the fire service, security and the doctor at once. A and B work as in version 2. C hands the stranger to security and keeps the gate; one remains in reserve with the students.</td><td>Presence of mind, sense of responsibility</td></tr>
+        <tr><td><strong>24.</strong> <b>Relief camp.</b> After a flood: a food queue is turning unruly; the medical tent is short of medicine; a children's desk needs organising; the water tank may be contaminated. Eight volunteers, a truck, lists, chlorine tablets.</td><td>Stop use of the tank and treat the water, since it affects everyone. Calm the queue with a token system. Send the truck for medicine. Then set up the children's desk.</td><td>A (2) treats the water. B (3) runs the token queue. C (1+1) takes the truck for medicine. D (2) sets up the children's desk.</td><td>Report the tank and the medicine shortfall to the camp officer first. The group runs the queue and the desk and helps the medical team. Two form a reserve at the gate for new arrivals.</td><td>Organising ability, cooperation</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning: "treat the water first"</span>
+    <p>The contaminated tank is the quietest problem in exercise 24 and the one that can hurt the most people. The strong plan <strong>deals with the widest hazard first</strong>, then the visible ones. It shows <strong>reasoning ability</strong> and <strong>effective intelligence</strong>: urgency is about numbers at risk, not about noise.</p>
+  </div>
+</section>
+
+<section id="perspectives">
+  <h2>Myths and debates</h2><hr class="sec-rule">
+  <p>GPE advice is plentiful and often contradictory. Tags separate what is well supported from opinion.</p>
+  <ul>
+    <li><span class="tag fact">Established</span><strong>The assessment is of qualities, not of the plan.</strong> The GTO reads the way you think and work with others, not whether your plan matches a key.</li>
+    <li><span class="tag fact">Established</span><strong>Life comes before property.</strong> This priority is accepted across rescue practice and is the safest default.</li>
+    <li><span class="tag interp">Interpretation</span><strong>"Speak first to score."</strong> Opening the discussion helps, but only if what you say adds structure. A weak opening hurts more than a late, sound one.</li>
+    <li><span class="tag disputed">Disputed</span><strong>Should you nominate yourself to narrate?</strong> Some mentors say yes if prepared; others say a forced bid looks eager. Offer if you can do it well; support the group's choice if not.</li>
+    <li><span class="tag disputed">Disputed</span><strong>One team or split.</strong> A single team is simpler; splitting saves time but needs leaders and communication. Choose by distance and time, not by habit.</li>
+    <li><span class="tag disputed">Disputed</span><strong>Stating assumptions.</strong> Some think they look like loopholes; most agree that clear, modest assumptions show maturity.</li>
+    <li><span class="tag interp">Interpretation</span><strong>Memorised plans.</strong> They sound alike and often miss the specific map.</li>
+    <li><span class="tag verify">Re-verify</span><strong>Test details.</strong> Group size, timings, the number of problems and the rules differ; follow your Group Testing Officer.</li>
+  </ul>
+  <div class="edge">
+    <span class="edge-h">Lesser-known fact</span>
+    <p>The strongest contributions in a discussion are often small and exact: a corrected distance, a missed resource, a conflict between two teams' timings. Spotting these shows careful attention, which the whole test rewards.</p>
+  </div>
+</section>
+
+<section id="scenarios">
+  <h2>Scenarios and trade-offs</h2><hr class="sec-rule">
+  <p>Awkward moments arise in the real exercise. The options below show what is available and what each trades.</p>
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>Your mind goes blank</h4>
+      <ul>
+        <li>Fall back on the five steps: aim, sort, match, sequence, contingency.</li>
+        <li>Write the problems and their danger first.</li>
+        <li>Trade-off: a plain ranked list over an empty sheet.</li>
+      </ul>
+    </div>
+    <div class="panel red-top">
+      <h4>The group is chaotic</h4>
+      <ul>
+        <li>Propose a short structure: list, rank, split.</li>
+        <li>Ask one person to note the points on paper.</li>
+        <li>Trade-off: calm direction over loud argument.</li>
+      </ul>
+    </div>
+    <div class="panel gold-top">
+      <h4>Your plan differs from the group's</h4>
+      <ul>
+        <li>Explain once with the reason, then test it against the rules.</li>
+        <li>Accept the group's plan if it is sound, and make it work.</li>
+        <li>Trade-off: group unity over personal credit.</li>
+      </ul>
+    </div>
+    <div class="panel green-top">
+      <h4>Time is nearly over</h4>
+      <ul>
+        <li>Propose a decision, then agree the narrator.</li>
+        <li>Give a clear summary of teams and times.</li>
+        <li>Trade-off: a complete, simple plan over a perfect, unfinished one.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="qbank">
+  <h2>Practice bank: questions and motions</h2><hr class="sec-rule">
+  <p class="lede">Answer each question in your own words, then test it against the rules in the earlier parts.</p>
+  <ol class="qbank">
+    <li>What does the GTO read in a Group Planning Exercise, and why is there no single right plan?</li>
+    <li>Name the four OLQ factors and one OLQ from each that the GPE can show.</li>
+    <li>Explain the five steps from narration to plan with an example.</li>
+    <li>Why does the ranking rule put life before property, and when might property matter more?</li>
+    <li>How do you decide between one team and parallel teams?</li>
+    <li>Why is a contingency part of a strong plan?</li>
+    <li>When is it right to hand a problem to the authorities rather than to solve it?</li>
+    <li>How should you use the model and scale when you speak?</li>
+    <li>Rewrite "We will do everything" into a ranked plan with teams and times.</li>
+    <li>How do you handle a dominant member in the discussion?</li>
+    <li>What is the difference between influencing a group and dominating it?</li>
+    <li>How should you accept a better idea from someone else?</li>
+    <li>What should a sound narration contain in 3 minutes?</li>
+    <li>Why is it risky to send a single person to a task?</li>
+    <li>Describe how you would practise the GPE for six weeks.</li>
+  </ol>
+  <h3>Debate motions</h3>
+  <ol class="dbank">
+    <li>This house believes that in a crisis, speed matters more than a perfect plan.</li>
+    <li>This house believes that a leader should accept a better plan even when it replaces his own.</li>
+    <li>This house believes that handing over to authorities is a stronger act than acting alone.</li>
+    <li>This house believes that splitting a small group multiplies risk more than it saves time.</li>
+    <li>This house believes that the GPE rewards speaking more than thinking.</li>
+    <li>This house believes that planning exercises should include moral dilemmas, not only logistics.</li>
+    <li>This house believes that no plan is complete without a contingency.</li>
+  </ol>
+</section>
+
+<section id="chronology">
+  <h2>Preparation timeline</h2><hr class="sec-rule">
+  <p>A six-week plan, then the roughly 40 to 50 minutes of a single exercise. Adjust to your calendar.</p>
+  <ul class="timeline">
+    <li><span class="yr">Week 1</span><span>Read the 15 OLQs and the five-step framework; plan two exercises from this book untimed.</span></li>
+    <li><span class="yr">Week 2</span><span>Practise capturing problems, distances and resources in a table from a read-aloud narration.</span></li>
+    <li><span class="yr">Week 3</span><span>Write plans in ten minutes; check each for ranking, teams, timings and contingency.</span></li>
+    <li><span class="yr">Week 4</span><span>Practise group discussion with friends; rotate the roles of starter, builder and timekeeper.</span></li>
+    <li><span class="yr">Week 5</span><span>Practise three-minute narrations; record and review.</span></li>
+    <li><span class="yr">Week 6</span><span>Two full mocks with feedback; rest before the test and do not cram new plans.</span></li>
+    <li><span class="yr">Narration</span><span>Listen; capture problems, places, resources, rules and the clock.</span></li>
+    <li><span class="yr">About 10 min</span><span>Write the individual plan: aim, priorities, teams, timings, contingency.</span></li>
+    <li><span class="yr">15-20 min</span><span>Discuss: propose a structure, listen, build, keep time, summarise.</span></li>
+    <li><span class="yr">3-5 min</span><span>Narrate the common plan clearly and calmly if chosen.</span></li>
+  </ul>
+</section>
+
+<section id="glossary">
+  <h2>Glossary</h2><hr class="sec-rule">
+  <dl class="term">
+    <dt>GPE</dt><dd>Group Planning Exercise: planning, in a group, the handling of several problems with limited resources.</dd>
+    <dt>GTO</dt><dd>Group Testing Officer: the officer who conducts and assesses the group tasks.</dd>
+    <dt>OLQ</dt><dd>Officer Like Quality: one of 15 traits assessed at SSB.</dd>
+    <dt>Model</dt><dd>The map, sketch or miniature of the area on which the problems are described.</dd>
+    <dt>Narration</dt><dd>The spoken description of the situation, problems, resources and rules; also the final presentation of the plan.</dd>
+    <dt>Individual plan</dt><dd>The plan each candidate writes before the discussion.</dd>
+    <dt>Common plan</dt><dd>The single plan agreed by the group in discussion.</dd>
+    <dt>Priority</dt><dd>The rank of a problem by danger to life, urgency and distance.</dd>
+    <dt>Assumption</dt><dd>A reasonable, stated fact that fills a gap in the narration.</dd>
+    <dt>Resource</dt><dd>People, vehicles, tools and time available to the group.</dd>
+    <dt>Constraint</dt><dd>A limit on the plan, such as a time limit or a rule.</dd>
+    <dt>Contingency</dt><dd>A back-up plan if something goes wrong.</dd>
+    <dt>Rendezvous</dt><dd>The agreed place and time for the teams to meet.</dd>
+    <dt>Reserve</dt><dd>A small team held back to cover gaps or surprises.</dd>
+    <dt>Hand-over</dt><dd>Transferring a task to the proper authority, with information.</dd>
+    <dt>Consensus</dt><dd>General agreement reached in the group, without one person imposing.</dd>
+  </dl>
+</section>
+
+<section id="revision">
+  <h2>Rapid revision sheet</h2><hr class="sec-rule">
+  <div class="note">
+    <h4>One-page summary</h4>
+    <ul>
+      <li>GPE: a model, a narration, about four problems, limited resources; individual plan, group discussion, narration.</li>
+      <li>The GTO reads how you think and work with others, not a fixed answer.</li>
+      <li>Five steps: aim and assumptions, sort, match resources, sequence or split, contingency and report.</li>
+      <li>Priorities: life before property before convenience; urgent before important; nearer first.</li>
+      <li>Alert authorities early and hand over what the group cannot do.</li>
+      <li>Never send one person alone; keep a reserve and a rendezvous.</li>
+      <li>Use the model, the scale and the clock; state assumptions openly.</li>
+      <li>Discussion: structure, listen, build, keep time, accept better ideas.</li>
+      <li>Narration: aim, priorities, teams, timings, contingency, calm close.</li>
+      <li>Three versions of any exercise: one team in order, parallel teams, alert and hand over.</li>
+      <li>Avoid hero acts, unrealistic plans, silence and domination.</li>
+      <li>Follow your call-up letter and the GTO's instructions for current rules and timings.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer>
+  <p>Compiled from open sources. Study aid only, not an official publication.</p>
+  <p>Source &amp; contributions: <a href="https://github.com/mohitkushwaha0601/matre">github.com/mohitkushwaha0601/matre</a></p>
+</footer>
+</body>
+</html>

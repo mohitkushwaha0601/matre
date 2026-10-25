@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SSB Word Association Test (WAT): Psychology, Strategy and 120 Worked Words — A Deep Knowledge Handbook</title>
+<meta name="description" content="How to frame strong, practical, OLQ-based sentences in the SSB Word Association Test: the psychology behind it, a sentence strategy, and 120 words with three model answers each and the reasoning behind them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1D2419;
+  --ink-soft:#566052;
+  --paper:#F3F2EB;
+  --surface:#FFFFFF;
+  --surface-2:#E8E7DC;
+  --rule:#D0CFC0;
+  --rule-strong:#A3A18C;
+  --red:#A63A1F;
+  --blue:#1F5380;
+  --gold:#9C7A16;
+  --green:#3A6B2C;
+  --hero-bg:#1A2417;
+  --hero-ink:#F3F2EB;
+  --hero-dim:#A9B3A2;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#E9EBE2;
+    --ink-soft:#AEB6A6;
+    --paper:#0E120C;
+    --surface:#171D14;
+    --surface-2:#212A1D;
+    --rule:#313C2C;
+    --rule-strong:#55634E;
+    --red:#EE8A6A;
+    --blue:#7DB4E6;
+    --gold:#DDB552;
+    --green:#7CCB6B;
+    --hero-bg:#090C08;
+    --hero-ink:#E9EBE2;
+    --hero-dim:#8E9A87;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E9EBE2;
+  --ink-soft:#AEB6A6;
+  --paper:#0E120C;
+  --surface:#171D14;
+  --surface-2:#212A1D;
+  --rule:#313C2C;
+  --rule-strong:#55634E;
+  --red:#EE8A6A;
+  --blue:#7DB4E6;
+  --gold:#DDB552;
+  --green:#7CCB6B;
+  --hero-bg:#090C08;
+  --hero-ink:#E9EBE2;
+  --hero-dim:#8E9A87;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1.5rem);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
+.flagstrip{display:flex;height:12px}
+.flagstrip span{flex:1}
+.f1{background:#4B5320}
+.f2{background:#1F3A63}
+.f3{background:#5DA9DD}
+.f4{background:#FF9933}
+.f5{background:#FFFFFF}
+.f6{background:#138808}
+.f7{background:linear-gradient(90deg,#FF9933 33%,#FFFFFF 33%,#FFFFFF 66%,#138808 66%)}
+.f8{background:#E3B23C}
+.hero-inner{max-width:1180px;margin:0 auto;padding:3.2rem 1.5rem 0}
+.kicker{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--hero-dim);margin:0 0 .8rem}
+.hero h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.8rem,5vw,2.9rem);line-height:1.15;margin:0 0 .6rem;max-width:26ch}
+.hero-sub{margin:0;color:var(--hero-dim);max-width:68ch}
+.stamp{margin-top:1.6rem;font-size:.86rem;color:var(--hero-dim);display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+.stamp b{color:var(--hero-ink);font-weight:600}
+
+.shell{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem;display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media (min-width:1000px){
+  .shell{grid-template-columns:255px minmax(0,1fr);gap:3.5rem;padding-top:2.8rem}
+}
+nav.toc{font-size:.9rem}
+@media (min-width:1000px){
+  .toc-mobile{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2rem);align-self:start;max-height:calc(100vh - 5rem);overflow-y:auto}
+}
+nav.toc h2{font-family:"Zilla Slab",Georgia,serif;font-size:.92rem;font-weight:600;margin:0 0 .7rem;padding-bottom:.45rem;border-bottom:2px solid var(--rule-strong)}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc}
+nav.toc li{border-bottom:1px solid var(--rule)}
+nav.toc li:not(.part){counter-increment:toc}
+nav.toc a{display:flex;gap:.6rem;padding:.4rem 0;color:var(--ink-soft);text-decoration:none}
+nav.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--rule-strong);font-variant-numeric:tabular-nums;flex:none}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--red)}
+nav.toc .part{border:0;margin:1.1rem 0 .3rem;font-family:"Zilla Slab",Georgia,serif;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--rule-strong)}
+nav.toc .part::before{content:none}
+.toc-mobile{display:block}
+@media (min-width:1000px){.toc-mobile summary{display:none}}
+.toc-mobile summary{cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:600;padding:.7rem .9rem;background:var(--surface);border:1px solid var(--rule);margin-bottom:1rem}
+@media (max-width:999px){
+  .toc-mobile[open] nav.toc{padding:0 .9rem 1rem}
+  .toc-mobile:not([open]) nav.toc{display:none}
+}
+
+main{min-width:0}
+section{margin:0 0 3.6rem;scroll-margin-top:1.5rem}
+section > h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.45rem,3.6vw,1.95rem);line-height:1.2;margin:0 0 .3rem}
+.part-head{margin:4rem 0 2.2rem;padding:1.1rem 0 .9rem;border-top:4px double var(--rule-strong);border-bottom:1px solid var(--rule)}
+.part-head p{margin:0;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.part-head h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.3rem,3.2vw,1.7rem);margin:.3rem 0 0;color:var(--ink)}
+.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.16rem;margin:2rem 0 .5rem;line-height:1.3}
+h4{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1rem;margin:1.4rem 0 .35rem;color:var(--ink)}
+p{margin:0 0 .95rem;max-width:74ch}
+ul,ol{margin:0 0 1rem;padding-left:1.25rem;max-width:74ch}
+li{margin-bottom:.35rem}
+li::marker{color:var(--rule-strong)}
+strong{font-weight:600}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+.lede{font-size:1.06rem;color:var(--ink-soft);max-width:70ch}
+
+.tablewrap{overflow-x:auto;margin:0 0 1.3rem;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.92rem}
+.tablewrap.wide table{min-width:920px;font-size:.88rem}
+caption{text-align:left;padding:.7rem .85rem .1rem;font-weight:600;color:var(--ink-soft);font-size:.9rem}
+th,td{text-align:left;padding:.55rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{background:var(--surface-2);font-weight:600;border-bottom:2px solid var(--rule-strong);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.num,th.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+.edge{background:var(--surface);border-left:4px solid var(--red);padding:.9rem 1.1rem;margin:1.4rem 0;max-width:74ch}
+.edge p:last-child,.edge ul:last-child,.edge ol:last-child{margin-bottom:0}
+.edge .edge-h{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);display:block;margin-bottom:.25rem;font-size:.95rem}
+.edge.gold{border-left-color:var(--gold)}
+.edge.gold .edge-h{color:var(--gold)}
+.edge.blue{border-left-color:var(--blue)}
+.edge.blue .edge-h{color:var(--blue)}
+.edge.green{border-left-color:var(--green)}
+.edge.green .edge-h{color:var(--green)}
+
+.note{background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;border:1px solid var(--rule);font-size:.95rem}
+.note p:last-child,.note ul:last-child,.note ol:last-child{margin-bottom:0}
+.note h4{margin-top:0}
+
+.panel{background:var(--surface);border:1px solid var(--rule);padding:1rem 1.1rem}
+.panel h4{margin-top:0}
+.panel ul,.panel ol{margin-bottom:0}
+.panel p:last-child{margin-bottom:0}
+.panel.blue-top{border-top:3px solid var(--blue)}
+.panel.red-top{border-top:3px solid var(--red)}
+.panel.gold-top{border-top:3px solid var(--gold)}
+.panel.green-top{border-top:3px solid var(--green)}
+
+.rungs{max-width:74ch;margin:.3rem 0 0;display:grid;grid-template-columns:9.5rem 1fr;gap:0 1rem}
+.rungs dt{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;color:var(--red);padding-top:.2rem}
+.rungs dd{margin:0 0 .5rem;font-size:.93rem}
+@media (max-width:560px){
+  .rungs{grid-template-columns:1fr;gap:0}
+  .rungs dt{padding-top:.4rem}
+}
+
+.timeline{list-style:none;padding:0;margin:1rem 0 1.4rem;max-width:74ch}
+.timeline li{display:grid;grid-template-columns:8.2rem 1fr;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--rule);margin:0}
+.timeline li:last-child{border-bottom:0}
+.timeline .yr{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);font-variant-numeric:tabular-nums}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:.1rem}}
+
+.qbank{counter-reset:q;list-style:none;padding:0;max-width:74ch}
+.qbank li{counter-increment:q;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.qbank li::before{content:counter(q,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.qbank li:last-child{border-bottom:0}
+
+.dbank{counter-reset:d;list-style:none;padding:0;max-width:74ch}
+.dbank li{counter-increment:d;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.dbank li::before{content:counter(d,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.dbank li:last-child{border-bottom:0}
+
+.grid{display:grid;gap:1rem}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
+
+.card{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--red);padding:1rem 1.1rem}
+.card h4{margin:0 0 .45rem;font-size:1rem}
+.card p:last-child{margin-bottom:0}
+
+.term{max-width:74ch;margin:0 0 1.2rem}
+.term dt{font-weight:600;margin-top:.8rem}
+.term dd{margin:.15rem 0 0;color:var(--ink-soft)}
+
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:.1rem .45rem;border:1px solid var(--rule-strong);color:var(--ink-soft);margin-right:.35rem;vertical-align:middle}
+.tag.fact{border-color:var(--green);color:var(--green)}
+.tag.interp{border-color:var(--gold);color:var(--gold)}
+.tag.disputed{border-color:var(--red);color:var(--red)}
+.tag.verify{border-color:var(--blue);color:var(--blue)}
+.spaced{margin-top:.6rem}
+
+footer{border-top:3px double var(--rule-strong);margin:2rem auto 0;padding:1.4rem 1.5rem 2.5rem;color:var(--ink-soft);font-size:.9rem;max-width:74ch}
+footer a{color:var(--blue)}
+
+.home-btn{position:fixed;top:16px;left:16px;z-index:60;display:inline-flex;align-items:center;gap:.4rem;background:#14202B;color:#F1F2EC;border:1px solid rgba(241,242,236,.25);padding:.45rem .85rem;border-radius:999px;font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.82rem;font-weight:600;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.3);transition:background .15s ease,transform .15s ease}
+.home-btn:hover,.home-btn:focus-visible{background:#BF2F26;transform:translateY(-1px)}
+.home-btn svg{width:14px;height:14px;flex:none}
+@media print{.home-btn{display:none}}
+
+@media print{
+  .hero{background:none;color:#000;padding-bottom:1rem}
+  .hero-sub,.stamp{color:#333}
+  .flagstrip,.toc-mobile{display:none}
+  .shell{display:block;padding:0}
+  section{page-break-inside:auto;margin-bottom:1.8rem}
+  h2,h3{page-break-after:avoid}
+  .panel,.edge,.note,.tablewrap{page-break-inside:avoid}
+  .part-head{page-break-before:always}
+  body{font-size:10.5pt;background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+
+<a class="home-btn" href="../index.html" aria-label="Back to Handbooks homepage" title="Back to Handbooks homepage">
+  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
+  <span>Home</span>
+</a>
+
+<header class="hero">
+  <div class="flagstrip" aria-hidden="true">
+    <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f5"></span><span class="f6"></span><span class="f7"></span><span class="f8"></span>
+  </div>
+  <div class="hero-inner">
+    <p class="kicker">SSB psychology day • Word Association Test</p>
+    <h1>The SSB Word Association Test: Psychology, Strategy and 120 Worked Words</h1>
+    <p class="hero-sub">How to frame a strong, practical, OLQ-based sentence in fifteen seconds: what the psychologist looks for, how the mind responds to a word, a sentence strategy, and 120 words with three model answers each, with the reasoning shown.</p>
+    <p class="stamp">
+      <span>Sections <b>22</b></span>
+      <span>Worked words <b>120 × 3 versions</b></span>
+      <span>Test format <b>60 words, 15 s each</b></span>
+      <span>Read time <b>2-3 hrs</b></span>
+    </p>
+  </div>
+</header>
+
+<div class="shell">
+
+<details class="toc-mobile" open>
+  <summary>Contents</summary>
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li class="part">How to use this</li>
+      <li><a href="#howto">Using this handbook</a></li>
+
+      <li class="part">Part I · Understanding the test</li>
+      <li><a href="#format">Format and purpose</a></li>
+      <li><a href="#olqs">The 15 OLQs in a sentence</a></li>
+      <li><a href="#psychology">The psychology of a 15-second answer</a></li>
+
+      <li class="part">Part II · Strategy</li>
+      <li><a href="#rules">Rules of a strong sentence</a></li>
+      <li><a href="#wordtypes">Word types and negative words</a></li>
+      <li><a href="#traps">Common traps</a></li>
+      <li><a href="#method">Method and a worked example</a></li>
+
+      <li class="part">Part III · The word bank (120 words)</li>
+      <li><a href="#bank-virtue">Virtue and positive words</a></li>
+      <li><a href="#bank-action">Action and challenge words</a></li>
+      <li><a href="#bank-negative">Negative and emotional words</a></li>
+      <li><a href="#bank-people">People and relationships</a></li>
+      <li><a href="#bank-nation">Service, society and nation</a></li>
+      <li><a href="#bank-neutral">Everyday and nature words</a></li>
+      <li><a href="#bank-abstract">Abstract and value words</a></li>
+      <li><a href="#bank-tricky">Tricky and ambiguous words</a></li>
+
+      <li class="part">Knowledge toolkit</li>
+      <li><a href="#perspectives">Myths and debates</a></li>
+      <li><a href="#scenarios">Scenarios and trade-offs</a></li>
+      <li><a href="#qbank">Practice bank: questions and motions</a></li>
+      <li><a href="#chronology">Preparation timeline</a></li>
+      <li><a href="#glossary">Glossary</a></li>
+      <li><a href="#revision">Rapid revision sheet</a></li>
+    </ol>
+  </nav>
+</details>
+
+<main>
+<section id="howto">
+  <h2>Using this handbook</h2><hr class="sec-rule">
+  <p class="lede">The Word Association Test looks trivial: a word appears, you write a sentence. Yet it is one of the hardest tests to fake and one of the easiest to improve, because it rewards a trained habit of thought, not a memorised answer.</p>
+  <p>Part I explains what the test is for and how your mind responds under a 15-second limit. Part II turns that into a repeatable strategy. Part III is the word bank: 120 words, each with <strong>three model sentences</strong> and the OLQ it shows. The toolkit closes with debates, scenarios, practice questions and a revision sheet. A shorter treatment of all psychology tests exists in <a href="1.ssb-psychological-tests-overview-knowledge-handbook.html">the overview guide</a>.</p>
+  <div class="edge blue">
+    <span class="edge-h">How the three versions work</span>
+    <p>Version 1 is <strong>personal</strong>: an "I" sentence from experience or intent. Version 2 is <strong>social</strong>: a sentence about a team, unit or community. Version 3 is a <strong>principle</strong>: a short, sound belief. All three are valid. Mixing them across your 60 answers gives a natural, varied profile; use the models to learn the pattern, then write in your own words.</p>
+  </div>
+  <div class="edge gold">
+    <span class="edge-h">Do not memorise the bank</span>
+    <p>Sentences copied from a book sound alike, and psychologists see the same lines repeatedly. Treat the models as worked examples of thinking. Your own true experiences, written in the same style, will always read as stronger.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part I · Understanding the test</p><h2>What the test is and what it reads</h2></div>
+
+<section id="format">
+  <h2>Format and purpose</h2><hr class="sec-rule">
+  <p>On the psychology day, candidates usually take four tests in order: the Thematic Apperception Test (TAT), the Word Association Test (WAT), the Situation Reaction Test (SRT) and the Self Description Test (SDT). In the WAT, <strong>60 words</strong> appear one at a time, each for about <strong>15 seconds</strong>, and the candidate writes the first sentence that comes to mind on a response sheet. The whole test takes about 15 minutes.</p>
+  <p>The words are a mixture of positive (<em>courage, team</em>), negative (<em>failure, fear</em>), neutral (<em>book, road</em>) and ambiguous (<em>order, train</em>) words. The psychologist does not mark a sentence right or wrong. They read all 60 sentences together, along with the TAT, SRT and SDT, and look for consistent patterns in how you think and what you value.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>What the test records, at a glance</caption>
+      <thead><tr><th>Feature</th><th>Detail</th><th>Why it matters</th></tr></thead>
+      <tbody>
+        <tr><td>Time per word</td><td>About 15 seconds</td><td>Leaves no room for pretence; habits show.</td></tr>
+        <tr><td>Output</td><td>One short sentence per word</td><td>Reveals attitude, values and thinking.</td></tr>
+        <tr><td>Scoring</td><td>Read holistically by a psychologist</td><td>No single answer decides the outcome.</td></tr>
+        <tr><td>Cross-checking</td><td>Against TAT, SRT, SDT and the interview</td><td>Contradictions are noticed, so stay genuine.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><span class="tag verify">Re-verify</span>Exact timings and word counts can vary between selection centres and over time; check the official joining instructions.</p>
+</section>
+
+<section id="olqs">
+  <h2>The 15 OLQs in a sentence</h2><hr class="sec-rule">
+  <p>SSB assesses 15 Officer Like Qualities (OLQs), grouped into four factors. A WAT sentence rarely shows all of them, but a good one shows at least one clearly. Knowing the list lets you steer, within the 15 seconds, toward the quality a sentence naturally expresses.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>OLQs by factor, and how a sentence can show them</caption>
+      <thead><tr><th>Factor</th><th>OLQs</th><th>How a WAT sentence shows it</th></tr></thead>
+      <tbody>
+        <tr><td>I · Planning and organising</td><td>Effective intelligence, reasoning ability, organising ability, power of expression</td><td>A sensible plan, logical cause and effect, clear and complete wording.</td></tr>
+        <tr><td>II · Social adjustment</td><td>Social adaptability, cooperation, sense of responsibility</td><td>Working with others, owning duties, respecting people.</td></tr>
+        <tr><td>III · Social effectiveness</td><td>Initiative, self-confidence, speed of decision, ability to influence the group, liveliness</td><td>Acting first, deciding quickly, leading, positive energy.</td></tr>
+        <tr><td>IV · Dynamic</td><td>Determination, courage, stamina</td><td>Persisting, facing danger, enduring effort.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning</span>
+    <p>Take the word <em>flood</em>. "Floods cause damage" is accurate but shows nothing about you. "I joined volunteers to move families from the flooded area" shows initiative, cooperation and responsibility in ten words. The second is not more dramatic; it is simply an action by someone who acts.</p>
+  </div>
+</section>
+
+<section id="psychology">
+  <h2>The psychology of a 15-second answer</h2><hr class="sec-rule">
+  <p>The test rests on <strong>free association</strong>: a stimulus word triggers the first related thought, shaped by your experiences, beliefs and habits of mind. Under time pressure there is little room to edit, so the sentence is a thin slice of how you naturally frame the world. This is why one sentence says little and sixty say a lot.</p>
+  <p>Three ideas help you work with this instead of against it.</p>
+  <ul>
+    <li><strong>Pattern, not point.</strong> Someone who writes "Failure is the end" for one word and "Defeat is shameful" for another shows a pattern of pessimism. A pattern of constructive response shows resilience.</li>
+    <li><strong>Projection.</strong> Sentences carry attitudes you may not mean to show: blame ("Teachers are strict"), anxiety ("Fear stops me"), or ego ("I am the best").</li>
+    <li><strong>The habit beats the act.</strong> You cannot fake a positive outlook in 15 seconds for 60 words. You can, however, practise a thinking habit until it is automatic: look for the action, the lesson, the others involved.</li>
+  </ul>
+  <div class="note">
+    <h4>Practical implication</h4>
+    <p>Do not aim to sound perfect or heroic. Aim for a realistic, active and balanced person, who faces problems, works with people and learns from setbacks. That is also what the other tests will show, so the picture stays consistent.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part II · Strategy</p><h2>Building the answer</h2></div>
+
+<section id="rules">
+  <h2>Rules of a strong sentence</h2><hr class="sec-rule">
+  <p>A strong sentence is complete, positive, specific and brief. Twelve to fifteen seconds allow roughly eight to twelve words; plan to write that, not an essay.</p>
+  <div class="grid two">
+    <div class="panel green-top">
+      <h4>Do</h4>
+      <ul>
+        <li>Write a <strong>complete sentence</strong> with a subject and verb.</li>
+        <li>Keep it <strong>positive</strong> and constructive.</li>
+        <li>Show an <strong>action</strong>: helped, led, learned, planned.</li>
+        <li>Use "I" about a third of the time, and mix with team and principle.</li>
+        <li>Stay <strong>realistic</strong>: small true actions beat grand claims.</li>
+        <li>Write the <strong>first idea</strong>, then turn it positive.</li>
+      </ul>
+    </div>
+    <div class="panel red-top">
+      <h4>Avoid</h4>
+      <ul>
+        <li>Definitions ("Courage means being brave").</li>
+        <li>Preaching ("We should always help").</li>
+        <li>Negative statements ("I never panic").</li>
+        <li>Blaming others or society.</li>
+        <li>Same sentence pattern 60 times.</li>
+        <li>Leaving blanks or overwriting to fix mistakes.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="tablewrap">
+    <table>
+      <caption>The same word at three quality levels</caption>
+      <thead><tr><th>Word</th><th>Weak</th><th>Average</th><th>Strong</th></tr></thead>
+      <tbody>
+        <tr><td>Fear</td><td>Fear kills.</td><td>Fear is natural for everyone.</td><td>I overcame my fear of heights by climbing with a trained guide.</td></tr>
+        <tr><td>Leader</td><td>Leaders are born.</td><td>A leader should lead well.</td><td>I led our team through the clean-up drive and shared the credit.</td></tr>
+        <tr><td>Exam</td><td>Exams are stressful.</td><td>I study for exams.</td><td>I prepare for exams with a daily schedule and weekly revision.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="wordtypes">
+  <h2>Word types and negative words</h2><hr class="sec-rule">
+  <p>Words fall into four types, and each calls for a slightly different approach.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Approach by word type</caption>
+      <thead><tr><th>Type</th><th>Examples</th><th>Approach</th></tr></thead>
+      <tbody>
+        <tr><td>Positive</td><td>courage, team, duty</td><td>Avoid cliché and boasting; ground it in action or a shared outcome.</td></tr>
+        <tr><td>Negative</td><td>failure, fear, death</td><td>Acknowledge, then convert to learning or resolve.</td></tr>
+        <tr><td>Neutral</td><td>book, road, water</td><td>Link to a habit, a duty or a social good.</td></tr>
+        <tr><td>Ambiguous</td><td>order, train, wait</td><td>Pick the meaning that lets you show a quality.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <h3>The three Cs for negative words</h3>
+  <p>When a word triggers something negative, do not suppress the thought; use it. <strong>Convert</strong> it into a lesson ("I learned from my failure"), <strong>Contain</strong> it by showing control ("I calm myself with deep breaths when anger rises"), or place it in <strong>Context</strong> where facing it is a duty ("Soldiers who face danger train for it"). The negative word then reveals maturity instead of distress.</p>
+  <div class="edge">
+    <span class="edge-h">Honesty check</span>
+    <p>Positivity does not mean denial. "I felt jealous, then asked him how he studied" is honest and constructive. "I never feel jealous" is not believable and invites doubt on all your other answers.</p>
+  </div>
+</section>
+
+<section id="traps">
+  <h2>Common traps</h2><hr class="sec-rule">
+  <ul>
+    <li><span class="tag disputed">Trap</span><strong>Clichés.</strong> "Honesty is the best policy" appears in thousands of sheets. Say what you did or saw.</li>
+    <li><span class="tag disputed">Trap</span><strong>Heroic exaggeration.</strong> Single-handedly saving a village in every sentence looks false; sprinkle small, believable actions.</li>
+    <li><span class="tag disputed">Trap</span><strong>Philosophical drift.</strong> "Life is a mystery" says nothing about you.</li>
+    <li><span class="tag disputed">Trap</span><strong>Repetition.</strong> If every sentence starts "I help", the pattern looks scripted.</li>
+    <li><span class="tag disputed">Trap</span><strong>Hidden negativity.</strong> Sentences like "Politics is corrupt" show bitterness; shift to "I follow politics to vote wisely".</li>
+    <li><span class="tag disputed">Trap</span><strong>Incomplete or illegible answers.</strong> A fragment or an unreadable word wastes the 15 seconds. Write clearly in short words.</li>
+    <li><span class="tag disputed">Trap</span><strong>Contradiction.</strong> Claiming a quality in the WAT that your SDT or interview does not support damages trust.</li>
+    <li><span class="tag disputed">Trap</span><strong>Freezing.</strong> A blank gives the psychologist nothing; any safe, positive sentence is better.</li>
+  </ul>
+</section>
+
+<section id="method">
+  <h2>Method and a worked example</h2><hr class="sec-rule">
+  <p>Use a six-step loop that fits within 15 seconds once it is a habit. Practise it slowly first, then speed up.</p>
+  <div class="panel blue-top">
+    <h4>Worked example: the word "Failure"</h4>
+    <dl class="rungs">
+      <dt>Read</dt><dd>See the word fully; do not guess before the whole word is read.</dd>
+      <dt>First thought</dt><dd>"Exam I failed" or "disappointment". Accept it; do not fight it.</dd>
+      <dt>Filter</dt><dd>Ask: which OLQ can this show? Determination, reasoning, responsibility.</dd>
+      <dt>Frame</dt><dd>Pick a version: personal (I learned), social (the team studied it) or principle.</dd>
+      <dt>Write</dt><dd>"I learned from my failure in the first test and scored better next time."</dd>
+      <dt>Check</dt><dd>Complete, positive, about ten words, one clear action. Move on.</dd>
+    </dl>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning</span>
+    <p>The sentence admits the failure honestly, which builds credibility, then shows two OLQs: <strong>reasoning ability</strong> (it learned a cause) and <strong>determination</strong> (it came back and improved). A weaker version, "Failure is the pillar of success", sounds borrowed and shows no action.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part III · The word bank</p><h2>120 words, three versions each</h2></div>
+
+<section id="bank-virtue">
+  <h2>Virtue and positive words</h2><hr class="sec-rule">
+  <p>Positive words are easy to answer and easy to answer badly. The usual failure is a definition or a slogan. Anchor each in something done, and let the quality show itself instead of naming it. Version 1 is personal, Version 2 social, Version 3 a principle.</p>
+  <div class="tablewrap wide">
+    <table>
+      <caption>Words 1-15</caption>
+      <thead><tr><th>Word</th><th>Version 1 · personal</th><th>Version 2 · social</th><th>Version 3 · principle</th><th>OLQ</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Courage</strong></td><td>I spoke up against cheating in my class despite the pressure.</td><td>Courage carried the rescue team into the flooded village.</td><td>Courage is acting rightly while afraid.</td><td>Courage</td></tr>
+        <tr><td><strong>Leader</strong></td><td>I led our college team to finish the clean-up drive on time.</td><td>A good leader shares credit and takes the blame.</td><td>Leaders grow by serving their team first.</td><td>Influence, responsibility</td></tr>
+        <tr><td><strong>Success</strong></td><td>I won the district race after months of early-morning training.</td><td>Success came to the team through planning and effort.</td><td>Success follows steady effort.</td><td>Determination</td></tr>
+        <tr><td><strong>Honesty</strong></td><td>I returned the extra change the shopkeeper gave me.</td><td>Honesty builds trust in any team.</td><td>Honesty is the base of command.</td><td>Responsibility</td></tr>
+        <tr><td><strong>Discipline</strong></td><td>I wake at five and train daily without fail.</td><td>Discipline keeps a unit steady under stress.</td><td>Discipline turns plans into results.</td><td>Determination, stamina</td></tr>
+        <tr><td><strong>Hope</strong></td><td>I kept hope alive after missing my first attempt and prepared again.</td><td>Hope helped the villagers rebuild after the flood.</td><td>Hope plus effort beats despair.</td><td>Determination</td></tr>
+        <tr><td><strong>Confidence</strong></td><td>I built confidence by practising my speech before every contest.</td><td>Confidence in each other made our team strong.</td><td>Confidence grows from preparation.</td><td>Self-confidence</td></tr>
+        <tr><td><strong>Team</strong></td><td>I enjoy working in a team and sharing tasks fairly.</td><td>Our team won because everyone played their part.</td><td>A team succeeds when members trust each other.</td><td>Cooperation</td></tr>
+        <tr><td><strong>Duty</strong></td><td>I finished my duty as house captain even during exams.</td><td>A soldier's duty comes before comfort.</td><td>Duty first, self later.</td><td>Responsibility</td></tr>
+        <tr><td><strong>Victory</strong></td><td>I earned victory by leading my team through a tough final.</td><td>Victory came after a united effort.</td><td>Victory belongs to the prepared.</td><td>Determination</td></tr>
+        <tr><td><strong>Effort</strong></td><td>I put in extra effort every evening before my exam.</td><td>The team's effort cleared the road in a day.</td><td>Steady effort beats talent that never works.</td><td>Stamina</td></tr>
+        <tr><td><strong>Trust</strong></td><td>I earned my friends' trust by keeping every promise.</td><td>Trust held the team together under pressure.</td><td>Trust is built slowly through reliable actions.</td><td>Social adjustment</td></tr>
+        <tr><td><strong>Brave</strong></td><td>I rushed to help the injured cyclist at the crossing.</td><td>The brave jawan crossed the river to save the child.</td><td>Brave people act while others hesitate.</td><td>Courage</td></tr>
+        <tr><td><strong>Help</strong></td><td>I help my neighbours carry groceries whenever needed.</td><td>Our NSS group helped flood victims with food and blankets.</td><td>Help given on time counts the most.</td><td>Cooperation</td></tr>
+        <tr><td><strong>Dedication</strong></td><td>I trained with full dedication for the race for six months.</td><td>The dedication of our teachers made the school proud.</td><td>Dedication turns ordinary effort into excellence.</td><td>Determination</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning: why "Courage" works</span>
+    <p>Version 1 does not say "I am courageous"; it shows an act with a cost ("despite the pressure"). That is more believable and shows <strong>courage</strong> and <strong>responsibility</strong> together. Version 2 uses a team to avoid the sound of boasting. Version 3 is short but still has a condition ("while afraid") that makes it a considered view and not a slogan.</p>
+  </div>
+</section>
+
+<section id="bank-action">
+  <h2>Action and challenge words</h2><hr class="sec-rule">
+  <p>These words invite drama. The best answers are calm and practical: preparation before the event, teamwork during it, judgement throughout. Officers are valued for sound decisions under pressure, not for recklessness.</p>
+  <div class="tablewrap wide">
+    <table>
+      <caption>Words 16-30</caption>
+      <thead><tr><th>Word</th><th>Version 1 · personal</th><th>Version 2 · social</th><th>Version 3 · principle</th><th>OLQ</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Fight</strong></td><td>I fought through fatigue and finished the marathon.</td><td>Our soldiers fight to protect the nation.</td><td>Fight problems, not people.</td><td>Determination, courage</td></tr>
+        <tr><td><strong>Challenge</strong></td><td>I take every challenge as a chance to grow.</td><td>The team accepted the challenge and finished early.</td><td>Challenges reveal what a person is made of.</td><td>Initiative</td></tr>
+        <tr><td><strong>Risk</strong></td><td>I took a calculated risk and chose the longer, safer trail.</td><td>A leader weighs risk before ordering the move.</td><td>Risk managed is risk reduced.</td><td>Reasoning, decision</td></tr>
+        <tr><td><strong>Danger</strong></td><td>I stayed calm and moved my friend away from the danger.</td><td>Danger sharpens a trained soldier's focus.</td><td>Planning keeps danger in check.</td><td>Courage, decision</td></tr>
+        <tr><td><strong>Fire</strong></td><td>I used the extinguisher and alerted everyone when fire broke out in our hostel.</td><td>Firemen controlled the fire in the market without a casualty.</td><td>A calm response beats panic in a fire.</td><td>Speed of decision</td></tr>
+        <tr><td><strong>Flood</strong></td><td>I joined volunteers to move families from the flooded area.</td><td>The army and locals together rescued people from the flood.</td><td>Preparation reduces losses in a flood.</td><td>Initiative, cooperation</td></tr>
+        <tr><td><strong>Battle</strong></td><td>I fought a battle against my own laziness and won.</td><td>The soldiers' planning won the battle.</td><td>Battles are won before they are fought.</td><td>Reasoning, determination</td></tr>
+        <tr><td><strong>Mountain</strong></td><td>I trekked up the mountain in the rain and reached the summit.</td><td>Our group helped each other up the mountain.</td><td>Every mountain is climbed one step at a time.</td><td>Stamina</td></tr>
+        <tr><td><strong>Race</strong></td><td>I trained at dawn each day for the school race.</td><td>Our relay team ran the race with perfect handovers.</td><td>In a race, preparation matters more than luck.</td><td>Stamina, cooperation</td></tr>
+        <tr><td><strong>Rescue</strong></td><td>I called for help first and then joined the rescue.</td><td>The NDRF team rescued the trapped workers by dawn.</td><td>Rescue needs speed and a plan.</td><td>Initiative, organising</td></tr>
+        <tr><td><strong>Crisis</strong></td><td>I kept calm during the crisis and helped share tasks.</td><td>The team resolved the crisis by dividing the duties.</td><td>A crisis reveals character.</td><td>Organising, composure</td></tr>
+        <tr><td><strong>Storm</strong></td><td>I helped secure our roof and the neighbours' before the storm.</td><td>The crew steered the ship through the storm.</td><td>Those who prepare stay calm in a storm.</td><td>Initiative, courage</td></tr>
+        <tr><td><strong>Difficult</strong></td><td>I found physics difficult, so I practised daily until it improved.</td><td>The difficult trek brought our team closer.</td><td>Difficult tasks build strong people.</td><td>Determination</td></tr>
+        <tr><td><strong>Order</strong></td><td>I followed the order and informed my senior about the change.</td><td>A unit works well when orders are clear and followed.</td><td>Clear orders save lives.</td><td>Responsibility</td></tr>
+        <tr><td><strong>Mission</strong></td><td>My mission is to serve the nation in uniform.</td><td>The team completed the mission with every member safe.</td><td>A clear mission gives effort a direction.</td><td>Determination</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning: "Risk" and "Order"</span>
+    <p>"Risk" is a trap for the reckless answer. Version 1 chooses the safer trail; this shows <strong>reasoning ability</strong> and judgement, which a selector values over bravado. "Order" is ambiguous: it can mean a command, a tidy arrangement or a request. The three versions all use the command sense because it ties to responsibility and chain of command.</p>
+  </div>
+</section>
+
+<section id="bank-negative">
+  <h2>Negative and emotional words</h2><hr class="sec-rule">
+  <p>These words test emotional maturity. Use the three Cs: convert, contain or contextualise. Never paste a positive slogan over the pain; acknowledge the feeling, then show what you did with it.</p>
+  <div class="tablewrap wide">
+    <table>
+      <caption>Words 31-45</caption>
+      <thead><tr><th>Word</th><th>Version 1 · personal</th><th>Version 2 · social</th><th>Version 3 · principle</th><th>OLQ</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Fear</strong></td><td>I overcame my fear of water by learning to swim.</td><td>The team shared its fear and then faced the task together.</td><td>Fear fades when you face it.</td><td>Courage</td></tr>
+        <tr><td><strong>Failure</strong></td><td>I learned from my failure in the first test and scored better.</td><td>Our team studied the failure and fixed the plan.</td><td>Failure teaches what success hides.</td><td>Reasoning, determination</td></tr>
+        <tr><td><strong>Anger</strong></td><td>I calm myself with deep breaths when anger rises.</td><td>A good leader does not let anger decide.</td><td>Anger controlled becomes energy for action.</td><td>Self-control</td></tr>
+        <tr><td><strong>Sad</strong></td><td>I felt sad when my friend moved away, so I stayed in touch.</td><td>We cheered up a sad classmate by including him in the game.</td><td>Sadness passes faster when it is shared.</td><td>Social adjustment</td></tr>
+        <tr><td><strong>Death</strong></td><td>I faced my grandfather's death calmly and supported my family.</td><td>Soldiers who face death bring honour to the nation.</td><td>Death is certain; a purposeful life is a choice.</td><td>Courage, responsibility</td></tr>
+        <tr><td><strong>Loss</strong></td><td>I took the loss of the match as a lesson and trained harder.</td><td>The team turned a loss into a better plan.</td><td>Loss shows what needs protecting.</td><td>Determination</td></tr>
+        <tr><td><strong>Hate</strong></td><td>I do not hate anyone; I focus on fixing what is wrong.</td><td>Hate divides a team; respect unites it.</td><td>Hate harms the one who holds it.</td><td>Social adjustment</td></tr>
+        <tr><td><strong>Worry</strong></td><td>I replaced worry with a plan and a schedule.</td><td>Our captain's calm removed the team's worry.</td><td>Worry solves nothing; planning does.</td><td>Organising</td></tr>
+        <tr><td><strong>Pain</strong></td><td>I played on through pain only after taking medical advice.</td><td>The team bore the pain of the long march together.</td><td>Pain is temporary; pride in finishing lasts.</td><td>Stamina, reasoning</td></tr>
+        <tr><td><strong>Jealous</strong></td><td>I felt jealous of a rival's score, then asked how he studied.</td><td>A healthy team celebrates others' success instead of envy.</td><td>Envy turns into learning when you ask how.</td><td>Social adjustment</td></tr>
+        <tr><td><strong>Alone</strong></td><td>I was alone at the station but found my way calmly.</td><td>No soldier is alone when his unit stands with him.</td><td>Being alone builds independence.</td><td>Self-confidence</td></tr>
+        <tr><td><strong>Defeat</strong></td><td>I accepted defeat gracefully and congratulated the winner.</td><td>The team studied the defeat and came back stronger.</td><td>Defeat is a pause, not a verdict.</td><td>Determination</td></tr>
+        <tr><td><strong>Lazy</strong></td><td>I used to be lazy in the mornings, but a routine fixed it.</td><td>A lazy team misses every deadline.</td><td>A routine beats laziness.</td><td>Determination</td></tr>
+        <tr><td><strong>Cheat</strong></td><td>I refused to cheat in the exam even when others did.</td><td>A team cannot trust a cheat.</td><td>Cheating wins nothing worth keeping.</td><td>Responsibility</td></tr>
+        <tr><td><strong>Panic</strong></td><td>I stayed calm and did not panic when the lights went out.</td><td>The leader's calm stopped the panic in the crowd.</td><td>Training replaces panic with action.</td><td>Courage, decision</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning: "Jealous" and "Pain"</span>
+    <p>Version 1 for "Jealous" admits an ordinary human feeling and converts it into learning; admitting a mild weakness while showing a fix reads as <strong>self-awareness</strong> and <strong>initiative</strong>. For "Pain", "only after taking medical advice" shows judgement: stamina without reason is risky and officers are expected to know the difference.</p>
+  </div>
+</section>
+
+<section id="bank-people">
+  <h2>People and relationships</h2><hr class="sec-rule">
+  <p>People words show social adjustment. Be warm, specific and respectful. Gratitude and responsibility toward family, and fairness toward all, are safe and true. Avoid complaints and avoid gender stereotypes.</p>
+  <div class="tablewrap wide">
+    <table>
+      <caption>Words 46-60</caption>
+      <thead><tr><th>Word</th><th>Version 1 · personal</th><th>Version 2 · social</th><th>Version 3 · principle</th><th>OLQ</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Mother</strong></td><td>My mother taught me to keep going when things get hard.</td><td>Mothers hold a family together.</td><td>A mother's sacrifice shapes a child's character.</td><td>Social adjustment</td></tr>
+        <tr><td><strong>Father</strong></td><td>My father taught me punctuality and honesty.</td><td>Fathers guide by example.</td><td>A father's discipline shapes his children's future.</td><td>Responsibility</td></tr>
+        <tr><td><strong>Friend</strong></td><td>I support my friends in difficult times.</td><td>A true friend tells you the truth kindly.</td><td>Good friends make us better.</td><td>Cooperation</td></tr>
+        <tr><td><strong>Teacher</strong></td><td>My teacher inspired me to take up sports seriously.</td><td>A teacher shapes the nation's future.</td><td>Teachers light the path others walk.</td><td>Social adaptability</td></tr>
+        <tr><td><strong>Brother</strong></td><td>I look after my younger brother and teach him maths.</td><td>Brothers stand by each other in difficulty.</td><td>A brother's bond grows through shared duties.</td><td>Responsibility</td></tr>
+        <tr><td><strong>Sister</strong></td><td>I help my sister with her studies each evening.</td><td>My sister's courage inspires the whole family.</td><td>Sisters share strength in hard times.</td><td>Cooperation</td></tr>
+        <tr><td><strong>Child</strong></td><td>I taught a poor child to read in the evenings.</td><td>Every child deserves education and care.</td><td>Children learn what they see.</td><td>Initiative</td></tr>
+        <tr><td><strong>Elder</strong></td><td>I help the elderly in our colony with their errands.</td><td>Elders guide a family with experience.</td><td>Respect for elders keeps wisdom alive.</td><td>Social adjustment</td></tr>
+        <tr><td><strong>Neighbour</strong></td><td>I helped my neighbour during the power cut.</td><td>Good neighbours form a strong community.</td><td>Neighbours are the first help in an emergency.</td><td>Cooperation</td></tr>
+        <tr><td><strong>Stranger</strong></td><td>I helped a stranger find his lost family at the fair.</td><td>Treat a stranger with respect, but stay alert.</td><td>Kindness to a stranger shows true character.</td><td>Initiative</td></tr>
+        <tr><td><strong>Boss</strong></td><td>I discuss work openly with my boss and seek guidance.</td><td>A good boss leads by example.</td><td>A boss earns respect by supporting the team.</td><td>Social adaptability</td></tr>
+        <tr><td><strong>Enemy</strong></td><td>I treat difficulty as my enemy and work to defeat it.</td><td>Soldiers defend the nation against every enemy.</td><td>Ignorance is the biggest enemy of progress.</td><td>Determination</td></tr>
+        <tr><td><strong>Woman</strong></td><td>I respect every woman in my class and my team.</td><td>Women officers are now leading in the armed forces.</td><td>A strong nation empowers its women.</td><td>Social adjustment</td></tr>
+        <tr><td><strong>Family</strong></td><td>I make time for my family despite a busy routine.</td><td>My family supports me through every setback.</td><td>Family is where values begin.</td><td>Responsibility</td></tr>
+        <tr><td><strong>Hero</strong></td><td>My father is my hero for his honesty.</td><td>A true hero serves without seeking praise.</td><td>Heroes are ordinary people who act when it matters.</td><td>Responsibility</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning: "Enemy" and "Boss"</span>
+    <p>"Enemy" invites aggression; the personal version redirects it to a problem to be defeated, which shows <strong>determination</strong> without hostility toward people. For "Boss", Version 1 shows an open, upward-communicating attitude: someone who can take guidance is easier to lead and to command.</p>
+  </div>
+</section>
+
+<section id="bank-nation">
+  <h2>Service, society and nation</h2><hr class="sec-rule">
+  <p>These words are close to the idea of a defence career, so the risk is rhetoric. Show service through small, concrete acts such as voting, volunteering and honesty. Patriotism that is lived reads stronger than patriotism that is declared.</p>
+  <div class="tablewrap wide">
+    <table>
+      <caption>Words 61-75</caption>
+      <thead><tr><th>Word</th><th>Version 1 · personal</th><th>Version 2 · social</th><th>Version 3 · principle</th><th>OLQ</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Army</strong></td><td>I want to join the Army to serve the nation.</td><td>The Army helps in floods and keeps the borders safe.</td><td>The Army stands for discipline and sacrifice.</td><td>Determination</td></tr>
+        <tr><td><strong>Nation</strong></td><td>I work honestly each day to build my nation.</td><td>A nation is built by its citizens' effort.</td><td>Nation first, always.</td><td>Responsibility</td></tr>
+        <tr><td><strong>Flag</strong></td><td>I salute the flag with pride each Independence Day.</td><td>The flag unites us across languages and regions.</td><td>The flag stands for the sacrifices behind it.</td><td>Responsibility</td></tr>
+        <tr><td><strong>Soldier</strong></td><td>I admire a soldier's discipline and try to build it.</td><td>A soldier protects the nation day and night.</td><td>A soldier fights for others before himself.</td><td>Courage</td></tr>
+        <tr><td><strong>Uniform</strong></td><td>I wear my NCC uniform with pride and keep it spotless.</td><td>The uniform carries a duty to the people.</td><td>The uniform is earned by discipline.</td><td>Responsibility</td></tr>
+        <tr><td><strong>Patriot</strong></td><td>I show patriotism by paying taxes and following the law.</td><td>A patriot serves quietly every day.</td><td>Patriotism is service, not slogan.</td><td>Responsibility</td></tr>
+        <tr><td><strong>Country</strong></td><td>I plan to serve my country by joining the forces.</td><td>Our country's progress depends on honest work.</td><td>Country before self.</td><td>Determination</td></tr>
+        <tr><td><strong>Border</strong></td><td>I read about soldiers on the border and admire their stamina.</td><td>Border troops guard the nation in harsh weather.</td><td>A secure border lets a peaceful nation grow.</td><td>Stamina</td></tr>
+        <tr><td><strong>Service</strong></td><td>I give two hours a week to a local school.</td><td>Service to the nation is the highest duty.</td><td>Service means giving before expecting.</td><td>Initiative</td></tr>
+        <tr><td><strong>Sacrifice</strong></td><td>I gave up leisure to train for the NDA exam.</td><td>Soldiers' sacrifice keeps citizens safe.</td><td>Sacrifice gives purpose to success.</td><td>Determination</td></tr>
+        <tr><td><strong>Honour</strong></td><td>I keep my word because honour matters to me.</td><td>A unit's honour comes before personal gain.</td><td>Honour is kept through everyday conduct.</td><td>Responsibility</td></tr>
+        <tr><td><strong>Law</strong></td><td>I follow traffic law even when no one is watching.</td><td>Law protects every citizen equally.</td><td>Law and order build trust in society.</td><td>Responsibility</td></tr>
+        <tr><td><strong>Society</strong></td><td>I volunteer on weekends to improve my society.</td><td>Society grows when people help each other.</td><td>A just society is built by responsible citizens.</td><td>Social adjustment</td></tr>
+        <tr><td><strong>Citizen</strong></td><td>As a citizen I vote and keep my area clean.</td><td>A responsible citizen helps the community.</td><td>Good citizens make a good nation.</td><td>Responsibility</td></tr>
+        <tr><td><strong>Police</strong></td><td>I gave the police a clear statement as a witness.</td><td>Police protect the people day and night.</td><td>Police and citizens together keep society safe.</td><td>Cooperation</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning: "Army"</span>
+    <p>It is tempting to write a stirring line. But a psychologist hears the same stirring lines from most candidates. Version 1 states a plain, honest intent; Version 2 shows knowledge that the Army also helps in disasters, which suggests an <strong>informed</strong> motive; Version 3 names two values, not one.</p>
+  </div>
+</section>
+
+<section id="bank-neutral">
+  <h2>Everyday and nature words</h2><hr class="sec-rule">
+  <p>Neutral words reveal habits and interests most honestly because nothing prompts a "right" answer. Tie each to a routine, a social good or a duty. These are good places to show true daily life: fitness, reading, saving, planting.</p>
+  <div class="tablewrap wide">
+    <table>
+      <caption>Words 76-90</caption>
+      <thead><tr><th>Word</th><th>Version 1 · personal</th><th>Version 2 · social</th><th>Version 3 · principle</th><th>OLQ</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Book</strong></td><td>I read a book every week to widen my knowledge.</td><td>Books carry the experience of thousands of people.</td><td>A good book guides a good life.</td><td>Intelligence</td></tr>
+        <tr><td><strong>Water</strong></td><td>I save water at home by fixing leaks.</td><td>Water is the basis of life and needs protection.</td><td>Conserving water protects the next generation.</td><td>Responsibility</td></tr>
+        <tr><td><strong>Road</strong></td><td>I follow road rules whether on foot or by cycle.</td><td>Good roads connect villages to opportunity.</td><td>The road to success is built one step at a time.</td><td>Responsibility</td></tr>
+        <tr><td><strong>Train</strong></td><td>I train every morning to improve my fitness.</td><td>The train brought relief supplies to the flood-hit area.</td><td>Training builds a soldier.</td><td>Stamina</td></tr>
+        <tr><td><strong>Phone</strong></td><td>I limit my phone use to focus on studies.</td><td>The phone helped us coordinate help quickly.</td><td>A phone is a tool; control it.</td><td>Organising</td></tr>
+        <tr><td><strong>Money</strong></td><td>I save part of my pocket money each month.</td><td>Money should serve a good purpose, not rule a life.</td><td>Money is useful but character is more valuable.</td><td>Reasoning</td></tr>
+        <tr><td><strong>Time</strong></td><td>I plan my day to use every hour well.</td><td>Punctuality builds the team's trust.</td><td>Time lost never returns.</td><td>Organising</td></tr>
+        <tr><td><strong>Sun</strong></td><td>I wake before sunrise and start training.</td><td>The sun gives energy to all life.</td><td>The sun rises for those who rise early.</td><td>Determination</td></tr>
+        <tr><td><strong>River</strong></td><td>I helped clean the river bank with volunteers.</td><td>Rivers sustain villages and cities.</td><td>Rivers need protection to keep giving.</td><td>Responsibility</td></tr>
+        <tr><td><strong>Tree</strong></td><td>I planted a tree outside my school.</td><td>Trees give shade to everyone alike.</td><td>A tree grows slowly but stands for generations.</td><td>Initiative</td></tr>
+        <tr><td><strong>Game</strong></td><td>I play hockey daily to keep fit and learn teamwork.</td><td>Games teach teams to win and lose gracefully.</td><td>A good game builds good character.</td><td>Cooperation, liveliness</td></tr>
+        <tr><td><strong>Exam</strong></td><td>I prepare for my exams with a daily schedule.</td><td>Our study group revised together before the exam.</td><td>An exam tests preparation, not luck.</td><td>Organising</td></tr>
+        <tr><td><strong>Light</strong></td><td>I switched on a torch and led my friends out during the power cut.</td><td>A small lamp can light a whole village path.</td><td>Knowledge is the light that removes darkness.</td><td>Initiative</td></tr>
+        <tr><td><strong>Music</strong></td><td>I listen to music to relax after hard training.</td><td>Music brings people together.</td><td>Music refreshes the mind for the next effort.</td><td>Liveliness</td></tr>
+        <tr><td><strong>Food</strong></td><td>I eat simple, healthy food to stay fit.</td><td>Our group shared food with the flood-hit families.</td><td>Food in time keeps a soldier strong.</td><td>Stamina, cooperation</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning: "Train" and "Time"</span>
+    <p>"Train" can be a vehicle or a verb. Version 1 takes the verb because it shows an active habit; the other versions use the vehicle and the idea of training in an equally useful way. For "Time", planning (Version 1) and punctuality (Version 2) show <strong>organising ability</strong>; the proverb in Version 3 is the weakest, so use it only as a variety.</p>
+  </div>
+</section>
+
+<section id="bank-abstract">
+  <h2>Abstract and value words</h2><hr class="sec-rule">
+  <p>Abstract words tempt long, philosophical lines. Reduce each to behaviour: what would a person who believes this actually do? A concrete example in ten words beats an abstract paragraph.</p>
+  <div class="tablewrap wide">
+    <table>
+      <caption>Words 91-105</caption>
+      <thead><tr><th>Word</th><th>Version 1 · personal</th><th>Version 2 · social</th><th>Version 3 · principle</th><th>OLQ</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Freedom</strong></td><td>I use my freedom to study and serve.</td><td>Freedom is protected by responsible citizens.</td><td>Freedom comes with duty.</td><td>Responsibility</td></tr>
+        <tr><td><strong>Peace</strong></td><td>I keep peace at home by listening before I speak.</td><td>Strong forces help preserve peace.</td><td>Peace needs both strength and goodwill.</td><td>Social adjustment</td></tr>
+        <tr><td><strong>Justice</strong></td><td>I spoke up for a classmate who was treated unfairly.</td><td>Courts need speed to deliver real justice.</td><td>Justice means fairness for everyone.</td><td>Courage, responsibility</td></tr>
+        <tr><td><strong>Responsibility</strong></td><td>I take responsibility for my mistakes and correct them.</td><td>A leader accepts responsibility for the team's result.</td><td>Responsibility grows with trust.</td><td>Responsibility</td></tr>
+        <tr><td><strong>Decision</strong></td><td>I make a quick decision after weighing the facts.</td><td>A good decision uses information and consults the team.</td><td>A timely decision beats a perfect late one.</td><td>Speed of decision</td></tr>
+        <tr><td><strong>Ambition</strong></td><td>My ambition is to become an officer, and I train daily for it.</td><td>Healthy ambition drives a team forward.</td><td>Ambition needs effort and integrity.</td><td>Determination</td></tr>
+        <tr><td><strong>Truth</strong></td><td>I tell the truth even when it costs me.</td><td>Truth builds trust in a team.</td><td>Truth stands when everything else falls.</td><td>Responsibility</td></tr>
+        <tr><td><strong>Respect</strong></td><td>I respect my seniors and juniors alike.</td><td>Respect for each other makes a team strong.</td><td>Respect is earned by actions.</td><td>Social adjustment</td></tr>
+        <tr><td><strong>Plan</strong></td><td>I make a plan each night for the next day.</td><td>A clear plan helped our team finish early.</td><td>A plan with a backup is a strong plan.</td><td>Organising</td></tr>
+        <tr><td><strong>Goal</strong></td><td>My goal is to clear the SSB and serve the nation.</td><td>A shared goal unites a team.</td><td>A goal without action remains a dream.</td><td>Determination</td></tr>
+        <tr><td><strong>Habit</strong></td><td>I made exercise a habit by running at six every morning.</td><td>Good habits make a team reliable.</td><td>Habits shape character.</td><td>Stamina</td></tr>
+        <tr><td><strong>Life</strong></td><td>I try to live a disciplined life with purpose.</td><td>Life is better when we help others.</td><td>Life rewards effort and honesty.</td><td>Determination</td></tr>
+        <tr><td><strong>Future</strong></td><td>I prepare for the future by working hard today.</td><td>A nation's future depends on its youth.</td><td>The future belongs to those who prepare.</td><td>Organising</td></tr>
+        <tr><td><strong>Change</strong></td><td>I adapted quickly when my college routine changed.</td><td>Teams that adapt to change survive.</td><td>Change is certain; adapting is a choice.</td><td>Social adaptability</td></tr>
+        <tr><td><strong>Command</strong></td><td>I took command of the group when our leader fell ill.</td><td>Clear command keeps a unit coordinated.</td><td>Good command combines authority with care.</td><td>Influence, initiative</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning: "Decision" and "Freedom"</span>
+    <p>"Decision" is a direct invitation to show <strong>speed of decision</strong>. Version 3 adds the officer's key insight: acting in time often matters more than waiting for perfect information. "Freedom" is easily preachy; adding "duty" (Version 3) or a personal use (Version 1) grounds it.</p>
+  </div>
+</section>
+
+<section id="bank-tricky">
+  <h2>Tricky and ambiguous words</h2><hr class="sec-rule">
+  <p>These words may tempt aggressive, cynical or lazy replies. Each has a sensible reading that shows maturity: war as something to deter, a gun as a responsibility, a bribe as a harm, and rest as preparation. Choose the reading that lets you show a quality and avoid anything that glorifies violence or cynicism.</p>
+  <div class="tablewrap wide">
+    <table>
+      <caption>Words 106-120</caption>
+      <thead><tr><th>Word</th><th>Version 1 · personal</th><th>Version 2 · social</th><th>Version 3 · principle</th><th>OLQ</th></tr></thead>
+      <tbody>
+        <tr><td><strong>War</strong></td><td>I hope war never comes, but I train to be ready.</td><td>Strong armed forces help prevent war.</td><td>War is the last option after diplomacy.</td><td>Reasoning</td></tr>
+        <tr><td><strong>Gun</strong></td><td>I learned rifle shooting in NCC with strict safety rules.</td><td>A gun in a trained soldier's hand protects the nation.</td><td>A gun demands responsibility.</td><td>Responsibility</td></tr>
+        <tr><td><strong>Blood</strong></td><td>I donate blood regularly at our college camp.</td><td>Blood donors save lives in emergencies.</td><td>Donating blood is a simple way to serve.</td><td>Initiative, cooperation</td></tr>
+        <tr><td><strong>Love</strong></td><td>I love my country and show it by working honestly.</td><td>Love for family gives strength.</td><td>Love shown through service lasts.</td><td>Social adjustment</td></tr>
+        <tr><td><strong>Bribe</strong></td><td>I refused to pay a bribe and reported the matter properly.</td><td>Bribery weakens trust in institutions.</td><td>A bribe costs the nation more than the giver.</td><td>Responsibility</td></tr>
+        <tr><td><strong>Politics</strong></td><td>I follow politics to be an informed voter.</td><td>Politics should serve people, not personal gain.</td><td>Good politics begins with honest citizens.</td><td>Intelligence</td></tr>
+        <tr><td><strong>Hurry</strong></td><td>I avoid hurry by planning ahead, so I make fewer mistakes.</td><td>In a hurry, the team still checked the equipment twice.</td><td>Haste makes errors; planning saves time.</td><td>Organising</td></tr>
+        <tr><td><strong>Relax</strong></td><td>I relax with a game of football after studies.</td><td>A relaxed team performs better.</td><td>Rest prepares the body for the next effort.</td><td>Liveliness</td></tr>
+        <tr><td><strong>Dream</strong></td><td>My dream is to become an officer, so I work for it daily.</td><td>Dreams turn real through a team's hard work.</td><td>A dream needs a plan to become real.</td><td>Determination</td></tr>
+        <tr><td><strong>Leave</strong></td><td>I took leave only after finishing my pending work.</td><td>A leader plans so the team runs well while he is on leave.</td><td>Leave is to recharge, not to escape.</td><td>Responsibility</td></tr>
+        <tr><td><strong>Wait</strong></td><td>I waited patiently for the results and kept preparing.</td><td>The team waited for the signal before moving.</td><td>Patience with action beats idle waiting.</td><td>Determination</td></tr>
+        <tr><td><strong>Secret</strong></td><td>I never share a friend's secret unless it could harm others.</td><td>Keeping official secrets is a soldier's duty.</td><td>Trust is built by keeping confidences.</td><td>Responsibility</td></tr>
+        <tr><td><strong>Cry</strong></td><td>I comforted a crying child and helped him find his mother.</td><td>Volunteers answered the crowd's cry for help.</td><td>Tears relieve pain, but action solves problems.</td><td>Initiative</td></tr>
+        <tr><td><strong>Luck</strong></td><td>I depend on preparation more than luck.</td><td>Luck favours a team that is ready.</td><td>Luck is where preparation meets opportunity.</td><td>Reasoning</td></tr>
+        <tr><td><strong>Weak</strong></td><td>I strengthen my weak areas through daily practice.</td><td>A team helps its weakest member improve.</td><td>Weakness is overcome by honest effort.</td><td>Determination</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning: "Bribe", "Secret" and "Cry"</span>
+    <p>For "Bribe", Version 1 does not just refuse; it <strong>reports properly</strong>, which shows an officer's sense of process. For "Secret", the clause "unless it could harm others" shows judgement about when loyalty yields to responsibility. For "Cry", the sentence turns an emotional word into a helping action.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Knowledge toolkit</p><h2>Analysis, practice and revision</h2></div>
+
+<section id="perspectives">
+  <h2>Myths and debates</h2><hr class="sec-rule">
+  <p>Advice on the WAT is abundant and often contradictory. Tags separate what is well supported from what is opinion.</p>
+  <ul>
+    <li><span class="tag fact">Established</span><strong>Sentences are read together, not alone.</strong> One odd answer is rarely decisive; patterns are.</li>
+    <li><span class="tag fact">Established</span><strong>Consistency across tests matters.</strong> Claims in the WAT that the SDT or interview contradict damage credibility.</li>
+    <li><span class="tag interp">Interpretation</span><strong>"Always be positive."</strong> Mostly sound, but a purely sunny profile can look rehearsed; honest acknowledgement of a feeling plus a constructive response reads more real.</li>
+    <li><span class="tag disputed">Disputed</span><strong>Attempt all 60 or fewer, better ones.</strong> Many mentors say complete as many as you can; a blank gives no information. Quality still matters, so a short, safe sentence beats a blank.</li>
+    <li><span class="tag disputed">Disputed</span><strong>First person versus third person.</strong> Some advise "I" sentences for authenticity; others prefer general statements to avoid overclaiming. A mix works for most.</li>
+    <li><span class="tag interp">Interpretation</span><strong>Memorised sentences.</strong> They save thinking time but sound alike and may mismatch your other tests.</li>
+    <li><span class="tag verify">Re-verify</span><strong>Test details.</strong> Timings, word counts and instructions can change; follow the call-up letter.</li>
+  </ul>
+  <div class="edge">
+    <span class="edge-h">Lesser-known fact</span>
+    <p>Writing speed is part of the test: well-prepared candidates attempt more words with the same quality, so practising short, clean sentences also helps the overall impression.</p>
+  </div>
+</section>
+
+<section id="scenarios">
+  <h2>Scenarios and trade-offs</h2><hr class="sec-rule">
+  <p>Real tests throw up awkward moments. The options below show what is available and what each trades.</p>
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>You freeze on a word</h4>
+      <ul>
+        <li>Write the first neutral, positive sentence about it, even a simple one.</li>
+        <li>Do not stare; losing the next word costs more.</li>
+        <li>Trade-off: a plain sentence over a blank.</li>
+      </ul>
+    </div>
+    <div class="panel red-top">
+      <h4>You do not know the word</h4>
+      <ul>
+        <li>Guess from its roots, or write a general positive line about a related idea.</li>
+        <li>Do not invent a false meaning with confidence.</li>
+        <li>Trade-off: a brief sentence over a long mistake.</li>
+      </ul>
+    </div>
+    <div class="panel gold-top">
+      <h4>A word touches a painful memory</h4>
+      <ul>
+        <li>Write a short, honest, constructive line about how you coped.</li>
+        <li>Avoid blame or self-pity.</li>
+        <li>Trade-off: honest and brief over dramatic.</li>
+      </ul>
+    </div>
+    <div class="panel green-top">
+      <h4>You fall behind the screen</h4>
+      <ul>
+        <li>Skip the one you are on and catch the next word.</li>
+        <li>Shorten sentences to six or seven words.</li>
+        <li>Trade-off: a few fewer answers over a late sheet.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="qbank">
+  <h2>Practice bank: questions and motions</h2><hr class="sec-rule">
+  <p class="lede">Answer each question in your own words, then test it against the rules in Part II.</p>
+  <ol class="qbank">
+    <li>What does the psychologist look for across the 60 WAT sentences, and why is one sentence rarely decisive?</li>
+    <li>Name the four OLQ factors and one OLQ in each.</li>
+    <li>Why is a positive sentence not the same as a dishonest one?</li>
+    <li>Explain the three Cs for negative words with an example for "Anger".</li>
+    <li>Rewrite "Teachers are strict" into a strong sentence and name the OLQ it shows.</li>
+    <li>Why are definitions ("Courage means bravery") weak answers?</li>
+    <li>What problem arises if every sentence begins with "I"? What is the fix?</li>
+    <li>Write three versions (personal, social, principle) for "Responsibility".</li>
+    <li>How do you handle an ambiguous word such as "Order" or "Train"?</li>
+    <li>What should you do if you freeze on a word?</li>
+    <li>Why does inconsistency between the WAT and SDT matter?</li>
+    <li>Take "Risk": write an answer that shows reasoning ability, not recklessness.</li>
+    <li>Take "Secret": explain how the clause "unless it could harm others" shows judgement.</li>
+    <li>How would you convert "Defeat" into a sentence showing determination?</li>
+    <li>Describe how you would practise the WAT for four weeks.</li>
+  </ol>
+  <h3>Debate motions</h3>
+  <ol class="dbank">
+    <li>This house believes that a positive-only approach to the WAT produces dishonest profiles.</li>
+    <li>This house believes that memorised model sentences defeat the purpose of the test.</li>
+    <li>This house believes that a 15-second limit is a fair way to measure personality.</li>
+    <li>This house believes that candidates should be allowed to leave a few words blank.</li>
+    <li>This house believes that negative words are the most revealing words in the test.</li>
+    <li>This house believes that a leader's habits matter more than a leader's slogans.</li>
+    <li>This house believes that personality tests can be coached without losing their value.</li>
+  </ol>
+</section>
+
+<section id="chronology">
+  <h2>Preparation timeline</h2><hr class="sec-rule">
+  <p>A suggested eight-week plan, then the 15 seconds of a single word. Adjust to your calendar.</p>
+  <ul class="timeline">
+    <li><span class="yr">Week 1</span><span>Read the 15 OLQs; write five sentences a day in untimed mode and tag the OLQ each shows.</span></li>
+    <li><span class="yr">Week 2</span><span>Write 20 words daily, untimed; apply the three Cs to every negative word.</span></li>
+    <li><span class="yr">Week 3</span><span>Move to 25 seconds per word; keep answers complete and under twelve words.</span></li>
+    <li><span class="yr">Week 4</span><span>Move to 15 seconds per word; practise on a random 60-word list.</span></li>
+    <li><span class="yr">Week 5</span><span>Do three full mock tests; review for repetition, clichés and negativity.</span></li>
+    <li><span class="yr">Week 6</span><span>Share sheets with a mentor or friend; ask what your sentences say about you.</span></li>
+    <li><span class="yr">Week 7</span><span>Align with your SDT and TAT stories; fix any contradictions.</span></li>
+    <li><span class="yr">Week 8</span><span>Two final mocks; rest before the test and do not cram new sentences.</span></li>
+    <li><span class="yr">0-3 s</span><span>Read the word fully; accept the first thought.</span></li>
+    <li><span class="yr">3-6 s</span><span>Filter for an OLQ; choose personal, social or principle.</span></li>
+    <li><span class="yr">6-14 s</span><span>Write one clear, positive, complete sentence.</span></li>
+    <li><span class="yr">14-15 s</span><span>Glance to check it, then eyes up for the next word.</span></li>
+  </ul>
+</section>
+
+<section id="glossary">
+  <h2>Glossary</h2><hr class="sec-rule">
+  <dl class="term">
+    <dt>WAT</dt><dd>Word Association Test: a sentence for each of about 60 words, in about 15 seconds each.</dd>
+    <dt>TAT</dt><dd>Thematic Apperception Test: writing stories about pictures.</dd>
+    <dt>SRT</dt><dd>Situation Reaction Test: writing reactions to everyday situations.</dd>
+    <dt>SDT</dt><dd>Self Description Test: describing how others, and you, see you.</dd>
+    <dt>OLQ</dt><dd>Officer Like Quality: one of 15 traits assessed at SSB.</dd>
+    <dt>Free association</dt><dd>The first thought that arises in response to a word.</dd>
+    <dt>Projection</dt><dd>Revealing one's own attitudes through descriptions of others or things.</dd>
+    <dt>Cliché</dt><dd>An overused phrase that says nothing personal.</dd>
+    <dt>Convert</dt><dd>Turn a negative word's thought into a lesson or resolve.</dd>
+    <dt>Contain</dt><dd>Show control over a feeling instead of denying it.</dd>
+    <dt>Context</dt><dd>Place a hard word in a duty or service setting.</dd>
+    <dt>Version 1, 2, 3</dt><dd>Personal, social and principle sentences used in this handbook.</dd>
+    <dt>Psychologist</dt><dd>The assessor who reads your psychology day responses.</dd>
+    <dt>Consistency</dt><dd>Agreement across your tests and interview.</dd>
+    <dt>Social desirability</dt><dd>Writing what sounds good instead of what is true.</dd>
+    <dt>Holistic reading</dt><dd>Judging the whole set of answers together.</dd>
+  </dl>
+</section>
+
+<section id="revision">
+  <h2>Rapid revision sheet</h2><hr class="sec-rule">
+  <div class="note">
+    <h4>One-page summary</h4>
+    <ul>
+      <li>WAT: about 60 words, about 15 seconds each, one sentence per word; read as a whole.</li>
+      <li>Each sentence should be complete, positive, short (8-12 words) and show an action.</li>
+      <li>15 OLQs in four factors: planning and organising, social adjustment, social effectiveness, dynamic.</li>
+      <li>Free association reveals patterns; you cannot fake 60 answers but you can train a habit.</li>
+      <li>Negative words: convert, contain or contextualise.</li>
+      <li>Use personal, social and principle sentences in a mix.</li>
+      <li>Avoid definitions, preaching, clichés, blame, exaggeration and repetition.</li>
+      <li>Be consistent with your SDT, TAT and interview.</li>
+      <li>Do not freeze: any safe positive sentence beats a blank.</li>
+      <li>Practise in stages: untimed, 25 seconds, then 15 seconds; review with a mentor.</li>
+      <li>Follow the call-up letter for current timings and rules.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer>
+  <p>Compiled from open sources. Study aid only, not an official publication.</p>
+  <p>Source &amp; contributions: <a href="https://github.com/mohitkushwaha0601/matre">github.com/mohitkushwaha0601/matre</a></p>
+</footer>
+
+</body>
+</html>
+

@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SSB Situation Reaction Test (SRT): Psychology, Strategy and 120 Worked Situations — A Deep Knowledge Handbook</title>
+<meta name="description" content="How to frame strong, practical, OLQ-based reactions in the SSB Situation Reaction Test: the psychology behind it, a four-step response strategy, and 120 situations with three model reactions each and the reasoning behind them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#15232B;
+  --ink-soft:#4F626B;
+  --paper:#EEF2F1;
+  --surface:#FFFFFF;
+  --surface-2:#DFE7E5;
+  --rule:#C5D0CD;
+  --rule-strong:#8FA29D;
+  --red:#B5412B;
+  --blue:#1D5F8A;
+  --gold:#9A7512;
+  --green:#2E6E55;
+  --hero-bg:#0F2630;
+  --hero-ink:#EEF2F1;
+  --hero-dim:#9DB2B8;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#E6ECEA;
+    --ink-soft:#A6B4B2;
+    --paper:#0B1214;
+    --surface:#131C1F;
+    --surface-2:#1C282B;
+    --rule:#2B3C40;
+    --rule-strong:#4F6A70;
+    --red:#EE8F72;
+    --blue:#7DB9EA;
+    --gold:#DDB552;
+    --green:#6FCBA0;
+    --hero-bg:#070D0F;
+    --hero-ink:#E6ECEA;
+    --hero-dim:#8AA0A4;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E6ECEA;
+  --ink-soft:#A6B4B2;
+  --paper:#0B1214;
+  --surface:#131C1F;
+  --surface-2:#1C282B;
+  --rule:#2B3C40;
+  --rule-strong:#4F6A70;
+  --red:#EE8F72;
+  --blue:#7DB9EA;
+  --gold:#DDB552;
+  --green:#6FCBA0;
+  --hero-bg:#070D0F;
+  --hero-ink:#E6ECEA;
+  --hero-dim:#8AA0A4;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1.5rem);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
+.flagstrip{display:flex;height:12px}
+.flagstrip span{flex:1}
+.f1{background:#0F5C6E}
+.f2{background:#1F3A63}
+.f3{background:#5DA9DD}
+.f4{background:#FF9933}
+.f5{background:#FFFFFF}
+.f6{background:#138808}
+.f7{background:linear-gradient(90deg,#FF9933 33%,#FFFFFF 33%,#FFFFFF 66%,#138808 66%)}
+.f8{background:#E3B23C}
+.hero-inner{max-width:1180px;margin:0 auto;padding:3.2rem 1.5rem 0}
+.kicker{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--hero-dim);margin:0 0 .8rem}
+.hero h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.8rem,5vw,2.9rem);line-height:1.15;margin:0 0 .6rem;max-width:26ch}
+.hero-sub{margin:0;color:var(--hero-dim);max-width:68ch}
+.stamp{margin-top:1.6rem;font-size:.86rem;color:var(--hero-dim);display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+.stamp b{color:var(--hero-ink);font-weight:600}
+
+.shell{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem;display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media (min-width:1000px){
+  .shell{grid-template-columns:255px minmax(0,1fr);gap:3.5rem;padding-top:2.8rem}
+}
+nav.toc{font-size:.9rem}
+@media (min-width:1000px){
+  .toc-mobile{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2rem);align-self:start;max-height:calc(100vh - 5rem);overflow-y:auto}
+}
+nav.toc h2{font-family:"Zilla Slab",Georgia,serif;font-size:.92rem;font-weight:600;margin:0 0 .7rem;padding-bottom:.45rem;border-bottom:2px solid var(--rule-strong)}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc}
+nav.toc li{border-bottom:1px solid var(--rule)}
+nav.toc li:not(.part){counter-increment:toc}
+nav.toc a{display:flex;gap:.6rem;padding:.4rem 0;color:var(--ink-soft);text-decoration:none}
+nav.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--rule-strong);font-variant-numeric:tabular-nums;flex:none}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--red)}
+nav.toc .part{border:0;margin:1.1rem 0 .3rem;font-family:"Zilla Slab",Georgia,serif;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--rule-strong)}
+nav.toc .part::before{content:none}
+.toc-mobile{display:block}
+@media (min-width:1000px){.toc-mobile summary{display:none}}
+.toc-mobile summary{cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:600;padding:.7rem .9rem;background:var(--surface);border:1px solid var(--rule);margin-bottom:1rem}
+@media (max-width:999px){
+  .toc-mobile[open] nav.toc{padding:0 .9rem 1rem}
+  .toc-mobile:not([open]) nav.toc{display:none}
+}
+
+main{min-width:0}
+section{margin:0 0 3.6rem;scroll-margin-top:1.5rem}
+section > h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.45rem,3.6vw,1.95rem);line-height:1.2;margin:0 0 .3rem}
+.part-head{margin:4rem 0 2.2rem;padding:1.1rem 0 .9rem;border-top:4px double var(--rule-strong);border-bottom:1px solid var(--rule)}
+.part-head p{margin:0;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.part-head h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.3rem,3.2vw,1.7rem);margin:.3rem 0 0;color:var(--ink)}
+.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.16rem;margin:2rem 0 .5rem;line-height:1.3}
+h4{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1rem;margin:1.4rem 0 .35rem;color:var(--ink)}
+p{margin:0 0 .95rem;max-width:74ch}
+ul,ol{margin:0 0 1rem;padding-left:1.25rem;max-width:74ch}
+li{margin-bottom:.35rem}
+li::marker{color:var(--rule-strong)}
+strong{font-weight:600}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+.lede{font-size:1.06rem;color:var(--ink-soft);max-width:70ch}
+
+.tablewrap{overflow-x:auto;margin:0 0 1.3rem;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.92rem}
+.tablewrap.wide table{min-width:1040px;font-size:.88rem}
+caption{text-align:left;padding:.7rem .85rem .1rem;font-weight:600;color:var(--ink-soft);font-size:.9rem}
+th,td{text-align:left;padding:.55rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{background:var(--surface-2);font-weight:600;border-bottom:2px solid var(--rule-strong);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.num,th.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+.edge{background:var(--surface);border-left:4px solid var(--red);padding:.9rem 1.1rem;margin:1.4rem 0;max-width:74ch}
+.edge p:last-child,.edge ul:last-child,.edge ol:last-child{margin-bottom:0}
+.edge .edge-h{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);display:block;margin-bottom:.25rem;font-size:.95rem}
+.edge.gold{border-left-color:var(--gold)}
+.edge.gold .edge-h{color:var(--gold)}
+.edge.blue{border-left-color:var(--blue)}
+.edge.blue .edge-h{color:var(--blue)}
+.edge.green{border-left-color:var(--green)}
+.edge.green .edge-h{color:var(--green)}
+
+.note{background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;border:1px solid var(--rule);font-size:.95rem}
+.note p:last-child,.note ul:last-child,.note ol:last-child{margin-bottom:0}
+.note h4{margin-top:0}
+
+.panel{background:var(--surface);border:1px solid var(--rule);padding:1rem 1.1rem}
+.panel h4{margin-top:0}
+.panel ul,.panel ol{margin-bottom:0}
+.panel p:last-child{margin-bottom:0}
+.panel.blue-top{border-top:3px solid var(--blue)}
+.panel.red-top{border-top:3px solid var(--red)}
+.panel.gold-top{border-top:3px solid var(--gold)}
+.panel.green-top{border-top:3px solid var(--green)}
+
+.rungs{max-width:74ch;margin:.3rem 0 0;display:grid;grid-template-columns:9.5rem 1fr;gap:0 1rem}
+.rungs dt{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;color:var(--red);padding-top:.2rem}
+.rungs dd{margin:0 0 .5rem;font-size:.93rem}
+@media (max-width:560px){
+  .rungs{grid-template-columns:1fr;gap:0}
+  .rungs dt{padding-top:.4rem}
+}
+
+.timeline{list-style:none;padding:0;margin:1rem 0 1.4rem;max-width:74ch}
+.timeline li{display:grid;grid-template-columns:8.2rem 1fr;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--rule);margin:0}
+.timeline li:last-child{border-bottom:0}
+.timeline .yr{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);font-variant-numeric:tabular-nums}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:.1rem}}
+
+.qbank{counter-reset:q;list-style:none;padding:0;max-width:74ch}
+.qbank li{counter-increment:q;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.qbank li::before{content:counter(q,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.qbank li:last-child{border-bottom:0}
+
+.dbank{counter-reset:d;list-style:none;padding:0;max-width:74ch}
+.dbank li{counter-increment:d;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.dbank li::before{content:counter(d,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.dbank li:last-child{border-bottom:0}
+
+.grid{display:grid;gap:1rem}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
+
+.card{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--red);padding:1rem 1.1rem}
+.card h4{margin:0 0 .45rem;font-size:1rem}
+.card p:last-child{margin-bottom:0}
+
+.term{max-width:74ch;margin:0 0 1.2rem}
+.term dt{font-weight:600;margin-top:.8rem}
+.term dd{margin:.15rem 0 0;color:var(--ink-soft)}
+
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:.1rem .45rem;border:1px solid var(--rule-strong);color:var(--ink-soft);margin-right:.35rem;vertical-align:middle}
+.tag.fact{border-color:var(--green);color:var(--green)}
+.tag.interp{border-color:var(--gold);color:var(--gold)}
+.tag.disputed{border-color:var(--red);color:var(--red)}
+.tag.verify{border-color:var(--blue);color:var(--blue)}
+.spaced{margin-top:.6rem}
+
+footer{border-top:3px double var(--rule-strong);margin:2rem auto 0;padding:1.4rem 1.5rem 2.5rem;color:var(--ink-soft);font-size:.9rem;max-width:74ch}
+footer a{color:var(--blue)}
+
+.home-btn{position:fixed;top:16px;left:16px;z-index:60;display:inline-flex;align-items:center;gap:.4rem;background:#14202B;color:#F1F2EC;border:1px solid rgba(241,242,236,.25);padding:.45rem .85rem;border-radius:999px;font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.82rem;font-weight:600;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.3);transition:background .15s ease,transform .15s ease}
+.home-btn:hover,.home-btn:focus-visible{background:#BF2F26;transform:translateY(-1px)}
+.home-btn svg{width:14px;height:14px;flex:none}
+@media print{.home-btn{display:none}}
+
+@media print{
+  .hero{background:none;color:#000;padding-bottom:1rem}
+  .hero-sub,.stamp{color:#333}
+  .flagstrip,.toc-mobile{display:none}
+  .shell{display:block;padding:0}
+  section{page-break-inside:auto;margin-bottom:1.8rem}
+  h2,h3{page-break-after:avoid}
+  .panel,.edge,.note,.tablewrap{page-break-inside:avoid}
+  .part-head{page-break-before:always}
+  body{font-size:10.5pt;background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+
+<a class="home-btn" href="../index.html" aria-label="Back to Handbooks homepage" title="Back to Handbooks homepage">
+  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
+  <span>Home</span>
+</a>
+
+<header class="hero">
+  <div class="flagstrip" aria-hidden="true">
+    <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f5"></span><span class="f6"></span><span class="f7"></span><span class="f8"></span>
+  </div>
+  <div class="hero-inner">
+    <p class="kicker">SSB psychology day • Situation Reaction Test</p>
+    <h1>The SSB Situation Reaction Test: Psychology, Strategy and 120 Worked Situations</h1>
+    <p class="hero-sub">How to frame a strong, practical, OLQ-based reaction to a situation: what the psychologist reads, how the mind decides under time pressure, a four-step response strategy, and 120 situations with three model reactions each, with the reasoning shown.</p>
+    <p class="stamp">
+      <span>Sections <b>22</b></span>
+      <span>Worked situations <b>120 × 3 versions</b></span>
+      <span>Test format <b>about 60 situations, 30 min</b></span>
+      <span>Read time <b>2-3 hrs</b></span>
+    </p>
+  </div>
+</header>
+
+<div class="shell">
+
+<details class="toc-mobile" open>
+  <summary>Contents</summary>
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li class="part">How to use this</li>
+      <li><a href="#howto">Using this handbook</a></li>
+
+      <li class="part">Part I · Understanding the test</li>
+      <li><a href="#format">Format and purpose</a></li>
+      <li><a href="#olqs">The OLQs a reaction can show</a></li>
+      <li><a href="#psychology">The psychology of a 30-second reaction</a></li>
+
+      <li class="part">Part II · Strategy</li>
+      <li><a href="#rules">Anatomy of a strong reaction</a></li>
+      <li><a href="#types">Situation types and how to read them</a></li>
+      <li><a href="#traps">Common traps</a></li>
+      <li><a href="#method">Method and a worked example</a></li>
+
+      <li class="part">Part III · The situation bank (120)</li>
+      <li><a href="#bank-emergency">Emergencies and accidents</a></li>
+      <li><a href="#bank-duty">Duty and responsibility</a></li>
+      <li><a href="#bank-peers">Friends, peers and conflict</a></li>
+      <li><a href="#bank-authority">Authority and integrity</a></li>
+      <li><a href="#bank-personal">Personal setbacks and pressure</a></li>
+      <li><a href="#bank-travel">Travel, nature and adventure</a></li>
+      <li><a href="#bank-leadership">Groups and leadership</a></li>
+      <li><a href="#bank-dilemma">Tricky dilemmas</a></li>
+
+      <li class="part">Knowledge toolkit</li>
+      <li><a href="#perspectives">Myths and debates</a></li>
+      <li><a href="#scenarios">Scenarios and trade-offs</a></li>
+      <li><a href="#qbank">Practice bank: questions and motions</a></li>
+      <li><a href="#chronology">Preparation timeline</a></li>
+      <li><a href="#glossary">Glossary</a></li>
+      <li><a href="#revision">Rapid revision sheet</a></li>
+    </ol>
+  </nav>
+</details>
+
+<main>
+<section id="howto">
+  <h2>Using this handbook</h2><hr class="sec-rule">
+  <p class="lede">The Situation Reaction Test puts a candidate in about sixty short, everyday and difficult situations and asks one thing: what would you do? It is the most direct window the psychologist has onto your judgement, speed and sense of duty, and it improves with a trained way of thinking, not a memorised script.</p>
+  <p>Part I explains what the test reads and how the mind decides under pressure. Part II gives a repeatable four-step strategy. Part III is the situation bank: 120 situations, each with <strong>three model reactions</strong> and the OLQ it shows. The toolkit closes with debates, scenarios, practice questions and a revision sheet. A shorter treatment of all four psychology tests is in <a href="1.ssb-psychological-tests-overview-knowledge-handbook.html">the overview guide</a>, and the Word Association Test is covered in <a href="3.ssb-wat-word-association-knowledge-handbook.html">its own guide</a>.</p>
+  <div class="edge blue">
+    <span class="edge-h">How the three versions work</span>
+    <p>Version 1 is <strong>direct action</strong>: the person acts at once with what he has. Version 2 is <strong>through people and channels</strong>: he mobilises others or informs the proper authority and acts together with them. Version 3 is <strong>root cause and follow-up</strong>: he also fixes why it happened or checks the result. All three are sound. Use the style that fits the situation, and vary it across your 60 answers.</p>
+  </div>
+  <div class="edge gold">
+    <span class="edge-h">Writing convention</span>
+    <p>Situations are written about "he" or "she", and reactions are written as short past-tense actions about that person, for example "Gave first aid, called an ambulance and stayed with him till it came." The models follow that style. Do not memorise them: they teach the thinking, and your own genuine experience, in the same style, will always read as stronger.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part I · Understanding the test</p><h2>What the test is and what it reads</h2></div>
+
+<section id="format">
+  <h2>Format and purpose</h2><hr class="sec-rule">
+  <p>On the psychology day, candidates usually take the Thematic Apperception Test (TAT), Word Association Test (WAT), Situation Reaction Test (SRT) and Self Description Test (SDT), in that order. In the SRT, a booklet carries <strong>about 60 short situations</strong>, and the candidate has about <strong>30 minutes</strong> to write a reaction to each, which works out to roughly 30 seconds per situation. Most candidates finish only part of the booklet; completing as many as possible, in order, matters.</p>
+  <p>The situations are drawn from daily life, studies, travel, emergencies, friendship, family, work and moral choice. The psychologist does not mark an answer right or wrong; they look for how you <em>naturally</em> behave when something happens, what you prioritise, and whether your reactions fit the other tests.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>What the test records, at a glance</caption>
+      <thead><tr><th>Feature</th><th>Detail</th><th>Why it matters</th></tr></thead>
+      <tbody>
+        <tr><td>Time per situation</td><td>About 30 seconds</td><td>Leaves no room to build a false persona; habit shows.</td></tr>
+        <tr><td>Output</td><td>A short written reaction, one to three lines</td><td>Reveals decision, priority and thoroughness.</td></tr>
+        <tr><td>Scoring</td><td>Read as a whole by a psychologist</td><td>No single answer decides the outcome.</td></tr>
+        <tr><td>Cross-checking</td><td>Against TAT, WAT, SDT and the interview</td><td>Contradictions are noticed; stay genuine.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><span class="tag verify">Re-verify</span>The exact number of situations and the time allowed can vary between centres and over time; follow the official instructions in your call-up letter.</p>
+</section>
+
+<section id="olqs">
+  <h2>The OLQs a reaction can show</h2><hr class="sec-rule">
+  <p>SSB assesses 15 Officer Like Qualities (OLQs) in four factors. The SRT is unusually good at showing several of them at once, because a single decision involves reasoning, courage, cooperation and responsibility together.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>OLQs by factor, and how a reaction shows them</caption>
+      <thead><tr><th>Factor</th><th>OLQs</th><th>How an SRT reaction shows it</th></tr></thead>
+      <tbody>
+        <tr><td>I · Planning and organising</td><td>Effective intelligence, reasoning ability, organising ability, power of expression</td><td>A sensible order of steps, use of available resources, a clear and complete answer.</td></tr>
+        <tr><td>II · Social adjustment</td><td>Social adaptability, cooperation, sense of responsibility</td><td>Involving others, respecting people, owning the problem.</td></tr>
+        <tr><td>III · Social effectiveness</td><td>Initiative, self-confidence, speed of decision, ability to influence the group, liveliness</td><td>Acting first, deciding quickly, taking charge calmly.</td></tr>
+        <tr><td>IV · Dynamic</td><td>Determination, courage, stamina</td><td>Staying with the task, facing danger sensibly, enduring effort.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning</span>
+    <p>Take "He sees a man collapse on the road." "Called for help" shows little. "Checked he was breathing, asked a passer-by to call an ambulance, loosened his collar and stayed till it came" shows <strong>speed of decision</strong>, <strong>organising ability</strong>, <strong>cooperation</strong> and <strong>responsibility</strong> in one line, simply because each action is concrete and in a sensible order.</p>
+  </div>
+</section>
+
+<section id="psychology">
+  <h2>The psychology of a 30-second reaction</h2><hr class="sec-rule">
+  <p>The SRT is a <strong>projective</strong> test with a practical face. Faced with an unseen situation and almost no time, the mind reaches for the response that is most habitual: the one it has used before, or the one it believes in. That habitual response is what the psychologist reads.</p>
+  <ul>
+    <li><strong>Pattern, not point.</strong> Fleeing in one answer and fighting in the next means little; a consistent pattern of acting, informing and following up shows a reliable temperament.</li>
+    <li><strong>Priorities show.</strong> When duty and comfort clash, what you write first reveals what you put first: life before property, duty before self, team before ego.</li>
+    <li><strong>Judgement versus impulse.</strong> Heroics without thought look rash; endless caution looks timid. A balanced reaction acts quickly <em>and</em> sensibly.</li>
+    <li><strong>The habit beats the act.</strong> You cannot fake 60 reactions in 30 minutes. You can train a thinking habit until it is automatic.</li>
+  </ul>
+  <div class="note">
+    <h4>Practical implication</h4>
+    <p>Do not try to sound like a hero. Aim to sound like a person who sees the problem, does the useful thing first, brings in the right people and finishes the job. This also matches what the group tasks and the interview will show.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part II · Strategy</p><h2>Building the reaction</h2></div>
+
+<section id="rules">
+  <h2>Anatomy of a strong reaction</h2><hr class="sec-rule">
+  <p>A strong reaction is <strong>realistic, complete, positive and in a sensible order</strong>. Remember four As: <strong>Assess</strong> the situation for safety and urgency, <strong>Act</strong> on the most important thing first, <strong>Assist</strong> by involving the right people or resources, and then <strong>Afterwards</strong> follow up or prevent a repeat. You do not need all four every time; one or two clear, ordered steps are usually enough.</p>
+  <div class="grid two">
+    <div class="panel green-top">
+      <h4>Do</h4>
+      <ul>
+        <li>Put the <strong>most urgent action first</strong>.</li>
+        <li>Use <strong>available resources</strong>: people, phone, police, doctor.</li>
+        <li>Write <strong>two or three steps</strong> in order, not one vague line.</li>
+        <li>Show <strong>concern for people</strong> before property.</li>
+        <li>Be <strong>realistic</strong> about what one person can do.</li>
+        <li>Finish the thought: the result or the follow-up.</li>
+      </ul>
+    </div>
+    <div class="panel red-top">
+      <h4>Avoid</h4>
+      <ul>
+        <li>"Ran away" or "ignored" in any form.</li>
+        <li>Lone heroics against armed or many people.</li>
+        <li>Vague words: "tried", "would see", "managed".</li>
+        <li>Waiting for others to act first.</li>
+        <li>Blaming others, or anger and revenge.</li>
+        <li>Giving up when the first step fails.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="tablewrap">
+    <table>
+      <caption>The same situation at three quality levels: "He finds a wallet with money and a card on the road"</caption>
+      <thead><tr><th>Level</th><th>Reaction</th><th>What it shows</th></tr></thead>
+      <tbody>
+        <tr><td>Weak</td><td>Kept the money and threw the wallet.</td><td>Dishonesty, no responsibility.</td></tr>
+        <tr><td>Average</td><td>Took the wallet to the police.</td><td>Honest but minimal and passive.</td></tr>
+        <tr><td>Strong</td><td>Checked the card for the owner's details, phoned him through the bank or contact in the wallet, and handed it over; else deposited it at the police station.</td><td>Honesty, initiative, resourcefulness, responsibility.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="types">
+  <h2>Situation types and how to read them</h2><hr class="sec-rule">
+  <p>Before writing, spend two seconds classifying the situation. The type tells you what the psychologist most wants to see.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Approach by situation type</caption>
+      <thead><tr><th>Type</th><th>Example</th><th>What to show</th></tr></thead>
+      <tbody>
+        <tr><td>Emergency</td><td>An accident, a fire, a drowning</td><td>Speed, calm, safety first, help from others.</td></tr>
+        <tr><td>Conflicting duties</td><td>An exam and a sick relative</td><td>Clear priority and a way to cover both.</td></tr>
+        <tr><td>Interpersonal</td><td>A quarrel between friends</td><td>Empathy, fairness, firmness without anger.</td></tr>
+        <tr><td>Authority and ethics</td><td>An order that seems wrong; a bribe</td><td>Integrity through proper channels.</td></tr>
+        <tr><td>Personal setback</td><td>Failure, loss, illness</td><td>Resilience, a plan, learning.</td></tr>
+        <tr><td>Unfamiliar or impossible</td><td>Lost in a forest, cut off by a river</td><td>Calm reasoning with the resources at hand.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge">
+    <span class="edge-h">Impossible situations</span>
+    <p>Some situations seem to have no good answer. The test is then of <strong>attitude and reasoning</strong>: do not declare it impossible. State the safest realistic step, such as waiting at a fixed place, signalling, or going for help, and do it calmly.</p>
+  </div>
+</section>
+
+<section id="traps">
+  <h2>Common traps</h2><hr class="sec-rule">
+  <ul>
+    <li><span class="tag disputed">Trap</span><strong>Escape.</strong> "Ran away", "left the place" or "avoided" suggest you step back from responsibility.</li>
+    <li><span class="tag disputed">Trap</span><strong>Superman answers.</strong> Fighting five armed robbers alone is not courage but poor judgement; call for help and act sensibly.</li>
+    <li><span class="tag disputed">Trap</span><strong>Passive words.</strong> "Informed the police and went home" ends too early; stay, assist, follow up.</li>
+    <li><span class="tag disputed">Trap</span><strong>Vagueness.</strong> "Handled the situation" says nothing; state what was done.</li>
+    <li><span class="tag disputed">Trap</span><strong>Repetition.</strong> "Informed the police" in every answer looks scripted.</li>
+    <li><span class="tag disputed">Trap</span><strong>Wrong priority.</strong> Saving a bag before a person, or a deadline before a life, shows poor values.</li>
+    <li><span class="tag disputed">Trap</span><strong>Revenge or anger.</strong> Punishing or shouting at someone shows poor self-control.</li>
+    <li><span class="tag disputed">Trap</span><strong>Leaving blanks.</strong> Skipped situations give the psychologist no information; a short sensible reaction is better than nothing.</li>
+    <li><span class="tag disputed">Trap</span><strong>Contradiction.</strong> Claiming extreme boldness here that your SDT or interview does not support damages trust.</li>
+  </ul>
+</section>
+
+<section id="method">
+  <h2>Method and a worked example</h2><hr class="sec-rule">
+  <p>A six-step loop fits within about 30 seconds once it is habit. Practise it slowly first, then speed up.</p>
+  <div class="panel blue-top">
+    <h4>Worked example: "He is travelling by train at night and sees a man trying to snatch a woman's bag."</h4>
+    <dl class="rungs">
+      <dt>Read</dt><dd>Read the whole situation; note who is in danger and who is present.</dd>
+      <dt>Classify</dt><dd>Crime and emergency: speed, safety and help from others.</dd>
+      <dt>Priority</dt><dd>The woman's safety first, the bag second, catching the thief third.</dd>
+      <dt>Resources</dt><dd>Fellow passengers, the chain, the railway police helpline, the guard.</dd>
+      <dt>Write</dt><dd>"Shouted to alert others, with fellow passengers caught the man, returned the bag, called the railway police and gave a statement."</dd>
+      <dt>Check</dt><dd>Realistic, sequenced, safety-aware, complete. Move on.</dd>
+    </dl>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning</span>
+    <p>The reaction does not claim that one person overpowers the thief. It first <strong>alerts others</strong> (cooperation and influence), acts <strong>together</strong> (safe and practical), then <strong>hands over to the proper authority and gives a statement</strong> (responsibility and sense of process). A weaker answer, "caught the thief and beat him", shows poor self-control and ignores risk.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part III · The situation bank</p><h2>120 situations, three versions each</h2></div>
+
+<section id="bank-emergency">
+  <h2>Emergencies and accidents</h2><hr class="sec-rule">
+  <p>In emergencies the psychologist reads <strong>speed, calm and priorities</strong>. The usual failures are freezing, running, or heroics beyond one person's means. Order matters: safety, life, then property. In each table, Version 1 is direct action, Version 2 acts through people and proper channels, and Version 3 adds root cause or follow-up.</p>
+  <div class="tablewrap wide">
+    <table>
+      <caption>Situations 1-15</caption>
+      <thead><tr><th>Situation</th><th>Version 1 · direct action</th><th>Version 2 · people and channels</th><th>Version 3 · root cause, follow-up</th><th>OLQ</th></tr></thead>
+      <tbody>
+        <tr><td><strong>1.</strong> He sees a man collapse on a busy road.</td><td>Checked breathing, laid him flat, loosened his collar and gave first aid.</td><td>Asked a passer-by to call an ambulance and kept the crowd back.</td><td>Went with him to hospital, informed his family and later joined a first-aid course.</td><td>Speed of decision, responsibility</td></tr>
+        <tr><td><strong>2.</strong> Fire breaks out in a neighbour's house.</td><td>Raised an alarm, got the family out and shut off the main switch.</td><td>Called the fire brigade, formed a bucket line with neighbours and kept the crowd clear.</td><td>Stayed till the fire was out, helped the family and later checked wiring in his own area.</td><td>Initiative, organising ability</td></tr>
+        <tr><td><strong>3.</strong> A child is drowning in a village pond.</td><td>Threw a rope or float, and pulled the child out only if he could swim safely.</td><td>Shouted for the best swimmer nearby, sent for help and began first aid on the child.</td><td>Took the child to a doctor, then asked the village to fence the pond.</td><td>Courage, reasoning</td></tr>
+        <tr><td><strong>4.</strong> A cyclist is hit by a car that speeds away.</td><td>Stopped the bleeding, noted the car's number and kept the cyclist still.</td><td>Called an ambulance and police, and got other bystanders to wait as witnesses.</td><td>Informed the family, gave a statement and followed up with the injured person.</td><td>Responsibility, presence of mind</td></tr>
+        <tr><td><strong>5.</strong> He smells gas in the hostel kitchen.</td><td>Opened windows, shut the regulator and avoided any switch or flame.</td><td>Cleared everyone out and informed the warden and the gas agency.</td><td>Had the pipe checked and put a safety notice in the kitchen.</td><td>Reasoning, responsibility</td></tr>
+        <tr><td><strong>6.</strong> A fellow passenger has chest pain on a train.</td><td>Made him sit comfortably, loosened tight clothes and gave him water to sip.</td><td>Asked for a doctor on board, called the guard and the railway helpline.</td><td>Stayed till medical help arrived and handed him over to the station doctor.</td><td>Cooperation, initiative</td></tr>
+        <tr><td><strong>7.</strong> Sparks fly from a socket in the classroom.</td><td>Switched off the mains and moved everyone away from the wall.</td><td>Informed the teacher and the electrician and kept students from touching it.</td><td>Ensured the fault was repaired and the wiring checked before use.</td><td>Presence of mind, responsibility</td></tr>
+        <tr><td><strong>8.</strong> Floodwater enters the village at night.</td><td>Woke the family, moved essentials upstairs and led children to high ground.</td><td>Alerted the sarpanch and neighbours, and helped the elderly to the relief centre.</td><td>Stayed on to help the rescue team and joined relief work afterwards.</td><td>Leadership, stamina</td></tr>
+        <tr><td><strong>9.</strong> A friend is bitten by a snake on a trek.</td><td>Kept him calm and still, tied a loose splint above the bite and noted the snake's look.</td><td>Sent a member for help, phoned the nearest hospital and carried him on a stretcher.</td><td>Ensured anti-venom was given at hospital and reviewed the group's safety rules.</td><td>Reasoning, stamina</td></tr>
+        <tr><td><strong>10.</strong> A crowd surges at the gate of a fair.</td><td>Moved to the side, shielded a child and told people to stop pushing.</td><td>Informed the police, and with volunteers made a human line to open a path.</td><td>Suggested separate entry and exit gates to the organisers.</td><td>Initiative, influence</td></tr>
+        <tr><td><strong>11.</strong> Smoke fills a bus while travelling.</td><td>Asked the driver to stop, opened the doors and led passengers out calmly.</td><td>Called the fire service, and had passengers stay clear of the bus.</td><td>Helped the injured, reported the cause and checked all had got down.</td><td>Leadership, courage</td></tr>
+        <tr><td><strong>12.</strong> A woman is harassed on a bus.</td><td>Stood between them and firmly told the man to stop.</td><td>Asked other passengers to support, informed the conductor and called the police helpline.</td><td>Stayed as a witness and helped her file a complaint.</td><td>Courage, social responsibility</td></tr>
+        <tr><td><strong>13.</strong> A wall collapses and people are trapped.</td><td>Called out, located voices and removed loose debris only where safe.</td><td>Alerted rescue teams and the police, and organised volunteers to wait for them.</td><td>Stayed to help the rescue, and later joined the relief effort.</td><td>Organising ability, stamina</td></tr>
+        <tr><td><strong>14.</strong> A live wire falls near a group of children.</td><td>Kept the children back, and used a dry wooden stick to move them from the wire.</td><td>Asked someone to call the electricity board and stood guard until they came.</td><td>Warned the colony and ensured the faulty pole was repaired.</td><td>Reasoning, responsibility</td></tr>
+        <tr><td><strong>15.</strong> Tremors shake the hall during a function.</td><td>Told people to drop, cover and move to an open space, and led the way out.</td><td>Divided volunteers to guide the elderly and children through the exits.</td><td>Did a headcount outside and informed the authorities about damage.</td><td>Leadership, speed of decision</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning: why the "drowning child" answer works</span>
+    <p>The first version does not send the candidate into the water blindly. "Threw a rope or float, and pulled the child out only if he could swim safely" shows <strong>reasoning ability</strong> and sound <strong>courage</strong>: a drowning rescuer can add a second victim. Version 2 mobilises the best swimmer, which shows <strong>cooperation</strong> and <strong>influence</strong>. Version 3 solves the root cause by asking for a fence.</p>
+  </div>
+</section>
+
+<section id="bank-duty">
+  <h2>Duty and responsibility</h2><hr class="sec-rule">
+  <p>These situations pit duty against comfort or two duties against each other. The psychologist reads your <strong>priorities and your ability to find a way to do both</strong>. The weakest answers drop one duty without effort; the best ones plan to fulfil both.</p>
+  <div class="tablewrap wide">
+    <table>
+      <caption>Situations 16-30</caption>
+      <thead><tr><th>Situation</th><th>Version 1 · direct action</th><th>Version 2 · people and channels</th><th>Version 3 · root cause, follow-up</th><th>OLQ</th></tr></thead>
+      <tbody>
+        <tr><td><strong>16.</strong> He is in charge of fest funds and finds the cash short.</td><td>Rechecked every receipt and count to find the gap.</td><td>Informed the teacher in charge and the treasurer immediately.</td><td>Helped trace the mistake and set a two-person check for cash.</td><td>Responsibility, honesty</td></tr>
+        <tr><td><strong>17.</strong> The night before an exam, a relative falls seriously ill.</td><td>Took him to the doctor first, then studied late for the exam.</td><td>Asked an elder to stay with the patient so he could rest and study.</td><td>Told the teacher of the situation and kept a revision plan for after.</td><td>Reasoning, responsibility</td></tr>
+        <tr><td><strong>18.</strong> As monitor, he finds the class noisy when the teacher is absent.</td><td>Stood up, calmly asked everyone to read or revise quietly.</td><td>Divided the class into study groups with a leader each.</td><td>Noted the names of the habitual offenders and spoke to them privately.</td><td>Influence, organising ability</td></tr>
+        <tr><td><strong>19.</strong> A teammate falls ill before a project deadline.</td><td>Took over his share and finished the report on time.</td><td>Called a meeting and redistributed the tasks among the team.</td><td>Updated the teacher and set a shared tracker to avoid last-minute pressure.</td><td>Cooperation, organising ability</td></tr>
+        <tr><td><strong>20.</strong> Heavy rain begins at an outdoor camp he is organising.</td><td>Moved all participants and equipment to the nearest shelter.</td><td>Asked volunteers to help the children and informed the camp head.</td><td>Reviewed the plan to include a rain shelter and backup schedule.</td><td>Speed of decision, responsibility</td></tr>
+        <tr><td><strong>21.</strong> On night sentry duty at a camp, he feels very sleepy.</td><td>Splashed water on his face, walked his beat and stayed alert.</td><td>Asked the relief sentry to come early rather than sleep on duty.</td><td>Slept well earlier next time and told his officer about the strain.</td><td>Determination, responsibility</td></tr>
+        <tr><td><strong>22.</strong> He misses the last train and has an interview the next morning.</td><td>Looked for the next bus or shared taxi and set off at once.</td><td>Phoned the interview office to inform them and sought advice on routes.</td><td>Reached with margin, then planned the next trip with extra time.</td><td>Initiative, planning</td></tr>
+        <tr><td><strong>23.</strong> He leads a cleaning drive but few volunteers turn up.</td><td>Started cleaning himself so others would see and join.</td><td>Phoned friends and neighbours and divided the area into small teams.</td><td>Later held a short meeting to find out why turnout was low.</td><td>Initiative, influence</td></tr>
+        <tr><td><strong>24.</strong> His elderly neighbour needs medicine on the day of his match.</td><td>Brought the medicine first and then reached the match.</td><td>Asked a friend to bring it while he told the coach about the delay.</td><td>Arranged a regular supply with the neighbour's family.</td><td>Social responsibility</td></tr>
+        <tr><td><strong>25.</strong> His computer crashes just before a report is due.</td><td>Recovered the latest saved copy and rewrote the lost part quickly.</td><td>Borrowed a friend's computer and informed the supervisor of the delay.</td><td>Began backing up his work regularly afterwards.</td><td>Resourcefulness, determination</td></tr>
+        <tr><td><strong>26.</strong> He promised to teach his sister but friends call him to play.</td><td>Taught her first and joined the game afterwards.</td><td>Asked friends to wait an hour and explained his promise.</td><td>Set a fixed study hour so such clashes do not repeat.</td><td>Reliability, planning</td></tr>
+        <tr><td><strong>27.</strong> In charge of the lab, he finds a student has broken costly equipment.</td><td>Checked the student was unhurt and secured the broken pieces.</td><td>Reported to the teacher honestly and did not hide it.</td><td>Suggested better handling instructions to prevent repeats.</td><td>Responsibility, honesty</td></tr>
+        <tr><td><strong>28.</strong> A blood-donation camp has too few volunteers.</td><td>Registered himself and brought friends from the hostel.</td><td>Split tasks and asked classmates to guide donors and keep records.</td><td>Followed up with donors for the next camp.</td><td>Initiative, organising ability</td></tr>
+        <tr><td><strong>29.</strong> On the way to a key event, his mother becomes unwell.</td><td>Took her to a doctor, stayed until she was stable.</td><td>Informed the organisers and asked a relative to be with her.</td><td>Reached the event later if he could and ensured her follow-up care.</td><td>Reasoning, priorities</td></tr>
+        <tr><td><strong>30.</strong> He must organise a farewell with a very small budget.</td><td>Listed essentials, cut extras and kept the programme simple.</td><td>Asked classmates for ideas and each to bring one item.</td><td>Kept a record of expenses and showed it openly.</td><td>Organising ability, resourcefulness</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning: why "exam versus sick relative" works</span>
+    <p>The question seems to force a choice. The strong answers refuse the false choice: <strong>life first</strong> (the patient to the doctor), then a plan to cover the second duty. This shows <strong>reasoning ability</strong> and <strong>sense of responsibility</strong>. A reaction that skips the exam or skips the patient shows a priority error.</p>
+  </div>
+</section>
+
+<section id="bank-peers">
+  <h2>Friends, peers and conflict</h2><hr class="sec-rule">
+  <p>Interpersonal situations test <strong>empathy, fairness and firmness</strong>. The balance to strike: care about the person, hold to the principle, and avoid both aggression and appeasement. Where a talk can solve it, talk first.</p>
+  <div class="tablewrap wide">
+    <table>
+      <caption>Situations 31-45</caption>
+      <thead><tr><th>Situation</th><th>Version 1 · direct action</th><th>Version 2 · people and channels</th><th>Version 3 · root cause, follow-up</th><th>OLQ</th></tr></thead>
+      <tbody>
+        <tr><td><strong>31.</strong> Two close friends quarrel and stop talking.</td><td>Spoke to each separately and listened to both sides.</td><td>Brought them together over tea, with another friend's help.</td><td>Helped them find the cause and stayed in touch afterwards.</td><td>Social adaptability, influence</td></tr>
+        <tr><td><strong>32.</strong> A friend asks to copy his assignment.</td><td>Politely refused and offered to explain the topic instead.</td><td>Formed a study group so the friend could learn with others.</td><td>Checked later that the friend had understood and finished on time.</td><td>Integrity, cooperation</td></tr>
+        <tr><td><strong>33.</strong> A friend starts smoking with a new group.</td><td>Talked to him in private about its harm without lecturing.</td><td>Involved a common friend and his elders to guide him.</td><td>Kept him busy with sports and checked on him regularly.</td><td>Social responsibility, influence</td></tr>
+        <tr><td><strong>34.</strong> Seniors bully a first-year student.</td><td>Stood with the student and asked the seniors to stop.</td><td>Reported it to the warden and the anti-ragging committee.</td><td>Followed up so the student felt safe and the bullying did not return.</td><td>Courage, responsibility</td></tr>
+        <tr><td><strong>35.</strong> A friend asks him to lie to his parents about where he is.</td><td>Refused to lie and advised the friend to speak the truth.</td><td>Offered to go with him to explain to his parents.</td><td>Kept in touch so the friend would not drift into trouble.</td><td>Integrity, courage</td></tr>
+        <tr><td><strong>36.</strong> A new student in the hostel sits alone, left out.</td><td>Went over, introduced himself and invited him to join.</td><td>Brought him into his group and into sports and meals.</td><td>Checked after a few weeks that he had settled in.</td><td>Social adaptability, liveliness</td></tr>
+        <tr><td><strong>37.</strong> A roommate plays loud music during exams.</td><td>Politely asked him to lower it and explained his exam.</td><td>Agreed with all roommates on quiet hours and study time.</td><td>Used the library when needed and set a hostel rule.</td><td>Social adjustment, influence</td></tr>
+        <tr><td><strong>38.</strong> A friend borrows money and does not return it.</td><td>Reminded him calmly and privately, asking when he could repay.</td><td>Involved a common friend to avoid embarrassment.</td><td>Decided to lend only what he could afford to forgo.</td><td>Reasoning, social adjustment</td></tr>
+        <tr><td><strong>39.</strong> A friend is deeply low after failing an exam.</td><td>Sat with him, listened and reminded him of his strengths.</td><td>Involved his family and teacher to give support.</td><td>Studied with him for the next attempt and tracked his progress.</td><td>Empathy, cooperation</td></tr>
+        <tr><td><strong>40.</strong> A false rumour about him spreads.</td><td>Stayed calm, ignored heated talk and spoke to the source.</td><td>Told the facts to friends and, if needed, to the teacher.</td><td>Kept up good conduct so the rumour faded by itself.</td><td>Emotional control, reasoning</td></tr>
+        <tr><td><strong>41.</strong> His best friend wins a post he wanted.</td><td>Congratulated him warmly and meant it.</td><td>Offered to help him in the role and stayed in the team.</td><td>Worked harder to qualify for the next opportunity.</td><td>Maturity, determination</td></tr>
+        <tr><td><strong>42.</strong> A teammate blames him for losing the match.</td><td>Heard him out, accepted his own errors and did not retaliate.</td><td>Held a team talk to review mistakes without blame.</td><td>Planned extra practice for the weak areas.</td><td>Emotional control, cooperation</td></tr>
+        <tr><td><strong>43.</strong> A friend insults his community in a group.</td><td>Calmly told him it was hurtful and moved the talk elsewhere.</td><td>Asked others in the group to avoid such remarks.</td><td>Spoke privately later and explained why it mattered.</td><td>Self-control, social adaptability</td></tr>
+        <tr><td><strong>44.</strong> A group member never contributes to the project.</td><td>Spoke privately to find what was wrong and asked him to take a small task.</td><td>Reassigned tasks openly in a team meeting.</td><td>Informed the teacher only after trying all other ways.</td><td>Influence, organising ability</td></tr>
+        <tr><td><strong>45.</strong> A friend invites him to skip class for a film.</td><td>Declined politely and offered to go over the weekend.</td><td>Persuaded the group to attend class and go later.</td><td>Shared the class notes with him afterwards.</td><td>Determination, influence</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning: why "friend asks to copy" works</span>
+    <p>A flat refusal is correct but cold, and may lose a friend. "Refused and offered to explain the topic" holds the <strong>principle</strong> and shows <strong>care</strong> in one line. Version 2 turns an individual favour into a group habit. This is how officers lead: firm on the standard, warm with the person.</p>
+  </div>
+</section>
+
+<section id="bank-authority">
+  <h2>Authority and integrity</h2><hr class="sec-rule">
+  <p>Here the test is <strong>integrity and respect for the chain of command</strong>. A strong answer holds to what is right, stays respectful and uses proper channels. It does not join wrong, and it does not take the law into its own hands.</p>
+  <div class="tablewrap wide">
+    <table>
+      <caption>Situations 46-60</caption>
+      <thead><tr><th>Situation</th><th>Version 1 · direct action</th><th>Version 2 · people and channels</th><th>Version 3 · root cause, follow-up</th><th>OLQ</th></tr></thead>
+      <tbody>
+        <tr><td><strong>46.</strong> A shopkeeper gives him extra change by mistake.</td><td>Pointed out the mistake and returned the extra money.</td><td>Told the shopkeeper politely and thanked him for his trust.</td><td>Checked change carefully in future so it did not recur.</td><td>Honesty, responsibility</td></tr>
+        <tr><td><strong>47.</strong> A man offers money to pass him without a ticket.</td><td>Refused firmly and asked the man to buy a ticket.</td><td>Informed the railway staff or police about the offer.</td><td>Reported it in writing so the staff could act.</td><td>Integrity, courage</td></tr>
+        <tr><td><strong>48.</strong> A senior orders something he thinks is unsafe.</td><td>Politely explained the risk and asked for a safer way.</td><td>Informed his superior through the correct channel.</td><td>Offered an alternative plan and followed the final decision.</td><td>Reasoning, courage</td></tr>
+        <tr><td><strong>49.</strong> A teacher wrongly accuses him of something he did not do.</td><td>Remained calm and respectfully explained the facts.</td><td>Asked a witness to confirm or met the teacher with the class representative.</td><td>Kept a good record so such doubts did not arise again.</td><td>Self-control, honesty</td></tr>
+        <tr><td><strong>50.</strong> He sees a colleague stealing office supplies.</td><td>Spoke to the colleague privately and asked him to return them.</td><td>Reported it to his superior if it was repeated.</td><td>Suggested a stock register for better control.</td><td>Integrity, responsibility</td></tr>
+        <tr><td><strong>51.</strong> A boss asks him to mark a friend present who is absent.</td><td>Politely refused to falsify the record.</td><td>Explained the rule and, if needed, informed the higher authority.</td><td>Suggested a proper leave application for the friend.</td><td>Integrity, courage</td></tr>
+        <tr><td><strong>52.</strong> He finds the question paper has leaked before the exam.</td><td>Refused to look at it and did not share it.</td><td>Informed the teacher or the exam authority at once.</td><td>Gave a statement and helped the inquiry.</td><td>Honesty, responsibility</td></tr>
+        <tr><td><strong>53.</strong> A policeman demands a bribe from a street vendor.</td><td>Told the policeman politely that the demand was wrong and noted his details.</td><td>Informed the senior police officer or the vigilance helpline.</td><td>Helped the vendor file a complaint.</td><td>Courage, social responsibility</td></tr>
+        <tr><td><strong>54.</strong> He is told to follow a rule he thinks unfair.</td><td>Followed it while on duty and recorded his concern.</td><td>Put his suggestion in writing to the proper authority.</td><td>Offered a better alternative and accepted the decision.</td><td>Discipline, expression</td></tr>
+        <tr><td><strong>55.</strong> His plan is rejected by seniors.</td><td>Accepted the decision gracefully and supported the chosen plan.</td><td>Asked for feedback on why it was rejected.</td><td>Improved his plan for the next chance.</td><td>Maturity, determination</td></tr>
+        <tr><td><strong>56.</strong> He is blamed for a subordinate's mistake.</td><td>Accepted responsibility as the in-charge and fixed the error.</td><td>Explained the facts to the superior without blaming the junior.</td><td>Trained the subordinate and set a check to avoid repeats.</td><td>Responsibility, leadership</td></tr>
+        <tr><td><strong>57.</strong> His superior is away and an urgent decision is needed.</td><td>Took the best available decision within his limits.</td><td>Contacted the superior by phone for guidance.</td><td>Reported fully on return and noted lessons learned.</td><td>Speed of decision, responsibility</td></tr>
+        <tr><td><strong>58.</strong> He is given two conflicting orders.</td><td>Politely asked the seniors to clarify which to follow.</td><td>Informed both seniors of the clash and sought one clear order.</td><td>Suggested a clear order of priorities for the future.</td><td>Reasoning, expression</td></tr>
+        <tr><td><strong>59.</strong> He sees a classmate cheating in the exam.</td><td>Ignored it himself and concentrated on his own paper.</td><td>Informed the invigilator quietly after finishing.</td><td>Spoke to the classmate afterwards about the harm of cheating.</td><td>Integrity, courage</td></tr>
+        <tr><td><strong>60.</strong> A large sum is credited to his account by mistake.</td><td>Did not spend it and noted the details.</td><td>Informed the bank at once and asked it to reverse the entry.</td><td>Checked his statement later and kept the bank's reply.</td><td>Honesty, responsibility</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning: "an unsafe order" and "a bribe"</span>
+    <p>For "an unsafe order", the strong answer neither obeys blindly nor defies: it <strong>states the risk respectfully, asks for a safer way, and follows the final decision</strong>. For "a bribe", the best reaction is a firm refusal <strong>plus</strong> reporting through the proper channel, which shows an officer's sense of process, not just personal honesty.</p>
+  </div>
+</section>
+
+<section id="bank-personal">
+  <h2>Personal setbacks and pressure</h2><hr class="sec-rule">
+  <p>Here the psychologist reads <strong>resilience and emotional maturity</strong>. Strong answers accept the setback honestly, then do something specific: find the cause, make a plan, seek help. Self-pity and blame are the failure modes.</p>
+  <div class="tablewrap wide">
+    <table>
+      <caption>Situations 61-75</caption>
+      <thead><tr><th>Situation</th><th>Version 1 · direct action</th><th>Version 2 · people and channels</th><th>Version 3 · root cause, follow-up</th><th>OLQ</th></tr></thead>
+      <tbody>
+        <tr><td><strong>61.</strong> He fails an important exam.</td><td>Accepted the result and studied the mistakes in his paper.</td><td>Asked his teacher for guidance and a fresh study plan.</td><td>Followed the new plan and cleared the next attempt.</td><td>Determination, reasoning</td></tr>
+        <tr><td><strong>62.</strong> He is dropped after a sports trial.</td><td>Asked the coach what to improve and began extra training.</td><td>Trained with a stronger team to raise his level.</td><td>Appeared in the next trial and earned a place.</td><td>Determination, stamina</td></tr>
+        <tr><td><strong>63.</strong> He falls ill days before a major event.</td><td>Rested, took proper treatment and did light practice as allowed.</td><td>Informed the coach and had a reserve prepared as a precaution.</td><td>Recovered gradually and reviewed his routine to prevent illness.</td><td>Reasoning, responsibility</td></tr>
+        <tr><td><strong>64.</strong> He runs out of money in a new city.</td><td>Cut spending to essentials and looked for a short job.</td><td>Contacted family and friends for help and a place to stay.</td><td>Made a budget so he never ran short again.</td><td>Resourcefulness, initiative</td></tr>
+        <tr><td><strong>65.</strong> He loses his wallet and phone while travelling.</td><td>Reported the loss to the police and blocked his cards.</td><td>Borrowed a phone to inform family and arranged his journey.</td><td>Kept copies of key documents for the future.</td><td>Presence of mind, planning</td></tr>
+        <tr><td><strong>66.</strong> His parents disagree with his career choice.</td><td>Explained his reasons calmly with facts and a plan.</td><td>Involved a trusted teacher or relative to talk with them.</td><td>Showed steady progress to build their confidence over time.</td><td>Expression, determination</td></tr>
+        <tr><td><strong>67.</strong> He scores very low in one subject.</td><td>Studied the weak topics and practised past papers.</td><td>Joined a study group and asked the teacher for help.</td><td>Tracked marks monthly and recovered the gap.</td><td>Determination, organising ability</td></tr>
+        <tr><td><strong>68.</strong> He feels very homesick at the hostel.</td><td>Busied himself in studies, sports and new friends.</td><td>Spoke to the warden and called home at fixed times.</td><td>Settled into a routine and helped other new students too.</td><td>Adaptability, emotional control</td></tr>
+        <tr><td><strong>69.</strong> He is rejected in his first interview.</td><td>Asked for feedback, listed his weak areas and worked on them.</td><td>Took a mock interview with a mentor.</td><td>Applied again better prepared.</td><td>Determination, reasoning</td></tr>
+        <tr><td><strong>70.</strong> He has too many tasks and too little time.</td><td>Listed all tasks and finished the urgent and important first.</td><td>Delegated what he could and asked for help on the rest.</td><td>Adopted a daily plan to avoid pile-ups.</td><td>Organising ability, planning</td></tr>
+        <tr><td><strong>71.</strong> He is injured before the final match.</td><td>Took medical advice and rested the injury properly.</td><td>Informed the coach honestly so the team could plan.</td><td>Cheered his team from the side and returned fit later.</td><td>Reasoning, team spirit</td></tr>
+        <tr><td><strong>72.</strong> A close relative dies just before his exam.</td><td>Joined the family for the rites and then calmed himself to prepare.</td><td>Informed the school and asked for support to manage studies.</td><td>Studied with a firm plan to honour the relative's hopes.</td><td>Emotional strength, determination</td></tr>
+        <tr><td><strong>73.</strong> A stranger cheats him of some money.</td><td>Noted the details and did not argue emotionally.</td><td>Reported the matter to the police and warned others.</td><td>Learned to verify before paying strangers.</td><td>Reasoning, responsibility</td></tr>
+        <tr><td><strong>74.</strong> A less hardworking student is promoted over him.</td><td>Congratulated him and kept his own standard high.</td><td>Asked his supervisor about the criteria and what to improve.</td><td>Worked on those points for the next review.</td><td>Maturity, determination</td></tr>
+        <tr><td><strong>75.</strong> He loses a key document before an interview.</td><td>Went to the office for a duplicate and informed the interviewers.</td><td>Asked family for a scanned copy and certified copies.</td><td>Made a document folder with copies afterwards.</td><td>Presence of mind, planning</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning: why "fails an exam" works</span>
+    <p>All three versions follow the same arc: <strong>accept, diagnose, act</strong>. "Studied the mistakes in his paper" shows <strong>reasoning ability</strong> (he looks for the cause); "cleared the next attempt" shows <strong>determination</strong> (there is an outcome). A reaction that says only "worked harder" is weaker because it has no analysis.</p>
+  </div>
+</section>
+
+<section id="bank-travel">
+  <h2>Travel, nature and adventure</h2><hr class="sec-rule">
+  <p>Outdoor situations test <strong>calm reasoning with limited resources</strong>. A strong reaction conserves energy, stays together, signals for help and avoids panic. Guessing and wandering are the usual errors.</p>
+  <div class="tablewrap wide">
+    <table>
+      <caption>Situations 76-90</caption>
+      <thead><tr><th>Situation</th><th>Version 1 · direct action</th><th>Version 2 · people and channels</th><th>Version 3 · root cause, follow-up</th><th>OLQ</th></tr></thead>
+      <tbody>
+        <tr><td><strong>76.</strong> He is lost in a forest during a trek.</td><td>Stopped, stayed calm and retraced his steps to the last known point.</td><td>Used a whistle or signal, and stayed visible to the search party.</td><td>Reported the incident and in future carried a map, compass and whistle.</td><td>Reasoning, presence of mind</td></tr>
+        <tr><td><strong>77.</strong> A river in spate blocks the trail.</td><td>Did not cross, and moved the group to high ground to wait.</td><td>Informed the local authorities and waited for the water to fall.</td><td>Changed the plan to check weather before trekking.</td><td>Reasoning, responsibility</td></tr>
+        <tr><td><strong>78.</strong> A storm tears the tent at night.</td><td>Moved everyone to shelter and secured the bags.</td><td>Divided tasks: some for shelter, some for warmth and a headcount.</td><td>Repaired the tent next day and tested equipment before trips.</td><td>Organising ability, stamina</td></tr>
+        <tr><td><strong>79.</strong> The bus breaks down in a remote area at night.</td><td>Kept passengers together and warm inside the bus.</td><td>Sent two people to the nearest village or phone for help.</td><td>Reported the fault and asked the company to improve checks.</td><td>Leadership, initiative</td></tr>
+        <tr><td><strong>80.</strong> He is stranded in snow on a mountain road.</td><td>Stayed in the vehicle, conserved fuel and kept warm.</td><td>Called the emergency number and signalled with bright cloth.</td><td>Planned future trips with chains, food and weather reports.</td><td>Reasoning, stamina</td></tr>
+        <tr><td><strong>81.</strong> A group member twists an ankle on the trek.</td><td>Gave first aid, rested the ankle and bandaged it.</td><td>Made a stretcher with the group and sent for help.</td><td>Took him to a doctor and reviewed the trek pace and shoes.</td><td>Cooperation, responsibility</td></tr>
+        <tr><td><strong>82.</strong> Water runs out on a desert trek.</td><td>Rested in shade, rationed what remained and moved in the cool hours.</td><td>Looked for a well or village and signalled for help.</td><td>Planned for extra water on future trips.</td><td>Reasoning, stamina</td></tr>
+        <tr><td><strong>83.</strong> He loses his way and the compass is gone.</td><td>Used the sun and landmarks to find direction.</td><td>Asked the group and any locals, and followed a stream downhill.</td><td>Carried a spare compass afterwards.</td><td>Resourcefulness, reasoning</td></tr>
+        <tr><td><strong>84.</strong> A wild elephant stands on the road ahead.</td><td>Stopped well back, switched off the engine and kept quiet.</td><td>Warned following vehicles and kept everyone inside.</td><td>Reported it to forest staff and waited until it left.</td><td>Presence of mind, responsibility</td></tr>
+        <tr><td><strong>85.</strong> A boat starts leaking mid-river.</td><td>Told everyone to sit still, bailed water and steered to the nearest bank.</td><td>Handed out life jackets and called for a rescue boat.</td><td>Had the boat checked before use afterwards.</td><td>Presence of mind, leadership</td></tr>
+        <tr><td><strong>86.</strong> Sudden fog covers the highway.</td><td>Slowed down, switched on lights and pulled over safely.</td><td>Warned following vehicles with indicators and waited with other drivers.</td><td>Checked the weather before the journey in future.</td><td>Reasoning, responsibility</td></tr>
+        <tr><td><strong>87.</strong> A landslide blocks the road ahead.</td><td>Stopped, moved vehicles back and kept clear of loose slopes.</td><td>Informed the road authority and arranged alternate routes.</td><td>Helped clear small debris only when declared safe.</td><td>Reasoning, initiative</td></tr>
+        <tr><td><strong>88.</strong> He reaches a strange town at night with no place to stay.</td><td>Went to the railway station or police station for safe advice.</td><td>Asked an official for a hotel or shelter and contacted family.</td><td>Booked ahead on later trips.</td><td>Resourcefulness, planning</td></tr>
+        <tr><td><strong>89.</strong> A child is lost in a crowded railway station.</td><td>Calmed the child and took down his name and details.</td><td>Informed station staff, announced over the system and waited with him.</td><td>Stayed until the parents came and checked he was safe.</td><td>Social responsibility, initiative</td></tr>
+        <tr><td><strong>90.</strong> Lightning storm breaks while the group is on a hill.</td><td>Moved off the ridge, crouched low and avoided trees.</td><td>Spread the group apart and told all to avoid metal items.</td><td>Checked the weather before climbing in future.</td><td>Reasoning, leadership</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning: why "lost in a forest" works</span>
+    <p>The instinct is to push on. The strong answer <strong>stops, thinks and conserves energy</strong>, then signals. This reads as <strong>reasoning ability</strong> and <strong>presence of mind</strong>, and it matches survival practice: the search party finds a stationary person faster than a wandering one.</p>
+  </div>
+</section>
+
+<section id="bank-leadership">
+  <h2>Groups and leadership</h2><hr class="sec-rule">
+  <p>These situations ask whether you can <strong>lead without bullying and follow without sulking</strong>. The ideal reaction listens, decides, shares credit and takes responsibility when things go wrong.</p>
+  <div class="tablewrap wide">
+    <table>
+      <caption>Situations 91-105</caption>
+      <thead><tr><th>Situation</th><th>Version 1 · direct action</th><th>Version 2 · people and channels</th><th>Version 3 · root cause, follow-up</th><th>OLQ</th></tr></thead>
+      <tbody>
+        <tr><td><strong>91.</strong> Team morale drops during a tough hike.</td><td>Encouraged everyone, shared the load and set small goals.</td><td>Called a short halt, shared food and heard their concerns.</td><td>Adjusted the pace and celebrated reaching each point.</td><td>Leadership, liveliness</td></tr>
+        <tr><td><strong>92.</strong> Members disagree on the group's plan.</td><td>Listened to all and chose the plan most members backed.</td><td>Held a short discussion and put it to a vote.</td><td>Took the points of the others into the final plan.</td><td>Influence, reasoning</td></tr>
+        <tr><td><strong>93.</strong> As new captain, seniors do not accept him.</td><td>Respected them, sought their advice and led by example.</td><td>Spoke to each privately and gave them clear roles.</td><td>Earned acceptance by results over a few weeks.</td><td>Social adaptability, leadership</td></tr>
+        <tr><td><strong>94.</strong> A slower member delays the group.</td><td>Matched the pace to him and carried part of his load.</td><td>Paired him with a stronger partner and rotated the lead.</td><td>Planned his training so he would improve.</td><td>Cooperation, leadership</td></tr>
+        <tr><td><strong>95.</strong> Two subordinates fight.</td><td>Separated them, calmed both and heard each in turn.</td><td>Held a joint talk with a fair decision and a handshake.</td><td>Watched for the cause and prevented a repeat.</td><td>Influence, fairness</td></tr>
+        <tr><td><strong>96.</strong> A member refuses an assigned task.</td><td>Asked why and explained why it mattered to the team.</td><td>Offered a suitable change after discussing with him.</td><td>Matched tasks to strengths in future planning.</td><td>Influence, reasoning</td></tr>
+        <tr><td><strong>97.</strong> The team wins and only he is praised.</td><td>Thanked the team publicly and credited each member.</td><td>Named each contribution before the judges.</td><td>Kept sharing credit as a habit.</td><td>Leadership, humility</td></tr>
+        <tr><td><strong>98.</strong> The team loses and everyone blames others.</td><td>Took responsibility as the leader and stopped the blame game.</td><td>Held a calm review of what went wrong.</td><td>Made a training plan for the next time.</td><td>Responsibility, leadership</td></tr>
+        <tr><td><strong>99.</strong> He is asked to lead in an unfamiliar field.</td><td>Learned the basics quickly and asked experts for help.</td><td>Relied on knowledgeable members for technical points.</td><td>Studied further to lead better in the next task.</td><td>Self-confidence, initiative</td></tr>
+        <tr><td><strong>100.</strong> A subordinate is repeatedly absent without notice.</td><td>Spoke to him privately and learned the reason.</td><td>Informed the superior if the pattern continued.</td><td>Helped solve any real problem and set clear expectations.</td><td>Responsibility, empathy</td></tr>
+        <tr><td><strong>101.</strong> The group proposes a risky shortcut.</td><td>Weighed the risk and chose the safe longer route.</td><td>Explained his reasons and got the group's agreement.</td><td>Reviewed the plan to avoid time pressure next time.</td><td>Reasoning, decision</td></tr>
+        <tr><td><strong>102.</strong> The team is tired and the task is incomplete.</td><td>Gave a short rest, then split the remaining work into small parts.</td><td>Shared the heavy tasks and worked alongside them.</td><td>Planned buffers in the schedule afterwards.</td><td>Stamina, leadership</td></tr>
+        <tr><td><strong>103.</strong> He is asked to address a gathering without notice.</td><td>Took a breath, spoke simply and clearly on a topic he knew.</td><td>Asked a friend for one or two points while he began.</td><td>Practised short speeches afterwards.</td><td>Self-confidence, expression</td></tr>
+        <tr><td><strong>104.</strong> A new member joins mid-project.</td><td>Welcomed him and briefed him on what had been done.</td><td>Paired him with an experienced member.</td><td>Checked how he was settling after a few days.</td><td>Adaptability, cooperation</td></tr>
+        <tr><td><strong>105.</strong> Resources run short during a project.</td><td>Listed priorities and used what was available well.</td><td>Asked the team and seniors for ideas and extra support.</td><td>Planned the next project with a margin.</td><td>Resourcefulness, organising ability</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning: "the team loses and everyone blames others"</span>
+    <p>The strongest first move is to <strong>take responsibility as the leader</strong>. This stops the blame cycle, models maturity and shows <strong>sense of responsibility</strong> and <strong>influence</strong>. The review and training plan then turn the loss into <strong>organised</strong> learning.</p>
+  </div>
+</section>
+
+<section id="bank-dilemma">
+  <h2>Tricky dilemmas</h2><hr class="sec-rule">
+  <p>Dilemmas have no perfect answer. The psychologist reads <strong>values and judgement</strong>: do you weigh harm, honesty, loyalty and duty sensibly? Where possible, find a response that respects more than one value.</p>
+  <div class="tablewrap wide">
+    <table>
+      <caption>Situations 106-120</caption>
+      <thead><tr><th>Situation</th><th>Version 1 · direct action</th><th>Version 2 · people and channels</th><th>Version 3 · root cause, follow-up</th><th>OLQ</th></tr></thead>
+      <tbody>
+        <tr><td><strong>106.</strong> A friend confesses to a theft.</td><td>Urged him to return the item and confess.</td><td>Offered to go with him to the owner or the teacher.</td><td>Supported him afterwards so he did not repeat it.</td><td>Integrity, empathy</td></tr>
+        <tr><td><strong>107.</strong> He is told a secret that could harm others.</td><td>Told his friend that he could not keep it if people were at risk.</td><td>Informed the right authority carefully, with the friend's knowledge.</td><td>Stayed with the friend and helped him face the consequences.</td><td>Judgement, responsibility</td></tr>
+        <tr><td><strong>108.</strong> A close friend is the culprit in a rule violation and he is the witness.</td><td>Urged the friend to own up first.</td><td>Told the truth when asked if the friend did not.</td><td>Stood by the friend as a person while upholding the rule.</td><td>Integrity, courage</td></tr>
+        <tr><td><strong>109.</strong> He must choose a far-off job or a lesser one near family.</td><td>Weighed pay, growth and family needs, and decided with a plan.</td><td>Discussed it with his family and a mentor.</td><td>Set a plan to visit often or move closer later.</td><td>Reasoning, decision</td></tr>
+        <tr><td><strong>110.</strong> A poor child begs, and he has little money.</td><td>Bought the child a meal instead of giving cash.</td><td>Told a local charity or school about the child.</td><td>Followed up so the child could join a school.</td><td>Social responsibility</td></tr>
+        <tr><td><strong>111.</strong> The referee's error gives his team an unfair win.</td><td>Told the referee of the error.</td><td>Spoke with his captain and asked the team to be fair.</td><td>Accepted the result and the team's honesty gained respect.</td><td>Integrity, courage</td></tr>
+        <tr><td><strong>112.</strong> Two people need help at once, one badly hurt, one mildly.</td><td>Helped the badly hurt first, and told the other to hold on.</td><td>Called others to help the second person together.</td><td>Ensured both were taken to hospital.</td><td>Reasoning, priorities</td></tr>
+        <tr><td><strong>113.</strong> A friend asks him to make a false statement for him.</td><td>Refused politely and said he would only tell the truth.</td><td>Advised the friend to explain honestly to the authority.</td><td>Helped him prepare to face the consequences.</td><td>Integrity, courage</td></tr>
+        <tr><td><strong>114.</strong> An injured thief lies on the road.</td><td>Gave first aid to the wounded man and stopped the bleeding.</td><td>Informed the police and ambulance and stayed alongside.</td><td>Handed him to the police and later recorded his statement.</td><td>Humanity, responsibility</td></tr>
+        <tr><td><strong>115.</strong> He finds an error in his own report that nobody has noticed.</td><td>Corrected the error himself and told his supervisor.</td><td>Presented the corrected report with an explanation.</td><td>Built a checklist to catch such errors in future.</td><td>Honesty, responsibility</td></tr>
+        <tr><td><strong>116.</strong> A senior's decision will hurt juniors and he is told not to question it.</td><td>Stated his concern respectfully in private with facts.</td><td>Raised it through the chain of command in writing.</td><td>Followed the final decision and supported the juniors.</td><td>Courage, discipline</td></tr>
+        <tr><td><strong>117.</strong> He finds a lost child on his way to an exam.</td><td>Stayed with the child and brought him to a safe place.</td><td>Handed him to the nearest police post and informed the exam centre.</td><td>Later took the exam under a special provision if allowed.</td><td>Humanity, priorities</td></tr>
+        <tr><td><strong>118.</strong> His parents do not want him to take a posting far away.</td><td>Explained the importance of the duty with care and respect.</td><td>Asked a relative or mentor to reassure them.</td><td>Stayed in touch often to ease their worry.</td><td>Determination, empathy</td></tr>
+        <tr><td><strong>119.</strong> A friend invites him to join a strike that disrupts others.</td><td>Declined, but said he would support peaceful and lawful demands.</td><td>Suggested putting the demands to the authority in writing.</td><td>Worked for a lawful solution with the group.</td><td>Reasoning, social responsibility</td></tr>
+        <tr><td><strong>120.</strong> A person he dislikes needs help.</td><td>Helped at once without bringing up the past.</td><td>Involved others to help together and quickly.</td><td>Used the chance to mend the relationship.</td><td>Maturity, social adaptability</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning: confidences, friends and rules</span>
+    <p>In "a secret that could harm others" and "a friend is the culprit", the strong answer <strong>does not betray the person but does not betray the principle either</strong>. It first urges the friend to act himself, which preserves loyalty, and only then involves the authority. This shows <strong>judgement</strong>, <strong>integrity</strong> and <strong>courage</strong> together.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Knowledge toolkit</p><h2>Analysis, practice and revision</h2></div>
+
+<section id="perspectives">
+  <h2>Myths and debates</h2><hr class="sec-rule">
+  <p>Advice on the SRT is plentiful and often contradictory. Tags separate what is well supported from opinion.</p>
+  <ul>
+    <li><span class="tag fact">Established</span><strong>Answers are read as a set.</strong> One odd reaction rarely decides anything; the pattern does.</li>
+    <li><span class="tag fact">Established</span><strong>Consistency matters.</strong> Reactions that clash with your TAT, SDT or interview damage credibility.</li>
+    <li><span class="tag interp">Interpretation</span><strong>"Always be positive and heroic."</strong> Positive and active, yes; heroic, no. A sensible, realistic person who calls for help reads better than a lone fighter.</li>
+    <li><span class="tag disputed">Disputed</span><strong>Length: short versus detailed.</strong> Some mentors prefer one tight line to save time; others want two or three steps. A common compromise is one to three short ordered actions.</li>
+    <li><span class="tag disputed">Disputed</span><strong>Attempt all situations or fewer, better ones.</strong> Most mentors advise finishing as many as you can in order; quality should not fall below a sensible minimum.</li>
+    <li><span class="tag disputed">Disputed</span><strong>Should every answer involve others?</strong> Sometimes immediate personal action is best; a mix of direct action and teamwork looks more natural.</li>
+    <li><span class="tag interp">Interpretation</span><strong>Memorised model answers.</strong> They save thinking time but sound alike and can mismatch your other tests.</li>
+    <li><span class="tag verify">Re-verify</span><strong>Test details.</strong> The number of situations and the time allowed can change; follow your call-up letter.</li>
+  </ul>
+  <div class="edge">
+    <span class="edge-h">Lesser-known fact</span>
+    <p>Because the booklet is long and time is short, the <em>later</em> situations are often attempted in a rush. Candidates who practise a fast habit keep the quality of their last answers close to the first, which helps the overall impression.</p>
+  </div>
+</section>
+
+<section id="scenarios">
+  <h2>Scenarios and trade-offs</h2><hr class="sec-rule">
+  <p>Real tests throw up awkward moments. The options below show what is available and what each trades.</p>
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>You do not know what to do</h4>
+      <ul>
+        <li>Fall back on the four As: assess, act, assist, afterwards.</li>
+        <li>Write the safest sensible first step.</li>
+        <li>Trade-off: a plain, safe answer over a blank.</li>
+      </ul>
+    </div>
+    <div class="panel red-top">
+      <h4>The situation seems impossible</h4>
+      <ul>
+        <li>State the best realistic step with the resources at hand.</li>
+        <li>Do not write that nothing can be done.</li>
+        <li>Trade-off: calm and modest over dramatic.</li>
+      </ul>
+    </div>
+    <div class="panel gold-top">
+      <h4>The situation is unfamiliar</h4>
+      <ul>
+        <li>Think of the principle: safety, honesty, duty.</li>
+        <li>Seek help from people who know.</li>
+        <li>Trade-off: asking for help over guessing.</li>
+      </ul>
+    </div>
+    <div class="panel green-top">
+      <h4>You are running out of time</h4>
+      <ul>
+        <li>Shorten to one line with the key action.</li>
+        <li>Skip a hard one and return if time allows.</li>
+        <li>Trade-off: more complete sheet over a few long answers.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="qbank">
+  <h2>Practice bank: questions and motions</h2><hr class="sec-rule">
+  <p class="lede">Answer each question in your own words, then test it against the rules in Part II.</p>
+  <ol class="qbank">
+    <li>What does the psychologist read across about 60 SRT reactions, and why is one reaction rarely decisive?</li>
+    <li>Name the four OLQ factors and one OLQ from each that an SRT reaction can show.</li>
+    <li>Explain the four As (assess, act, assist, afterwards) with an example.</li>
+    <li>Why is "ran away" almost always a weak reaction, even in dangerous situations?</li>
+    <li>Rewrite "Informed the police and went home" into a strong reaction.</li>
+    <li>Why is fighting armed robbers alone a poor answer, and what is a better one?</li>
+    <li>How do you respond to an impossible situation, such as being stranded with no help?</li>
+    <li>Write three versions (direct, through people, root cause) for "A friend asks to copy your assignment".</li>
+    <li>How do you reconcile duty to a friend with duty to a rule?</li>
+    <li>When should you act first and inform later, and when should you inform first?</li>
+    <li>What is wrong with a reaction that waits for others to act?</li>
+    <li>How can a reaction show courage without showing recklessness?</li>
+    <li>Why does inconsistency between the SRT and the SDT matter?</li>
+    <li>Write a strong reaction to "He is blamed for a subordinate's mistake".</li>
+    <li>Describe how you would practise the SRT for four weeks.</li>
+  </ol>
+  <h3>Debate motions</h3>
+  <ol class="dbank">
+    <li>This house believes that the SRT rewards sounding right more than being right.</li>
+    <li>This house believes that "calling for help" is a stronger reaction than acting alone.</li>
+    <li>This house believes that honesty should always override loyalty to a friend.</li>
+    <li>This house believes that a 30-second limit is a fair way to judge character.</li>
+    <li>This house believes that model answers harm more than they help.</li>
+    <li>This house believes that a leader should take the blame first and the credit last.</li>
+    <li>This house believes that personal courage is overrated compared with good judgement.</li>
+  </ol>
+</section>
+
+<section id="chronology">
+  <h2>Preparation timeline</h2><hr class="sec-rule">
+  <p>A suggested eight-week plan, then the 30 seconds of a single situation. Adjust to your calendar.</p>
+  <ul class="timeline">
+    <li><span class="yr">Week 1</span><span>Read the 15 OLQs; write five reactions a day untimed and tag the OLQs each shows.</span></li>
+    <li><span class="yr">Week 2</span><span>Write ten situations a day; apply the four As to each and sort the situation types.</span></li>
+    <li><span class="yr">Week 3</span><span>Write in about 60 seconds each; keep to one to three ordered actions.</span></li>
+    <li><span class="yr">Week 4</span><span>Move to about 30 seconds each on a random 30-situation set.</span></li>
+    <li><span class="yr">Week 5</span><span>Do two full 60-situation mocks in 30 minutes; check for escape, repetition and vagueness.</span></li>
+    <li><span class="yr">Week 6</span><span>Share sheets with a mentor; ask what the reactions say about you.</span></li>
+    <li><span class="yr">Week 7</span><span>Align with your SDT and TAT; fix any contradictions.</span></li>
+    <li><span class="yr">Week 8</span><span>Two final mocks; rest before the test and do not cram new answers.</span></li>
+    <li><span class="yr">0-6 s</span><span>Read the whole situation; classify it.</span></li>
+    <li><span class="yr">6-12 s</span><span>Find the priority and the resources; choose direct, people or root-cause style.</span></li>
+    <li><span class="yr">12-27 s</span><span>Write one to three clear, ordered actions.</span></li>
+    <li><span class="yr">27-30 s</span><span>Glance to check, then move to the next situation.</span></li>
+  </ul>
+</section>
+
+<section id="glossary">
+  <h2>Glossary</h2><hr class="sec-rule">
+  <dl class="term">
+    <dt>SRT</dt><dd>Situation Reaction Test: a written reaction to each of about 60 short situations in about 30 minutes.</dd>
+    <dt>WAT</dt><dd>Word Association Test: a sentence for each of about 60 words.</dd>
+    <dt>TAT</dt><dd>Thematic Apperception Test: writing stories about pictures.</dd>
+    <dt>SDT</dt><dd>Self Description Test: describing how others and you see you.</dd>
+    <dt>OLQ</dt><dd>Officer Like Quality: one of 15 traits assessed at SSB.</dd>
+    <dt>Projective test</dt><dd>A test where responses to an open stimulus reveal habitual thinking.</dd>
+    <dt>Four As</dt><dd>Assess, Act, Assist, Afterwards: the response sequence used in this handbook.</dd>
+    <dt>Direct action</dt><dd>Version 1: the person acts at once with what he has.</dd>
+    <dt>Through people and channels</dt><dd>Version 2: involving others or the proper authority.</dd>
+    <dt>Root cause and follow-up</dt><dd>Version 3: fixing why it happened and checking the result.</dd>
+    <dt>Chain of command</dt><dd>The proper line of authority through which concerns are raised.</dd>
+    <dt>Presence of mind</dt><dd>Staying calm and thinking clearly in a crisis.</dd>
+    <dt>Speed of decision</dt><dd>Reaching a sound decision quickly, a Factor III OLQ.</dd>
+    <dt>Resourcefulness</dt><dd>Making good use of what is available.</dd>
+    <dt>Consistency</dt><dd>Agreement across your tests and interview.</dd>
+    <dt>Social desirability</dt><dd>Writing what sounds good instead of what is true.</dd>
+  </dl>
+</section>
+
+<section id="revision">
+  <h2>Rapid revision sheet</h2><hr class="sec-rule">
+  <div class="note">
+    <h4>One-page summary</h4>
+    <ul>
+      <li>SRT: about 60 situations, about 30 minutes, a short written reaction each; read as a whole.</li>
+      <li>A strong reaction is realistic, complete, positive and in a sensible order of one to three actions.</li>
+      <li>Four As: assess, act, assist, afterwards.</li>
+      <li>Priorities: life before property, duty before comfort, team before ego.</li>
+      <li>Three styles: direct action, through people and channels, root cause and follow-up; mix them.</li>
+      <li>Never run away, never lone-hero, never stay passive, never write vaguely.</li>
+      <li>Authority and ethics: stay honest, respectful and use proper channels.</li>
+      <li>Personal setbacks: accept, diagnose, act.</li>
+      <li>Impossible situations: state the best realistic step calmly.</li>
+      <li>Be consistent with your SDT, TAT and interview.</li>
+      <li>Practise in stages: untimed, 60 seconds, then 30 seconds; review with a mentor.</li>
+      <li>Follow the call-up letter for current timings and rules.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer>
+  <p>Compiled from open sources. Study aid only, not an official publication.</p>
+  <p>Source &amp; contributions: <a href="https://github.com/mohitkushwaha0601/matre">github.com/mohitkushwaha0601/matre</a></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SSB Thematic Apperception Test (TAT): Psychology, Strategy and 105 Worked Story Themes — A Deep Knowledge Handbook</title>
+<meta name="description" content="How to write strong, practical, OLQ-based stories in the SSB Thematic Apperception Test: the psychology behind it, a four-part story structure, and 105 picture themes with three model story seeds each and the reasoning behind them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1E1A2E;
+  --ink-soft:#5A5470;
+  --paper:#F3F1F7;
+  --surface:#FFFFFF;
+  --surface-2:#E6E2EF;
+  --rule:#D0CBDD;
+  --rule-strong:#9C95B3;
+  --red:#A8362F;
+  --blue:#2D5C9A;
+  --gold:#94700E;
+  --green:#2F6B4E;
+  --hero-bg:#1A1530;
+  --hero-ink:#F3F1F7;
+  --hero-dim:#ADA6C4;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#E9E6F0;
+    --ink-soft:#B1ABC6;
+    --paper:#0F0D17;
+    --surface:#181523;
+    --surface-2:#231F32;
+    --rule:#332E47;
+    --rule-strong:#5B5478;
+    --red:#F08C78;
+    --blue:#86B4EE;
+    --gold:#DDB552;
+    --green:#7CCB9A;
+    --hero-bg:#0A0810;
+    --hero-ink:#E9E6F0;
+    --hero-dim:#968EAE;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E9E6F0;
+  --ink-soft:#B1ABC6;
+  --paper:#0F0D17;
+  --surface:#181523;
+  --surface-2:#231F32;
+  --rule:#332E47;
+  --rule-strong:#5B5478;
+  --red:#F08C78;
+  --blue:#86B4EE;
+  --gold:#DDB552;
+  --green:#7CCB9A;
+  --hero-bg:#0A0810;
+  --hero-ink:#E9E6F0;
+  --hero-dim:#968EAE;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1.5rem);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
+.flagstrip{display:flex;height:12px}
+.flagstrip span{flex:1}
+.f1{background:#4A2F7A}
+.f2{background:#1F3A63}
+.f3{background:#5DA9DD}
+.f4{background:#FF9933}
+.f5{background:#FFFFFF}
+.f6{background:#138808}
+.f7{background:linear-gradient(90deg,#FF9933 33%,#FFFFFF 33%,#FFFFFF 66%,#138808 66%)}
+.f8{background:#E3B23C}
+.hero-inner{max-width:1180px;margin:0 auto;padding:3.2rem 1.5rem 0}
+.kicker{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--hero-dim);margin:0 0 .8rem}
+.hero h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.8rem,5vw,2.9rem);line-height:1.15;margin:0 0 .6rem;max-width:26ch}
+.hero-sub{margin:0;color:var(--hero-dim);max-width:68ch}
+.stamp{margin-top:1.6rem;font-size:.86rem;color:var(--hero-dim);display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+.stamp b{color:var(--hero-ink);font-weight:600}
+
+.shell{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem;display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media (min-width:1000px){
+  .shell{grid-template-columns:255px minmax(0,1fr);gap:3.5rem;padding-top:2.8rem}
+}
+nav.toc{font-size:.9rem}
+@media (min-width:1000px){
+  .toc-mobile{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2rem);align-self:start;max-height:calc(100vh - 5rem);overflow-y:auto}
+}
+nav.toc h2{font-family:"Zilla Slab",Georgia,serif;font-size:.92rem;font-weight:600;margin:0 0 .7rem;padding-bottom:.45rem;border-bottom:2px solid var(--rule-strong)}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc}
+nav.toc li{border-bottom:1px solid var(--rule)}
+nav.toc li:not(.part){counter-increment:toc}
+nav.toc a{display:flex;gap:.6rem;padding:.4rem 0;color:var(--ink-soft);text-decoration:none}
+nav.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--rule-strong);font-variant-numeric:tabular-nums;flex:none}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--red)}
+nav.toc .part{border:0;margin:1.1rem 0 .3rem;font-family:"Zilla Slab",Georgia,serif;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--rule-strong)}
+nav.toc .part::before{content:none}
+.toc-mobile{display:block}
+@media (min-width:1000px){.toc-mobile summary{display:none}}
+.toc-mobile summary{cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:600;padding:.7rem .9rem;background:var(--surface);border:1px solid var(--rule);margin-bottom:1rem}
+@media (max-width:999px){
+  .toc-mobile[open] nav.toc{padding:0 .9rem 1rem}
+  .toc-mobile:not([open]) nav.toc{display:none}
+}
+
+main{min-width:0}
+section{margin:0 0 3.6rem;scroll-margin-top:1.5rem}
+section > h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.45rem,3.6vw,1.95rem);line-height:1.2;margin:0 0 .3rem}
+.part-head{margin:4rem 0 2.2rem;padding:1.1rem 0 .9rem;border-top:4px double var(--rule-strong);border-bottom:1px solid var(--rule)}
+.part-head p{margin:0;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.part-head h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.3rem,3.2vw,1.7rem);margin:.3rem 0 0;color:var(--ink)}
+.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.16rem;margin:2rem 0 .5rem;line-height:1.3}
+h4{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1rem;margin:1.4rem 0 .35rem;color:var(--ink)}
+p{margin:0 0 .95rem;max-width:74ch}
+ul,ol{margin:0 0 1rem;padding-left:1.25rem;max-width:74ch}
+li{margin-bottom:.35rem}
+li::marker{color:var(--rule-strong)}
+strong{font-weight:600}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+.lede{font-size:1.06rem;color:var(--ink-soft);max-width:70ch}
+
+.tablewrap{overflow-x:auto;margin:0 0 1.3rem;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.92rem}
+.tablewrap.wide table{min-width:1180px;font-size:.88rem}
+caption{text-align:left;padding:.7rem .85rem .1rem;font-weight:600;color:var(--ink-soft);font-size:.9rem}
+th,td{text-align:left;padding:.55rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{background:var(--surface-2);font-weight:600;border-bottom:2px solid var(--rule-strong);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.num,th.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+.edge{background:var(--surface);border-left:4px solid var(--red);padding:.9rem 1.1rem;margin:1.4rem 0;max-width:74ch}
+.edge p:last-child,.edge ul:last-child,.edge ol:last-child{margin-bottom:0}
+.edge .edge-h{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);display:block;margin-bottom:.25rem;font-size:.95rem}
+.edge.gold{border-left-color:var(--gold)}
+.edge.gold .edge-h{color:var(--gold)}
+.edge.blue{border-left-color:var(--blue)}
+.edge.blue .edge-h{color:var(--blue)}
+.edge.green{border-left-color:var(--green)}
+.edge.green .edge-h{color:var(--green)}
+
+.note{background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;border:1px solid var(--rule);font-size:.95rem}
+.note p:last-child,.note ul:last-child,.note ol:last-child{margin-bottom:0}
+.note h4{margin-top:0}
+
+.panel{background:var(--surface);border:1px solid var(--rule);padding:1rem 1.1rem}
+.panel h4{margin-top:0}
+.panel ul,.panel ol{margin-bottom:0}
+.panel p:last-child{margin-bottom:0}
+.panel.blue-top{border-top:3px solid var(--blue)}
+.panel.red-top{border-top:3px solid var(--red)}
+.panel.gold-top{border-top:3px solid var(--gold)}
+.panel.green-top{border-top:3px solid var(--green)}
+
+.rungs{max-width:74ch;margin:.3rem 0 0;display:grid;grid-template-columns:9.5rem 1fr;gap:0 1rem}
+.rungs dt{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;color:var(--red);padding-top:.2rem}
+.rungs dd{margin:0 0 .5rem;font-size:.93rem}
+@media (max-width:560px){
+  .rungs{grid-template-columns:1fr;gap:0}
+  .rungs dt{padding-top:.4rem}
+}
+
+.timeline{list-style:none;padding:0;margin:1rem 0 1.4rem;max-width:74ch}
+.timeline li{display:grid;grid-template-columns:8.2rem 1fr;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--rule);margin:0}
+.timeline li:last-child{border-bottom:0}
+.timeline .yr{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);font-variant-numeric:tabular-nums}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:.1rem}}
+
+.qbank{counter-reset:q;list-style:none;padding:0;max-width:74ch}
+.qbank li{counter-increment:q;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.qbank li::before{content:counter(q,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.qbank li:last-child{border-bottom:0}
+
+.dbank{counter-reset:d;list-style:none;padding:0;max-width:74ch}
+.dbank li{counter-increment:d;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.dbank li::before{content:counter(d,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.dbank li:last-child{border-bottom:0}
+
+.grid{display:grid;gap:1rem}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
+
+.card{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--red);padding:1rem 1.1rem}
+.card h4{margin:0 0 .45rem;font-size:1rem}
+.card p:last-child{margin-bottom:0}
+
+.term{max-width:74ch;margin:0 0 1.2rem}
+.term dt{font-weight:600;margin-top:.8rem}
+.term dd{margin:.15rem 0 0;color:var(--ink-soft)}
+
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:.1rem .45rem;border:1px solid var(--rule-strong);color:var(--ink-soft);margin-right:.35rem;vertical-align:middle}
+.tag.fact{border-color:var(--green);color:var(--green)}
+.tag.interp{border-color:var(--gold);color:var(--gold)}
+.tag.disputed{border-color:var(--red);color:var(--red)}
+.tag.verify{border-color:var(--blue);color:var(--blue)}
+.spaced{margin-top:.6rem}
+
+footer{border-top:3px double var(--rule-strong);margin:2rem auto 0;padding:1.4rem 1.5rem 2.5rem;color:var(--ink-soft);font-size:.9rem;max-width:74ch}
+footer a{color:var(--blue)}
+
+.home-btn{position:fixed;top:16px;left:16px;z-index:60;display:inline-flex;align-items:center;gap:.4rem;background:#14202B;color:#F1F2EC;border:1px solid rgba(241,242,236,.25);padding:.45rem .85rem;border-radius:999px;font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.82rem;font-weight:600;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.3);transition:background .15s ease,transform .15s ease}
+.home-btn:hover,.home-btn:focus-visible{background:#BF2F26;transform:translateY(-1px)}
+.home-btn svg{width:14px;height:14px;flex:none}
+@media print{.home-btn{display:none}}
+
+@media print{
+  .hero{background:none;color:#000;padding-bottom:1rem}
+  .hero-sub,.stamp{color:#333}
+  .flagstrip,.toc-mobile{display:none}
+  .shell{display:block;padding:0}
+  section{page-break-inside:auto;margin-bottom:1.8rem}
+  h2,h3{page-break-after:avoid}
+  .panel,.edge,.note,.tablewrap{page-break-inside:avoid}
+  .part-head{page-break-before:always}
+  body{font-size:10.5pt;background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+
+<a class="home-btn" href="../index.html" aria-label="Back to Handbooks homepage" title="Back to Handbooks homepage">
+  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
+  <span>Home</span>
+</a>
+
+<header class="hero">
+  <div class="flagstrip" aria-hidden="true">
+    <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f5"></span><span class="f6"></span><span class="f7"></span><span class="f8"></span>
+  </div>
+  <div class="hero-inner">
+    <p class="kicker">SSB psychology day • Thematic Apperception Test</p>
+    <h1>The SSB Thematic Apperception Test: Psychology, Strategy and 105 Worked Story Themes</h1>
+    <p class="hero-sub">How to read a hazy picture and write a strong, practical, OLQ-based story in four minutes: what the psychologist reads in a story, how to structure it, and 105 picture themes with three model story seeds each, with the reasoning shown.</p>
+    <p class="stamp">
+      <span>Sections <b>21</b></span>
+      <span>Worked themes <b>105 × 3 versions</b></span>
+      <span>Test format <b>about 12 pictures, 4 min each</b></span>
+      <span>Read time <b>2-3 hrs</b></span>
+    </p>
+  </div>
+</header>
+
+<div class="shell">
+
+<details class="toc-mobile" open>
+  <summary>Contents</summary>
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li class="part">How to use this</li>
+      <li><a href="#howto">Using this handbook</a></li>
+
+      <li class="part">Part I · Understanding the test</li>
+      <li><a href="#format">Format and purpose</a></li>
+      <li><a href="#olqs">The OLQs a story can show</a></li>
+      <li><a href="#psychology">The psychology of a four-minute story</a></li>
+
+      <li class="part">Part II · Strategy</li>
+      <li><a href="#structure">The four-part story</a></li>
+      <li><a href="#reading">Reading the picture in 30 seconds</a></li>
+      <li><a href="#traps">Common traps</a></li>
+      <li><a href="#method">Method and a worked example</a></li>
+
+      <li class="part">Part III · The theme bank (105)</li>
+      <li><a href="#bank-youth">Youth, study and sport</a></li>
+      <li><a href="#bank-home">Home, family and village</a></li>
+      <li><a href="#bank-rescue">Rescue and emergency</a></li>
+      <li><a href="#bank-service">Uniform and national service</a></li>
+      <li><a href="#bank-work">Work, enterprise and community</a></li>
+      <li><a href="#bank-journey">Journey, outdoors and adventure</a></li>
+      <li><a href="#bank-ambiguous">Ambiguous scenes and the blank card</a></li>
+
+      <li class="part">Knowledge toolkit</li>
+      <li><a href="#perspectives">Myths and debates</a></li>
+      <li><a href="#scenarios">Scenarios and trade-offs</a></li>
+      <li><a href="#qbank">Practice bank: questions and motions</a></li>
+      <li><a href="#chronology">Preparation timeline</a></li>
+      <li><a href="#glossary">Glossary</a></li>
+      <li><a href="#revision">Rapid revision sheet</a></li>
+    </ol>
+  </nav>
+</details>
+
+<main>
+<section id="howto">
+  <h2>Using this handbook</h2><hr class="sec-rule">
+  <p class="lede">The Thematic Apperception Test shows you a vague picture and asks for a story. It looks creative, but it is a window into how you see the world: what problems you notice, how you imagine people solving them, and what you expect to happen. A trained habit of story-making improves it far more than a memorised plot.</p>
+  <p>Part I explains what the test reads and how the mind projects onto a picture. Part II gives a four-part story structure and a method for reading the picture quickly. Part III is the theme bank: 105 picture themes, each with <strong>three model story seeds</strong> and the OLQ it shows. The toolkit closes with debates, scenarios, practice questions and a revision sheet. A shorter treatment of all four psychology tests is in <a href="1.ssb-psychological-tests-overview-knowledge-handbook.html">the overview guide</a>; the WAT and SRT have their own guides, <a href="3.ssb-wat-word-association-knowledge-handbook.html">WAT</a> and <a href="4.ssb-srt-situation-reaction-knowledge-handbook.html">SRT</a>.</p>
+  <div class="edge blue">
+    <span class="edge-h">How the three versions work</span>
+    <p>Each theme gives three <strong>story seeds</strong>: compact outlines of a full story, written as setup, struggle and result. Version 1 is an <strong>individual</strong> story: one person's initiative and effort. Version 2 is a <strong>team or community</strong> story: people working together. Version 3 is a <strong>guided or service</strong> story: a mentor, an institution or a larger duty shapes the outcome. All three are sound; mixing them across your 12 stories gives a natural profile.</p>
+  </div>
+  <div class="edge gold">
+    <span class="edge-h">Seeds, not scripts</span>
+    <p>A real answer runs 150 to 250 words, so each seed is a skeleton to grow, not text to copy. Do not memorise: psychologists see the same plots repeatedly. Use the seeds to learn what a strong story does, then build yours from your own experience in the same way.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part I · Understanding the test</p><h2>What the test is and what it reads</h2></div>
+
+<section id="format">
+  <h2>Format and purpose</h2><hr class="sec-rule">
+  <p>On the psychology day, candidates take the TAT first, followed by the Word Association Test (WAT), Situation Reaction Test (SRT) and Self Description Test (SDT). In the TAT, a series of about <strong>12 pictures</strong> is shown, one at a time: usually 11 hazy pictures and <strong>one blank slide</strong>. Each picture is shown for about <strong>30 seconds</strong>, and the candidate then has about <strong>4 minutes</strong> to write a story on a response sheet. The test as a whole takes just under an hour.</p>
+  <p>The story must say what led up to the scene, what is happening, and what the outcome will be. It should name the characters, their feelings and their actions. The pictures are deliberately ambiguous, so no two candidates see exactly the same thing. The psychologist reads the 12 stories together, along with the WAT, SRT and SDT, looking for consistent patterns of thought and values.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>What the test records, at a glance</caption>
+      <thead><tr><th>Feature</th><th>Detail</th><th>Why it matters</th></tr></thead>
+      <tbody>
+        <tr><td>Viewing time</td><td>About 30 seconds</td><td>Forces a quick first reading of the picture.</td></tr>
+        <tr><td>Writing time</td><td>About 4 minutes</td><td>Rewards a ready structure; no time to invent a plot from scratch.</td></tr>
+        <tr><td>Output</td><td>A story: past, present and future</td><td>Reveals the hero's actions, feelings and outcomes.</td></tr>
+        <tr><td>Blank slide</td><td>The last card is empty</td><td>Your own theme; the purest projection.</td></tr>
+        <tr><td>Cross-checking</td><td>Against WAT, SRT, SDT and the interview</td><td>Contradictions are noticed; stay genuine.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><span class="tag verify">Re-verify</span>The number of pictures and the timings are as commonly described and may change; follow your call-up letter and the centre's instructions.</p>
+</section>
+
+<section id="olqs">
+  <h2>The OLQs a story can show</h2><hr class="sec-rule">
+  <p>SSB assesses 15 Officer Like Qualities (OLQs) in four factors. A TAT story is rich: the hero's choices and the way the story ends can show several qualities at once, and the pattern across 12 stories shows how stable they are.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>OLQs by factor, and how a story shows them</caption>
+      <thead><tr><th>Factor</th><th>OLQs</th><th>How a story shows it</th></tr></thead>
+      <tbody>
+        <tr><td>I · Planning and organising</td><td>Effective intelligence, reasoning ability, organising ability, power of expression</td><td>A hero who plans, uses resources sensibly, and a clear, logical, complete story.</td></tr>
+        <tr><td>II · Social adjustment</td><td>Social adaptability, cooperation, sense of responsibility</td><td>Heroes who work with others, respect people and own duties.</td></tr>
+        <tr><td>III · Social effectiveness</td><td>Initiative, self-confidence, speed of decision, ability to influence the group, liveliness</td><td>A hero who acts first, decides quickly and brings others along.</td></tr>
+        <tr><td>IV · Dynamic</td><td>Determination, courage, stamina</td><td>A hero who persists after setbacks, faces danger and endures effort.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning</span>
+    <p>A story that says "a boy was sad and his friend cheered him up" shows warmth but little else. A story where the boy failed a test, found why, built a plan, studied with a friend and recovered shows <strong>reasoning ability</strong>, <strong>determination</strong>, <strong>cooperation</strong> and <strong>organising ability</strong> through the plot alone, with no adjectives about the hero.</p>
+  </div>
+</section>
+
+<section id="psychology">
+  <h2>The psychology of a four-minute story</h2><hr class="sec-rule">
+  <p>The TAT rests on <strong>projection</strong>: when asked to interpret an ambiguous scene, people read into it their own concerns, wishes and habits of mind. The story's hero is often a mirror of the writer; the problems that appear are the ones the writer notices; the way they are solved is the way the writer believes problems are solved.</p>
+  <ul>
+    <li><strong>The hero.</strong> His age, role, mood and the way he acts tell the psychologist about your self-image. A hero who plans, acts and learns suggests a person who sees himself that way.</li>
+    <li><strong>The problem.</strong> The kind of problem you choose (exams, danger, conflict, loss) shows what is on your mind. A dark pattern across all 12 stories is a signal.</li>
+    <li><strong>The solution.</strong> Does the hero act or wait, fight or cooperate, find a way or give up? This is the heart of the test.</li>
+    <li><strong>The ending.</strong> A realistic, hopeful ending suggests a healthy outlook. Tragic or fantasy endings suggest otherwise.</li>
+  </ul>
+  <div class="note">
+    <h4>Practical implication</h4>
+    <p>You cannot fake a way of thinking across 12 stories, but you can train one. Practise stories where an ordinary person faces a real problem, acts sensibly, involves others and ends with a believable result. Do this until it is your instinct, and the stories will read as your own.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part II · Strategy</p><h2>Building the story</h2></div>
+
+<section id="structure">
+  <h2>The four-part story</h2><hr class="sec-rule">
+  <p>A strong story has four parts, which fit within four minutes: roughly 150 to 250 words, in about 20 lines. Think of them as <strong>Setup, Struggle, Solution and Result</strong>.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>The four parts and what each shows</caption>
+      <thead><tr><th>Part</th><th>Content</th><th>Share of the story</th><th>What it shows</th></tr></thead>
+      <tbody>
+        <tr><td>Setup (past)</td><td>Who the hero is, what led to this scene.</td><td>About a quarter</td><td>Background, realism, expression.</td></tr>
+        <tr><td>Struggle (present)</td><td>What is happening, the problem, the feelings.</td><td>About a quarter</td><td>Awareness of problems, emotions handled.</td></tr>
+        <tr><td>Solution (action)</td><td>What the hero decides and does, with whom.</td><td>About a third</td><td>The core OLQs: initiative, reasoning, cooperation.</td></tr>
+        <tr><td>Result (future)</td><td>The outcome and what the hero gained.</td><td>About a sixth</td><td>Realistic, positive outlook; learning.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="grid two">
+    <div class="panel green-top">
+      <h4>Do</h4>
+      <ul>
+        <li>Use <strong>one main hero</strong>, with a name and an age or role.</li>
+        <li>Put the <strong>action and decision</strong> at the centre.</li>
+        <li>Make the hero <strong>realistic</strong>: ordinary skills, genuine effort.</li>
+        <li>Show <strong>others</strong> in a helpful or cooperative role.</li>
+        <li>End with a <strong>positive, believable</strong> result.</li>
+        <li>Use <strong>details</strong> from the picture.</li>
+      </ul>
+    </div>
+    <div class="panel red-top">
+      <h4>Avoid</h4>
+      <ul>
+        <li>Tragic endings, death, suicide, illness as the solution.</li>
+        <li>Fantasy: miracles, luck, ghosts, sudden riches.</li>
+        <li>A passive hero who just waits or worries.</li>
+        <li>Too many characters or a film-style plot.</li>
+        <li>Violence as the answer.</li>
+        <li>Ending in the middle, with no result.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="reading">
+  <h2>Reading the picture in 30 seconds</h2><hr class="sec-rule">
+  <p>While the picture is on the screen, you are not yet writing; you are <strong>observing and deciding</strong>. Use a quick checklist of five questions so that the first line of your story is ready when the slide ends.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>The 30-second checklist</caption>
+      <thead><tr><th>Ask</th><th>Look for</th><th>Use it to</th></tr></thead>
+      <tbody>
+        <tr><td>Who?</td><td>Number, age, gender and role of the figures.</td><td>Pick your hero (usually the clearest or youngest adult figure).</td></tr>
+        <tr><td>Where?</td><td>Setting: room, field, road, ship, hill.</td><td>Ground the story in a believable place.</td></tr>
+        <tr><td>What doing?</td><td>Posture and action: sitting, pointing, carrying.</td><td>Give a reason for the action.</td></tr>
+        <tr><td>What mood?</td><td>Expressions: worried, calm, determined.</td><td>Choose the problem or the challenge.</td></tr>
+        <tr><td>What next?</td><td>Hints of danger, work, or decision.</td><td>Plan the outcome.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge">
+    <span class="edge-h">Ambiguity is your friend</span>
+    <p>If a figure could be sad or thoughtful, choose <strong>thoughtful</strong>. If a scene could be a fall or a rescue, choose the rescue. The picture permits several readings; the psychologist expects you to choose the constructive one and to use at least some details of what you see.</p>
+  </div>
+</section>
+
+<section id="traps">
+  <h2>Common traps</h2><hr class="sec-rule">
+  <ul>
+    <li><span class="tag disputed">Trap</span><strong>Gloom.</strong> A scene read as loss, death or despair, ending in tragedy, suggests negative thinking.</li>
+    <li><span class="tag disputed">Trap</span><strong>Passive hero.</strong> "He sat and worried until a friend came" shows nobody who acts.</li>
+    <li><span class="tag disputed">Trap</span><strong>Magic solutions.</strong> Luck, a rich uncle or a stranger who fixes everything replaces the hero's effort.</li>
+    <li><span class="tag disputed">Trap</span><strong>Superhero.</strong> A hero who saves ten people single-handed reads as boastful.</li>
+    <li><span class="tag disputed">Trap</span><strong>Ignoring the picture.</strong> A story that has nothing to do with what is shown looks rehearsed.</li>
+    <li><span class="tag disputed">Trap</span><strong>Copying a film.</strong> Borrowed plots feel borrowed and lack real feeling.</li>
+    <li><span class="tag disputed">Trap</span><strong>Same story every time.</strong> Twelve stories with the same plot look scripted.</li>
+    <li><span class="tag disputed">Trap</span><strong>No ending.</strong> A story that stops at the problem leaves out the most informative part.</li>
+    <li><span class="tag disputed">Trap</span><strong>Contradiction.</strong> A hero's habits that your SDT and interview do not support damage credibility.</li>
+  </ul>
+</section>
+
+<section id="method">
+  <h2>Method and a worked example</h2><hr class="sec-rule">
+  <p>A six-step loop fits within 4 minutes and 30 seconds once it is habit. Practise slowly first, then speed up.</p>
+  <div class="panel blue-top">
+    <h4>Worked example: a boy at a table with books, his chin on his hand, looking at a window.</h4>
+    <dl class="rungs">
+      <dt>Observe (30 s)</dt><dd>A young student, a desk, books, a thoughtful look, an evening window.</dd>
+      <dt>Choose</dt><dd>Hero: Arjun, 17, a village boy. Problem: a weak result in mathematics. Mood: thoughtful, not sad.</dd>
+      <dt>Setup</dt><dd>Arjun scored low in the half-yearly test and his teacher said he could do better.</dd>
+      <dt>Struggle</dt><dd>He is now thinking over how to improve; he is worried but not defeated.</dd>
+      <dt>Solution</dt><dd>He analyses his errors, makes a timetable, joins a study group and meets his teacher weekly.</dd>
+      <dt>Result</dt><dd>He scores well in the final exam and goes on to help juniors with maths.</dd>
+    </dl>
+  </div>
+  <p><strong>Written out (about 150 words):</strong> <em>Arjun, a 17-year-old from a village school, had scored poorly in mathematics in the half-yearly test. His teacher told him he could do much better. Arjun is sitting at his table that evening, thinking about what went wrong. He feels worried but decides not to give up. He lists his mistakes, finds that most are in algebra, and makes a daily timetable. The next day he meets his teacher and asks for guidance, and forms a study group with two classmates. For three months he practises daily and takes weekly tests. In the final exam Arjun scores 82 out of 100. Pleased with his progress, he starts helping younger students with mathematics after school, and later decides to prepare for the Defence Forces.</em></p>
+  <div class="edge green">
+    <span class="edge-h">Reasoning</span>
+    <p>The story chooses the <strong>thoughtful</strong> reading of the picture (not sad). The hero does what a sensible person does: finds the cause (<strong>reasoning ability</strong>), plans (<strong>organising ability</strong>), seeks help (<strong>cooperation</strong>), persists for months (<strong>determination</strong>) and gives back (<strong>social responsibility</strong>). Nothing is magical and no one rescues him. A weaker version, "Arjun was sad and then his father gave him a tutor", puts the solution in someone else's hands.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part III · The theme bank</p><h2>105 picture themes, three versions each</h2></div>
+
+<section id="bank-youth">
+  <h2>Youth, study and sport</h2><hr class="sec-rule">
+  <p>Youth pictures are the most common and the easiest to write badly. The usual failure is a story about "working hard" with no specific problem. Give the hero a real difficulty, a smart response and a result. Each cell is a story seed in the order setup, struggle, solution, result. Version 1 is individual, Version 2 team or community, and Version 3 guided or service.</p>
+  <div class="tablewrap wide">
+    <table>
+      <caption>Themes 1-15</caption>
+      <thead><tr><th>Picture theme</th><th>Version 1 · individual</th><th>Version 2 · team or community</th><th>Version 3 · guided or service</th><th>OLQ</th></tr></thead>
+      <tbody>
+        <tr><td><strong>1.</strong> A student studies late at a desk.</td><td>Ravi, weak in physics, finds his gaps, makes a plan, studies nightly and clears the board exam with good marks.</td><td>Meena and friends form a night study group, share notes, and all four pass the entrance test.</td><td>A teacher sees Karan's effort, guides him on weak topics, and he later tutors juniors free.</td><td>Determination, organising ability</td></tr>
+        <tr><td><strong>2.</strong> Two students argue over a book.</td><td>Aman loses his temper, realises he was wrong, apologises and they share the book to study together.</td><td>The class monitor settles the quarrel, sets up a library rota and the class benefits.</td><td>The teacher helps both see the point of sharing, and they start a class book bank.</td><td>Self-control, cooperation</td></tr>
+        <tr><td><strong>3.</strong> A boy runs on a track at dawn.</td><td>Sameer, rejected in trials, trains daily, fixes his stride and wins at the district meet.</td><td>The team trains together at dawn, pushes each other, and wins the relay.</td><td>A coach spots his talent, builds a plan, and he goes on to represent the state.</td><td>Stamina, determination</td></tr>
+        <tr><td><strong>4.</strong> A girl holds a medal while others clap.</td><td>Priya, after months of practice and an early injury, wins the medal and thanks her coach.</td><td>The school team wins together; Priya credits her teammates for their support.</td><td>She dedicates the medal to her coach and begins coaching young girls from her village.</td><td>Determination, humility</td></tr>
+        <tr><td><strong>5.</strong> A student reads a notice board of results.</td><td>Vikram sees he missed the cut by a few marks, studies his errors and succeeds next year.</td><td>His friends console him, help him revise and he joins them in the next batch.</td><td>His teacher shows him a good alternative course; he excels and later returns to the first goal.</td><td>Reasoning, resilience</td></tr>
+        <tr><td><strong>6.</strong> A teacher explains at a blackboard while a student sits at the back.</td><td>Neha, shy, begins asking questions and soon leads classroom discussions.</td><td>The class plans peer-teaching, making Neha comfortable, and her marks rise.</td><td>The teacher notices her silence, talks to her kindly, and she becomes a debate champion.</td><td>Self-confidence, expression</td></tr>
+        <tr><td><strong>7.</strong> Students around a laboratory table.</td><td>Imran designs a small water filter for his village and wins the science fair.</td><td>The group builds a working model together, divides tasks, and wins first prize.</td><td>Their teacher links them to an NGO, and the filter is installed in a school.</td><td>Initiative, cooperation</td></tr>
+        <tr><td><strong>8.</strong> A young man holds a bat and surveys the field.</td><td>Rohit, dropped from the team, practises hard and returns to score the winning runs.</td><td>The team holds a net session together and wins the inter-college final.</td><td>His coach helps him fix his technique; he later becomes a coach himself.</td><td>Determination, team spirit</td></tr>
+        <tr><td><strong>9.</strong> A boy sits alone on the school steps.</td><td>Deepak, new to the school, joins the football team and makes friends.</td><td>Classmates invite him into their group and he finds his place.</td><td>His teacher sees him alone and helps him settle; he later helps new students.</td><td>Social adaptability, initiative</td></tr>
+        <tr><td><strong>10.</strong> A student at a library shelf.</td><td>Sana researches for her project, finds a lead in an old book and wins the competition.</td><td>She and classmates catalogue the library, making it easier for all to use.</td><td>The librarian guides her to resources, and she later starts a reading club.</td><td>Intelligence, initiative</td></tr>
+        <tr><td><strong>11.</strong> Students rehearse a play on stage.</td><td>Arun, nervous before the audience, rehearses every day and delivers a memorable performance.</td><td>The cast pitch in, fix a lighting problem at the last minute and the play is a success.</td><td>The drama teacher coaches him; the performance raises funds for a flood fund.</td><td>Self-confidence, cooperation</td></tr>
+        <tr><td><strong>12.</strong> A young man holds an application form.</td><td>Sunil, unsure about his future, researches options, picks a path and applies carefully.</td><td>He discusses it with family and friends and makes a joint plan that suits all.</td><td>A mentor helps him compare his choices; he applies and joins the Forces.</td><td>Decision, planning</td></tr>
+        <tr><td><strong>13.</strong> A girl cycles with books on a road.</td><td>Lata rides 8 km each day to school, studies hard and becomes the first graduate in her family.</td><td>Girls from her village ride together safely, and the panchayat builds a better road.</td><td>A teacher helps her get a scholarship, and she later teaches in her village.</td><td>Determination, social responsibility</td></tr>
+        <tr><td><strong>14.</strong> A student speaks at a debate podium.</td><td>Faisal, afraid of public speaking, prepares well, speaks clearly and wins.</td><td>His team practises together; they swap feedback and win the finals.</td><td>His teacher suggests slow speech and pauses; he becomes the college captain.</td><td>Self-confidence, expression</td></tr>
+        <tr><td><strong>15.</strong> A young man leaves a hostel gate with a bag.</td><td>Kunal, leaving home for college, adjusts quickly, makes friends and tops his first term.</td><td>Senior students welcome him; the hostel runs a welcome week for the new batch.</td><td>His warden helps him settle, and he later guides new students.</td><td>Social adaptability, initiative</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning: why "studies late" works</span>
+    <p>"A boy studied hard and passed" has no problem and no decision. The strong seeds name a <strong>specific gap</strong> (weak physics), give a <strong>method</strong> (find gaps, plan) and a <strong>measurable result</strong>. This reads as <strong>reasoning ability</strong> and <strong>determination</strong>, which is what a vague "hard work" story cannot show. Version 3 shows a mentor guiding, not rescuing: the hero still does the work.</p>
+  </div>
+</section>
+
+<section id="bank-home">
+  <h2>Home, family and village</h2><hr class="sec-rule">
+  <p>Home pictures test <strong>warmth and responsibility</strong>. Strong stories show a hero who looks after others without drama, handles a real hardship, and keeps the family or village moving forward.</p>
+  <div class="tablewrap wide">
+    <table>
+      <caption>Themes 16-30</caption>
+      <thead><tr><th>Picture theme</th><th>Version 1 · individual</th><th>Version 2 · team or community</th><th>Version 3 · guided or service</th><th>OLQ</th></tr></thead>
+      <tbody>
+        <tr><td><strong>16.</strong> An elderly man sits on a cot outside a house.</td><td>Mohan's grandfather is lonely after retirement; Mohan spends evenings with him and learns his stories, and the old man brightens.</td><td>The neighbourhood sets up an evening club for the elderly, and Grandfather becomes its storyteller.</td><td>A doctor suggests light activity; Mohan arranges walks, and his grandfather's health improves.</td><td>Responsibility, empathy</td></tr>
+        <tr><td><strong>17.</strong> A woman and child at a doorway look down the road.</td><td>Sita waits for her husband's letter; she takes a tailoring job in the meantime and keeps the household going.</td><td>Neighbours share work with her, and she runs a small tailoring group.</td><td>A social worker links her to a skills scheme; she builds a business that supports others.</td><td>Determination, resourcefulness</td></tr>
+        <tr><td><strong>18.</strong> A farmer looks over a dry field.</td><td>Ramesh, facing poor rain, adopts drip irrigation and a hardy crop, and saves his harvest.</td><td>The village digs a shared check-dam and all the farms are better watered.</td><td>An agriculture officer trains the village in water-saving; yields rise.</td><td>Reasoning, initiative</td></tr>
+        <tr><td><strong>19.</strong> A family sits at a table; one member stands apart.</td><td>Rahul disagrees with his family on his career, explains his plan calmly and wins their support.</td><td>The family discusses the choices together and finds a plan that suits everybody.</td><td>An uncle mediates; Rahul follows his plan and the family is proud.</td><td>Expression, social adjustment</td></tr>
+        <tr><td><strong>20.</strong> A young man carries a heavy load for an old woman.</td><td>Naveen helps an elderly woman home and learns she needs medicine; he arranges it and visits her weekly.</td><td>His friends form a group to help the elderly in the colony.</td><td>The local NGO takes up the idea and trains volunteers across the town.</td><td>Social responsibility, initiative</td></tr>
+        <tr><td><strong>21.</strong> A boy and his father work in a field.</td><td>Gopal, after school, helps his father, tries a better seed on a small plot and doubles the yield.</td><td>The two families nearby try his method and the village yield rises.</td><td>A farm scientist visits, and Gopal becomes a farm advisor.</td><td>Initiative, intelligence</td></tr>
+        <tr><td><strong>22.</strong> Siblings carry water from a river.</td><td>Geeta, tired of the long walk, designs a simple way to bring water closer and her family benefits.</td><td>The village women pool labour to lay a pipe from a spring.</td><td>The panchayat adds a hand-pump after Geeta's request; the village health improves.</td><td>Initiative, social responsibility</td></tr>
+        <tr><td><strong>23.</strong> A mother tends a sick child; a young man stands at the door.</td><td>Vijay hurries for the doctor, brings medicine and helps the family until the child recovers.</td><td>The neighbours cook, care for the other children and sit with the mother.</td><td>The doctor teaches the family hygiene; Vijay later becomes a health volunteer.</td><td>Speed of decision, cooperation</td></tr>
+        <tr><td><strong>24.</strong> A man returns home with a bag while the family waits.</td><td>Harish returns from a distant job with savings, and plans a small shop for the family.</td><td>The family pools its ideas and the shop opens with everyone's help.</td><td>A bank officer helps him with a loan; the shop grows and employs others.</td><td>Planning, responsibility</td></tr>
+        <tr><td><strong>25.</strong> A girl teaches children under a tree.</td><td>Radha, a class-twelve student, teaches village children in the evenings for free.</td><td>Her friends join as volunteers and run a small evening school.</td><td>The block office gives books; the school becomes recognised.</td><td>Social responsibility, initiative</td></tr>
+        <tr><td><strong>26.</strong> A village meeting under a banyan tree.</td><td>Sarpanch Hari explains a problem and persuades elders to approve a drainage plan.</td><td>The villagers share tasks and complete drainage within a month.</td><td>An engineer advises on design; the work lasts and sets an example.</td><td>Influence, organising ability</td></tr>
+        <tr><td><strong>27.</strong> A young man reads a letter while his parents watch.</td><td>Ajay, selected for a job far away, discusses the move with his parents and plans visits home.</td><td>Relatives help his parents settle and keep in touch.</td><td>His mentor reassures the family, and Ajay supports them from the new city.</td><td>Reasoning, responsibility</td></tr>
+        <tr><td><strong>28.</strong> A woman works at a sewing machine.</td><td>Kamla starts a tailoring business at home, earns steadily and educates her children.</td><td>She trains other women and forms a small cooperative.</td><td>A government scheme gives machines; the cooperative supplies school uniforms.</td><td>Determination, initiative</td></tr>
+        <tr><td><strong>29.</strong> A man repairs a roof after a storm.</td><td>Salim repairs his roof himself, then helps two elderly neighbours repair theirs.</td><td>The colony works together to fix every damaged house in two days.</td><td>The panchayat arranges materials; Salim leads a repair team.</td><td>Initiative, cooperation</td></tr>
+        <tr><td><strong>30.</strong> A boy looks at a dry hand-pump.</td><td>Mohit finds the pump is blocked, cleans it with a mechanic's tips and restores the water.</td><td>The boys of the lane fix it together and form a maintenance group.</td><td>The panchayat trains a caretaker; the village pumps stay working.</td><td>Reasoning, responsibility</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning: "a farmer looks at a dry field"</span>
+    <p>The grim reading is crop failure and despair. The strong seed accepts the problem and then <strong>acts</strong>: a better method, shared effort or expert advice. This shows <strong>reasoning ability</strong> (finding a workable fix) and <strong>social responsibility</strong> (the village benefits). Note that nobody is rescued by luck, and the ending is realistic: better yield, not a miracle harvest.</p>
+  </div>
+</section>
+
+<section id="bank-rescue">
+  <h2>Rescue and emergency</h2><hr class="sec-rule">
+  <p>Emergency pictures test <strong>speed of decision and courage with judgement</strong>. The best stories keep the hero calm, use available help, put life first and avoid lone heroics. Where a picture shows danger, show a sensible response.</p>
+  <div class="tablewrap wide">
+    <table>
+      <caption>Themes 31-45</caption>
+      <thead><tr><th>Picture theme</th><th>Version 1 · individual</th><th>Version 2 · team or community</th><th>Version 3 · guided or service</th><th>OLQ</th></tr></thead>
+      <tbody>
+        <tr><td><strong>31.</strong> People wade through floodwater carrying belongings.</td><td>Anil moves his family to high ground, then helps neighbours carry the elderly to a school shelter.</td><td>Villagers form chains, rescue stranded families and share food at the relief camp.</td><td>The rescue team arrives; Anil guides them to the worst-hit homes.</td><td>Speed of decision, cooperation</td></tr>
+        <tr><td><strong>32.</strong> A burning house with onlookers.</td><td>Kabir raises the alarm, gets the family out, and keeps the crowd back.</td><td>Neighbours form a bucket line while someone calls the fire brigade; the fire is put out.</td><td>Firemen arrive; Kabir helps them, and later campaigns for fire safety.</td><td>Initiative, courage</td></tr>
+        <tr><td><strong>33.</strong> A boy on the bank points to a drowning child.</td><td>Sanjay throws a float, shouts for help and the child is pulled out safely.</td><td>The villagers form a human chain to reach the child and begin first aid.</td><td>A doctor treats the child; the village builds a fence by the pond.</td><td>Presence of mind, courage</td></tr>
+        <tr><td><strong>34.</strong> An overturned vehicle at a roadside.</td><td>Imran stops, calls an ambulance, gives first aid and records the vehicle's number.</td><td>Passers-by help free the injured and keep the road clear for the ambulance.</td><td>The police thank them; Imran joins a first-aid training programme.</td><td>Responsibility, initiative</td></tr>
+        <tr><td><strong>35.</strong> A hospital corridor with a worried young man.</td><td>Dev accompanies his injured father, arranges blood donors and handles paperwork calmly.</td><td>Friends donate blood and help the family through the night.</td><td>A doctor advises on recovery; Dev starts a blood-donor group.</td><td>Responsibility, composure</td></tr>
+        <tr><td><strong>36.</strong> A collapsed wall with people digging.</td><td>Ravi helps clear debris carefully, finds a trapped boy and carries him to safety.</td><td>The whole lane works in shifts with a rescue team to free the trapped family.</td><td>The rescue force guides them; later the lane has its walls checked.</td><td>Stamina, cooperation</td></tr>
+        <tr><td><strong>37.</strong> A person on a rooftop with water below.</td><td>Aditi, trapped, signals with a cloth, stays calm and conserves water until help comes.</td><td>Neighbours on nearby roofs help each other with food and signals.</td><td>A rescue boat takes everyone; she thanks the rescuers and volunteers at the camp.</td><td>Presence of mind, stamina</td></tr>
+        <tr><td><strong>38.</strong> A person lies on the road with a crowd around.</td><td>Nikhil checks the man's breathing, asks someone to call an ambulance and stays with him.</td><td>The crowd keeps the road clear while volunteers help; the man reaches hospital in time.</td><td>A doctor says first aid saved him; Nikhil takes a first-aid course.</td><td>Speed of decision, responsibility</td></tr>
+        <tr><td><strong>39.</strong> A group sheltering in a cave from a storm.</td><td>Tara, the trek leader, takes a headcount, rations food and keeps spirits up till morning.</td><td>Everyone shares tasks: warmth, food and watch duty.</td><td>The guide arrives at dawn and praises the group's discipline.</td><td>Leadership, stamina</td></tr>
+        <tr><td><strong>40.</strong> A bridge is washed away; people on the far bank.</td><td>Hamid finds a safe path across, and ferries food to the stranded.</td><td>The village builds a rope bridge and carries supplies over.</td><td>Engineers later build a bridge; Hamid joins the repair team.</td><td>Resourcefulness, initiative</td></tr>
+        <tr><td><strong>41.</strong> A fire engine and firemen near a building.</td><td>A young fireman, Dinesh, enters a smoky room with a partner and brings out a child.</td><td>The fire crew works as a team; the street helps by clearing the road.</td><td>He is later honoured and trains new recruits in safe rescue.</td><td>Courage, cooperation</td></tr>
+        <tr><td><strong>42.</strong> A doctor attends a patient in a camp.</td><td>Dr. Neelam treats the injured after an earthquake with limited supplies and calmly sets priorities.</td><td>Volunteers register patients and fetch supplies, keeping the camp organised.</td><td>The health department sends more teams; the camp runs smoothly.</td><td>Organising ability, responsibility</td></tr>
+        <tr><td><strong>43.</strong> A child is lost in a crowd.</td><td>Pooja finds the child, keeps him calm and takes him to the help desk.</td><td>Volunteers announce the child's description and find the parents in ten minutes.</td><td>The police thank Pooja; the fair adds a lost-child desk.</td><td>Initiative, social responsibility</td></tr>
+        <tr><td><strong>44.</strong> A train stopped at night, passengers looking out.</td><td>Sunil, a passenger, finds that a track is damaged, informs the guard and warns the driver in time.</td><td>Passengers calm each other and help the elderly off the train.</td><td>The railway staff repair the track; Sunil is thanked for his alertness.</td><td>Alertness, responsibility</td></tr>
+        <tr><td><strong>45.</strong> A snow-covered slope with a figure waving.</td><td>Mohan, a trekker, builds a signal, keeps warm and waits for help.</td><td>The group shares gear and keeps the injured companion warm.</td><td>The mountain rescue team arrives; he thanks them and trains for safer treks.</td><td>Presence of mind, stamina</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning: "a drowning child"</span>
+    <p>Writing that the hero "jumped in and saved the child" is the instinctive story, but it can show recklessness. The strong seed shows <strong>judgement</strong>: a float, shouted help, or a human chain, and then first aid. This shows <strong>courage with reasoning</strong>, a core officer trait: the hero helps without becoming a second victim. The pond fence at the end shows <strong>responsibility</strong>.</p>
+  </div>
+</section>
+
+<section id="bank-service">
+  <h2>Uniform and national service</h2><hr class="sec-rule">
+  <p>Uniform pictures invite patriotic clichés. Resist the slogan; write a <strong>specific, realistic duty</strong>: a patrol, a drill, a relief task, a decision. Leadership, discipline and care for the team show better through a concrete act than through "he loved his country".</p>
+  <div class="tablewrap wide">
+    <table>
+      <caption>Themes 46-60</caption>
+      <thead><tr><th>Picture theme</th><th>Version 1 · individual</th><th>Version 2 · team or community</th><th>Version 3 · guided or service</th><th>OLQ</th></tr></thead>
+      <tbody>
+        <tr><td><strong>46.</strong> A soldier salutes beside a flag at a parade.</td><td>Naik Rajesh, selected for the parade after months of drill, performs with precision and inspires juniors.</td><td>The platoon practises together every dawn; the whole unit earns the best-marching trophy.</td><td>His havildar's strict training and care shape the unit; Rajesh later trains recruits.</td><td>Discipline, determination</td></tr>
+        <tr><td><strong>47.</strong> A soldier stands at a snowy border post.</td><td>Sepoy Manoj, on a long patrol, spots a drifting snow bank near a post and warns the section in time.</td><td>The section rotates watch duties and shares rations, remaining alert through the night.</td><td>The company commander visits and praises their vigilance; the section trains others.</td><td>Alertness, stamina</td></tr>
+        <tr><td><strong>48.</strong> A naval officer stands on a ship's deck.</td><td>Lt Anil, on night watch, notices a small boat in distress, informs the bridge and helps with rescue.</td><td>The ship's crew work together to lower a boat and rescue the fishermen.</td><td>The captain commends the watch discipline; the ship's rescue drill improves.</td><td>Presence of mind, responsibility</td></tr>
+        <tr><td><strong>49.</strong> A pilot stands beside an aircraft.</td><td>Flt Lt Sneha checks her aircraft carefully, finds a small fault, reports it and avoids a mishap.</td><td>The ground crew and pilot work as one team; the flight goes smoothly.</td><td>Her instructor praises her care; she later teaches younger pilots.</td><td>Reasoning, responsibility</td></tr>
+        <tr><td><strong>50.</strong> Cadets in a drill at a camp.</td><td>Cadet Arjun, tired after a long day, finishes the run and helps a weaker cadet.</td><td>The company helps each other through obstacle tasks and wins the camp trophy.</td><td>The instructor builds their confidence; many go on to join the Forces.</td><td>Stamina, cooperation</td></tr>
+        <tr><td><strong>51.</strong> A policeman directs traffic at a crossroads.</td><td>Constable Ramu, during a jam, clears a path for an ambulance and keeps order calmly.</td><td>Traffic wardens and volunteers help him, and the junction runs smoothly.</td><td>The senior officer introduces a new signal plan after his report.</td><td>Speed of decision, responsibility</td></tr>
+        <tr><td><strong>52.</strong> An army truck arrives in a flood-hit village.</td><td>Capt Vinay leads relief, sets up a food point and treats the most vulnerable first.</td><td>Soldiers and villagers work together to move people and distribute supplies.</td><td>The district officer coordinates; the relief runs without confusion.</td><td>Organising ability, leadership</td></tr>
+        <tr><td><strong>53.</strong> A young man in uniform bids farewell at a station.</td><td>Sepoy Deepak assures his parents, and promises to write; he joins his unit and settles in well.</td><td>The family and neighbours see him off; the village takes pride in his service.</td><td>His unit's welfare officer keeps his family informed; they feel secure.</td><td>Responsibility, adaptability</td></tr>
+        <tr><td><strong>54.</strong> A commander briefs a team around a map.</td><td>Major Rohan lays out the plan clearly, asks for ideas and assigns every task.</td><td>The team discusses the route, refines the plan together and completes the task safely.</td><td>The battalion commander approves the plan and the team reports back on the outcome.</td><td>Planning, leadership</td></tr>
+        <tr><td><strong>55.</strong> A sentry stands at night by a fence.</td><td>Sentry Pawan stays alert in the cold, sees movement, challenges and finds a stray animal.</td><td>The guard commander checks all posts and the guard relieves the sentries on time.</td><td>The officer-of-the-day congratulates the guard and shares the lesson with the unit.</td><td>Alertness, discipline</td></tr>
+        <tr><td><strong>56.</strong> A soldier writes a letter in a bunker.</td><td>Sepoy Imran, far from home, writes to his family, cheers his mates and completes his duties well.</td><td>The unit organises a letter-writing evening that raises morale.</td><td>The commanding officer arranges regular calls home; the unit's spirit rises.</td><td>Emotional strength, cooperation</td></tr>
+        <tr><td><strong>57.</strong> A uniformed medical team treats villagers.</td><td>Capt Dr Meera sets up a clinic in a remote village and treats everyone patiently.</td><td>The team and village volunteers run vaccination and health education.</td><td>The district health officer continues the service after the camp.</td><td>Social responsibility, stamina</td></tr>
+        <tr><td><strong>58.</strong> A young officer addresses troops.</td><td>Lt Karan, new to the unit, listens first, learns names and wins respect through example.</td><td>The troops and he share the work; the unit passes its inspection with credit.</td><td>The senior JCO mentors him; he becomes a trusted leader.</td><td>Leadership, humility</td></tr>
+        <tr><td><strong>59.</strong> Civil-defence volunteers in a drill.</td><td>Volunteer Asha practises first aid and fire-fighting drills, and later uses them in a real fire.</td><td>The neighbourhood group holds regular drills and responds fast to a fire.</td><td>The fire department trains the group, and many lives are saved.</td><td>Initiative, responsibility</td></tr>
+        <tr><td><strong>60.</strong> A veteran with medals talks to schoolchildren.</td><td>Subedar Hari shares how discipline and teamwork helped him through hard days; a student is inspired.</td><td>The school and veterans start a mentorship programme for local youth.</td><td>The principal invites more veterans; the students learn values and service.</td><td>Influence, social responsibility</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning: "a soldier at a border post"</span>
+    <p>The cliché is "he fought bravely and died for the nation". The strong seed uses a <strong>realistic duty</strong>: a patrol, a warning, a shared watch. That shows <strong>alertness</strong>, <strong>sense of responsibility</strong> and <strong>cooperation</strong>. It also respects the psychologist's expectation that an officer is useful alive, working with the team and planning, not seeking a dramatic ending.</p>
+  </div>
+</section>
+
+<section id="bank-work">
+  <h2>Work, enterprise and community</h2><hr class="sec-rule">
+  <p>Work and community pictures show <strong>how the hero handles ordinary responsibility</strong>: a job, a business, a public task. Strong stories include a problem at work, a smart solution and a benefit to others.</p>
+  <div class="tablewrap wide">
+    <table>
+      <caption>Themes 61-75</caption>
+      <thead><tr><th>Picture theme</th><th>Version 1 · individual</th><th>Version 2 · team or community</th><th>Version 3 · guided or service</th><th>OLQ</th></tr></thead>
+      <tbody>
+        <tr><td><strong>61.</strong> A man sits at a small shop counter.</td><td>Ganesh's shop is struggling; he studies customers' needs, adjusts stock and revives sales.</td><td>The shopkeepers' association runs a joint sale and the market revives.</td><td>A bank officer gives him a loan; he expands and hires two helpers.</td><td>Reasoning, initiative</td></tr>
+        <tr><td><strong>62.</strong> Workers in a factory with a machine.</td><td>Engineer Suresh finds why a machine keeps stopping, fixes it and saves a day's production.</td><td>The shift team works together to repair it and gets the line running.</td><td>The manager adopts his fix across the plant and thanks him.</td><td>Reasoning, initiative</td></tr>
+        <tr><td><strong>63.</strong> A woman presents to colleagues in an office.</td><td>Anita, nervous, prepares well, presents her plan and wins approval.</td><td>Her team refines the plan together and delivers it on time.</td><td>Her manager coaches her; she leads the next project.</td><td>Self-confidence, expression</td></tr>
+        <tr><td><strong>64.</strong> A man examines a plan at a construction site.</td><td>Site engineer Joseph spots a design flaw and corrects it before work begins.</td><td>The crew reviews the plan together and finishes safely on schedule.</td><td>The chief engineer introduces a checklist that prevents repeats.</td><td>Reasoning, responsibility</td></tr>
+        <tr><td><strong>65.</strong> A teacher with children in a small classroom.</td><td>Teacher Usha, short of books, makes learning aids from waste and her class improves.</td><td>Parents and teachers create a small library for the school.</td><td>The education officer supplies books; the school wins an award.</td><td>Resourcefulness, initiative</td></tr>
+        <tr><td><strong>66.</strong> A doctor examines a patient in a clinic.</td><td>Dr Imtiaz notices a rare symptom, orders the right test and saves the patient.</td><td>The nurses, doctor and lab work as a team to treat many patients fast.</td><td>The hospital adopts his checklist for such cases.</td><td>Reasoning, responsibility</td></tr>
+        <tr><td><strong>67.</strong> A young person at a laptop in a small room.</td><td>Sonal builds an app for local farmers after studying their needs and it is widely used.</td><td>Her friends test it, give feedback and help spread it.</td><td>A mentor connects her to an incubator and the app reaches thousands.</td><td>Initiative, intelligence</td></tr>
+        <tr><td><strong>68.</strong> A group of people at a market stall.</td><td>Lakshmi starts a stall selling local crafts and keeps good quality at fair prices.</td><td>Women artisans form a group and share a stall and a name.</td><td>A government fair opens new markets; the group exports its crafts.</td><td>Enterprise, cooperation</td></tr>
+        <tr><td><strong>69.</strong> A man talks with workers on a farm.</td><td>Farmer Kishan teaches his workers a safer and more productive way and the farm improves.</td><td>The farm families share tools and knowledge and prosper together.</td><td>An agriculture college partners with them; the model spreads.</td><td>Leadership, intelligence</td></tr>
+        <tr><td><strong>70.</strong> An engineer examines a bridge.</td><td>Engineer Farah finds a crack, reports it at once and the bridge is repaired before an accident.</td><td>The inspection team checks all bridges in the district together.</td><td>The department adopts regular inspection; the district is safer.</td><td>Responsibility, alertness</td></tr>
+        <tr><td><strong>71.</strong> A man sits at a typewriter or computer in an office late.</td><td>Clerk Mahesh stays late to finish an urgent file and corrects an error that would have caused loss.</td><td>His colleagues pitch in and the office meets its deadline.</td><td>The officer praises their teamwork and sets up shift planning.</td><td>Responsibility, determination</td></tr>
+        <tr><td><strong>72.</strong> A crowd listens to a speaker in a park.</td><td>Social worker Neeta explains clean-water practices; many families adopt them.</td><td>Volunteers hold street plays and house visits, and the area gets cleaner.</td><td>The municipality joins with supplies and the campaign extends city-wide.</td><td>Influence, social responsibility</td></tr>
+        <tr><td><strong>73.</strong> A young person plants a sapling.</td><td>Aman plants and waters 100 saplings in his locality and protects them.</td><td>The colony forms a green group; the park flourishes.</td><td>The forest department supplies saplings and the drive spreads to schools.</td><td>Initiative, determination</td></tr>
+        <tr><td><strong>74.</strong> A man at a village post office or bank.</td><td>Postmaster Gopal helps villagers with forms and gets pensions to those who cannot travel.</td><td>His colleagues organise a monthly camp at the village.</td><td>The department adopts the camp and reaches more villages.</td><td>Social responsibility, initiative</td></tr>
+        <tr><td><strong>75.</strong> A cleaner or worker resting after a long day.</td><td>Ramu, a cleaner, studies at night, passes a diploma and becomes a technician.</td><td>His co-workers form a study circle and several advance.</td><td>The company sponsors their training; the whole team rises.</td><td>Determination, stamina</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning: "a man at a shop counter"</span>
+    <p>The tempting story is a shopkeeper who is poor and gloomy, rescued by a loan. The strong seed lets him <strong>study his customers and adjust his stock</strong> first (<strong>reasoning ability</strong> and <strong>initiative</strong>); help from the bank comes afterwards and only extends his own effort. A story where help comes first and effort second reads as a hero who is lucky, not capable.</p>
+  </div>
+</section>
+
+<section id="bank-journey">
+  <h2>Journey, outdoors and adventure</h2><hr class="sec-rule">
+  <p>Outdoor pictures test <strong>stamina, planning and adaptability</strong>. Show preparation before the journey, a practical difficulty on the way and teamwork in solving it. Avoid scenes where the hero is simply lucky.</p>
+  <div class="tablewrap wide">
+    <table>
+      <caption>Themes 76-90</caption>
+      <thead><tr><th>Picture theme</th><th>Version 1 · individual</th><th>Version 2 · team or community</th><th>Version 3 · guided or service</th><th>OLQ</th></tr></thead>
+      <tbody>
+        <tr><td><strong>76.</strong> Trekkers climb a mountain trail.</td><td>Vivek, weak on the ascent, paces himself, drinks regularly and reaches the top.</td><td>The group shares loads, takes rest stops together and everyone reaches the summit.</td><td>The guide teaches breathing and pace; the group completes the trek and cleans the trail.</td><td>Stamina, cooperation</td></tr>
+        <tr><td><strong>77.</strong> A man stands on a platform with a bag.</td><td>Ashok, missing his train, finds another route and reaches his interview on time.</td><td>Fellow travellers share a taxi, and all reach their destinations.</td><td>The station master advises him on the best connection; he reaches in time and succeeds.</td><td>Resourcefulness, speed of decision</td></tr>
+        <tr><td><strong>78.</strong> A boat carries people on a river.</td><td>Boatman Ibrahim notices a rising current, turns back safely and saves his passengers.</td><td>Passengers help bail water and steer to the bank together.</td><td>The authorities set up a flood warning for the ferry after his report.</td><td>Reasoning, responsibility</td></tr>
+        <tr><td><strong>79.</strong> A lone figure walks a road at dusk.</td><td>Nitin, on his way home, helps a stranded motorist fix a flat tyre before reaching home safely.</td><td>The village youth patrol the road at night and everyone is safer.</td><td>The police put a streetlight and patrol after the youth's request.</td><td>Initiative, social responsibility</td></tr>
+        <tr><td><strong>80.</strong> Tents at a camp at night.</td><td>Camp leader Tanya notices rain starting, moves gear to dry ground and keeps all safe.</td><td>Campers dig a drainage trench together and stay dry.</td><td>The instructor praises their discipline and shares the lesson with other groups.</td><td>Speed of decision, leadership</td></tr>
+        <tr><td><strong>81.</strong> A young man studies a map at a crossroads.</td><td>Kabir, lost on a ride, reads the map and compass, and finds the right route.</td><td>The group compares notes, picks a route together and reaches camp.</td><td>A local guide confirms it and teaches them the landmarks.</td><td>Reasoning, resourcefulness</td></tr>
+        <tr><td><strong>82.</strong> A bus is stuck on a muddy road.</td><td>Passenger Ravi gets everyone to push together, uses planks for grip and gets it out.</td><td>Passengers and villagers pool effort and the bus moves again.</td><td>The driver thanks them; the road department later repairs the track.</td><td>Initiative, cooperation</td></tr>
+        <tr><td><strong>83.</strong> A climber on a rock face.</td><td>Climber Asha checks her ropes, takes the safest route and reaches the top.</td><td>The pair climbs with firm communication, belaying each other to the summit.</td><td>The instructor's lessons on safety help them; they teach novices afterwards.</td><td>Courage, reasoning</td></tr>
+        <tr><td><strong>84.</strong> A cyclist on a long road.</td><td>Pradeep cycles 600 km for a cause, planning rests and repairs, and completes the ride.</td><td>The cycling club rides along, supports each other and raises funds for a school.</td><td>A doctor trains them in hydration; the ride becomes an annual event.</td><td>Stamina, determination</td></tr>
+        <tr><td><strong>85.</strong> A person stands at a cliff looking at the sea.</td><td>Mira, after a hard year, walks by the sea to think, sets new goals and works toward them.</td><td>She shares her plan with friends and they back her.</td><td>A mentor helps her build a plan; she achieves her goal.</td><td>Reasoning, determination</td></tr>
+        <tr><td><strong>86.</strong> A group around a campfire.</td><td>Sandeep tells the group a story about perseverance and lifts their spirits.</td><td>The group plans the next day together and divides the duties.</td><td>The instructor leads a reflection on teamwork; everyone takes away a lesson.</td><td>Liveliness, influence</td></tr>
+        <tr><td><strong>87.</strong> A broken-down vehicle on a desert road.</td><td>Driver Rafiq checks the fault, repairs it with the tools he carries and moves on.</td><td>Travellers share water and shade while two walk to the next village for help.</td><td>The highway patrol arrives; the driver thanks them and carries spare parts next time.</td><td>Resourcefulness, stamina</td></tr>
+        <tr><td><strong>88.</strong> A traveller at an airport.</td><td>Neha, with a missed flight, calmly rebooks, informs her host and reaches the meeting late but prepared.</td><td>Fellow passengers help each other with information and a ride to the hotel.</td><td>An airline official helps her; she plans buffers next time.</td><td>Presence of mind, planning</td></tr>
+        <tr><td><strong>89.</strong> A sailing boat on rough water.</td><td>Skipper Dev reefs the sails, keeps the crew calm and steers to port.</td><td>The crew works together, trimming sails and bailing, and reaches safety.</td><td>The coastal station guides them in; the crew trains in storm sailing.</td><td>Leadership, courage</td></tr>
+        <tr><td><strong>90.</strong> A forest path with two people.</td><td>Rohan and a guide track animals quietly; he learns tracking and respects the forest.</td><td>A team of volunteers monitors wildlife and reports poaching.</td><td>The forest department thanks them and recruits volunteers.</td><td>Social responsibility, initiative</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning: "a man stands on a platform"</span>
+    <p>He could be a sad traveller; he could be waiting for a loved one. The strong seed makes him <strong>solve a travel problem</strong>: a missed train, a new route. This gives the story an action and a result, and shows <strong>resourcefulness</strong> and <strong>speed of decision</strong>, which a sentimental reading cannot show.</p>
+  </div>
+</section>
+
+<section id="bank-ambiguous">
+  <h2>Ambiguous scenes and the blank card</h2><hr class="sec-rule">
+  <p>Some pictures are so vague that any story is possible, and the last card is blank. They are the <strong>purest projection</strong>. The rule is the same: choose the constructive reading, a clear hero and an ordinary problem solved by action. For the blank card, prepare two or three themes in advance (a personal challenge, a team achievement, a service initiative) so that you can write confidently in four minutes.</p>
+  <div class="tablewrap wide">
+    <table>
+      <caption>Themes 91-105 (the last three are blank-card themes)</caption>
+      <thead><tr><th>Picture theme</th><th>Version 1 · individual</th><th>Version 2 · team or community</th><th>Version 3 · guided or service</th><th>OLQ</th></tr></thead>
+      <tbody>
+        <tr><td><strong>91.</strong> A man stands at a window at night.</td><td>Suresh, awake before an interview, rehearses his answers and rests; he performs calmly next day.</td><td>His roommates quiz him and share tips; he succeeds and helps them prepare.</td><td>A mentor's advice helps him focus; he gains the post and thanks him.</td><td>Planning, self-confidence</td></tr>
+        <tr><td><strong>92.</strong> A figure sits with head in hands.</td><td>Karthik, after a setback, rests, reviews what went wrong and restarts with a plan.</td><td>His friends talk with him, share their own failures and help him move on.</td><td>A counsellor helps him reset goals; he reaches them later.</td><td>Resilience, reasoning</td></tr>
+        <tr><td><strong>93.</strong> Two figures talk; one gestures.</td><td>Manager Raj explains a plan to a worker and, after listening to his idea, improves it.</td><td>The whole team joins the talk and settles on a better method.</td><td>The senior manager praises the open discussion and adopts it as policy.</td><td>Influence, communication</td></tr>
+        <tr><td><strong>94.</strong> A person faces a closed door.</td><td>Arti, about to enter an interview room, breathes deeply, recalls her preparation and enters with confidence.</td><td>Her friends wait outside and cheer her; she is selected.</td><td>A teacher's mock interview helps her; she succeeds and passes on the help.</td><td>Self-confidence, composure</td></tr>
+        <tr><td><strong>95.</strong> A group looks at something off-frame.</td><td>Lalit notices a sign of danger first and calls everyone back safely.</td><td>The group spots a stranded animal, works together and frees it.</td><td>The forest officer thanks them and trains them as volunteers.</td><td>Alertness, cooperation</td></tr>
+        <tr><td><strong>96.</strong> A man holds a paper with an unsure face.</td><td>Anand reads an offer letter, weighs it with a plan, accepts and prepares to move.</td><td>His family discusses it with him and agrees on a plan.</td><td>A mentor helps him negotiate; he starts the job well.</td><td>Decision, reasoning</td></tr>
+        <tr><td><strong>97.</strong> A silhouette stands against a sunrise.</td><td>Asha, climbing a hill each morning, plans her day, studies and wins a scholarship.</td><td>The morning group of friends keeps fit and studies together.</td><td>A coach adds structure; she excels at sports and academics.</td><td>Discipline, determination</td></tr>
+        <tr><td><strong>98.</strong> Two people stand beside a car.</td><td>Driver Farid helps a family stuck with a flat tyre and takes them to a garage.</td><td>Passers-by form a small team, fix the car and push it to safety.</td><td>The highway patrol thanks them; the group puts up a help board.</td><td>Initiative, social responsibility</td></tr>
+        <tr><td><strong>99.</strong> A figure kneels by a bed.</td><td>Nisha, caring for her ill mother, balances studies and care, and passes with credit.</td><td>The family shares care duties; the mother recovers.</td><td>The doctor teaches home care; Nisha later trains as a nurse.</td><td>Responsibility, stamina</td></tr>
+        <tr><td><strong>100.</strong> A young person looks in a mirror.</td><td>Rohan, preparing for a Forces interview, checks his appearance and attitude and walks in with confidence.</td><td>His friends do a mock interview and he performs well.</td><td>His mentor's feedback improves his answers; he is selected.</td><td>Self-confidence, planning</td></tr>
+        <tr><td><strong>101.</strong> A figure climbs a staircase.</td><td>Veena moves up in her career step by step, learning new skills at every stage.</td><td>Her team learns with her, and the whole department rises.</td><td>A senior sponsors her growth; she becomes a leader.</td><td>Determination, learning</td></tr>
+        <tr><td><strong>102.</strong> Two men shake hands.</td><td>Trader Joseph settles a dispute fairly and keeps a long partnership.</td><td>Two villages agree to share a well and both thrive.</td><td>The panchayat mediates; the agreement is written for everyone.</td><td>Fairness, influence</td></tr>
+        <tr><td><strong>103.</strong> Blank card: a personal challenge overcome.</td><td>A shy boy, afraid of heights, trains slowly with a guide and completes a mountain trek.</td><td>He joins a trekking club whose members help him each step of the way.</td><td>The club's instructor teaches safety; he becomes a trek leader.</td><td>Courage, determination</td></tr>
+        <tr><td><strong>104.</strong> Blank card: a team achievement.</td><td>A captain, down at half-time, changes tactics and wins the final.</td><td>The team trains together, trusts each other and wins the league.</td><td>The coach builds the plan; the team wins with fair play.</td><td>Leadership, team spirit</td></tr>
+        <tr><td><strong>105.</strong> Blank card: a service initiative.</td><td>A student sees waste in his street, starts a clean-up and keeps it going for a year.</td><td>His neighbours and school join; the area becomes a model.</td><td>The municipality supports it and extends it to other wards.</td><td>Initiative, social responsibility</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reasoning: the blank card</span>
+    <p>With no picture to anchor you, the temptation is a film plot. The strong approach is to write a <strong>true-to-life story</strong>, often a version of something you have lived or seen: a real fear overcome, a team won, a small service done. The psychologist cannot check the facts; they read the <strong>values and habits</strong> in the telling. Keep the same four-part structure and finish with a plain, believable outcome.</p>
+  </div>
+</section>
+
+<section id="perspectives">
+  <h2>Myths and debates</h2><hr class="sec-rule">
+  <p>TAT advice is plentiful and often contradictory. Tags separate what is well supported from opinion.</p>
+  <ul>
+    <li><span class="tag fact">Established</span><strong>Stories are read as a set.</strong> One odd story rarely decides anything; the recurring pattern does.</li>
+    <li><span class="tag fact">Established</span><strong>The hero is read as you.</strong> The psychologist treats the hero's habits as a window on your own.</li>
+    <li><span class="tag interp">Interpretation</span><strong>"Always end in victory."</strong> Positive and realistic, yes; a fairy-tale win, no. A believable result reads better than a miracle.</li>
+    <li><span class="tag disputed">Disputed</span><strong>Mention the OLQ names in the story.</strong> Most mentors say show, do not tell; naming qualities reads as artificial.</li>
+    <li><span class="tag disputed">Disputed</span><strong>Use real experience or invent.</strong> Real experience feels natural; inventing gives freedom. A mix is common.</li>
+    <li><span class="tag disputed">Disputed</span><strong>Same hero in all stories.</strong> A recurring name can look lazy; a consistent <em>character</em> is fine.</li>
+    <li><span class="tag interp">Interpretation</span><strong>Memorised stories.</strong> They save time but often mismatch the picture and sound alike.</li>
+    <li><span class="tag verify">Re-verify</span><strong>Test details.</strong> The number of pictures, the viewing time and the writing time can change; follow your call-up letter.</li>
+  </ul>
+  <div class="edge">
+    <span class="edge-h">Lesser-known fact</span>
+    <p>Candidates often write their weakest story on the <em>blank</em> card because they save no ideas for it. Keeping two or three ready themes lets the last story match the quality of the first.</p>
+  </div>
+</section>
+
+<section id="scenarios">
+  <h2>Scenarios and trade-offs</h2><hr class="sec-rule">
+  <p>Awkward moments arise in the real test. The options below show what is available and what each trades.</p>
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>Your mind goes blank</h4>
+      <ul>
+        <li>Fall back on the template: person, problem, effort, outcome.</li>
+        <li>Choose a familiar setting such as school, a village or a camp.</li>
+        <li>Trade-off: a plain, sound story over a blank sheet.</li>
+      </ul>
+    </div>
+    <div class="panel red-top">
+      <h4>The picture is too ambiguous</h4>
+      <ul>
+        <li>Pick the most constructive reading and commit.</li>
+        <li>Give the figure a clear purpose.</li>
+        <li>Trade-off: a clear theme over a perfect interpretation.</li>
+      </ul>
+    </div>
+    <div class="panel gold-top">
+      <h4>You are running short of time</h4>
+      <ul>
+        <li>Shorten the setup and keep struggle and result.</li>
+        <li>Finish with a one-line outcome.</li>
+        <li>Trade-off: a short complete story over a long unfinished one.</li>
+      </ul>
+    </div>
+    <div class="panel green-top">
+      <h4>The story is turning dark</h4>
+      <ul>
+        <li>Introduce a practical turn: a helper, a plan or a decision.</li>
+        <li>Give the hero a constructive action.</li>
+        <li>Trade-off: a modest recovery over a tragic ending.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="qbank">
+  <h2>Practice bank: questions and motions</h2><hr class="sec-rule">
+  <p class="lede">Answer each question in your own words, then test it against the rules in the earlier parts.</p>
+  <ol class="qbank">
+    <li>What does a TAT story reveal about the writer that a direct question cannot?</li>
+    <li>Describe the four-part story structure and the time to give each part.</li>
+    <li>Which OLQs does a "struggle" show, and which does a "result" show?</li>
+    <li>Why is it better to write one hero than several?</li>
+    <li>Why should the hero act rather than wait for luck?</li>
+    <li>Rewrite "He was sad and a miracle happened" into a strong story.</li>
+    <li>How do you handle a picture that looks like a death or tragedy?</li>
+    <li>What is a believable ending, and why is it better than a grand one?</li>
+    <li>Write three versions (individual, team, guided) for "A man at a shop counter".</li>
+    <li>How do you reflect Factor II (social) qualities without naming them?</li>
+    <li>How do you reflect Factor IV (dynamic) qualities in a short story?</li>
+    <li>What should you do on the blank card?</li>
+    <li>How can your TAT contradict your SDT, and why does it matter?</li>
+    <li>Why do memorised stories hurt more than they help?</li>
+    <li>Describe how you would practise TAT for eight weeks.</li>
+  </ol>
+  <h3>Debate motions</h3>
+  <ol class="dbank">
+    <li>This house believes that a TAT story shows more of the writer than a direct interview does.</li>
+    <li>This house believes that a positive story is always more honest than a realistic one.</li>
+    <li>This house believes that guidance from a mentor weakens the hero in a story.</li>
+    <li>This house believes that four minutes is a fair limit for a story.</li>
+    <li>This house believes that writing about personal experience is better than inventing.</li>
+    <li>This house believes that team stories show more leadership than individual ones.</li>
+    <li>This house believes that candidates should be free to write a tragic story.</li>
+  </ol>
+</section>
+
+<section id="chronology">
+  <h2>Preparation timeline</h2><hr class="sec-rule">
+  <p>An eight-week plan, then the roughly four and a half minutes available for one picture. Adjust to your calendar.</p>
+  <ul class="timeline">
+    <li><span class="yr">Week 1</span><span>Read the 15 OLQs and the four-part structure; read ten themes and write one story a day, untimed.</span></li>
+    <li><span class="yr">Week 2</span><span>Write two stories a day; practise a clear hero, a real problem and an action.</span></li>
+    <li><span class="yr">Week 3</span><span>Practise reading pictures fast: figures, mood, setting and likely theme in 30 seconds.</span></li>
+    <li><span class="yr">Week 4</span><span>Write in six minutes, then in four and a half; keep each story to about 120 to 150 words.</span></li>
+    <li><span class="yr">Week 5</span><span>Do two full sets of pictures; tag OLQs in each story and find gaps.</span></li>
+    <li><span class="yr">Week 6</span><span>Share stories with a mentor; ask what the hero says about you.</span></li>
+    <li><span class="yr">Week 7</span><span>Prepare blank-card themes; align with your SDT and WAT.</span></li>
+    <li><span class="yr">Week 8</span><span>Two final mock sets; rest before the test and do not cram new stories.</span></li>
+    <li><span class="yr">0-30 s</span><span>View the picture: figures, mood, setting.</span></li>
+    <li><span class="yr">30-60 s</span><span>Decide the theme, the hero and the problem.</span></li>
+    <li><span class="yr">1-4 min</span><span>Write: past, present, struggle, result.</span></li>
+    <li><span class="yr">4-4.5 min</span><span>Check the ending and move on.</span></li>
+  </ul>
+</section>
+
+<section id="glossary">
+  <h2>Glossary</h2><hr class="sec-rule">
+  <dl class="term">
+    <dt>TAT</dt><dd>Thematic Apperception Test: writing a story for each picture shown.</dd>
+    <dt>WAT</dt><dd>Word Association Test: a sentence for each word.</dd>
+    <dt>SRT</dt><dd>Situation Reaction Test: a short reaction to each situation.</dd>
+    <dt>SDT</dt><dd>Self Description Test: describing how others and you see you.</dd>
+    <dt>OLQ</dt><dd>Officer Like Quality: one of 15 traits assessed at SSB.</dd>
+    <dt>Projection</dt><dd>Putting your own habits and attitudes into an open stimulus.</dd>
+    <dt>Apperception</dt><dd>Interpreting a new scene through your own past experience.</dd>
+    <dt>Hero</dt><dd>The main character of the story, taken as your stand-in.</dd>
+    <dt>Four-part story</dt><dd>Past, present, struggle and result.</dd>
+    <dt>Struggle</dt><dd>The practical difficulty the hero faces and tackles.</dd>
+    <dt>Outcome</dt><dd>A believable ending that follows from the hero's effort.</dd>
+    <dt>Blank card</dt><dd>The last slide, with no picture, for a story of your own choice.</dd>
+    <dt>Constructive reading</dt><dd>Interpreting an ambiguous picture in a purposeful way.</dd>
+    <dt>Show, do not tell</dt><dd>Showing qualities through actions rather than naming them.</dd>
+    <dt>Consistency</dt><dd>Agreement across your tests and interview.</dd>
+    <dt>Social desirability</dt><dd>Writing what sounds good instead of what is true.</dd>
+  </dl>
+</section>
+
+<section id="revision">
+  <h2>Rapid revision sheet</h2><hr class="sec-rule">
+  <div class="note">
+    <h4>One-page summary</h4>
+    <ul>
+      <li>TAT: pictures shown briefly, a story written for each in about four minutes; the last card is blank.</li>
+      <li>The hero stands for you; make him or her an active, practical, caring person.</li>
+      <li>Four-part story: past, present, struggle, result.</li>
+      <li>Read the picture fast: figures, mood, setting, then the constructive theme.</li>
+      <li>Show OLQs through actions; do not name them.</li>
+      <li>Avoid luck, tragedy, crime, miracles and a passive hero.</li>
+      <li>Three versions of any theme: individual, team or community, guided or service.</li>
+      <li>Ending: realistic, modest and earned by effort.</li>
+      <li>Blank card: prepare two or three true-to-life themes.</li>
+      <li>Be consistent with the WAT, SRT, SDT and interview.</li>
+      <li>Practise in stages: untimed, six minutes, then four and a half; review with a mentor.</li>
+      <li>Follow the call-up letter for current timings and rules.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer>
+  <p>Compiled from open sources. Study aid only, not an official publication.</p>
+  <p>Source &amp; contributions: <a href="https://github.com/mohitkushwaha0601/matre">github.com/mohitkushwaha0601/matre</a></p>
+</footer>
+</body>
+</html>
