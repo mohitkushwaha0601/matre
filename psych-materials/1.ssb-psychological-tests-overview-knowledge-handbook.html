@@ -98,6 +98,11 @@ body{
 .stamp{margin-top:1.6rem;font-size:.86rem;color:var(--hero-dim);display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
 .stamp b{color:var(--hero-ink);font-weight:600}
 
+.test-links{margin-top:1.4rem;display:flex;flex-wrap:wrap;gap:.5rem}
+.test-links a{color:var(--hero-ink);text-decoration:none;font-size:.85rem;font-weight:600;padding:.35rem .8rem;border:1px solid rgba(255,255,255,.3);border-radius:999px}
+.test-links a:hover,.test-links a:focus-visible{background:var(--red);border-color:var(--red)}
+@media print{.test-links{display:none}}
+
 /* ---------- layout ---------- */
 .shell{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem;display:grid;grid-template-columns:1fr;gap:2.5rem}
 @media (min-width:1000px){
@@ -274,6 +279,12 @@ footer a{color:var(--blue)}
       <span>OLQs <b>15</b></span>
       <span>Reading time <b>2-3 hrs</b></span>
     </p>
+    <nav class="test-links" aria-label="Detailed test guides">
+      <a href="2.ssb-tat-thematic-apperception-knowledge-handbook.html">TAT guide</a>
+      <a href="3.ssb-wat-word-association-knowledge-handbook.html">WAT guide</a>
+      <a href="4.ssb-srt-situation-reaction-knowledge-handbook.html">SRT guide</a>
+      <a href="5.ssb-gpe-group-planning-exercise-knowledge-handbook.html">GPE guide</a>
+    </nav>
   </div>
 </header>
 
