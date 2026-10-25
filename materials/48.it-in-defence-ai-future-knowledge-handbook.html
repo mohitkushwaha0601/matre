@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Information Technology in Defence: Security, Innovation and AI — A Deep Knowledge Handbook</title>
+<meta name="description" content="A 22-section handbook on information technology in defence: networks, cyber and C4ISR, the Army, Air Force and a special focus on the Indian Navy, then AI, emerging technology, the innovation ecosystem, global lessons, the future of IT in defence, and SSB-style practice material.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0F1E2E;
+  --ink-soft:#4A5D70;
+  --paper:#EEF2F5;
+  --surface:#FFFFFF;
+  --surface-2:#E0E8EE;
+  --rule:#C3CFD8;
+  --rule-strong:#92A4B3;
+  --red:#B3261E;
+  --blue:#0F4C81;
+  --gold:#9A7410;
+  --green:#1F6F5A;
+  --hero-bg:#0A1B2E;
+  --hero-ink:#EEF2F5;
+  --hero-dim:#9FB2C3;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ink:#E4EAF0;
+    --ink-soft:#A8B6C4;
+    --paper:#0A121B;
+    --surface:#121E2B;
+    --surface-2:#1B2B3B;
+    --rule:#2B3E50;
+    --rule-strong:#4A6178;
+    --red:#EE8478;
+    --blue:#7DB8EC;
+    --gold:#D8B456;
+    --green:#62C4A5;
+    --hero-bg:#060D15;
+    --hero-ink:#E4EAF0;
+    --hero-dim:#8A9BAC;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E4EAF0;
+  --ink-soft:#A8B6C4;
+  --paper:#0A121B;
+  --surface:#121E2B;
+  --surface-2:#1B2B3B;
+  --rule:#2B3E50;
+  --rule-strong:#4A6178;
+  --red:#EE8478;
+  --blue:#7DB8EC;
+  --gold:#D8B456;
+  --green:#62C4A5;
+  --hero-bg:#060D15;
+  --hero-ink:#E4EAF0;
+  --hero-dim:#8A9BAC;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1.5rem);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ---------- hero ---------- */
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:0 0 3rem}
+.flagstrip{display:flex;height:12px}
+.flagstrip span{flex:1}
+.f1{background:#0A2342}
+.f2{background:#FFFFFF}
+.f3{background:#C8102E}
+.f4{background:#FF9933}
+.f5{background:#FFFFFF}
+.f6{background:#138808}
+.f7{background:#000080}
+.f8{background:#00A6A6}
+.hero-inner{max-width:1180px;margin:0 auto;padding:3.2rem 1.5rem 0}
+.kicker{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--hero-dim);margin:0 0 .8rem}
+.hero h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.5rem,4.3vw,2.35rem);line-height:1.2;margin:1.2rem 0 .5rem;border-top:1px solid rgba(255,255,255,.22);padding-top:1.6rem;max-width:30ch}
+.hero-sub{margin:0;color:var(--hero-dim);max-width:68ch}
+.stamp{margin-top:1.6rem;font-size:.86rem;color:var(--hero-dim);display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+.stamp b{color:var(--hero-ink);font-weight:600}
+
+/* ---------- layout ---------- */
+.shell{max-width:1180px;margin:0 auto;padding:0 1.5rem 5rem;display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media (min-width:1000px){
+  .shell{grid-template-columns:255px minmax(0,1fr);gap:3.5rem;padding-top:2.8rem}
+}
+nav.toc{font-size:.9rem}
+@media (min-width:1000px){
+  .toc-mobile{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2rem);align-self:start;max-height:calc(100vh - 5rem);overflow-y:auto}
+}
+nav.toc h2{font-family:"Zilla Slab",Georgia,serif;font-size:.92rem;font-weight:600;margin:0 0 .7rem;padding-bottom:.45rem;border-bottom:2px solid var(--rule-strong)}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:toc}
+nav.toc li{border-bottom:1px solid var(--rule)}
+nav.toc li:not(.part){counter-increment:toc}
+nav.toc a{display:flex;gap:.6rem;padding:.4rem 0;color:var(--ink-soft);text-decoration:none}
+nav.toc a::before{content:counter(toc,decimal-leading-zero);color:var(--rule-strong);font-variant-numeric:tabular-nums;flex:none}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--red)}
+nav.toc .part{border:0;margin:1.1rem 0 .3rem;font-family:"Zilla Slab",Georgia,serif;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--rule-strong)}
+nav.toc .part::before{content:none}
+.toc-mobile{display:block}
+@media (min-width:1000px){.toc-mobile summary{display:none}}
+.toc-mobile summary{cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:600;padding:.7rem .9rem;background:var(--surface);border:1px solid var(--rule);margin-bottom:1rem}
+@media (max-width:999px){
+  .toc-mobile[open] nav.toc{padding:0 .9rem 1rem}
+  .toc-mobile:not([open]) nav.toc{display:none}
+}
+
+/* ---------- sections ---------- */
+main{min-width:0}
+section{margin:0 0 3.6rem;scroll-margin-top:1.5rem}
+section > h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.45rem,3.6vw,1.95rem);line-height:1.2;margin:0 0 .3rem}
+.part-head{margin:4rem 0 2.2rem;padding:1.1rem 0 .9rem;border-top:4px double var(--rule-strong);border-bottom:1px solid var(--rule)}
+.part-head p{margin:0;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.part-head h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(1.3rem,3.2vw,1.7rem);margin:.3rem 0 0;color:var(--ink)}
+.sec-rule{border:0;border-top:3px double var(--rule-strong);margin:0 0 1.4rem}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.16rem;margin:2rem 0 .5rem;line-height:1.3}
+h4{font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:1rem;margin:1.4rem 0 .35rem;color:var(--ink)}
+p{margin:0 0 .95rem;max-width:74ch}
+ul,ol{margin:0 0 1rem;padding-left:1.25rem;max-width:74ch}
+li{margin-bottom:.35rem}
+li::marker{color:var(--rule-strong)}
+strong{font-weight:600}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+/* ---------- components ---------- */
+.lede{font-size:1.06rem;color:var(--ink-soft);max-width:70ch}
+
+.tablewrap{overflow-x:auto;margin:0 0 1.3rem;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.92rem}
+caption{text-align:left;padding:.7rem .85rem .1rem;font-weight:600;color:var(--ink-soft);font-size:.9rem}
+th,td{text-align:left;padding:.55rem .85rem;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{background:var(--surface-2);font-weight:600;border-bottom:2px solid var(--rule-strong);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.num,th.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+.edge{background:var(--surface);border-left:4px solid var(--red);padding:.9rem 1.1rem;margin:1.4rem 0;max-width:74ch}
+.edge p:last-child,.edge ul:last-child,.edge ol:last-child{margin-bottom:0}
+.edge .edge-h{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);display:block;margin-bottom:.25rem;font-size:.95rem}
+.edge.gold{border-left-color:var(--gold)}
+.edge.gold .edge-h{color:var(--gold)}
+.edge.blue{border-left-color:var(--blue)}
+.edge.blue .edge-h{color:var(--blue)}
+.edge.green{border-left-color:var(--green)}
+.edge.green .edge-h{color:var(--green)}
+
+.note{background:var(--surface-2);padding:.85rem 1.1rem;margin:1.3rem 0;max-width:74ch;border:1px solid var(--rule);font-size:.95rem}
+.note p:last-child,.note ul:last-child,.note ol:last-child{margin-bottom:0}
+.note h4{margin-top:0}
+
+.panel{background:var(--surface);border:1px solid var(--rule);padding:1rem 1.1rem}
+.panel h4{margin-top:0}
+.panel ul,.panel ol{margin-bottom:0}
+.panel p:last-child{margin-bottom:0}
+.panel.blue-top{border-top:3px solid var(--blue)}
+.panel.red-top{border-top:3px solid var(--red)}
+.panel.gold-top{border-top:3px solid var(--gold)}
+.panel.green-top{border-top:3px solid var(--green)}
+
+.rungs{max-width:74ch;margin:.3rem 0 0;display:grid;grid-template-columns:9.5rem 1fr;gap:0 1rem}
+.rungs dt{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;color:var(--red);padding-top:.2rem}
+.rungs dd{margin:0 0 .5rem;font-size:.93rem}
+@media (max-width:560px){
+  .rungs{grid-template-columns:1fr;gap:0}
+  .rungs dt{padding-top:.4rem}
+}
+
+.timeline{list-style:none;padding:0;margin:1rem 0 1.4rem;max-width:74ch}
+.timeline li{display:grid;grid-template-columns:8.2rem 1fr;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--rule);margin:0}
+.timeline li:last-child{border-bottom:0}
+.timeline .yr{font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--red);font-variant-numeric:tabular-nums}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:.1rem}}
+
+.qbank{counter-reset:q;list-style:none;padding:0;max-width:74ch}
+.qbank li{counter-increment:q;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.qbank li::before{content:counter(q,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.qbank li:last-child{border-bottom:0}
+
+.dbank{counter-reset:d;list-style:none;padding:0;max-width:74ch}
+.dbank li{counter-increment:d;padding:.5rem 0 .5rem 2.8rem;position:relative;border-bottom:1px solid var(--rule)}
+.dbank li::before{content:counter(d,decimal-leading-zero);position:absolute;left:0;top:.5rem;font-family:"Zilla Slab",Georgia,serif;font-weight:600;color:var(--rule-strong);font-size:.85rem}
+.dbank li:last-child{border-bottom:0}
+
+.ladder{counter-reset:s;list-style:none;padding:0;margin:1.3rem 0 1.5rem;max-width:74ch}
+.ladder li{counter-increment:s;position:relative;margin:0;padding:.1rem 0 1.05rem 2.9rem;border-left:2px solid var(--rule)}
+.ladder li::before{content:counter(s);position:absolute;left:-1.05rem;top:0;width:2rem;height:2rem;display:grid;place-items:center;border-radius:50%;background:var(--surface);border:2px solid var(--rule-strong);font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:.85rem;color:var(--red)}
+.ladder li:last-child{border-left-color:transparent;padding-bottom:0}
+.ladder .rung{display:block;font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.05rem;color:var(--ink);line-height:2rem}
+.ladder p{margin:.15rem 0 .4rem;font-size:.95rem}
+.ladder p:last-child{margin-bottom:0}
+
+.grid{display:grid;gap:1rem;margin:0 0 1.3rem}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
+
+.card{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--red);padding:1rem 1.1rem}
+.card h4{margin:0 0 .45rem;font-size:1rem}
+.card .name{font-family:"Zilla Slab",Georgia,serif;font-weight:600;font-size:1.2rem}
+.card .role{font-size:.9rem;color:var(--ink-soft)}
+.card .since{font-size:.78rem;color:var(--green);font-weight:600;margin-top:.45rem}
+
+.term{max-width:74ch;margin:0 0 1.2rem}
+.term dt{font-weight:600;margin-top:.8rem}
+.term dd{margin:.15rem 0 0;color:var(--ink-soft)}
+
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:.1rem .45rem;border:1px solid var(--rule-strong);color:var(--ink-soft);margin-right:.35rem;vertical-align:middle}
+.tag.fact{border-color:var(--green);color:var(--green)}
+.tag.interp{border-color:var(--gold);color:var(--gold)}
+.tag.disputed{border-color:var(--red);color:var(--red)}
+.tag.verify{border-color:var(--blue);color:var(--blue)}
+.spaced{margin-top:.6rem}
+
+footer{border-top:3px double var(--rule-strong);margin-top:2rem;padding-top:1.4rem;color:var(--ink-soft);font-size:.9rem;max-width:74ch}
+footer a{color:var(--blue)}
+
+/* ---------- home button: fixed, links back to the collection homepage ---------- */
+.home-btn{position:fixed;top:16px;left:16px;z-index:60;display:inline-flex;align-items:center;gap:.4rem;background:#14202B;color:#F1F2EC;border:1px solid rgba(241,242,236,.25);padding:.45rem .85rem;border-radius:999px;font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.82rem;font-weight:600;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.3);transition:background .15s ease,transform .15s ease}
+.home-btn:hover,.home-btn:focus-visible{background:#BF2F26;transform:translateY(-1px)}
+.home-btn svg{width:14px;height:14px;flex:none}
+@media print{.home-btn{display:none}}
+
+@media print{
+  .hero{background:none;color:#000;padding-bottom:1rem}
+  .hero-sub,.stamp{color:#333}
+  .flagstrip,.toc-mobile{display:none}
+  .shell{display:block;padding:0}
+  section{page-break-inside:auto;margin-bottom:1.8rem}
+  h2,h3{page-break-after:avoid}
+  .panel,.edge,.note,.tablewrap,figure{page-break-inside:avoid}
+  .part-head{page-break-before:always}
+  body{font-size:10.5pt;background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+
+<a class="home-btn" href="../index.html" aria-label="Back to Handbooks homepage" title="Back to Handbooks homepage">
+  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
+  <span>Home</span>
+</a>
+
+<header class="hero">
+  <div class="flagstrip" aria-hidden="true">
+    <span class="f1"></span><span class="f2"></span><span class="f3"></span><span class="f4"></span><span class="f5"></span><span class="f6"></span><span class="f7"></span><span class="f8"></span>
+  </div>
+  <div class="hero-inner">
+    <p class="kicker">Defence technology · cyber · C4ISR · artificial intelligence · special focus: Indian Navy</p>
+    <h1>Information Technology in Defence: Security, Innovation and AI</h1>
+    <p class="hero-sub">How networks, software, data and artificial intelligence became the nervous system of modern armed forces. The handbook covers the security case for IT, the Army, Air Force and (in depth) the Navy, the innovation ecosystem, global lessons, and where defence IT is heading. Written for NDA, CDS, AFCAT, TES and other officer-entry aspirants, with SSB-style practice material.</p>
+    <p class="stamp">
+      <span>Sections <b>22</b></span>
+      <span>Forces <b>Army · Navy · Air Force</b></span>
+      <span>Special focus <b>Indian Navy (3 sections)</b></span>
+      <span>Reading time <b>2-3 hrs</b></span>
+    </p>
+  </div>
+</header>
+
+<div class="shell">
+
+<details class="toc-mobile" open>
+  <summary>Contents</summary>
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li class="part">How to use this</li>
+      <li><a href="#howto">Using this handbook</a></li>
+
+      <li class="part">Part I · Foundations</li>
+      <li><a href="#role">Why IT matters in defence</a></li>
+      <li><a href="#architecture">India's defence IT architecture</a></li>
+
+      <li class="part">Part II · Security perspectives</li>
+      <li><a href="#cyber">Cyber threats and defence</a></li>
+      <li><a href="#c4isr">C4ISR, space and the kill chain</a></li>
+
+      <li class="part">Part III · The tri-services</li>
+      <li><a href="#army">Indian Army</a></li>
+      <li><a href="#iaf">Indian Air Force</a></li>
+      <li><a href="#navy-network">Navy I: networks and command</a></li>
+      <li><a href="#navy-sensors">Navy II: sensors, unmanned and AI</a></li>
+      <li><a href="#navy-shore">Navy III: shore, people and industry</a></li>
+
+      <li class="part">Part IV · Innovation and AI</li>
+      <li><a href="#ai">AI in defence</a></li>
+      <li><a href="#emerging">Emerging technologies</a></li>
+      <li><a href="#ecosystem">Innovation and indigenisation</a></li>
+      <li><a href="#global">Global lessons</a></li>
+
+      <li class="part">Part V · The future</li>
+      <li><a href="#future">The future of IT in defence</a></li>
+      <li><a href="#risks">Risks, ethics and human control</a></li>
+
+      <li class="part">Knowledge toolkit</li>
+      <li><a href="#perspectives">Perspectives and controversies</a></li>
+      <li><a href="#scenarios">Scenarios and options</a></li>
+      <li><a href="#qbank">Questions and debate motions</a></li>
+      <li><a href="#chronology">Master chronology</a></li>
+      <li><a href="#glossary">Glossary</a></li>
+      <li><a href="#revision">Rapid revision sheet</a></li>
+    </ol>
+  </nav>
+</details>
+
+<main>
+
+<section id="howto">
+  <h2>Using this handbook</h2><hr class="sec-rule">
+  <p class="lede">Defence IT is a fast-moving field where official detail is limited and press reports are mixed with advocacy. This handbook gives you the concepts, the structure and the arguments, and marks what is established and what you should re-verify.</p>
+  <p>Read Part I and II for the concepts, then Part III for the three services (the Navy gets three sections). Part IV and V look at AI, innovation and the future. The toolkit closes with practice questions, debate motions and a revision sheet. Related handbooks in this collection: <a href="46.navic-indian-navy-knowledge-handbook.html">NavIC and the Indian Navy</a> (navigation), <a href="33.global-navies-knowledge-handbook.html">Global Navies</a> and <a href="41.sailor-life-at-sea-knowledge-handbook.html">A Sailor's Life at Sea</a>.</p>
+  <div class="edge blue">
+    <span class="edge-h">The one framing to keep</span>
+    <p>Technology serves a decision. For every system in this handbook, ask four things: what does it sense, what does it connect, what does it help decide, and what happens when it is attacked or switched off?</p>
+  </div>
+  <div class="note">
+    <h4>Scope and caveats</h4>
+    <ul>
+      <li><span class="tag fact">Established</span> Institutions, programmes and dates marked as such are in the public record.</li>
+      <li><span class="tag verify">Re-verify</span> Procurement figures, deployment status, project names and organisational details change quickly; check current official releases (MoD, PIB, service websites).</li>
+      <li><span class="tag interp">Interpretation</span> Analysis of effects, strategy and the future is judgement, not fact. Capabilities of operational systems are classified, and nothing here describes them beyond what is public.</li>
+    </ul>
+  </div>
+</section>
+
+<div class="part-head"><p>Part I · Foundations</p><h2>What IT does for a military, and who runs it in India</h2></div>
+
+<section id="role">
+  <h2>Why IT matters in defence</h2><hr class="sec-rule">
+  <p class="lede">Information technology turns a collection of platforms into a connected force: it moves information faster than the opponent can, and uses it better.</p>
+  <p>In defence, "IT" covers computers, networks, software, data, communications, cyber and the satellites and sensors that feed them. A tank, a frigate or a fighter is still the instrument of force, but its value now depends on what it knows (sensors), who it can talk to (networks) and how quickly a commander can decide (software and data). This is the idea of a <strong>force multiplier</strong>: a connected formation can achieve more than a larger, isolated one.</p>
+  <p>The classic way to see this is the decision loop: observe, orient, decide, act. IT shortens each step. Sensors observe, data fusion orients, decision-support tools help decide, and secure communications carry the order to the shooter. The side that completes the loop faster controls the tempo of an engagement.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>The layers of defence IT and what each does</caption>
+      <thead><tr><th>Layer</th><th>Function</th><th>Examples (generic)</th></tr></thead>
+      <tbody>
+        <tr><td>Sensors</td><td>Collect raw data</td><td>Radar, sonar, satellites, cameras, signals intelligence, drones</td></tr>
+        <tr><td>Communications</td><td>Move data securely</td><td>Optical fibre, radio, satellite links, tactical data links</td></tr>
+        <tr><td>Computing and data</td><td>Store, process, fuse</td><td>Servers, cloud and edge computing, databases, analytics</td></tr>
+        <tr><td>Applications</td><td>Support decisions and tasks</td><td>Command and control software, combat management systems, logistics and maintenance systems, simulators</td></tr>
+        <tr><td>Security</td><td>Protect and verify</td><td>Encryption, identity control, intrusion detection, security operations centres</td></tr>
+        <tr><td>Effectors</td><td>Act on the decision</td><td>Guided weapons, electronic warfare, cyber operations</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="grid two">
+    <div class="panel green-top">
+      <h4>What IT adds</h4>
+      <ul>
+        <li>Shared situational awareness across services</li>
+        <li>Speed of decision and targeting</li>
+        <li>Better logistics, maintenance and readiness</li>
+        <li>Realistic, low-cost training through simulation</li>
+        <li>Precision, which can reduce collateral damage</li>
+      </ul>
+    </div>
+    <div class="panel red-top">
+      <h4>What it also creates</h4>
+      <ul>
+        <li>A new attack surface: networks can be penetrated, jammed or deceived</li>
+        <li>Dependence on satellites, power and supply chains</li>
+        <li>Information overload and over-trust in tools</li>
+        <li>A growing skills gap in uniformed services</li>
+      </ul>
+    </div>
+  </div>
+  <div class="edge">
+    <span class="edge-h">Connected does not mean safe</span>
+    <p>Every link that carries an order can also carry an attack. A modern force must be able to fight when degraded: with its networks cut, its satellites jammed and its screens dark. That is why doctrine stresses redundancy and the ability to operate on commander's intent.</p>
+  </div>
+</section>
+
+<section id="architecture">
+  <h2>India's defence IT architecture</h2><hr class="sec-rule">
+  <p class="lede">India's defence IT is a mix of service networks, tri-service agencies, defence research and national bodies. The trend since 2019 has been toward joint structures.</p>
+  <p>The creation of the Chief of Defence Staff and the Department of Military Affairs in 2019 gave the armed forces a central voice on joint matters, and the Integrated Defence Staff (IDS) became the home of several tri-service agencies. Below that sit the service networks (Army, Navy, Air Force), each with its own signals, IT and cyber branches, and the research and industry base that supplies them.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Key bodies and what each does</caption>
+      <thead><tr><th>Body</th><th>Role</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Defence Cyber Agency (DCyA)</td><td>Tri-service cyber operations and defence of military networks, under the IDS</td><td><span class="tag fact">Established</span> approved 2018, operational from 2019</td></tr>
+        <tr><td>Defence Space Agency (DSA)</td><td>Tri-service space domain awareness and operations</td><td><span class="tag fact">Established</span> formed 2019</td></tr>
+        <tr><td>Defence Intelligence Agency (DIA)</td><td>Military intelligence coordination</td><td><span class="tag fact">Established</span> 2002</td></tr>
+        <tr><td>NTRO and NCIIPC</td><td>Technical intelligence; protection of critical information infrastructure</td><td><span class="tag fact">Established</span> NTRO 2004; NCIIPC 2014</td></tr>
+        <tr><td>CERT-In</td><td>National cyber incident response agency</td><td><span class="tag fact">Established</span> 2004</td></tr>
+        <tr><td>DRDO (CAIR, DYSL-AI and other labs)</td><td>Defence R&amp;D, including AI and robotics, secure communications and electronics</td><td><span class="tag fact">Established</span></td></tr>
+        <tr><td>Defence AI Council and Defence AI Project Agency</td><td>Policy and project management for military AI</td><td><span class="tag fact">Established</span> 2019</td></tr>
+        <tr><td>iDEX and Defence Innovation Organisation</td><td>Start-up and MSME innovation challenges</td><td><span class="tag fact">Established</span> iDEX launched 2018</td></tr>
+        <tr><td>ISRO</td><td>Military-relevant satellites and navigation (NavIC)</td><td><span class="tag fact">Established</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The shared backbones include the <strong>Network for Spectrum (NFS)</strong>, an optical-fibre network built for the services, and service-specific networks such as ASCON (Army) and AFNET (Air Force). A recurring policy question is how far theatre commands, once formed, will integrate these into a common architecture. <span class="tag verify">Re-verify</span> current status of theatre-command plans.</p>
+  <div class="note">
+    <h4>Why joint matters for IT</h4>
+    <p>Three services buying three incompatible systems is the classic failure. Common standards, shared data formats and joint agencies are what make "jointness" real rather than rhetorical.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part II · Security perspectives</p><h2>Defending networks and fighting with information</h2></div>
+
+<section id="cyber">
+  <h2>Cyber threats and defence</h2><hr class="sec-rule">
+  <p class="lede">Cyberspace is now a domain of warfare, alongside land, sea, air and space, and it is contested every day, not only in war.</p>
+  <p>Military networks face espionage by state-linked groups, criminal ransomware, supply-chain compromise, denial-of-service, insider threats and disinformation. Operational technology (the control systems on ships, aircraft and bases) is as exposed as office IT. Many incidents are below the threshold of war, which is why the activity is called "grey-zone".</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Threat types and typical defences</caption>
+      <thead><tr><th>Threat</th><th>What it does</th><th>Typical defence</th></tr></thead>
+      <tbody>
+        <tr><td>Espionage (APT)</td><td>Persistent, quiet theft of plans and data</td><td>Network monitoring, segmentation, counter-intelligence</td></tr>
+        <tr><td>Ransomware</td><td>Locks systems for payment</td><td>Offline backups, patching, access control</td></tr>
+        <tr><td>Supply-chain attack</td><td>Compromises hardware or software before delivery</td><td>Trusted vendors, testing, indigenous components</td></tr>
+        <tr><td>Denial of service</td><td>Floods a service to disrupt it</td><td>Redundancy, traffic filtering</td></tr>
+        <tr><td>Jamming and spoofing</td><td>Disrupts or falsifies radio and satellite signals (including GNSS)</td><td>Anti-jam design, alternative navigation, electronic protection</td></tr>
+        <tr><td>Insider threat</td><td>Misuse or leak by a trusted person</td><td>Vetting, least-privilege access, awareness</td></tr>
+        <tr><td>Disinformation</td><td>Shapes perception and morale</td><td>Verification, rapid official communication, media literacy</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>Core defensive ideas</h4>
+      <ul>
+        <li><strong>Defence in depth:</strong> several layers, so one failure is not fatal.</li>
+        <li><strong>Zero trust:</strong> verify every user and device, every time.</li>
+        <li><strong>Segmentation and air gaps:</strong> keep critical systems apart, knowing that air gaps can be bridged (as the 2010 Stuxnet case showed).</li>
+        <li><strong>Red teaming:</strong> attack your own systems to find weaknesses first.</li>
+      </ul>
+    </div>
+    <div class="panel gold-top">
+      <h4>The Indian context</h4>
+      <ul>
+        <li>Malware was found on a Kudankulam nuclear plant network in 2019, which the operator acknowledged. <span class="tag fact">Established</span></li>
+        <li>A 2021 private-sector report linked a China-based group to probes of Indian power-grid systems; Indian officials said no grid disruption resulted. <span class="tag disputed">Attribution disputed</span></li>
+        <li>Public advisories regularly warn services against unvetted apps and social-engineering approaches.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="edge">
+    <span class="edge-h">The weakest layer is usually human</span>
+    <p>Phishing, honey-traps on social media and careless handling of removable media cause more breaches than clever zero-day exploits. For an officer, personal digital discipline is an OLQ in practice: reliability, responsibility and self-control.</p>
+  </div>
+</section>
+
+<section id="c4isr">
+  <h2>C4ISR, space and the kill chain</h2><hr class="sec-rule">
+  <p class="lede">C4ISR stands for command, control, communications, computers, intelligence, surveillance and reconnaissance: the whole system that lets a commander see, decide and act.</p>
+  <p>Think in terms of the <strong>kill chain</strong>: find, fix, track, target, engage and assess. Modern warfare compresses this chain from hours to minutes, and the aim of "sensor-to-shooter" integration is to link whoever detects a target to whoever can strike it, whatever service they belong to. Satellites are central: they carry communications, imagery, signals intelligence and navigation signals, which is why space is both a force enabler and a vulnerability.</p>
+  <div class="grid three">
+    <div class="panel blue-top"><h4>See</h4><p>Radars, airborne early warning (the indigenous Netra platform is an example), maritime patrol aircraft, satellites, unmanned systems, signals intelligence.</p></div>
+    <div class="panel green-top"><h4>Connect</h4><p>Secure fibre and radio, tactical data links, military satellite communications. GSAT-7 (Navy, 2013) and GSAT-7A (Air Force and Army, 2018) are dedicated military communications satellites. <span class="tag fact">Established</span></p></div>
+    <div class="panel gold-top"><h4>Decide and act</h4><p>Command and control software, fusion engines, fire-control systems and, increasingly, AI decision-support that ranks options for a human commander.</p></div>
+  </div>
+  <ul>
+    <li><strong>Electronic warfare (EW):</strong> attacking and protecting the electromagnetic spectrum; the contest over radars, radios and GNSS signals.</li>
+    <li><strong>Positioning, navigation and timing (PNT):</strong> GPS-type signals are weak and easy to jam, hence India's NavIC and the push for alternatives such as inertial and celestial navigation.</li>
+    <li><strong>Counter-space:</strong> India's 2019 anti-satellite test showed capability; debris and norms remain concerns.</li>
+  </ul>
+  <div class="edge blue">
+    <span class="edge-h">Degraded operations</span>
+    <p>Because networks and satellites will be attacked, training must include fighting without them. The best-connected force is not the one that never loses connectivity, but the one that keeps functioning when it does.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part III · The tri-services</p><h2>Army, Air Force and a special focus on the Navy</h2></div>
+
+<section id="army">
+  <h2>Indian Army</h2><hr class="sec-rule">
+  <p class="lede">The Army's IT challenge is scale and terrain: millions of nodes, from a corps headquarters to a platoon on a glacier, all needing secure communications and shared pictures.</p>
+  <p>The Corps of Signals runs the Army's communications, with training at the Military College of Telecommunication Engineering, Mhow. The backbone has long been <strong>ASCON</strong> (a static switched network) and the radio-based <strong>AREN</strong>, with tactical command, control, communications and information (Tac C3I) systems for forward formations. The <strong>Shakti</strong> system for artillery and the Battlefield Surveillance System aim to cut the time between detecting a target and firing on it. <span class="tag verify">Re-verify</span> current fielding status.</p>
+  <ul>
+    <li><strong>Air defence:</strong> the indigenous Akashteer air-defence control and reporting system links radars and guns into one picture, and was reported to have been used in Operation Sindoor (2025). <span class="tag verify">Re-verify</span></li>
+    <li><strong>Drones and counter-drone:</strong> small drones for surveillance and strike, and the sensors and jammers to defeat them, are now a core infantry and artillery concern.</li>
+    <li><strong>Transformation:</strong> the Army declared 2023 the "Year of Transformation" and 2023-32 the "Decade of Transformation", with technology absorption as a stated pillar. <span class="tag fact">Established</span></li>
+    <li><strong>Cyber and EW:</strong> cyber units and electronic-warfare capability sit alongside signals, with the Army Design Bureau linking field needs to industry.</li>
+  </ul>
+  <div class="note">
+    <h4>Army-specific hard problems</h4>
+    <ul>
+      <li>Reliable communications in mountains, deserts and jungle, where line-of-sight and bandwidth are limited.</li>
+      <li>Securing a very large and varied network, including older equipment.</li>
+      <li>Giving a young soldier a usable device without exposing the unit's location.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="iaf">
+  <h2>Indian Air Force</h2><hr class="sec-rule">
+  <p class="lede">An air force is the most network-dependent service: aircraft, radars and missiles must be fused into one picture within seconds.</p>
+  <p>The IAF's air-defence backbone is the <strong>Integrated Air Command and Control System (IACCS)</strong>, which fuses military and civil radars, airborne early-warning aircraft and ground-based air defence into a single air situation picture, carried over its own secure optical network, <strong>AFNET</strong>. <span class="tag fact">Established</span> AFNET and IACCS were commissioned in the early 2010s.</p>
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>Where IT shows up</h4>
+      <ul>
+        <li>Airborne early warning and control (AEW&amp;C), including the indigenous Netra, extends radar coverage.</li>
+        <li>Fighters use sensor fusion and data links to share targets (the aim of aircraft such as the Rafale and upgraded Su-30MKI). <span class="tag verify">Re-verify</span> upgrade status</li>
+        <li>Long-range surface-to-air missile systems (the S-400, delivered from 2021) depend on cued, networked radars. <span class="tag fact">Established</span></li>
+        <li>Simulators, data analytics for maintenance and mission-planning software raise readiness and cut cost.</li>
+      </ul>
+    </div>
+    <div class="panel green-top">
+      <h4>Where it is heading</h4>
+      <ul>
+        <li>Manned-unmanned teaming: crewed fighters controlling "loyal wingman" drones, with Indian development programmes under way. <span class="tag verify">Re-verify</span></li>
+        <li>Large armed and surveillance drones, including the planned MQ-9B purchase (31 for the three services, announced 2024). <span class="tag fact">Established</span></li>
+        <li>AI-assisted target recognition and electronic-warfare management.</li>
+        <li>A resilient, space-linked air-defence picture across the whole country.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="edge">
+    <span class="edge-h">Why air defence is an IT problem</span>
+    <p>The hard part of air defence is not the missile; it is telling a hostile cruise missile or drone from a civilian airliner or a bird in seconds, and deciding which weapon to commit. That is data fusion, classification and command logic. It is also why the quality of software and the integrity of the network decide outcomes.</p>
+  </div>
+</section>
+
+<section id="navy-network">
+  <h2>Navy I: networks and command</h2><hr class="sec-rule">
+  <p class="lede">The Navy is the most IT-intensive service by nature: a ship is a floating network, and a fleet only works if its ships, aircraft, submarines and shore commands share a picture across thousands of kilometres of ocean.</p>
+  <p>At sea there is no cable and no tower. Everything travels by radio or satellite, so the Navy has led India's military-satellite effort. <strong>GSAT-7 (Rukmini)</strong>, launched in 2013, gave the Navy dedicated satellite communications over the Indian Ocean, linking ships, submarines, aircraft and shore stations. A follow-on, <strong>GSAT-7R (CMS-03)</strong>, was reported to have been launched in late 2025. <span class="tag fact">Established</span> GSAT-7; <span class="tag verify">Re-verify</span> GSAT-7R details.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>The Navy's IT stack, from the ship to the shore</caption>
+      <thead><tr><th>Level</th><th>What it contains</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Ship or submarine</td><td>Combat management system (CMS), sensors, weapons control, integrated platform management, electronic warfare suite</td><td>Fight and operate the ship as one system</td></tr>
+        <tr><td>Task group</td><td>Tactical data links, secure radio, satellite terminals</td><td>Share one tactical picture; coordinate fire and movement</td></tr>
+        <tr><td>Shore command</td><td>Command centres, secure networks, data centres</td><td>Plan, direct and support operations</td></tr>
+        <tr><td>Maritime Domain Awareness</td><td>Coastal radar and AIS chain, information fusion centres</td><td>Know what is on and under the water</td></tr>
+        <tr><td>Joint and national</td><td>Links to Army, Air Force, intelligence agencies, Coast Guard, civil authorities</td><td>Act as part of the national system</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <h3>Maritime Domain Awareness (MDA)</h3>
+  <p>After the 2008 Mumbai attacks, India built a coastal surveillance and information architecture. The <strong>National Command Control Communication and Intelligence (NC3I) network</strong>, linked to the Navy's <strong>Information Management and Analysis Centre (IMAC)</strong> at Gurugram, fuses radar, AIS (ship-identification) and other data. The <strong>Information Fusion Centre for the Indian Ocean Region (IFC-IOR)</strong>, set up at Gurugram in 2018, shares maritime information with partner navies through liaison officers. <span class="tag fact">Established</span></p>
+  <div class="edge blue">
+    <span class="edge-h">Navy and navigation</span>
+    <p>A ship that loses satellite navigation or communications is blind and mute. Hence the Navy's interest in NavIC, inertial navigation and anti-jam design. The full story of NavIC is in the <a href="46.navic-indian-navy-knowledge-handbook.html">NavIC and the Indian Navy</a> handbook.</p>
+  </div>
+  <div class="note">
+    <h4>SSB link</h4>
+    <p>A ship's network works only if every sailor follows procedure: communication discipline, correct handling of classified material and prompt reporting. These are habits that show Reasoning, Organising Ability and Sense of Responsibility long before any technology is involved.</p>
+  </div>
+</section>
+
+<section id="navy-sensors">
+  <h2>Navy II: sensors, unmanned systems and AI</h2><hr class="sec-rule">
+  <p class="lede">Seas are huge and mostly empty; the problem is finding the few vessels that matter. This is where sensors, unmanned platforms and AI help the Navy most.</p>
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>Surface and air sensors</h4>
+      <p>Ship radars, electro-optical systems, long-range maritime patrol aircraft (the P-8I), helicopters such as the MH-60R, and shore-based radars. Space-based imagery and AIS tracking widen the view beyond the horizon. Combined, they give the commander a "recognised maritime picture".</p>
+    </div>
+    <div class="panel green-top">
+      <h4>Underwater awareness</h4>
+      <p>Anti-submarine warfare depends on sonar and acoustic analysis. Indigenous sonars such as the HUMSA-NG series (developed by DRDO's NPOL, Kochi) equip ships. Seabed and fixed sensors, and signal-processing software that classifies underwater sounds, make the sea "transparent". <span class="tag interp">Interpretation</span> AI-based acoustic classification is an active area of work.</p>
+    </div>
+    <div class="panel gold-top">
+      <h4>Unmanned systems</h4>
+      <p>Aerial drones extend the fleet's eyes; surface and underwater unmanned vehicles can patrol, survey, clear mines and carry sensors. India's planned MQ-9B purchase (announced 2024) includes Navy aircraft, following earlier leased SeaGuardian operations. <span class="tag verify">Re-verify</span> numbers and delivery.</p>
+    </div>
+    <div class="panel red-top">
+      <h4>AI in the Navy</h4>
+      <p>Public uses include anomaly detection in ship tracks (spotting vessels that go "dark" or behave oddly), image recognition, predictive maintenance and decision-support. The Navy has set up AI work, including a reported centre of excellence at INS Valsura. <span class="tag verify">Re-verify</span> The human always decides on weapons.</p>
+    </div>
+  </div>
+  <h3>Example: AI-assisted maritime picture</h3>
+  <p>A hundred thousand merchant ships cross the Indian Ocean. Almost all are lawful. An AI tool compares each ship's declared route, speed and AIS behaviour with the pattern of normal traffic, flags the few that look wrong (a fishing boat in a restricted area, a tanker that switched off AIS), and asks a human analyst to look. The machine narrows the haystack; the analyst decides what to do.</p>
+  <div class="edge">
+    <span class="edge-h">The limit of the sea picture</span>
+    <p>Most of the ocean's traffic is not under any one nation's control, and AIS can be switched off or faked. Sensors and AI improve the picture but never give a complete one, so the Navy still needs judgement, patrols and partners.</p>
+  </div>
+</section>
+
+<section id="navy-shore">
+  <h2>Navy III: shore, people and industry</h2><hr class="sec-rule">
+  <p class="lede">A fleet's technology is only as good as the people who run it, the shipyards that build it and the shore establishments that support it.</p>
+  <h3>People and training</h3>
+  <p>The Navy trains specialists across electronics, electrical, communications and weapons: for example, electrical training at INS Valsura (Jamnagar) and engineering at INS Shivaji (Lonavala). The recruitment change to Agniveer, with a short initial tenure, raises a question about how well the Navy can retain the deep technical skills that complex ships need. <span class="tag interp">Interpretation</span> The Navy has said it needs technically able sailors and has expanded training in IT and cyber.</p>
+  <h3>Shipbuilding and indigenisation</h3>
+  <p>The Navy has set a goal of being self-reliant (<em>Atmanirbhar</em>) by 2047. Warships are designed by the Directorate of Naval Design and built at yards such as Mazagon Dock, Garden Reach and Cochin Shipyard, with digital design, simulation and integrated platform management systems. Two Navy-specific innovation bodies are the <strong>Technology Development Acceleration Cell (TDAC)</strong> and the <strong>Naval Innovation and Indigenisation Organisation (NIIO)</strong>, created in 2020, with the <strong>SPRINT</strong> initiative (2022) to take start-up solutions into service through iDEX. <span class="tag fact">Established</span></p>
+  <div class="grid two">
+    <div class="panel green-top">
+      <h4>Strengths</h4>
+      <ul>
+        <li>A long record of warship design and construction in India.</li>
+        <li>Established structures for working with start-ups and academia.</li>
+        <li>A leading role in regional information-sharing (IFC-IOR).</li>
+      </ul>
+    </div>
+    <div class="panel red-top">
+      <h4>Challenges</h4>
+      <ul>
+        <li>Imported sensors, chips and software in many systems.</li>
+        <li>Securing shipboard operational technology from cyber-attack.</li>
+        <li>Retaining skilled technical people in a competitive market.</li>
+        <li>Long ship-building timelines against fast-changing technology: software must be upgradable through the ship's life.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note">
+    <h4>Why Navy gets the special focus</h4>
+    <p>The Navy operates far from base, in a medium where sensors and communications are hard, across a region (the Indian Ocean) where India's interests are growing. Its IT problems (networks at sea, domain awareness, unmanned systems, securing ship systems) are a preview of the issues every service will meet. The wider picture is in the <a href="33.global-navies-knowledge-handbook.html">Global Navies</a> handbook.</p>
+  </div>
+</section>
+
+<div class="part-head"><p>Part IV · Innovation and AI</p><h2>Intelligence, new technologies and the people who build them</h2></div>
+
+<section id="ai">
+  <h2>AI in defence</h2><hr class="sec-rule">
+  <p class="lede">Artificial intelligence is software that learns patterns from data. In defence it is best seen as a tool for speed and scale in specific tasks, not as a replacement for command.</p>
+  <p>India created the <strong>Defence AI Council</strong> and the <strong>Defence AI Project Agency</strong> in 2019, and in 2022 the Ministry of Defence showcased 75 AI-enabled products and technologies. <span class="tag fact">Established</span> The use cases cluster into a few families.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Where AI is being used or tested in defence</caption>
+      <thead><tr><th>Use</th><th>What AI does</th><th>Example task</th></tr></thead>
+      <tbody>
+        <tr><td>Intelligence and surveillance</td><td>Finds objects and changes in imagery and video</td><td>Spotting vessels, vehicles or construction in satellite pictures</td></tr>
+        <tr><td>Decision support</td><td>Ranks options and flags risks for a human</td><td>Suggesting routes, force packages or threat priorities</td></tr>
+        <tr><td>Logistics and maintenance</td><td>Predicts failures and demand</td><td>Replacing a pump before it breaks at sea</td></tr>
+        <tr><td>Cyber defence</td><td>Detects unusual behaviour in networks</td><td>Flagging a compromised account</td></tr>
+        <tr><td>Autonomy</td><td>Lets machines navigate and act with limited control</td><td>Unmanned vessels, drones, robotic systems</td></tr>
+        <tr><td>Language and training</td><td>Translates, summarises, simulates</td><td>Intercept summaries; synthetic opposing forces in wargames</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <h3>Humans in, on or out of the loop</h3>
+  <div class="grid three">
+    <div class="panel green-top"><h4>In the loop</h4><p>A person approves each action. Slow but controlled; the norm for the use of lethal force.</p></div>
+    <div class="panel gold-top"><h4>On the loop</h4><p>The machine acts, a person supervises and can intervene. Used for fast defensive tasks such as missile defence.</p></div>
+    <div class="panel red-top"><h4>Out of the loop</h4><p>The machine decides and acts alone. Highly contested for weapons; accepted for non-lethal tasks like navigation.</p></div>
+  </div>
+  <div class="edge">
+    <span class="edge-h">What AI cannot yet do well</span>
+    <p>AI is brittle outside the data it was trained on, can be fooled by adversarial inputs, can inherit bias from its data, and often cannot explain its answer. In war, the opponent will deliberately feed it misleading data. Good use means testing under realistic conditions, keeping a human accountable, and having a fallback when the tool fails.</p>
+  </div>
+</section>
+
+<section id="emerging">
+  <h2>Emerging technologies</h2><hr class="sec-rule">
+  <p class="lede">Beyond AI, a group of technologies is changing what militaries can sense, compute and protect.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Emerging technologies and why they matter to defence</caption>
+      <thead><tr><th>Technology</th><th>Defence relevance</th><th>Status in India</th></tr></thead>
+      <tbody>
+        <tr><td>Quantum technologies</td><td>Unbreakable key distribution; ultra-precise sensors and navigation; a future threat to today's encryption</td><td>National Quantum Mission approved 2023 <span class="tag fact">Established</span></td></tr>
+        <tr><td>Post-quantum cryptography</td><td>New encryption that survives quantum computers</td><td>Global standards emerging <span class="tag verify">Re-verify</span></td></tr>
+        <tr><td>Cloud and edge computing</td><td>Share data widely while processing near the sensor when links fail</td><td>Sovereign and secure military cloud efforts <span class="tag verify">Re-verify</span></td></tr>
+        <tr><td>5G, 6G and software-defined radio</td><td>Faster tactical networks; flexible, upgradable radios</td><td>Trials and indigenous efforts <span class="tag verify">Re-verify</span></td></tr>
+        <tr><td>Drone swarms</td><td>Many cheap machines coordinating to overwhelm defences</td><td>Army demonstrated a drone swarm in January 2021 <span class="tag fact">Established</span></td></tr>
+        <tr><td>Digital twins and simulation</td><td>A virtual copy of a ship or base to test, train and plan maintenance</td><td>Growing use in design and training <span class="tag interp">Interpretation</span></td></tr>
+        <tr><td>Semiconductors and microelectronics</td><td>The base of every system; a supply-chain risk if imported</td><td>India Semiconductor Mission launched 2021 <span class="tag fact">Established</span></td></tr>
+        <tr><td>Augmented and virtual reality</td><td>Low-cost, realistic training and maintenance guidance</td><td>Pilot use in training establishments <span class="tag verify">Re-verify</span></td></tr>
+        <tr><td>Large language models</td><td>Summarising reports, translation, planning aids, but with data-leak and accuracy risks</td><td>Secure, in-house models preferred <span class="tag interp">Interpretation</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">
+    <h4>A test for any new technology</h4>
+    <p>Does it solve a real operational problem, can it be secured, can it be sustained and upgraded by our own people, and does it work when degraded? Many "innovations" fail one of these four.</p>
+  </div>
+</section>
+
+<section id="ecosystem">
+  <h2>Innovation and indigenisation</h2><hr class="sec-rule">
+  <p class="lede">India's defence innovation policy aims to turn the armed forces from a buyer of foreign systems into a customer of Indian start-ups, labs and industry.</p>
+  <div class="grid two">
+    <div class="panel blue-top">
+      <h4>The main instruments</h4>
+      <ul>
+        <li><strong>iDEX</strong> (2018) funds start-ups and MSMEs to solve service-stated problems; <strong>ADITI</strong> (2024) is a scheme to back deep-tech defence innovations within it. <span class="tag fact">Established</span></li>
+        <li><strong>Positive Indigenisation Lists</strong> (from 2020) ban imports of listed items to give Indian industry assured demand. <span class="tag fact">Established</span></li>
+        <li><strong>Defence corridors</strong> in Uttar Pradesh and Tamil Nadu, and the Defence Testing Infrastructure Scheme to build test facilities.</li>
+        <li><strong>Make categories</strong> in the acquisition procedure to fund indigenous development.</li>
+        <li><strong>FDI</strong> in defence up to 74% via the automatic route (2020). <span class="tag fact">Established</span></li>
+      </ul>
+    </div>
+    <div class="panel gold-top">
+      <h4>The players</h4>
+      <ul>
+        <li><strong>DRDO</strong>, with labs in AI, robotics, electronics and communications.</li>
+        <li><strong>Defence public sector units</strong> such as BEL and HAL, long the main suppliers of defence electronics and aircraft.</li>
+        <li><strong>Private industry</strong> (large groups and mid-sized firms) increasingly in radars, drones and software.</li>
+        <li><strong>Start-ups and academia</strong>, including IIT-based research.</li>
+        <li><strong>Service innovation bodies</strong> such as the Army Design Bureau and the Navy's NIIO.</li>
+      </ul>
+    </div>
+  </div>
+  <h3>What still slows things down</h3>
+  <ul>
+    <li><strong>The "valley of death":</strong> a start-up wins a prototype contract but struggles to get a production order.</li>
+    <li><strong>Procurement time:</strong> long trials and approvals are slow for software that should update every few months.</li>
+    <li><strong>Imported cores:</strong> advanced chips, sensors and some software libraries are still foreign.</li>
+    <li><strong>Testing and data:</strong> shortage of realistic, shareable military data to train and test AI.</li>
+  </ul>
+  <div class="edge blue">
+    <span class="edge-h">Indigenous is not the same as self-reliant</span>
+    <p>A system assembled in India from imported cores is a step forward but not full independence. The test is whether India can design, update and secure the system without foreign permission. <span class="tag interp">Interpretation</span></p>
+  </div>
+</section>
+
+<section id="global">
+  <h2>Global lessons</h2><hr class="sec-rule">
+  <p class="lede">Other militaries and recent wars show where defence IT works, where it fails and what is realistic for India.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Selected international approaches</caption>
+      <thead><tr><th>Country or conflict</th><th>Approach or lesson</th><th>Tag</th></tr></thead>
+      <tbody>
+        <tr><td>United States</td><td>Joint All-Domain Command and Control (JADC2) to link all services; Project Maven for AI imagery analysis; Replicator (2023) to field large numbers of cheap autonomous systems; Chief Digital and AI Office (2022)</td><td><span class="tag fact">Established</span></td></tr>
+        <tr><td>China</td><td>The PLA speaks of "intelligentised warfare"; in April 2024 it replaced its Strategic Support Force with separate information, cyber and aerospace forces</td><td><span class="tag fact">Established</span></td></tr>
+        <tr><td>Russia-Ukraine war</td><td>Commercial satellite and cloud services, rapid software development, mass drones and intense electronic warfare. Cheap systems and quick software updates mattered as much as exquisite platforms.</td><td><span class="tag fact">Established</span></td></tr>
+        <tr><td>Israel</td><td>Reported use of AI-assisted target generation in Gaza, with debate about human oversight and accuracy</td><td><span class="tag disputed">Disputed</span></td></tr>
+        <tr><td>NATO</td><td>A 2021 AI strategy with principles of lawfulness, accountability and traceability</td><td><span class="tag fact">Established</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="grid two">
+    <div class="panel green-top">
+      <h4>Lessons that travel</h4>
+      <ul>
+        <li>Resilience beats elegance: assume networks will be attacked.</li>
+        <li>Software is a weapon that must be updated in weeks, not years.</li>
+        <li>Commercial technology is a real source of advantage, and also of dependency.</li>
+        <li>Cheap and numerous can defeat expensive and few.</li>
+      </ul>
+    </div>
+    <div class="panel red-top">
+      <h4>Cautions</h4>
+      <ul>
+        <li>Another country's architecture, built for its geography and alliances, may not fit India.</li>
+        <li>Reliance on foreign commercial services in war can be cut off.</li>
+        <li>Claims about AI performance in combat are hard to verify and are often promotional.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="part-head"><p>Part V · The future</p><h2>Where defence IT is heading, and the limits</h2></div>
+
+<section id="future">
+  <h2>The future of IT in defence</h2><hr class="sec-rule">
+  <p class="lede">Forecasts are uncertain, but a few trends are visible and are shaping procurement and doctrine today.</p>
+  <ol class="ladder">
+    <li><span class="rung">Multi-domain operations</span><p>Land, sea, air, space, cyber and the electromagnetic spectrum planned and fought as one system, supported by a shared data layer.</p></li>
+    <li><span class="rung">Human-machine teaming</span><p>Commanders and analysts work with AI assistants; crewed platforms lead groups of uncrewed ones.</p></li>
+    <li><span class="rung">Software-defined forces</span><p>Capabilities arrive as updates, not only as new hardware; open architectures let new tools be added quickly.</p></li>
+    <li><span class="rung">Mass and autonomy</span><p>Large numbers of low-cost drones and unmanned vessels, with counter-drone defences to match.</p></li>
+    <li><span class="rung">Resilient space and quantum layers</span><p>Many small satellites, alternative navigation and quantum-secured communications.</p></li>
+    <li><span class="rung">Information and cognitive contest</span><p>Competition to shape perceptions, including deepfakes and automated influence campaigns.</p></li>
+  </ol>
+  <h3>The Navy in 2035-2047 <span class="tag interp">Interpretation</span></h3>
+  <ul>
+    <li>A fleet linked by resilient satellite and data networks, with a continuous, AI-assisted picture of the Indian Ocean.</li>
+    <li>Large numbers of unmanned aerial, surface and underwater vehicles working with crewed ships and submarines.</li>
+    <li>Digital shipyards and digital twins that cut build and maintenance time.</li>
+    <li>Indigenous chips, sensors and software in the key systems.</li>
+    <li>Sailors who combine seamanship with data and cyber skills.</li>
+  </ul>
+  <div class="edge green">
+    <span class="edge-h">The constant</span>
+    <p>Whatever the technology, command, courage and sound judgement stay human. The officer's task is to use machines well, question them when they are wrong and take responsibility for the result. That is why selection still tests character, not software skills.</p>
+  </div>
+</section>
+
+<section id="risks">
+  <h2>Risks, ethics and human control</h2><hr class="sec-rule">
+  <p class="lede">The same technologies that increase speed and precision also raise questions about accountability, escalation and trust.</p>
+  <div class="grid two">
+    <div class="panel red-top">
+      <h4>Key risks</h4>
+      <ul>
+        <li><strong>Automation bias:</strong> over-trusting a machine's output.</li>
+        <li><strong>Speed and escalation:</strong> machine-speed decisions leave less time for judgement and diplomacy.</li>
+        <li><strong>Accountability gap:</strong> who is responsible when an autonomous system errs?</li>
+        <li><strong>Data and supply chain:</strong> poisoned data, back-doored hardware, foreign dependence.</li>
+        <li><strong>Secrecy against oversight:</strong> classified systems are hard to audit.</li>
+        <li><strong>Talent:</strong> competition with industry for skilled people.</li>
+      </ul>
+    </div>
+    <div class="panel blue-top">
+      <h4>The legal and ethical frame</h4>
+      <ul>
+        <li>International humanitarian law requires distinction, proportionality and precaution; these require human judgement.</li>
+        <li>Talks on lethal autonomous weapons have run under the UN Convention on Certain Conventional Weapons since 2014 without a binding treaty. <span class="tag fact">Established</span></li>
+        <li>The 2023 US-led Political Declaration and the REAIM summits (2023 and 2024) promote responsible military AI as non-binding norms. <span class="tag fact">Established</span></li>
+        <li>India takes part in the UN discussions and has generally favoured a cautious, non-binding approach so far. <span class="tag verify">Re-verify</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="edge">
+    <span class="edge-h">The accountability principle</span>
+    <p>A commander cannot hand responsibility to an algorithm. Whatever the technology, a named human must be answerable for a decision to use force. This principle is the practical heart of the ethics debate.</p>
+  </div>
+  <div class="note">
+    <h4>A balanced view</h4>
+    <p>Advocates argue that AI-enabled precision and faster warning can save lives and avoid mistakes. Sceptics argue that autonomy lowers the threshold for war and diffuses blame. Both are partly right, which is why most states favour testing, human control and clear rules rather than a total ban or unrestricted use.</p>
+  </div>
+</section>
+
+<!-- ============ KNOWLEDGE TOOLKIT ============ -->
+<div class="part-head"><p>Knowledge toolkit</p><h2>Analysis, practice and revision</h2></div>
+
+<section id="perspectives">
+  <h2>Perspectives and controversies</h2><hr class="sec-rule">
+  <p class="lede">Few defence topics attract as much hype as technology. Separate what is established, what is a sensible interpretation and what is still contested.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Contested questions in defence IT</caption>
+      <thead><tr><th>Question</th><th>One view</th><th>Another view</th></tr></thead>
+      <tbody>
+        <tr><td>Will AI make wars faster and more likely?</td><td>It will compress decisions and lower the threshold for conflict <span class="tag interp">Interpretation</span></td><td>It improves warning and precision and can reduce mistakes <span class="tag interp">Interpretation</span></td></tr>
+        <tr><td>Is autonomy in weapons acceptable?</td><td>Meaningful human control must remain; a treaty is needed <span class="tag disputed">Disputed</span></td><td>Existing law is enough; a ban would freeze the advantage of those already ahead <span class="tag disputed">Disputed</span></td></tr>
+        <tr><td>Indigenise everything or buy the best?</td><td>Self-reliance protects against sanctions and supply cut-offs</td><td>Some foreign technology is far ahead; a mixed approach is faster and cheaper</td></tr>
+        <tr><td>Is the cloud safe for military data?</td><td>Sovereign, secure clouds give scale and resilience</td><td>Concentrated data is a single, attractive target</td></tr>
+        <tr><td>Do cheap drones make big platforms obsolete?</td><td>Mass and low cost shift the balance, as in Ukraine</td><td>Large platforms remain vital for range, endurance and sea control; they need new protection, not replacement</td></tr>
+        <tr><td>Can the services keep technical talent?</td><td>Short tenures and low pay make retention hard</td><td>Lateral entry, reserve technical cadres and industry partnerships can fill the gap</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="edge green">
+    <span class="edge-h">Reconciling the views</span>
+    <p>Most sound policy sits between the poles: use technology boldly where the risk is low and the benefit clear, keep humans accountable where life is at stake, and build industry and skills at home while buying selectively abroad.</p>
+  </div>
+</section>
+
+<section id="scenarios">
+  <h2>Scenarios and options</h2><hr class="sec-rule">
+  <p class="lede">Possible situations and the choices they present, framed without a recommended position. Decide the trade-offs yourself, with reasons.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Scenarios, options and trade-offs</caption>
+      <thead><tr><th>Scenario</th><th>Option</th><th>Trade-off</th></tr></thead>
+      <tbody>
+        <tr><td>A crisis in which satellite links and GNSS are jammed</td><td>Shift to alternative navigation, hardened links and decentralised command</td><td>Resilience costs money and training; commanders must accept less control</td></tr>
+        <tr><td>A cyber-attack on a port's systems that also serve naval logistics</td><td>Isolate and rebuild, or keep operating in degraded mode while investigating</td><td>Speed of recovery against risk of further compromise</td></tr>
+        <tr><td>A promising foreign AI tool offered at low cost</td><td>Adopt it, test it extensively, or insist on indigenous development</td><td>Capability now against hidden dependency and data exposure</td></tr>
+        <tr><td>A start-up's prototype beats an established supplier's product</td><td>Place a small production order, or keep the incumbent</td><td>Faster innovation against reliability and support risk</td></tr>
+        <tr><td>An AI tool flags a vessel as a threat but the evidence is thin</td><td>Escalate, shadow quietly, or dismiss</td><td>Risk of error and incident against risk of a missed threat</td></tr>
+        <tr><td>Large numbers of cheap drones appear near a fleet</td><td>Layered counter-drone defence or manoeuvre away</td><td>Cost-per-kill and ammunition against mission continuity</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">
+    <h4>How to answer such a scenario (SSB style)</h4>
+    <dl class="rungs">
+      <dt>Define</dt><dd>State the problem and what is at stake in one sentence.</dd>
+      <dt>Options</dt><dd>Give two or three realistic options with the trade-offs.</dd>
+      <dt>Choose</dt><dd>Pick one with reasons, and say what would change your mind.</dd>
+      <dt>Safeguard</dt><dd>Name the check: a human decision-maker, a fallback, a review.</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="qbank">
+  <h2>Questions and debate motions</h2><hr class="sec-rule">
+  <p class="lede">Answer each aloud, standing, in ninety seconds, naming a concrete example.</p>
+  <ol class="qbank">
+    <li>Explain "force multiplier" with an example from a naval task force.</li>
+    <li>Why is a ship called a "floating network", and what are its vulnerabilities?</li>
+    <li>What is the kill chain, and why do militaries try to shorten it?</li>
+    <li>Describe the role of GSAT-7 in the Navy's operations.</li>
+    <li>What is Maritime Domain Awareness, and what is the role of IFC-IOR?</li>
+    <li>Why can an "air-gapped" network still be attacked?</li>
+    <li>What is the difference between "human in the loop" and "human on the loop"?</li>
+    <li>How could AI help the Navy track a vessel that has switched off its AIS?</li>
+    <li>What is the purpose of iDEX, and what problem does it not solve?</li>
+    <li>Why is the supply chain for chips a defence concern?</li>
+    <li>Compare how the Army and the Air Force use networked air-defence.</li>
+    <li>What lessons does the Russia-Ukraine war offer for defence IT?</li>
+    <li>If an AI tool contradicts your own judgement during an exercise, what do you do?</li>
+    <li>What personal digital habits would you follow as an officer, and why?</li>
+  </ol>
+  <h3>Debate motions</h3>
+  <ol class="dbank">
+    <li>AI will make military decisions better, not worse.</li>
+    <li>India should refuse to develop fully autonomous weapons.</li>
+    <li>Self-reliance in defence electronics matters more than buying the best foreign technology.</li>
+    <li>The Navy should invest more in unmanned systems than in large warships.</li>
+    <li>Short-tenure service reduces the technical quality of the armed forces.</li>
+    <li>A military cloud is safer than separate service networks.</li>
+    <li>Commercial technology companies should be allowed to supply software for war fighting.</li>
+  </ol>
+</section>
+
+<section id="chronology">
+  <h2>Master chronology</h2><hr class="sec-rule">
+  <ul class="timeline">
+    <li><span class="yr">1999</span><span>Kargil War; GPS access reportedly a concern, an input to India's own navigation system. <span class="tag verify">Re-verify</span></span></li>
+    <li><span class="yr">2002</span><span>Defence Intelligence Agency formed.</span></li>
+    <li><span class="yr">2004</span><span>NTRO and CERT-In established.</span></li>
+    <li><span class="yr">2008</span><span>Mumbai attacks; coastal surveillance and information networks expanded.</span></li>
+    <li><span class="yr">Early 2010s</span><span>AFNET and IACCS commissioned for the Air Force.</span></li>
+    <li><span class="yr">2013</span><span>GSAT-7 (Rukmini), the Navy's dedicated communications satellite, launched.</span></li>
+    <li><span class="yr">2014</span><span>NC3I network and NCIIPC established.</span></li>
+    <li><span class="yr">2018</span><span>iDEX launched; IFC-IOR set up; GSAT-7A launched; Defence Cyber Agency approved.</span></li>
+    <li><span class="yr">2019</span><span>CDS and Department of Military Affairs; Defence Cyber and Space Agencies; Defence AI Council and Project Agency; anti-satellite test.</span></li>
+    <li><span class="yr">2020</span><span>Positive Indigenisation Lists begin; Navy's NIIO created; FDI limit raised to 74%.</span></li>
+    <li><span class="yr">2021</span><span>India Semiconductor Mission; S-400 deliveries begin; Army drone-swarm demonstration.</span></li>
+    <li><span class="yr">2022</span><span>75 AI products showcased; Navy's SPRINT initiative.</span></li>
+    <li><span class="yr">2023</span><span>National Quantum Mission; Army's "Decade of Transformation" begins; US Replicator announced.</span></li>
+    <li><span class="yr">2024</span><span>ADITI scheme; 31 MQ-9B purchase announced; PLA restructures its information forces.</span></li>
+    <li><span class="yr">2025</span><span>Operation Sindoor highlights integrated air defence and drones; GSAT-7R reported launched. <span class="tag verify">Re-verify</span></span></li>
+  </ul>
+</section>
+
+<section id="glossary">
+  <h2>Glossary</h2><hr class="sec-rule">
+  <dl class="term">
+    <dt>C4ISR</dt><dd>Command, control, communications, computers, intelligence, surveillance and reconnaissance.</dd>
+    <dt>Force multiplier</dt><dd>A factor that increases a force's effectiveness without increasing its size.</dd>
+    <dt>Kill chain</dt><dd>The steps from detecting a target to engaging and assessing it.</dd>
+    <dt>OODA loop</dt><dd>Observe, orient, decide, act; the decision cycle.</dd>
+    <dt>MDA</dt><dd>Maritime Domain Awareness; an effective understanding of everything at sea that could affect security.</dd>
+    <dt>AIS</dt><dd>Automatic Identification System; ships broadcast identity, position and course.</dd>
+    <dt>IFC-IOR</dt><dd>Information Fusion Centre for the Indian Ocean Region, at Gurugram.</dd>
+    <dt>NC3I</dt><dd>National Command Control Communication and Intelligence network linking coastal and maritime sensors.</dd>
+    <dt>GSAT-7 series</dt><dd>Indian military communications satellites (Navy; Air Force and Army).</dd>
+    <dt>CMS</dt><dd>Combat Management System; the ship's tactical computer system.</dd>
+    <dt>Tactical data link</dt><dd>A secure link that shares tracks and targets between platforms in real time.</dd>
+    <dt>ASCON, AFNET, NFS</dt><dd>Army static communication network, Air Force network and the shared Network for Spectrum fibre backbone.</dd>
+    <dt>DCyA, DSA</dt><dd>Defence Cyber Agency and Defence Space Agency; tri-service bodies.</dd>
+    <dt>APT</dt><dd>Advanced Persistent Threat; a skilled, long-running intrusion, often state-linked.</dd>
+    <dt>Zero trust</dt><dd>A security model that verifies every user and device continually.</dd>
+    <dt>Electronic warfare</dt><dd>Use of the electromagnetic spectrum to attack, protect or exploit signals.</dd>
+    <dt>PNT</dt><dd>Positioning, navigation and timing.</dd>
+    <dt>Human in/on the loop</dt><dd>A person approves each action, or supervises and can intervene.</dd>
+    <dt>LAWS</dt><dd>Lethal Autonomous Weapon Systems.</dd>
+    <dt>iDEX / ADITI</dt><dd>Innovation schemes that fund start-ups to solve defence problems.</dd>
+    <dt>Digital twin</dt><dd>A virtual model of a physical system used for design, training or maintenance.</dd>
+  </dl>
+</section>
+
+<section id="revision">
+  <h2>Rapid revision sheet</h2><hr class="sec-rule">
+  <div class="note">
+    <h4>Last-day summary</h4>
+    <ul>
+      <li>IT is the nervous system of a force: sense, connect, decide, act, protect.</li>
+      <li>Connected does not mean safe; train and plan to fight degraded.</li>
+      <li>India's structure: CDS and DMA; DCyA, DSA, DIA; DRDO; iDEX; NFS, ASCON, AFNET.</li>
+      <li>Cyber threats: espionage, ransomware, supply chain, jamming, insiders; weakest layer is human.</li>
+      <li>Army: Signals, ASCON, Shakti, drones and counter-drone, Akashteer. Air Force: IACCS, AFNET, AEW&amp;C, S-400.</li>
+      <li>Navy: GSAT-7, networks at sea, NC3I and IMAC, IFC-IOR, P-8I, sonars, unmanned systems, NIIO and SPRINT, a 2047 self-reliance goal.</li>
+      <li>AI: useful for imagery, maintenance, cyber and decision support; limited by data, brittleness and accountability.</li>
+      <li>A human must remain accountable for the use of force.</li>
+      <li>Innovation: iDEX, ADITI, Positive Indigenisation Lists, 74% FDI; problems: valley of death, imported chips.</li>
+      <li>Global: JADC2 and Replicator (US), intelligentised warfare (China), cheap drones and software in Ukraine.</li>
+      <li>Future: multi-domain operations, human-machine teaming, software-defined forces, unmanned mass, resilient space, quantum.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer>
+  <p>Compiled from open sources and general knowledge. Study aid only, not an official publication. Capabilities, dates and programme status should be re-verified against current official releases.</p>
+  <p>Source &amp; contributions: <a href="https://github.com/mohitkushwaha0601/matre">github.com/mohitkushwaha0601/matre</a></p>
+</footer>
+
+</body>
+</html>
+
+
+
